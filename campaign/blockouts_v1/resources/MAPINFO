@@ -1,0 +1,281 @@
+clearepisodes
+
+episode RF01 { name = "La Couleur de la Grenade" key = "g" }
+
+gameinfo { TitlePage = "TITLEPIC" TitleTime = 3600 PageTime = 3600 }
+
+map RF01 "Sainte-Anne - Les portes ouvertes"
+{
+ levelnum = 1
+ next = "RF02"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF02 "Paris - Rue de service"
+{
+ levelnum = 2
+ next = "RF03"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF03 "Batignolles - Refus de reception"
+{
+ levelnum = 3
+ next = "RF04"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF04 "Luna Park - Personnel technique"
+{
+ levelnum = 4
+ next = "RF05"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF05 "Les machines continuent"
+{
+ levelnum = 5
+ next = "RF06"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF06 "La sortie du personnel"
+{
+ levelnum = 6
+ next = "RF07"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF07 "Jerma - Facade maritime"
+{
+ levelnum = 7
+ next = "RF08"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF08 "Aile des chambres"
+{
+ levelnum = 8
+ next = "RF09"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF09 "La piscine vide"
+{
+ levelnum = 9
+ next = "RF10"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF10 "L'envers du palace"
+{
+ levelnum = 10
+ next = "RF11"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF11 "Acces interdit cote chambre"
+{
+ levelnum = 11
+ next = "RF12"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF12 "Le dernier escalier"
+{
+ levelnum = 12
+ next = "RF13"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF13 "Waukegan - Chambre 217"
+{
+ levelnum = 13
+ next = "RF14"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF14 "Building 2 - South Dock"
+{
+ levelnum = 14
+ next = "RF15"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF15 "Les crochets et les boites"
+{
+ levelnum = 15
+ next = "RF16"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF16 "WKG Community"
+{
+ levelnum = 16
+ next = "RF17"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF17 "Conservation provisoire"
+{
+ levelnum = 17
+ next = "RF18"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF18 "Gennevilliers - La cour des transferts"
+{
+ levelnum = 18
+ next = "RF19"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF19 "La chaine froide"
+{
+ levelnum = 19
+ next = "RF20"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF20 "Copie de secours"
+{
+ levelnum = 20
+ next = "RF21"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF21 "Retours"
+{
+ levelnum = 21
+ next = "RF22"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF22 "Destinataire present"
+{
+ levelnum = 22
+ next = "RF23"
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}
+
+map RF23 "Salle d'attente"
+{
+ levelnum = 23
+ next = endgame { pic = "RFEND" music = "$MUSIC_READ_M" }
+ sky1 = "RFSKY", 0
+ music = "$MUSIC_RUNNIN"
+ cluster = 117
+ nojump
+ nocrouch
+ allowfreelook
+}

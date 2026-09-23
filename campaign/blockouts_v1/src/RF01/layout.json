@@ -1,0 +1,300 @@
+{
+  "number": 1,
+  "code": "RF01",
+  "title": "Sainte-Anne - Les portes ouvertes",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      6
+    ],
+    [
+      0,
+      12,
+      8,
+      10
+    ],
+    [
+      14,
+      12,
+      14,
+      14
+    ],
+    [
+      28,
+      12,
+      8,
+      8
+    ],
+    [
+      28,
+      26,
+      10,
+      8
+    ],
+    [
+      14,
+      28,
+      12,
+      8
+    ],
+    [
+      0,
+      28,
+      8,
+      8
+    ],
+    [
+      -14,
+      28,
+      8,
+      10
+    ],
+    [
+      -14,
+      12,
+      8,
+      8
+    ],
+    [
+      14,
+      44,
+      10,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      1
+    ],
+    [
+      5,
+      9
+    ]
+  ],
+  "labels": [
+    "Chambre",
+    "Admissions",
+    "Cour des hommes",
+    "Pavillon est",
+    "Lingerie",
+    "Galerie nord",
+    "Registres",
+    "Chapelle vide",
+    "Consultations",
+    "Porche"
+  ],
+  "theme": "clinic",
+  "anchor": [
+    "Sainte-Anne; Paris, 14 juin 1940",
+    "Le 14 juin 1940, personne",
+    "Cour, admissions, registre, porche ouvert."
+  ],
+  "key_index": 7,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Chambre",
+      "bounds": [
+        -4,
+        -3,
+        8,
+        6
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        12
+      ],
+      "name": "Admissions",
+      "bounds": [
+        -4,
+        7,
+        8,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        14,
+        12
+      ],
+      "name": "Cour des hommes",
+      "bounds": [
+        7,
+        5,
+        14,
+        14
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 3,
+      "cell": [
+        28,
+        12
+      ],
+      "name": "Pavillon est",
+      "bounds": [
+        24,
+        8,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        28,
+        26
+      ],
+      "name": "Lingerie",
+      "bounds": [
+        23,
+        22,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        14,
+        28
+      ],
+      "name": "Galerie nord",
+      "bounds": [
+        8,
+        24,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        0,
+        28
+      ],
+      "name": "Registres",
+      "bounds": [
+        -4,
+        24,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        -14,
+        28
+      ],
+      "name": "Chapelle vide",
+      "bounds": [
+        -18,
+        23,
+        8,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        -14,
+        12
+      ],
+      "name": "Consultations",
+      "bounds": [
+        -18,
+        8,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        14,
+        44
+      ],
+      "name": "Porche",
+      "bounds": [
+        9,
+        40,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        14,
+        55
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        11,
+        53,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Chapelle vide"
+}

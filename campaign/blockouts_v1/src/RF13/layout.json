@@ -1,0 +1,330 @@
+{
+  "number": 13,
+  "code": "RF13",
+  "title": "Waukegan - Chambre 217",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      6
+    ],
+    [
+      0,
+      12,
+      6,
+      10
+    ],
+    [
+      14,
+      12,
+      8,
+      8
+    ],
+    [
+      28,
+      12,
+      12,
+      12
+    ],
+    [
+      28,
+      -4,
+      12,
+      8
+    ],
+    [
+      14,
+      -4,
+      8,
+      8
+    ],
+    [
+      -14,
+      12,
+      8,
+      8
+    ],
+    [
+      -14,
+      28,
+      10,
+      8
+    ],
+    [
+      0,
+      28,
+      10,
+      8
+    ],
+    [
+      14,
+      28,
+      10,
+      8
+    ],
+    [
+      28,
+      28,
+      12,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      2
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      3
+    ]
+  ],
+  "labels": [
+    "Chambre 217",
+    "Couloir motel",
+    "Machine a glace",
+    "Parking arriere",
+    "Friches",
+    "Local linge",
+    "Chambre 117",
+    "Reception Marisol",
+    "Salle TV",
+    "Rue industrielle",
+    "Lumiere du lac"
+  ],
+  "theme": "motel",
+  "anchor": [
+    "Waukegan, motel",
+    "Room 217",
+    "Parking arriere, friches, voie ferree ; lac hors vue."
+  ],
+  "key_index": 10,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Chambre 217",
+      "bounds": [
+        -4,
+        -3,
+        8,
+        6
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        12
+      ],
+      "name": "Couloir motel",
+      "bounds": [
+        -3,
+        7,
+        6,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        14,
+        12
+      ],
+      "name": "Machine a glace",
+      "bounds": [
+        10,
+        8,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        28,
+        12
+      ],
+      "name": "Parking arriere",
+      "bounds": [
+        22,
+        6,
+        12,
+        12
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 4,
+      "cell": [
+        28,
+        -4
+      ],
+      "name": "Friches",
+      "bounds": [
+        22,
+        -8,
+        12,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 5,
+      "cell": [
+        14,
+        -4
+      ],
+      "name": "Local linge",
+      "bounds": [
+        10,
+        -8,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        -14,
+        12
+      ],
+      "name": "Chambre 117",
+      "bounds": [
+        -18,
+        8,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        -14,
+        28
+      ],
+      "name": "Reception Marisol",
+      "bounds": [
+        -19,
+        24,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        0,
+        28
+      ],
+      "name": "Salle TV",
+      "bounds": [
+        -5,
+        24,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        14,
+        28
+      ],
+      "name": "Rue industrielle",
+      "bounds": [
+        9,
+        24,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        28,
+        28
+      ],
+      "name": "Lumiere du lac",
+      "bounds": [
+        22,
+        24,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 11,
+      "cell": [
+        -14,
+        39
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -17,
+        37,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Lumiere du lac"
+}

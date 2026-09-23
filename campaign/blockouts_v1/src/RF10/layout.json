@@ -1,0 +1,326 @@
+{
+  "number": 10,
+  "code": "RF10",
+  "title": "L'envers du palace",
+  "rooms": [
+    [
+      0,
+      0,
+      10,
+      8
+    ],
+    [
+      14,
+      0,
+      10,
+      8
+    ],
+    [
+      28,
+      0,
+      10,
+      8
+    ],
+    [
+      28,
+      14,
+      10,
+      8
+    ],
+    [
+      28,
+      28,
+      10,
+      10
+    ],
+    [
+      14,
+      28,
+      10,
+      8
+    ],
+    [
+      0,
+      28,
+      10,
+      10
+    ],
+    [
+      0,
+      14,
+      10,
+      8
+    ],
+    [
+      14,
+      14,
+      8,
+      8
+    ],
+    [
+      -14,
+      28,
+      8,
+      8
+    ],
+    [
+      -14,
+      44,
+      12,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      9,
+      10
+    ]
+  ],
+  "labels": [
+    "Livraisons",
+    "Chambre froide",
+    "Cuisines",
+    "Plonge",
+    "Chariots",
+    "Dechets",
+    "Lingerie",
+    "Couloir de service",
+    "Machinerie",
+    "Plans de Vella",
+    "Acces ouest"
+  ],
+  "theme": "service",
+  "anchor": [
+    "Jerma",
+    "les cuisines, les reseaux",
+    "Cuisine, ventilation, lingerie, quai : adaptation des flux."
+  ],
+  "key_index": 4,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Livraisons",
+      "bounds": [
+        -5,
+        -4,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        14,
+        0
+      ],
+      "name": "Chambre froide",
+      "bounds": [
+        9,
+        -4,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        28,
+        0
+      ],
+      "name": "Cuisines",
+      "bounds": [
+        23,
+        -4,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        28,
+        14
+      ],
+      "name": "Plonge",
+      "bounds": [
+        23,
+        10,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        28,
+        28
+      ],
+      "name": "Chariots",
+      "bounds": [
+        23,
+        23,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        14,
+        28
+      ],
+      "name": "Dechets",
+      "bounds": [
+        9,
+        24,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        0,
+        28
+      ],
+      "name": "Lingerie",
+      "bounds": [
+        -5,
+        23,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        0,
+        14
+      ],
+      "name": "Couloir de service",
+      "bounds": [
+        -5,
+        10,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        14,
+        14
+      ],
+      "name": "Machinerie",
+      "bounds": [
+        10,
+        10,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        -14,
+        28
+      ],
+      "name": "Plans de Vella",
+      "bounds": [
+        -18,
+        24,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        -14,
+        44
+      ],
+      "name": "Acces ouest",
+      "bounds": [
+        -20,
+        40,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 11,
+      "cell": [
+        -14,
+        55
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -17,
+        53,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Chariots"
+}

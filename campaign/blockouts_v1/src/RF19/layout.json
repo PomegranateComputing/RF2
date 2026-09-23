@@ -1,0 +1,330 @@
+{
+  "number": 19,
+  "code": "RF19",
+  "title": "La chaine froide",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      8
+    ],
+    [
+      14,
+      0,
+      10,
+      8
+    ],
+    [
+      28,
+      0,
+      14,
+      8
+    ],
+    [
+      44,
+      0,
+      8,
+      8
+    ],
+    [
+      44,
+      16,
+      12,
+      12
+    ],
+    [
+      28,
+      16,
+      12,
+      10
+    ],
+    [
+      14,
+      16,
+      10,
+      10
+    ],
+    [
+      0,
+      16,
+      10,
+      10
+    ],
+    [
+      0,
+      32,
+      10,
+      8
+    ],
+    [
+      20,
+      34,
+      18,
+      10
+    ],
+    [
+      44,
+      34,
+      12,
+      10
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      6
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      4
+    ]
+  ],
+  "labels": [
+    "Sas froid",
+    "Compression",
+    "Tunnel convoyeur",
+    "Inspection",
+    "Quai refuse",
+    "Conditionnement",
+    "Chambre centrale",
+    "Unite 117",
+    "Stockage bas",
+    "Wagon immobile",
+    "Expedition"
+  ],
+  "theme": "cold",
+  "anchor": [
+    "WKG / chaine frigorifique",
+    "INTERNATIONAL REFRIGERATED CONSIGNMENT",
+    "Wagon refuse, viande/bandes, stockage final WKG Cold 02."
+  ],
+  "key_index": 3,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Sas froid",
+      "bounds": [
+        -4,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        14,
+        0
+      ],
+      "name": "Compression",
+      "bounds": [
+        9,
+        -4,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        28,
+        0
+      ],
+      "name": "Tunnel convoyeur",
+      "bounds": [
+        21,
+        -4,
+        14,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        44,
+        0
+      ],
+      "name": "Inspection",
+      "bounds": [
+        40,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        44,
+        16
+      ],
+      "name": "Quai refuse",
+      "bounds": [
+        38,
+        10,
+        12,
+        12
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 5,
+      "cell": [
+        28,
+        16
+      ],
+      "name": "Conditionnement",
+      "bounds": [
+        22,
+        11,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        14,
+        16
+      ],
+      "name": "Chambre centrale",
+      "bounds": [
+        9,
+        11,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        0,
+        16
+      ],
+      "name": "Unite 117",
+      "bounds": [
+        -5,
+        11,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        0,
+        32
+      ],
+      "name": "Stockage bas",
+      "bounds": [
+        -5,
+        28,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        20,
+        34
+      ],
+      "name": "Wagon immobile",
+      "bounds": [
+        11,
+        29,
+        18,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        44,
+        34
+      ],
+      "name": "Expedition",
+      "bounds": [
+        38,
+        29,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 11,
+      "cell": [
+        20,
+        46
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        17,
+        44,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Inspection"
+}

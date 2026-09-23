@@ -1,0 +1,300 @@
+{
+  "number": 14,
+  "code": "RF14",
+  "title": "Building 2 - South Dock",
+  "rooms": [
+    [
+      0,
+      0,
+      10,
+      6
+    ],
+    [
+      0,
+      14,
+      18,
+      10
+    ],
+    [
+      -20,
+      14,
+      10,
+      10
+    ],
+    [
+      -20,
+      30,
+      10,
+      10
+    ],
+    [
+      0,
+      30,
+      18,
+      10
+    ],
+    [
+      20,
+      30,
+      10,
+      10
+    ],
+    [
+      20,
+      14,
+      10,
+      10
+    ],
+    [
+      36,
+      14,
+      8,
+      10
+    ],
+    [
+      36,
+      30,
+      8,
+      10
+    ],
+    [
+      0,
+      46,
+      12,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      4,
+      9
+    ]
+  ],
+  "labels": [
+    "Controle acces",
+    "South Dock",
+    "Rampe ouest",
+    "Entrepot A",
+    "Cour des quais",
+    "Entrepot B",
+    "Reception Donna",
+    "Bureau Reggie",
+    "Station pompage",
+    "Building 2"
+  ],
+  "theme": "dock",
+  "anchor": [
+    "WKG Cold Storage, Building 2",
+    "DOCK ACCESS BY APPOINTMENT",
+    "Acces logistique et quai ; South Dock est un titre de niveau."
+  ],
+  "key_index": 8,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Controle acces",
+      "bounds": [
+        -5,
+        -3,
+        10,
+        6
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        14
+      ],
+      "name": "South Dock",
+      "bounds": [
+        -9,
+        9,
+        18,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        -20,
+        14
+      ],
+      "name": "Rampe ouest",
+      "bounds": [
+        -25,
+        9,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        -20,
+        30
+      ],
+      "name": "Entrepot A",
+      "bounds": [
+        -25,
+        25,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        0,
+        30
+      ],
+      "name": "Cour des quais",
+      "bounds": [
+        -9,
+        25,
+        18,
+        10
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 5,
+      "cell": [
+        20,
+        30
+      ],
+      "name": "Entrepot B",
+      "bounds": [
+        15,
+        25,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        20,
+        14
+      ],
+      "name": "Reception Donna",
+      "bounds": [
+        15,
+        9,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        36,
+        14
+      ],
+      "name": "Bureau Reggie",
+      "bounds": [
+        32,
+        9,
+        8,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        36,
+        30
+      ],
+      "name": "Station pompage",
+      "bounds": [
+        32,
+        25,
+        8,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        0,
+        46
+      ],
+      "name": "Building 2",
+      "bounds": [
+        -6,
+        42,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        0,
+        57
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -3,
+        55,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Station pompage"
+}

@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "level": "RF01",
+  "status": "ACTIVE",
+  "priority_order": [
+    {
+      "id": "RF01_P0_FAL",
+      "kind": "weapon",
+      "priority": 0,
+      "goal": "FAL coherent first-person set, pale hands, black sleeves, stable master and transparent exports"
+    },
+    {
+      "id": "RF01_P0_ENEMIES",
+      "kind": "enemy_families",
+      "priority": 1,
+      "goal": "three visually distinct coherent enemy families, all rotations/animations derived from stable masters"
+    },
+    {
+      "id": "RF01_P0_MATERIALS",
+      "kind": "materials",
+      "priority": 2,
+      "goal": "8-12 Sainte-Anne material families with useful variants and no generic grunge"
+    },
+    {
+      "id": "RF01_P0_PROPS",
+      "kind": "props",
+      "priority": 3,
+      "goal": "small coherent institutional prop kit that gives RF01 identity"
+    },
+    {
+      "id": "RF01_P0_AUDIO",
+      "kind": "audio",
+      "priority": 4,
+      "goal": "FAL, doors, impacts, player/foe feedback and Sainte-Anne ambience"
+    },
+    {
+      "id": "RF01_P0_UI",
+      "kind": "ui_art",
+      "priority": 5,
+      "goal": "non-textual menu/HUD art shell consistent with RF2"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "dependencies": [
+    {
+      "file": "uzdoom-windows.zip",
+      "bytes": 29332147,
+      "sha256": "abc39ceea3d266d471e1b5db860c8e29edba4e7ebefc3ba60a9abec13138ef74"
+    },
+    {
+      "file": "uzdoom.AppImage",
+      "bytes": 34556408,
+      "sha256": "a0fb4fd09264ec55827911316454eedb667fc22ac23b6d505a1a2a076b549e4f"
+    },
+    {
+      "file": "freedoom.zip",
+      "bytes": 24143781,
+      "sha256": "3f9b264f3e3ce503b4fb7f6bdcb1f419d93c7b546f4df3e874dd878db9688f59"
+    },
+    {
+      "file": "zdbsp",
+      "bytes": 159960,
+      "sha256": "8e16b5ce50f6c59ba144234c9a20fa0c10fef1d55e0f8290f83cff634125d097"
+    }
+  ],
+  "zdbsp_source_directory": "rheit-zdbsp-f324e34"
+}

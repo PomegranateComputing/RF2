@@ -1,0 +1,330 @@
+{
+  "number": 11,
+  "code": "RF11",
+  "title": "Acces interdit cote chambre",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      8
+    ],
+    [
+      14,
+      0,
+      8,
+      8
+    ],
+    [
+      28,
+      0,
+      8,
+      8
+    ],
+    [
+      42,
+      0,
+      8,
+      8
+    ],
+    [
+      42,
+      14,
+      8,
+      8
+    ],
+    [
+      28,
+      14,
+      8,
+      8
+    ],
+    [
+      14,
+      14,
+      8,
+      8
+    ],
+    [
+      0,
+      14,
+      8,
+      8
+    ],
+    [
+      0,
+      30,
+      12,
+      8
+    ],
+    [
+      20,
+      30,
+      12,
+      8
+    ],
+    [
+      42,
+      30,
+      12,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      6
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      4
+    ]
+  ],
+  "labels": [
+    "Seuil",
+    "Chambre A",
+    "Chambre B",
+    "Chambre 117",
+    "Piece sans numero",
+    "Contre-champ",
+    "Chambre C",
+    "Retour apparent",
+    "Plans ROOMS",
+    "Flux FLOW",
+    "Acces FINAL"
+  ],
+  "theme": "anomaly",
+  "anchor": [
+    "Jerma / plan ROOMS",
+    "la chambre manquante",
+    "Geometrie de gameplay autour des chambres et du plan."
+  ],
+  "key_index": 3,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Seuil",
+      "bounds": [
+        -4,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        14,
+        0
+      ],
+      "name": "Chambre A",
+      "bounds": [
+        10,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        28,
+        0
+      ],
+      "name": "Chambre B",
+      "bounds": [
+        24,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        42,
+        0
+      ],
+      "name": "Chambre 117",
+      "bounds": [
+        38,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        42,
+        14
+      ],
+      "name": "Piece sans numero",
+      "bounds": [
+        38,
+        10,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        28,
+        14
+      ],
+      "name": "Contre-champ",
+      "bounds": [
+        24,
+        10,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        14,
+        14
+      ],
+      "name": "Chambre C",
+      "bounds": [
+        10,
+        10,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        0,
+        14
+      ],
+      "name": "Retour apparent",
+      "bounds": [
+        -4,
+        10,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        0,
+        30
+      ],
+      "name": "Plans ROOMS",
+      "bounds": [
+        -6,
+        26,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        20,
+        30
+      ],
+      "name": "Flux FLOW",
+      "bounds": [
+        14,
+        26,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        42,
+        30
+      ],
+      "name": "Acces FINAL",
+      "bounds": [
+        36,
+        26,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 11,
+      "cell": [
+        0,
+        41
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -3,
+        39,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Chambre 117"
+}

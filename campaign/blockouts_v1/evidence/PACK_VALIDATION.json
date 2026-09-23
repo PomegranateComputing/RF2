@@ -1,0 +1,375 @@
+{
+  "scope": "Static checks on delivered bytes; no runtime traversal claimed",
+  "pk3_sha256": "68876cd5a6ca0bd2a01be4d1b0baca744306ad3d1a972c54bba1bc0b541f978b",
+  "maps": [
+    {
+      "code": "RF01",
+      "status": "PASS",
+      "vertices": 696,
+      "linedefs": 738,
+      "sectors": 62,
+      "things": 95,
+      "secrets": 2,
+      "lumps": [
+        "RF01",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "6dec14229a57253155ebd3df65ca0702ef33749a375db81675877e2ba396981c"
+    },
+    {
+      "code": "RF02",
+      "status": "PASS",
+      "vertices": 904,
+      "linedefs": 946,
+      "sectors": 66,
+      "things": 104,
+      "secrets": 2,
+      "lumps": [
+        "RF02",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "70ef0e72f2bd2df07dae723fb88d3e1d36cdc910b26dae71ece4d5147fe9c4a1"
+    },
+    {
+      "code": "RF03",
+      "status": "PASS",
+      "vertices": 851,
+      "linedefs": 898,
+      "sectors": 71,
+      "things": 104,
+      "secrets": 2,
+      "lumps": [
+        "RF03",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "abb7e0601a8992b0920aa095792b463992f590d130232ef8edd4d45f1d609d2b"
+    },
+    {
+      "code": "RF04",
+      "status": "PASS",
+      "vertices": 773,
+      "linedefs": 816,
+      "sectors": 64,
+      "things": 95,
+      "secrets": 2,
+      "lumps": [
+        "RF04",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "31ead44dfcd278c0c73d765381012bf0301854759ff77f1bfb28d8be9d3ed267"
+    },
+    {
+      "code": "RF05",
+      "status": "PASS",
+      "vertices": 789,
+      "linedefs": 835,
+      "sectors": 69,
+      "things": 104,
+      "secrets": 2,
+      "lumps": [
+        "RF05",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "51cff0584b39e871b6f68ef109f48e3531e7222e6e6c5bbb0711216775871f02"
+    },
+    {
+      "code": "RF06",
+      "status": "PASS",
+      "vertices": 765,
+      "linedefs": 813,
+      "sectors": 68,
+      "things": 95,
+      "secrets": 2,
+      "lumps": [
+        "RF06",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "4a47bedf9421b1c0b0f6dfae7f5dd5a74a980371b1b39a7ae3ef763e394dd2c0"
+    },
+    {
+      "code": "RF07",
+      "status": "PASS",
+      "vertices": 793,
+      "linedefs": 832,
+      "sectors": 63,
+      "things": 95,
+      "secrets": 2,
+      "lumps": [
+        "RF07",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "6199e6923403552beeb549b183db4584b19faa68bd347ccc98568eebe2848c74"
+    },
+    {
+      "code": "RF08",
+      "status": "PASS",
+      "vertices": 686,
+      "linedefs": 727,
+      "sectors": 62,
+      "things": 95,
+      "secrets": 2,
+      "lumps": [
+        "RF08",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "883b061364b75f6de9a07e0cff8a2f802ca680e51e63203e056aced29d16c788"
+    },
+    {
+      "code": "RF09",
+      "status": "PASS",
+      "vertices": 985,
+      "linedefs": 1029,
+      "sectors": 68,
+      "things": 95,
+      "secrets": 2,
+      "lumps": [
+        "RF09",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "c303d8e5f6f7ddaa30750a816bb0bc7cd91b65e7ce84cd2febd1d98fcd0ad5f7"
+    },
+    {
+      "code": "RF10",
+      "status": "PASS",
+      "vertices": 765,
+      "linedefs": 812,
+      "sectors": 69,
+      "things": 105,
+      "secrets": 2,
+      "lumps": [
+        "RF10",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "424793e229ba981bfe08390337d40e22ba38a7deed1cd1e60f32c5dbafd72257"
+    },
+    {
+      "code": "RF11",
+      "status": "PASS",
+      "vertices": 781,
+      "linedefs": 827,
+      "sectors": 67,
+      "things": 105,
+      "secrets": 2,
+      "lumps": [
+        "RF11",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "fb062ac972f2c675bd974ab0136a9545ee1350d0cb4a64afb6eb69713e0bfe75"
+    },
+    {
+      "code": "RF12",
+      "status": "PASS",
+      "vertices": 788,
+      "linedefs": 834,
+      "sectors": 69,
+      "things": 105,
+      "secrets": 2,
+      "lumps": [
+        "RF12",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "3d8b753549205d807159dc634f6a44c06ed0f550a5f9cdef88bdcd223f3fbf41"
+    },
+    {
+      "code": "RF13",
+      "status": "PASS",
+      "vertices": 797,
+      "linedefs": 844,
+      "sectors": 69,
+      "things": 105,
+      "secrets": 2,
+      "lumps": [
+        "RF13",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "478f19314ee6f579f5b700a39ea3548917a1b6ae30df2dbfb066aecfd8564e1d"
+    },
+    {
+      "code": "RF14",
+      "status": "PASS",
+      "vertices": 824,
+      "linedefs": 866,
+      "sectors": 64,
+      "things": 96,
+      "secrets": 2,
+      "lumps": [
+        "RF14",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "0652ea44fffacfe509d64dfa1ad27be9a3f4e828ba87aed137052d20aa13e324"
+    },
+    {
+      "code": "RF15",
+      "status": "PASS",
+      "vertices": 884,
+      "linedefs": 929,
+      "sectors": 68,
+      "things": 96,
+      "secrets": 2,
+      "lumps": [
+        "RF15",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "ae9d2451809ef6be0c5f816cb53292e7660f0b28fefa208c475d9557c378e9bf"
+    },
+    {
+      "code": "RF16",
+      "status": "PASS",
+      "vertices": 822,
+      "linedefs": 861,
+      "sectors": 64,
+      "things": 96,
+      "secrets": 2,
+      "lumps": [
+        "RF16",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "c074395e6cc11f5b34576e28dc702f1405deba2c6483c298ce996da7e10792d3"
+    },
+    {
+      "code": "RF17",
+      "status": "PASS",
+      "vertices": 843,
+      "linedefs": 888,
+      "sectors": 67,
+      "things": 105,
+      "secrets": 2,
+      "lumps": [
+        "RF17",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "cc064c0b5c9ba05f99c669c1e338794c14cec6df5e2ea5f88e78e2e475a84366"
+    },
+    {
+      "code": "RF18",
+      "status": "PASS",
+      "vertices": 900,
+      "linedefs": 939,
+      "sectors": 64,
+      "things": 96,
+      "secrets": 2,
+      "lumps": [
+        "RF18",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "8a591c3481d07a1d0ee595995515b361c84f6089aff316e53719905d45f94496"
+    },
+    {
+      "code": "RF19",
+      "status": "PASS",
+      "vertices": 892,
+      "linedefs": 937,
+      "sectors": 71,
+      "things": 105,
+      "secrets": 2,
+      "lumps": [
+        "RF19",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "e3a26c8e72c16cd983221a7dd57722569177465cf8c14cbd6af90e04549c1f93"
+    },
+    {
+      "code": "RF20",
+      "status": "PASS",
+      "vertices": 893,
+      "linedefs": 939,
+      "sectors": 74,
+      "things": 114,
+      "secrets": 2,
+      "lumps": [
+        "RF20",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "9241b130995285280479179003d24f590214f4418871d7d6c0442e1effa0d84f"
+    },
+    {
+      "code": "RF21",
+      "status": "PASS",
+      "vertices": 900,
+      "linedefs": 942,
+      "sectors": 70,
+      "things": 105,
+      "secrets": 2,
+      "lumps": [
+        "RF21",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "60f7f189117b6f54e4564ea65e5af3f13599e698e9fcd352bfe6e6a6a7572f98"
+    },
+    {
+      "code": "RF22",
+      "status": "PASS",
+      "vertices": 820,
+      "linedefs": 872,
+      "sectors": 74,
+      "things": 114,
+      "secrets": 2,
+      "lumps": [
+        "RF22",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "be97db96cb3739dc5942ffcb0fd3f2978dc73b87dd6a8fd29f0aa3c68ba11f77"
+    },
+    {
+      "code": "RF23",
+      "status": "PASS",
+      "vertices": 687,
+      "linedefs": 730,
+      "sectors": 63,
+      "things": 2,
+      "secrets": 2,
+      "lumps": [
+        "RF23",
+        "TEXTMAP",
+        "ZNODES",
+        "ENDMAP"
+      ],
+      "sha256": "c10564a945be1aef06a96b191c8ac4d25f57422a4025a04892b7e5d9b76359d4"
+    }
+  ],
+  "status": "PASS"
+}

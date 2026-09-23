@@ -1,0 +1,300 @@
+{
+  "number": 16,
+  "code": "RF16",
+  "title": "WKG Community",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      6
+    ],
+    [
+      0,
+      14,
+      12,
+      10
+    ],
+    [
+      16,
+      14,
+      10,
+      10
+    ],
+    [
+      32,
+      14,
+      12,
+      12
+    ],
+    [
+      32,
+      30,
+      10,
+      10
+    ],
+    [
+      16,
+      30,
+      10,
+      8
+    ],
+    [
+      0,
+      30,
+      12,
+      10
+    ],
+    [
+      -16,
+      30,
+      10,
+      10
+    ],
+    [
+      -16,
+      14,
+      10,
+      8
+    ],
+    [
+      16,
+      46,
+      12,
+      10
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      1
+    ],
+    [
+      5,
+      9
+    ]
+  ],
+  "labels": [
+    "Accueil station",
+    "Plateau Family Watch",
+    "Regie",
+    "Reserve decors",
+    "Copies emission",
+    "Montage",
+    "Archives video",
+    "Studio B",
+    "Vestiaires",
+    "Transmission"
+  ],
+  "theme": "broadcast",
+  "anchor": [
+    "WKG Community 17",
+    "WKG COMMUNITY 17",
+    "Emission FAMILY WATCH ; studio explorable cree pour le jeu."
+  ],
+  "key_index": 7,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Accueil station",
+      "bounds": [
+        -4,
+        -3,
+        8,
+        6
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        14
+      ],
+      "name": "Plateau Family Watch",
+      "bounds": [
+        -6,
+        9,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        16,
+        14
+      ],
+      "name": "Regie",
+      "bounds": [
+        11,
+        9,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        32,
+        14
+      ],
+      "name": "Reserve decors",
+      "bounds": [
+        26,
+        8,
+        12,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        32,
+        30
+      ],
+      "name": "Copies emission",
+      "bounds": [
+        27,
+        25,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        16,
+        30
+      ],
+      "name": "Montage",
+      "bounds": [
+        11,
+        26,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        0,
+        30
+      ],
+      "name": "Archives video",
+      "bounds": [
+        -6,
+        25,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        -16,
+        30
+      ],
+      "name": "Studio B",
+      "bounds": [
+        -21,
+        25,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        -16,
+        14
+      ],
+      "name": "Vestiaires",
+      "bounds": [
+        -21,
+        10,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        16,
+        46
+      ],
+      "name": "Transmission",
+      "bounds": [
+        10,
+        41,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        16,
+        58
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        13,
+        56,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Studio B"
+}

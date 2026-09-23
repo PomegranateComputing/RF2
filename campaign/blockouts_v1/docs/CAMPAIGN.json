@@ -1,0 +1,7318 @@
+[
+  {
+    "number": 1,
+    "code": "RF01",
+    "title": "Sainte-Anne - Les portes ouvertes",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        6
+      ],
+      [
+        0,
+        12,
+        8,
+        10
+      ],
+      [
+        14,
+        12,
+        14,
+        14
+      ],
+      [
+        28,
+        12,
+        8,
+        8
+      ],
+      [
+        28,
+        26,
+        10,
+        8
+      ],
+      [
+        14,
+        28,
+        12,
+        8
+      ],
+      [
+        0,
+        28,
+        8,
+        8
+      ],
+      [
+        -14,
+        28,
+        8,
+        10
+      ],
+      [
+        -14,
+        12,
+        8,
+        8
+      ],
+      [
+        14,
+        44,
+        10,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        5,
+        9
+      ]
+    ],
+    "labels": [
+      "Chambre",
+      "Admissions",
+      "Cour des hommes",
+      "Pavillon est",
+      "Lingerie",
+      "Galerie nord",
+      "Registres",
+      "Chapelle vide",
+      "Consultations",
+      "Porche"
+    ],
+    "theme": "clinic",
+    "anchor": [
+      "Sainte-Anne; Paris, 14 juin 1940",
+      "Le 14 juin 1940, personne",
+      "Cour, admissions, registre, porche ouvert."
+    ],
+    "key_index": 7,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Chambre",
+        "bounds": [
+          -4,
+          -3,
+          8,
+          6
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          12
+        ],
+        "name": "Admissions",
+        "bounds": [
+          -4,
+          7,
+          8,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          14,
+          12
+        ],
+        "name": "Cour des hommes",
+        "bounds": [
+          7,
+          5,
+          14,
+          14
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 3,
+        "cell": [
+          28,
+          12
+        ],
+        "name": "Pavillon est",
+        "bounds": [
+          24,
+          8,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          28,
+          26
+        ],
+        "name": "Lingerie",
+        "bounds": [
+          23,
+          22,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          14,
+          28
+        ],
+        "name": "Galerie nord",
+        "bounds": [
+          8,
+          24,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          0,
+          28
+        ],
+        "name": "Registres",
+        "bounds": [
+          -4,
+          24,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          -14,
+          28
+        ],
+        "name": "Chapelle vide",
+        "bounds": [
+          -18,
+          23,
+          8,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          -14,
+          12
+        ],
+        "name": "Consultations",
+        "bounds": [
+          -18,
+          8,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          14,
+          44
+        ],
+        "name": "Porche",
+        "bounds": [
+          9,
+          40,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          14,
+          55
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          11,
+          53,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Chapelle vide"
+  },
+  {
+    "number": 2,
+    "code": "RF02",
+    "title": "Paris - Rue de service",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        8
+      ],
+      [
+        0,
+        14,
+        8,
+        14
+      ],
+      [
+        14,
+        14,
+        10,
+        8
+      ],
+      [
+        28,
+        14,
+        14,
+        10
+      ],
+      [
+        28,
+        0,
+        10,
+        8
+      ],
+      [
+        14,
+        -14,
+        8,
+        8
+      ],
+      [
+        -14,
+        14,
+        10,
+        8
+      ],
+      [
+        -14,
+        30,
+        12,
+        10
+      ],
+      [
+        0,
+        30,
+        8,
+        8
+      ],
+      [
+        14,
+        30,
+        14,
+        8
+      ],
+      [
+        28,
+        44,
+        10,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        9,
+        10
+      ]
+    ],
+    "labels": [
+      "Arago",
+      "Rue ouverte",
+      "Cour de cafe",
+      "Carrefour du tramway",
+      "TSF",
+      "Arriere-boutique",
+      "Passage couvert",
+      "Place des bagages",
+      "Imprimerie",
+      "Boulevard",
+      "Porte cochere"
+    ],
+    "theme": "street",
+    "anchor": [
+      "Paris, 14 juin 1940",
+      "Boulevard Arago",
+      "Tramway abandonne, TSF, bagages, rues ouvertes."
+    ],
+    "key_index": 5,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Arago",
+        "bounds": [
+          -4,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "Rue ouverte",
+        "bounds": [
+          -4,
+          7,
+          8,
+          14
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 2,
+        "cell": [
+          14,
+          14
+        ],
+        "name": "Cour de cafe",
+        "bounds": [
+          9,
+          10,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          28,
+          14
+        ],
+        "name": "Carrefour du tramway",
+        "bounds": [
+          21,
+          9,
+          14,
+          10
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 4,
+        "cell": [
+          28,
+          0
+        ],
+        "name": "TSF",
+        "bounds": [
+          23,
+          -4,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          14,
+          -14
+        ],
+        "name": "Arriere-boutique",
+        "bounds": [
+          10,
+          -18,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          -14,
+          14
+        ],
+        "name": "Passage couvert",
+        "bounds": [
+          -19,
+          10,
+          10,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 7,
+        "cell": [
+          -14,
+          30
+        ],
+        "name": "Place des bagages",
+        "bounds": [
+          -20,
+          25,
+          12,
+          10
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 8,
+        "cell": [
+          0,
+          30
+        ],
+        "name": "Imprimerie",
+        "bounds": [
+          -4,
+          26,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          14,
+          30
+        ],
+        "name": "Boulevard",
+        "bounds": [
+          7,
+          26,
+          14,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 10,
+        "cell": [
+          28,
+          44
+        ],
+        "name": "Porte cochere",
+        "bounds": [
+          23,
+          40,
+          10,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 11,
+        "cell": [
+          28,
+          55
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          25,
+          53,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Arriere-boutique"
+  },
+  {
+    "number": 3,
+    "code": "RF03",
+    "title": "Batignolles - Refus de reception",
+    "rooms": [
+      [
+        0,
+        0,
+        12,
+        6
+      ],
+      [
+        16,
+        0,
+        10,
+        6
+      ],
+      [
+        32,
+        0,
+        12,
+        8
+      ],
+      [
+        32,
+        16,
+        10,
+        12
+      ],
+      [
+        16,
+        16,
+        12,
+        8
+      ],
+      [
+        0,
+        16,
+        10,
+        8
+      ],
+      [
+        -14,
+        16,
+        8,
+        10
+      ],
+      [
+        -14,
+        32,
+        10,
+        8
+      ],
+      [
+        0,
+        32,
+        12,
+        8
+      ],
+      [
+        16,
+        32,
+        8,
+        8
+      ],
+      [
+        32,
+        32,
+        10,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        3
+      ]
+    ],
+    "labels": [
+      "Atelier",
+      "Garages",
+      "Cour ferroviaire",
+      "Voie de service",
+      "Wagon refuse",
+      "Bureau de reception",
+      "Stockage",
+      "Voies mortes",
+      "Passage a niveau",
+      "Poste aiguillage",
+      "Depart Maillot"
+    ],
+    "theme": "rail",
+    "anchor": [
+      "Batignolles / Porte Maillot",
+      "Il se trouvait au nord-ouest de Paris",
+      "Garages, emprises ferroviaires, refus de dechargement."
+    ],
+    "key_index": 10,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Atelier",
+        "bounds": [
+          -6,
+          -3,
+          12,
+          6
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          16,
+          0
+        ],
+        "name": "Garages",
+        "bounds": [
+          11,
+          -3,
+          10,
+          6
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          32,
+          0
+        ],
+        "name": "Cour ferroviaire",
+        "bounds": [
+          26,
+          -4,
+          12,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 3,
+        "cell": [
+          32,
+          16
+        ],
+        "name": "Voie de service",
+        "bounds": [
+          27,
+          10,
+          10,
+          12
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 4,
+        "cell": [
+          16,
+          16
+        ],
+        "name": "Wagon refuse",
+        "bounds": [
+          10,
+          12,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          0,
+          16
+        ],
+        "name": "Bureau de reception",
+        "bounds": [
+          -5,
+          12,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          -14,
+          16
+        ],
+        "name": "Stockage",
+        "bounds": [
+          -18,
+          11,
+          8,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          -14,
+          32
+        ],
+        "name": "Voies mortes",
+        "bounds": [
+          -19,
+          28,
+          10,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 8,
+        "cell": [
+          0,
+          32
+        ],
+        "name": "Passage a niveau",
+        "bounds": [
+          -6,
+          28,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          16,
+          32
+        ],
+        "name": "Poste aiguillage",
+        "bounds": [
+          12,
+          28,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          32,
+          32
+        ],
+        "name": "Depart Maillot",
+        "bounds": [
+          27,
+          28,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          -14,
+          43
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -17,
+          41,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Depart Maillot"
+  },
+  {
+    "number": 4,
+    "code": "RF04",
+    "title": "Luna Park - Personnel technique",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        6
+      ],
+      [
+        0,
+        14,
+        16,
+        12
+      ],
+      [
+        -16,
+        14,
+        10,
+        8
+      ],
+      [
+        -16,
+        30,
+        10,
+        12
+      ],
+      [
+        0,
+        30,
+        12,
+        10
+      ],
+      [
+        16,
+        30,
+        10,
+        12
+      ],
+      [
+        16,
+        14,
+        10,
+        8
+      ],
+      [
+        32,
+        14,
+        8,
+        8
+      ],
+      [
+        32,
+        30,
+        8,
+        8
+      ],
+      [
+        0,
+        46,
+        12,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        4,
+        9
+      ]
+    ],
+    "labels": [
+      "Pointage 017",
+      "Grande allee",
+      "Billetterie",
+      "Pavillon du rire",
+      "Cour du manege",
+      "Galerie des miroirs",
+      "Kiosques",
+      "Reserve technique",
+      "Transformateur",
+      "Porte du personnel"
+    ],
+    "theme": "fair",
+    "anchor": [
+      "Luna Park",
+      "LUNA PARK - PERSONNEL TECHNIQUE",
+      "Pointage, allees, palais du rire, circuits techniques."
+    ],
+    "key_index": 8,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Pointage 017",
+        "bounds": [
+          -4,
+          -3,
+          8,
+          6
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "Grande allee",
+        "bounds": [
+          -8,
+          8,
+          16,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          -16,
+          14
+        ],
+        "name": "Billetterie",
+        "bounds": [
+          -21,
+          10,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          -16,
+          30
+        ],
+        "name": "Pavillon du rire",
+        "bounds": [
+          -21,
+          24,
+          10,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          0,
+          30
+        ],
+        "name": "Cour du manege",
+        "bounds": [
+          -6,
+          25,
+          12,
+          10
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 5,
+        "cell": [
+          16,
+          30
+        ],
+        "name": "Galerie des miroirs",
+        "bounds": [
+          11,
+          24,
+          10,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          16,
+          14
+        ],
+        "name": "Kiosques",
+        "bounds": [
+          11,
+          10,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          32,
+          14
+        ],
+        "name": "Reserve technique",
+        "bounds": [
+          28,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          32,
+          30
+        ],
+        "name": "Transformateur",
+        "bounds": [
+          28,
+          26,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          0,
+          46
+        ],
+        "name": "Porte du personnel",
+        "bounds": [
+          -6,
+          42,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          0,
+          57
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -3,
+          55,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Transformateur"
+  },
+  {
+    "number": 5,
+    "code": "RF05",
+    "title": "Les machines continuent",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        8
+      ],
+      [
+        14,
+        0,
+        12,
+        8
+      ],
+      [
+        28,
+        0,
+        8,
+        10
+      ],
+      [
+        28,
+        16,
+        10,
+        10
+      ],
+      [
+        14,
+        16,
+        14,
+        12
+      ],
+      [
+        0,
+        16,
+        8,
+        10
+      ],
+      [
+        -14,
+        16,
+        10,
+        8
+      ],
+      [
+        -14,
+        32,
+        10,
+        8
+      ],
+      [
+        0,
+        32,
+        8,
+        8
+      ],
+      [
+        14,
+        32,
+        14,
+        8
+      ],
+      [
+        28,
+        32,
+        8,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        3
+      ]
+    ],
+    "labels": [
+      "Atelier electrique",
+      "Machines",
+      "Courroies",
+      "Poste de controle",
+      "Grand moteur",
+      "Passerelles",
+      "Reserve",
+      "Dynamo",
+      "Vestiaire",
+      "Galerie de retour",
+      "Circuit principal"
+    ],
+    "theme": "machine",
+    "anchor": [
+      "Luna Park",
+      "palais du rire",
+      "Machinerie et miroirs ; parcours technique cree pour le FPS."
+    ],
+    "key_index": 10,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Atelier electrique",
+        "bounds": [
+          -4,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          14,
+          0
+        ],
+        "name": "Machines",
+        "bounds": [
+          8,
+          -4,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          28,
+          0
+        ],
+        "name": "Courroies",
+        "bounds": [
+          24,
+          -5,
+          8,
+          10
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 3,
+        "cell": [
+          28,
+          16
+        ],
+        "name": "Poste de controle",
+        "bounds": [
+          23,
+          11,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          14,
+          16
+        ],
+        "name": "Grand moteur",
+        "bounds": [
+          7,
+          10,
+          14,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          0,
+          16
+        ],
+        "name": "Passerelles",
+        "bounds": [
+          -4,
+          11,
+          8,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          -14,
+          16
+        ],
+        "name": "Reserve",
+        "bounds": [
+          -19,
+          12,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          -14,
+          32
+        ],
+        "name": "Dynamo",
+        "bounds": [
+          -19,
+          28,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          0,
+          32
+        ],
+        "name": "Vestiaire",
+        "bounds": [
+          -4,
+          28,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          14,
+          32
+        ],
+        "name": "Galerie de retour",
+        "bounds": [
+          7,
+          28,
+          14,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          28,
+          32
+        ],
+        "name": "Circuit principal",
+        "bounds": [
+          24,
+          28,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          -14,
+          43
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -17,
+          41,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Circuit principal"
+  },
+  {
+    "number": 6,
+    "code": "RF06",
+    "title": "La sortie du personnel",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        6
+      ],
+      [
+        0,
+        14,
+        10,
+        10
+      ],
+      [
+        -14,
+        14,
+        8,
+        10
+      ],
+      [
+        -14,
+        30,
+        12,
+        8
+      ],
+      [
+        0,
+        30,
+        10,
+        12
+      ],
+      [
+        14,
+        30,
+        10,
+        8
+      ],
+      [
+        28,
+        30,
+        10,
+        10
+      ],
+      [
+        28,
+        14,
+        10,
+        8
+      ],
+      [
+        14,
+        14,
+        8,
+        8
+      ],
+      [
+        14,
+        46,
+        14,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        5,
+        9
+      ]
+    ],
+    "labels": [
+      "Vestiaires",
+      "Bureau du temps",
+      "Effets non reclames",
+      "Hangar",
+      "Cour des retours",
+      "Grille",
+      "Maintenance",
+      "Attractions fermees",
+      "Pointage",
+      "Embarquement"
+    ],
+    "theme": "fair",
+    "anchor": [
+      "Luna Park",
+      "effets non",
+      "Sortie du personnel et objets non reclames."
+    ],
+    "key_index": 3,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Vestiaires",
+        "bounds": [
+          -4,
+          -3,
+          8,
+          6
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "Bureau du temps",
+        "bounds": [
+          -5,
+          9,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          -14,
+          14
+        ],
+        "name": "Effets non reclames",
+        "bounds": [
+          -18,
+          9,
+          8,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          -14,
+          30
+        ],
+        "name": "Hangar",
+        "bounds": [
+          -20,
+          26,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          0,
+          30
+        ],
+        "name": "Cour des retours",
+        "bounds": [
+          -5,
+          24,
+          10,
+          12
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 5,
+        "cell": [
+          14,
+          30
+        ],
+        "name": "Grille",
+        "bounds": [
+          9,
+          26,
+          10,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 6,
+        "cell": [
+          28,
+          30
+        ],
+        "name": "Maintenance",
+        "bounds": [
+          23,
+          25,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          28,
+          14
+        ],
+        "name": "Attractions fermees",
+        "bounds": [
+          23,
+          10,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          14,
+          14
+        ],
+        "name": "Pointage",
+        "bounds": [
+          10,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          14,
+          46
+        ],
+        "name": "Embarquement",
+        "bounds": [
+          7,
+          42,
+          14,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          14,
+          57
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          11,
+          55,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Hangar"
+  },
+  {
+    "number": 7,
+    "code": "RF07",
+    "title": "Jerma - Facade maritime",
+    "rooms": [
+      [
+        0,
+        0,
+        12,
+        6
+      ],
+      [
+        0,
+        14,
+        16,
+        8
+      ],
+      [
+        -18,
+        14,
+        10,
+        10
+      ],
+      [
+        -18,
+        30,
+        10,
+        12
+      ],
+      [
+        0,
+        30,
+        16,
+        12
+      ],
+      [
+        18,
+        30,
+        10,
+        12
+      ],
+      [
+        18,
+        14,
+        10,
+        10
+      ],
+      [
+        34,
+        14,
+        10,
+        8
+      ],
+      [
+        34,
+        30,
+        10,
+        8
+      ],
+      [
+        0,
+        48,
+        12,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        4,
+        9
+      ]
+    ],
+    "labels": [
+      "Route cotiere",
+      "Parvis maritime",
+      "Terrasse ouest",
+      "Aile ouverte",
+      "Hall effondre",
+      "Aile est",
+      "Reception",
+      "Parking livreurs",
+      "Quai",
+      "Galerie haute"
+    ],
+    "theme": "jerma",
+    "anchor": [
+      "Malte, Jerma Palace",
+      "En decembre 2022",
+      "Beton ouvert, deux ailes, hiver maltais et front de mer."
+    ],
+    "key_index": 8,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Route cotiere",
+        "bounds": [
+          -6,
+          -3,
+          12,
+          6
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "Parvis maritime",
+        "bounds": [
+          -8,
+          10,
+          16,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 2,
+        "cell": [
+          -18,
+          14
+        ],
+        "name": "Terrasse ouest",
+        "bounds": [
+          -23,
+          9,
+          10,
+          10
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 3,
+        "cell": [
+          -18,
+          30
+        ],
+        "name": "Aile ouverte",
+        "bounds": [
+          -23,
+          24,
+          10,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          0,
+          30
+        ],
+        "name": "Hall effondre",
+        "bounds": [
+          -8,
+          24,
+          16,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          18,
+          30
+        ],
+        "name": "Aile est",
+        "bounds": [
+          13,
+          24,
+          10,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          18,
+          14
+        ],
+        "name": "Reception",
+        "bounds": [
+          13,
+          9,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          34,
+          14
+        ],
+        "name": "Parking livreurs",
+        "bounds": [
+          29,
+          10,
+          10,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 8,
+        "cell": [
+          34,
+          30
+        ],
+        "name": "Quai",
+        "bounds": [
+          29,
+          26,
+          10,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 9,
+        "cell": [
+          0,
+          48
+        ],
+        "name": "Galerie haute",
+        "bounds": [
+          -6,
+          44,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          0,
+          59
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -3,
+          57,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Quai"
+  },
+  {
+    "number": 8,
+    "code": "RF08",
+    "title": "Aile des chambres",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        8
+      ],
+      [
+        0,
+        14,
+        6,
+        14
+      ],
+      [
+        -12,
+        14,
+        8,
+        8
+      ],
+      [
+        -12,
+        30,
+        8,
+        8
+      ],
+      [
+        0,
+        30,
+        6,
+        12
+      ],
+      [
+        12,
+        30,
+        8,
+        8
+      ],
+      [
+        12,
+        14,
+        8,
+        8
+      ],
+      [
+        24,
+        14,
+        8,
+        10
+      ],
+      [
+        24,
+        30,
+        8,
+        10
+      ],
+      [
+        0,
+        46,
+        12,
+        10
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        4,
+        9
+      ]
+    ],
+    "labels": [
+      "Palier",
+      "Couloir 100",
+      "Chambre 112",
+      "Lingerie",
+      "Couloir 117",
+      "Chambre manquante",
+      "Chambre 118",
+      "Balcons",
+      "Suite ouverte",
+      "Escalier de service"
+    ],
+    "theme": "hotel",
+    "anchor": [
+      "Jerma",
+      "ROOMS / FLOW / FINAL",
+      "Chambres et circulations de service."
+    ],
+    "key_index": 2,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Palier",
+        "bounds": [
+          -4,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "Couloir 100",
+        "bounds": [
+          -3,
+          7,
+          6,
+          14
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          -12,
+          14
+        ],
+        "name": "Chambre 112",
+        "bounds": [
+          -16,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          -12,
+          30
+        ],
+        "name": "Lingerie",
+        "bounds": [
+          -16,
+          26,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          0,
+          30
+        ],
+        "name": "Couloir 117",
+        "bounds": [
+          -3,
+          24,
+          6,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          12,
+          30
+        ],
+        "name": "Chambre manquante",
+        "bounds": [
+          8,
+          26,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          12,
+          14
+        ],
+        "name": "Chambre 118",
+        "bounds": [
+          8,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          24,
+          14
+        ],
+        "name": "Balcons",
+        "bounds": [
+          20,
+          9,
+          8,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          24,
+          30
+        ],
+        "name": "Suite ouverte",
+        "bounds": [
+          20,
+          25,
+          8,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          0,
+          46
+        ],
+        "name": "Escalier de service",
+        "bounds": [
+          -6,
+          41,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          0,
+          58
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -3,
+          56,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Chambre 112"
+  },
+  {
+    "number": 9,
+    "code": "RF09",
+    "title": "La piscine vide",
+    "rooms": [
+      [
+        0,
+        0,
+        10,
+        8
+      ],
+      [
+        0,
+        16,
+        18,
+        18
+      ],
+      [
+        -20,
+        16,
+        10,
+        14
+      ],
+      [
+        -20,
+        36,
+        10,
+        10
+      ],
+      [
+        0,
+        38,
+        18,
+        8
+      ],
+      [
+        20,
+        36,
+        10,
+        10
+      ],
+      [
+        20,
+        16,
+        10,
+        14
+      ],
+      [
+        20,
+        0,
+        10,
+        8
+      ],
+      [
+        -20,
+        0,
+        10,
+        8
+      ],
+      [
+        0,
+        52,
+        12,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        4,
+        9
+      ]
+    ],
+    "labels": [
+      "Vestiaire piscine",
+      "Bassin vide",
+      "Terrasse ouest",
+      "Bar abandonne",
+      "Promenade",
+      "Terrasse est",
+      "Pompes",
+      "Local filtration",
+      "Douches",
+      "Passage sous gradins"
+    ],
+    "theme": "pool",
+    "anchor": [
+      "Jerma",
+      "piscine vide",
+      "Bassin sans eau, matelas brule, terrasse."
+    ],
+    "key_index": 8,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Vestiaire piscine",
+        "bounds": [
+          -5,
+          -4,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          16
+        ],
+        "name": "Bassin vide",
+        "bounds": [
+          -9,
+          7,
+          18,
+          18
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          -20,
+          16
+        ],
+        "name": "Terrasse ouest",
+        "bounds": [
+          -25,
+          9,
+          10,
+          14
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 3,
+        "cell": [
+          -20,
+          36
+        ],
+        "name": "Bar abandonne",
+        "bounds": [
+          -25,
+          31,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          0,
+          38
+        ],
+        "name": "Promenade",
+        "bounds": [
+          -9,
+          34,
+          18,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 5,
+        "cell": [
+          20,
+          36
+        ],
+        "name": "Terrasse est",
+        "bounds": [
+          15,
+          31,
+          10,
+          10
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 6,
+        "cell": [
+          20,
+          16
+        ],
+        "name": "Pompes",
+        "bounds": [
+          15,
+          9,
+          10,
+          14
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          20,
+          0
+        ],
+        "name": "Local filtration",
+        "bounds": [
+          15,
+          -4,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          -20,
+          0
+        ],
+        "name": "Douches",
+        "bounds": [
+          -25,
+          -4,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          0,
+          52
+        ],
+        "name": "Passage sous gradins",
+        "bounds": [
+          -6,
+          48,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          0,
+          63
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -3,
+          61,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Douches"
+  },
+  {
+    "number": 10,
+    "code": "RF10",
+    "title": "L'envers du palace",
+    "rooms": [
+      [
+        0,
+        0,
+        10,
+        8
+      ],
+      [
+        14,
+        0,
+        10,
+        8
+      ],
+      [
+        28,
+        0,
+        10,
+        8
+      ],
+      [
+        28,
+        14,
+        10,
+        8
+      ],
+      [
+        28,
+        28,
+        10,
+        10
+      ],
+      [
+        14,
+        28,
+        10,
+        8
+      ],
+      [
+        0,
+        28,
+        10,
+        10
+      ],
+      [
+        0,
+        14,
+        10,
+        8
+      ],
+      [
+        14,
+        14,
+        8,
+        8
+      ],
+      [
+        -14,
+        28,
+        8,
+        8
+      ],
+      [
+        -14,
+        44,
+        12,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        9,
+        10
+      ]
+    ],
+    "labels": [
+      "Livraisons",
+      "Chambre froide",
+      "Cuisines",
+      "Plonge",
+      "Chariots",
+      "Dechets",
+      "Lingerie",
+      "Couloir de service",
+      "Machinerie",
+      "Plans de Vella",
+      "Acces ouest"
+    ],
+    "theme": "service",
+    "anchor": [
+      "Jerma",
+      "les cuisines, les reseaux",
+      "Cuisine, ventilation, lingerie, quai : adaptation des flux."
+    ],
+    "key_index": 4,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Livraisons",
+        "bounds": [
+          -5,
+          -4,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          14,
+          0
+        ],
+        "name": "Chambre froide",
+        "bounds": [
+          9,
+          -4,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          28,
+          0
+        ],
+        "name": "Cuisines",
+        "bounds": [
+          23,
+          -4,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          28,
+          14
+        ],
+        "name": "Plonge",
+        "bounds": [
+          23,
+          10,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          28,
+          28
+        ],
+        "name": "Chariots",
+        "bounds": [
+          23,
+          23,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          14,
+          28
+        ],
+        "name": "Dechets",
+        "bounds": [
+          9,
+          24,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          0,
+          28
+        ],
+        "name": "Lingerie",
+        "bounds": [
+          -5,
+          23,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "Couloir de service",
+        "bounds": [
+          -5,
+          10,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          14,
+          14
+        ],
+        "name": "Machinerie",
+        "bounds": [
+          10,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          -14,
+          28
+        ],
+        "name": "Plans de Vella",
+        "bounds": [
+          -18,
+          24,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          -14,
+          44
+        ],
+        "name": "Acces ouest",
+        "bounds": [
+          -20,
+          40,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          -14,
+          55
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -17,
+          53,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Chariots"
+  },
+  {
+    "number": 11,
+    "code": "RF11",
+    "title": "Acces interdit cote chambre",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        8
+      ],
+      [
+        14,
+        0,
+        8,
+        8
+      ],
+      [
+        28,
+        0,
+        8,
+        8
+      ],
+      [
+        42,
+        0,
+        8,
+        8
+      ],
+      [
+        42,
+        14,
+        8,
+        8
+      ],
+      [
+        28,
+        14,
+        8,
+        8
+      ],
+      [
+        14,
+        14,
+        8,
+        8
+      ],
+      [
+        0,
+        14,
+        8,
+        8
+      ],
+      [
+        0,
+        30,
+        12,
+        8
+      ],
+      [
+        20,
+        30,
+        12,
+        8
+      ],
+      [
+        42,
+        30,
+        12,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        4
+      ]
+    ],
+    "labels": [
+      "Seuil",
+      "Chambre A",
+      "Chambre B",
+      "Chambre 117",
+      "Piece sans numero",
+      "Contre-champ",
+      "Chambre C",
+      "Retour apparent",
+      "Plans ROOMS",
+      "Flux FLOW",
+      "Acces FINAL"
+    ],
+    "theme": "anomaly",
+    "anchor": [
+      "Jerma / plan ROOMS",
+      "la chambre manquante",
+      "Geometrie de gameplay autour des chambres et du plan."
+    ],
+    "key_index": 3,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Seuil",
+        "bounds": [
+          -4,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          14,
+          0
+        ],
+        "name": "Chambre A",
+        "bounds": [
+          10,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          28,
+          0
+        ],
+        "name": "Chambre B",
+        "bounds": [
+          24,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          42,
+          0
+        ],
+        "name": "Chambre 117",
+        "bounds": [
+          38,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          42,
+          14
+        ],
+        "name": "Piece sans numero",
+        "bounds": [
+          38,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          28,
+          14
+        ],
+        "name": "Contre-champ",
+        "bounds": [
+          24,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          14,
+          14
+        ],
+        "name": "Chambre C",
+        "bounds": [
+          10,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "Retour apparent",
+        "bounds": [
+          -4,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          0,
+          30
+        ],
+        "name": "Plans ROOMS",
+        "bounds": [
+          -6,
+          26,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          20,
+          30
+        ],
+        "name": "Flux FLOW",
+        "bounds": [
+          14,
+          26,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          42,
+          30
+        ],
+        "name": "Acces FINAL",
+        "bounds": [
+          36,
+          26,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          0,
+          41
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -3,
+          39,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Chambre 117"
+  },
+  {
+    "number": 12,
+    "code": "RF12",
+    "title": "Le dernier escalier",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        8
+      ],
+      [
+        14,
+        0,
+        12,
+        8
+      ],
+      [
+        28,
+        0,
+        8,
+        8
+      ],
+      [
+        28,
+        16,
+        8,
+        12
+      ],
+      [
+        14,
+        16,
+        12,
+        8
+      ],
+      [
+        0,
+        16,
+        8,
+        8
+      ],
+      [
+        0,
+        32,
+        8,
+        12
+      ],
+      [
+        14,
+        32,
+        12,
+        8
+      ],
+      [
+        28,
+        32,
+        8,
+        8
+      ],
+      [
+        28,
+        48,
+        12,
+        8
+      ],
+      [
+        14,
+        48,
+        8,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        7
+      ]
+    ],
+    "labels": [
+      "Pied de cage",
+      "Palier bas",
+      "Coursive sud",
+      "Escalier est",
+      "Palier median",
+      "Cage ouest",
+      "Montee technique",
+      "Palier haut",
+      "Toiture",
+      "Sortie de secours",
+      "Local video"
+    ],
+    "theme": "stairs",
+    "anchor": [
+      "Jerma / circulation",
+      "WEST STAIR",
+      "Escaliers, secours et couloirs de service."
+    ],
+    "key_index": 2,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Pied de cage",
+        "bounds": [
+          -4,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          14,
+          0
+        ],
+        "name": "Palier bas",
+        "bounds": [
+          8,
+          -4,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          28,
+          0
+        ],
+        "name": "Coursive sud",
+        "bounds": [
+          24,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 3,
+        "cell": [
+          28,
+          16
+        ],
+        "name": "Escalier est",
+        "bounds": [
+          24,
+          10,
+          8,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          14,
+          16
+        ],
+        "name": "Palier median",
+        "bounds": [
+          8,
+          12,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          0,
+          16
+        ],
+        "name": "Cage ouest",
+        "bounds": [
+          -4,
+          12,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          0,
+          32
+        ],
+        "name": "Montee technique",
+        "bounds": [
+          -4,
+          26,
+          8,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          14,
+          32
+        ],
+        "name": "Palier haut",
+        "bounds": [
+          8,
+          28,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          28,
+          32
+        ],
+        "name": "Toiture",
+        "bounds": [
+          24,
+          28,
+          8,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 9,
+        "cell": [
+          28,
+          48
+        ],
+        "name": "Sortie de secours",
+        "bounds": [
+          22,
+          44,
+          12,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 10,
+        "cell": [
+          14,
+          48
+        ],
+        "name": "Local video",
+        "bounds": [
+          10,
+          44,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          28,
+          59
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          25,
+          57,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Coursive sud"
+  },
+  {
+    "number": 13,
+    "code": "RF13",
+    "title": "Waukegan - Chambre 217",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        6
+      ],
+      [
+        0,
+        12,
+        6,
+        10
+      ],
+      [
+        14,
+        12,
+        8,
+        8
+      ],
+      [
+        28,
+        12,
+        12,
+        12
+      ],
+      [
+        28,
+        -4,
+        12,
+        8
+      ],
+      [
+        14,
+        -4,
+        8,
+        8
+      ],
+      [
+        -14,
+        12,
+        8,
+        8
+      ],
+      [
+        -14,
+        28,
+        10,
+        8
+      ],
+      [
+        0,
+        28,
+        10,
+        8
+      ],
+      [
+        14,
+        28,
+        10,
+        8
+      ],
+      [
+        28,
+        28,
+        12,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        3
+      ]
+    ],
+    "labels": [
+      "Chambre 217",
+      "Couloir motel",
+      "Machine a glace",
+      "Parking arriere",
+      "Friches",
+      "Local linge",
+      "Chambre 117",
+      "Reception Marisol",
+      "Salle TV",
+      "Rue industrielle",
+      "Lumiere du lac"
+    ],
+    "theme": "motel",
+    "anchor": [
+      "Waukegan, motel",
+      "Room 217",
+      "Parking arriere, friches, voie ferree ; lac hors vue."
+    ],
+    "key_index": 10,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Chambre 217",
+        "bounds": [
+          -4,
+          -3,
+          8,
+          6
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          12
+        ],
+        "name": "Couloir motel",
+        "bounds": [
+          -3,
+          7,
+          6,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          14,
+          12
+        ],
+        "name": "Machine a glace",
+        "bounds": [
+          10,
+          8,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          28,
+          12
+        ],
+        "name": "Parking arriere",
+        "bounds": [
+          22,
+          6,
+          12,
+          12
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 4,
+        "cell": [
+          28,
+          -4
+        ],
+        "name": "Friches",
+        "bounds": [
+          22,
+          -8,
+          12,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 5,
+        "cell": [
+          14,
+          -4
+        ],
+        "name": "Local linge",
+        "bounds": [
+          10,
+          -8,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          -14,
+          12
+        ],
+        "name": "Chambre 117",
+        "bounds": [
+          -18,
+          8,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          -14,
+          28
+        ],
+        "name": "Reception Marisol",
+        "bounds": [
+          -19,
+          24,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          0,
+          28
+        ],
+        "name": "Salle TV",
+        "bounds": [
+          -5,
+          24,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          14,
+          28
+        ],
+        "name": "Rue industrielle",
+        "bounds": [
+          9,
+          24,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          28,
+          28
+        ],
+        "name": "Lumiere du lac",
+        "bounds": [
+          22,
+          24,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          -14,
+          39
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -17,
+          37,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Lumiere du lac"
+  },
+  {
+    "number": 14,
+    "code": "RF14",
+    "title": "Building 2 - South Dock",
+    "rooms": [
+      [
+        0,
+        0,
+        10,
+        6
+      ],
+      [
+        0,
+        14,
+        18,
+        10
+      ],
+      [
+        -20,
+        14,
+        10,
+        10
+      ],
+      [
+        -20,
+        30,
+        10,
+        10
+      ],
+      [
+        0,
+        30,
+        18,
+        10
+      ],
+      [
+        20,
+        30,
+        10,
+        10
+      ],
+      [
+        20,
+        14,
+        10,
+        10
+      ],
+      [
+        36,
+        14,
+        8,
+        10
+      ],
+      [
+        36,
+        30,
+        8,
+        10
+      ],
+      [
+        0,
+        46,
+        12,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        4,
+        9
+      ]
+    ],
+    "labels": [
+      "Controle acces",
+      "South Dock",
+      "Rampe ouest",
+      "Entrepot A",
+      "Cour des quais",
+      "Entrepot B",
+      "Reception Donna",
+      "Bureau Reggie",
+      "Station pompage",
+      "Building 2"
+    ],
+    "theme": "dock",
+    "anchor": [
+      "WKG Cold Storage, Building 2",
+      "DOCK ACCESS BY APPOINTMENT",
+      "Acces logistique et quai ; South Dock est un titre de niveau."
+    ],
+    "key_index": 8,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Controle acces",
+        "bounds": [
+          -5,
+          -3,
+          10,
+          6
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "South Dock",
+        "bounds": [
+          -9,
+          9,
+          18,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          -20,
+          14
+        ],
+        "name": "Rampe ouest",
+        "bounds": [
+          -25,
+          9,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          -20,
+          30
+        ],
+        "name": "Entrepot A",
+        "bounds": [
+          -25,
+          25,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          0,
+          30
+        ],
+        "name": "Cour des quais",
+        "bounds": [
+          -9,
+          25,
+          18,
+          10
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 5,
+        "cell": [
+          20,
+          30
+        ],
+        "name": "Entrepot B",
+        "bounds": [
+          15,
+          25,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          20,
+          14
+        ],
+        "name": "Reception Donna",
+        "bounds": [
+          15,
+          9,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          36,
+          14
+        ],
+        "name": "Bureau Reggie",
+        "bounds": [
+          32,
+          9,
+          8,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          36,
+          30
+        ],
+        "name": "Station pompage",
+        "bounds": [
+          32,
+          25,
+          8,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          0,
+          46
+        ],
+        "name": "Building 2",
+        "bounds": [
+          -6,
+          42,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          0,
+          57
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -3,
+          55,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Station pompage"
+  },
+  {
+    "number": 15,
+    "code": "RF15",
+    "title": "Les crochets et les boites",
+    "rooms": [
+      [
+        0,
+        0,
+        10,
+        6
+      ],
+      [
+        0,
+        14,
+        18,
+        12
+      ],
+      [
+        -20,
+        14,
+        12,
+        10
+      ],
+      [
+        -20,
+        30,
+        12,
+        10
+      ],
+      [
+        0,
+        30,
+        18,
+        10
+      ],
+      [
+        20,
+        30,
+        12,
+        10
+      ],
+      [
+        20,
+        14,
+        12,
+        10
+      ],
+      [
+        20,
+        46,
+        10,
+        8
+      ],
+      [
+        0,
+        46,
+        10,
+        8
+      ],
+      [
+        -20,
+        46,
+        10,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        8,
+        4
+      ]
+    ],
+    "labels": [
+      "Sas",
+      "Rails suspendus",
+      "Crochets",
+      "Boites 117-A",
+      "Allee eau haute",
+      "117-B StepRoom",
+      "Inventaire",
+      "117-C Research",
+      "117-D Laboratoire",
+      "117-E Non attribue"
+    ],
+    "theme": "cold",
+    "anchor": [
+      "WKG, unite 117",
+      "NOTHING BELOW WATERLINE",
+      "Crochets, rayonnages, boites redistribuees par eau."
+    ],
+    "key_index": 9,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Sas",
+        "bounds": [
+          -5,
+          -3,
+          10,
+          6
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "Rails suspendus",
+        "bounds": [
+          -9,
+          8,
+          18,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          -20,
+          14
+        ],
+        "name": "Crochets",
+        "bounds": [
+          -26,
+          9,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          -20,
+          30
+        ],
+        "name": "Boites 117-A",
+        "bounds": [
+          -26,
+          25,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          0,
+          30
+        ],
+        "name": "Allee eau haute",
+        "bounds": [
+          -9,
+          25,
+          18,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          20,
+          30
+        ],
+        "name": "117-B StepRoom",
+        "bounds": [
+          14,
+          25,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          20,
+          14
+        ],
+        "name": "Inventaire",
+        "bounds": [
+          14,
+          9,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          20,
+          46
+        ],
+        "name": "117-C Research",
+        "bounds": [
+          15,
+          42,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          0,
+          46
+        ],
+        "name": "117-D Laboratoire",
+        "bounds": [
+          -5,
+          42,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          -20,
+          46
+        ],
+        "name": "117-E Non attribue",
+        "bounds": [
+          -25,
+          42,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          20,
+          57
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          17,
+          55,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "117-E Non attribue"
+  },
+  {
+    "number": 16,
+    "code": "RF16",
+    "title": "WKG Community",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        6
+      ],
+      [
+        0,
+        14,
+        12,
+        10
+      ],
+      [
+        16,
+        14,
+        10,
+        10
+      ],
+      [
+        32,
+        14,
+        12,
+        12
+      ],
+      [
+        32,
+        30,
+        10,
+        10
+      ],
+      [
+        16,
+        30,
+        10,
+        8
+      ],
+      [
+        0,
+        30,
+        12,
+        10
+      ],
+      [
+        -16,
+        30,
+        10,
+        10
+      ],
+      [
+        -16,
+        14,
+        10,
+        8
+      ],
+      [
+        16,
+        46,
+        12,
+        10
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        5,
+        9
+      ]
+    ],
+    "labels": [
+      "Accueil station",
+      "Plateau Family Watch",
+      "Regie",
+      "Reserve decors",
+      "Copies emission",
+      "Montage",
+      "Archives video",
+      "Studio B",
+      "Vestiaires",
+      "Transmission"
+    ],
+    "theme": "broadcast",
+    "anchor": [
+      "WKG Community 17",
+      "WKG COMMUNITY 17",
+      "Emission FAMILY WATCH ; studio explorable cree pour le jeu."
+    ],
+    "key_index": 7,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Accueil station",
+        "bounds": [
+          -4,
+          -3,
+          8,
+          6
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "Plateau Family Watch",
+        "bounds": [
+          -6,
+          9,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          16,
+          14
+        ],
+        "name": "Regie",
+        "bounds": [
+          11,
+          9,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          32,
+          14
+        ],
+        "name": "Reserve decors",
+        "bounds": [
+          26,
+          8,
+          12,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          32,
+          30
+        ],
+        "name": "Copies emission",
+        "bounds": [
+          27,
+          25,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          16,
+          30
+        ],
+        "name": "Montage",
+        "bounds": [
+          11,
+          26,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          0,
+          30
+        ],
+        "name": "Archives video",
+        "bounds": [
+          -6,
+          25,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          -16,
+          30
+        ],
+        "name": "Studio B",
+        "bounds": [
+          -21,
+          25,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          -16,
+          14
+        ],
+        "name": "Vestiaires",
+        "bounds": [
+          -21,
+          10,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          16,
+          46
+        ],
+        "name": "Transmission",
+        "bounds": [
+          10,
+          41,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          16,
+          58
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          13,
+          56,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Studio B"
+  },
+  {
+    "number": 17,
+    "code": "RF17",
+    "title": "Conservation provisoire",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        8
+      ],
+      [
+        14,
+        0,
+        12,
+        10
+      ],
+      [
+        30,
+        0,
+        12,
+        10
+      ],
+      [
+        46,
+        0,
+        8,
+        8
+      ],
+      [
+        46,
+        16,
+        10,
+        10
+      ],
+      [
+        30,
+        16,
+        12,
+        10
+      ],
+      [
+        14,
+        16,
+        12,
+        10
+      ],
+      [
+        0,
+        16,
+        8,
+        8
+      ],
+      [
+        14,
+        34,
+        12,
+        10
+      ],
+      [
+        30,
+        34,
+        12,
+        10
+      ],
+      [
+        46,
+        34,
+        8,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        4
+      ]
+    ],
+    "labels": [
+      "Morrow accueil",
+      "Depot provisoire",
+      "Casiers",
+      "Ordres de garde",
+      "Salle scellee",
+      "Conteneurs parents",
+      "Conteneurs enfants",
+      "Administration",
+      "Conservation",
+      "Salle des signatures",
+      "Transfert"
+    ],
+    "theme": "archive",
+    "anchor": [
+      "Morrow / archives",
+      "Morrow Private Archive Services",
+      "Conservation et succession des depots."
+    ],
+    "key_index": 3,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Morrow accueil",
+        "bounds": [
+          -4,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          14,
+          0
+        ],
+        "name": "Depot provisoire",
+        "bounds": [
+          8,
+          -5,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          30,
+          0
+        ],
+        "name": "Casiers",
+        "bounds": [
+          24,
+          -5,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          46,
+          0
+        ],
+        "name": "Ordres de garde",
+        "bounds": [
+          42,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          46,
+          16
+        ],
+        "name": "Salle scellee",
+        "bounds": [
+          41,
+          11,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          30,
+          16
+        ],
+        "name": "Conteneurs parents",
+        "bounds": [
+          24,
+          11,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          14,
+          16
+        ],
+        "name": "Conteneurs enfants",
+        "bounds": [
+          8,
+          11,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          0,
+          16
+        ],
+        "name": "Administration",
+        "bounds": [
+          -4,
+          12,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          14,
+          34
+        ],
+        "name": "Conservation",
+        "bounds": [
+          8,
+          29,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          30,
+          34
+        ],
+        "name": "Salle des signatures",
+        "bounds": [
+          24,
+          29,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          46,
+          34
+        ],
+        "name": "Transfert",
+        "bounds": [
+          42,
+          30,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          14,
+          46
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          11,
+          44,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Ordres de garde"
+  },
+  {
+    "number": 18,
+    "code": "RF18",
+    "title": "Gennevilliers - La cour des transferts",
+    "rooms": [
+      [
+        0,
+        0,
+        10,
+        8
+      ],
+      [
+        0,
+        16,
+        20,
+        10
+      ],
+      [
+        -22,
+        16,
+        12,
+        10
+      ],
+      [
+        -22,
+        34,
+        12,
+        12
+      ],
+      [
+        0,
+        34,
+        20,
+        12
+      ],
+      [
+        22,
+        34,
+        12,
+        12
+      ],
+      [
+        22,
+        16,
+        12,
+        10
+      ],
+      [
+        40,
+        16,
+        10,
+        8
+      ],
+      [
+        40,
+        34,
+        10,
+        8
+      ],
+      [
+        0,
+        54,
+        12,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        4,
+        9
+      ]
+    ],
+    "labels": [
+      "Portique",
+      "Cour camions",
+      "Bacs bleus",
+      "Destruction securisee",
+      "Rails dans asphalte",
+      "Hangar retour",
+      "Bascule",
+      "Ancien courtier",
+      "Canal service",
+      "Bordereau"
+    ],
+    "theme": "dock",
+    "anchor": [
+      "Gennevilliers",
+      "Le port de Gennevilliers",
+      "Bacs bleus, rails dans asphalte, destruction securisee."
+    ],
+    "key_index": 8,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Portique",
+        "bounds": [
+          -5,
+          -4,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          16
+        ],
+        "name": "Cour camions",
+        "bounds": [
+          -10,
+          11,
+          20,
+          10
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 2,
+        "cell": [
+          -22,
+          16
+        ],
+        "name": "Bacs bleus",
+        "bounds": [
+          -28,
+          11,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          -22,
+          34
+        ],
+        "name": "Destruction securisee",
+        "bounds": [
+          -28,
+          28,
+          12,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          0,
+          34
+        ],
+        "name": "Rails dans asphalte",
+        "bounds": [
+          -10,
+          28,
+          20,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          22,
+          34
+        ],
+        "name": "Hangar retour",
+        "bounds": [
+          16,
+          28,
+          12,
+          12
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          22,
+          16
+        ],
+        "name": "Bascule",
+        "bounds": [
+          16,
+          11,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          40,
+          16
+        ],
+        "name": "Ancien courtier",
+        "bounds": [
+          35,
+          12,
+          10,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 8,
+        "cell": [
+          40,
+          34
+        ],
+        "name": "Canal service",
+        "bounds": [
+          35,
+          30,
+          10,
+          8
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 9,
+        "cell": [
+          0,
+          54
+        ],
+        "name": "Bordereau",
+        "bounds": [
+          -6,
+          50,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          0,
+          65
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -3,
+          63,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Canal service"
+  },
+  {
+    "number": 19,
+    "code": "RF19",
+    "title": "La chaine froide",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        8
+      ],
+      [
+        14,
+        0,
+        10,
+        8
+      ],
+      [
+        28,
+        0,
+        14,
+        8
+      ],
+      [
+        44,
+        0,
+        8,
+        8
+      ],
+      [
+        44,
+        16,
+        12,
+        12
+      ],
+      [
+        28,
+        16,
+        12,
+        10
+      ],
+      [
+        14,
+        16,
+        10,
+        10
+      ],
+      [
+        0,
+        16,
+        10,
+        10
+      ],
+      [
+        0,
+        32,
+        10,
+        8
+      ],
+      [
+        20,
+        34,
+        18,
+        10
+      ],
+      [
+        44,
+        34,
+        12,
+        10
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        4
+      ]
+    ],
+    "labels": [
+      "Sas froid",
+      "Compression",
+      "Tunnel convoyeur",
+      "Inspection",
+      "Quai refuse",
+      "Conditionnement",
+      "Chambre centrale",
+      "Unite 117",
+      "Stockage bas",
+      "Wagon immobile",
+      "Expedition"
+    ],
+    "theme": "cold",
+    "anchor": [
+      "WKG / chaine frigorifique",
+      "INTERNATIONAL REFRIGERATED CONSIGNMENT",
+      "Wagon refuse, viande/bandes, stockage final WKG Cold 02."
+    ],
+    "key_index": 3,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Sas froid",
+        "bounds": [
+          -4,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          14,
+          0
+        ],
+        "name": "Compression",
+        "bounds": [
+          9,
+          -4,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          28,
+          0
+        ],
+        "name": "Tunnel convoyeur",
+        "bounds": [
+          21,
+          -4,
+          14,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          44,
+          0
+        ],
+        "name": "Inspection",
+        "bounds": [
+          40,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          44,
+          16
+        ],
+        "name": "Quai refuse",
+        "bounds": [
+          38,
+          10,
+          12,
+          12
+        ],
+        "outdoor": true
+      },
+      {
+        "index": 5,
+        "cell": [
+          28,
+          16
+        ],
+        "name": "Conditionnement",
+        "bounds": [
+          22,
+          11,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          14,
+          16
+        ],
+        "name": "Chambre centrale",
+        "bounds": [
+          9,
+          11,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          0,
+          16
+        ],
+        "name": "Unite 117",
+        "bounds": [
+          -5,
+          11,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          0,
+          32
+        ],
+        "name": "Stockage bas",
+        "bounds": [
+          -5,
+          28,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          20,
+          34
+        ],
+        "name": "Wagon immobile",
+        "bounds": [
+          11,
+          29,
+          18,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          44,
+          34
+        ],
+        "name": "Expedition",
+        "bounds": [
+          38,
+          29,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          20,
+          46
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          17,
+          44,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Inspection"
+  },
+  {
+    "number": 20,
+    "code": "RF20",
+    "title": "Copie de secours",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        8
+      ],
+      [
+        14,
+        0,
+        12,
+        8
+      ],
+      [
+        28,
+        0,
+        12,
+        8
+      ],
+      [
+        42,
+        0,
+        8,
+        8
+      ],
+      [
+        42,
+        16,
+        10,
+        10
+      ],
+      [
+        28,
+        16,
+        12,
+        10
+      ],
+      [
+        14,
+        16,
+        12,
+        10
+      ],
+      [
+        0,
+        16,
+        10,
+        10
+      ],
+      [
+        0,
+        32,
+        10,
+        10
+      ],
+      [
+        14,
+        32,
+        10,
+        8
+      ],
+      [
+        28,
+        32,
+        12,
+        10
+      ],
+      [
+        42,
+        32,
+        10,
+        10
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        4
+      ]
+    ],
+    "labels": [
+      "Controle",
+      "Sauvegardes",
+      "Alimentations",
+      "Refroidissement",
+      "Replica B",
+      "Bandes DAT",
+      "Replica A",
+      "Administration",
+      "Amiga de Milan",
+      "Image brute",
+      "Restauration isolee",
+      "Mise hors service"
+    ],
+    "theme": "server",
+    "anchor": [
+      "Milan / environnement informatique",
+      "VERIFY RESTORE TO ISOLATED HOST",
+      "Amiga, copies, sauvegarde, restauration ; synthese spatiale."
+    ],
+    "key_index": 11,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Controle",
+        "bounds": [
+          -4,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          14,
+          0
+        ],
+        "name": "Sauvegardes",
+        "bounds": [
+          8,
+          -4,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          28,
+          0
+        ],
+        "name": "Alimentations",
+        "bounds": [
+          22,
+          -4,
+          12,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          42,
+          0
+        ],
+        "name": "Refroidissement",
+        "bounds": [
+          38,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          42,
+          16
+        ],
+        "name": "Replica B",
+        "bounds": [
+          37,
+          11,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          28,
+          16
+        ],
+        "name": "Bandes DAT",
+        "bounds": [
+          22,
+          11,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          14,
+          16
+        ],
+        "name": "Replica A",
+        "bounds": [
+          8,
+          11,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          0,
+          16
+        ],
+        "name": "Administration",
+        "bounds": [
+          -5,
+          11,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          0,
+          32
+        ],
+        "name": "Amiga de Milan",
+        "bounds": [
+          -5,
+          27,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          14,
+          32
+        ],
+        "name": "Image brute",
+        "bounds": [
+          9,
+          28,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          28,
+          32
+        ],
+        "name": "Restauration isolee",
+        "bounds": [
+          22,
+          27,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          42,
+          32
+        ],
+        "name": "Mise hors service",
+        "bounds": [
+          37,
+          27,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 12,
+        "cell": [
+          0,
+          44
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -3,
+          42,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Mise hors service"
+  },
+  {
+    "number": 21,
+    "code": "RF21",
+    "title": "Retours",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        8
+      ],
+      [
+        0,
+        16,
+        10,
+        10
+      ],
+      [
+        -16,
+        16,
+        10,
+        10
+      ],
+      [
+        -16,
+        32,
+        10,
+        10
+      ],
+      [
+        0,
+        32,
+        12,
+        10
+      ],
+      [
+        16,
+        32,
+        10,
+        10
+      ],
+      [
+        16,
+        16,
+        10,
+        10
+      ],
+      [
+        32,
+        16,
+        10,
+        10
+      ],
+      [
+        32,
+        32,
+        10,
+        10
+      ],
+      [
+        16,
+        48,
+        12,
+        10
+      ],
+      [
+        -2,
+        48,
+        10,
+        10
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        4
+      ]
+    ],
+    "labels": [
+      "Derniere adresse",
+      "Dispatch",
+      "Refused",
+      "Hold",
+      "Forward",
+      "Retour",
+      "Guichet",
+      "C-4B",
+      "C-4C",
+      "Nouveau depositaire",
+      "Retours volontaires"
+    ],
+    "theme": "archive",
+    "anchor": [
+      "Archives / retours",
+      "RETURN MATERIAL / CREATOR",
+      "Chemins de retour, C-4B/C-4C, transfert de garde."
+    ],
+    "key_index": 2,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Derniere adresse",
+        "bounds": [
+          -4,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          16
+        ],
+        "name": "Dispatch",
+        "bounds": [
+          -5,
+          11,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          -16,
+          16
+        ],
+        "name": "Refused",
+        "bounds": [
+          -21,
+          11,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          -16,
+          32
+        ],
+        "name": "Hold",
+        "bounds": [
+          -21,
+          27,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          0,
+          32
+        ],
+        "name": "Forward",
+        "bounds": [
+          -6,
+          27,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          16,
+          32
+        ],
+        "name": "Retour",
+        "bounds": [
+          11,
+          27,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          16,
+          16
+        ],
+        "name": "Guichet",
+        "bounds": [
+          11,
+          11,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          32,
+          16
+        ],
+        "name": "C-4B",
+        "bounds": [
+          27,
+          11,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          32,
+          32
+        ],
+        "name": "C-4C",
+        "bounds": [
+          27,
+          27,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          16,
+          48
+        ],
+        "name": "Nouveau depositaire",
+        "bounds": [
+          10,
+          43,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          -2,
+          48
+        ],
+        "name": "Retours volontaires",
+        "bounds": [
+          -7,
+          43,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          16,
+          60
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          13,
+          58,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Refused"
+  },
+  {
+    "number": 22,
+    "code": "RF22",
+    "title": "Destinataire present",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        8
+      ],
+      [
+        14,
+        0,
+        8,
+        8
+      ],
+      [
+        28,
+        0,
+        8,
+        8
+      ],
+      [
+        42,
+        0,
+        8,
+        8
+      ],
+      [
+        42,
+        14,
+        8,
+        8
+      ],
+      [
+        42,
+        28,
+        10,
+        10
+      ],
+      [
+        28,
+        28,
+        10,
+        10
+      ],
+      [
+        14,
+        28,
+        10,
+        10
+      ],
+      [
+        0,
+        28,
+        10,
+        10
+      ],
+      [
+        0,
+        14,
+        8,
+        8
+      ],
+      [
+        14,
+        14,
+        8,
+        8
+      ],
+      [
+        28,
+        14,
+        8,
+        8
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        0
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        4
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        11,
+        6
+      ]
+    ],
+    "labels": [
+      "Seuil Paris",
+      "Nom",
+      "Adresse",
+      "Malte",
+      "Erreur 0",
+      "Custody accepted",
+      "Waukegan",
+      "Signature",
+      "Registre",
+      "Alias",
+      "Destinataire",
+      "Sortie disponible"
+    ],
+    "theme": "anomaly",
+    "anchor": [
+      "Adresses et destinataires",
+      "CUSTODY ACCEPTED",
+      "Convergence construite pour le FPS, pas scene litterale."
+    ],
+    "key_index": 3,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Seuil Paris",
+        "bounds": [
+          -4,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          14,
+          0
+        ],
+        "name": "Nom",
+        "bounds": [
+          10,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          28,
+          0
+        ],
+        "name": "Adresse",
+        "bounds": [
+          24,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          42,
+          0
+        ],
+        "name": "Malte",
+        "bounds": [
+          38,
+          -4,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          42,
+          14
+        ],
+        "name": "Erreur 0",
+        "bounds": [
+          38,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          42,
+          28
+        ],
+        "name": "Custody accepted",
+        "bounds": [
+          37,
+          23,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          28,
+          28
+        ],
+        "name": "Waukegan",
+        "bounds": [
+          23,
+          23,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          14,
+          28
+        ],
+        "name": "Signature",
+        "bounds": [
+          9,
+          23,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          0,
+          28
+        ],
+        "name": "Registre",
+        "bounds": [
+          -5,
+          23,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          0,
+          14
+        ],
+        "name": "Alias",
+        "bounds": [
+          -4,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          14,
+          14
+        ],
+        "name": "Destinataire",
+        "bounds": [
+          10,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 11,
+        "cell": [
+          28,
+          14
+        ],
+        "name": "Sortie disponible",
+        "bounds": [
+          24,
+          10,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 12,
+        "cell": [
+          42,
+          40
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          39,
+          38,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Malte"
+  },
+  {
+    "number": 23,
+    "code": "RF23",
+    "title": "Salle d'attente",
+    "rooms": [
+      [
+        0,
+        0,
+        8,
+        6
+      ],
+      [
+        0,
+        12,
+        10,
+        10
+      ],
+      [
+        -14,
+        12,
+        8,
+        8
+      ],
+      [
+        -14,
+        26,
+        10,
+        8
+      ],
+      [
+        0,
+        26,
+        12,
+        10
+      ],
+      [
+        14,
+        26,
+        10,
+        8
+      ],
+      [
+        14,
+        12,
+        8,
+        8
+      ],
+      [
+        28,
+        12,
+        8,
+        8
+      ],
+      [
+        28,
+        26,
+        8,
+        8
+      ],
+      [
+        0,
+        42,
+        12,
+        10
+      ]
+    ],
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        4,
+        9
+      ]
+    ],
+    "labels": [
+      "Ascenseur",
+      "Accueil",
+      "Chaises ouest",
+      "Vestiaire",
+      "Salle attente",
+      "Dossiers",
+      "Chaises est",
+      "Linge",
+      "Consultation annexe",
+      "Cabinet"
+    ],
+    "theme": "clinic",
+    "anchor": [
+      "Hopital, 2026",
+      "Dans la salle d’attente",
+      "Accueil, chaises, dossiers, cabinet ; conclusion calme."
+    ],
+    "key_index": 7,
+    "landmarks": [
+      {
+        "index": 0,
+        "cell": [
+          0,
+          0
+        ],
+        "name": "Ascenseur",
+        "bounds": [
+          -4,
+          -3,
+          8,
+          6
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 1,
+        "cell": [
+          0,
+          12
+        ],
+        "name": "Accueil",
+        "bounds": [
+          -5,
+          7,
+          10,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 2,
+        "cell": [
+          -14,
+          12
+        ],
+        "name": "Chaises ouest",
+        "bounds": [
+          -18,
+          8,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 3,
+        "cell": [
+          -14,
+          26
+        ],
+        "name": "Vestiaire",
+        "bounds": [
+          -19,
+          22,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 4,
+        "cell": [
+          0,
+          26
+        ],
+        "name": "Salle attente",
+        "bounds": [
+          -6,
+          21,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 5,
+        "cell": [
+          14,
+          26
+        ],
+        "name": "Dossiers",
+        "bounds": [
+          9,
+          22,
+          10,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 6,
+        "cell": [
+          14,
+          12
+        ],
+        "name": "Chaises est",
+        "bounds": [
+          10,
+          8,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 7,
+        "cell": [
+          28,
+          12
+        ],
+        "name": "Linge",
+        "bounds": [
+          24,
+          8,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 8,
+        "cell": [
+          28,
+          26
+        ],
+        "name": "Consultation annexe",
+        "bounds": [
+          24,
+          22,
+          8,
+          8
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 9,
+        "cell": [
+          0,
+          42
+        ],
+        "name": "Cabinet",
+        "bounds": [
+          -6,
+          37,
+          12,
+          10
+        ],
+        "outdoor": false
+      },
+      {
+        "index": 10,
+        "cell": [
+          0,
+          54
+        ],
+        "name": "Sortie / badge bleu",
+        "bounds": [
+          -3,
+          52,
+          7,
+          6
+        ],
+        "outdoor": false
+      }
+    ],
+    "key_room": "Linge"
+  }
+]

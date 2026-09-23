@@ -1,0 +1,1 @@
+REFERENCE ONLY. Never run the V1 generator against src/maps. Edit/promote production maps directly.

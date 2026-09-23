@@ -1,0 +1,300 @@
+{
+  "number": 23,
+  "code": "RF23",
+  "title": "Salle d'attente",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      6
+    ],
+    [
+      0,
+      12,
+      10,
+      10
+    ],
+    [
+      -14,
+      12,
+      8,
+      8
+    ],
+    [
+      -14,
+      26,
+      10,
+      8
+    ],
+    [
+      0,
+      26,
+      12,
+      10
+    ],
+    [
+      14,
+      26,
+      10,
+      8
+    ],
+    [
+      14,
+      12,
+      8,
+      8
+    ],
+    [
+      28,
+      12,
+      8,
+      8
+    ],
+    [
+      28,
+      26,
+      8,
+      8
+    ],
+    [
+      0,
+      42,
+      12,
+      10
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      4,
+      9
+    ]
+  ],
+  "labels": [
+    "Ascenseur",
+    "Accueil",
+    "Chaises ouest",
+    "Vestiaire",
+    "Salle attente",
+    "Dossiers",
+    "Chaises est",
+    "Linge",
+    "Consultation annexe",
+    "Cabinet"
+  ],
+  "theme": "clinic",
+  "anchor": [
+    "Hopital, 2026",
+    "Dans la salle d’attente",
+    "Accueil, chaises, dossiers, cabinet ; conclusion calme."
+  ],
+  "key_index": 7,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Ascenseur",
+      "bounds": [
+        -4,
+        -3,
+        8,
+        6
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        12
+      ],
+      "name": "Accueil",
+      "bounds": [
+        -5,
+        7,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        -14,
+        12
+      ],
+      "name": "Chaises ouest",
+      "bounds": [
+        -18,
+        8,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        -14,
+        26
+      ],
+      "name": "Vestiaire",
+      "bounds": [
+        -19,
+        22,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        0,
+        26
+      ],
+      "name": "Salle attente",
+      "bounds": [
+        -6,
+        21,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        14,
+        26
+      ],
+      "name": "Dossiers",
+      "bounds": [
+        9,
+        22,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        14,
+        12
+      ],
+      "name": "Chaises est",
+      "bounds": [
+        10,
+        8,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        28,
+        12
+      ],
+      "name": "Linge",
+      "bounds": [
+        24,
+        8,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        28,
+        26
+      ],
+      "name": "Consultation annexe",
+      "bounds": [
+        24,
+        22,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        0,
+        42
+      ],
+      "name": "Cabinet",
+      "bounds": [
+        -6,
+        37,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        0,
+        54
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -3,
+        52,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Linge"
+}

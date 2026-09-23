@@ -1,0 +1,300 @@
+{
+  "number": 7,
+  "code": "RF07",
+  "title": "Jerma - Facade maritime",
+  "rooms": [
+    [
+      0,
+      0,
+      12,
+      6
+    ],
+    [
+      0,
+      14,
+      16,
+      8
+    ],
+    [
+      -18,
+      14,
+      10,
+      10
+    ],
+    [
+      -18,
+      30,
+      10,
+      12
+    ],
+    [
+      0,
+      30,
+      16,
+      12
+    ],
+    [
+      18,
+      30,
+      10,
+      12
+    ],
+    [
+      18,
+      14,
+      10,
+      10
+    ],
+    [
+      34,
+      14,
+      10,
+      8
+    ],
+    [
+      34,
+      30,
+      10,
+      8
+    ],
+    [
+      0,
+      48,
+      12,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      4,
+      9
+    ]
+  ],
+  "labels": [
+    "Route cotiere",
+    "Parvis maritime",
+    "Terrasse ouest",
+    "Aile ouverte",
+    "Hall effondre",
+    "Aile est",
+    "Reception",
+    "Parking livreurs",
+    "Quai",
+    "Galerie haute"
+  ],
+  "theme": "jerma",
+  "anchor": [
+    "Malte, Jerma Palace",
+    "En decembre 2022",
+    "Beton ouvert, deux ailes, hiver maltais et front de mer."
+  ],
+  "key_index": 8,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Route cotiere",
+      "bounds": [
+        -6,
+        -3,
+        12,
+        6
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        14
+      ],
+      "name": "Parvis maritime",
+      "bounds": [
+        -8,
+        10,
+        16,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 2,
+      "cell": [
+        -18,
+        14
+      ],
+      "name": "Terrasse ouest",
+      "bounds": [
+        -23,
+        9,
+        10,
+        10
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 3,
+      "cell": [
+        -18,
+        30
+      ],
+      "name": "Aile ouverte",
+      "bounds": [
+        -23,
+        24,
+        10,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        0,
+        30
+      ],
+      "name": "Hall effondre",
+      "bounds": [
+        -8,
+        24,
+        16,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        18,
+        30
+      ],
+      "name": "Aile est",
+      "bounds": [
+        13,
+        24,
+        10,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        18,
+        14
+      ],
+      "name": "Reception",
+      "bounds": [
+        13,
+        9,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        34,
+        14
+      ],
+      "name": "Parking livreurs",
+      "bounds": [
+        29,
+        10,
+        10,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 8,
+      "cell": [
+        34,
+        30
+      ],
+      "name": "Quai",
+      "bounds": [
+        29,
+        26,
+        10,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 9,
+      "cell": [
+        0,
+        48
+      ],
+      "name": "Galerie haute",
+      "bounds": [
+        -6,
+        44,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        0,
+        59
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -3,
+        57,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Quai"
+}

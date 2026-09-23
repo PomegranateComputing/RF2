@@ -1,0 +1,140 @@
+[
+  {
+    "map": "RF01",
+    "returncode": 0,
+    "stdout": "----RF01----\n   0.010 seconds.\n\nTotal time: 0.013 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   6.2%\n   BSP:  12.9%\n   BSP:  18.8%\n   BSP:  24.0%\n   BSP:  30.2%\n   BSP:  35.1%\n   BSP:  40.4%\n   BSP:  45.4%\n   BSP:  51.4%\n   BSP:  55.8%\n   BSP:  59.0%\n   BSP:  64.0%\n   BSP:  68.9%\n   BSP:  73.4%\n   BSP:  78.8%\n   BSP:  81.3%\n   BSP:  86.9%\n   BSP:  89.8%\n   BSP:  93.5%\n   BSP:  98.0%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF02",
+    "returncode": 0,
+    "stdout": "----RF02----\n   0.009 seconds.\n\nTotal time: 0.010 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   4.7%\n   BSP:   9.6%\n   BSP:  13.8%\n   BSP:  18.1%\n   BSP:  23.0%\n   BSP:  27.1%\n   BSP:  31.2%\n   BSP:  35.4%\n   BSP:  39.4%\n   BSP:  43.7%\n   BSP:  47.9%\n   BSP:  51.3%\n   BSP:  55.4%\n   BSP:  57.7%\n   BSP:  61.9%\n   BSP:  65.9%\n   BSP:  68.3%\n   BSP:  71.8%\n   BSP:  74.8%\n   BSP:  79.0%\n   BSP:  80.9%\n   BSP:  83.7%\n   BSP:  87.3%\n   BSP:  91.0%\n   BSP:  94.0%\n   BSP:  97.5%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF03",
+    "returncode": 0,
+    "stdout": "----RF03----\n   0.018 seconds.\n\nTotal time: 0.019 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.3%\n   BSP:   9.8%\n   BSP:  14.5%\n   BSP:  19.6%\n   BSP:  23.4%\n   BSP:  27.8%\n   BSP:  32.2%\n   BSP:  36.1%\n   BSP:  41.5%\n   BSP:  44.5%\n   BSP:  48.0%\n   BSP:  52.5%\n   BSP:  56.9%\n   BSP:  59.6%\n   BSP:  63.8%\n   BSP:  67.8%\n   BSP:  70.0%\n   BSP:  73.8%\n   BSP:  78.0%\n   BSP:  79.9%\n   BSP:  84.4%\n   BSP:  88.1%\n   BSP:  91.0%\n   BSP:  94.2%\n   BSP:  97.5%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF04",
+    "returncode": 0,
+    "stdout": "----RF04----\n   0.013 seconds.\n\nTotal time: 0.014 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.9%\n   BSP:  11.9%\n   BSP:  16.3%\n   BSP:  22.5%\n   BSP:  27.7%\n   BSP:  32.3%\n   BSP:  36.5%\n   BSP:  41.6%\n   BSP:  47.3%\n   BSP:  50.7%\n   BSP:  55.3%\n   BSP:  58.4%\n   BSP:  62.1%\n   BSP:  66.5%\n   BSP:  70.4%\n   BSP:  75.8%\n   BSP:  77.8%\n   BSP:  81.3%\n   BSP:  85.3%\n   BSP:  89.8%\n   BSP:  92.8%\n   BSP:  98.2%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF05",
+    "returncode": 0,
+    "stdout": "----RF05----\n   0.010 seconds.\n\nTotal time: 0.011 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.4%\n   BSP:  11.2%\n   BSP:  16.1%\n   BSP:  22.0%\n   BSP:  27.3%\n   BSP:  32.8%\n   BSP:  36.5%\n   BSP:  41.3%\n   BSP:  46.2%\n   BSP:  50.8%\n   BSP:  54.1%\n   BSP:  58.5%\n   BSP:  62.3%\n   BSP:  66.0%\n   BSP:  69.4%\n   BSP:  73.7%\n   BSP:  77.2%\n   BSP:  81.1%\n   BSP:  85.5%\n   BSP:  88.5%\n   BSP:  92.4%\n   BSP:  96.4%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF06",
+    "returncode": 0,
+    "stdout": "----RF06----\n   0.013 seconds.\n\nTotal time: 0.014 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.6%\n   BSP:  11.2%\n   BSP:  16.0%\n   BSP:  21.2%\n   BSP:  25.6%\n   BSP:  30.3%\n   BSP:  34.9%\n   BSP:  40.5%\n   BSP:  44.7%\n   BSP:  48.9%\n   BSP:  53.4%\n   BSP:  56.7%\n   BSP:  61.3%\n   BSP:  65.4%\n   BSP:  69.5%\n   BSP:  72.5%\n   BSP:  78.7%\n   BSP:  80.3%\n   BSP:  84.2%\n   BSP:  88.9%\n   BSP:  91.5%\n   BSP:  95.3%\n   BSP:  99.1%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF07",
+    "returncode": 0,
+    "stdout": "----RF07----\n   0.008 seconds.\n\nTotal time: 0.008 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.4%\n   BSP:  11.0%\n   BSP:  16.5%\n   BSP:  21.6%\n   BSP:  27.2%\n   BSP:  31.2%\n   BSP:  35.9%\n   BSP:  40.7%\n   BSP:  45.1%\n   BSP:  50.3%\n   BSP:  54.1%\n   BSP:  58.4%\n   BSP:  62.4%\n   BSP:  66.3%\n   BSP:  69.7%\n   BSP:  73.2%\n   BSP:  76.7%\n   BSP:  81.3%\n   BSP:  84.2%\n   BSP:  88.7%\n   BSP:  92.5%\n   BSP:  95.7%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF08",
+    "returncode": 0,
+    "stdout": "----RF08----\n   0.014 seconds.\n\nTotal time: 0.014 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   6.7%\n   BSP:  14.2%\n   BSP:  18.5%\n   BSP:  24.3%\n   BSP:  30.0%\n   BSP:  35.5%\n   BSP:  40.9%\n   BSP:  45.3%\n   BSP:  50.7%\n   BSP:  55.7%\n   BSP:  61.1%\n   BSP:  64.6%\n   BSP:  69.2%\n   BSP:  73.2%\n   BSP:  77.3%\n   BSP:  81.5%\n   BSP:  85.8%\n   BSP:  89.8%\n   BSP:  94.5%\n   BSP:  99.6%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF09",
+    "returncode": 0,
+    "stdout": "----RF09----\n   0.010 seconds.\n\nTotal time: 0.011 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   4.1%\n   BSP:   8.5%\n   BSP:  12.3%\n   BSP:  16.3%\n   BSP:  21.0%\n   BSP:  24.3%\n   BSP:  29.2%\n   BSP:  31.2%\n   BSP:  35.1%\n   BSP:  38.6%\n   BSP:  43.3%\n   BSP:  46.0%\n   BSP:  50.3%\n   BSP:  53.5%\n   BSP:  57.7%\n   BSP:  59.2%\n   BSP:  62.9%\n   BSP:  66.3%\n   BSP:  69.4%\n   BSP:  72.2%\n   BSP:  75.2%\n   BSP:  79.3%\n   BSP:  80.2%\n   BSP:  84.0%\n   BSP:  87.0%\n   BSP:  88.3%\n   BSP:  92.8%\n   BSP:  94.8%\n   BSP:  98.0%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF10",
+    "returncode": 0,
+    "stdout": "----RF10----\n   0.015 seconds.\n\nTotal time: 0.015 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.7%\n   BSP:  11.2%\n   BSP:  17.4%\n   BSP:  22.0%\n   BSP:  26.8%\n   BSP:  31.4%\n   BSP:  36.7%\n   BSP:  41.6%\n   BSP:  45.9%\n   BSP:  50.0%\n   BSP:  54.6%\n   BSP:  57.7%\n   BSP:  62.2%\n   BSP:  65.8%\n   BSP:  69.8%\n   BSP:  73.6%\n   BSP:  77.5%\n   BSP:  80.8%\n   BSP:  84.5%\n   BSP:  88.9%\n   BSP:  92.1%\n   BSP:  96.0%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF11",
+    "returncode": 0,
+    "stdout": "----RF11----\n   0.017 seconds.\n\nTotal time: 0.018 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.6%\n   BSP:  11.3%\n   BSP:  17.5%\n   BSP:  22.1%\n   BSP:  26.9%\n   BSP:  31.3%\n   BSP:  36.1%\n   BSP:  41.6%\n   BSP:  45.8%\n   BSP:  50.7%\n   BSP:  55.3%\n   BSP:  59.2%\n   BSP:  63.9%\n   BSP:  67.6%\n   BSP:  72.1%\n   BSP:  77.9%\n   BSP:  80.5%\n   BSP:  83.9%\n   BSP:  88.7%\n   BSP:  92.0%\n   BSP:  94.9%\n   BSP:  99.1%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF12",
+    "returncode": 0,
+    "stdout": "----RF12----\n   0.013 seconds.\n\nTotal time: 0.013 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.8%\n   BSP:  10.8%\n   BSP:  16.0%\n   BSP:  21.4%\n   BSP:  26.0%\n   BSP:  31.1%\n   BSP:  36.1%\n   BSP:  40.8%\n   BSP:  44.7%\n   BSP:  50.1%\n   BSP:  54.2%\n   BSP:  57.8%\n   BSP:  62.1%\n   BSP:  65.7%\n   BSP:  70.1%\n   BSP:  74.5%\n   BSP:  78.8%\n   BSP:  81.9%\n   BSP:  86.3%\n   BSP:  90.1%\n   BSP:  93.2%\n   BSP:  96.6%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF13",
+    "returncode": 0,
+    "stdout": "----RF13----\n   0.019 seconds.\n\nTotal time: 0.019 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.4%\n   BSP:  10.4%\n   BSP:  15.5%\n   BSP:  20.1%\n   BSP:  25.2%\n   BSP:  30.0%\n   BSP:  34.8%\n   BSP:  38.9%\n   BSP:  43.5%\n   BSP:  47.2%\n   BSP:  51.4%\n   BSP:  56.4%\n   BSP:  60.4%\n   BSP:  63.4%\n   BSP:  68.0%\n   BSP:  71.8%\n   BSP:  75.8%\n   BSP:  80.0%\n   BSP:  83.7%\n   BSP:  86.3%\n   BSP:  90.4%\n   BSP:  94.9%\n   BSP:  97.8%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF14",
+    "returncode": 0,
+    "stdout": "----RF14----\n   0.008 seconds.\n\nTotal time: 0.009 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.3%\n   BSP:  10.4%\n   BSP:  16.0%\n   BSP:  20.4%\n   BSP:  25.1%\n   BSP:  29.5%\n   BSP:  34.1%\n   BSP:  39.3%\n   BSP:  43.5%\n   BSP:  47.7%\n   BSP:  52.3%\n   BSP:  56.4%\n   BSP:  61.0%\n   BSP:  64.7%\n   BSP:  69.0%\n   BSP:  72.9%\n   BSP:  77.0%\n   BSP:  81.1%\n   BSP:  83.8%\n   BSP:  87.9%\n   BSP:  91.9%\n   BSP:  95.2%\n   BSP:  98.6%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF15",
+    "returncode": 0,
+    "stdout": "----RF15----\n   0.009 seconds.\n\nTotal time: 0.010 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.2%\n   BSP:  10.2%\n   BSP:  14.2%\n   BSP:  18.5%\n   BSP:  23.1%\n   BSP:  27.8%\n   BSP:  31.4%\n   BSP:  35.6%\n   BSP:  39.9%\n   BSP:  44.4%\n   BSP:  48.1%\n   BSP:  52.5%\n   BSP:  56.1%\n   BSP:  58.3%\n   BSP:  62.0%\n   BSP:  66.0%\n   BSP:  69.7%\n   BSP:  74.1%\n   BSP:  77.6%\n   BSP:  80.7%\n   BSP:  84.2%\n   BSP:  88.8%\n   BSP:  92.9%\n   BSP:  95.7%\n   BSP:  99.5%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF16",
+    "returncode": 0,
+    "stdout": "----RF16----\n   0.009 seconds.\n\nTotal time: 0.009 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.4%\n   BSP:  11.4%\n   BSP:  15.7%\n   BSP:  20.3%\n   BSP:  25.5%\n   BSP:  29.5%\n   BSP:  35.3%\n   BSP:  38.9%\n   BSP:  42.9%\n   BSP:  47.4%\n   BSP:  52.8%\n   BSP:  55.2%\n   BSP:  59.3%\n   BSP:  63.3%\n   BSP:  67.7%\n   BSP:  70.8%\n   BSP:  75.0%\n   BSP:  78.6%\n   BSP:  81.5%\n   BSP:  84.9%\n   BSP:  89.0%\n   BSP:  92.9%\n   BSP:  96.2%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF17",
+    "returncode": 0,
+    "stdout": "----RF17----\n   0.009 seconds.\n\nTotal time: 0.009 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.2%\n   BSP:  10.7%\n   BSP:  15.1%\n   BSP:  20.2%\n   BSP:  24.4%\n   BSP:  29.1%\n   BSP:  33.3%\n   BSP:  38.0%\n   BSP:  41.7%\n   BSP:  46.4%\n   BSP:  51.1%\n   BSP:  54.8%\n   BSP:  57.7%\n   BSP:  61.4%\n   BSP:  66.6%\n   BSP:  69.1%\n   BSP:  73.3%\n   BSP:  77.2%\n   BSP:  80.3%\n   BSP:  84.2%\n   BSP:  87.5%\n   BSP:  90.6%\n   BSP:  93.9%\n   BSP:  97.8%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF18",
+    "returncode": 0,
+    "stdout": "----RF18----\n   0.015 seconds.\n\nTotal time: 0.016 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.0%\n   BSP:   9.7%\n   BSP:  15.7%\n   BSP:  19.9%\n   BSP:  23.6%\n   BSP:  28.3%\n   BSP:  32.3%\n   BSP:  37.0%\n   BSP:  41.0%\n   BSP:  45.9%\n   BSP:  49.5%\n   BSP:  54.7%\n   BSP:  57.7%\n   BSP:  62.3%\n   BSP:  65.8%\n   BSP:  69.5%\n   BSP:  73.1%\n   BSP:  77.8%\n   BSP:  79.6%\n   BSP:  83.0%\n   BSP:  87.5%\n   BSP:  91.4%\n   BSP:  94.4%\n   BSP:  97.5%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF19",
+    "returncode": 0,
+    "stdout": "----RF19----\n   0.026 seconds.\n\nTotal time: 0.026 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   4.8%\n   BSP:   9.9%\n   BSP:  14.5%\n   BSP:  18.4%\n   BSP:  23.6%\n   BSP:  27.7%\n   BSP:  32.3%\n   BSP:  36.4%\n   BSP:  40.3%\n   BSP:  44.5%\n   BSP:  47.9%\n   BSP:  52.1%\n   BSP:  55.4%\n   BSP:  58.2%\n   BSP:  62.1%\n   BSP:  65.5%\n   BSP:  68.7%\n   BSP:  72.0%\n   BSP:  76.1%\n   BSP:  81.0%\n   BSP:  82.6%\n   BSP:  85.9%\n   BSP:  89.2%\n   BSP:  92.6%\n   BSP:  96.3%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF20",
+    "returncode": 0,
+    "stdout": "----RF20----\n   0.010 seconds.\n\nTotal time: 0.011 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.1%\n   BSP:   9.6%\n   BSP:  14.3%\n   BSP:  18.8%\n   BSP:  23.2%\n   BSP:  27.6%\n   BSP:  32.5%\n   BSP:  35.9%\n   BSP:  39.8%\n   BSP:  43.7%\n   BSP:  48.3%\n   BSP:  52.6%\n   BSP:  56.1%\n   BSP:  59.1%\n   BSP:  62.3%\n   BSP:  65.9%\n   BSP:  70.0%\n   BSP:  72.9%\n   BSP:  76.3%\n   BSP:  78.8%\n   BSP:  82.6%\n   BSP:  86.2%\n   BSP:  90.0%\n   BSP:  92.3%\n   BSP:  95.7%\n   BSP:  99.2%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF21",
+    "returncode": 0,
+    "stdout": "----RF21----\n   0.024 seconds.\n\nTotal time: 0.026 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.3%\n   BSP:   9.8%\n   BSP:  14.7%\n   BSP:  18.9%\n   BSP:  23.2%\n   BSP:  28.3%\n   BSP:  31.9%\n   BSP:  36.9%\n   BSP:  40.1%\n   BSP:  44.1%\n   BSP:  48.8%\n   BSP:  52.1%\n   BSP:  55.4%\n   BSP:  58.8%\n   BSP:  62.9%\n   BSP:  66.4%\n   BSP:  69.7%\n   BSP:  73.2%\n   BSP:  77.5%\n   BSP:  80.3%\n   BSP:  83.4%\n   BSP:  86.7%\n   BSP:  89.3%\n   BSP:  92.7%\n   BSP:  95.8%\n   BSP:  99.1%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF22",
+    "returncode": 0,
+    "stdout": "----RF22----\n   0.017 seconds.\n\nTotal time: 0.018 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   5.1%\n   BSP:  11.4%\n   BSP:  15.8%\n   BSP:  20.3%\n   BSP:  25.0%\n   BSP:  29.7%\n   BSP:  33.4%\n   BSP:  38.2%\n   BSP:  42.6%\n   BSP:  46.5%\n   BSP:  50.9%\n   BSP:  55.5%\n   BSP:  57.8%\n   BSP:  61.8%\n   BSP:  65.5%\n   BSP:  69.5%\n   BSP:  73.5%\n   BSP:  77.3%\n   BSP:  79.3%\n   BSP:  82.9%\n   BSP:  87.7%\n   BSP:  90.7%\n   BSP:  93.5%\n   BSP:  97.2%\n   BSP: 100.0%\n"
+  },
+  {
+    "map": "RF23",
+    "returncode": 0,
+    "stdout": "----RF23----\n   0.008 seconds.\n\nTotal time: 0.008 seconds.\n",
+    "stderr": "   BSP:   0.0%\n   BSP:   7.6%\n   BSP:  12.6%\n   BSP:  17.9%\n   BSP:  23.9%\n   BSP:  29.7%\n   BSP:  35.0%\n   BSP:  39.9%\n   BSP:  45.5%\n   BSP:  50.5%\n   BSP:  55.9%\n   BSP:  59.2%\n   BSP:  63.4%\n   BSP:  68.7%\n   BSP:  73.1%\n   BSP:  77.0%\n   BSP:  81.0%\n   BSP:  85.0%\n   BSP:  88.7%\n   BSP:  94.0%\n   BSP:  98.0%\n   BSP: 100.0%\n"
+  }
+]

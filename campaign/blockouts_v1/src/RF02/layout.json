@@ -1,0 +1,326 @@
+{
+  "number": 2,
+  "code": "RF02",
+  "title": "Paris - Rue de service",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      8
+    ],
+    [
+      0,
+      14,
+      8,
+      14
+    ],
+    [
+      14,
+      14,
+      10,
+      8
+    ],
+    [
+      28,
+      14,
+      14,
+      10
+    ],
+    [
+      28,
+      0,
+      10,
+      8
+    ],
+    [
+      14,
+      -14,
+      8,
+      8
+    ],
+    [
+      -14,
+      14,
+      10,
+      8
+    ],
+    [
+      -14,
+      30,
+      12,
+      10
+    ],
+    [
+      0,
+      30,
+      8,
+      8
+    ],
+    [
+      14,
+      30,
+      14,
+      8
+    ],
+    [
+      28,
+      44,
+      10,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      9,
+      10
+    ]
+  ],
+  "labels": [
+    "Arago",
+    "Rue ouverte",
+    "Cour de cafe",
+    "Carrefour du tramway",
+    "TSF",
+    "Arriere-boutique",
+    "Passage couvert",
+    "Place des bagages",
+    "Imprimerie",
+    "Boulevard",
+    "Porte cochere"
+  ],
+  "theme": "street",
+  "anchor": [
+    "Paris, 14 juin 1940",
+    "Boulevard Arago",
+    "Tramway abandonne, TSF, bagages, rues ouvertes."
+  ],
+  "key_index": 5,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Arago",
+      "bounds": [
+        -4,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        14
+      ],
+      "name": "Rue ouverte",
+      "bounds": [
+        -4,
+        7,
+        8,
+        14
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 2,
+      "cell": [
+        14,
+        14
+      ],
+      "name": "Cour de cafe",
+      "bounds": [
+        9,
+        10,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        28,
+        14
+      ],
+      "name": "Carrefour du tramway",
+      "bounds": [
+        21,
+        9,
+        14,
+        10
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 4,
+      "cell": [
+        28,
+        0
+      ],
+      "name": "TSF",
+      "bounds": [
+        23,
+        -4,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        14,
+        -14
+      ],
+      "name": "Arriere-boutique",
+      "bounds": [
+        10,
+        -18,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        -14,
+        14
+      ],
+      "name": "Passage couvert",
+      "bounds": [
+        -19,
+        10,
+        10,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 7,
+      "cell": [
+        -14,
+        30
+      ],
+      "name": "Place des bagages",
+      "bounds": [
+        -20,
+        25,
+        12,
+        10
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 8,
+      "cell": [
+        0,
+        30
+      ],
+      "name": "Imprimerie",
+      "bounds": [
+        -4,
+        26,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        14,
+        30
+      ],
+      "name": "Boulevard",
+      "bounds": [
+        7,
+        26,
+        14,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 10,
+      "cell": [
+        28,
+        44
+      ],
+      "name": "Porte cochere",
+      "bounds": [
+        23,
+        40,
+        10,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 11,
+      "cell": [
+        28,
+        55
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        25,
+        53,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Arriere-boutique"
+}

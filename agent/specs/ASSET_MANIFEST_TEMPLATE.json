@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "batch_id": "RF01_P0_EXAMPLE",
+  "created_by": "Codex Astra",
+  "status": "ASTRA_GENERATED",
+  "level": "RF01",
+  "summary": "",
+  "files": [
+    {
+      "file": "runtime/example.png",
+      "target_relpath": "textures/example.png",
+      "kind": "texture",
+      "sha256": "",
+      "bytes": 0,
+      "width": 0,
+      "height": 0,
+      "source_method": "",
+      "license_or_origin": "project-generated",
+      "confidence": "HIGH",
+      "notes": ""
+    }
+  ]
+}

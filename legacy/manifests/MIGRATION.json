@@ -1,0 +1,19 @@
+{
+  "schema": 2,
+  "migrated_utc": "2026-09-23T18:58:17.5645249Z",
+  "source": "C:\\PROJECTS\\Red Flags 2",
+  "target": "C:\\PROJECTS\\RF2_UZDOOM",
+  "uzdoom_version": "5.0.1",
+  "uzdoom_exe": "C:\\PROJECTS\\TOOLS\\UZDoom-5.0.1\\uzdoom.exe",
+  "freedoom_version": "0.13.0",
+  "freedoom_iwad": "C:\\PROJECTS\\TOOLS\\Freedoom-0.13.0\\freedoom2.wad",
+  "maps_v1_zip": "C:\\PROJECTS\\RF2_UZDOOM_MASTER_PACK\\RF2_UZDOOM_MASTER_PACK\\inputs\\RF2_UZDOOM_23_NOUVELLES_MAPS_V1.zip",
+  "maps_v1_sha256": "84c7fa081e36774ba074a2ccac795beb7864e12169fcd336e644e20fa7412b2d",
+  "maps_imported": 23,
+  "selected_legacy_count": 5990,
+  "selected_manifest": "C:\\PROJECTS\\RF2_UZDOOM\\legacy\\manifests\\selected_files.csv",
+  "full_archive": "C:\\PROJECTS\\RF2_UZDOOM\\legacy\\archive\\RF2_OLD_FULL.zip",
+  "full_archive_sha256": "454bd938dfae4e501f6fca830e93a74474c631101a76f54bd7f10445db12282d",
+  "dev_pk3": "C:\\PROJECTS\\RF2_UZDOOM\\dist\\RF2_DEV.pk3",
+  "dev_pk3_sha256": "e80fdc706ce020108ddf87af086348e468ce96bdcd3f2a51ff81a05e8ecf2060"
+}

@@ -1,0 +1,12 @@
+/build/
+/dist/
+/user/
+/incoming/astra/
+/legacy/import/
+/legacy/archive/*.zip
+/legacy/archive/*.bundle
+*.log
+*.tmp
+*.bak
+Thumbs.db
+Desktop.ini

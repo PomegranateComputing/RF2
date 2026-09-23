@@ -1,0 +1,330 @@
+{
+  "number": 12,
+  "code": "RF12",
+  "title": "Le dernier escalier",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      8
+    ],
+    [
+      14,
+      0,
+      12,
+      8
+    ],
+    [
+      28,
+      0,
+      8,
+      8
+    ],
+    [
+      28,
+      16,
+      8,
+      12
+    ],
+    [
+      14,
+      16,
+      12,
+      8
+    ],
+    [
+      0,
+      16,
+      8,
+      8
+    ],
+    [
+      0,
+      32,
+      8,
+      12
+    ],
+    [
+      14,
+      32,
+      12,
+      8
+    ],
+    [
+      28,
+      32,
+      8,
+      8
+    ],
+    [
+      28,
+      48,
+      12,
+      8
+    ],
+    [
+      14,
+      48,
+      8,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      7
+    ]
+  ],
+  "labels": [
+    "Pied de cage",
+    "Palier bas",
+    "Coursive sud",
+    "Escalier est",
+    "Palier median",
+    "Cage ouest",
+    "Montee technique",
+    "Palier haut",
+    "Toiture",
+    "Sortie de secours",
+    "Local video"
+  ],
+  "theme": "stairs",
+  "anchor": [
+    "Jerma / circulation",
+    "WEST STAIR",
+    "Escaliers, secours et couloirs de service."
+  ],
+  "key_index": 2,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Pied de cage",
+      "bounds": [
+        -4,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        14,
+        0
+      ],
+      "name": "Palier bas",
+      "bounds": [
+        8,
+        -4,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        28,
+        0
+      ],
+      "name": "Coursive sud",
+      "bounds": [
+        24,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 3,
+      "cell": [
+        28,
+        16
+      ],
+      "name": "Escalier est",
+      "bounds": [
+        24,
+        10,
+        8,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        14,
+        16
+      ],
+      "name": "Palier median",
+      "bounds": [
+        8,
+        12,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        0,
+        16
+      ],
+      "name": "Cage ouest",
+      "bounds": [
+        -4,
+        12,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        0,
+        32
+      ],
+      "name": "Montee technique",
+      "bounds": [
+        -4,
+        26,
+        8,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        14,
+        32
+      ],
+      "name": "Palier haut",
+      "bounds": [
+        8,
+        28,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        28,
+        32
+      ],
+      "name": "Toiture",
+      "bounds": [
+        24,
+        28,
+        8,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 9,
+      "cell": [
+        28,
+        48
+      ],
+      "name": "Sortie de secours",
+      "bounds": [
+        22,
+        44,
+        12,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 10,
+      "cell": [
+        14,
+        48
+      ],
+      "name": "Local video",
+      "bounds": [
+        10,
+        44,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 11,
+      "cell": [
+        28,
+        59
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        25,
+        57,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Coursive sud"
+}

@@ -1,0 +1,304 @@
+{
+  "number": 15,
+  "code": "RF15",
+  "title": "Les crochets et les boites",
+  "rooms": [
+    [
+      0,
+      0,
+      10,
+      6
+    ],
+    [
+      0,
+      14,
+      18,
+      12
+    ],
+    [
+      -20,
+      14,
+      12,
+      10
+    ],
+    [
+      -20,
+      30,
+      12,
+      10
+    ],
+    [
+      0,
+      30,
+      18,
+      10
+    ],
+    [
+      20,
+      30,
+      12,
+      10
+    ],
+    [
+      20,
+      14,
+      12,
+      10
+    ],
+    [
+      20,
+      46,
+      10,
+      8
+    ],
+    [
+      0,
+      46,
+      10,
+      8
+    ],
+    [
+      -20,
+      46,
+      10,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      8,
+      4
+    ]
+  ],
+  "labels": [
+    "Sas",
+    "Rails suspendus",
+    "Crochets",
+    "Boites 117-A",
+    "Allee eau haute",
+    "117-B StepRoom",
+    "Inventaire",
+    "117-C Research",
+    "117-D Laboratoire",
+    "117-E Non attribue"
+  ],
+  "theme": "cold",
+  "anchor": [
+    "WKG, unite 117",
+    "NOTHING BELOW WATERLINE",
+    "Crochets, rayonnages, boites redistribuees par eau."
+  ],
+  "key_index": 9,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Sas",
+      "bounds": [
+        -5,
+        -3,
+        10,
+        6
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        14
+      ],
+      "name": "Rails suspendus",
+      "bounds": [
+        -9,
+        8,
+        18,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        -20,
+        14
+      ],
+      "name": "Crochets",
+      "bounds": [
+        -26,
+        9,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        -20,
+        30
+      ],
+      "name": "Boites 117-A",
+      "bounds": [
+        -26,
+        25,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        0,
+        30
+      ],
+      "name": "Allee eau haute",
+      "bounds": [
+        -9,
+        25,
+        18,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        20,
+        30
+      ],
+      "name": "117-B StepRoom",
+      "bounds": [
+        14,
+        25,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        20,
+        14
+      ],
+      "name": "Inventaire",
+      "bounds": [
+        14,
+        9,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        20,
+        46
+      ],
+      "name": "117-C Research",
+      "bounds": [
+        15,
+        42,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        0,
+        46
+      ],
+      "name": "117-D Laboratoire",
+      "bounds": [
+        -5,
+        42,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        -20,
+        46
+      ],
+      "name": "117-E Non attribue",
+      "bounds": [
+        -25,
+        42,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        20,
+        57
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        17,
+        55,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "117-E Non attribue"
+}

@@ -1,0 +1,300 @@
+{
+  "number": 8,
+  "code": "RF08",
+  "title": "Aile des chambres",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      8
+    ],
+    [
+      0,
+      14,
+      6,
+      14
+    ],
+    [
+      -12,
+      14,
+      8,
+      8
+    ],
+    [
+      -12,
+      30,
+      8,
+      8
+    ],
+    [
+      0,
+      30,
+      6,
+      12
+    ],
+    [
+      12,
+      30,
+      8,
+      8
+    ],
+    [
+      12,
+      14,
+      8,
+      8
+    ],
+    [
+      24,
+      14,
+      8,
+      10
+    ],
+    [
+      24,
+      30,
+      8,
+      10
+    ],
+    [
+      0,
+      46,
+      12,
+      10
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      4,
+      9
+    ]
+  ],
+  "labels": [
+    "Palier",
+    "Couloir 100",
+    "Chambre 112",
+    "Lingerie",
+    "Couloir 117",
+    "Chambre manquante",
+    "Chambre 118",
+    "Balcons",
+    "Suite ouverte",
+    "Escalier de service"
+  ],
+  "theme": "hotel",
+  "anchor": [
+    "Jerma",
+    "ROOMS / FLOW / FINAL",
+    "Chambres et circulations de service."
+  ],
+  "key_index": 2,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Palier",
+      "bounds": [
+        -4,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        14
+      ],
+      "name": "Couloir 100",
+      "bounds": [
+        -3,
+        7,
+        6,
+        14
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        -12,
+        14
+      ],
+      "name": "Chambre 112",
+      "bounds": [
+        -16,
+        10,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        -12,
+        30
+      ],
+      "name": "Lingerie",
+      "bounds": [
+        -16,
+        26,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        0,
+        30
+      ],
+      "name": "Couloir 117",
+      "bounds": [
+        -3,
+        24,
+        6,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        12,
+        30
+      ],
+      "name": "Chambre manquante",
+      "bounds": [
+        8,
+        26,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        12,
+        14
+      ],
+      "name": "Chambre 118",
+      "bounds": [
+        8,
+        10,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        24,
+        14
+      ],
+      "name": "Balcons",
+      "bounds": [
+        20,
+        9,
+        8,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        24,
+        30
+      ],
+      "name": "Suite ouverte",
+      "bounds": [
+        20,
+        25,
+        8,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        0,
+        46
+      ],
+      "name": "Escalier de service",
+      "bounds": [
+        -6,
+        41,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        0,
+        58
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -3,
+        56,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Chambre 112"
+}

@@ -1,0 +1,330 @@
+{
+  "number": 5,
+  "code": "RF05",
+  "title": "Les machines continuent",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      8
+    ],
+    [
+      14,
+      0,
+      12,
+      8
+    ],
+    [
+      28,
+      0,
+      8,
+      10
+    ],
+    [
+      28,
+      16,
+      10,
+      10
+    ],
+    [
+      14,
+      16,
+      14,
+      12
+    ],
+    [
+      0,
+      16,
+      8,
+      10
+    ],
+    [
+      -14,
+      16,
+      10,
+      8
+    ],
+    [
+      -14,
+      32,
+      10,
+      8
+    ],
+    [
+      0,
+      32,
+      8,
+      8
+    ],
+    [
+      14,
+      32,
+      14,
+      8
+    ],
+    [
+      28,
+      32,
+      8,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      3
+    ]
+  ],
+  "labels": [
+    "Atelier electrique",
+    "Machines",
+    "Courroies",
+    "Poste de controle",
+    "Grand moteur",
+    "Passerelles",
+    "Reserve",
+    "Dynamo",
+    "Vestiaire",
+    "Galerie de retour",
+    "Circuit principal"
+  ],
+  "theme": "machine",
+  "anchor": [
+    "Luna Park",
+    "palais du rire",
+    "Machinerie et miroirs ; parcours technique cree pour le FPS."
+  ],
+  "key_index": 10,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Atelier electrique",
+      "bounds": [
+        -4,
+        -4,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        14,
+        0
+      ],
+      "name": "Machines",
+      "bounds": [
+        8,
+        -4,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        28,
+        0
+      ],
+      "name": "Courroies",
+      "bounds": [
+        24,
+        -5,
+        8,
+        10
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 3,
+      "cell": [
+        28,
+        16
+      ],
+      "name": "Poste de controle",
+      "bounds": [
+        23,
+        11,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        14,
+        16
+      ],
+      "name": "Grand moteur",
+      "bounds": [
+        7,
+        10,
+        14,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        0,
+        16
+      ],
+      "name": "Passerelles",
+      "bounds": [
+        -4,
+        11,
+        8,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        -14,
+        16
+      ],
+      "name": "Reserve",
+      "bounds": [
+        -19,
+        12,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        -14,
+        32
+      ],
+      "name": "Dynamo",
+      "bounds": [
+        -19,
+        28,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        0,
+        32
+      ],
+      "name": "Vestiaire",
+      "bounds": [
+        -4,
+        28,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        14,
+        32
+      ],
+      "name": "Galerie de retour",
+      "bounds": [
+        7,
+        28,
+        14,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        28,
+        32
+      ],
+      "name": "Circuit principal",
+      "bounds": [
+        24,
+        28,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 11,
+      "cell": [
+        -14,
+        43
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -17,
+        41,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Circuit principal"
+}

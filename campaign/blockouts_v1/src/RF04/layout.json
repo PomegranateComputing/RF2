@@ -1,0 +1,300 @@
+{
+  "number": 4,
+  "code": "RF04",
+  "title": "Luna Park - Personnel technique",
+  "rooms": [
+    [
+      0,
+      0,
+      8,
+      6
+    ],
+    [
+      0,
+      14,
+      16,
+      12
+    ],
+    [
+      -16,
+      14,
+      10,
+      8
+    ],
+    [
+      -16,
+      30,
+      10,
+      12
+    ],
+    [
+      0,
+      30,
+      12,
+      10
+    ],
+    [
+      16,
+      30,
+      10,
+      12
+    ],
+    [
+      16,
+      14,
+      10,
+      8
+    ],
+    [
+      32,
+      14,
+      8,
+      8
+    ],
+    [
+      32,
+      30,
+      8,
+      8
+    ],
+    [
+      0,
+      46,
+      12,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      4,
+      9
+    ]
+  ],
+  "labels": [
+    "Pointage 017",
+    "Grande allee",
+    "Billetterie",
+    "Pavillon du rire",
+    "Cour du manege",
+    "Galerie des miroirs",
+    "Kiosques",
+    "Reserve technique",
+    "Transformateur",
+    "Porte du personnel"
+  ],
+  "theme": "fair",
+  "anchor": [
+    "Luna Park",
+    "LUNA PARK - PERSONNEL TECHNIQUE",
+    "Pointage, allees, palais du rire, circuits techniques."
+  ],
+  "key_index": 8,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Pointage 017",
+      "bounds": [
+        -4,
+        -3,
+        8,
+        6
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        14
+      ],
+      "name": "Grande allee",
+      "bounds": [
+        -8,
+        8,
+        16,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        -16,
+        14
+      ],
+      "name": "Billetterie",
+      "bounds": [
+        -21,
+        10,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        -16,
+        30
+      ],
+      "name": "Pavillon du rire",
+      "bounds": [
+        -21,
+        24,
+        10,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        0,
+        30
+      ],
+      "name": "Cour du manege",
+      "bounds": [
+        -6,
+        25,
+        12,
+        10
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 5,
+      "cell": [
+        16,
+        30
+      ],
+      "name": "Galerie des miroirs",
+      "bounds": [
+        11,
+        24,
+        10,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        16,
+        14
+      ],
+      "name": "Kiosques",
+      "bounds": [
+        11,
+        10,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        32,
+        14
+      ],
+      "name": "Reserve technique",
+      "bounds": [
+        28,
+        10,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        32,
+        30
+      ],
+      "name": "Transformateur",
+      "bounds": [
+        28,
+        26,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        0,
+        46
+      ],
+      "name": "Porte du personnel",
+      "bounds": [
+        -6,
+        42,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        0,
+        57
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -3,
+        55,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Transformateur"
+}

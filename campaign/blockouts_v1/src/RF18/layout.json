@@ -1,0 +1,300 @@
+{
+  "number": 18,
+  "code": "RF18",
+  "title": "Gennevilliers - La cour des transferts",
+  "rooms": [
+    [
+      0,
+      0,
+      10,
+      8
+    ],
+    [
+      0,
+      16,
+      20,
+      10
+    ],
+    [
+      -22,
+      16,
+      12,
+      10
+    ],
+    [
+      -22,
+      34,
+      12,
+      12
+    ],
+    [
+      0,
+      34,
+      20,
+      12
+    ],
+    [
+      22,
+      34,
+      12,
+      12
+    ],
+    [
+      22,
+      16,
+      12,
+      10
+    ],
+    [
+      40,
+      16,
+      10,
+      8
+    ],
+    [
+      40,
+      34,
+      10,
+      8
+    ],
+    [
+      0,
+      54,
+      12,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      4,
+      9
+    ]
+  ],
+  "labels": [
+    "Portique",
+    "Cour camions",
+    "Bacs bleus",
+    "Destruction securisee",
+    "Rails dans asphalte",
+    "Hangar retour",
+    "Bascule",
+    "Ancien courtier",
+    "Canal service",
+    "Bordereau"
+  ],
+  "theme": "dock",
+  "anchor": [
+    "Gennevilliers",
+    "Le port de Gennevilliers",
+    "Bacs bleus, rails dans asphalte, destruction securisee."
+  ],
+  "key_index": 8,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Portique",
+      "bounds": [
+        -5,
+        -4,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        16
+      ],
+      "name": "Cour camions",
+      "bounds": [
+        -10,
+        11,
+        20,
+        10
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 2,
+      "cell": [
+        -22,
+        16
+      ],
+      "name": "Bacs bleus",
+      "bounds": [
+        -28,
+        11,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 3,
+      "cell": [
+        -22,
+        34
+      ],
+      "name": "Destruction securisee",
+      "bounds": [
+        -28,
+        28,
+        12,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        0,
+        34
+      ],
+      "name": "Rails dans asphalte",
+      "bounds": [
+        -10,
+        28,
+        20,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        22,
+        34
+      ],
+      "name": "Hangar retour",
+      "bounds": [
+        16,
+        28,
+        12,
+        12
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        22,
+        16
+      ],
+      "name": "Bascule",
+      "bounds": [
+        16,
+        11,
+        12,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        40,
+        16
+      ],
+      "name": "Ancien courtier",
+      "bounds": [
+        35,
+        12,
+        10,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 8,
+      "cell": [
+        40,
+        34
+      ],
+      "name": "Canal service",
+      "bounds": [
+        35,
+        30,
+        10,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 9,
+      "cell": [
+        0,
+        54
+      ],
+      "name": "Bordereau",
+      "bounds": [
+        -6,
+        50,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        0,
+        65
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -3,
+        63,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Canal service"
+}

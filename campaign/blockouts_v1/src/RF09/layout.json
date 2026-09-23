@@ -1,0 +1,304 @@
+{
+  "number": 9,
+  "code": "RF09",
+  "title": "La piscine vide",
+  "rooms": [
+    [
+      0,
+      0,
+      10,
+      8
+    ],
+    [
+      0,
+      16,
+      18,
+      18
+    ],
+    [
+      -20,
+      16,
+      10,
+      14
+    ],
+    [
+      -20,
+      36,
+      10,
+      10
+    ],
+    [
+      0,
+      38,
+      18,
+      8
+    ],
+    [
+      20,
+      36,
+      10,
+      10
+    ],
+    [
+      20,
+      16,
+      10,
+      14
+    ],
+    [
+      20,
+      0,
+      10,
+      8
+    ],
+    [
+      -20,
+      0,
+      10,
+      8
+    ],
+    [
+      0,
+      52,
+      12,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      4,
+      9
+    ]
+  ],
+  "labels": [
+    "Vestiaire piscine",
+    "Bassin vide",
+    "Terrasse ouest",
+    "Bar abandonne",
+    "Promenade",
+    "Terrasse est",
+    "Pompes",
+    "Local filtration",
+    "Douches",
+    "Passage sous gradins"
+  ],
+  "theme": "pool",
+  "anchor": [
+    "Jerma",
+    "piscine vide",
+    "Bassin sans eau, matelas brule, terrasse."
+  ],
+  "key_index": 8,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Vestiaire piscine",
+      "bounds": [
+        -5,
+        -4,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        0,
+        16
+      ],
+      "name": "Bassin vide",
+      "bounds": [
+        -9,
+        7,
+        18,
+        18
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        -20,
+        16
+      ],
+      "name": "Terrasse ouest",
+      "bounds": [
+        -25,
+        9,
+        10,
+        14
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 3,
+      "cell": [
+        -20,
+        36
+      ],
+      "name": "Bar abandonne",
+      "bounds": [
+        -25,
+        31,
+        10,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 4,
+      "cell": [
+        0,
+        38
+      ],
+      "name": "Promenade",
+      "bounds": [
+        -9,
+        34,
+        18,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 5,
+      "cell": [
+        20,
+        36
+      ],
+      "name": "Terrasse est",
+      "bounds": [
+        15,
+        31,
+        10,
+        10
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 6,
+      "cell": [
+        20,
+        16
+      ],
+      "name": "Pompes",
+      "bounds": [
+        15,
+        9,
+        10,
+        14
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        20,
+        0
+      ],
+      "name": "Local filtration",
+      "bounds": [
+        15,
+        -4,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 8,
+      "cell": [
+        -20,
+        0
+      ],
+      "name": "Douches",
+      "bounds": [
+        -25,
+        -4,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        0,
+        52
+      ],
+      "name": "Passage sous gradins",
+      "bounds": [
+        -6,
+        48,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        0,
+        63
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -3,
+        61,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Douches"
+}

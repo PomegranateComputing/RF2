@@ -1,0 +1,330 @@
+{
+  "number": 3,
+  "code": "RF03",
+  "title": "Batignolles - Refus de reception",
+  "rooms": [
+    [
+      0,
+      0,
+      12,
+      6
+    ],
+    [
+      16,
+      0,
+      10,
+      6
+    ],
+    [
+      32,
+      0,
+      12,
+      8
+    ],
+    [
+      32,
+      16,
+      10,
+      12
+    ],
+    [
+      16,
+      16,
+      12,
+      8
+    ],
+    [
+      0,
+      16,
+      10,
+      8
+    ],
+    [
+      -14,
+      16,
+      8,
+      10
+    ],
+    [
+      -14,
+      32,
+      10,
+      8
+    ],
+    [
+      0,
+      32,
+      12,
+      8
+    ],
+    [
+      16,
+      32,
+      8,
+      8
+    ],
+    [
+      32,
+      32,
+      10,
+      8
+    ]
+  ],
+  "links": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      3
+    ]
+  ],
+  "labels": [
+    "Atelier",
+    "Garages",
+    "Cour ferroviaire",
+    "Voie de service",
+    "Wagon refuse",
+    "Bureau de reception",
+    "Stockage",
+    "Voies mortes",
+    "Passage a niveau",
+    "Poste aiguillage",
+    "Depart Maillot"
+  ],
+  "theme": "rail",
+  "anchor": [
+    "Batignolles / Porte Maillot",
+    "Il se trouvait au nord-ouest de Paris",
+    "Garages, emprises ferroviaires, refus de dechargement."
+  ],
+  "key_index": 10,
+  "landmarks": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "name": "Atelier",
+      "bounds": [
+        -6,
+        -3,
+        12,
+        6
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 1,
+      "cell": [
+        16,
+        0
+      ],
+      "name": "Garages",
+      "bounds": [
+        11,
+        -3,
+        10,
+        6
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 2,
+      "cell": [
+        32,
+        0
+      ],
+      "name": "Cour ferroviaire",
+      "bounds": [
+        26,
+        -4,
+        12,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 3,
+      "cell": [
+        32,
+        16
+      ],
+      "name": "Voie de service",
+      "bounds": [
+        27,
+        10,
+        10,
+        12
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 4,
+      "cell": [
+        16,
+        16
+      ],
+      "name": "Wagon refuse",
+      "bounds": [
+        10,
+        12,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 5,
+      "cell": [
+        0,
+        16
+      ],
+      "name": "Bureau de reception",
+      "bounds": [
+        -5,
+        12,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 6,
+      "cell": [
+        -14,
+        16
+      ],
+      "name": "Stockage",
+      "bounds": [
+        -18,
+        11,
+        8,
+        10
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 7,
+      "cell": [
+        -14,
+        32
+      ],
+      "name": "Voies mortes",
+      "bounds": [
+        -19,
+        28,
+        10,
+        8
+      ],
+      "outdoor": true
+    },
+    {
+      "index": 8,
+      "cell": [
+        0,
+        32
+      ],
+      "name": "Passage a niveau",
+      "bounds": [
+        -6,
+        28,
+        12,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 9,
+      "cell": [
+        16,
+        32
+      ],
+      "name": "Poste aiguillage",
+      "bounds": [
+        12,
+        28,
+        8,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 10,
+      "cell": [
+        32,
+        32
+      ],
+      "name": "Depart Maillot",
+      "bounds": [
+        27,
+        28,
+        10,
+        8
+      ],
+      "outdoor": false
+    },
+    {
+      "index": 11,
+      "cell": [
+        -14,
+        43
+      ],
+      "name": "Sortie / badge bleu",
+      "bounds": [
+        -17,
+        41,
+        7,
+        6
+      ],
+      "outdoor": false
+    }
+  ],
+  "key_room": "Depart Maillot"
+}

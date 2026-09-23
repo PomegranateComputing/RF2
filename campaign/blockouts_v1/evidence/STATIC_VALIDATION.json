@@ -1,0 +1,692 @@
+[
+  {
+    "code": "RF01",
+    "errors": [],
+    "vertices": 696,
+    "linedefs": 738,
+    "sectors": 62,
+    "things": 95,
+    "enemies": {
+      "2": 18,
+      "3": 36,
+      "4": 54
+    },
+    "secrets": 2,
+    "blue_key": [
+      -12,
+      25
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      14,
+      56
+    ],
+    "key_room": "Chapelle vide",
+    "reachable_cells": 1118,
+    "exit_distance_cells": 109,
+    "rooms": 11
+  },
+  {
+    "code": "RF02",
+    "errors": [],
+    "vertices": 904,
+    "linedefs": 946,
+    "sectors": 66,
+    "things": 104,
+    "enemies": {
+      "2": 20,
+      "3": 40,
+      "4": 60
+    },
+    "secrets": 2,
+    "blue_key": [
+      16,
+      -16
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      28,
+      56
+    ],
+    "key_room": "Arriere-boutique",
+    "reachable_cells": 1332,
+    "exit_distance_cells": 116,
+    "rooms": 12
+  },
+  {
+    "code": "RF03",
+    "errors": [],
+    "vertices": 851,
+    "linedefs": 898,
+    "sectors": 71,
+    "things": 104,
+    "enemies": {
+      "2": 20,
+      "3": 40,
+      "4": 60
+    },
+    "secrets": 2,
+    "blue_key": [
+      35,
+      30
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      -14,
+      44
+    ],
+    "key_room": "Depart Maillot",
+    "reachable_cells": 1228,
+    "exit_distance_cells": 129,
+    "rooms": 12
+  },
+  {
+    "code": "RF04",
+    "errors": [],
+    "vertices": 773,
+    "linedefs": 816,
+    "sectors": 64,
+    "things": 95,
+    "enemies": {
+      "2": 18,
+      "3": 36,
+      "4": 54
+    },
+    "secrets": 2,
+    "blue_key": [
+      34,
+      28
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      0,
+      58
+    ],
+    "key_room": "Transformateur",
+    "reachable_cells": 1265,
+    "exit_distance_cells": 150,
+    "rooms": 11
+  },
+  {
+    "code": "RF05",
+    "errors": [],
+    "vertices": 789,
+    "linedefs": 835,
+    "sectors": 69,
+    "things": 104,
+    "enemies": {
+      "2": 20,
+      "3": 40,
+      "4": 60
+    },
+    "secrets": 2,
+    "blue_key": [
+      30,
+      30
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      -14,
+      44
+    ],
+    "key_room": "Circuit principal",
+    "reachable_cells": 1270,
+    "exit_distance_cells": 122,
+    "rooms": 12
+  },
+  {
+    "code": "RF06",
+    "errors": [],
+    "vertices": 765,
+    "linedefs": 813,
+    "sectors": 68,
+    "things": 95,
+    "enemies": {
+      "2": 18,
+      "3": 36,
+      "4": 54
+    },
+    "secrets": 2,
+    "blue_key": [
+      -10,
+      28
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      14,
+      58
+    ],
+    "key_room": "Hangar",
+    "reachable_cells": 1161,
+    "exit_distance_cells": 116,
+    "rooms": 11
+  },
+  {
+    "code": "RF07",
+    "errors": [],
+    "vertices": 793,
+    "linedefs": 832,
+    "sectors": 63,
+    "things": 95,
+    "enemies": {
+      "2": 18,
+      "3": 36,
+      "4": 54
+    },
+    "secrets": 2,
+    "blue_key": [
+      37,
+      28
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      0,
+      60
+    ],
+    "key_room": "Quai",
+    "reachable_cells": 1378,
+    "exit_distance_cells": 159,
+    "rooms": 11
+  },
+  {
+    "code": "RF08",
+    "errors": [],
+    "vertices": 686,
+    "linedefs": 727,
+    "sectors": 62,
+    "things": 95,
+    "enemies": {
+      "2": 18,
+      "3": 36,
+      "4": 54
+    },
+    "secrets": 2,
+    "blue_key": [
+      -10,
+      12
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      0,
+      59
+    ],
+    "key_room": "Chambre 112",
+    "reachable_cells": 1025,
+    "exit_distance_cells": 105,
+    "rooms": 11
+  },
+  {
+    "code": "RF09",
+    "errors": [],
+    "vertices": 985,
+    "linedefs": 1029,
+    "sectors": 68,
+    "things": 95,
+    "enemies": {
+      "2": 18,
+      "3": 36,
+      "4": 54
+    },
+    "secrets": 2,
+    "blue_key": [
+      -17,
+      -2
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      0,
+      64
+    ],
+    "key_room": "Douches",
+    "reachable_cells": 1616,
+    "exit_distance_cells": 121,
+    "rooms": 11
+  },
+  {
+    "code": "RF10",
+    "errors": [],
+    "vertices": 765,
+    "linedefs": 812,
+    "sectors": 69,
+    "things": 105,
+    "enemies": {
+      "2": 21,
+      "3": 41,
+      "4": 61
+    },
+    "secrets": 2,
+    "blue_key": [
+      31,
+      25
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      -14,
+      56
+    ],
+    "key_room": "Chariots",
+    "reachable_cells": 1180,
+    "exit_distance_cells": 132,
+    "rooms": 12
+  },
+  {
+    "code": "RF11",
+    "errors": [],
+    "vertices": 781,
+    "linedefs": 827,
+    "sectors": 67,
+    "things": 105,
+    "enemies": {
+      "2": 21,
+      "3": 41,
+      "4": 61
+    },
+    "secrets": 2,
+    "blue_key": [
+      44,
+      -2
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      0,
+      42
+    ],
+    "key_room": "Chambre 117",
+    "reachable_cells": 1166,
+    "exit_distance_cells": 92,
+    "rooms": 12
+  },
+  {
+    "code": "RF12",
+    "errors": [],
+    "vertices": 788,
+    "linedefs": 834,
+    "sectors": 69,
+    "things": 105,
+    "enemies": {
+      "2": 21,
+      "3": 41,
+      "4": 61
+    },
+    "secrets": 2,
+    "blue_key": [
+      30,
+      -2
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      28,
+      60
+    ],
+    "key_room": "Coursive sud",
+    "reachable_cells": 1199,
+    "exit_distance_cells": 120,
+    "rooms": 12
+  },
+  {
+    "code": "RF13",
+    "errors": [],
+    "vertices": 797,
+    "linedefs": 844,
+    "sectors": 69,
+    "things": 105,
+    "enemies": {
+      "2": 21,
+      "3": 41,
+      "4": 61
+    },
+    "secrets": 2,
+    "blue_key": [
+      32,
+      26
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      -14,
+      40
+    ],
+    "key_room": "Lumiere du lac",
+    "reachable_cells": 1192,
+    "exit_distance_cells": 116,
+    "rooms": 12
+  },
+  {
+    "code": "RF14",
+    "errors": [],
+    "vertices": 824,
+    "linedefs": 866,
+    "sectors": 64,
+    "things": 96,
+    "enemies": {
+      "2": 19,
+      "3": 37,
+      "4": 55
+    },
+    "secrets": 2,
+    "blue_key": [
+      38,
+      27
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      0,
+      58
+    ],
+    "key_room": "Station pompage",
+    "reachable_cells": 1359,
+    "exit_distance_cells": 161,
+    "rooms": 11
+  },
+  {
+    "code": "RF15",
+    "errors": [],
+    "vertices": 884,
+    "linedefs": 929,
+    "sectors": 68,
+    "things": 96,
+    "enemies": {
+      "2": 19,
+      "3": 37,
+      "4": 55
+    },
+    "secrets": 2,
+    "blue_key": [
+      -17,
+      44
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      20,
+      58
+    ],
+    "key_room": "117-E Non attribue",
+    "reachable_cells": 1481,
+    "exit_distance_cells": 155,
+    "rooms": 11
+  },
+  {
+    "code": "RF16",
+    "errors": [],
+    "vertices": 822,
+    "linedefs": 861,
+    "sectors": 64,
+    "things": 96,
+    "enemies": {
+      "2": 19,
+      "3": 37,
+      "4": 55
+    },
+    "secrets": 2,
+    "blue_key": [
+      -13,
+      27
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      16,
+      59
+    ],
+    "key_room": "Studio B",
+    "reachable_cells": 1273,
+    "exit_distance_cells": 119,
+    "rooms": 11
+  },
+  {
+    "code": "RF17",
+    "errors": [],
+    "vertices": 843,
+    "linedefs": 888,
+    "sectors": 67,
+    "things": 105,
+    "enemies": {
+      "2": 21,
+      "3": 41,
+      "4": 61
+    },
+    "secrets": 2,
+    "blue_key": [
+      48,
+      -2
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      14,
+      47
+    ],
+    "key_room": "Ordres de garde",
+    "reachable_cells": 1384,
+    "exit_distance_cells": 111,
+    "rooms": 12
+  },
+  {
+    "code": "RF18",
+    "errors": [],
+    "vertices": 900,
+    "linedefs": 939,
+    "sectors": 64,
+    "things": 96,
+    "enemies": {
+      "2": 19,
+      "3": 37,
+      "4": 55
+    },
+    "secrets": 2,
+    "blue_key": [
+      43,
+      32
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      0,
+      66
+    ],
+    "key_room": "Canal service",
+    "reachable_cells": 1619,
+    "exit_distance_cells": 183,
+    "rooms": 11
+  },
+  {
+    "code": "RF19",
+    "errors": [],
+    "vertices": 892,
+    "linedefs": 937,
+    "sectors": 71,
+    "things": 105,
+    "enemies": {
+      "2": 21,
+      "3": 41,
+      "4": 61
+    },
+    "secrets": 2,
+    "blue_key": [
+      46,
+      -2
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      20,
+      47
+    ],
+    "key_room": "Inspection",
+    "reachable_cells": 1452,
+    "exit_distance_cells": 115,
+    "rooms": 12
+  },
+  {
+    "code": "RF20",
+    "errors": [],
+    "vertices": 893,
+    "linedefs": 939,
+    "sectors": 74,
+    "things": 114,
+    "enemies": {
+      "2": 23,
+      "3": 45,
+      "4": 67
+    },
+    "secrets": 2,
+    "blue_key": [
+      45,
+      29
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      0,
+      45
+    ],
+    "key_room": "Mise hors service",
+    "reachable_cells": 1409,
+    "exit_distance_cells": 125,
+    "rooms": 13
+  },
+  {
+    "code": "RF21",
+    "errors": [],
+    "vertices": 900,
+    "linedefs": 942,
+    "sectors": 70,
+    "things": 105,
+    "enemies": {
+      "2": 21,
+      "3": 41,
+      "4": 61
+    },
+    "secrets": 2,
+    "blue_key": [
+      -13,
+      13
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      16,
+      61
+    ],
+    "key_room": "Refused",
+    "reachable_cells": 1409,
+    "exit_distance_cells": 107,
+    "rooms": 12
+  },
+  {
+    "code": "RF22",
+    "errors": [],
+    "vertices": 820,
+    "linedefs": 872,
+    "sectors": 74,
+    "things": 114,
+    "enemies": {
+      "2": 23,
+      "3": 45,
+      "4": 67
+    },
+    "secrets": 2,
+    "blue_key": [
+      44,
+      -2
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      42,
+      41
+    ],
+    "key_room": "Malte",
+    "reachable_cells": 1243,
+    "exit_distance_cells": 129,
+    "rooms": 13
+  },
+  {
+    "code": "RF23",
+    "errors": [],
+    "vertices": 687,
+    "linedefs": 730,
+    "sectors": 63,
+    "things": 2,
+    "enemies": {
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "secrets": 2,
+    "blue_key": [
+      30,
+      10
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "exit": [
+      0,
+      55
+    ],
+    "key_room": "Linge",
+    "reachable_cells": 1064,
+    "exit_distance_cells": 123,
+    "rooms": 11
+  }
+]
