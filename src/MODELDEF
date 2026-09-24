@@ -1,0 +1,73 @@
+// Legacy S1 furniture: original OBJ meshes with one matte albedo atlas.
+// OBJ export is Y-up; 0.32 world units per source centimetre, pixel stretch corrected.
+
+Model RFPropDesk
+{
+    Path "models/props"
+    Model 0 "desk.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropCabinet
+{
+    Path "models/props"
+    Model 0 "cabinet.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropChair
+{
+    Path "models/props"
+    Model 0 "chair.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropRadiator
+{
+    Path "models/props"
+    Model 0 "radiator.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropTrolley
+{
+    Path "models/props"
+    Model 0 "trolley.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropBench
+{
+    Path "models/props"
+    Model 0 "bench.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropLamp
+{
+    Path "models/props"
+    Model 0 "service_ceiling_lamp.obj"
+    Skin 0 "atlas.png"
+    Scale 1.0 1.0 1.2
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}

@@ -1,0 +1,86 @@
+// Red Flags 2 sound routes. Files live under sounds/.
+
+rf/item/pickup            "sounds/items/pickup.wav"
+
+$random rf/fal/shot       { rf/fal/shot1 rf/fal/shot2 rf/fal/shot3 }
+rf/fal/shot1              "sounds/fal/shot_01.wav"
+rf/fal/shot2              "sounds/fal/shot_02.wav"
+rf/fal/shot3              "sounds/fal/shot_03.wav"
+rf/fal/latch              "sounds/fal/latch.wav"
+rf/fal/mag_out            "sounds/fal/mag_out.wav"
+rf/fal/mag_in             "sounds/fal/mag_in.wav"
+rf/fal/seat               "sounds/fal/seat.wav"
+rf/fal/action             "sounds/fal/action.wav"
+rf/fal/dry                "sounds/fal/dry.wav"
+rf/fal/raise              "sounds/fal/raise.wav"
+rf/fal/cloth              "sounds/fal/cloth.wav"
+$random rf/fal/shell      { rf/fal/shell1 rf/fal/shell2 }
+rf/fal/shell1             "sounds/fal/shell_01.wav"
+rf/fal/shell2             "sounds/fal/shell_02.wav"
+
+rf/browning/fire          "sounds/browning/fire.wav"
+rf/browning/slide         "sounds/browning/slide.wav"
+rf/browning/dry           "sounds/fal/dry.wav"
+
+$random rf/impact/plaster { rf/impact/plaster1 rf/impact/plaster2 }
+rf/impact/plaster1        "sounds/impact/plaster_01.wav"
+rf/impact/plaster2        "sounds/impact/plaster_02.wav"
+$random rf/impact/wood    { rf/impact/wood1 rf/impact/wood2 }
+rf/impact/wood1           "sounds/impact/wood_01.wav"
+rf/impact/wood2           "sounds/impact/wood_02.wav"
+$random rf/impact/metal   { rf/impact/metal1 rf/impact/metal2 }
+rf/impact/metal1          "sounds/impact/metal_01.wav"
+rf/impact/metal2          "sounds/impact/metal_02.wav"
+$random rf/impact/flesh   { rf/impact/flesh1 rf/impact/flesh2 }
+rf/impact/flesh1          "sounds/impact/flesh_01.wav"
+rf/impact/flesh2          "sounds/impact/flesh_02.wav"
+
+// Orderly: humanoid voice family plus footsteps.
+rf/orderly/sight          "sounds/orderly/penitent_sight.wav"
+rf/orderly/pain           "sounds/orderly/penitent_pain.wav"
+rf/orderly/death          "sounds/orderly/penitent_death.wav"
+rf/orderly/active         "sounds/orderly/penitent_active.wav"
+rf/orderly/attack         "sounds/orderly/penitent_attack.wav"
+$random rf/orderly/step   { rf/orderly/step1 rf/orderly/step2 }
+rf/orderly/step1          "sounds/orderly/step_01.wav"
+rf/orderly/step2          "sounds/orderly/step_02.wav"
+
+// Brancardier: stretcher frame and wheels, heavy voice.
+rf/brancardier/sight      "sounds/brancardier/invalid_sight.wav"
+rf/brancardier/pain       "sounds/brancardier/invalid_pain.wav"
+rf/brancardier/death      "sounds/brancardier/invalid_death.wav"
+rf/brancardier/active     "sounds/brancardier/invalid_active.wav"
+rf/brancardier/brace      "sounds/brancardier/brace.wav"
+rf/brancardier/wheel      "sounds/brancardier/wheel.wav"
+rf/brancardier/hit        "sounds/brancardier/frame_hit.wav"
+
+// Porte-Registre: paper, filing hardware, restrained breath.
+rf/porte/alert            "sounds/porte/presence.wav"
+rf/porte/telegraph        "sounds/porte/telegraph.wav"
+rf/porte/throw            "sounds/porte/throw.wav"
+rf/porte/pain             "sounds/porte/pain.wav"
+rf/porte/death            "sounds/porte/death.wav"
+
+// World.
+rf/world/door             "sounds/world/door.wav"
+rf/world/switch           "sounds/world/switch.wav"
+rf/world/paper            "sounds/world/paper.wav"
+rf/world/winch            "sounds/world/winch.wav"
+rf/amb/hum                "sounds/world/hum_loop.wav"
+rf/amb/wind               "sounds/world/wind_loop.wav"
+rf/amb/drip               "sounds/world/drip_loop.wav"
+rf/amb/room               "sounds/world/room_loop.wav"
+
+// Native door sequences use the institution's own door recording.
+doors/dr1_open            "sounds/world/door.wav"
+doors/dr1_clos            "sounds/world/door.wav"
+doors/dr2_open            "sounds/world/door.wav"
+doors/dr2_clos            "sounds/world/door.wav"
+plats/pt1_strt            "sounds/world/winch.wav"
+plats/pt1_stop            "sounds/world/switch.wav"
+switches/normbutn         "sounds/world/switch.wav"
+
+$volume rf/amb/hum 0.5
+$volume rf/amb/wind 0.55
+$volume rf/amb/drip 0.5
+$volume rf/amb/room 0.45

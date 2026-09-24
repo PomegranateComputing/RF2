@@ -1,0 +1,33 @@
+DefaultListMenu
+{
+    Font "BigFont", "White"
+    Selector "RFSELCT", -18, 2
+    LineSpacing 18
+}
+
+ListMenu "MainMenu"
+{
+    Class "RFMainMenu"
+    Position 56, 96
+}
+
+ListMenu "RFCreditsMenu"
+{
+    Class "RFCreditsMenu"
+    Font "NewSmallFont", "White"
+    LineSpacing 12
+    Position 40, 80
+}
+
+ListMenu "SkillMenu"
+{
+    StaticText 56, 48, "$RF_MENU_SKILL", "Red"
+    Position 56, 96
+    LineSpacing 18
+}
+
+ListMenu "EpisodeMenu"
+{
+    Position 56, 96
+    LineSpacing 18
+}

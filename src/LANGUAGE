@@ -1,0 +1,72 @@
+[enu default]
+GAMENAME = "Red Flags 2";
+RF_MENU_TITLE = "RED FLAGS 2";
+RF_MENU_SUBTITLE = "La Couleur de la Grenade";
+RF_MENU_PAUSE = "Pause";
+RF_MENU_NEWGAME = "Nouvelle partie";
+RF_MENU_LOAD = "Charger";
+RF_MENU_SAVE = "Sauvegarder";
+RF_MENU_OPTIONS = "Options";
+RF_MENU_CREDITS = "Crédits";
+RF_MENU_QUIT = "Quitter";
+RF_MENU_RESUME = "Reprendre";
+RF_MENU_MAIN = "Menu principal";
+RF_MENU_BACK = "Retour";
+RF_MENU_SKILL = "Choisir la difficulté";
+RF_SKILL_EASY = "Convalescence";
+RF_SKILL_NORMAL = "Service";
+RF_SKILL_HARD = "Nuit du 14 juin";
+RF_CREDITS_1 = "RED FLAGS 2 - La Couleur de la Grenade";
+RF_CREDITS_2 = "Pomegranate Interactive / Édouard Jourdan";
+RF_CREDITS_3 = "Production RF01 : Fable 5.1 et Codex Astra";
+RF_CREDITS_4 = "Moteur UZDoom 5.0.1 / IWAD de développement Freedoom 0.13";
+RF_CREDITS_5 = "Passe de construction 02 - 2026";
+RF_QUIT_1 = "Quitter Sainte-Anne ?";
+RF_QUIT_2 = "Le 14 juin 1940, personne ne ferme les portes.";
+
+RF_HUD_HEALTH = "SANTÉ";
+RF_HUD_RELOAD = "RECHARGE";
+RF_HUD_RELOADHINT = "CHARGEUR VIDE - R";
+RF_PROMPT_READ = "[E] LIRE";
+RF_RF01_DATE = "Paris, 14 juin 1940";
+RF_RF01_EXIT = "14 juin 1940.\n\nLes portes de Sainte-Anne sont restées ouvertes.\nDans la rue, personne.\n\nViktor Ardent descend vers la ville.";
+
+RF_WEAPON_BROWNING = "Browning Hi-Power";
+RF_WEAPON_FAL = "FN FAL";
+RF_PICKUP_BROWNING = "Browning Hi-Power.";
+RF_PICKUP_FAL = "FN FAL.";
+RF_AMMO_9MM = "Cartouches de 9 mm.";
+RF_AMMO_762 = "Chargeur de 7,62 mm.";
+RF_ITEM_DRESSING = "Pansement de campagne.";
+RF_KEY_GRILLE = "Clé de la grille";
+RF_KEY_PASSE = "Passe de service";
+RF_PICKUP_GRILLEKEY = "Clé de la grille du pavillon.";
+RF_PICKUP_PASSE = "Passe de service de la lingerie.";
+RF_LOCK_GRILLE = "La grille du pavillon est fermée. Il faut sa clé.";
+RF_LOCK_PASSE = "Porte de service. Il faut un passe.";
+RF_LOCK_PORCH = "La grille du porche est baissée. Elle se manœuvre depuis la loge.";
+
+RF_MONSTER_ORDERLY = "Infirmier";
+RF_MONSTER_BRANCARDIER = "Brancardier";
+RF_MONSTER_PORTE = "Porte-Registre";
+RF_OBIT_ORDERLY = "%o a été maîtrisé par un infirmier.";
+RF_OBIT_BRANCARDIER = "%o a été heurté par le brancardier.";
+RF_OBIT_PORTE = "%o a été classé par un porte-registre.";
+
+RF_OBJ_WAKE = "Sortir de la chambre.";
+RF_OBJ_GRILLE = "Trouver la clé de la grille du pavillon.";
+RF_OBJ_ADMISSIONS = "Traverser les admissions vers la cour.";
+RF_OBJ_COURT = "Rejoindre le pavillon est.";
+RF_OBJ_LINGERIE = "Remonter par la lingerie vers la galerie nord.";
+RF_OBJ_REGISTRES = "Consulter les registres.";
+RF_OBJ_LODGE = "Atteindre la loge du portier par les consultations.";
+RF_OBJ_PORCH = "La grille est levée. Rejoindre le porche.";
+RF_OBJ_EXIT = "Sortir dans la rue.";
+RF_MSG_WINCH = "Le treuil grince. Quelque part, la grille du porche se lève.";
+
+RF_NOTE_0 = "Poste de surveillance - 14 juin. Les internés du pavillon sont restés. Le personnel est parti à 6 h. La clé de la grille est sur le bureau.";
+RF_NOTE_1 = "Admissions - Registre de garde. 13 juin, 23 h : évacuation ordonnée. 14 juin, 5 h 40 : plus personne au portail. Les portes restent ouvertes.";
+RF_NOTE_2 = "Lingerie - Consigne. Le passe de service ouvre la loge du portier et les locaux du personnel. Ne pas sortir de l'établissement.";
+RF_NOTE_3 = "Registre d'admission. ARDENT, Viktor. Entré le 11 juin 1940. Motif : observation. Sortie : néant. Note du portier : grille du porche baissée, treuil dans la loge.";
+RF_NOTE_4 = "Chapelle. Dernière messe le 12 juin. Le chapelain a laissé les cierges. Personne n'a fermé.";
+RF_NOTE_5 = "Loge du portier. Treuil de la grille : tourner à fond. Le 14 au matin, j'ai laissé le porche ouvert. Que ceux qui restent sortent.";

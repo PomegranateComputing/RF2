@@ -1,0 +1,4 @@
+addkeysection "Red Flags 2" RF2
+addmenukey "Recharger" +reload
+defaultbind r +reload
+defaultbind e +use

@@ -1,0 +1,12 @@
+version "4.14"
+
+// Red Flags 2 runtime. Load order matters only for base classes.
+#include "zscript/rf/items.zs"
+#include "zscript/rf/weapons.zs"
+#include "zscript/rf/enemies.zs"
+#include "zscript/rf/world.zs"
+#include "zscript/rf/player.zs"
+#include "zscript/rf/director.zs"
+#include "zscript/rf/dev.zs"
+#include "zscript/rf/hud.zs"
+#include "zscript/rf/menu.zs"

@@ -1,281 +1,132 @@
+// Red Flags 2 - campaign definitions. RF01 is the production standard; RF02-RF23 keep
+// their V1 blockout entries until they are transformed.
+
+gameinfo
+{
+    PlayerClasses = "RFPlayer"
+    StatusBarClass = "RFStatusBar"
+    AddEventHandlers = "RFDirector", "RFDevHandler"
+    TitlePage = "TITLEPIC"
+    TitleMusic = "RFAMB01"
+    TitleTime = 3600
+    PageTime = 3600
+    BorderFlat = "RFP_CEIL"
+    QuitMessages = "$RF_QUIT_1", "$RF_QUIT_2"
+    dimcolor = "0a 08 09"
+    dimamount = 0.6
+    SkyFlatName = "F_SKY1"
+}
+
+clearskills
+
+skill facile
+{
+    AmmoFactor = 1.5
+    DamageFactor = 0.6
+    SpawnFilter = Easy
+    Name = "$RF_SKILL_EASY"
+    Key = "f"
+}
+
+skill normal
+{
+    SpawnFilter = Normal
+    Name = "$RF_SKILL_NORMAL"
+    Key = "n"
+    DefaultSkill
+}
+
+skill difficile
+{
+    DamageFactor = 1.4
+    SpawnFilter = Hard
+    Name = "$RF_SKILL_HARD"
+    Key = "d"
+}
+
+DoomEdNums
+{
+    30001 = RFFAL
+    30002 = RFBrowning
+    30101 = RFRifleAmmo
+    30103 = RFPistolAmmo
+    30201 = RFFieldDressing
+    30211 = RFGrilleKey
+    30212 = RFPasseKey
+    30301 = RFPropDesk
+    30302 = RFPropChair
+    30303 = RFPropCabinet
+    30304 = RFPropRadiator
+    30305 = RFPropTrolley
+    30306 = RFPropBench
+    30315 = RFPropLamp
+    30401 = RFOrderly
+    30402 = RFBrancardier
+    30403 = RFPorteRegistre
+    30410 = RFOrderlyCorpse
+    30601 = RFLamp
+    30602 = RFLampFlicker
+    30611 = RFAmbientLoop
+    30621 = RFNote
+    30901 = RFTourPoint
+    30902 = RFDevWaypoint
+}
+
 clearepisodes
 
 episode RF01 { name = "La Couleur de la Grenade" key = "g" }
 
-gameinfo { TitlePage = "TITLEPIC" TitleTime = 3600 PageTime = 3600 }
+cluster 1
+{
+    exittext = lookup, "RF_RF01_EXIT"
+    flat = "RFP_CEIL"
+    music = "RFAMB01"
+}
+
+defaultmap
+{
+    sky1 = "RFSKY", 0
+    music = "$MUSIC_RUNNIN"
+    cluster = 117
+    nojump
+    nocrouch
+    allowfreelook
+    smoothlighting
+}
 
 map RF01 "Sainte-Anne - Les portes ouvertes"
 {
- levelnum = 1
- next = "RF02"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
+    levelnum = 1
+    next = "RF02"
+    music = "RFAMB01"
+    cluster = 1
+    nointermission
+    lightmode = 2
 }
 
-map RF02 "Paris - Rue de service"
-{
- levelnum = 2
- next = "RF03"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF03 "Batignolles - Refus de reception"
-{
- levelnum = 3
- next = "RF04"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF04 "Luna Park - Personnel technique"
-{
- levelnum = 4
- next = "RF05"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF05 "Les machines continuent"
-{
- levelnum = 5
- next = "RF06"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF06 "La sortie du personnel"
-{
- levelnum = 6
- next = "RF07"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF07 "Jerma - Facade maritime"
-{
- levelnum = 7
- next = "RF08"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF08 "Aile des chambres"
-{
- levelnum = 8
- next = "RF09"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF09 "La piscine vide"
-{
- levelnum = 9
- next = "RF10"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF10 "L'envers du palace"
-{
- levelnum = 10
- next = "RF11"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF11 "Acces interdit cote chambre"
-{
- levelnum = 11
- next = "RF12"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF12 "Le dernier escalier"
-{
- levelnum = 12
- next = "RF13"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF13 "Waukegan - Chambre 217"
-{
- levelnum = 13
- next = "RF14"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF14 "Building 2 - South Dock"
-{
- levelnum = 14
- next = "RF15"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF15 "Les crochets et les boites"
-{
- levelnum = 15
- next = "RF16"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF16 "WKG Community"
-{
- levelnum = 16
- next = "RF17"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF17 "Conservation provisoire"
-{
- levelnum = 17
- next = "RF18"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF18 "Gennevilliers - La cour des transferts"
-{
- levelnum = 18
- next = "RF19"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF19 "La chaine froide"
-{
- levelnum = 19
- next = "RF20"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF20 "Copie de secours"
-{
- levelnum = 20
- next = "RF21"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF21 "Retours"
-{
- levelnum = 21
- next = "RF22"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
-map RF22 "Destinataire present"
-{
- levelnum = 22
- next = "RF23"
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
-}
-
+map RF02 "Paris - Rue de service" { levelnum = 2 next = "RF03" }
+map RF03 "Batignolles - Refus de reception" { levelnum = 3 next = "RF04" }
+map RF04 "Luna Park - Personnel technique" { levelnum = 4 next = "RF05" }
+map RF05 "Les machines continuent" { levelnum = 5 next = "RF06" }
+map RF06 "La sortie du personnel" { levelnum = 6 next = "RF07" }
+map RF07 "Jerma - Facade maritime" { levelnum = 7 next = "RF08" }
+map RF08 "Aile des chambres" { levelnum = 8 next = "RF09" }
+map RF09 "La piscine vide" { levelnum = 9 next = "RF10" }
+map RF10 "L'envers du palace" { levelnum = 10 next = "RF11" }
+map RF11 "Acces interdit cote chambre" { levelnum = 11 next = "RF12" }
+map RF12 "Le dernier escalier" { levelnum = 12 next = "RF13" }
+map RF13 "Waukegan - Chambre 217" { levelnum = 13 next = "RF14" }
+map RF14 "Building 2 - South Dock" { levelnum = 14 next = "RF15" }
+map RF15 "Les crochets et les boites" { levelnum = 15 next = "RF16" }
+map RF16 "WKG Community" { levelnum = 16 next = "RF17" }
+map RF17 "Conservation provisoire" { levelnum = 17 next = "RF18" }
+map RF18 "Gennevilliers - La cour des transferts" { levelnum = 18 next = "RF19" }
+map RF19 "La chaine froide" { levelnum = 19 next = "RF20" }
+map RF20 "Copie de secours" { levelnum = 20 next = "RF21" }
+map RF21 "Retours" { levelnum = 21 next = "RF22" }
+map RF22 "Destinataire present" { levelnum = 22 next = "RF23" }
 map RF23 "Salle d'attente"
 {
- levelnum = 23
- next = endgame { pic = "RFEND" music = "$MUSIC_READ_M" }
- sky1 = "RFSKY", 0
- music = "$MUSIC_RUNNIN"
- cluster = 117
- nojump
- nocrouch
- allowfreelook
+    levelnum = 23
+    next = endgame { pic = "RFEND" music = "$MUSIC_READ_M" }
 }

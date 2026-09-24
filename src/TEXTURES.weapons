@@ -1,0 +1,192 @@
+// First-person weapon families. One logical scale/offset per family, frame A = READY.
+// FAL: 1536x1024 canvas. Browning: 1672x941 canvas. XScale 6 / YScale 7.2 / Offset -700,-300.
+
+Sprite RFLVA0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/00_FAL_READY.png", 0, 0
+}
+Sprite RFLVB0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/01_FAL_FIRE.png", 0, 0
+}
+Sprite RFLVC0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/02_FAL_RECOIL_MAX.png", 0, 0
+}
+Sprite RFLVD0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/03_FAL_RECOVERY.png", 0, 0
+}
+Sprite RFLVE0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/04_FAL_RELOAD_01_HAND_LEAVES_FOREND.png", 0, 0
+}
+Sprite RFLVF0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/05_FAL_RELOAD_02_REACH_MAG.png", 0, 0
+}
+Sprite RFLVG0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/06_FAL_RELOAD_03_GRAB_MAG.png", 0, 0
+}
+Sprite RFLVH0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/07_FAL_RELOAD_04_MAG_RELEASE.png", 0, 0
+}
+Sprite RFLVI0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/08_FAL_RELOAD_05_MAG_ROTATE_OUT.png", 0, 0
+}
+Sprite RFLVJ0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/09_FAL_RELOAD_06_MAG_CLEAR.png", 0, 0
+}
+Sprite RFLVK0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/10_FAL_RELOAD_07_NEW_MAG_ENTER.png", 0, 0
+}
+Sprite RFLVL0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/11_FAL_RELOAD_08_NEW_MAG_ALIGN.png", 0, 0
+}
+Sprite RFLVM0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/12_FAL_RELOAD_09_MAG_INSERT.png", 0, 0
+}
+Sprite RFLVN0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/13_FAL_RELOAD_10_MAG_LOCK.png", 0, 0
+}
+Sprite RFLVO0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/14_FAL_RELOAD_11_HAND_TRANSITION.png", 0, 0
+}
+Sprite RFLVP0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/15_FAL_RELOAD_12_CHARGE_START.png", 0, 0
+}
+Sprite RFLVQ0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/16_FAL_RELOAD_13_CHARGE_REAR.png", 0, 0
+}
+Sprite RFLVR0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/17_FAL_RELOAD_14_CHARGE_RELEASE.png", 0, 0
+}
+Sprite RFLVS0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/18_FAL_RELOAD_15_HAND_RETURN.png", 0, 0
+}
+Sprite RFLVT0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/19_FAL_RELOAD_16_READY.png", 0, 0
+}
+Sprite BHPGA0, 1672, 941
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/browning/00_BHP_READY.png", 0, 0
+}
+Sprite BHPGB0, 1672, 941
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/browning/01_BHP_FIRE.png", 0, 0
+}
+Sprite BHPGC0, 1672, 941
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/browning/02_BHP_SLIDE_REAR.png", 0, 0
+}
+Sprite BHPGD0, 1672, 941
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/browning/03_BHP_RECOIL_MAX.png", 0, 0
+}
+Sprite BHPGE0, 1672, 941
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/browning/04_BHP_SLIDE_FORWARD.png", 0, 0
+}
+Sprite BHPGF0, 1672, 941
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/browning/05_BHP_RECOVERY.png", 0, 0
+}
+Sprite BHPGG0, 1672, 941
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/browning/06_BHP_EMPTY.png", 0, 0
+}

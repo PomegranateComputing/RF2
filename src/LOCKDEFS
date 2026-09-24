@@ -1,0 +1,25 @@
+ClearLocks
+
+Lock 1 Doom
+{
+    RFPasseKey
+    Message "$RF_LOCK_PASSE"
+    RemoteMessage "$RF_LOCK_PASSE"
+    Mapcolor 200 160 60
+}
+
+Lock 2 Doom
+{
+    RFGrilleKey
+    Message "$RF_LOCK_GRILLE"
+    RemoteMessage "$RF_LOCK_GRILLE"
+    Mapcolor 80 120 200
+}
+
+// The porch grille has no key: it is raised from the porter's lodge winch.
+Lock 3 Doom
+{
+    Message "$RF_LOCK_PORCH"
+    RemoteMessage "$RF_LOCK_PORCH"
+    Mapcolor 160 40 40
+}

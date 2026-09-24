@@ -1,0 +1,3 @@
+server noarchive bool rf_dev_tour = false;
+server noarchive bool rf_dev_autopilot = false;
+user float rf_hud_scale = 1.0;
