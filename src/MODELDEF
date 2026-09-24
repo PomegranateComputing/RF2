@@ -71,3 +71,77 @@ Model RFPropLamp
     IgnoreTranslation
     FrameIndex RFMD A 0 0
 }
+
+// Weapon pickups lying on the floor (scripts/mapkit/weapon_models.py); first person is unchanged.
+Model RFFAL
+{
+    Path "models/weapons"
+    Model 0 "fal_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex MGUN A 0 0
+}
+Model RFBrowning
+{
+    Path "models/weapons"
+    Model 0 "browning_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex PIST A 0 0
+}
+
+// Item pickups (same generator): the sprites remain as HUD icons.
+Model RFRifleAmmo
+{
+    Path "models/weapons"
+    Model 0 "mag_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFRM A 0 0
+}
+Model RFPistolAmmo
+{
+    Path "models/weapons"
+    Model 0 "box9_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RF9M A 0 0
+}
+Model RFFieldDressing
+{
+    Path "models/weapons"
+    Model 0 "dressing_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFGrilleKey
+{
+    Path "models/weapons"
+    Model 0 "key_grille_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFKY A 0 0
+}
+Model RFPasseKey
+{
+    Path "models/weapons"
+    Model 0 "key_passe_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFKY B 0 0
+}

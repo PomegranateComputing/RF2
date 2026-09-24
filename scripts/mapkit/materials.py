@@ -59,13 +59,13 @@ def tint(base, mask3, rgb, strength):
     return base * (1 - mask3 * strength) + col * (mask3 * strength)
 
 
-def save_patch(kind, name, arr_or_img, wunits=None, hunits=None):
+def save_patch(kind, name, arr_or_img, wunits=None, hunits=None, ppu=PPU):
     img = arr_or_img if isinstance(arr_or_img, Image.Image) else to_img(arr_or_img)
     PATCH.mkdir(parents=True, exist_ok=True)
     path = PATCH / f'{name}.png'
     img.save(path, optimize=True)
     w, h = img.size
-    DEFS.append((kind, name, w, h))
+    DEFS.append((kind, name, w, h, ppu))
     return img
 
 
@@ -364,6 +364,329 @@ def sky():
     to_img(img).save(ROOT / 'src' / 'textures' / 'RFSKY.png')
 
 
+# ----------------------------------------------------------------------------- street (RF01 porch/exit)
+def _draw_window(d, x0, y0, w, h, ppu, rng, shutters):
+    """Tall French window seen from the street: stone surround, frame, dark glass, iron rail."""
+    s = ppu
+    d.rectangle([x0 - 3 * s, y0 - 4 * s, x0 + w + 3 * s, y0 + h + 3 * s], fill=(184, 172, 150))       # stone surround
+    d.rectangle([x0, y0, x0 + w, y0 + h], fill=(48, 50, 54))                                           # glass
+    for k in range(3):
+        gy = y0 + int(h * (0.1 + 0.28 * k))
+        d.line([(x0 + 2 * s, gy), (x0 + w - 2 * s, gy + 5 * s)], fill=(74, 78, 86), width=max(1, s))  # sky reflection
+    d.rectangle([x0, y0, x0 + w, y0 + h], outline=(206, 198, 180), width=max(1, s))                   # frame
+    d.line([(x0 + w // 2, y0), (x0 + w // 2, y0 + h)], fill=(206, 198, 180), width=max(1, s))
+    d.line([(x0, y0 + h // 3), (x0 + w, y0 + h // 3)], fill=(206, 198, 180), width=max(1, s))
+    if shutters == 'closed':
+        col = (96, 112, 118) if rng.random() < 0.6 else (112, 104, 92)
+        d.rectangle([x0, y0, x0 + w, y0 + h], fill=col)
+        for yy in range(y0 + 2 * s, y0 + h, 3 * s):                                                   # persienne slats
+            d.line([(x0 + s, yy), (x0 + w - s, yy)], fill=tuple(int(c * 0.72) for c in col), width=max(1, s // 2))
+        d.line([(x0 + w // 2, y0), (x0 + w // 2, y0 + h)], fill=tuple(int(c * 0.6) for c in col), width=max(1, s))
+    elif shutters == 'open':
+        col = (96, 112, 118)
+        for sx in (x0 - w // 2 - 3 * s, x0 + w + 3 * s):
+            d.rectangle([sx, y0, sx + w // 2, y0 + h], fill=col)
+            for yy in range(y0 + 2 * s, y0 + h, 3 * s):
+                d.line([(sx + s, yy), (sx + w // 2 - s, yy)], fill=(70, 82, 88), width=max(1, s // 2))
+    ry = y0 + h - 12 * s                                                                               # iron rail
+    d.line([(x0 - 2 * s, ry), (x0 + w + 2 * s, ry)], fill=(30, 30, 32), width=max(1, s))
+    for bx in range(x0, x0 + w + 1, 3 * s):
+        d.line([(bx, ry), (bx, y0 + h)], fill=(34, 34, 36), width=max(1, s // 2))
+
+
+def facade_paris(name, seed, wunits=256, hunits=448, ppu=2):
+    """Parisian street facade, 1940: shop fronts shut for the exodus, four floors, zinc roof."""
+    W, H = wunits * ppu, hunits * ppu
+    rng = np.random.default_rng(seed)
+    img = plaster(H, W, seed, (196, 186, 166), 0.12, 0.2)
+    soot = fbm(H, W, seed + 4, 2.4)[..., None]
+    yv = np.linspace(0, 1, H)[:, None, None]
+    img = img * (1 - 0.18 * np.clip(1 - yv * 1.6, 0, 1) * soot)                                       # soot toward the top
+    pil = to_img(img)
+    d = ImageDraw.Draw(pil)
+
+    def Y(u):                                                                                          # units above the pavement
+        return H - int(u * ppu)
+    d.rectangle([0, Y(8), W, H], fill=(96, 94, 90))                                                   # stone plinth
+    # ground floor: two shop fronts per texture width, shutters down; an entrance door beside each
+    bay = W // 2
+    for b in range(2):
+        x0 = b * bay + 10 * ppu
+        x1 = x0 + bay - 44 * ppu
+        paint = [(58, 74, 62), (92, 40, 36), (46, 52, 66)][int(rng.integers(0, 3))]
+        d.rectangle([x0, Y(100), x1, Y(8)], fill=paint)                                                # wooden shopfront
+        d.rectangle([x0 + 4 * ppu, Y(92), x1 - 4 * ppu, Y(12)], fill=(122, 124, 122))                 # roller shutter
+        for yy in range(Y(92), Y(12), 3 * ppu):
+            d.line([(x0 + 4 * ppu, yy), (x1 - 4 * ppu, yy)], fill=(92, 94, 94), width=max(1, ppu // 2))
+        d.rectangle([x0 + 4 * ppu, Y(100), x1 - 4 * ppu, Y(94)], fill=tuple(min(255, int(c * 1.25)) for c in paint))  # blank fascia
+        dx = x1 + 8 * ppu
+        d.rectangle([dx, Y(92), dx + 24 * ppu, Y(8)], fill=(70, 54, 40))                               # entrance door
+        d.rectangle([dx + 3 * ppu, Y(86), dx + 21 * ppu, Y(50)], outline=(52, 40, 30), width=ppu)
+        d.rectangle([dx + 3 * ppu, Y(44), dx + 21 * ppu, Y(14)], outline=(52, 40, 30), width=ppu)
+    d.rectangle([0, Y(112), W, Y(104)], fill=(176, 166, 146))                                          # stone band
+    d.line([(0, Y(112)), (W, Y(112))], fill=(120, 112, 98), width=ppu)
+    # four upper floors of French windows; many shutters closed (the city emptied on 13-14 June)
+    for f in range(4):
+        base = 124 + f * 70
+        d.line([(0, Y(base - 4)), (W, Y(base - 4))], fill=(168, 158, 138), width=2 * ppu)             # floor band
+        for k in range(4):
+            wx = int((k + 0.5) * W / 4) - 13 * ppu
+            state = 'closed' if rng.random() < 0.55 else ('open' if rng.random() < 0.5 else 'none')
+            _draw_window(d, wx, Y(base + 52), 26 * ppu, 50 * ppu, ppu, rng, state)
+    d.rectangle([0, Y(410), W, Y(402)], fill=(150, 142, 126))                                          # cornice
+    d.line([(0, Y(402)), (W, Y(402))], fill=(80, 76, 70), width=2 * ppu)
+    d.rectangle([0, 0, W, Y(410)], fill=(112, 120, 128))                                               # zinc roof
+    for k in range(4):
+        cx = int((k + 0.5) * W / 4)
+        d.rectangle([cx - 9 * ppu, Y(440), cx + 9 * ppu, Y(412)], fill=(126, 132, 138))              # dormer
+        d.rectangle([cx - 5 * ppu, Y(436), cx + 5 * ppu, Y(416)], fill=(44, 46, 50))
+    arr = np.asarray(pil).astype(float) / 255.0
+    arr = floor_grime(arr, 0.28, 0.06)
+    save_patch('Texture', name, arr, ppu=ppu)
+
+
+def facade_hospital(name, seed, wunits=256, hunits=320, ppu=2):
+    """Hospital pavilion behind the enclosure wall: plain render, tall regular windows."""
+    W, H = wunits * ppu, hunits * ppu
+    rng = np.random.default_rng(seed)
+    img = plaster(H, W, seed, (206, 198, 180), 0.1, 0.18)
+    pil = to_img(img)
+    d = ImageDraw.Draw(pil)
+
+    def Y(u):
+        return H - int(u * ppu)
+    for f in range(3):
+        base = 36 + f * 96
+        d.line([(0, Y(base - 8)), (W, Y(base - 8))], fill=(176, 168, 150), width=2 * ppu)
+        for k in range(3):
+            wx = int((k + 0.5) * W / 3) - 15 * ppu
+            _draw_window(d, wx, Y(base + 64), 30 * ppu, 62 * ppu, ppu, rng, 'none' if f else 'closed')
+    arr = np.asarray(pil).astype(float) / 255.0
+    save_patch('Texture', name, arr, ppu=ppu)
+
+
+def cobbles(h, w, seed, bw_units=8, bh_units=12):
+    """Sandstone setts in running rows, dark joints, worn highlights."""
+    img = solid(h, w, (112, 108, 102))
+    ty, tx = np.mgrid[:h, :w]
+    bh, bw = bh_units * PPU, bw_units * PPU
+    row = ty // bh
+    shift = (row % 2) * (bw // 2)
+    col = (tx + shift) // bw
+    rng = np.random.default_rng(seed)
+    bid = row * 4099 + col
+    var = (rng.random(int(bid.max()) + 1) - 0.5) * 0.3
+    img = img * (1 + var[bid][..., None])
+    ly, lx = (ty % bh) / bh, ((tx + shift) % bw) / bw
+    dome = (1 - (2 * ly - 1) ** 2) * (1 - (2 * lx - 1) ** 2)
+    img = img * (0.78 + 0.3 * dome[..., None])
+    joint = ((ty % bh) < PPU) | (((tx + shift) % bw) < PPU)
+    img[joint] = np.array((54, 52, 48)) / 255.0
+    img = img * (0.9 + 0.2 * (fbm(h, w, seed + 3, 2.0)[..., None] - 0.5))
+    img += grain(h, w, seed + 1, 0.035)[..., None]
+    return np.clip(img, 0, 1)
+
+
+# ----------------------------------------------------------------------------- furniture sides
+# Raised-block furniture keeps its geometry (safe collision); these side textures make the blocks
+# read as beds, tables, shelving and vats. Lower textures are top-aligned on the block's top edge.
+def _px(u):
+    return int(round(u * PPU))
+
+
+def bed_side(name, seed):
+    """Hospital bed side, 64x32 u: mattress edge, grey wool blanket overhang, shadow, iron rail."""
+    W, H = 64 * PPU, 32 * PPU
+    img = solid(H, W, (22, 20, 20))
+    n = fbm(H, W, seed, 2.0)[..., None]
+    blanket = solid(_px(9), W, (104, 108, 96)) * (0.9 + 0.2 * (fbm(_px(9), W, seed + 1, 1.4)[..., None] - 0.5))
+    ty, tx = np.mgrid[:_px(9), :W]
+    folds = 0.08 * np.sin(tx / W * 2 * math.pi * 5 + np.sin(tx / 37.0)) * (ty / _px(9))
+    blanket = blanket * (1 + folds[..., None])
+    img[_px(3):_px(12)] = blanket
+    img[:_px(3)] = np.array((206, 204, 196)) / 255.0 * (0.95 + 0.1 * n[:_px(3)])          # sheet/mattress edge
+    img[_px(12):_px(13)] *= 0.5                                                              # hem shadow
+    img[_px(17):_px(19)] = np.array((64, 66, 68)) / 255.0                                    # iron side rail
+    for lx in (_px(2), W - _px(4)):                                                           # legs
+        img[_px(13):, lx:lx + _px(2)] = np.array((58, 60, 62)) / 255.0
+    img = img * (1 - 0.35 * (np.linspace(0, 1, H)[:, None, None] ** 2))                      # darker toward the floor
+    save_patch('Texture', name, np.clip(img + grain(H, W, seed + 2, 0.02)[..., None], 0, 1))
+
+
+def bed_head(name, seed):
+    """Painted iron headboard, 64x48 u: cream enamel panel in a tube frame, chipped edges."""
+    W, H = 64 * PPU, 48 * PPU
+    img = solid(H, W, (196, 192, 176)) * (0.93 + 0.1 * (fbm(H, W, seed, 2.2)[..., None] - 0.5))
+    pil = to_img(img)
+    d = ImageDraw.Draw(pil)
+    tube = (150, 148, 138)
+    d.rectangle([0, 0, W - 1, _px(3)], fill=tube)
+    d.rectangle([0, 0, _px(2), H], fill=tube)
+    d.rectangle([W - _px(2), 0, W, H], fill=tube)
+    d.rectangle([0, _px(30), W, _px(32)], fill=tube)
+    for x in range(_px(8), W - _px(4), _px(8)):
+        d.rectangle([x, _px(32), x + _px(1), H], fill=(120, 118, 110))                     # lower bars
+    rng = np.random.default_rng(seed)
+    for _ in range(12):                                                                      # enamel chips
+        cx, cy = int(rng.integers(0, W)), int(rng.integers(0, H))
+        r = int(rng.integers(1, 3))
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(122, 114, 102))
+    save_patch('Texture', name, pil)
+
+
+def table_side(name, seed, wood=(92, 64, 40)):
+    """Table seen from the side, 64x32 u: top edge, apron, dark gap underneath, legs at both ends."""
+    W, H = 64 * PPU, 32 * PPU
+    img = solid(H, W, (16, 14, 13))
+    grainw = planks(_px(8), W, seed, 8, wood)
+    img[:_px(3)] = grainw[:_px(3)] * 1.15                                                     # top edge
+    img[_px(3):_px(8)] = grainw[_px(3):_px(8)] * 0.8                                          # apron
+    for lx in (0, W - _px(3)):
+        img[_px(8):, lx:lx + _px(3)] = planks(H - _px(8), _px(3), seed + 1, 8, wood) * 0.85   # legs
+    img[_px(8):_px(9)] *= 0.4
+    save_patch('Texture', name, np.clip(img, 0, 1))
+
+
+def shelf_front(name, seed):
+    """Archive shelving, 64x64 u: dark wooden uprights and boards, rows of bound registers."""
+    W, H = 64 * PPU, 64 * PPU
+    rng = np.random.default_rng(seed)
+    img = solid(H, W, (28, 22, 18))
+    wood = planks(H, W, seed + 1, 8, (84, 58, 36))
+    for y0 in range(0, H, _px(16)):                                                           # boards
+        img[y0:y0 + _px(2)] = wood[y0:y0 + _px(2)]
+    img[:, :_px(2)] = wood[:, :_px(2)]
+    img[:, W - _px(2):] = wood[:, W - _px(2):]
+    spines = [(96, 34, 32), (58, 44, 34), (30, 30, 34), (44, 58, 44), (110, 86, 60), (70, 28, 30)]
+    for y0 in range(0, H, _px(16)):
+        x = _px(2)
+        base = y0 + _px(16)
+        while x < W - _px(3):
+            w = int(rng.integers(_px(2), _px(4)))
+            h = int(rng.integers(_px(10), _px(13)))
+            col = np.array(spines[int(rng.integers(0, len(spines)))]) / 255.0
+            shade = 0.8 + 0.4 * rng.random()
+            img[base - h:base, x:x + w - 1] = col * shade
+            img[base - h + _px(2):base - h + _px(4), x + 1:x + w - 2] = np.array((168, 156, 128)) / 255.0 * shade  # label patch
+            x += w
+    img += grain(H, W, seed + 2, 0.02)[..., None]
+    save_patch('Texture', name, np.clip(img, 0, 1))
+
+
+def vat_side(name, seed):
+    """Galvanised laundry vat, 64x48 u: mottled zinc, rolled rim, riveted bands."""
+    W, H = 64 * PPU, 48 * PPU
+    img = solid(H, W, (132, 136, 136))
+    img = img * (0.82 + 0.3 * (fbm(H, W, seed, 1.8)[..., None] - 0.5))
+    img = tint(img, np.clip((fbm(H, W, seed + 3, 2.6)[..., None] - 0.6) * 4, 0, 1), (96, 92, 80), 0.4)   # water stains
+    img[:_px(3)] = np.array((176, 178, 176)) / 255.0                                          # rolled rim
+    img[_px(3):_px(4)] *= 0.55
+    for yb in (_px(8), H - _px(6)):
+        img[yb:yb + _px(2)] = np.array((104, 106, 106)) / 255.0                               # bands
+        for x in range(_px(3), W, _px(6)):
+            img[yb + _px(0.5):yb + _px(1.5), x:x + _px(1)] = np.array((70, 72, 72)) / 255.0   # rivets
+    img = floor_grime(img, 0.35, 0.2)
+    save_patch('Texture', name, np.clip(img + grain(H, W, seed + 1, 0.02)[..., None], 0, 1))
+
+
+# ----------------------------------------------------------------------------- chapel glass
+def stained_glass(name, seed, wunits=64, hunits=64):
+    """Chapel window: geometric quarries of coloured glass in lead cames under a pointed arch, no
+    figures or text. A brightmap (GLDEFS) keeps the panes luminous against the dark nave."""
+    W, H = wunits * PPU, hunits * PPU
+    rng = np.random.default_rng(seed)
+    pil = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(pil)
+    colours = [(38, 64, 150), (150, 30, 40), (196, 150, 54), (46, 110, 70), (222, 210, 150), (90, 50, 120)]
+    cell = 8 * PPU
+    step = cell * 0.62                                                 # rows at the vertical half-diagonal:
+    for gy in range(-1, int(H / step) + 2):                            # the diamonds tessellate
+        for gx in range(-1, W // cell + 2):
+            cx = gx * cell + (cell // 2 if gy % 2 else 0)
+            cy = gy * step
+            poly = [(cx, cy - step), (cx + cell * 0.5, cy), (cx, cy + step), (cx - cell * 0.5, cy)]
+            base = colours[int(rng.integers(0, len(colours)))]
+            if abs(cx - W / 2) < cell * 0.8:
+                base = colours[1 if gy % 3 else 2]                     # central ruby and amber column
+            shade = 0.8 + 0.35 * rng.random()
+            d.polygon(poly, fill=tuple(int(min(255, c * shade)) for c in base) + (255,), outline=(20, 18, 16, 255))
+    lead = (22, 20, 18, 255)
+    d.rectangle([0, 0, W - 1, H - 1], outline=lead, width=2 * PPU)    # frame
+    d.line([(W // 2, 0), (W // 2, H)], fill=lead, width=PPU)           # mullion
+    for y in (H // 3, 2 * H // 3):                                     # saddle bars
+        d.line([(0, y), (W, y)], fill=lead, width=PPU)
+    arr = np.asarray(pil).astype(float)
+    arr[..., :3] = np.clip(arr[..., :3] * (0.85 + 0.3 * fbm(H, W, seed + 1, 1.6)[..., None]), 0, 255)
+    # pointed head: each half is an arc centred on the springing line, meeting at the apex
+    ys = H * 0.35
+    c = (W * W / 4 + ys * ys) / W                                      # arc centre offset (and radius)
+    yy, xx = np.mgrid[0:H, 0:W]
+    inside_left = (xx - c) ** 2 + (yy - ys) ** 2 <= c * c
+    inside_right = (xx - (W - 1 - c)) ** 2 + (yy - ys) ** 2 <= c * c
+    keep = np.where(xx <= W / 2, inside_left, inside_right)
+    arr[(yy < ys) & ~keep] = (0, 0, 0, 0)
+    img = Image.fromarray(arr.astype(np.uint8), 'RGBA')
+    img.save(PATCH / f'{name}.png')
+    DEFS.append(('Texture', name, W, H, PPU))
+    bm = Image.new('RGB', (W, H), (0, 0, 0))
+    bm.paste(Image.new('RGB', (W, H), (200, 200, 200)), (0, 0), img.split()[3])
+    bm.save(PATCH / f'{name}_BM.png')
+
+
+# ----------------------------------------------------------------------------- wear decals
+DECALS = ROOT / 'src' / 'graphics' / 'decals'
+
+
+def _mask_png(mask, name):
+    """Grey mask saved as white RGBA with alpha = mask: DECALDEF 'shade' tints it."""
+    a = (np.clip(mask, 0, 1) * 255).astype(np.uint8)
+    rgba = np.dstack([a, a, a, a])
+    DECALS.mkdir(parents=True, exist_ok=True)
+    Image.fromarray(rgba, 'RGBA').save(DECALS / f'{name}.png', optimize=True)
+
+
+def wear_decals():
+    """Situated wear (ASSET_BIBLE): damp tide marks, hand grime by doors, rust/water streaks,
+    trolley scuffs. Masks only; colour and strength come from DECALDEF."""
+    S = 128
+    yy, xx = np.mgrid[0:S, 0:S] / (S - 1.0)
+    # damp patch: irregular blob, darker tide rim, rising from the floor (bottom edge)
+    n = fbm(S, S, 501, 2.2)
+    r = np.hypot((xx - 0.5) * 1.1, (yy - 0.8) * 0.9) + (n - 0.5) * 0.35
+    blob = np.clip((0.55 - r) * 5, 0, 1)
+    rim = np.exp(-((r - 0.52) / 0.035) ** 2) * 0.6
+    _mask_png(np.clip(blob * 0.45 + rim, 0, 0.8) * np.clip((0.97 - yy) * 30, 0, 1), 'RFDSTN1')
+    # hand grime: soft vertical smudge where hands push a door frame
+    n = fbm(S, S, 502, 1.8)
+    g = np.exp(-((xx - 0.5) / 0.16) ** 2 - ((yy - 0.5) / 0.3) ** 2) * (0.6 + 0.6 * n)
+    _mask_png(np.clip(g, 0, 0.7), 'RFDSTN2')
+    # streaks: drips from a ledge (top edge) fading downward
+    rng = np.random.default_rng(503)
+    st = np.zeros((S, S))
+    for _ in range(9):
+        x0 = rng.uniform(0.15, 0.85)
+        w = rng.uniform(0.01, 0.035)
+        length = rng.uniform(0.4, 0.95)
+        st += np.exp(-((xx - x0) / w) ** 2) * np.clip(1 - yy / length, 0, 1) ** 1.5 * rng.uniform(0.4, 0.9)
+    st += np.exp(-((yy - 0.02) / 0.04) ** 2) * 0.5
+    _mask_png(np.clip(st, 0, 0.85), 'RFDSTN3')
+    # scuffs: horizontal rubs at trolley height
+    sc = np.zeros((S, S))
+    for _ in range(14):
+        y0 = rng.uniform(0.35, 0.65)
+        x0, x1 = sorted(rng.uniform(0.0, 1.0, 2))
+        sc += np.exp(-((yy - y0) / 0.012) ** 2) * ((xx > x0) & (xx < x1)) * rng.uniform(0.3, 0.8)
+    _mask_png(np.clip(sc * (0.7 + 0.5 * fbm(S, S, 504, 1.5)), 0, 0.75), 'RFDSTN4')
+    (ROOT / 'src' / 'DECALDEF').write_text(
+        '// Situated wear decals (scripts/mapkit/materials.py). Placed by Decal things (9200) in the\n'
+        '// map scripts, facing the wall they mark. Shade decals: the mask carries the shape only.\n\n'
+        'decal RFDamp 11001\n{\n    pic RFDSTN1\n    shade "30 28 1e"\n    x-scale 0.6\n    y-scale 0.6\n    randomflipx\n}\n\n'
+        'decal RFGrime 11002\n{\n    pic RFDSTN2\n    shade "22 1c 16"\n    x-scale 0.25\n    y-scale 0.3\n    randomflipx\n}\n\n'
+        'decal RFStreak 11003\n{\n    pic RFDSTN3\n    shade "4a 32 1e"\n    x-scale 0.45\n    y-scale 0.6\n    randomflipx\n}\n\n'
+        'decal RFScuff 11004\n{\n    pic RFDSTN4\n    shade "1e 1a 16"\n    x-scale 0.6\n    y-scale 0.25\n    randomflipx\n}\n',
+        encoding='utf-8')
+
+
 # ----------------------------------------------------------------------------- sprites
 def png_with_grab(img, xoff, yoff, path):
     """Save RGBA PNG and insert a grAb chunk (sprite offsets) after IHDR."""
@@ -472,12 +795,117 @@ def draw_pistol_pickup(name):
     finish_sprite(img, name)
 
 
+def _paper(w, h, seed, rgb=(224, 216, 192)):
+    """Aged paper: fbm grain, darker edges, no text (illegible marks only)."""
+    base = np.ones((h, w, 3)) * np.array(rgb) / 255.0
+    n = fbm(h, w, seed)[..., None]
+    base = base * (0.92 + 0.10 * n)
+    yy, xx = np.mgrid[0:h, 0:w]
+    edge = np.minimum(np.minimum(xx, w - 1 - xx), np.minimum(yy, h - 1 - yy)) / max(4.0, min(w, h) * 0.12)
+    base = base * (0.86 + 0.14 * np.clip(edge, 0, 1)[..., None])
+    return base
+
+
+def _marks(d, x0, y0, x1, rows, step, rng, ink=(58, 52, 60, 255), width=2):
+    """Rows of typed/handwritten-looking strokes: dashes of random length, never letters."""
+    for r in range(rows):
+        y = y0 + r * step
+        x = x0 + rng.integers(0, 6)
+        end = x1 - rng.integers(0, (x1 - x0) // 3 + 1)
+        while x < end:
+            seg = int(rng.integers(6, 22))
+            d.line([(x, y + int(rng.integers(-1, 2))), (min(end, x + seg), y + int(rng.integers(-1, 2)))], fill=ink, width=width)
+            x += seg + int(rng.integers(4, 9))
+
+
+def draw_note_sheet(name):
+    """Loose report sheet, drawn flat on desks and floors (FLATSPRITE, centred offsets)."""
+    rng = np.random.default_rng(301)
+    w, h = 64, 88
+    img = to_img(_paper(w * 2, h * 2, 302)).convert('RGBA')
+    d = ImageDraw.Draw(img)
+    _marks(d, 16, 26, w * 2 - 16, 13, 10, rng)
+    d.ellipse([w * 2 - 52, h * 2 - 50, w * 2 - 18, h * 2 - 16], outline=(118, 58, 92, 200), width=3)   # rubber stamp ring
+    img = img.resize((w, h), Image.LANCZOS)
+    SPRITES.mkdir(parents=True, exist_ok=True)
+    png_with_grab(img, w // 2, h // 2, SPRITES / f'{name}.png')
+
+
+def draw_note_register(name):
+    """Open admission register: two ruled pages in a dark oxblood binding."""
+    rng = np.random.default_rng(311)
+    w, h = 120, 84
+    W, H = w * 2, h * 2
+    img = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([0, 0, W - 1, H - 1], radius=8, fill=(74, 30, 28, 255))
+    for k, (x0, x1) in enumerate(((8, W // 2 - 3), (W // 2 + 3, W - 9))):
+        page = to_img(_paper(x1 - x0, H - 14, 312 + k, (222, 212, 184))).convert('RGBA')
+        img.alpha_composite(page, (x0, 7))
+    d = ImageDraw.Draw(img)
+    for x in (8 + 34, W // 2 + 3 + 34):
+        d.line([(x, 10), (x, H - 10)], fill=(150, 70, 60, 200), width=2)                # margin rule
+    for y in range(22, H - 10, 11):
+        d.line([(10, y), (W - 11, y)], fill=(120, 132, 150, 150), width=1)             # ruling
+    _marks(d, 46, 18, W // 2 - 8, 11, 11, rng, ink=(46, 44, 70, 255))
+    _marks(d, W // 2 + 40, 18, W - 14, 6, 11, rng, ink=(46, 44, 70, 255))
+    d.line([(W // 2, 6), (W // 2, H - 6)], fill=(60, 36, 30, 255), width=3)             # gutter
+    img = img.resize((w, h), Image.LANCZOS)
+    SPRITES.mkdir(parents=True, exist_ok=True)
+    png_with_grab(img, w // 2, h // 2, SPRITES / f'{name}.png')
+
+
 def draw_selector():
     img = Image.new('RGBA', (24, 24), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     d.polygon([(2, 2), (20, 12), (2, 22)], fill=(150, 34, 40, 255), outline=(230, 220, 210, 255))
     GRAPHICS.mkdir(parents=True, exist_ok=True)
     img.resize((12, 12), Image.LANCZOS).save(GRAPHICS / 'RFSELCT.png')
+
+
+# ----------------------------------------------------------------------------- title background
+def title_background():
+    """Main-menu background (TITLEPIC), no text: the porch arcade of Sainte-Anne at dawn seen
+    from the dark vestibule. The left half stays dark and quiet for the engine-drawn menu."""
+    W, H = 1920, 1080
+    rng = np.random.default_rng(401)
+    wall = plaster(H, W, 402, (72, 68, 66), 0.16, 0.25)
+    yy, xx = np.mgrid[0:H, 0:W]
+    # cold dawn light pooling from the arches on the right, falling off to the left
+    glow = np.exp(-((xx - W * 0.74) / (W * 0.30)) ** 2 - ((yy - H * 0.62) / (H * 0.55)) ** 2)
+    img = wall * (0.28 + 0.55 * glow[..., None])
+    sky_top, sky_low = np.array((150, 164, 184)) / 255.0, np.array((214, 204, 188)) / 255.0
+    for cx in (0.62, 0.86):                                       # two arches onto the street
+        ax0, ax1 = int(W * cx - W * 0.075), int(W * cx + W * 0.075)
+        top, base = int(H * 0.30), int(H * 0.92)
+        r = (ax1 - ax0) / 2
+        for x in range(ax0, ax1):
+            dx = (x - (ax0 + ax1) / 2) / r
+            y_arc = int(top + r * (1 - math.sqrt(max(0.0, 1 - dx * dx))))
+            t = np.linspace(0, 1, base - y_arc)[:, None]
+            img[y_arc:base, x] = sky_top * (1 - t) + sky_low * t
+        # far facade across the street inside each arch (shut windows, soft)
+        fy0 = int(H * 0.58)
+        img[fy0:base, ax0:ax1] = img[fy0:base, ax0:ax1] * 0.55 + np.array((120, 112, 104)) / 255.0 * 0.45
+        for wx in range(ax0 + 18, ax1 - 30, 46):
+            for wy in range(fy0 + 20, base - 60, 70):
+                img[wy:wy + 42, wx:wx + 18] = np.array((84, 94, 100)) / 255.0
+        img[base - 40:base, ax0:ax1] = np.array((96, 92, 88)) / 255.0   # street and kerb
+    # the vestibule floor: slab reflections of the arches
+    fl = int(H * 0.92)
+    img[fl:, :] = img[fl:, :] * 0.6 + np.array((40, 38, 36)) / 255.0 * 0.4
+    for cx in (0.62, 0.86):
+        x0, x1 = int(W * (cx - 0.07)), int(W * (cx + 0.07))
+        img[fl:, x0:x1] += 0.08
+    # vignette and grain
+    v = ((xx - W / 2) / (W * 0.62)) ** 2 + ((yy - H / 2) / (H * 0.62)) ** 2
+    img = img * np.clip(1.1 - 0.55 * v, 0.25, 1.0)[..., None]
+    img += grain(H, W, 403, 0.02)[..., None]
+    pil = to_img(np.clip(img, 0, 1))
+    d = ImageDraw.Draw(pil)
+    d.rectangle([int(W * 0.064), int(H * 0.11), int(W * 0.064) + 12, int(H * 0.89)], fill=(110, 28, 34))   # oxblood bar
+    GRAPHICS.mkdir(parents=True, exist_ok=True)
+    pil.save(GRAPHICS / 'TITLEPIC.png', optimize=True)
 
 
 # ----------------------------------------------------------------------------- main
@@ -522,6 +950,18 @@ def main():
     for i, text in enumerate(['ADMISSIONS', 'CONSULTATIONS', 'PAVILLON EST', 'LINGERIE', 'REGISTRES', 'CHAPELLE', 'SORTIE', 'LOGE DU PORTIER', 'PAVILLON OUEST', 'GALERIE NORD']):
         sign(f'RFSIGN{i}', text, 200 + i)
     sky()
+    # Street outside the porch (exit): Parisian facades, hospital pavilion behind the wall, setts
+    facade_paris('RFS_FACD', 140)
+    facade_hospital('RFS_HOSP', 141)
+    save_patch('Flat', 'RFF_PAVE', cobbles(128 * PPU, 128 * PPU, 142))
+    # Furniture block sides: beds, headboards, tables, archive shelving, laundry vats
+    bed_side('RFT_BEDS', 150)
+    bed_head('RFT_HEAD', 151)
+    table_side('RFW_TBLS', 152)
+    shelf_front('RFW_SHLF', 153)
+    vat_side('RFM_VATS', 154)
+    stained_glass('RFG_VITR', 155)                              # chapel windows (+ brightmap, GLDEFS)
+    wear_decals()                                               # DECALDEF + graphics/decals masks
     # Sprites and menu graphics
     draw_key('RFKYA0', (70, 110, 200))
     draw_key('RFKYB0', (200, 160, 60))
@@ -530,11 +970,15 @@ def main():
     draw_dressing('RFMDA0')
     draw_fal_pickup('MGUNA0')
     draw_pistol_pickup('PISTA0')
+    draw_note_sheet('RFNPA0')
+    draw_note_register('RFNPB0')
     draw_selector()
+    title_background()
     # TEXTURES lump
     lines = ['// Generated by scripts/mapkit/materials.py. RF01 stand-in material family (4 px per unit).', '']
-    for kind, name, w, h in DEFS:
-        lines.append(f'{kind} {name}, {w}, {h}\n{{\n    XScale {PPU}\n    YScale {PPU}\n    Patch "patches/rf01/{name}.png", 0, 0\n}}')
+    for kind, name, w, h, *rest in DEFS:
+        ppu = rest[0] if rest else PPU   # facades read from a distance use 2 px per unit
+        lines.append(f'{kind} {name}, {w}, {h}\n{{\n    XScale {ppu}\n    YScale {ppu}\n    Patch "patches/rf01/{name}.png", 0, 0\n}}')
     (ROOT / 'src' / 'TEXTURES.rf01').write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print(f'materials: {len(DEFS)} definitions written to src/TEXTURES.rf01')
 

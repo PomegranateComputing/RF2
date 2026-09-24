@@ -140,6 +140,17 @@ def winch(seconds=2.6):
     dur = n - i0
     tt = np.arange(dur) / SR
     x[i0:] += np.sin(2 * np.pi * 320 * tt) * np.exp(-tt * 9) * 0.9 + np.sin(2 * np.pi * 1150 * tt) * np.exp(-tt * 20) * 0.5
+    return declick(x, 0.005, 0.03)
+
+
+def declick(x, fade_in_s, fade_out_s):
+    """Short linear fades so a one-shot never starts or stops on a non-zero sample (audible click)."""
+    x = np.array(x, dtype=np.float64)
+    a, b = int(fade_in_s * SR), int(fade_out_s * SR)
+    if a:
+        x[:a] *= np.linspace(0, 1, a)
+    if b:
+        x[-b:] *= np.linspace(1, 0, b)
     return x
 
 

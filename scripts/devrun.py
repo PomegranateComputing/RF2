@@ -9,8 +9,10 @@ Examples:
   python scripts/devrun.py --map RF01 --tour            # screenshot tour of RFTourPoint markers
   python scripts/devrun.py --map RF01 --autopilot       # waypoint playthrough (RFDevWaypoint)
   python scripts/devrun.py --map RF01 --seconds 20      # plain boot, killed after 20 s
+  RF_DEV_HIDDEN=1 python scripts/devrun.py ...          # same, on an invisible desktop (shared machine)
+  python scripts/devrun.py --map RF01 --name doors +rf_dev_doortest 1 --speed 4   # every door, both sides
 """
-import argparse, os, shutil, subprocess, sys, time
+import argparse, os, re, shutil, subprocess, sys, time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,7 +22,11 @@ DEV = ROOT / 'build' / 'dev'
 
 
 def run(pk3, name, map_name=None, norun=False, tour=False, autopilot=False, seconds=60,
-        marker=None, extra=None, width=1920, height=1080, quiet=False):
+        marker=None, extra=None, width=None, height=None, quiet=False, speed=1.0, loadgame=None):
+    """marker: substring, or 're:<regex>' to stop on the first matching console line.
+
+    width/height: client size of the game window (vid_setsize). Without them the window keeps the
+    size stored in the config: -width/-height do nothing in windowed mode."""
     DEV.mkdir(parents=True, exist_ok=True)
     cfg = DEV / 'uzdoom.ini'
     if not cfg.exists():
@@ -32,10 +38,20 @@ def run(pk3, name, map_name=None, norun=False, tour=False, autopilot=False, seco
     log = DEV / 'logs' / f'{name}.txt'
     log.parent.mkdir(parents=True, exist_ok=True)
     args = [str(ENGINE), '-stdout', '-iwad', str(IWAD), '-file', str(pk3), '-config', str(cfg),
-            '-savedir', str(DEV / 'saves'), '-width', str(width), '-height', str(height),
-            '+vid_fullscreen', '0', '+screenshot_dir', str(shots), '+screenshot_type', 'png', '+enablescriptscreenshot', '1', '+con_notifylines', '0']
+            '-savedir', str(DEV / 'saves'),
+            '+vid_fullscreen', '0', '+screenshot_dir', str(shots), '+screenshot_type', 'png', '+enablescriptscreenshot', '1', '+con_notifylines', '0',
+            '+i_pauseinbackground', '0']   # a shared machine: another window taking focus must not pause the test
     if norun:
         args.append('-norun')
+    if width and height:
+        args += ['+vid_setsize', str(width), str(height)]
+    if loadgame:
+        # UZDoom resolves -loadgame against -savedir: pass the file name, the save copied there if needed.
+        save = Path(loadgame)
+        if save.is_absolute() and save.parent.resolve() != (DEV / 'saves').resolve():
+            (DEV / 'saves').mkdir(parents=True, exist_ok=True)
+            shutil.copy(save, DEV / 'saves' / save.name)
+        args += ['-loadgame', save.name]
     if map_name:
         args += ['+map', map_name]
     if tour:
@@ -44,11 +60,24 @@ def run(pk3, name, map_name=None, norun=False, tour=False, autopilot=False, seco
     if autopilot:
         args += ['+rf_dev_autopilot', '1']
         marker = marker or 'RF_DEV_AUTOPILOT'
+    if extra and '+rf_dev_doortest' in extra:
+        marker = marker or 'RF_DEV_DOORTEST_DONE'
+    if extra and '+rf_dev_weapons' in extra:
+        marker = marker or 'RF_DEV_WEAPONS_DONE'
+    if speed != 1.0:
+        # i_timescale runs more game tics per real second; tic logic is unchanged.
+        args += ['+i_timescale', str(speed)]
     if extra:
         args += extra
     start = time.time()
+    hidden = os.environ.get('RF_DEV_HIDDEN') == '1'   # shared machine: run on an invisible desktop
     with open(log, 'w', encoding='utf-8', errors='replace') as lf:
-        proc = subprocess.Popen(args, stdout=lf, stderr=subprocess.STDOUT, cwd=str(ROOT))
+        if hidden:
+            lf.close()
+            from hiddendesk import HiddenProcess
+            proc = HiddenProcess(args, log, cwd=ROOT)
+        else:
+            proc = subprocess.Popen(args, stdout=lf, stderr=subprocess.STDOUT, cwd=str(ROOT))
         status = 'exited'
         while True:
             rc = proc.poll()
@@ -59,12 +88,17 @@ def run(pk3, name, map_name=None, norun=False, tour=False, autopilot=False, seco
                 proc.kill()
                 status = 'timeout-killed'
                 break
+            if hidden and proc.fatal_error(log.with_name(f'{name}_fatal.png')):
+                proc.kill()                  # the error dialog would wait forever on the hidden desktop
+                status = f'fatal-error (dialog captured: {log.with_name(name + "_fatal.png")})'
+                break
             if marker:
                 try:
                     text = log.read_text(encoding='utf-8', errors='replace')
                 except OSError:
                     text = ''
-                if marker in text:
+                hit = re.search(marker[3:], text, re.M) if marker.startswith('re:') else (marker in text)
+                if hit:
                     time.sleep(1.5)  # let the last screenshot flush
                     proc.kill()
                     status = f'marker:{marker}'
@@ -87,13 +121,20 @@ def main():
     ap.add_argument('--autopilot', action='store_true')
     ap.add_argument('--seconds', type=float, default=60)
     ap.add_argument('--marker', default=None)
-    ap.add_argument('--width', type=int, default=1920)
-    ap.add_argument('--height', type=int, default=1080)
+    ap.add_argument('--width', type=int, default=None, help='game window client width (default: config size)')
+    ap.add_argument('--height', type=int, default=None)
+    ap.add_argument('--speed', type=float, default=1.0, help='i_timescale (game tics per real tic)')
+    ap.add_argument('--loadgame', default=None, help="savegame path, or 'latest' (newest in build/dev/saves)")
     ap.add_argument('--grep', default='RF_DEV_|rror|arning|nknown|issing|nvalid|ould not|xecution')
     ap.add_argument('extra', nargs='*')
     a = ap.parse_args()
     name = a.name or ('norun' if a.norun else f"{a.map_name or 'boot'}_{'tour' if a.tour else 'auto' if a.autopilot else 'run'}")
-    status, text, shots = run(a.pk3, name, a.map_name, a.norun, a.tour, a.autopilot, a.seconds, a.marker, a.extra, a.width, a.height)
+    loadgame = a.loadgame
+    if loadgame == 'latest':
+        saves = sorted((DEV / 'saves').glob('*.zds'), key=os.path.getmtime)
+        loadgame = saves[-1] if saves else None
+    status, text, shots = run(a.pk3, name, a.map_name, a.norun, a.tour, a.autopilot, a.seconds, a.marker, a.extra, a.width, a.height,
+                              speed=a.speed, loadgame=loadgame)
     import re
     rx = re.compile(a.grep)
     lines = [l for l in text.splitlines() if rx.search(l)]

@@ -1,3 +1,10 @@
-server noarchive bool rf_dev_tour = false;
-server noarchive bool rf_dev_autopilot = false;
+server noarchive nosave bool rf_dev_tour = false;
+server noarchive nosave bool rf_dev_autopilot = false;
+server noarchive nosave bool rf_dev_log = false;
+server noarchive nosave int rf_dev_save_at = 0;
+server noarchive nosave int rf_dev_start_wp = 0;
+server noarchive nosave bool rf_dev_pacifist = false;
+server noarchive nosave bool rf_dev_doortest = false;
+server noarchive nosave bool rf_dev_weapons = false;
 user float rf_hud_scale = 1.0;
+user bool rf_footsteps = true;

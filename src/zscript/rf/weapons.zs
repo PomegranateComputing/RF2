@@ -289,7 +289,7 @@ class RFFAL : Weapon
         RFLV T 1 { invoker.Reloading = false; A_WeaponReady(WRF_NOFIRE | WRF_NOBOB); }
         Goto Ready;
     Flash:
-        TNT1 A 2 A_Light2;
+        RFMZ A 2 Bright A_Light2;
         TNT1 A 0 A_Light0;
         Stop;
     Spawn:

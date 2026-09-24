@@ -1,5 +1,6 @@
 class RFPlayer : PlayerPawn
 {
+    double stepDistance;   // distance walked since the last footstep
     Default
     {
         Health 100;
@@ -25,7 +26,24 @@ class RFPlayer : PlayerPawn
     {
         let dev = RFDevHandler(StaticEventHandler.Find('RFDevHandler'));
         if (dev != null && dev.autopilot) dev.DriveAutopilot(self);
+        else if (dev != null && dev.doortest) dev.DriveDoorTest(self);
+        else if (dev != null && dev.weaponShots) dev.DriveWeaponShots(self);
         Super.PlayerThink();
+        Footsteps();
+    }
+
+    // Quiet footsteps on the ground, one per stride; off with rf_footsteps 0.
+    void Footsteps()
+    {
+        if (player == null || health <= 0 || !player.onground || waterlevel > 1) { stepDistance = 0; return; }
+        double speed = Vel.XY.Length();
+        if (speed < 1.5) { stepDistance = 0; return; }
+        stepDistance += speed;
+        if (stepDistance < 112) return;
+        stepDistance = 0;
+        let setting = CVar.GetCVar('rf_footsteps', player);
+        if (setting != null && !setting.GetBool()) return;
+        A_StartSound("rf/player/step", CHAN_AUTO, 0, 0.3, ATTN_NORM, frandom(0.92, 1.08));
     }
 
     States

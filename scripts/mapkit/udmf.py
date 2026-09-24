@@ -38,6 +38,7 @@ class Cell:
     role: str = 'floor'    # floor | door | window | rail
     door: tuple = ()       # (kind, speed, delay, lock, lockside)
     extra: tuple = ()      # extra UDMF sector fields as ((key, value), ...)
+    env: tuple = ()        # reverb environment (id1, id2) of the sound zone, () = engine default
 
 
 def _val(v):
@@ -130,14 +131,15 @@ class MapBuilder:
         ix, iy = 2 * dx / L, 2 * dy / L
         self.decor.append(dict(x0=x0 + ix, y0=y0 + iy, x1=x1 - ix, y1=y1 - iy, tex=tex, zbottom=zbottom, blocking=blocking, offsety=offsety, flags=flags))
 
-    def trigger(self, x0, y0, x1, y1, special, args=(), repeat=False, monster=False):
-        """Invisible walk-over line inside one sector."""
+    def trigger(self, x0, y0, x1, y1, special, args=(), repeat=False, monster=False, objective=0, fields=None):
+        """Invisible walk-over line inside one sector. objective > 0 is written as the UDMF field
+        user_objective, read by the level director (RFDirector) when the line fires."""
         # Endpoints are pulled 2 units inward so they never touch a wall line.
         dx, dy = x1 - x0, y1 - y0
         L = math.hypot(dx, dy) or 1.0
         ix, iy = 2 * dx / L, 2 * dy / L
         self.decor.append(dict(x0=x0 + ix, y0=y0 + iy, x1=x1 - ix, y1=y1 - iy, tex='', special=special, args=list(args) + [0] * (5 - len(args)),
-                               repeat=repeat, monster=monster, playercross=True))
+                               repeat=repeat, monster=monster, playercross=True, objective=objective, fields=fields or {}))
 
     def thing(self, x, y, type_, angle=0, args=(), tid=0, z=0, skill='all', dormant=False, ambush=False, extra=None):
         d = dict(x=float(x), y=float(y), height=float(z), angle=int(angle), type=int(type_))
@@ -290,7 +292,33 @@ class MapBuilder:
         if A.role in ('window', 'rail') or B.role in ('window', 'rail'):
             ls['blocking'] = True
             ls['blockmonsters'] = True
+        if A.env != B.env:
+            ls['zoneboundary'] = True     # reverb zones follow the spaces (see sound_zones)
         return fs, bs, ls
+
+    def sound_zones(self):
+        """One SoundEnvironment thing (ednum 9048) per connected zone of cells sharing an env."""
+        seen, things = set(), []
+        for p in sorted(self.cells):
+            env = self.cells[p].env
+            if p in seen or not env:
+                continue
+            stack, zone = [p], []
+            seen.add(p)
+            while stack:
+                u = stack.pop()
+                zone.append(u)
+                for dx, dy in DIRS.values():
+                    v = (u[0] + dx, u[1] + dy)
+                    if v not in seen and v in self.cells and self.cells[v].env == env:
+                        seen.add(v)
+                        stack.append(v)
+            floor_cells = [c for c in zone if self.cells[c].role == 'floor'] or zone
+            cx, cy = floor_cells[len(floor_cells) // 2]
+            things.append(dict(x=float(cx * UNIT + UNIT / 2), y=float(cy * UNIT + UNIT / 2), height=0.0, angle=0,
+                               type=9048, arg0=env[0], arg1=env[1], skill1=True, skill2=True, skill3=True,
+                               skill4=True, skill5=True, single=True, coop=True, dm=True))
+        return things
 
     def build(self):
         sectors, sector_of = self._sectors()
@@ -416,6 +444,10 @@ class MapBuilder:
                         d[f'arg{i}'] = a
                 d['playercross'] = True
                 d['repeatspecial'] = bool(dl.get('repeat'))
+                if dl.get('objective'):
+                    d['user_objective'] = int(dl['objective'])
+                for k, val in dl.get('fields', {}).items():
+                    d[k] = val
                 if dl.get('monster'):
                     d['monstercross'] = True
             sides.append(fs)
@@ -434,7 +466,8 @@ class MapBuilder:
             sector_dicts.append(d)
         text = f'// {self.name} - Red Flags 2 production map. Authored with scripts/mapkit (cell grid {UNIT}).\n'
         text += 'namespace = "zdoom";\n\n'
-        for kind, items in (('vertex', verts), ('sector', sector_dicts), ('sidedef', sides), ('linedef', out_lines), ('thing', self.things)):
+        things = self.things + self.sound_zones()
+        for kind, items in (('vertex', verts), ('sector', sector_dicts), ('sidedef', sides), ('linedef', out_lines), ('thing', things)):
             text += '\n'.join(_block(kind, d) for d in items) + '\n'
         self.stats = dict(sectors=len(sectors), vertices=len(verts), linedefs=len(out_lines), sidedefs=len(sides), things=len(self.things))
         self._sector_of = sector_of

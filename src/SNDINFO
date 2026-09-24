@@ -80,6 +80,21 @@ plats/pt1_strt            "sounds/world/winch.wav"
 plats/pt1_stop            "sounds/world/switch.wav"
 switches/normbutn         "sounds/world/switch.wav"
 
+// Player footsteps (RFPlayer.Footsteps): the legacy staff steps, played quietly with pitch jitter.
+$random rf/player/step    { rf/player/step1 rf/player/step2 }
+rf/player/step1           "sounds/orderly/step_01.wav"
+rf/player/step2           "sounds/orderly/step_02.wav"
+
+// Player: no Doom "oof" when use finds nothing; landing from a height is a body thud.
+// Pain and death voices stay engine defaults until the RF01 audio batch provides Viktor's own.
+rf/silence                "sounds/world/silence.wav"
+$playeralias player male *usefail   rf/silence
+$playeralias player female *usefail rf/silence
+$playeralias player other *usefail  rf/silence
+$playeralias player male *land      rf/impact/flesh
+$playeralias player female *land    rf/impact/flesh
+$playeralias player other *land     rf/impact/flesh
+
 $volume rf/amb/hum 0.5
 $volume rf/amb/wind 0.55
 $volume rf/amb/drip 0.5

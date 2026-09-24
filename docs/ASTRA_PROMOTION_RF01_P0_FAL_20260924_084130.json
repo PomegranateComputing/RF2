@@ -1,0 +1,128 @@
+[
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_READY_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_READY_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_READY_A0.png",
+    "sha256": "cfe6bb94f14eeed82fa2771a8a9aac6c3eafa496407bec19b242328384252172"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_FIRE_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_FIRE_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_FIRE_A0.png",
+    "sha256": "5706b567c38a32b9d6f56df45e83bdfb2341feb38d9e1e436d43940e1353a462"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RECOIL_MAX_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RECOIL_MAX_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RECOIL_MAX_A0.png",
+    "sha256": "34b4f699594cc0d8e6d0eb5826080827c0628444575833b5c22f958b7d839cff"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RECOVERY_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RECOVERY_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RECOVERY_A0.png",
+    "sha256": "cf87e38a6fef876be5cb6b9b1d7fb8511450e2add29f644a65fd49b707910333"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_01_HAND_LEAVES_FOREND_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_01_HAND_LEAVES_FOREND_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_01_HAND_LEAVES_FOREND_A0.png",
+    "sha256": "6c059599ecc95e9f88b1ae22b17bb05567b6a836f526ffa1a041a4aebbf37f9d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_02_REACH_MAG_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_02_REACH_MAG_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_02_REACH_MAG_A0.png",
+    "sha256": "9ee718c406ed9e23801e0e32baaa09b27334bdd77a9ad55e56d75b9c67deaf20"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_03_GRAB_MAG_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_03_GRAB_MAG_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_03_GRAB_MAG_A0.png",
+    "sha256": "0a5bd47a27db800881d90ae00360341a6347a81b82598a6867af676530fa1412"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_04_MAG_RELEASE_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_04_MAG_RELEASE_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_04_MAG_RELEASE_A0.png",
+    "sha256": "0348d9f3d67a393a2c4b2d77a6abe0fe7fff312abb2061f9c8d1ae49396c1f51"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_05_MAG_ROTATE_OUT_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_05_MAG_ROTATE_OUT_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_05_MAG_ROTATE_OUT_A0.png",
+    "sha256": "2e95c7b0d48bfda42a5a0d0eee1ca052a221c54c8b6a3b992a86d6d2d7ab32fe"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_06_MAG_CLEAR_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_06_MAG_CLEAR_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_06_MAG_CLEAR_A0.png",
+    "sha256": "8826f85d038f4f2651851d1dd99b3e996242c2498c0b9c4d5bcb102aae557308"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_07_NEW_MAG_ENTER_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_07_NEW_MAG_ENTER_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_07_NEW_MAG_ENTER_A0.png",
+    "sha256": "88d8b8a776455f3bf696e394e01107037134fa7d44b7dad9403cf66b89b4a2ed"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_08_NEW_MAG_ALIGN_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_08_NEW_MAG_ALIGN_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_08_NEW_MAG_ALIGN_A0.png",
+    "sha256": "52b341667c58537097387c2a7d3e4af9174948c77e864c17a6af7c2e56d4f3b6"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_09_MAG_INSERT_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_09_MAG_INSERT_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_09_MAG_INSERT_A0.png",
+    "sha256": "8778ffbf89e52d7ff8edb3f2f59bf192bdb44a7b5bcffb68ed4d8a96dde16246"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_10_MAG_LOCK_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_10_MAG_LOCK_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_10_MAG_LOCK_A0.png",
+    "sha256": "f543004cb63c3ea0bd54192fb2971a223d8f6506bc56fe604045d90572a603dd"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_11_HAND_TRANSITION_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_11_HAND_TRANSITION_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_11_HAND_TRANSITION_A0.png",
+    "sha256": "06172329d9afd0141541ec29d53982a65dc23fece05522a7fc4b216973561b5d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_12_CHARGE_START_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_12_CHARGE_START_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_12_CHARGE_START_A0.png",
+    "sha256": "f953d102ca9a57c5f950d4f4a6094ce347430a16d0cc97c6d3707e6339c3c8db"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_13_CHARGE_REAR_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_13_CHARGE_REAR_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_13_CHARGE_REAR_A0.png",
+    "sha256": "c9e117a5d48b6f547ca4dd65d6ed842f6d60c63540cadd66f06ba5c260417640"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_14_CHARGE_RELEASE_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_14_CHARGE_RELEASE_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_14_CHARGE_RELEASE_A0.png",
+    "sha256": "7b90e64c2cd4b36ac583c94026cc0e3a165c2201879c8c022562e74e595fd03b"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_15_HAND_RETURN_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_15_HAND_RETURN_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_15_HAND_RETURN_A0.png",
+    "sha256": "2518f0570d3fc3be8ffe08cb5adcdb77b86324ec4fc0bb738d9d2c382b7b3648"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_RELOAD_16_READY_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_RELOAD_16_READY_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_RELOAD_16_READY_A0.png",
+    "sha256": "cfe6bb94f14eeed82fa2771a8a9aac6c3eafa496407bec19b242328384252172"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_FAL\\runtime\\weapons\\fal\\RF2_FAL_MUZZLE_FLASH_A0.png",
+    "proposed_target": "sprites/weapons/fal/RF2_FAL_MUZZLE_FLASH_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\graphics\\weapons\\fal\\RF2_FAL_MUZZLE_FLASH_A0.png",
+    "sha256": "f52a5c0e282504ed301fef6e2597218516cf1ccc01ce6bce6ff91a5413671083"
+  }
+]

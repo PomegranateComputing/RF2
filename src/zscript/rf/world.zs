@@ -35,16 +35,28 @@ class RFAmbientLoop : Actor
     }
 }
 
-// Readable object. args[0] selects the LANGUAGE key RF_NOTE_<n>. Use key reads it.
+// Readable object. args[0] selects the LANGUAGE key RF_NOTE_<n>; args[1] the look
+// (0 loose sheet, 1 open register). It lies flat on the surface under its centre
+// (floor or desk top), whatever height the map gave it. Use key reads it.
 class RFNote : Actor
 {
     Default
     {
-        Radius 24;
-        Height 40;
+        Radius 16;
+        Height 12;
+        Scale 0.16;
         +NOGRAVITY
         -SOLID
         +NOBLOOD
+        +FLATSPRITE
+    }
+
+    override void PostBeginPlay()
+    {
+        Super.PostBeginPlay();
+        Sector under = Level.PointInSector(Pos.XY);
+        SetZ(under.floorplane.ZAtPoint(Pos.XY) + 0.4);
+        if (args[1] == 1) SetStateLabel("Register");
     }
 
     override bool Used(Actor user)
@@ -61,7 +73,37 @@ class RFNote : Actor
     States
     {
     Spawn:
-        TNT1 A -1;
+        RFNP A -1;
+        Stop;
+    Register:
+        RFNP B -1;
+        Stop;
+    }
+}
+
+// Loose paper on the ground (evacuation litter). Decorative only, flat on the floor.
+class RFLitter : Actor
+{
+    Default
+    {
+        Radius 8;
+        Height 2;
+        Scale 0.16;
+        +NOBLOCKMAP
+        +FLATSPRITE
+        +NOGRAVITY
+    }
+
+    override void PostBeginPlay()
+    {
+        Super.PostBeginPlay();
+        SetZ(floorz + 0.3);
+    }
+
+    States
+    {
+    Spawn:
+        RFNP A -1;
         Stop;
     }
 }
@@ -105,6 +147,25 @@ class RFPropLamp : Actor
     {
     Spawn:
         RFMD A -1 Bright;
+        Stop;
+    }
+}
+
+// Target of objective-only and ending trigger lines (Thing_Activate on its tid). The engine
+// reports a line as activated only when its special succeeds, and Thing_Activate succeeds only
+// when a thing carries the tid: this inert marker makes those lines count.
+class RFSignal : Actor
+{
+    Default
+    {
+        +NOBLOCKMAP
+        +NOGRAVITY
+        +NOINTERACTION
+    }
+    States
+    {
+    Spawn:
+        TNT1 A -1;
         Stop;
     }
 }

@@ -264,3 +264,57 @@ Texture RFSIGN9, 256, 64
     YScale 4
     Patch "patches/rf01/RFSIGN9.png", 0, 0
 }
+Texture RFS_FACD, 512, 896
+{
+    XScale 2
+    YScale 2
+    Patch "patches/rf01/RFS_FACD.png", 0, 0
+}
+Texture RFS_HOSP, 512, 640
+{
+    XScale 2
+    YScale 2
+    Patch "patches/rf01/RFS_HOSP.png", 0, 0
+}
+Flat RFF_PAVE, 512, 512
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf01/RFF_PAVE.png", 0, 0
+}
+Texture RFT_BEDS, 256, 128
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf01/RFT_BEDS.png", 0, 0
+}
+Texture RFT_HEAD, 256, 192
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf01/RFT_HEAD.png", 0, 0
+}
+Texture RFW_TBLS, 256, 128
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf01/RFW_TBLS.png", 0, 0
+}
+Texture RFW_SHLF, 256, 256
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf01/RFW_SHLF.png", 0, 0
+}
+Texture RFM_VATS, 256, 192
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf01/RFM_VATS.png", 0, 0
+}
+Texture RFG_VITR, 256, 256
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf01/RFG_VITR.png", 0, 0
+}

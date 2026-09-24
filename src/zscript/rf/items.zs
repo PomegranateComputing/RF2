@@ -63,6 +63,14 @@ class RFFieldDressing : Health
 // Keys are contextual objects, not colored cards. Lock numbers live in LOCKDEFS.
 class RFGrilleKey : Key
 {
+    // Taking the key turns the objective toward the grille it opens.
+    override void AttachToOwner(Actor other)
+    {
+        Super.AttachToOwner(other);
+        let director = RFDirector(EventHandler.Find('RFDirector'));
+        if (director != null && other != null && other.player != null) director.SetObjective(2);
+    }
+
     Default
     {
         Inventory.PickupMessage "$RF_PICKUP_GRILLEKEY";
@@ -93,6 +101,18 @@ class RFPasseKey : Key
     {
     Spawn:
         RFKY B -1;
+        Stop;
+    }
+}
+
+// Never placed, never given. LOCKDEFS locks that must not open by use (porch grille, one-way
+// gallery grille) require it: a lock with an empty key list would accept any key the player holds.
+class RFNoKey : Key
+{
+    States
+    {
+    Spawn:
+        TNT1 A -1;
         Stop;
     }
 }

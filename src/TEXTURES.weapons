@@ -1,145 +1,155 @@
 // First-person weapon families. One logical scale/offset per family, frame A = READY.
 // FAL: 1536x1024 canvas. Browning: 1672x941 canvas. XScale 6 / YScale 7.2 / Offset -700,-300.
+// FAL frames: Codex Astra batch RF01_P0_FAL (legacy master, continuous sleeve repair), promoted
+// 2026-09-24 (docs/ASTRA_PROMOTION_RF01_P0_FAL_*.json). FIRE carries no flash: RFMZ A0 is the
+// separate muzzle flash drawn on the flash layer at the same offset.
 
 Sprite RFLVA0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/00_FAL_READY.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_READY_A0.png", 0, 0
 }
 Sprite RFLVB0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/01_FAL_FIRE.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_FIRE_A0.png", 0, 0
 }
 Sprite RFLVC0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/02_FAL_RECOIL_MAX.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RECOIL_MAX_A0.png", 0, 0
 }
 Sprite RFLVD0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/03_FAL_RECOVERY.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RECOVERY_A0.png", 0, 0
 }
 Sprite RFLVE0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/04_FAL_RELOAD_01_HAND_LEAVES_FOREND.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_01_HAND_LEAVES_FOREND_A0.png", 0, 0
 }
 Sprite RFLVF0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/05_FAL_RELOAD_02_REACH_MAG.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_02_REACH_MAG_A0.png", 0, 0
 }
 Sprite RFLVG0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/06_FAL_RELOAD_03_GRAB_MAG.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_03_GRAB_MAG_A0.png", 0, 0
 }
 Sprite RFLVH0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/07_FAL_RELOAD_04_MAG_RELEASE.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_04_MAG_RELEASE_A0.png", 0, 0
 }
 Sprite RFLVI0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/08_FAL_RELOAD_05_MAG_ROTATE_OUT.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_05_MAG_ROTATE_OUT_A0.png", 0, 0
 }
 Sprite RFLVJ0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/09_FAL_RELOAD_06_MAG_CLEAR.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_06_MAG_CLEAR_A0.png", 0, 0
 }
 Sprite RFLVK0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/10_FAL_RELOAD_07_NEW_MAG_ENTER.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_07_NEW_MAG_ENTER_A0.png", 0, 0
 }
 Sprite RFLVL0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/11_FAL_RELOAD_08_NEW_MAG_ALIGN.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_08_NEW_MAG_ALIGN_A0.png", 0, 0
 }
 Sprite RFLVM0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/12_FAL_RELOAD_09_MAG_INSERT.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_09_MAG_INSERT_A0.png", 0, 0
 }
 Sprite RFLVN0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/13_FAL_RELOAD_10_MAG_LOCK.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_10_MAG_LOCK_A0.png", 0, 0
 }
 Sprite RFLVO0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/14_FAL_RELOAD_11_HAND_TRANSITION.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_11_HAND_TRANSITION_A0.png", 0, 0
 }
 Sprite RFLVP0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/15_FAL_RELOAD_12_CHARGE_START.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_12_CHARGE_START_A0.png", 0, 0
 }
 Sprite RFLVQ0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/16_FAL_RELOAD_13_CHARGE_REAR.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_13_CHARGE_REAR_A0.png", 0, 0
 }
 Sprite RFLVR0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/17_FAL_RELOAD_14_CHARGE_RELEASE.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_14_CHARGE_RELEASE_A0.png", 0, 0
 }
 Sprite RFLVS0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/18_FAL_RELOAD_15_HAND_RETURN.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_15_HAND_RETURN_A0.png", 0, 0
 }
 Sprite RFLVT0, 1536, 1024
 {
     XScale 6
     YScale 7.2
     Offset -700, -300
-    Patch "graphics/weapons/fal/19_FAL_RELOAD_16_READY.png", 0, 0
+    Patch "graphics/weapons/fal/RF2_FAL_RELOAD_16_READY_A0.png", 0, 0
+}
+Sprite RFMZA0, 1536, 1024
+{
+    XScale 6
+    YScale 7.2
+    Offset -700, -300
+    Patch "graphics/weapons/fal/RF2_FAL_MUZZLE_FLASH_A0.png", 0, 0
 }
 Sprite BHPGA0, 1672, 941
 {

@@ -16,10 +16,21 @@ Lock 2 Doom
     Mapcolor 80 120 200
 }
 
-// The porch grille has no key: it is raised from the porter's lodge winch.
+// The porch grille has no key: it is raised from the porter's lodge winch. (An empty key list
+// would mean "any key": RFNoKey is never obtainable.)
 Lock 3 Doom
 {
+    RFNoKey
     Message "$RF_LOCK_PORCH"
     RemoteMessage "$RF_LOCK_PORCH"
+    Mapcolor 160 40 40
+}
+
+// The gallery grille over the courtyard perron opens from the gallery side only.
+Lock 4 Doom
+{
+    RFNoKey
+    Message "$RF_LOCK_GALERIE"
+    RemoteMessage "$RF_LOCK_GALERIE"
     Mapcolor 160 40 40
 }

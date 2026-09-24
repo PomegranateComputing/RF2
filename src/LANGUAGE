@@ -13,6 +13,13 @@ RF_MENU_RESUME = "Reprendre";
 RF_MENU_MAIN = "Menu principal";
 RF_MENU_BACK = "Retour";
 RF_MENU_SKILL = "Choisir la difficulté";
+RF_OPT_TITLE = "Red Flags 2";
+RF_OPT_FOOTSTEPS = "Bruits de pas";
+RF_OPT_CROSSHAIR = "Réticule";
+RF_OPT_CROSSHAIR_DOT = "Point discret";
+RF_OPT_CROSSHAIR_ENGINE = "Réticule du moteur";
+RF_OPT_HUDSCALE = "Échelle de l'interface";
+RF_OPT_HUDSCALE_HINT = "Taille du portrait, de la santé, des munitions et des objectifs.";
 RF_SKILL_EASY = "Convalescence";
 RF_SKILL_NORMAL = "Service";
 RF_SKILL_HARD = "Nuit du 14 juin";
@@ -26,8 +33,10 @@ RF_QUIT_2 = "Le 14 juin 1940, personne ne ferme les portes.";
 
 RF_HUD_HEALTH = "SANTÉ";
 RF_HUD_RELOAD = "RECHARGE";
-RF_HUD_RELOADHINT = "CHARGEUR VIDE - R";
-RF_PROMPT_READ = "[E] LIRE";
+RF_HUD_RELOADHINT = "RECHARGER";
+RF_PROMPT_READ = "LIRE";
+RF_PROMPT_OPEN = "OUVRIR";
+RF_PROMPT_OPERATE = "ACTIONNER";
 RF_RF01_DATE = "Paris, 14 juin 1940";
 RF_RF01_EXIT = "14 juin 1940.\n\nLes portes de Sainte-Anne sont restées ouvertes.\nDans la rue, personne.\n\nViktor Ardent descend vers la ville.";
 
@@ -45,6 +54,7 @@ RF_PICKUP_PASSE = "Passe de service de la lingerie.";
 RF_LOCK_GRILLE = "La grille du pavillon est fermée. Il faut sa clé.";
 RF_LOCK_PASSE = "Porte de service. Il faut un passe.";
 RF_LOCK_PORCH = "La grille du porche est baissée. Elle se manœuvre depuis la loge.";
+RF_LOCK_GALERIE = "La grille de la galerie ne s'ouvre que depuis l'intérieur.";
 
 RF_MONSTER_ORDERLY = "Infirmier";
 RF_MONSTER_BRANCARDIER = "Brancardier";
@@ -55,6 +65,7 @@ RF_OBIT_PORTE = "%o a été classé par un porte-registre.";
 
 RF_OBJ_WAKE = "Sortir de la chambre.";
 RF_OBJ_GRILLE = "Trouver la clé de la grille du pavillon.";
+RF_OBJ_GRILLE_OPEN = "Ouvrir la grille du pavillon, au bout du couloir.";
 RF_OBJ_ADMISSIONS = "Traverser les admissions vers la cour.";
 RF_OBJ_COURT = "Rejoindre le pavillon est.";
 RF_OBJ_LINGERIE = "Remonter par la lingerie vers la galerie nord.";

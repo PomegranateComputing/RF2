@@ -1,0 +1,1934 @@
+[
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_IDLE_A1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_IDLE_A1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGA1.png",
+    "sha256": "6d19bf8c90464339e571134959ceaf9fadb52c9d3b671e6960cdef62debc4448"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_IDLE_A2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_IDLE_A2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGA2.png",
+    "sha256": "42217f60b24aa1f758b039d7cdc75681943153dbf3902b72ee82aa7def1cbda6"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_IDLE_A3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_IDLE_A3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGA3.png",
+    "sha256": "1bfed246affc81d81e34e9fca3af7d4b41be588856d8f44bca20c90dadeae549"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_IDLE_A4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_IDLE_A4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGA4.png",
+    "sha256": "69a7a64e1b42a3d7a2c7f984241a364fcf4ff9882671013a3cb32ee4df7178d9"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_IDLE_A5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_IDLE_A5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGA5.png",
+    "sha256": "9ff2ae0e40a25d90e40a29d0196fe70b84895a7b1702743298357c8da9fb840c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_IDLE_A6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_IDLE_A6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGA6.png",
+    "sha256": "9803090c6003a1b67dd53f8ab6a8730a644995927b540c5956ecec01120296d8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_IDLE_A7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_IDLE_A7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGA7.png",
+    "sha256": "4c340e2bfb2224c23351f7b4b4dd3ba80c1a79e8302003e92165c54ace3ef520"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_IDLE_A8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_IDLE_A8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGA8.png",
+    "sha256": "a199fb56785230b7426fa4df501434975034cc5c855a2d8ac2a34d723016256c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_1_B1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_1_B1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGB1.png",
+    "sha256": "516d875285ef64418dfff267d5a9809710422b2c72af5529354aefb47c524fac"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_1_B2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_1_B2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGB2.png",
+    "sha256": "052bfab93c26767e4605551793e1b93d1e95d4157e60f499ea5093e86f6c56be"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_1_B3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_1_B3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGB3.png",
+    "sha256": "0d79b88e6412fa92fc3d7335239bdec303ebf3974612d5e8e1f5e04a5259ffb3"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_1_B4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_1_B4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGB4.png",
+    "sha256": "d84dcf44dd37d6d110adb3173bafa6124add914a60799f923d41d6aab2b2dc12"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_1_B5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_1_B5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGB5.png",
+    "sha256": "26b7796c1e42ce4d9ba6ddc0d9880d5c03b41c939c310ce3a6c79cd2d5cf337a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_1_B6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_1_B6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGB6.png",
+    "sha256": "0cc9a44020cf2bb881a7c6075ba6db2d3d64fcd48cde0bc091344a99e3c640e0"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_1_B7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_1_B7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGB7.png",
+    "sha256": "8b7b55ebd40eb134458e3838c34d415cdc0b6e8d5f4b2159a5587a7cc45ca017"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_1_B8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_1_B8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGB8.png",
+    "sha256": "1ba35f7a8787079298ac518c2831046ae9aea6dd5be50741c54934997b07b9ce"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_2_C1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_2_C1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGC1.png",
+    "sha256": "60b7b8d68c561f14bf2410c8c3673e3689c13ad7bcd851b9a20d9c3644cb3f04"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_2_C2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_2_C2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGC2.png",
+    "sha256": "537911c2fa94d390b9bcd4ed6b40d68ca4e6d1e1c072ca78684ba5a0bc7b7d1b"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_2_C3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_2_C3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGC3.png",
+    "sha256": "8c7e559e3f13785f3db59fd7e029de33f2d14f2b6462ca9c7ffa1e52676e61fe"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_2_C4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_2_C4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGC4.png",
+    "sha256": "947d6a76e75e2d026e5101196cd1b49d4cbcd433e81200d8dae590d5d3bff2c4"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_2_C5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_2_C5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGC5.png",
+    "sha256": "6a09f2fb64dc5a7b8797b54fdc78954d60f6b7e57f7c86bde12754b8fb088445"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_2_C6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_2_C6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGC6.png",
+    "sha256": "c35db545a8967fbf2ae1552a6659b59fa67e39d0e29258d2ed093f4eb3dc06ca"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_2_C7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_2_C7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGC7.png",
+    "sha256": "dac9b4f681e19702848ae9ff8b97358d957cce9e811046cb8de930c73df1c7ce"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_2_C8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_2_C8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGC8.png",
+    "sha256": "54dc81a49972e1667f4e6c16749169153ed3a43284d4b5a866b6818b67cfc5be"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_3_D1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_3_D1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGD1.png",
+    "sha256": "b3115ad449b4d05b2652279448163f31cc17e60639915ff4a4b619b25ef8d628"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_3_D2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_3_D2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGD2.png",
+    "sha256": "290b431f67f4b3045ecb58e1d0fc54da2d1b3423bb8d703292e046250c4d14e1"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_3_D3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_3_D3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGD3.png",
+    "sha256": "00d9d24194ffc5bf029913ff6d6fffaf5754bef03d4cad9d7e40edee70dc0f88"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_3_D4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_3_D4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGD4.png",
+    "sha256": "4164142f700f642b6cd4175090c2db7d2efa80de0977906f120653fc015bc3bb"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_3_D5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_3_D5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGD5.png",
+    "sha256": "83d00a2f86d5113c1c4f9a5e686e7c879551a7a21fb420cee6ec2df3ed530f6c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_3_D6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_3_D6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGD6.png",
+    "sha256": "96751c2678627f0e0549a61b1359e9943dccd8b14635084682003c5781bb6cba"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_3_D7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_3_D7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGD7.png",
+    "sha256": "fc62931fd0251cd68cf2b95e1a6190577865fda27c7d14c11beb5c0fb23fc580"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_3_D8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_3_D8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGD8.png",
+    "sha256": "2521bd1e07e4af1443d4940e41b72682b169ea7d9557032f2413a4fe9e16e618"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_4_E1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_4_E1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGE1.png",
+    "sha256": "35034e9a9a643a4824cab7ffedef473d51d412f65d58ec7b11c01c9c0d50572a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_4_E2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_4_E2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGE2.png",
+    "sha256": "16aa894fd1fb53275723ca1005bf8397548f32cf09b65afe6a90f1ae056a506b"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_4_E3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_4_E3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGE3.png",
+    "sha256": "75f701a7dd52006c93db59a12c742352032c0ae4f45cb7bfd5d4819f1648689e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_4_E4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_4_E4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGE4.png",
+    "sha256": "b3c4608d56eae894445be26de045458f431357e39fc904001e45a727edb49f3f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_4_E5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_4_E5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGE5.png",
+    "sha256": "6f74775363936ca19fe85a910f8720b62f5e7f94d0fb587a117f422cb2895101"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_4_E6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_4_E6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGE6.png",
+    "sha256": "5f37fd99cad7e7abff036aa0fdb5423f391b8ae9970bc06c0a08c9cda3d33a1f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_4_E7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_4_E7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGE7.png",
+    "sha256": "0ae9ef6dccca1f35cdda2d77524a111b99e03d36a63c9c9a35caca6312ecc5b8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_WALK_4_E8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_WALK_4_E8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGE8.png",
+    "sha256": "c41a3f6d832f463c8c3589d11d19f50696e941a8034549dcf3656f916202bcf0"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_TELEGRAPH_F1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_TELEGRAPH_F1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGF1.png",
+    "sha256": "0fee698a96babcc296284012c567cf2e44d145843b1cb82ad593b8b9294f425d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_TELEGRAPH_F2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_TELEGRAPH_F2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGF2.png",
+    "sha256": "cfc10d1ebf42a7ac02ec9cf019766329a17be6979fd9338f1316d8ec3177ee04"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_TELEGRAPH_F3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_TELEGRAPH_F3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGF3.png",
+    "sha256": "6e49d11592b56cb5a45c8c918ee7ad3edba586fd7748361401de81e7ade1effd"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_TELEGRAPH_F4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_TELEGRAPH_F4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGF4.png",
+    "sha256": "50f9e4dfaaf3a001e85247d45be55516d3bb626653969dc595350572bda605e7"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_TELEGRAPH_F5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_TELEGRAPH_F5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGF5.png",
+    "sha256": "04559773f14fa1fc0b5996005cd3c677943535119df8cf42003656c22aba0fd6"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_TELEGRAPH_F6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_TELEGRAPH_F6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGF6.png",
+    "sha256": "bb0a12c6dd78a031f0da46d9c6ae86d6544acd57b734cbb0b1f7d8b393c71646"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_TELEGRAPH_F7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_TELEGRAPH_F7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGF7.png",
+    "sha256": "2f739485a6ebc94ed61369e19752f96225cc26277b43565a87505fee3e5a5746"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_TELEGRAPH_F8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_TELEGRAPH_F8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGF8.png",
+    "sha256": "3e458060ffe576b18fefbfdbf50dc15c9c27043c33d5b9f6073f847e8529443b"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RELEASE_G1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RELEASE_G1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGG1.png",
+    "sha256": "25fd74691ef8fefdfd1e41bff64cad43e351fe2ef66127ef4cba71d37dd4b4fc"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RELEASE_G2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RELEASE_G2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGG2.png",
+    "sha256": "101568b22789337b021c6b19e410127d2f75e8846af53c79c30d42ebf7cccd1b"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RELEASE_G3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RELEASE_G3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGG3.png",
+    "sha256": "b412685dc52d61098d931937a7294eda74f3e813323f63b10b062f9fef83f613"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RELEASE_G4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RELEASE_G4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGG4.png",
+    "sha256": "31ce1fc0f207f668e1c4f91d2edbf474e24e03ef8cb0942e00bfaa2765b05c74"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RELEASE_G5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RELEASE_G5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGG5.png",
+    "sha256": "fd82126cea25bc62689d6f736a47d888a85fcb044f32e76b2e134ccbb4ee5405"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RELEASE_G6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RELEASE_G6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGG6.png",
+    "sha256": "1802e58f59bdc9a28c1e68bb059000a8ee2c3416bdf6ec1b1a56a721398c21ba"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RELEASE_G7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RELEASE_G7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGG7.png",
+    "sha256": "63f527116f01a851d0ffb3bcef7cff3d5471e0faf6008594152bad979e4537c6"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RELEASE_G8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RELEASE_G8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGG8.png",
+    "sha256": "1bda62ba7d5dbcf35ce768d6230c7adb62e51ad8722a2aed79ebcd2fe7d900e8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RECOVERY_N1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RECOVERY_N1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGN1.png",
+    "sha256": "cd693ae4aff095e161bf2caddf8f890a1958aa5b093686d9dd4c7e7f8ae7e020"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RECOVERY_N2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RECOVERY_N2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGN2.png",
+    "sha256": "ff3181448478b05b4c6b84d6fd51d4e5ac4b7785c355bbb5150f3d33bb4c9bad"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RECOVERY_N3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RECOVERY_N3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGN3.png",
+    "sha256": "939dd240cdfe292bca83973a63fe0f9eab32d5f29ca1062dcaa2478a5eca272c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RECOVERY_N4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RECOVERY_N4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGN4.png",
+    "sha256": "e95aaf23f6d1d76b257d123e9d2407a29011e9b232434afdfb3403f8769bf07f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RECOVERY_N5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RECOVERY_N5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGN5.png",
+    "sha256": "68488faa66e02bbf08f99810f47e906be6faeb7ba00b50fa658632932daee897"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RECOVERY_N6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RECOVERY_N6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGN6.png",
+    "sha256": "2649df1f785b4e25db88bfbe33b0b8be16a4f430f50f67bfea9aa8f2c93edc18"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RECOVERY_N7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RECOVERY_N7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGN7.png",
+    "sha256": "1bd76a85a611b7c14663351c4c48416d85a30b24ed23de058a79434beecf423f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_RECOVERY_N8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_RECOVERY_N8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGN8.png",
+    "sha256": "ccd435caeabec7ef06c768fcebf4b35f18f8f78a1529393c2570d5e1ddea8e1e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_PAIN_H1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_PAIN_H1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGH1.png",
+    "sha256": "0138c100e5a2d2baa3fa6ba3fd4d15da728c3b445d660c3b185fc7d3ca630bfa"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_PAIN_H2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_PAIN_H2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGH2.png",
+    "sha256": "ff24426fc4a9b0948affc35eab1e427d35005790de28a2f778ca582eb39c4bd6"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_PAIN_H3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_PAIN_H3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGH3.png",
+    "sha256": "668746e5e1594075c3b66b3fec5c07ca75aa588a60c9e1fdf37fad86371ae0bd"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_PAIN_H4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_PAIN_H4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGH4.png",
+    "sha256": "4128f72b4204ebf46e4c679318a9274eba7d9de53361968004526546d60c9a0e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_PAIN_H5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_PAIN_H5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGH5.png",
+    "sha256": "feb86c2be99b5daffe73c15fe35298fd4c212fbf47f527aff1f461f860d8c843"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_PAIN_H6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_PAIN_H6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGH6.png",
+    "sha256": "043653e7e579f4b610e40b9346d2fcca046d18206df31cb0799801a22d4664d3"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_PAIN_H7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_PAIN_H7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGH7.png",
+    "sha256": "7b617c2de1bfed0bfaa34fb6521657644d64fe7e83785f18738d97bccc9f0a08"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_PAIN_H8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_PAIN_H8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGH8.png",
+    "sha256": "bf4ed2dda3474eba579900458c3d185058a44f56264df70caeaabb8df381953b"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_1_I1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_1_I1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGI1.png",
+    "sha256": "036bef7c179280f20821f3bc9e0e33d136f1b63fc89bf2877f04733e9a723f60"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_1_I2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_1_I2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGI2.png",
+    "sha256": "ce28fb2fefe09fb858e17319970a60b90d09d289f79444858348382638317a5a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_1_I3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_1_I3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGI3.png",
+    "sha256": "4ea92939c1585d98819f0e7aa0c09e4536b6645fe78cc37db427ab3aedbe7d9f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_1_I4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_1_I4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGI4.png",
+    "sha256": "4e4af9ad6327493704cc67e3a494ff966b23841a9c49fd1be7d5e1d9e471c200"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_1_I5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_1_I5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGI5.png",
+    "sha256": "6dcd791750a0c99f311dc85da6f282394466a6cc7c07e6145b94aae1490de88e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_1_I6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_1_I6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGI6.png",
+    "sha256": "a8aa93f9b9297dfbfa17069b0cd71ab80a1b3f0509b9b9ec36d06c6c36c8c0eb"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_1_I7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_1_I7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGI7.png",
+    "sha256": "3537048683fee0b4048c8a2dbd3aab086d21cde18716cf284aa2b8829429b531"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_1_I8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_1_I8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGI8.png",
+    "sha256": "b630db59001182326370a711d366230c71591c6cd8d9bb65fd3b18ce72c0b7b3"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_2_J1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_2_J1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGJ1.png",
+    "sha256": "8f7c5d30d05b158ee69781223845938f5251121f049e2a15b2e23e481e1ee3c1"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_2_J2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_2_J2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGJ2.png",
+    "sha256": "135d73705735028d6215be297199ec84a559b0adb6629320987db4eb0209aef7"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_2_J3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_2_J3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGJ3.png",
+    "sha256": "97db8569cab5b44d0ad4a26eea2246015f613eab5c4f6731eb42752d817d0faf"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_2_J4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_2_J4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGJ4.png",
+    "sha256": "d2342437d52febe6fd5911e469c17b4e4c922454ebf151df7eaf0cea5963e32c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_2_J5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_2_J5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGJ5.png",
+    "sha256": "7b1b77ce48cd2f899c9eba403546dfc229659dca469b2e383b3ed1402b5e6604"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_2_J6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_2_J6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGJ6.png",
+    "sha256": "71ff8bc678ac1ce1119ab1a7903318282a4c7151542daf45ecd16a2b838f9184"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_2_J7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_2_J7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGJ7.png",
+    "sha256": "a1866eaf74605666f9b213c0788c59f32aa69e462b6a524230a212952e417416"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_DEATH_2_J8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_DEATH_2_J8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGJ8.png",
+    "sha256": "c043e6c244d0dfdf7eac7eb4d81358b817aa4668dee8b74cafc06a755d59186d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_CORPSE_K1.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_CORPSE_K1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGK1.png",
+    "sha256": "66f2b9a6bd0b58adffaf5cf115174de6238eca3e1b2d4ab62dcf4dfd4b2132a2"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_CORPSE_K2.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_CORPSE_K2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGK2.png",
+    "sha256": "044674f59b1c6cbb159f6fe3c9f69e9612adaea21574d3b577560825c4a20d0d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_CORPSE_K3.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_CORPSE_K3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGK3.png",
+    "sha256": "7e264decef4d777139e9637a607f32c85a15d4179e75fa7edc8a17cf3f46172e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_CORPSE_K4.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_CORPSE_K4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGK4.png",
+    "sha256": "785e4441e1a576e67bd89e8269e9fd39ed7ae3ffc5dc8fc7993bb7fbd89e3100"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_CORPSE_K5.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_CORPSE_K5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGK5.png",
+    "sha256": "aabffc66b708a7b87fde4d047f7c56ff451f580ab63e65e625a40539c469033a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_CORPSE_K6.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_CORPSE_K6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGK6.png",
+    "sha256": "1ab67b7d59067bf3fc2d51e40ca3b497de0c258ccb44d02a264209d186033c55"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_CORPSE_K7.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_CORPSE_K7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGK7.png",
+    "sha256": "1fa35e682281ccc2739ed5110c4b739bcc212378eddcaa0c895b2df74af9848a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_CORPSE_K8.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_CORPSE_K8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PREGK8.png",
+    "sha256": "d1d7e5e4896da14e5d98ba74c5b923afc7afc833a608c2d444da0d341364fd13"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_PROJECTILE_A0.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_PROJECTILE_A0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PRGSA0.png",
+    "sha256": "693a1212db7f1cd59f66031fa6584aab6bf311253c377196f1e581d5827af326"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_a\\RF2_ENA_PROJECTILE_B0.png",
+    "proposed_target": "sprites/enemies/enemy_a/RF2_ENA_PROJECTILE_B0.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\PRGSB0.png",
+    "sha256": "86155ec874e4b1717c14a38b65e6a339a6605a9337ec5804bbdd17565844244a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_IDLE_A1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_IDLE_A1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYA1.png",
+    "sha256": "4d36d798c0e8e1db8f16fc82b0f237b63eb7faf2cb8916e69357917f44f7af41"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_IDLE_A2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_IDLE_A2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYA2.png",
+    "sha256": "42dba0379474185612d4466e768766b6126685e2ee9606361c0958ff57087198"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_IDLE_A3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_IDLE_A3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYA3.png",
+    "sha256": "7bfccc669d027f895b5bd029844f47e9718c16ea0612962fd0f7aafd2379a2e9"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_IDLE_A4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_IDLE_A4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYA4.png",
+    "sha256": "f96d65e0f6adfaef14abaf846050bf255901ad0f31dfbe8d2a61ad506ebe4ab4"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_IDLE_A5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_IDLE_A5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYA5.png",
+    "sha256": "c9493bc0898d89d3b7eaed21d9c0eb5bc8674bb7a65d492e57724162bad0fb00"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_IDLE_A6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_IDLE_A6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYA6.png",
+    "sha256": "d99cc72bbaaa4cfd8e336cd788f0ff2d9bad91ec87d9dc12028d896cfcdfdfa4"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_IDLE_A7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_IDLE_A7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYA7.png",
+    "sha256": "59a386f2feff26ca96f51f171abb039bce8004f70fd754f30397a7debc06068d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_IDLE_A8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_IDLE_A8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYA8.png",
+    "sha256": "a8da2ee72f9203f652721b0d28c5de21f02f9e71fea830f33650403703b45eea"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_1_B1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_1_B1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYB1.png",
+    "sha256": "897aece8e799d8ea070f5cee00da45025bdeb6f8a661f6b902bf95ea3065fdef"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_1_B2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_1_B2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYB2.png",
+    "sha256": "07f54064226be2c11663b70ef76894ff449532568b2717b9e0fbf9cf4bde2821"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_1_B3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_1_B3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYB3.png",
+    "sha256": "1035b0cead2f5d1bbc6b3f0f8f6c8a0c5d385062ef5ebb6f2776fd134db9d224"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_1_B4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_1_B4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYB4.png",
+    "sha256": "43b39082d0ab37b79549fe8551e6cb876a01aebaafa87258afe4818622af0047"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_1_B5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_1_B5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYB5.png",
+    "sha256": "621ebef1dbeb0dafc16ac55d56ad3cf236486b13552fd50aab7827b74a1dd915"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_1_B6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_1_B6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYB6.png",
+    "sha256": "bc1ecd62ed48675502580fb663eff8a29962493a4ef027739d6bed1021a0aeaa"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_1_B7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_1_B7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYB7.png",
+    "sha256": "26f078f1a6ef6ce3f084f01c8f46c8ab62e03f2501afc2e86c1697801ccc3815"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_1_B8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_1_B8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYB8.png",
+    "sha256": "e4692437fd9f5c89fa87c327a83122613674badb344181b6624962fecf855b98"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_2_C1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_2_C1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYC1.png",
+    "sha256": "fcb49d8b90d4d4d352f45cd9d7d9050f93cd7bc66a4379fb63b80df95a45898c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_2_C2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_2_C2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYC2.png",
+    "sha256": "08915bdf89654ea8400c36d18cc5ad5c3745e403894b9b0a553c7f8971bdef32"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_2_C3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_2_C3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYC3.png",
+    "sha256": "b2d39140f1f2b360bec37cd07b928c9df38b557adb2feea0a118c35420fec202"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_2_C4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_2_C4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYC4.png",
+    "sha256": "280f0df589376f63316a0f07a750bf44140a72dd4f2edf58f05235f3f1d76833"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_2_C5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_2_C5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYC5.png",
+    "sha256": "0a3fc6258e8bbd640f3096e30faf82f1168bd5834708cb0980e2492daadd9d00"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_2_C6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_2_C6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYC6.png",
+    "sha256": "2885f51e31435880081b6e49b3a1d6e9e0eaa3b1d8e7d040d80b476eb628fbe6"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_2_C7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_2_C7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYC7.png",
+    "sha256": "75d62dee888532e1f168e98cfc67745acce62cbe91c730f84e7069d32ca197af"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_2_C8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_2_C8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYC8.png",
+    "sha256": "1c759e927cecbb2203e0644cea88a3c1fd888741587ff11e120c466aa4941a92"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_3_D1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_3_D1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYD1.png",
+    "sha256": "15f720ec052dac4bbbf8f580b04cb94521d9d064ac881706ef9b9d036a457f18"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_3_D2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_3_D2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYD2.png",
+    "sha256": "c2e7277cae55c327e2a45c0aa140f1c338631661da62de88f7e4c36efadae072"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_3_D3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_3_D3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYD3.png",
+    "sha256": "39d634c579bcb5deae8cdf2cfb496dfa6e10b6c6dbb3153d047bcfee3fd5ebdc"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_3_D4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_3_D4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYD4.png",
+    "sha256": "627c1fbb6a0469f89b87771ecc1e73ba0391a0fc86eacebe1c276ce5a86cf140"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_3_D5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_3_D5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYD5.png",
+    "sha256": "1f8d2625cc5d1646d52e04e9a5cabbbba475f9cf91a811a4d19d758cec4abfa8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_3_D6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_3_D6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYD6.png",
+    "sha256": "d6e86e460fcfa13d77e11c549cadac389d331743ca65b5b8f0d6af71a56b651d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_3_D7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_3_D7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYD7.png",
+    "sha256": "eb8df6b30cf7a249ce75cb535908f3f9612bb1d88df22771850d143fe7c1a5c0"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_3_D8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_3_D8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYD8.png",
+    "sha256": "49c19ec530d6d9fd23245909824b6d572f02554f99f82d2320908e2e3da77dcd"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_4_E1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_4_E1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYE1.png",
+    "sha256": "c21ddce29a695e3cfe91f9e834bcedc326aa0f5a1fca3592abd2c0edf13c4ab8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_4_E2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_4_E2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYE2.png",
+    "sha256": "97c40aed725e254723e1575999eff4daffa83375f6d4d6a3a81293a75e686a79"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_4_E3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_4_E3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYE3.png",
+    "sha256": "db3aaa126147a429ee78abccfc8de9434193e2e2a141929781a9083c1976eaf7"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_4_E4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_4_E4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYE4.png",
+    "sha256": "53d839206e453da1211bd8bcf09a8e411978885eb7fb46a78e8f2b2022e3fa82"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_4_E5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_4_E5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYE5.png",
+    "sha256": "bcc00fcb4b0739d8eecc62562bbb29b69b2a7b6c736172eb1401f0fca8413a58"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_4_E6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_4_E6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYE6.png",
+    "sha256": "753fe5b82390f7f98201651c07dcb8a06be9033fd0ee909e03dd7a501b7c76fe"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_4_E7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_4_E7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYE7.png",
+    "sha256": "549b63a52f320376ded5c649e41a95bb79c7ecc9082a45d3c763e2a955ab8526"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_WALK_4_E8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_WALK_4_E8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYE8.png",
+    "sha256": "6e66254e27386b585e47b78d238fe5a6ce0636f77efb154831d27f60225cb94d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_PREP_F1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_PREP_F1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYF1.png",
+    "sha256": "9877ea3c03f6e05757097e6de9624e9ced1e2d39d8a5fa1e951274a0d4b17194"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_PREP_F2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_PREP_F2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYF2.png",
+    "sha256": "92347c7706fe8695ecf71606b09f88d59d410f406decd2825015b91cbdcb7649"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_PREP_F3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_PREP_F3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYF3.png",
+    "sha256": "8e13cc189f988573a76f115d66b33fd83728b79dafc0aa9816d450d24f5cbec9"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_PREP_F4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_PREP_F4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYF4.png",
+    "sha256": "c5969aa291270fbcf94b4b8c5ed663a357b1f7fb04b8e8babb8e7689a033b76d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_PREP_F5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_PREP_F5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYF5.png",
+    "sha256": "b43320a6b2730c423c1d975428a037fd326a6225c780c0d5fa09a332fc6ad6be"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_PREP_F6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_PREP_F6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYF6.png",
+    "sha256": "4e90230101574c70b8c412af952a655972c10d97c7dda51c09c05ded2b0e8768"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_PREP_F7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_PREP_F7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYF7.png",
+    "sha256": "a650054ea656c9919662b9ab6bed8cf9b7271cd3bd6ff785b2d37e30d2422458"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_PREP_F8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_PREP_F8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYF8.png",
+    "sha256": "3a712ddd2b78254233af4fcf34ea3613268c579760dd863043b7b75779689daa"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_G1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_G1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYG1.png",
+    "sha256": "c62818af4ad73e658aa3b5b5efd000f5d6dd5d06d6bf810c84025f60b04baa62"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_G2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_G2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYG2.png",
+    "sha256": "c3f9921b6d6c101c29f1d6d99cc7ba340504565d672279583bd1f54c4c2dd55d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_G3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_G3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYG3.png",
+    "sha256": "66ffdf68e774de8e7419ad3c855e6c5fce364e499a01000226016240dac27584"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_G4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_G4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYG4.png",
+    "sha256": "5b7f82d521508739c10ec10f6dc40ba9087a119e76575cd98c8c24b001c9b406"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_G5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_G5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYG5.png",
+    "sha256": "288c3ed599931c21ebc9a67d92f17a9398d804109d507d9f0ede61a88ab7872e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_G6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_G6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYG6.png",
+    "sha256": "f31e6e691ff993142ac1b0b3393b367ec4252f9e65af4629a7412e36b18e3522"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_G7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_G7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYG7.png",
+    "sha256": "85218d4fa931d97957f14254d42c74d2511374f0b65348cdf4f44f7e4e732042"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_G8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_G8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYG8.png",
+    "sha256": "939136438d5c81c893e360efd67cc1f07eddc6dfbaf12a1fec8af3e70afe6c4e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_RECOVERY_H1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_RECOVERY_H1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYH1.png",
+    "sha256": "8f897ee3590bab33da73eca0a75820b6cf036cc5c886c73bb01af4543ac90fb2"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_RECOVERY_H2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_RECOVERY_H2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYH2.png",
+    "sha256": "59b791b50f31b7c9a2204b9fca2a0480d701bcb2109f3f70a0ec32d68cffe823"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_RECOVERY_H3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_RECOVERY_H3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYH3.png",
+    "sha256": "a9993274315d5ce70bd8018ae11e324ab1a3880ec9733dc3d9680ac09b8648ce"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_RECOVERY_H4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_RECOVERY_H4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYH4.png",
+    "sha256": "5b8dbef96a31f47d2f1a0af4f9428405798654ab5397cd2e7bd26ba63f1246aa"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_RECOVERY_H5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_RECOVERY_H5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYH5.png",
+    "sha256": "67b2e4b851e0fb01296d8302e7024a64e10f795bf5c7d3d37b325612e0a4ff25"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_RECOVERY_H6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_RECOVERY_H6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYH6.png",
+    "sha256": "8cfba6fda4ea46256792fc87e5ecac4d5e4a021e6e0e280fc71210a5e5bf5d22"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_RECOVERY_H7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_RECOVERY_H7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYH7.png",
+    "sha256": "abffd1061e68c7b1615c848a7e70780ca992cf68c603a4a07e7fae4e62daedde"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_ATTACK_RECOVERY_H8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_ATTACK_RECOVERY_H8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYH8.png",
+    "sha256": "4aeb25af4c3d32c55a61d2b8f7424774a12d962b8d0fb035b3d65e90e80d4235"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_PAIN_I1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_PAIN_I1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYI1.png",
+    "sha256": "a529e4138d6699e5e1c62493edd367be64d22323289afc7d51463d7a2871ac43"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_PAIN_I2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_PAIN_I2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYI2.png",
+    "sha256": "20a4480748c7573e9e3f915dc930d786c57b7c045c741e4a01523238b15ddc49"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_PAIN_I3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_PAIN_I3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYI3.png",
+    "sha256": "4091c31b95dcb9c136a972dcf31bee4bba12f55b4b67a2408061f545a1b726da"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_PAIN_I4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_PAIN_I4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYI4.png",
+    "sha256": "cd09a10ad4e064e2d1776b320c39bcdee4f507c14ee0c110db64a933584497f4"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_PAIN_I5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_PAIN_I5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYI5.png",
+    "sha256": "1da2c0d999080747f6aa219e5e944e65e51d85f1c07e3267d67ec4016e276946"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_PAIN_I6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_PAIN_I6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYI6.png",
+    "sha256": "df3ec8c1507bb11a6fadac6274fa477ad8e3cd740de91db851347cf0c64c7516"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_PAIN_I7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_PAIN_I7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYI7.png",
+    "sha256": "2b426da76d6cf5e5672d8aee76d80f99684d97f8807649ac39c5674eb3bf223c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_PAIN_I8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_PAIN_I8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYI8.png",
+    "sha256": "40b184c5c398bf6dce5babffb1c6179486fd1512b5e6fedb08df1ee4e68d7a36"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_1_J1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_1_J1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYJ1.png",
+    "sha256": "10c575d8c3e50fa9c6c34a6fb3e0cc4a49cc1d4e35694a5a3933c010285cf978"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_1_J2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_1_J2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYJ2.png",
+    "sha256": "614ecc20575dcdc8e77702b3218a718b1ee22d91c9f8f5ae9d5cab49fc814829"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_1_J3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_1_J3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYJ3.png",
+    "sha256": "0127e1bc306498cfd280aa1d007eedd88f9393358413df3e6811705a902924f9"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_1_J4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_1_J4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYJ4.png",
+    "sha256": "ee05d20ac7177e10bd037313b95ab99e4c5f7db866d14ee0b485bb0e183fc0eb"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_1_J5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_1_J5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYJ5.png",
+    "sha256": "9eb1903c2a10ad92b7234e44a115d67221129ed6ace7a05497a8464e51d415a5"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_1_J6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_1_J6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYJ6.png",
+    "sha256": "33923eeff2badd4df43e38e5cbc0c781a6743a5120940585622f1ef73b722f18"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_1_J7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_1_J7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYJ7.png",
+    "sha256": "1dd2c15c0a6545cd62e89296218f2892a55cd85829d0cd98e2573c7fd8a84bab"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_1_J8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_1_J8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYJ8.png",
+    "sha256": "7b02668d410b3088f761ee731c961f1c22fd4ab9e5425bbe7f4c3454e510bc1c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_2_K1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_2_K1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYK1.png",
+    "sha256": "49312aab88379a74ecbeb796276fbc5ca3e3cfb2c9b81094f39620d0f6eb8f6c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_2_K2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_2_K2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYK2.png",
+    "sha256": "1041197c714136231f15ceffa43ad4e802d679c4e76c8064d3b4ee2685d19b46"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_2_K3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_2_K3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYK3.png",
+    "sha256": "b1d3654bbfa419a1d9b578ec44ee6ae5a893c519ab6bd96e33c13abbf940bb27"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_2_K4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_2_K4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYK4.png",
+    "sha256": "74d0164443ea129162fa1343e1fc746b4af574cf228f949d6b5cea977d32003f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_2_K5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_2_K5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYK5.png",
+    "sha256": "e635582a57aac6aa667ecd73d6be0d3e28f588a62245c95dc7f6b0b7fe1c6a4c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_2_K6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_2_K6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYK6.png",
+    "sha256": "a3892a3307d61f2f8629c4aee5633563f0eeee0f19a61520e1245649599c1807"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_2_K7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_2_K7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYK7.png",
+    "sha256": "28f0ca7110f43258aaedbdf878a888541760070df267b3ddcfec3f57c1438e4c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_2_K8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_2_K8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYK8.png",
+    "sha256": "b8b962279e155a8bcccbf263fbeca45d6810634368a558da47329f109de18593"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_3_L1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_3_L1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYL1.png",
+    "sha256": "ab0d9263d388254efa56e1091d8a84fec45c9c59fd2c9070253c39246959761f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_3_L2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_3_L2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYL2.png",
+    "sha256": "6935283cce41bdee27bf0d6e67da3905a8a3734c7d81e58feebe698767babce7"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_3_L3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_3_L3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYL3.png",
+    "sha256": "c016856a6a971628cc873e0ec4f535d448dbf77057a190e90d11e9fb08807078"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_3_L4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_3_L4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYL4.png",
+    "sha256": "fcd567013add2e7e805fb6f3c5861fc94a511cd4c8a712e869fbd9751ea478d8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_3_L5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_3_L5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYL5.png",
+    "sha256": "a427ee04b16203c293399b06da47c8463cd412ac4f2825d4163bbf5576d00ea1"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_3_L6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_3_L6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYL6.png",
+    "sha256": "e2435c18489267f9836db510c574edec0d5b35df88839f5524f51b65d9473da8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_3_L7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_3_L7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYL7.png",
+    "sha256": "d40183ab294d4fde11cebb08c5b27641da6e4cb211d6e7211ed0c48e7e6abd75"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_DEATH_3_L8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_DEATH_3_L8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYL8.png",
+    "sha256": "99bb29919eeff6fc6141939cd057ba727450ae75f394ad23923f484786ee88ee"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_CORPSE_M1.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_CORPSE_M1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYM1.png",
+    "sha256": "d1ab9cd4360c284fb444177b08b84c1d85a73c733f9e0076405963d008f5ea73"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_CORPSE_M2.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_CORPSE_M2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYM2.png",
+    "sha256": "b1005b0c886ae1e5e39625c752d75801afef8b3da18d14ff0a4a06e5cfb722df"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_CORPSE_M3.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_CORPSE_M3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYM3.png",
+    "sha256": "1c6e4050f2c307e886095698ef6f2bbc5db7da989a361c9253b147ba74ebcc4f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_CORPSE_M4.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_CORPSE_M4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYM4.png",
+    "sha256": "b4ebd30b19a71ff095d4a9d3214bcf443ffcf8cef3890d08f4d3fc958287ed37"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_CORPSE_M5.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_CORPSE_M5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYM5.png",
+    "sha256": "fd3e3c565afc1e20f927d52aac1c4199336a54041b56bcc15368c2f0fab6f1b9"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_CORPSE_M6.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_CORPSE_M6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYM6.png",
+    "sha256": "6f41897996693e1cbde5c9615aa170c3b85e6aa796d9970f87450a36bf6e3d27"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_CORPSE_M7.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_CORPSE_M7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYM7.png",
+    "sha256": "0eac2f9aa53aa1e3b44310f7e96300d07681de25c66ff2fd810cbe45a02ec87a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_b\\RF2_ENB_CORPSE_M8.png",
+    "proposed_target": "sprites/enemies/enemy_b/RF2_ENB_CORPSE_M8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\ORDYM8.png",
+    "sha256": "a6b208c4fe12e7dc93a8738a63722f1a76f40e36bebe91d61a36a80a01a2a8f3"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_IDLE_A1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_IDLE_A1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDA1.png",
+    "sha256": "8bc9724af622b126f801c5e1799758336212ee0bdbe42aa51770acbc308eba0f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_IDLE_A2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_IDLE_A2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDA2.png",
+    "sha256": "e0b34a8e94369db36b0c47c3612af7fc3414df4b144171175f1a7f661741fd3c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_IDLE_A3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_IDLE_A3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDA3.png",
+    "sha256": "4875f9abad5b10450c63575fa34ef52755564fb18e52dc6cc6fb70c072205432"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_IDLE_A4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_IDLE_A4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDA4.png",
+    "sha256": "28caabbf241234344d66d054439a44fd47447314dd5c743ba6edf19147e6d96c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_IDLE_A5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_IDLE_A5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDA5.png",
+    "sha256": "51cbe60c235a3cbfd77221af16edc0d4034b8ab978668a291a4d7f986bb500e3"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_IDLE_A6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_IDLE_A6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDA6.png",
+    "sha256": "b122921fac5bf81ef6c0b3a4c3989aff28b4bbf317d94a9c91e7fb8851744327"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_IDLE_A7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_IDLE_A7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDA7.png",
+    "sha256": "7b3083be90f9ee363ec8ae7937e51dc133f3cc0df9d01de7327b608f7300505d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_IDLE_A8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_IDLE_A8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDA8.png",
+    "sha256": "f081807fc9669312e274e286e66762b2a6a00fa9b00cf2cc3a15442ea8a9e6a6"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_1_B1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_1_B1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDB1.png",
+    "sha256": "a28c23755abfb5c8bdb160c683f20e0aa550369853392c4c0d6ac02e44eb8711"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_1_B2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_1_B2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDB2.png",
+    "sha256": "0704b1873ed3a5c94e8af436f88efd1103fd552aa1d905606918a8e75e1537e5"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_1_B3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_1_B3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDB3.png",
+    "sha256": "483556477a468ba9ebb5eb7dd0f7291df0e5366084d3a400b6df553fa7233914"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_1_B4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_1_B4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDB4.png",
+    "sha256": "e0a802749ada208615cb057a9d61aac61febbbf2ab96c8e6ea122da18afd3e4d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_1_B5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_1_B5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDB5.png",
+    "sha256": "3dbb523ff4b0acd406edb0535909161e533acd9aeb604a590628f21855e2f190"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_1_B6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_1_B6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDB6.png",
+    "sha256": "aeeac368745bfce9ba9ea1f3c43ef093b7c86eb8e01d40bb58fed2ed0052e57a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_1_B7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_1_B7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDB7.png",
+    "sha256": "4ca4a732cb1659bcee4bb18bfc011f96f83a0bc6cc05987d922fd118af1052eb"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_1_B8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_1_B8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDB8.png",
+    "sha256": "fb024fe54c4565a5b46ce51c507ea7c016a76eb435ab2769bb2eb1eef1f7037e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_2_C1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_2_C1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDC1.png",
+    "sha256": "95b181b25887317f7696c9edd318fdefc45e400128217450b3b32bd95923d46e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_2_C2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_2_C2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDC2.png",
+    "sha256": "d0aec727b3f80ceb7ab4a6e5170dbfcfcd905ccb404817c26d7afd1780e91d02"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_2_C3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_2_C3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDC3.png",
+    "sha256": "e4584eb11862673362b4853ffafd07c5076230d4b94d7dca4ffd1878ba9a1be7"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_2_C4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_2_C4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDC4.png",
+    "sha256": "37be0eaf2507e71816414a6a82895a0d2f316c46d7a90541ce658246b66d9a9d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_2_C5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_2_C5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDC5.png",
+    "sha256": "5b821946d6524dd2e4c4d30d598b3a3fee8f4e1a90ffa54b7adc0cf1b7e4fd4e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_2_C6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_2_C6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDC6.png",
+    "sha256": "b438364a317a21fb20daa4da46d620a0e0f9870bd320e01f5d69e35a8ba5e52b"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_2_C7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_2_C7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDC7.png",
+    "sha256": "fbac7271c71269f801ccb2fe19b936befa26139d550ff5b5c6a5c08fe083cfa4"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_2_C8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_2_C8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDC8.png",
+    "sha256": "fce7925b3db2dbf0efc4482e8294fae16c528b088f870c76b8f1e0b7efc74d0d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_3_D1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_3_D1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDD1.png",
+    "sha256": "30cfee6cdc6ec2e0a1883b474d010e98a451bd43c235c0d3cd7699465a86238f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_3_D2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_3_D2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDD2.png",
+    "sha256": "42fbf53c671acd56daadbdbbf6dfe93ecb0c1070f50f20fd970dc39670bdc180"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_3_D3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_3_D3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDD3.png",
+    "sha256": "a8ec14f06cb6675a5126ecda9f08ce561f8be65b3294820d50d77e754056c202"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_3_D4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_3_D4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDD4.png",
+    "sha256": "2678ef550b87abe56bb23b9a222f39e5eb116c502683c2b839557025deaa90bd"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_3_D5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_3_D5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDD5.png",
+    "sha256": "8fb9ae4687bc03aad391eeee49f3be60c0c5cea93fd8360b7eab90208e5f0f22"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_3_D6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_3_D6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDD6.png",
+    "sha256": "0de75f3a6a152c0f8409a2cbd08cc7318c96e2f8d798c779f7cb182c3264e816"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_3_D7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_3_D7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDD7.png",
+    "sha256": "d37f8c938f4f8c6868c57be21c60dba60613f508daf7175a4c9962c6f63322c9"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_3_D8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_3_D8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDD8.png",
+    "sha256": "059576dbc70d195b8302601e2a3e9130ff113bf54fd9efeba330f4063794f27b"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_4_E1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_4_E1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDE1.png",
+    "sha256": "abec8e68511b990b6043c18978e95b4626a69682de3dd31bcd1ecdf5f1420ae2"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_4_E2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_4_E2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDE2.png",
+    "sha256": "bb12e11f7025e699458c69821e2fdcb767c2afe225b108149ef801469003cfdc"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_4_E3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_4_E3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDE3.png",
+    "sha256": "f3c4d8ddda1962f9f8d028f10f1a31fa116bbcaeffb198665c3aec6a0424bbea"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_4_E4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_4_E4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDE4.png",
+    "sha256": "06f6208dda1624ce94abbba03f7f2c839bd8e96de8af37577d335660e16583bf"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_4_E5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_4_E5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDE5.png",
+    "sha256": "4dbb17d3bad5d27b1aca1b6c848d5a8f47d80b4f7a88dae28447e27fe69f0291"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_4_E6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_4_E6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDE6.png",
+    "sha256": "22182f805afdd0d5ae75ea498a29c78e10ea819359ffaf8b19b64c1e30e539db"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_4_E7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_4_E7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDE7.png",
+    "sha256": "bd0d6ec4d6be40e2af60686f011efcd4e333301a2ac211b2fd7d57eae89b5a39"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_WALK_4_E8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_WALK_4_E8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDE8.png",
+    "sha256": "43ce7461d652535805de29b55e9d8c4107d4fb6c8ba8e4a8f2a00b64fe94bb6f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_PREP_F1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_PREP_F1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDF1.png",
+    "sha256": "fff604de35c9e8b811e1774b123181e48f5189d357af7788a902392af3fb340e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_PREP_F2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_PREP_F2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDF2.png",
+    "sha256": "920f3bb4dc0e010cb21818edcc7f1ed8f4f0653717cf549f9beb7109d52166d9"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_PREP_F3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_PREP_F3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDF3.png",
+    "sha256": "e7d839ec28bda50c0c508e3860c4191527a8d8aafc0add453e4786f71825a5b9"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_PREP_F4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_PREP_F4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDF4.png",
+    "sha256": "e8813a6f7aa1e145c1f90c294e10bad27d8612332146457e6bc013b35cf32c51"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_PREP_F5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_PREP_F5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDF5.png",
+    "sha256": "ee7dcdaf9a2909110d0fd9714a410bad8548fa9b580d18ffac980701a27cafaf"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_PREP_F6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_PREP_F6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDF6.png",
+    "sha256": "f460a02563cca388d8c220cc713a76004de13ecb34b45e9b43e49b0aa1d67724"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_PREP_F7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_PREP_F7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDF7.png",
+    "sha256": "f97b4afff2b058b393b8e363be7c0187425fe61884a2e66e5583c215264a1e2e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_PREP_F8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_PREP_F8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDF8.png",
+    "sha256": "c76d2450533693a41e386e111bdead696aeb2f6ad6009054862f2f615521bc50"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_1_G1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_1_G1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDG1.png",
+    "sha256": "061c1db8d1be19c7c765bd121e70e59dc314ddd470ef198175037f6492b05d00"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_1_G2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_1_G2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDG2.png",
+    "sha256": "33624a96501e19646984bbe317245a5c10ddab6fb47161ff81d413a568ddad3e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_1_G3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_1_G3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDG3.png",
+    "sha256": "f3f9d1122c3e9ee781b924c388233289dba7cd82637302956845b97e5b8d01b3"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_1_G4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_1_G4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDG4.png",
+    "sha256": "27204e8a07438dee79c47fb10d411e67b8325f339d9082c1a6db373c85a656b4"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_1_G5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_1_G5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDG5.png",
+    "sha256": "a5c30c9dbf7e467df336ffc282236df3ca79e5fa2ed6ec4c6123b8546f2a6cc0"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_1_G6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_1_G6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDG6.png",
+    "sha256": "5aba186c8be51ceea7bd20d0c42fd404a8690c72d99862bfacd2e3c1efd14cb9"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_1_G7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_1_G7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDG7.png",
+    "sha256": "eee4902bb9c5b453b18ea84bfdf772af49c9be6895ec0c96687d546210bdc79d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_1_G8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_1_G8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDG8.png",
+    "sha256": "305c315a4587ac3485fe1d928a4726e53c2a88abbaa3648880071d5e107ae474"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_2_N1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_2_N1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDN1.png",
+    "sha256": "8ac445087f39af34b6248eecafe2dff42b5cfc587683685d97516c94862d3a98"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_2_N2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_2_N2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDN2.png",
+    "sha256": "f5af2eac2cad87583f5bd645502700e1aa4977aa6074fa16a398132c82bf1224"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_2_N3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_2_N3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDN3.png",
+    "sha256": "d7c81ed7112ab874604835c1bca794b51eecba268d3bc43b95bf39fef906a102"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_2_N4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_2_N4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDN4.png",
+    "sha256": "20255390e6d1988b3030803f269b07d9c86056d304444c7b966676e306c8a37f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_2_N5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_2_N5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDN5.png",
+    "sha256": "515f9ab672506b862624f3f353a867b14480d5be59792b0a2546dec75afe4b8b"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_2_N6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_2_N6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDN6.png",
+    "sha256": "a27a54d56f54306c299d287a1bc66bcda329e48a0c4c9e4e690ae662240415e8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_2_N7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_2_N7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDN7.png",
+    "sha256": "a9aecd3e79f55b5c6e776f1a9fa52e3e08b81f4706f2dd9b7e4d13681ec383fc"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_2_N8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_2_N8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDN8.png",
+    "sha256": "f8427e4e3f3242c23edc0e025e6e03b072922c0140b2502a1d7cfa9eb392e5f8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_IMPACT_O1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_IMPACT_O1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDO1.png",
+    "sha256": "d5a6c063222c9561a98a327439fd0c1c60681e84c0d456e69b5d4ae3f8e1ef3e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_IMPACT_O2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_IMPACT_O2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDO2.png",
+    "sha256": "394a7001eaa499aa29d39766b2bdebc7c703a2085fc756e19d4d4d2c8d77f849"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_IMPACT_O3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_IMPACT_O3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDO3.png",
+    "sha256": "1adb73549d6236eee3491a9c62783d294a3224ff8ceb1aff941fa26ec43b7af3"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_IMPACT_O4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_IMPACT_O4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDO4.png",
+    "sha256": "5cfbe6649d9fdc94096190991a9f04db511e792eca61ca7c089255a0bc10084a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_IMPACT_O5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_IMPACT_O5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDO5.png",
+    "sha256": "b7e9e169e9bec2fb9c5511f9b7be356b98ada048159da9f4eb9b9a8599da2426"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_IMPACT_O6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_IMPACT_O6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDO6.png",
+    "sha256": "33aa25d48e5d24a02d6a8ad434bc18b49e8072e9cc34e2070937c22d6901c460"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_IMPACT_O7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_IMPACT_O7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDO7.png",
+    "sha256": "638976de525737456f029535e8ff465f7380a081910736da018f92515f4aa8f3"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CHARGE_IMPACT_O8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CHARGE_IMPACT_O8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDO8.png",
+    "sha256": "35b6380b190a906d04e345b2fd27348cf8fb50cefcea579f5f19cb1dc72cb0b8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_RECOVERY_H1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_RECOVERY_H1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDH1.png",
+    "sha256": "ecabc8bf8c3d6e0f9de884afff1b10b6b56cf884cab286efdc3529aae003e52a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_RECOVERY_H2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_RECOVERY_H2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDH2.png",
+    "sha256": "78deaa4b5825356aeaa967ff62993984e91bac744cde3291d509953188db7855"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_RECOVERY_H3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_RECOVERY_H3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDH3.png",
+    "sha256": "9c690dc85a1add97352c88bae2251f6aebc75e0632972c085d3b96a2448133ab"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_RECOVERY_H4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_RECOVERY_H4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDH4.png",
+    "sha256": "e9b9967928c5a131c10ecb6540f8cb56984c95f1efdab4a499ec04273b8a0596"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_RECOVERY_H5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_RECOVERY_H5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDH5.png",
+    "sha256": "407084abf62e1dc71aa9dbdde9bd5d1753f30689fb8e2821b9ab30d995eaff52"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_RECOVERY_H6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_RECOVERY_H6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDH6.png",
+    "sha256": "c39eb7c9f3c5b7b0de59bdf46a5662b6a6934c1f87e3f9885208b036e9922d1d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_RECOVERY_H7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_RECOVERY_H7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDH7.png",
+    "sha256": "8d608b8030aa477ca90d3d92d6d751c5a7955a035676b34d10f87e0cc389b794"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_RECOVERY_H8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_RECOVERY_H8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDH8.png",
+    "sha256": "d8343f9f39db4574a64ffb5535baaf579c1e574619ef0260c61cc62adcbc8eb0"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_PAIN_I1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_PAIN_I1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDI1.png",
+    "sha256": "83d95fdaebe7c16b32e9564b2dc7208fc96980aaddfe6eed254361e4920fb36b"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_PAIN_I2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_PAIN_I2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDI2.png",
+    "sha256": "26a42cd93096f203e2a99c097f3ad695c2623b9df349020fb6ea6539a70a04f1"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_PAIN_I3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_PAIN_I3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDI3.png",
+    "sha256": "0ebc019e85eb99157608540a2e9ae22c26de9d8e649653816deb5ffa364973b2"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_PAIN_I4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_PAIN_I4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDI4.png",
+    "sha256": "d5657e3454b60ccf6efceacd108cdc51aceacbb7ff1a6b256909a59e3aa355f6"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_PAIN_I5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_PAIN_I5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDI5.png",
+    "sha256": "66125f204d52805dc0caf250fc8060586c89ae3e3a8bc423cfba08b27900be99"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_PAIN_I6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_PAIN_I6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDI6.png",
+    "sha256": "8a717234f0985deb517646b7966e865fd1f73671918f9c11b12954e12c7fd33f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_PAIN_I7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_PAIN_I7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDI7.png",
+    "sha256": "254dfedec0012555ba95cfa32da58f789582ac815447364e807023643e648648"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_PAIN_I8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_PAIN_I8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDI8.png",
+    "sha256": "c7911e5697cffaa95ead6ac5244cc65953c8e5cc8cf14ad87fbd58b0c00ac300"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_1_J1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_1_J1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDJ1.png",
+    "sha256": "a7959ffd2a18506fe1ec584e74d445662a3c7ec3d4d200707d131b739c58b832"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_1_J2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_1_J2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDJ2.png",
+    "sha256": "8ceee82ea70a6540e50584d7408a25f9a96254019aef5461628105eb1c764a45"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_1_J3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_1_J3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDJ3.png",
+    "sha256": "8665132000445ffe3052824b3d93d5a525dfccdb3c2e276569b4a8b2e09cc3ac"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_1_J4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_1_J4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDJ4.png",
+    "sha256": "cb3910497a239f5979cb3dfa976679462db5ddecb80482b942428f7466a3f83f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_1_J5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_1_J5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDJ5.png",
+    "sha256": "93736a5a1fb64f598fc277d28a6a6b8cc1a9b1f064419d9593fe8f8cb6785dbd"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_1_J6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_1_J6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDJ6.png",
+    "sha256": "d6c43e7465cf353dcaa688869b196890f9a7c4c2b2edd3b3a90eacb0d26210eb"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_1_J7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_1_J7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDJ7.png",
+    "sha256": "7cce904e4698c0e5fa9e468c8b55b43b17e7c555de42abda8bc7a675028dc945"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_1_J8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_1_J8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDJ8.png",
+    "sha256": "9cb2f253983fbbc07976020daaade40134d8a1a96ba84b445449f7f85d747e90"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_2_K1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_2_K1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDK1.png",
+    "sha256": "d73cbf9c2bafa3687235099806fc8b56cfa769089b6f20498cb85b8ffbd13af7"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_2_K2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_2_K2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDK2.png",
+    "sha256": "2029a9b79b74b1a51e28be935a7a8b726ba84b4b9071e3873b33e59c995e76a0"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_2_K3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_2_K3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDK3.png",
+    "sha256": "5235c4392f8e5013ecbb970ee00af601dbce679b30fc3e67596bb020756fe46d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_2_K4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_2_K4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDK4.png",
+    "sha256": "b3d9357a9169dc1d4fac86f59606d641448ee0da46e2af8190b8995efe8955a7"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_2_K5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_2_K5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDK5.png",
+    "sha256": "007b4baa6524b400e894146140dd649f200ca9fb9ebe098279212108d349c761"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_2_K6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_2_K6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDK6.png",
+    "sha256": "c385fb40ddb001802cfeb91736a73676618f133d95cd14359e7a7fef0c12d726"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_2_K7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_2_K7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDK7.png",
+    "sha256": "b0c57d7a842e6c784c4ac2d75be40a152a2f211eafee3d858aed26bae9b2beff"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_2_K8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_2_K8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDK8.png",
+    "sha256": "5be82bd2202aa43ef821d4af541f11922f19c2377559ed0d5827bc4a89b4d72f"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_3_L1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_3_L1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDL1.png",
+    "sha256": "8415362b380576c6cb6f7c4eb3c01d3061dda1f70197a6c00be17bb0150fb5a1"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_3_L2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_3_L2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDL2.png",
+    "sha256": "55a3fd28280a074cc40840816bc5f89a1f693a8f69d82079a489e51f71b212a6"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_3_L3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_3_L3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDL3.png",
+    "sha256": "efa309a696385e7788c93ea5a450175c72c02cb6615a430000d8847e8a40640e"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_3_L4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_3_L4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDL4.png",
+    "sha256": "2c4d7f7eeded82c067d23a066e0489dd63bc3113660f1a4bf3b03efb5f4fc701"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_3_L5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_3_L5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDL5.png",
+    "sha256": "45fe28b434a5339977a9397c890f7e36eb16dcc9eae6c504a8ad637bbcc25da8"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_3_L6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_3_L6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDL6.png",
+    "sha256": "845954dd04c888a492314acac7731ec30a36488354d26f0048f37e10adfe009d"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_3_L7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_3_L7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDL7.png",
+    "sha256": "1e70e7b3770fa52f328ef49a3e5920af83f14ab82ac2884581efc2a853bad9c4"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_DEATH_3_L8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_DEATH_3_L8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDL8.png",
+    "sha256": "82e40971db7459fdc7d5524e8df06a4a3b8a26272b11e42a3a621027273b6a0c"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CORPSE_M1.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CORPSE_M1.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDM1.png",
+    "sha256": "773bfc0ae077c49ca48045ac21eecd616e5ff3ff930803eaa451a1f12e856ba7"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CORPSE_M2.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CORPSE_M2.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDM2.png",
+    "sha256": "2af0ab6b7d1f067a16ddd5204487205f0aa68cffe344f370d36f200c3c13cd01"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CORPSE_M3.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CORPSE_M3.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDM3.png",
+    "sha256": "e1b4d57c2e42b6e97ce0004c945a13bbc1e70e4cde82dd84bd0b242fcff69d46"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CORPSE_M4.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CORPSE_M4.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDM4.png",
+    "sha256": "3294f97d5095854564b242889c6717438b0cf65fd633c7c1f291751f4b3cf048"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CORPSE_M5.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CORPSE_M5.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDM5.png",
+    "sha256": "ecac4aad18e02e6169ab551f2e016ef7db2aa777f534242931e701c8b5f5374a"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CORPSE_M6.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CORPSE_M6.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDM6.png",
+    "sha256": "6d1edc3d0d728450e62df0c9184eb4ce7fb9661bfe24b246327c22ebd98227aa"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CORPSE_M7.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CORPSE_M7.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDM7.png",
+    "sha256": "af2e4e6ce2a9d7183ab0529ce8ce5a9cc0f80726b3d774ab40f0819fe76d89bc"
+  },
+  {
+    "source": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF01_P0_ENEMIES\\runtime\\enemies\\enemy_c\\RF2_ENC_CORPSE_M8.png",
+    "proposed_target": "sprites/enemies/enemy_c/RF2_ENC_CORPSE_M8.png",
+    "target": "C:\\PROJECTS\\RF2_UZDOOM\\src\\sprites\\enemies\\BRCDM8.png",
+    "sha256": "2ee45319c403ee4282f7eb10cb4e82ed702d21126194c40934715a447920dcf1"
+  }
+]

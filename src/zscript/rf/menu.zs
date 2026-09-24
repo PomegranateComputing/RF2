@@ -43,11 +43,21 @@ class RFMainMenu : ListMenu
         mDesc.mItems.Push(item);
     }
 
+    // Menu title in the larger title face (falls back to the menu font).
+    void AddTitle(double x, double y, String text, int color)
+    {
+        let item = new("ListMenuItemStaticText");
+        Font face = Font.GetFont('RFTitle');
+        if (face == null) face = mDesc.mFont;
+        item.InitDirect(x, y, text, face, color, false);
+        mDesc.mItems.Push(item);
+    }
+
     void Rebuild()
     {
         bool inGame = gamestate == GS_LEVEL;
         mDesc.mItems.Clear();
-        AddStatic(mDesc.mXpos, mDesc.mYpos - 48, "$RF_MENU_TITLE", Font.CR_WHITE);
+        AddTitle(mDesc.mXpos, mDesc.mYpos - 52, "$RF_MENU_TITLE", Font.CR_WHITE);
         AddStatic(mDesc.mXpos, mDesc.mYpos - 30, inGame ? "$RF_MENU_PAUSE" : "$RF_MENU_SUBTITLE", Font.CR_DARKRED);
         int firstY = mDesc.mYpos;
         if (inGame)

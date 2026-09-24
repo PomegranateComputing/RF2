@@ -1,8 +1,92 @@
 // The three enemy families of RF01. Sprite families ORDY / BRCD / PREG are the
 // eight-rotation sets recovered from legacy/import (rendered at 5 px per unit).
 
+// Scripted wake-up without engine dormancy. A thing flagged DORMANT in the map waits for
+// its cue (Thing_Activate from a wake line) but stays animated and vulnerable: being hit
+// also wakes it. A cued enemy goes straight for the player who triggered it.
+class RFEnemy : Actor
+{
+    bool awaitingCue;
+
+    override void PostBeginPlay()
+    {
+        Super.PostBeginPlay();
+        if (bDormant)
+        {
+            bDormant = false;
+            awaitingCue = true;
+        }
+    }
+
+    override void Activate(Actor activator)
+    {
+        Super.Activate(activator);
+        if (!awaitingCue || health <= 0) return;
+        awaitingCue = false;
+        if (activator != null && activator.player != null && activator.health > 0)
+        {
+            target = activator;
+            A_StartSound(SeeSound, CHAN_VOICE);
+            SetStateLabel("See");
+        }
+    }
+
+    override int DamageMobj(Actor inflictor, Actor source, int damage, Name mod, int flags, double angle)
+    {
+        awaitingCue = false;
+        return Super.DamageMobj(inflictor, source, damage, mod, flags, angle);
+    }
+
+    // Spawn-state look: blind and deaf until cued.
+    void RFLook()
+    {
+        if (!awaitingCue) A_Look();
+    }
+}
+
+// Reinforcement point for waves that must not stand in view before their cue (finale).
+// Thing_Activate on its tid spawns args[0] (1 orderly, 2 brancardier, 3 porte-registre)
+// facing the spot angle and sends it after the activator. Placed out of the player's sight.
+class RFWaveSpot : Actor
+{
+    Default
+    {
+        Radius 16;
+        Height 56;
+        +NOGRAVITY
+        +NOBLOCKMAP
+        +DONTSPLASH
+    }
+
+    override void Activate(Actor activator)
+    {
+        class<Actor> kind = 'RFOrderly';
+        if (args[0] == 2) kind = 'RFBrancardier';
+        else if (args[0] == 3) kind = 'RFPorteRegistre';
+        let mo = Spawn(kind, Pos, ALLOW_REPLACE);
+        if (mo != null)
+        {
+            mo.angle = angle;
+            if (activator != null && activator.player != null && activator.health > 0)
+            {
+                mo.target = activator;
+                mo.A_StartSound(mo.SeeSound, CHAN_VOICE);
+                mo.SetStateLabel("See");
+            }
+        }
+        Destroy();
+    }
+
+    States
+    {
+    Spawn:
+        TNT1 A -1;
+        Stop;
+    }
+}
+
 // Orderly: close-range pressure. Its committed swing can be sidestepped.
-class RFOrderly : Actor
+class RFOrderly : RFEnemy
 {
     double strikeAngle;
 
@@ -46,7 +130,7 @@ class RFOrderly : Actor
     States
     {
     Spawn:
-        ORDY A 10 A_Look;
+        ORDY A 10 RFLook;
         Loop;
     See:
         ORDY B 4 A_Chase;
@@ -93,7 +177,7 @@ class RFOrderlyCorpse : Actor
 }
 
 // Brancardier: audible brace, straight charge, recovery. Space to dodge is the counter.
-class RFBrancardier : Actor
+class RFBrancardier : RFEnemy
 {
     double chargeAngle;
     int chargeTics;
@@ -184,7 +268,7 @@ class RFBrancardier : Actor
     States
     {
     Spawn:
-        BRCD A 10 A_Look;
+        BRCD A 10 RFLook;
         Loop;
     See:
         BRCD B 5 A_Chase;
@@ -244,7 +328,7 @@ class RFRegistryBundle : Actor
     }
 }
 
-class RFPorteRegistre : Actor
+class RFPorteRegistre : RFEnemy
 {
     Default
     {
@@ -284,7 +368,7 @@ class RFPorteRegistre : Actor
     States
     {
     Spawn:
-        PREG A 8 A_Look;
+        PREG A 8 RFLook;
         Loop;
     See:
         PREG B 5 A_Chase;

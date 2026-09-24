@@ -1,0 +1,38 @@
+// Situated wear decals (scripts/mapkit/materials.py). Placed by Decal things (9200) in the
+// map scripts, facing the wall they mark. Shade decals: the mask carries the shape only.
+
+decal RFDamp 11001
+{
+    pic RFDSTN1
+    shade "30 28 1e"
+    x-scale 0.6
+    y-scale 0.6
+    randomflipx
+}
+
+decal RFGrime 11002
+{
+    pic RFDSTN2
+    shade "22 1c 16"
+    x-scale 0.25
+    y-scale 0.3
+    randomflipx
+}
+
+decal RFStreak 11003
+{
+    pic RFDSTN3
+    shade "4a 32 1e"
+    x-scale 0.45
+    y-scale 0.6
+    randomflipx
+}
+
+decal RFScuff 11004
+{
+    pic RFDSTN4
+    shade "1e 1a 16"
+    x-scale 0.6
+    y-scale 0.25
+    randomflipx
+}

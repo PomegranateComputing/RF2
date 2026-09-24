@@ -63,11 +63,14 @@ DoomEdNums
     30401 = RFOrderly
     30402 = RFBrancardier
     30403 = RFPorteRegistre
+    30405 = RFWaveSpot
     30410 = RFOrderlyCorpse
     30601 = RFLamp
     30602 = RFLampFlicker
     30611 = RFAmbientLoop
     30621 = RFNote
+    30622 = RFLitter
+    30623 = RFSignal
     30901 = RFTourPoint
     30902 = RFDevWaypoint
 }
@@ -76,9 +79,9 @@ clearepisodes
 
 episode RF01 { name = "La Couleur de la Grenade" key = "g" }
 
+// The RF01 exit text is played in-level by RFDirector/RFStatusBar (fade + RF fonts).
 cluster 1
 {
-    exittext = lookup, "RF_RF01_EXIT"
     flat = "RFP_CEIL"
     music = "RFAMB01"
 }
@@ -101,7 +104,7 @@ map RF01 "Sainte-Anne - Les portes ouvertes"
     music = "RFAMB01"
     cluster = 1
     nointermission
-    lightmode = 2
+    lightmode = 8
 }
 
 map RF02 "Paris - Rue de service" { levelnum = 2 next = "RF03" }

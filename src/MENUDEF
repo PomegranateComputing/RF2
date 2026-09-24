@@ -1,7 +1,7 @@
 DefaultListMenu
 {
-    Font "BigFont", "White"
-    Selector "RFSELCT", -18, 2
+    Font "RFMenu", "White"
+    Selector "RFSELCT", -18, 4
     LineSpacing 18
 }
 
@@ -14,8 +14,8 @@ ListMenu "MainMenu"
 ListMenu "RFCreditsMenu"
 {
     Class "RFCreditsMenu"
-    Font "NewSmallFont", "White"
-    LineSpacing 12
+    Font "RFText", "White"
+    LineSpacing 16
     Position 40, 80
 }
 
@@ -31,3 +31,27 @@ ListMenu "EpisodeMenu"
     Position 56, 96
     LineSpacing 18
 }
+
+// Game options, appended to the native Options menu (the native pages stay untouched).
+OptionValue "RFCrosshairs"
+{
+    0, "$RF_OPT_CROSSHAIR_DOT"
+    1, "$RF_OPT_CROSSHAIR_ENGINE"
+}
+
+OptionMenu "RFOptionsMenu"
+{
+    Title "$RF_OPT_TITLE"
+    Slider "$RF_OPT_HUDSCALE", "rf_hud_scale", 0.75, 1.5, 0.05, 2
+    Option "$RF_OPT_FOOTSTEPS", "rf_footsteps", "OnOff"
+    Option "$RF_OPT_CROSSHAIR", "crosshair", "RFCrosshairs"
+    StaticText ""
+    StaticText "$RF_OPT_HUDSCALE_HINT", 1
+}
+
+AddOptionMenu "OptionsMenu"
+{
+    StaticText ""
+    Submenu "$RF_OPT_TITLE", "RFOptionsMenu"
+}
+

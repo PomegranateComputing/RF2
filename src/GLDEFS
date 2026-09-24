@@ -1,0 +1,7 @@
+// Red Flags 2 - GL definitions. Brightmaps keep emissive surfaces luminous in dark rooms.
+
+// Chapel stained glass (scripts/mapkit/materials.py): the panes read as lit from outside.
+brightmap texture RFG_VITR
+{
+    map "patches/rf01/RFG_VITR_BM.png"
+}
