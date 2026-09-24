@@ -32,26 +32,36 @@ ListMenu "EpisodeMenu"
     LineSpacing 18
 }
 
-// Game options, appended to the native Options menu (the native pages stay untouched).
+// Options (UI spec): the native UZDoom pages in the order of the spec, the game's own settings,
+// then the complete native menu for everything else.
 OptionValue "RFCrosshairs"
 {
     0, "$RF_OPT_CROSSHAIR_DOT"
     1, "$RF_OPT_CROSSHAIR_ENGINE"
 }
 
+OptionValue "RFOnOff"
+{
+    0, "$RF_OPT_NO"
+    1, "$RF_OPT_YES"
+}
+
 OptionMenu "RFOptionsMenu"
 {
+    Class "RFOptionMenu"
     Title "$RF_OPT_TITLE"
+    Submenu "$RF_OPT_DISPLAY", "VideoOptions"
+    Submenu "$RF_OPT_VIDEOMODE", "VideoModeMenu"
+    Submenu "$RF_OPT_SOUND", "SoundOptions"
+    Submenu "$RF_OPT_MOUSE", "MouseOptions"
+    Submenu "$RF_OPT_CONTROLS", "CustomizeControls"
+    Submenu "$RF_OPT_JOYSTICK", "JoystickOptions"
+    Submenu "$RF_OPT_ACCESSIBILITY", "AccessibilityOptions"
+    StaticText ""
     Slider "$RF_OPT_HUDSCALE", "rf_hud_scale", 0.75, 1.5, 0.05, 2
-    Option "$RF_OPT_FOOTSTEPS", "rf_footsteps", "OnOff"
+    Option "$RF_OPT_FOOTSTEPS", "rf_footsteps", "RFOnOff"
     Option "$RF_OPT_CROSSHAIR", "crosshair", "RFCrosshairs"
+    StaticText "$RF_OPT_HUDSCALE_HINT"
     StaticText ""
-    StaticText "$RF_OPT_HUDSCALE_HINT", 1
+    Submenu "$RF_OPT_ADVANCED", "OptionsMenu"
 }
-
-AddOptionMenu "OptionsMenu"
-{
-    StaticText ""
-    Submenu "$RF_OPT_TITLE", "RFOptionsMenu"
-}
-

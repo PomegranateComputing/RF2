@@ -6,5 +6,6 @@ server noarchive nosave int rf_dev_start_wp = 0;
 server noarchive nosave bool rf_dev_pacifist = false;
 server noarchive nosave bool rf_dev_doortest = false;
 server noarchive nosave bool rf_dev_weapons = false;
+server noarchive nosave int rf_dev_ui = 0;
 user float rf_hud_scale = 1.0;
 user bool rf_footsteps = true;

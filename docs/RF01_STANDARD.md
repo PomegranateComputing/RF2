@@ -49,6 +49,14 @@ façon sans reprendre sa géométrie. Statut des gates : `PROJECT_STATE.md`.
 - Matériaux : famille cohérente générée par `scripts/mapkit/materials.py` en attendant les lots
   Astra ; on remplace par familles entières, jamais texture par texture.
 - Polices : `RFText`, `RFTitle`, `RFMenu`, `RFHud` (Inter, OFL) générées par `scripts/mapkit/fonts.py`.
+- HUD : mise en page sur un écran virtuel 640×360. L'échelle HUD du moteur est entière et croît
+  moins vite que l'écran (3 en 1080p comme en 1440p, 4 en 4K ; `BeginHUD(..., true, ...)` n'y
+  change rien) : le HUD applique le reste (`min(L/640, H/360) / GetHUDScale()`), mêmes proportions
+  en 1080p, 1440p et 4K ; `rf_hud_scale` (Options) agit par-dessus.
+- Options : page RF (`RFOptionsMenu`) = sous-menus natifs dans l'ordre de la spec UI, réglages RF,
+  puis « Tous les réglages du moteur ». Les pages natives gardent la police du moteur
+  (`NewSmallFont` est construite depuis les ressources du moteur, un mod ne peut pas la remplacer)
+  et suivent la langue du moteur (`language`, « auto » = langue de Windows).
 
 ## 4. Assets Astra
 
@@ -68,7 +76,8 @@ façon sans reprendre sa géométrie. Statut des gates : `PROJECT_STATE.md`.
    de joueur ordinaires (portes, clés, combats, sortie) le long des `RFDevWaypoint`.
 6. `python scripts/doortest_rf01.py` — chaque ligne de porte, depuis sa pièce, sans puis avec clés.
 7. `python scripts/e2e_rf01.py` (à dupliquer par carte) — parcours A et B du gate E.
-8. `python scripts/ui_evidence.py` — menus, HUD et pause en 1080p/1440p, persistance d'un réglage.
+8. `python scripts/ui_evidence.py --fullscreen 3840x2160` — menu principal, options, crédits, HUD,
+   titre du niveau et pause en 1080p/1440p (fenêtre) et 4K (plein écran), persistance d'un réglage.
 9. `python scripts/devrun.py --map RFNN --name weapons +rf_dev_weapons 1` — tir et recharge en jeu.
 10. Parcours humain : reste indispensable pour la durée de découverte, la lisibilité, le ressenti.
 
@@ -77,6 +86,11 @@ Pièges vérifiés des outils de test :
 - les CVars `server` sont enregistrées dans les sauvegardes et restaurées au chargement : les
   réglages de test (`rf_dev_*`) sont `nosave`, sinon une sauvegarde de test ramène l'autopilote ;
 - en fenêtre, `-width`/`-height` n'ont pas d'effet : la taille vient de `vid_setsize` ;
+- `wait` dans les commandes de la ligne de commande s'écoule pendant le démarrage : les captures
+  minutées passent par le gestionnaire de dev (`rf_dev_ui`, horloge du niveau puis horloge UI,
+  le menu mettant le jeu en pause) ;
+- un lump `DEFCVARS` n'est pas lu depuis un pk3 chargé par `-file` (« Cannot load DEFCVARS from a
+  wadfile ») : les valeurs par défaut passent par CVARINFO ou par le lanceur ;
 - sur le bureau invisible (`RF_DEV_HIDDEN=1`), une erreur fatale ouvre une fenêtre que personne ne
   voit : `devrun.py` la détecte, l'enregistre en PNG à côté du log et arrête le moteur.
 

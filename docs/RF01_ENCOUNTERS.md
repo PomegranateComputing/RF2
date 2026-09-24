@@ -20,3 +20,8 @@ de la lingerie (panneau carrelé) et sacristie.
 Bilan des ressources posées (normal) : 320 cartouches de 7,62 mm (FAL compris), 84 de 9 mm,
 300 points de soins ; 1 510 PV ennemis. Marge large : la pression vient du corps à corps et de
 la charge du Brancardier, pas de la pénurie. À recalibrer après un parcours humain.
+
+Porte-Registre : le lancer suit une trajectoire calculée vers le torse du joueur (distance et
+dénivelé) ; coincé par le joueur dans un passage étroit (haut de l'escalier de la lingerie), il
+lance quand même au bout d'une seconde sans pouvoir bouger. Sans cela, le joueur arrivé à son
+contact en haut de l'escalier ne prenait plus aucun coup (vu en jeu, parcours B).

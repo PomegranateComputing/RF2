@@ -23,6 +23,12 @@ class RFDevHandler : StaticEventHandler
     // without keys (locked sides must stay shut), then with both keys.
     bool doortest;
     bool weaponShots;
+    // UI capture: rf_dev_ui 1 in a level (HUD under the level title, HUD alone, pause menu; the
+    // menu pauses the game, so the last capture and the end marker run on the UI clock);
+    // rf_dev_ui 2 on the title screen (main menu, options, credits).
+    bool uiShots;
+    ui int uiMenuTics;
+    ui int uiTitleTics;
     Array<int> dtLines;
     Array<int> dtSides;
     int dtIndex, dtPhase, dtTimer, dtPass, dtOpen, dtShut;
@@ -37,6 +43,8 @@ class RFDevHandler : StaticEventHandler
     int apIndex;
     int apTimer;
     int apStuckTimer;
+    int apLastHealth;
+    int apBacktrackFor;     // waypoint already retried from the previous one (-1: none)
     int apUseCooldown;
     int apTotal;
     Vector2 apLastPos;
@@ -59,11 +67,13 @@ class RFDevHandler : StaticEventHandler
         ticks = 0;
         tourIndex = 0; tourPhase = 0; tourTimer = 0;
         apIndex = 0; apTimer = 0; apStuckTimer = 0; apUseCooldown = 0; apTotal = 0; apDone = false; apBestDist = 1e9;
+        apBacktrackFor = -1;
         tour = CVar.GetCVar('rf_dev_tour').GetBool();
         autopilot = CVar.GetCVar('rf_dev_autopilot').GetBool();
         doortest = CVar.GetCVar('rf_dev_doortest').GetBool();
         weaponShots = CVar.GetCVar('rf_dev_weapons').GetBool();
-        logging = tour || autopilot || doortest || weaponShots || CVar.GetCVar('rf_dev_log').GetBool();
+        uiShots = CVar.GetCVar('rf_dev_ui').GetInt() == 1;
+        logging = tour || autopilot || doortest || weaponShots || uiShots || CVar.GetCVar('rf_dev_log').GetBool();
         dtLines.Clear();
         dtSides.Clear();
         dtIndex = 0; dtPhase = 0; dtTimer = 0; dtPass = 0; dtOpen = 0; dtShut = 0;
@@ -147,6 +157,35 @@ class RFDevHandler : StaticEventHandler
     {
         ticks++;
         if (tour) TourTick();
+        if (uiShots)
+        {
+            if (Level.Time == 60 || Level.Time == 230) Level.MakeScreenShot();
+            if (Level.Time == 240) Menu.SetMenu('MainMenu');
+        }
+    }
+
+    override void UiTick()
+    {
+        if (CVar.FindCVar('rf_dev_ui').GetInt() == 2)
+        {
+            TitleMenuShots();      // counts from engine start, whatever plays behind the title
+            return;
+        }
+        if (!uiShots || Level.Time < 240) return;
+        uiMenuTics++;
+        if (uiMenuTics == 20) Level.MakeScreenShot();
+        if (uiMenuTics == 45) Console.Printf("RF_DEV_UI_DONE");
+    }
+
+    ui void TitleMenuShots()
+    {
+        // The engine's intro logo plays first: menus open after 5 s.
+        uiTitleTics++;
+        if (uiTitleTics == 175) Menu.SetMenu('MainMenu');
+        if (uiTitleTics == 200 || uiTitleTics == 250 || uiTitleTics == 300) Level.MakeScreenShot();
+        if (uiTitleTics == 225) Menu.SetMenu('RFOptionsMenu');
+        if (uiTitleTics == 275) Menu.SetMenu('RFCreditsMenu');
+        if (uiTitleTics == 325) Console.Printf("RF_DEV_UI_DONE");
     }
 
     void TourTick()
@@ -414,6 +453,10 @@ class RFDevHandler : StaticEventHandler
         p.player.cmd.forwardmove = 0;
         p.player.cmd.sidemove = 0;
         p.player.cmd.buttons &= ~(BT_ATTACK | BT_USE | BT_RELOAD);
+        // A wound means the way is contested, not blocked: the stall clock restarts. A harmless
+        // blocker still ends the run as stuck after 20 s.
+        if (p.health < apLastHealth) apStuckTimer = 0;
+        apLastHealth = p.health;
         if (apDone || waypoints.Size() == 0 || apIndex >= waypoints.Size()) return;
         apTotal++;
         if (apTotal == 35 * 600)
@@ -547,6 +590,16 @@ class RFDevHandler : StaticEventHandler
                     if (en.health > 0 && p.Distance2D(en) < 256)
                         Console.Printf("RF_DEV_NEAR class=%s tid=%d dist=%.0f cue=%d target=%d angle=%.0f frame=%d",
                             en.GetClassName(), en.tid, p.Distance2D(en), en.awaitingCue, en.target == p, en.angle, en.frame);
+                // A fight can push the player off the route (behind a counter): walk back to the
+                // previous waypoint once, then on along the designed path. A second stall fails.
+                if (apBacktrackFor != apIndex && apIndex > 0)
+                {
+                    apBacktrackFor = apIndex;
+                    apIndex--;
+                    apBestDist = 1e9;
+                    apStuckTimer = 0;
+                    Console.Printf("RF_DEV_BACKTRACK waypoint=%d", waypoints[apIndex].args[0]);
+                }
             }
             if (apStuckTimer == 35 * 20)
             {

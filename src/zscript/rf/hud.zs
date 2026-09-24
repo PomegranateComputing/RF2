@@ -71,6 +71,12 @@ class RFStatusBar : BaseStatusBar
         let setting = CVar.GetCVar('rf_hud_scale', CPlayer);
         double s = setting != null ? clamp(setting.GetFloat(), 0.75, 1.5) : 1.0;
         BeginHUD(1.0, false, 640, 360);
+        // The engine's HUD scale is a whole number that grows slower than the screen (3 at both
+        // 1080p and 1440p, 4 at 4K): the layout takes the remainder, so it keeps the proportions
+        // of a 640x360 screen everywhere (factor 1 at 1080p). rf_hud_scale adjusts on top.
+        double fit = min(Screen.GetWidth() / 640.0, Screen.GetHeight() / 360.0);
+        Vector2 engineScale = GetHUDScale();
+        s *= fit / max(engineScale.Y, 1.0);
 
         let director = RFDirector(EventHandler.Find('RFDirector'));
         int left = DI_SCREEN_LEFT_BOTTOM;
@@ -115,7 +121,7 @@ class RFStatusBar : BaseStatusBar
                 ammunition = String.Format("%d | %d", fal.Magazine, fal.ReserveCount());
                 if (fal.Reloading)
                     DrawString(labelFont, StringTable.Localize("$RF_HUD_RELOAD"), (-16 * s, -58 * s), right | DI_ITEM_RIGHT_TOP | DI_TEXT_ALIGN_RIGHT, Font.CR_TAN, 1.0, -1, 0, (s * 0.7, s * 0.7));
-                else if (fal.Magazine == 0 && fal.ReserveCount() > 0)
+                else if (fal.Magazine == 0 && fal.ReserveCount() > 0 && CPlayer.health > 0)
                     DrawString(labelFont, KeyPrompt("+reload", "$RF_HUD_RELOADHINT"), (-16 * s, -58 * s), right | DI_ITEM_RIGHT_TOP | DI_TEXT_ALIGN_RIGHT, Font.CR_RED, 1.0, -1, 0, (s * 0.7, s * 0.7));
             }
             DrawString(numberFont, ammunition, (-16 * s, -32 * s), right | DI_ITEM_RIGHT_TOP | DI_TEXT_ALIGN_RIGHT, Font.CR_WHITE, 1.0, -1, 0, (s * 1.0, s * 1.0));

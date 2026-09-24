@@ -20,20 +20,26 @@ PK3 = ROOT / 'dist' / 'RF2_DEV.pk3'
 
 
 def cmds(*parts):
-    """Command-line console commands executed in order; 'wait N' delays by N tics."""
+    """Command-line console commands executed in order, one engine argument per word.
+
+    'wait N' counts frames and elapses during startup: it orders commands, it does not time them.
+    Timed in-game captures are done by the dev handler (rf_dev_ui) on the level clock.
+    """
     out = []
     for p in parts:
-        out += ['+' + p.split(' ', 1)[0]] + ([p.split(' ', 1)[1]] if ' ' in p else [])
+        words = p.split()
+        out += ['+' + words[0]] + words[1:]
     return out
 
 
-def shots(w, h):
-    name = f'ui_{w}x{h}'
-    # title screen menus
-    devrun.run(PK3, name, None, seconds=40, width=w, height=h, marker='re:^RF_UI_DONE',
-               extra=cmds('wait 70', 'menu_main', 'wait 20', 'screenshot', 'wait 10', 'menu_options', 'wait 20',
-                          'screenshot', 'wait 10', 'closemenu', 'openmenu RFCreditsMenu', 'wait 20', 'screenshot',
-                          'wait 10', 'echo RF_UI_DONE'))
+def shots(w, h, fullscreen=False):
+    # Windowed captures are sized with vid_setsize; the display's own resolution needs fullscreen
+    # (a window's client area cannot be as tall as the screen).
+    name = f'ui_{w}x{h}' + ('_fullscreen' if fullscreen else '')
+    size = dict(width=None, height=None) if fullscreen else dict(width=w, height=h)
+    full = ['+vid_fullscreen', '1'] if fullscreen else []
+    # title screen menus (dev handler, UI clock): main menu, options, credits
+    devrun.run(PK3, name, None, seconds=60, extra=['+rf_dev_ui', '2'] + full, **size)
     first = sorted((devrun.DEV / 'shots' / name).glob('*.png'))
     keep = devrun.DEV / 'shots' / f'{name}_menus'
     if keep.exists():
@@ -41,10 +47,8 @@ def shots(w, h):
     keep.mkdir(parents=True)
     for p in first:
         shutil.copy(p, keep / p.name)
-    # in game: HUD after the title flash, then the pause menu
-    devrun.run(PK3, name, 'RF01', seconds=40, width=w, height=h, marker='re:^RF_UI_DONE',
-               extra=cmds('wait 70', 'screenshot', 'wait 140', 'screenshot', 'menu_main', 'wait 20', 'screenshot',
-                          'wait 10', 'echo RF_UI_DONE'))
+    # in game (dev handler, level clock): HUD under the level title, HUD alone, pause menu
+    devrun.run(PK3, name, 'RF01', seconds=60, extra=['+rf_dev_ui', '1'] + full, **size)
     return keep, devrun.DEV / 'shots' / name
 
 
@@ -68,11 +72,13 @@ def persistence():
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--res', nargs='*', default=['1920x1080', '2560x1440'])
+    ap.add_argument('--fullscreen', nargs='*', default=[], metavar='WxH',
+                    help="fullscreen captures at the display's resolution (checked against WxH)")
     ap.add_argument('--skip-persistence', action='store_true')
     a = ap.parse_args()
-    for r in a.res:
+    for r, fullscreen in [(r, False) for r in a.res] + [(r, True) for r in a.fullscreen]:
         w, h = map(int, r.split('x'))
-        menus, game = shots(w, h)
+        menus, game = shots(w, h, fullscreen)
         pngs = sorted(menus.glob('*.png')) + sorted(game.glob('*.png'))
         sizes = sorted({Image.open(p).size for p in pngs})
         size_ok = sizes == [(w, h)]

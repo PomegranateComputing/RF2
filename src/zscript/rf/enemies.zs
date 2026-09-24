@@ -330,6 +330,8 @@ class RFRegistryBundle : Actor
 
 class RFPorteRegistre : RFEnemy
 {
+    int boxedTics;
+
     Default
     {
         Health 110;
@@ -350,6 +352,25 @@ class RFPorteRegistre : RFEnemy
         Obituary "$RF_OBIT_PORTE";
     }
 
+    // A_Chase tries a throw only when its move counter is zero, which never happens while every
+    // move fails: boxed in by the player on a narrow stair, the porte-registre stood there
+    // harmless. After about a second without moving, with its target in sight, it throws anyway.
+    void PorteChase()
+    {
+        Vector2 before = Pos.XY;
+        A_Chase();
+        if (!InStateSequence(CurState, ResolveState("See")) || (Pos.XY - before).Length() > 0.01)
+        {
+            boxedTics = 0;
+            return;
+        }
+        if (++boxedTics >= 6 && target != null && target.health > 0 && CheckSight(target))
+        {
+            boxedTics = 0;
+            SetStateLabel("Missile");
+        }
+    }
+
     void PrepareVolley()
     {
         A_FaceTarget();
@@ -361,8 +382,24 @@ class RFPorteRegistre : RFEnemy
     {
         if (target == null || target.health <= 0 || !CheckSight(target)) return;
         A_FaceTarget();
-        // A lobbed bundle: slight upward pitch so it arcs under gravity.
-        A_SpawnProjectile("RFRegistryBundle", 48, 0, 0, CMF_AIMDIRECTION | CMF_ABSOLUTEPITCH, -6);
+        // A lobbed bundle: the arc is aimed at the target, so it lands at any range or height.
+        A_SpawnProjectile("RFRegistryBundle", 48, 0, 0, CMF_AIMDIRECTION | CMF_ABSOLUTEPITCH, LobPitch(target, 48));
+    }
+
+    // Launch pitch (negative = up) of the low arc that brings the bundle onto the target's chest.
+    // A fixed pitch landed at one distance only and flew over a player standing close below.
+    double LobPitch(Actor t, double spawnHeight)
+    {
+        let bundle = GetDefaultByType('RFRegistryBundle');
+        double v = bundle.Speed;
+        double g = bundle.Gravity * Level.Gravity * CurSector.gravity * 0.00125;   // per tic squared
+        double d = max(Distance2D(t), 1);
+        double h = (t.pos.z + t.height * 0.5) - (pos.z + spawnHeight);
+        if (g < 1e-6) return -atan2(h, d);
+        double a = g * d * d / (2 * v * v);
+        double disc = d * d - 4 * a * (a + h);
+        if (disc < 0) return -45;                                                  // out of reach
+        return -atan((d - sqrt(disc)) / (2 * a));
     }
 
     States
@@ -371,10 +408,10 @@ class RFPorteRegistre : RFEnemy
         PREG A 8 RFLook;
         Loop;
     See:
-        PREG B 5 A_Chase;
-        PREG C 5 A_Chase;
-        PREG D 5 A_Chase;
-        PREG E 5 A_Chase;
+        PREG B 5 PorteChase;
+        PREG C 5 PorteChase;
+        PREG D 5 PorteChase;
+        PREG E 5 PorteChase;
         Loop;
     Missile:
         PREG F 26 PrepareVolley;

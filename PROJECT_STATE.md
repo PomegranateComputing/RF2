@@ -16,10 +16,12 @@ UZDoom 5.0.1 / Freedoom 0.13.0 dev IWAD.
       (`scripts/doortest_rf01.py`)
 - [ ] C RF01 combat/art/audio integrated - FAL and 3 enemy families in game; materials, props,
       audio and UI art are stand-ins until the Astra P0 batches; enemy art needs an Astra rework
-- [ ] D UI/menus/HUD complete - implemented; 1080p/1440p captures and persistence check pending
-      (`scripts/ui_evidence.py`)
-- [ ] E save/death/reload/exit end-to-end - run A passes; run B (save, quit, load, death, resume)
-      pending (`scripts/e2e_rf01.py`)
+- [x] D UI/menus/HUD complete - main menu, options (native pages per the UI spec), credits, HUD,
+      level title, pause, death screen; captured at 1080p, 1440p and native 4K; a setting survives
+      a restart (`scripts/ui_evidence.py --fullscreen 3840x2160`). Native option pages keep the
+      engine font and the engine language (`language`, auto = Windows language)
+- [x] E save/death/reload/exit end-to-end - runs A and B pass: new game to RF02; save, quit, load,
+      death, resume, exit (`scripts/e2e_rf01.py`, ordinary player commands)
 - [ ] F two final full runs - human runs by the owner
 - [x] G RF01 standard documented - `docs/RF01_STANDARD.md`
 

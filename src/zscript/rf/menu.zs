@@ -65,7 +65,7 @@ class RFMainMenu : ListMenu
             AddClose("$RF_MENU_RESUME", "r");
             AddItem("$RF_MENU_SAVE", "s", 'SaveGameMenu');
             AddItem("$RF_MENU_LOAD", "c", 'LoadGameMenu');
-            AddItem("$RF_MENU_OPTIONS", "o", 'OptionsMenu');
+            AddItem("$RF_MENU_OPTIONS", "o", 'RFOptionsMenu');
             AddItem("$RF_MENU_MAIN", "m", 'EndGameMenu');
             AddItem("$RF_MENU_QUIT", "q", 'QuitMenu');
         }
@@ -73,7 +73,7 @@ class RFMainMenu : ListMenu
         {
             AddItem("$RF_MENU_NEWGAME", "n", 'PlayerclassMenu');
             AddItem("$RF_MENU_LOAD", "c", 'LoadGameMenu');
-            AddItem("$RF_MENU_OPTIONS", "o", 'OptionsMenu');
+            AddItem("$RF_MENU_OPTIONS", "o", 'RFOptionsMenu');
             AddItem("$RF_MENU_CREDITS", "g", 'RFCreditsMenu');
             AddItem("$RF_MENU_QUIT", "q", 'QuitMenu');
         }
@@ -109,5 +109,17 @@ class RFCreditsMenu : ListMenu
         mDesc.mItems.Push(back);
         mDesc.mYpos = firstY;
         mDesc.mSelectedItem = mDesc.mItems.Size() - 1;
+    }
+}
+
+// RF options page. Items keep the native option drawing (UZDoom builds its option font from its
+// own resources, a mod cannot replace it); the page title uses the RF title face.
+class RFOptionMenu : OptionMenu
+{
+    override void Init(Menu parent, OptionMenuDescriptor desc)
+    {
+        Super.Init(parent, desc);
+        Font face = Font.GetFont('RFTitle');
+        if (face != null) mDesc.mFont = face;
     }
 }

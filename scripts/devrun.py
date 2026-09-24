@@ -64,6 +64,8 @@ def run(pk3, name, map_name=None, norun=False, tour=False, autopilot=False, seco
         marker = marker or 'RF_DEV_DOORTEST_DONE'
     if extra and '+rf_dev_weapons' in extra:
         marker = marker or 'RF_DEV_WEAPONS_DONE'
+    if extra and '+rf_dev_ui' in extra:
+        marker = marker or 'RF_DEV_UI_DONE'
     if speed != 1.0:
         # i_timescale runs more game tics per real second; tic logic is unchanged.
         args += ['+i_timescale', str(speed)]
