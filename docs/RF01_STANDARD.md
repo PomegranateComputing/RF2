@@ -79,7 +79,14 @@ façon sans reprendre sa géométrie. Statut des gates : `PROJECT_STATE.md`.
 8. `python scripts/ui_evidence.py --fullscreen 3840x2160` — menu principal, options, crédits, HUD,
    titre du niveau et pause en 1080p/1440p (fenêtre) et 4K (plein écran), persistance d'un réglage.
 9. `python scripts/devrun.py --map RFNN --name weapons +rf_dev_weapons 1` — tir et recharge en jeu.
-10. Parcours humain : reste indispensable pour la durée de découverte, la lisibilité, le ressenti.
+10. `python scripts/film.py --name <nom> --end 960` — vidéo avec le son réel du moteur (autopilote en temps réel,
+    WAV d'OpenAL, synchronisation par bip) ; `docs/RF01_AUDIO.md` pour la mesure du mix.
+11. `python scripts/devrun.py ... +rf_dev_corpse 1 +r_drawplayersprites 0 +screenblocks 12` — chaque ennemi tué
+    sur sol plat, contre un mur, sur un seuil et un escalier : Z au repos journalisé, chute, quatre côtés, plongée.
+12. `python scripts/devrun.py ... +rf_dev_perf 1 +vid_maxfps 0` — quatre points de vue fixes, durée de chaque image.
+13. `python scripts/export_review.py` puis `JOUER_RF2_ART_REVIEW.cmd` — build de revue figé et daté pour le
+    propriétaire (configuration et sauvegardes de revue séparées), base `6e1a31b` à côté pour comparer.
+14. Parcours humain : reste indispensable pour la durée de découverte, la lisibilité, le ressenti.
 
 Pièges vérifiés des outils de test :
 - `-loadgame` est résolu dans `-savedir` : on passe le nom du fichier, pas son chemin ;
@@ -92,7 +99,16 @@ Pièges vérifiés des outils de test :
 - un lump `DEFCVARS` n'est pas lu depuis un pk3 chargé par `-file` (« Cannot load DEFCVARS from a
   wadfile ») : les valeurs par défaut passent par CVARINFO ou par le lanceur ;
 - sur le bureau invisible (`RF_DEV_HIDDEN=1`), une erreur fatale ouvre une fenêtre que personne ne
-  voit : `devrun.py` la détecte, l'enregistre en PNG à côté du log et arrête le moteur.
+  voit : `devrun.py` la détecte, l'enregistre en PNG à côté du log et arrête le moteur ;
+- le son d'un moteur caché sort quand même sur les haut-parleurs : `devrun.py` impose la sortie nulle d'OpenAL
+  (`ALSOFT_DRIVERS=null`), ou l'enregistreur WAV (`audio_wav`) ;
+- une CVar passée en `+cvar valeur` est enregistrée dans la configuration à une sortie propre : `+con_notifylines 0`
+  y était resté et masquait les messages de ramassage dans toutes les captures ;
+- lumières dynamiques : la CVar est `r_dynlights` (`gl_lights` n'a aucun effet ici). Elles s'ajoutent à la
+  lumière de secteur : près des lampes de RF01, les surfaces et les sprites montent d'environ ×1,3 à ×1,6. Les
+  sprites doivent garder de la marge dans les tons clairs, sinon ils brûlent au blanc ;
+- les messages du moteur (ramassages, notes, verrous) passent par `ProcessNotify` et `ProcessMidPrint` de la
+  barre d'état : le HUD RF les dessine lui-même ; `A_Print` règle `con_midtime` pendant l'appel (durée lisible).
 
 Aucune preuve de progression ne repose sur noclip, god, warp ou give. Le tour de captures,
 le test des portes et la capture d'arme téléportent le joueur ou donnent des objets : ils

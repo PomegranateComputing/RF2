@@ -69,9 +69,9 @@ RF_LOCK_GALERIE = "La grille de la galerie ne s'ouvre que depuis l'intérieur.";
 RF_MONSTER_ORDERLY = "Infirmier";
 RF_MONSTER_BRANCARDIER = "Brancardier";
 RF_MONSTER_PORTE = "Porte-Registre";
-RF_OBIT_ORDERLY = "%o a été maîtrisé par un infirmier.";
-RF_OBIT_BRANCARDIER = "%o a été heurté par le brancardier.";
-RF_OBIT_PORTE = "%o a été classé par un porte-registre.";
+RF_OBIT_ORDERLY = "Viktor a été maîtrisé par un infirmier.";
+RF_OBIT_BRANCARDIER = "Viktor a été heurté par le brancardier.";
+RF_OBIT_PORTE = "Viktor a été classé par un porte-registre.";
 
 RF_OBJ_WAKE = "Sortir de la chambre.";
 RF_OBJ_GRILLE = "Trouver la clé de la grille du pavillon.";

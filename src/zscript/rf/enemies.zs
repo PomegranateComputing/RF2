@@ -309,7 +309,10 @@ class RFRegistryBundle : Actor
         Radius 6;
         Height 8;
         Speed 20;
-        Damage 9;
+        // 9 per hit, as declared. "Damage 9" means 9 x 1d8 (9-72) for a projectile: once the throw
+        // was aimed (it used to miss), a bundle took 71 health at once in run B, above the
+        // brancardier's charge (20-28). The family's scale is the melee range 8-14 / 20-28.
+        DamageFunction 9;
         Gravity 0.35;
         Projectile;
         -NOGRAVITY
