@@ -41,10 +41,10 @@ class RFBulletPuff : Actor
         bool body = material == 4;
         Color grit = body ? 0x762d28 : material == 2 ? 0x795137 : material == 3 ? 0xc7c4ad : 0xc1b39a;
         Color haze = body ? 0x713932 : material == 2 ? 0x635044 : 0xa39d90;
-        if (body) A_StartSound("rf/impact/flesh", CHAN_BODY, 0, 0.65);
-        else if (material == 1) A_StartSound("rf/impact/plaster", CHAN_BODY, 0, 0.6);
-        else if (material == 2) A_StartSound("rf/impact/wood", CHAN_BODY, 0, 0.6);
-        else if (material == 3) A_StartSound("rf/impact/metal", CHAN_BODY, 0, 0.6);
+        if (body) A_StartSound("rf/impact/flesh", CHAN_BODY, 0, 0.85);
+        else if (material == 1) A_StartSound("rf/impact/plaster", CHAN_BODY, 0, 0.85);
+        else if (material == 2) A_StartSound("rf/impact/wood", CHAN_BODY, 0, 0.85);
+        else if (material == 3) A_StartSound("rf/impact/metal", CHAN_BODY, 0, 0.85);
         if (material == 0) return;
         for (int i = 0; i < 8; i++)
         {
@@ -119,7 +119,8 @@ class RFBrowning : Weapon
     FireLoaded:
         BHPG B 2 Bright
         {
-            A_StartSound("rf/browning/fire", CHAN_WEAPON);
+            // Overlap: the next shot must not cut the tail of this one.
+            A_StartSound("rf/browning/fire", CHAN_WEAPON, CHANF_OVERLAP);
             A_GunFlash();
             A_FireBullets(1.0, 0.6, 1, 18, "RFBulletPuff", FBF_USEAMMO | FBF_NORANDOM);
             A_WeaponOffset(-1, 34);
@@ -228,7 +229,7 @@ class RFFAL : Weapon
     FireLoaded:
         RFLV B 2 Bright
         {
-            A_StartSound("rf/fal/shot", CHAN_WEAPON);
+            A_StartSound("rf/fal/shot", CHAN_WEAPON, CHANF_OVERLAP);
             A_GunFlash();
             A_WeaponOffset(1, 35);
             A_FireBullets(1.2, 0.7, 1, 30, "RFBulletPuff", FBF_NORANDOM);

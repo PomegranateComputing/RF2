@@ -5,6 +5,13 @@ class RFStatusBar : BaseStatusBar
     HUDFont labelFont;
     HUDFont numberFont;
     HUDFont bigFont;
+    // Engine messages drawn by the HUD itself (ProcessNotify / ProcessMidPrint): pickups under
+    // the objective, centred messages (notes, locks, winch) on a dark backing, in the RF faces.
+    // The engine drew them in its red pixel font over the objective.
+    Array<String> noteText;
+    Array<int> noteStart;
+    String midText;
+    int midStart, midTics;
 
     TextureID ViktorPortrait() const
     {
@@ -44,6 +51,102 @@ class RFStatusBar : BaseStatusBar
             }
             y += i == 0 ? 26 : 18;
         }
+    }
+
+    // Pickup lines (PRINT_LOW) and other notify lines. RF_DEV_ markers stay in the console and
+    // the log, never on the player's screen.
+    override bool ProcessNotify(EPrintLevel printlevel, String outline)
+    {
+        String text = outline;
+        text.StripLeftRight();
+        if (text == "" || text.Left(7) == "RF_DEV_" || text.Left(7) == "RF_DBG_") return true;
+        noteText.Push(text);
+        noteStart.Push(Level.maptime);
+        while (noteText.Size() > 3)
+        {
+            noteText.Delete(0);
+            noteStart.Delete(0);
+        }
+        return true;
+    }
+
+    override void FlushNotify()
+    {
+        noteText.Clear();
+        noteStart.Clear();
+    }
+
+    // Centred messages keep the duration asked by A_Print (it sets con_midtime around the call).
+    override bool ProcessMidPrint(Font fnt, String msg, bool bold)
+    {
+        midText = msg;
+        midText.StripLeftRight();
+        midStart = Level.maptime;
+        let midtime = CVar.FindCVar('con_midtime');
+        midTics = int(35 * (midtime != null ? max(midtime.GetFloat(), 1.0) : 3.0));
+        return true;
+    }
+
+    // Text wrapped to a width in virtual units, one line per entry.
+    void Wrap(HUDFont face, String text, double width, double scale, out Array<String> lines)
+    {
+        lines.Clear();
+        let broken = face.mFont.BreakLines(StringTable.Localize(text), int(width / scale));
+        for (int i = 0; i < broken.Count(); i++) lines.Push(broken.StringAt(i));
+    }
+
+    void DrawMessages(double s, String objective)
+    {
+        Array<String> lines;
+        // Top left: objective (wrapped), then pickups, three at most, 3 s and a half-second fade,
+        // over a light dark backing that keeps them readable on the bright plaster.
+        Array<String> rows;
+        Array<double> alphas;
+        Array<int> colours;
+        Array<double> scales;
+        if (objective != "")
+        {
+            Wrap(labelFont, objective, 300 * s, s * 0.9, lines);
+            for (int k = 0; k < lines.Size(); k++) { rows.Push(lines[k]); alphas.Push(0.95); colours.Push(Font.CR_WHITE); scales.Push(0.9); }
+        }
+        for (int i = 0; i < noteText.Size(); i++)
+        {
+            double age = Level.maptime - noteStart[i];
+            double a = clamp((122.5 - age) / 17.5, 0.0, 1.0);
+            if (a <= 0) continue;
+            Wrap(labelFont, noteText[i], 300 * s, s * 0.8, lines);
+            for (int k = 0; k < lines.Size(); k++) { rows.Push(lines[k]); alphas.Push(a); colours.Push(Font.CR_TAN); scales.Push(0.8); }
+        }
+        if (rows.Size() > 0)
+        {
+            double widest = 0, height = 0;
+            for (int k = 0; k < rows.Size(); k++)
+            {
+                widest = max(widest, labelFont.mFont.StringWidth(rows[k]) * s * scales[k]);
+                height += (scales[k] > 0.85 ? 13 : 11) * s;
+            }
+            Fill(Color(80, 12, 10, 11), 6 * s, 6 * s, widest + 12 * s, height + 6 * s, DI_SCREEN_LEFT_TOP);
+            double y = 9 * s;
+            for (int k = 0; k < rows.Size(); k++)
+            {
+                double sc = s * scales[k];
+                DrawString(labelFont, rows[k], (12 * s, y), DI_SCREEN_LEFT_TOP | DI_ITEM_LEFT_TOP, colours[k], alphas[k], -1, 0, (sc, sc));
+                y += (scales[k] > 0.85 ? 13 : 11) * s;
+            }
+        }
+        // Centred message: lower third, over a dark band sized to the text.
+        if (midText == "") return;
+        double age = Level.maptime - midStart;
+        double a = clamp((midTics - age) / 17.5, 0.0, 1.0);
+        if (a <= 0) return;
+        Wrap(labelFont, midText, 400 * s, s, lines);
+        double lineH = 15 * s;
+        double top = 214 * s - lines.Size() * lineH;
+        double widest = 0;
+        for (int k = 0; k < lines.Size(); k++) widest = max(widest, labelFont.mFont.StringWidth(lines[k]) * s);
+        Fill(Color(int(150 * a), 12, 10, 11), -widest / 2 - 10 * s, top - 6 * s, widest + 20 * s, lines.Size() * lineH + 10 * s, DI_SCREEN_CENTER_TOP);
+        for (int k = 0; k < lines.Size(); k++)
+            DrawString(labelFont, lines[k], (0, top + k * lineH), DI_SCREEN_CENTER_TOP | DI_TEXT_ALIGN_CENTER, Font.CR_WHITE, a, -1, 0, (s, s));
     }
 
     override void Init()
@@ -130,8 +233,6 @@ class RFStatusBar : BaseStatusBar
         // Objective (top left, small) and level title flash.
         if (director != null)
         {
-            if (director.objective != "")
-                DrawString(labelFont, director.objective, (12 * s, 10 * s), DI_SCREEN_LEFT_TOP | DI_ITEM_LEFT_TOP, Font.CR_GREY, 0.9, -1, 0, (s * 0.9, s * 0.9));
             if (director.titleTics > 0)
             {
                 double a = min(1.0, director.titleTics / 35.0);
@@ -149,6 +250,8 @@ class RFStatusBar : BaseStatusBar
                 DrawString(labelFont, KeyPrompt("+use", verb), (0, 40 * s), DI_SCREEN_CENTER_BOTTOM | DI_TEXT_ALIGN_CENTER, Font.CR_WHITE, 0.9, -1, 0, (s * 0.85, s * 0.85));
             }
         }
+
+        DrawMessages(s, director != null ? director.objective : "");
 
         if (director != null && director.outro)
         {

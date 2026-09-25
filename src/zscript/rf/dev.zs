@@ -27,6 +27,18 @@ class RFDevHandler : StaticEventHandler
     // menu pauses the game, so the last capture and the end marker run on the UI clock);
     // rf_dev_ui 2 on the title screen (main menu, options, credits).
     bool uiShots;
+    bool msgShots;          // rf_dev_ui 3: real pickups and a note at the player's feet, captured
+    // Corpse inspection (rf_dev_corpse): each enemy class killed on flat floor, against a wall,
+    // on a door threshold and on a stair; the fall is photographed, then the body from four sides
+    // and from above, and its resting state is logged (Z against the floor under it, flags).
+    bool corpseTest;
+    int cpIndex, cpTimer;
+    Actor cpBody;
+    // Film (rf_dev_film N): a screenshot every N tics between rf_dev_film_start and _end, each with
+    // its millisecond clock, and RF_DEV_SHOT at every player shot, which anchors the game's WAV
+    // capture (devrun audio_wav) to the pictures. scripts/film.py assembles the video with sound.
+    int filmEvery, filmStart, filmEnd;
+    int lastPistol, lastMag;
     ui int uiMenuTics;
     ui int uiTitleTics;
     Array<int> dtLines;
@@ -73,7 +85,15 @@ class RFDevHandler : StaticEventHandler
         doortest = CVar.GetCVar('rf_dev_doortest').GetBool();
         weaponShots = CVar.GetCVar('rf_dev_weapons').GetBool();
         uiShots = CVar.GetCVar('rf_dev_ui').GetInt() == 1;
-        logging = tour || autopilot || doortest || weaponShots || uiShots || CVar.GetCVar('rf_dev_log').GetBool();
+        msgShots = CVar.GetCVar('rf_dev_ui').GetInt() == 3;
+        corpseTest = CVar.GetCVar('rf_dev_corpse').GetBool();
+        cpIndex = 0; cpTimer = 0; cpBody = null;
+        filmEvery = CVar.GetCVar('rf_dev_film').GetInt();
+        filmStart = CVar.GetCVar('rf_dev_film_start').GetInt();
+        filmEnd = CVar.GetCVar('rf_dev_film_end').GetInt();
+        lastPistol = -1;
+        lastMag = -1;
+        logging = tour || autopilot || doortest || weaponShots || uiShots || corpseTest || filmEvery > 0 || CVar.GetCVar('rf_dev_log').GetBool();
         dtLines.Clear();
         dtSides.Clear();
         dtIndex = 0; dtPhase = 0; dtTimer = 0; dtPass = 0; dtOpen = 0; dtShut = 0;
@@ -157,11 +177,138 @@ class RFDevHandler : StaticEventHandler
     {
         ticks++;
         if (tour) TourTick();
+        if (filmEvery > 0) FilmTick();
+        if (msgShots) MessageTick();
+        if (corpseTest) CorpseTick();
         if (uiShots)
         {
             if (Level.Time == 60 || Level.Time == 230) Level.MakeScreenShot();
             if (Level.Time == 240) Menu.SetMenu('MainMenu');
         }
+    }
+
+    // Spots: corridor centre, corridor north wall, admissions south door strip, west laundry stair.
+    static const double CP_X[] = { -300, -200, 384, 880 };
+    static const double CP_Y[] = { -368, -323, -64, 736 };
+    static const double CP_A[] = { 0, 180, 90, 0 };
+
+    void CorpseTick()
+    {
+        let pmo = players[consoleplayer].mo;
+        if (pmo == null) return;
+        if (Level.Time == 5) Level.ExecuteSpecial(11, null, null, false, 10, 64);   // Door_Open tag 10: the threshold spot
+        if (Level.Time < 70) return;
+        static const Name kinds[] = { 'RFOrderly', 'RFBrancardier', 'RFPorteRegistre' };
+        int total = 3 * 4;
+        if (cpIndex >= total)
+        {
+            if (cpTimer++ == 0) Console.Printf("RF_DEV_CORPSE_DONE");
+            return;
+        }
+        int spot = cpIndex % 4;
+        class<Actor> kind = kinds[cpIndex / 4];
+        Vector2 at = (CP_X[spot], CP_Y[spot]);
+        Sector sec = Level.PointInSector(at);
+        double floor = sec.floorplane.ZAtPoint(at);
+        if (cpTimer == 0)
+        {
+            cpBody = Actor.Spawn(kind, (at, floor), ALLOW_REPLACE);
+            if (cpBody == null) { cpIndex++; return; }
+            cpBody.angle = CP_A[spot];
+            // Watch the fall from 128 units in front of the body.
+            ViewFrom(pmo, cpBody, CP_A[spot], 128, 0);
+        }
+        if (cpTimer == 4 && cpBody != null) cpBody.DamageMobj(null, null, 1000, 'None');
+        // The fall: frames right after the hit, then the resting pose.
+        if (cpTimer == 5 || cpTimer == 11 || cpTimer == 18 || cpTimer == 26 || cpTimer == 40) Level.MakeScreenShot();
+        if (cpTimer == 60 && cpBody != null)
+        {
+            double under = cpBody.CurSector.floorplane.ZAtPoint(cpBody.Pos.XY);
+            Console.Printf("RF_DEV_CORPSE class=%s spot=%d x=%.0f y=%.0f z=%.2f floorz=%.2f under=%.2f dz=%.2f solid=%d shootable=%d height=%.1f radius=%.1f frame=%d tics=%d vel=%.2f",
+                cpBody.GetClassName(), spot, cpBody.Pos.X, cpBody.Pos.Y, cpBody.Pos.Z, cpBody.floorz, under, cpBody.Pos.Z - cpBody.floorz,
+                cpBody.bSolid, cpBody.bShootable, cpBody.Height, cpBody.radius, cpBody.frame, cpBody.tics, cpBody.Vel.Length());
+        }
+        // Around the resting body: four sides at eye level, then from above.
+        static const double around[] = { 0, 90, 180, 270 };
+        for (int k = 0; k < 4; k++)
+        {
+            if (cpTimer == 62 + k * 6 && cpBody != null) ViewFrom(pmo, cpBody, CP_A[spot] + around[k], 96, 0);
+            if (cpTimer == 65 + k * 6) Level.MakeScreenShot();
+        }
+        if (cpTimer == 86 && cpBody != null) ViewFrom(pmo, cpBody, CP_A[spot] + 45, 40, 1);
+        if (cpTimer == 89) Level.MakeScreenShot();
+        if (++cpTimer > 95)
+        {
+            if (cpBody != null) cpBody.Destroy();
+            cpBody = null;
+            cpTimer = 0;
+            cpIndex++;
+        }
+    }
+
+    // The view from `dist` units in front of the body along `side`, looking at it; high: from above.
+    void ViewFrom(Actor pmo, Actor body, double side, double dist, int high)
+    {
+        // Stay inside the level: stop 24 units short of the first wall in that direction.
+        FLineTraceData hit;
+        if (body.LineTrace(side, dist + 24, 0, TRF_THRUACTORS | TRF_NOSKY, 36, 0, 0, hit))
+            dist = max(24.0, hit.Distance - 24);
+        Vector2 at = body.Pos.XY + (cos(side), sin(side)) * dist;
+        Sector sec = Level.PointInSector(at);
+        pmo.SetOrigin((at, sec.floorplane.ZAtPoint(at)), false);
+        pmo.Vel = (0, 0, 0);
+        pmo.angle = side + 180;
+        double eye = pmo.Pos.Z + PlayerPawn(pmo).ViewHeight;
+        double dz = (body.Pos.Z + 6) - eye;
+        pmo.pitch = high ? atan2(eye - body.Pos.Z, dist) : -atan2(dz, dist);
+    }
+
+    void MessageTick()
+    {
+        let pmo = players[consoleplayer].mo;
+        if (pmo == null) return;
+        // Touch: the engine's own pickup path (message, sound), as when walking over the item.
+        class<Inventory> kind = null;
+        if (Level.Time == 180) kind = 'RFPistolAmmo';
+        if (Level.Time == 186) kind = 'RFFieldDressing';
+        if (Level.Time == 192) kind = 'RFGrilleKey';
+        if (kind != null)
+        {
+            let item = Inventory(Actor.Spawn(kind, pmo.Pos));
+            if (item != null) item.Touch(pmo);
+        }
+        if (Level.Time == 200) pmo.A_Print(StringTable.Localize("$RF_NOTE_3"), 6.0);
+        if (Level.Time == 206 || Level.Time == 300 || Level.Time == 420) Level.MakeScreenShot();
+        if (Level.Time == 430) Console.Printf("RF_DEV_UI_DONE");
+    }
+
+    void FilmTick()
+    {
+        let pmo = players[consoleplayer].mo;
+        if (pmo != null)
+        {
+            // A shot of the previous tic: the reserve or the magazine went down.
+            int pistol = pmo.CountInv('RFPistolAmmo');
+            let fal = RFFAL(pmo.FindInventory('RFFAL'));
+            int mag = fal != null ? fal.Magazine : -1;
+            if ((lastPistol >= 0 && pistol < lastPistol) || (lastMag >= 0 && mag >= 0 && mag < lastMag))
+                Console.Printf("RF_DEV_SHOT t=%d ms=%.1f", Level.Time - 1, MSTimeF());
+            lastPistol = pistol;
+            lastMag = mag;
+        }
+        if (Level.Time == 1 && pmo != null)
+        {
+            // Sync tone for the sound track; the filmed span starts later (rf_dev_film_start).
+            pmo.A_StartSound("rf/dev/sync", CHAN_AUTO, CHANF_DEFAULT, 1.0, ATTN_NONE);
+            Console.Printf("RF_DEV_SYNC t=1 ms=%.1f", MSTimeF());
+        }
+        if (Level.Time < filmStart || Level.Time > filmEnd) return;
+        if ((Level.Time - filmStart) % filmEvery == 0)
+        {
+            Level.MakeScreenShot();
+            Console.Printf("RF_DEV_FILM t=%d ms=%.1f", Level.Time, MSTimeF());
+        }
+        if (Level.Time == filmEnd) Console.Printf("RF_DEV_FILM_DONE");
     }
 
     override void UiTick()

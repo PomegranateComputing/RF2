@@ -22,11 +22,14 @@ DEV = ROOT / 'build' / 'dev'
 
 
 def run(pk3, name, map_name=None, norun=False, tour=False, autopilot=False, seconds=60,
-        marker=None, extra=None, width=None, height=None, quiet=False, speed=1.0, loadgame=None):
+        marker=None, extra=None, width=None, height=None, quiet=False, speed=1.0, loadgame=None, audio_wav=None):
     """marker: substring, or 're:<regex>' to stop on the first matching console line.
 
     width/height: client size of the game window (vid_setsize). Without them the window keeps the
-    size stored in the config: -width/-height do nothing in windowed mode."""
+    size stored in the config: -width/-height do nothing in windowed mode.
+    audio_wav: the game's mixed sound output is written to this WAV (OpenAL Soft wave writer,
+    32-bit float stereo) instead of the speakers. Hidden runs without it use OpenAL's null output:
+    on a shared machine a test never sounds in the room."""
     DEV.mkdir(parents=True, exist_ok=True)
     cfg = DEV / 'uzdoom.ini'
     if not cfg.exists():
@@ -39,7 +42,7 @@ def run(pk3, name, map_name=None, norun=False, tour=False, autopilot=False, seco
     log.parent.mkdir(parents=True, exist_ok=True)
     args = [str(ENGINE), '-stdout', '-iwad', str(IWAD), '-file', str(pk3), '-config', str(cfg),
             '-savedir', str(DEV / 'saves'),
-            '+vid_fullscreen', '0', '+screenshot_dir', str(shots), '+screenshot_type', 'png', '+enablescriptscreenshot', '1', '+con_notifylines', '0',
+            '+vid_fullscreen', '0', '+screenshot_dir', str(shots), '+screenshot_type', 'png', '+enablescriptscreenshot', '1',
             '+i_pauseinbackground', '0']   # a shared machine: another window taking focus must not pause the test
     if norun:
         args.append('-norun')
@@ -73,13 +76,31 @@ def run(pk3, name, map_name=None, norun=False, tour=False, autopilot=False, seco
         args += extra
     start = time.time()
     hidden = os.environ.get('RF_DEV_HIDDEN') == '1'   # shared machine: run on an invisible desktop
+    sound_env = {}
+    if audio_wav:
+        conf = log.with_name(f'{name}_alsoft.ini')
+        conf.write_text('\n'.join(['[general]', 'drivers = wave', '[wave]', f'file = {Path(audio_wav).as_posix()}',
+                                   'bformat = false', '']), encoding='utf-8')
+        Path(audio_wav).unlink(missing_ok=True)
+        sound_env = {'ALSOFT_DRIVERS': 'wave', 'ALSOFT_CONF': str(conf)}
+    elif hidden:
+        sound_env = {'ALSOFT_DRIVERS': 'null'}
+    saved_env = {k: os.environ.get(k) for k in sound_env}
+    os.environ.update(sound_env)              # read by the child at creation, restored right after
     with open(log, 'w', encoding='utf-8', errors='replace') as lf:
-        if hidden:
-            lf.close()
-            from hiddendesk import HiddenProcess
-            proc = HiddenProcess(args, log, cwd=ROOT)
-        else:
-            proc = subprocess.Popen(args, stdout=lf, stderr=subprocess.STDOUT, cwd=str(ROOT))
+        try:
+            if hidden:
+                lf.close()
+                from hiddendesk import HiddenProcess
+                proc = HiddenProcess(args, log, cwd=ROOT)
+            else:
+                proc = subprocess.Popen(args, stdout=lf, stderr=subprocess.STDOUT, cwd=str(ROOT))
+        finally:
+            for k, v in saved_env.items():
+                if v is None:
+                    os.environ.pop(k, None)
+                else:
+                    os.environ[k] = v
         status = 'exited'
         while True:
             rc = proc.poll()
