@@ -32,6 +32,13 @@ class RFDevHandler : StaticEventHandler
     // on a door threshold and on a stair; the fall is photographed, then the body from four sides
     // and from above, and its resting state is logged (Z against the floor under it, flags).
     bool corpseTest;
+    // Performance (rf_dev_perf): four fixed tour viewpoints held 5 s each; every rendered frame is
+    // timed (RenderOverlay) and RF_DEV_PERF gives the frame count, mean and worst frame times.
+    bool perfTest;
+    int perfScene, perfTimer;
+    ui int pfScene, pfFrames;
+    ui double pfLast, pfSum, pfWorst;
+    ui Array<double> pfTimes;
     int cpIndex, cpTimer;
     Actor cpBody;
     // Film (rf_dev_film N): a screenshot every N tics between rf_dev_film_start and _end, each with
@@ -87,13 +94,15 @@ class RFDevHandler : StaticEventHandler
         uiShots = CVar.GetCVar('rf_dev_ui').GetInt() == 1;
         msgShots = CVar.GetCVar('rf_dev_ui').GetInt() == 3;
         corpseTest = CVar.GetCVar('rf_dev_corpse').GetBool();
+        perfTest = CVar.GetCVar('rf_dev_perf').GetBool();
+        perfScene = -1; perfTimer = 0;
         cpIndex = 0; cpTimer = 0; cpBody = null;
         filmEvery = CVar.GetCVar('rf_dev_film').GetInt();
         filmStart = CVar.GetCVar('rf_dev_film_start').GetInt();
         filmEnd = CVar.GetCVar('rf_dev_film_end').GetInt();
         lastPistol = -1;
         lastMag = -1;
-        logging = tour || autopilot || doortest || weaponShots || uiShots || corpseTest || filmEvery > 0 || CVar.GetCVar('rf_dev_log').GetBool();
+        logging = tour || autopilot || doortest || weaponShots || uiShots || corpseTest || perfTest || filmEvery > 0 || CVar.GetCVar('rf_dev_log').GetBool();
         dtLines.Clear();
         dtSides.Clear();
         dtIndex = 0; dtPhase = 0; dtTimer = 0; dtPass = 0; dtOpen = 0; dtShut = 0;
@@ -180,6 +189,7 @@ class RFDevHandler : StaticEventHandler
         if (filmEvery > 0) FilmTick();
         if (msgShots) MessageTick();
         if (corpseTest) CorpseTick();
+        if (perfTest) PerfTick();
         if (uiShots)
         {
             if (Level.Time == 60 || Level.Time == 230) Level.MakeScreenShot();
@@ -261,6 +271,72 @@ class RFDevHandler : StaticEventHandler
         double eye = pmo.Pos.Z + PlayerPawn(pmo).ViewHeight;
         double dz = (body.Pos.Z + 6) - eye;
         pmo.pitch = high ? atan2(eye - body.Pos.Z, dist) : -atan2(dz, dist);
+    }
+
+    static const int PERF_POINTS[] = { 1, 5, 9, 13 };
+
+    void PerfTick()
+    {
+        let pmo = players[consoleplayer].mo;
+        if (pmo == null || Level.Time < 70 || tourPoints.Size() < 14) return;
+        if (perfTimer == 0)
+        {
+            perfScene++;
+            if (perfScene >= 4)
+            {
+                if (perfScene == 4) Console.Printf("RF_DEV_PERF_DONE");
+                perfScene = 5;
+                return;
+            }
+            Actor pt = tourPoints[PERF_POINTS[perfScene]];
+            pmo.SetOrigin((pt.Pos.X, pt.Pos.Y, pt.floorz), false);
+            pmo.angle = pt.angle;
+            pmo.pitch = pt.args[1];
+            pmo.Vel = (0, 0, 0);
+            if (pmo.player != null) pmo.player.cheats |= CF_NOCLIP | CF_GODMODE;
+        }
+        pmo.Vel = (0, 0, 0);
+        if (++perfTimer >= 35 * 6) perfTimer = 0;   // 1 s to settle, 5 s measured (UI side)
+    }
+
+    // Frame timing: the second after arrival settles, the next five are measured.
+    override void RenderOverlay(RenderEvent e)
+    {
+        if (!perfTest || perfScene < 0) return;
+        if (perfScene > 3)
+        {
+            if (pfScene == 4 && pfFrames > 0) PerfReport();
+            pfScene = 5;
+            return;
+        }
+        double now = MSTimeF();
+        if (pfScene != perfScene + 1)
+        {
+            if (pfScene > 0 && pfFrames > 0) PerfReport();
+            pfScene = perfScene + 1;
+            pfFrames = 0; pfSum = 0; pfWorst = 0; pfLast = now;
+            pfTimes.Clear();
+            return;
+        }
+        double dt = now - pfLast;
+        pfLast = now;
+        if (perfTimer < 35) return;
+        pfFrames++;
+        pfSum += dt;
+        pfWorst = max(pfWorst, dt);
+        pfTimes.Push(dt);
+    }
+
+    ui void PerfReport()
+    {
+        int over16 = 0, over33 = 0;
+        for (int i = 0; i < pfTimes.Size(); i++)
+        {
+            if (pfTimes[i] > 16.7) over16++;
+            if (pfTimes[i] > 33.3) over33++;
+        }
+        Console.Printf("RF_DEV_PERF scene=%d point=%d frames=%d mean_ms=%.2f fps=%.1f over16ms=%d over33ms=%d worst_ms=%.2f",
+            pfScene, PERF_POINTS[pfScene - 1], pfFrames, pfSum / max(pfFrames, 1), 1000.0 * pfFrames / max(pfSum, 1), over16, over33, pfWorst);
     }
 
     void MessageTick()
