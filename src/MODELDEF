@@ -81,6 +81,8 @@ Model RFOrderly
     Scale 5 5 6
     CorrectPixelStretch
     IgnoreTranslation
+    USEACTORPITCH
+    USEACTORROLL
     FrameIndex ORDY M 0 0
 }
 Model RFOrderlyCorpse
@@ -91,6 +93,8 @@ Model RFOrderlyCorpse
     Scale 5 5 6
     CorrectPixelStretch
     IgnoreTranslation
+    USEACTORPITCH
+    USEACTORROLL
     FrameIndex ORDY M 0 0
 }
 
@@ -102,6 +106,8 @@ Model RFBrancardier
     Scale 5 5 6
     CorrectPixelStretch
     IgnoreTranslation
+    USEACTORPITCH
+    USEACTORROLL
     FrameIndex BRCD M 0 0
 }
 Model RFPorteRegistre
@@ -112,6 +118,8 @@ Model RFPorteRegistre
     Scale 5 5 6
     CorrectPixelStretch
     IgnoreTranslation
+    USEACTORPITCH
+    USEACTORROLL
     FrameIndex PREG K 0 0
 }
 

@@ -152,7 +152,7 @@ class RFOrderly : RFEnemy
         ORDY J 6 { Vel.X = Vel.Y = 0; A_Scream(); }
         ORDY K 7 A_NoBlocking;
         ORDY L 8 A_StartSound("rf/world/body_fall", CHAN_BODY, 0, 0.65);
-        ORDY M -1;
+        ORDY M -1 { RFBody.Settle(self, -30.5, 33.3, -19.4, 23.2); }
         Stop;
     }
 }
@@ -172,7 +172,7 @@ class RFOrderlyCorpse : Actor
     States
     {
     Spawn:
-        ORDY M -1;
+        ORDY M -1 NoDelay { RFBody.Settle(self, -30.5, 33.3, -19.4, 23.2); }
         Stop;
     }
 }
@@ -297,7 +297,7 @@ class RFBrancardier : RFEnemy
         BRCD J 7 { BeginRecovery(); A_Scream(); }
         BRCD K 8 A_NoBlocking;
         BRCD L 10 A_StartSound("rf/world/body_fall", CHAN_BODY, 0, 0.8);
-        BRCD M -1;
+        BRCD M -1 { RFBody.Settle(self, -49.1, 33.3, -47.3, 13.7); }
         Stop;
     }
 }
@@ -428,7 +428,7 @@ class RFPorteRegistre : RFEnemy
     Death:
         PREG I 7 A_Scream;
         PREG J 7 { A_NoBlocking(); A_StartSound("rf/world/body_fall", CHAN_BODY, 0, 0.65); }
-        PREG K -1;
+        PREG K -1 { RFBody.Settle(self, -31.3, 37.9, -19.2, 23.6); }
         Stop;
     }
 }
@@ -445,5 +445,141 @@ class RFArtBlood : Blood
     Spray:
         RFBX ABC 6;
         Stop;
+    }
+}
+
+// Terminal pose of a body drawn by a static model (MODELDEF, USEACTORPITCH/ROLL). A rigid model
+// laid flat cuts into steps and walls: once, when the final frame starts, the body turns away
+// from a wall its length would cross, then tilts along the floor under it so that it rests on
+// the step edges. Extents are the model's footprint (units, t forward = feet, s to the left).
+// Collisions are untouched: the body is already non-solid; its radius only decides the floor
+// under it (floorz), so it shrinks to the centre, and the pose is then held (no gravity).
+class RFBody play
+{
+    static bool Crosses(Vector2 a, Vector2 b, double tmin, double tmax, double smin, double smax)
+    {
+        // Liang-Barsky: does segment a-b (body coordinates) enter the footprint rectangle?
+        double u0 = 0, u1 = 1;
+        double dx = b.X - a.X, dy = b.Y - a.Y;
+        double p[4], q[4];
+        p[0] = -dx; q[0] = a.X - tmin;
+        p[1] = dx;  q[1] = tmax - a.X;
+        p[2] = -dy; q[2] = a.Y - smin;
+        p[3] = dy;  q[3] = smax - a.Y;
+        for (int i = 0; i < 4; i++)
+        {
+            if (abs(p[i]) < 1e-9)
+            {
+                if (q[i] < 0) return false;
+                continue;
+            }
+            double r = q[i] / p[i];
+            if (p[i] < 0) { if (r > u1) return false; if (r > u0) u0 = r; }
+            else { if (r < u0) return false; if (r < u1) u1 = r; }
+        }
+        return u0 <= u1;
+    }
+
+    // Obstacles the footprint crosses at this heading: walls, ledges over 24 units, closed doors.
+    static int Obstacles(Actor body, double ang, double floor, double tmin, double tmax, double smin, double smax)
+    {
+        int count = 0;
+        Vector2 fwd = (cos(ang), sin(ang)), left = (-sin(ang), cos(ang));
+        let it = BlockLinesIterator.Create(body, 96);
+        while (it.Next())
+        {
+            Line l = it.CurLine;
+            bool blocks = l.backsector == null;
+            if (!blocks)
+            {
+                Vector2 mid = (l.v1.p + l.v2.p) / 2;
+                double top = max(l.frontsector.floorplane.ZAtPoint(mid), l.backsector.floorplane.ZAtPoint(mid));
+                double low = min(l.frontsector.ceilingplane.ZAtPoint(mid), l.backsector.ceilingplane.ZAtPoint(mid));
+                blocks = top - floor > 24 || low - top < 16;
+            }
+            if (!blocks) continue;
+            Vector2 a = l.v1.p - body.Pos.XY, b = l.v2.p - body.Pos.XY;
+            Vector2 la = (a dot fwd, a dot left), lb = (b dot fwd, b dot left);
+            if (Crosses(la, lb, tmin + 2, tmax - 2, smin + 2, smax - 2)) count++;
+        }
+        return count;
+    }
+
+    // Lowest line resting on every sample (upper support): returns slope and height at 0.
+    static double, double Support(Array<double> at, Array<double> z)
+    {
+        double bestM = 0, bestC = -1e9;
+        for (int i = 0; i < z.Size(); i++) bestC = max(bestC, z[i]);   // flat on the highest point
+        for (int i = 0; i < z.Size(); i++)
+        {
+            for (int j = i + 1; j < z.Size(); j++)
+            {
+                if (abs(at[j] - at[i]) < 1) continue;
+                double m = (z[j] - z[i]) / (at[j] - at[i]);
+                double c = z[i] - m * at[i];
+                bool valid = true;
+                for (int k = 0; k < z.Size() && valid; k++) valid = z[k] <= c + m * at[k] + 0.01;
+                if (valid && c < bestC - 0.01) { bestC = c; bestM = m; }
+            }
+        }
+        return bestM, bestC;
+    }
+
+    static void Settle(Actor body, double tmin, double tmax, double smin, double smax)
+    {
+        if (body == null) return;
+        double floor = body.floorz;
+        // Heading: the original one if the footprint is clear, else the nearest clearer one.
+        double bestAng = body.angle;
+        int best = Obstacles(body, body.angle, floor, tmin, tmax, smin, smax);
+        for (int k = 1; k <= 8 && best > 0; k++)
+        {
+            for (int sgn = -1; sgn <= 1; sgn += 2)
+            {
+                double ang = body.angle + sgn * k * 22.5;
+                int n = Obstacles(body, ang, floor, tmin, tmax, smin, smax);
+                if (n < best) { best = n; bestAng = ang; }
+            }
+        }
+        body.angle = bestAng;
+        // Floor profile along the body (max across it) and across it (max along it).
+        Vector2 fwd = (cos(bestAng), sin(bestAng)), left = (-sin(bestAng), cos(bestAng));
+        Array<double> ta, za, sa, zs;
+        for (int i = 0; i <= 8; i++)
+        {
+            double t = tmin + (tmax - tmin) * i / 8.0;
+            double z = -1e9;
+            for (int j = 0; j <= 2; j++)
+            {
+                double sv = smin + (smax - smin) * j / 2.0;
+                Vector2 pnt = body.Pos.XY + fwd * t + left * sv;
+                z = max(z, Level.PointInSector(pnt).floorplane.ZAtPoint(pnt));
+            }
+            ta.Push(t); za.Push(z);
+        }
+        for (int j = 0; j <= 4; j++)
+        {
+            double sv = smin + (smax - smin) * j / 4.0;
+            double z = -1e9;
+            for (int i = 0; i <= 2; i++)
+            {
+                double t = tmin + (tmax - tmin) * i / 2.0;
+                Vector2 pnt = body.Pos.XY + fwd * t + left * sv;
+                z = max(z, Level.PointInSector(pnt).floorplane.ZAtPoint(pnt));
+            }
+            sa.Push(sv); zs.Push(z);
+        }
+        double mt, ct, ms, cs;
+        [mt, ct] = Support(ta, za);
+        [ms, cs] = Support(sa, zs);
+        double pitchAngle = -atan(mt), rollAngle = atan(ms);
+        // A drop or a rise too steep for a body to rest on: stay flat on the floor under it.
+        if (abs(pitchAngle) > 35 || abs(rollAngle) > 35) { pitchAngle = 0; rollAngle = 0; ct = floor; cs = floor; }
+        body.A_SetSize(4, -1);
+        body.bNoGravity = true;
+        body.Vel = (0, 0, 0);
+        body.pitch = pitchAngle;
+        body.roll = rollAngle;
+        body.SetZ(max(ct, cs));
     }
 }

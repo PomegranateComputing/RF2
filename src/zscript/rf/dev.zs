@@ -234,9 +234,9 @@ class RFDevHandler : StaticEventHandler
         if (cpTimer == 60 && cpBody != null)
         {
             double under = cpBody.CurSector.floorplane.ZAtPoint(cpBody.Pos.XY);
-            Console.Printf("RF_DEV_CORPSE class=%s spot=%d x=%.0f y=%.0f z=%.2f floorz=%.2f under=%.2f dz=%.2f solid=%d shootable=%d height=%.1f radius=%.1f frame=%d tics=%d vel=%.2f",
+            Console.Printf("RF_DEV_CORPSE class=%s spot=%d x=%.0f y=%.0f z=%.2f floorz=%.2f under=%.2f dz=%.2f solid=%d shootable=%d height=%.1f radius=%.1f frame=%d tics=%d vel=%.2f angle=%.1f pitch=%.1f roll=%.1f",
                 cpBody.GetClassName(), spot, cpBody.Pos.X, cpBody.Pos.Y, cpBody.Pos.Z, cpBody.floorz, under, cpBody.Pos.Z - cpBody.floorz,
-                cpBody.bSolid, cpBody.bShootable, cpBody.Height, cpBody.radius, cpBody.frame, cpBody.tics, cpBody.Vel.Length());
+                cpBody.bSolid, cpBody.bShootable, cpBody.Height, cpBody.radius, cpBody.frame, cpBody.tics, cpBody.Vel.Length(), cpBody.angle, cpBody.pitch, cpBody.roll);
         }
         // Around the resting body: four sides at eye level, then from above.
         static const double around[] = { 0, 90, 180, 270 };

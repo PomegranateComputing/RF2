@@ -59,7 +59,7 @@ class RFStatusBar : BaseStatusBar
     {
         String text = outline;
         text.StripLeftRight();
-        if (text == "" || text.Left(7) == "RF_DEV_" || text.Left(7) == "RF_DBG_") return true;
+        if (text == "" || text.Left(7) == "RF_DEV_" || text.Left(7) == "RF_DBG_" || text.Left(7) == "RF_ART_") return true;
         noteText.Push(text);
         noteStart.Push(Level.maptime);
         while (noteText.Size() > 3)
