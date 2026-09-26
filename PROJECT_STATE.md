@@ -14,8 +14,9 @@ UZDoom 5.0.1 / Freedoom 0.13.0 dev IWAD.
 - [x] A baseline boots
 - [x] B RF01 architecture complete - static checks, autopilot route, every door from both sides
       (`scripts/doortest_rf01.py`)
-- [ ] C RF01 combat/art/audio integrated - FAL and 3 enemy families in game; materials, props,
-      audio and UI art are stand-ins until the Astra P0 batches; enemy art needs an Astra rework
+- [ ] C RF01 combat/art/audio integrated - RF2-ART-01 integrated 2026-09-26 (weapons, 3 enemy
+      families, corpse models, blood, 66 sounds; docs/RF2_ART_01_REVUE.md), runtime verified, owner
+      review pending (JOUER_RF2_ART_REVIEW.cmd); materials, props and UI art still stand-ins
 - [x] D UI/menus/HUD complete - main menu, options (native pages per the UI spec), credits, HUD,
       level title, pause, death screen; captured at 1080p, 1440p and native 4K; a setting survives
       a restart (`scripts/ui_evidence.py --fullscreen 3840x2160`). Native option pages keep the

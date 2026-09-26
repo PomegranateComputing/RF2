@@ -26,7 +26,7 @@ l'agent** : les niveaux mesurés ne disent rien de la qualité perçue. Jugement
 | Impacts | `rf/impact/{plaster,wood,metal,flesh}` (2 chacun) | `CHAN_BODY` de l'impact, 0,85 | matière reconnue par préfixe de texture |
 | Ennemis | vue, douleur, mort, activité, attaque | `CHAN_VOICE`, `$volume` 0,4–0,6 | pas, roues, appui : `CHAN_BODY` |
 | Joueur | pas `rf/player/step` | `CHAN_AUTO`, 0,3, hauteur ±8 % | foulée de 112 unités |
-| Joueur | douleur, mort | **sons Freedoom par défaut** | à remplacer par la voix de Viktor |
+| Joueur | douleur, mort | `rf/viktor/pain` (2), `rf/viktor/death` | `$playeralias` pour tous les genres (RF2-ART-01) |
 | Monde | portes, interrupteurs, treuil, papier | séquences natives / `CHAN_BODY` | ambiances : boucles `ATTN_STATIC` posées par la carte |
 
 `CHANF_OVERLAP` (25/09) : sans lui, chaque tir coupait la queue du précédent sur `CHAN_WEAPON` (FAL toutes les
@@ -45,6 +45,11 @@ tic 1 exclu du film. Même parcours (réveil, E1 au Browning, E2 au FAL), mêmes
 | Tirs du joueur, crête dans le mix | −8 à −10 (Browning), −4 à −5 (FAL) | −6 à −13 |
 | Crête globale, échantillons écrêtés | −4,1, 0 | −6,4, 0 |
 
+Après intégration de RF2-ART-01 (26/09, nouveaux fichiers Codex, voix ennemies à 1,0, actives à 0,8) :
+ouverture crête −10,9 dBFS, lit médian −33,6 ; combat dense (deux vagues de cinq, trois familles) crête −6,7 dBFS,
+0 échantillon écrêté. Les voix livrées sont masterisées 7 à 9 dB sous les anciennes (crêtes −7 à −10 dBFS), juste
+sous les tirs : les réductions `$volume` 0,4–0,6 faites pour les anciens fichiers ont été retirées.
+
 Constat de la base : le lit `RFAMB01` (−11 dBFS RMS dans le fichier) jouait en continu au-dessus des tirs, et les
 voix ennemies (fichiers autour de −9 dBFS RMS) étaient plus fortes que les armes. Réglage : `$musicvolume RFAMB01
 0.25`, voix ennemies 0,4–0,6, impacts 0,85. Ces valeurs seront recalées sur les nouveaux fichiers de la passe
@@ -53,5 +58,4 @@ artistique (Codex), mesurées de la même façon.
 ## Limites
 
 - Pas d'écoute : ni l'agent ni le propriétaire n'ont encore jugé le mix.
-- Tir Browning très court (0,22 s, sans queue), sans variante ni son à vide propre : matière attendue de Codex.
-- Voix de Viktor : Freedoom.
+- Sources, variantes et crédits des sons : `art/rf2_art_01/` (livraison Codex, CC0).
