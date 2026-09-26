@@ -17,14 +17,14 @@ l'agent** : les niveaux mesurés ne disent rien de la qualité perçue. Jugement
 
 | Événement | Son | Canal, volume | Remarque |
 |---|---|---|---|
-| Tir Browning | `rf/browning/fire` | `CHAN_WEAPON` + `CHANF_OVERLAP`, 1,0 | frame B, un seul par tir |
+| Tir Browning | `rf/browning/fire` (3 variantes) | `CHAN_WEAPON` + `CHANF_OVERLAP`, 1,0 | frame B, un seul par tir |
 | Culasse Browning | `rf/browning/slide` | `CHAN_ITEM`, 0,45 | frame D |
 | Tir FAL | `rf/fal/shot` (3 variantes) | `CHAN_WEAPON` + `CHANF_OVERLAP`, 1,0 | frame B |
-| Douille FAL | `rf/fal/shell` (2) | `CHAN_ITEM`, 0,5 | frame C |
+| Douille FAL | `rf/fal/shell` (3) | `CHAN_ITEM`, 0,5 | frame C |
 | Recharge FAL | `rf/fal/cloth, latch, mag_out, mag_in, seat, action` | `CHAN_ITEM` | une par étape, arrêtés au changement d'arme |
-| À vide | `rf/browning/dry` (= `fal/dry`), `rf/fal/dry` | `CHAN_ITEM` | |
-| Impacts | `rf/impact/{plaster,wood,metal,flesh}` (2 chacun) | `CHAN_BODY` de l'impact, 0,85 | matière reconnue par préfixe de texture |
-| Ennemis | vue, douleur, mort, activité, attaque | `CHAN_VOICE`, `$volume` 0,4–0,6 | pas, roues, appui : `CHAN_BODY` |
+| À vide | `rf/browning/dry`, `rf/fal/dry` | `CHAN_ITEM` | |
+| Impacts | `rf/impact/{plaster,wood,metal,flesh}` (3 chacun) | `CHAN_BODY` de l'impact, 0,85 | matière reconnue par préfixe de texture |
+| Ennemis | vue, douleur, mort, activité, attaque | `CHAN_VOICE`, 1,0 (activité 0,8) | pas, roues, appui, chute du corps : `CHAN_BODY` |
 | Joueur | pas `rf/player/step` | `CHAN_AUTO`, 0,3, hauteur ±8 % | foulée de 112 unités |
 | Joueur | douleur, mort | `rf/viktor/pain` (2), `rf/viktor/death` | `$playeralias` pour tous les genres (RF2-ART-01) |
 | Monde | portes, interrupteurs, treuil, papier | séquences natives / `CHAN_BODY` | ambiances : boucles `ATTN_STATIC` posées par la carte |
@@ -52,8 +52,7 @@ sous les tirs : les réductions `$volume` 0,4–0,6 faites pour les anciens fich
 
 Constat de la base : le lit `RFAMB01` (−11 dBFS RMS dans le fichier) jouait en continu au-dessus des tirs, et les
 voix ennemies (fichiers autour de −9 dBFS RMS) étaient plus fortes que les armes. Réglage : `$musicvolume RFAMB01
-0.25`, voix ennemies 0,4–0,6, impacts 0,85. Ces valeurs seront recalées sur les nouveaux fichiers de la passe
-artistique (Codex), mesurées de la même façon.
+0.25`, voix ennemies 0,4–0,6, impacts 0,85 (voix recalées depuis, voir ci-dessus).
 
 ## Limites
 
