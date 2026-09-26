@@ -28,6 +28,7 @@ class RFPlayer : PlayerPawn
         if (dev != null && dev.autopilot) dev.DriveAutopilot(self);
         else if (dev != null && dev.doortest) dev.DriveDoorTest(self);
         else if (dev != null && dev.weaponShots) dev.DriveWeaponShots(self);
+        else if (dev != null && (dev.aimShots || dev.soundProbe)) dev.DriveProbe(self);
         Super.PlayerThink();
         Footsteps();
     }

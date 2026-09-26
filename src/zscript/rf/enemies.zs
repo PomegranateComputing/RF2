@@ -456,6 +456,17 @@ class RFArtBlood : Blood
 // under it (floorz), so it shrinks to the centre, and the pose is then held (no gravity).
 class RFBody play
 {
+    // An edge a body cannot lie across: a wall, a rise over 24 units in one edge (a table, a
+    // counter; a stair step is 16), or a gap too low (a closed door).
+    static bool EdgeBlocks(Line l)
+    {
+        if (l.backsector == null) return true;
+        Vector2 mid = (l.v1.p + l.v2.p) / 2;
+        double fa = l.frontsector.floorplane.ZAtPoint(mid), fb = l.backsector.floorplane.ZAtPoint(mid);
+        double ca = l.frontsector.ceilingplane.ZAtPoint(mid), cb = l.backsector.ceilingplane.ZAtPoint(mid);
+        return abs(fa - fb) > 24 || min(ca, cb) - max(fa, fb) < 16;
+    }
+
     static bool Crosses(Vector2 a, Vector2 b, double tmin, double tmax, double smin, double smax)
     {
         // Liang-Barsky: does segment a-b (body coordinates) enter the footprint rectangle?
@@ -492,10 +503,7 @@ class RFBody play
             bool blocks = l.backsector == null;
             if (!blocks)
             {
-                Vector2 mid = (l.v1.p + l.v2.p) / 2;
-                double top = max(l.frontsector.floorplane.ZAtPoint(mid), l.backsector.floorplane.ZAtPoint(mid));
-                double low = min(l.frontsector.ceilingplane.ZAtPoint(mid), l.backsector.ceilingplane.ZAtPoint(mid));
-                blocks = top - floor > 24 || low - top < 16;
+                blocks = EdgeBlocks(l);
             }
             if (!blocks) continue;
             Vector2 a = l.v1.p - body.Pos.XY, b = l.v2.p - body.Pos.XY;
@@ -525,61 +533,140 @@ class RFBody play
         return bestM, bestC;
     }
 
+    static double FloorAt(Vector2 p)
+    {
+        return Level.PointInSector(p).floorplane.ZAtPoint(p);
+    }
+
+    // Does the move from a to b cross a wall, a ledge or a closed door?
+    static bool Blocked(Actor body, Vector2 a, Vector2 b, double floor)
+    {
+        let it = BlockLinesIterator.Create(body, 128);
+        while (it.Next())
+        {
+            Line l = it.CurLine;
+            bool blocks = l.backsector == null;
+            if (!blocks)
+            {
+                blocks = EdgeBlocks(l);
+            }
+            if (!blocks) continue;
+            // Segment intersection a-b / v1-v2.
+            Vector2 r = b - a, q = l.v2.p - l.v1.p;
+            double den = r.X * q.Y - r.Y * q.X;
+            if (abs(den) < 1e-9) continue;
+            Vector2 w = l.v1.p - a;
+            double u = (w.X * q.Y - w.Y * q.X) / den, v = (w.X * r.Y - w.Y * r.X) / den;
+            if (u >= 0 && u <= 1 && v >= 0 && v <= 1) return true;
+        }
+        return false;
+    }
+
+    // Floor under the footprint on a 9 x 5 grid (t along, s across). A point behind a blocking
+    // edge (table, counter) is not a support: the body lies beside the furniture.
+    static void Grid(Actor body, Vector2 pos, double ang, double tmin, double tmax, double smin, double smax, double floor,
+        out Array<double> gt, out Array<double> gs, out Array<double> gz)
+    {
+        gt.Clear(); gs.Clear(); gz.Clear();
+        Vector2 fwd = (cos(ang), sin(ang)), left = (-sin(ang), cos(ang));
+        for (int i = 0; i <= 8; i++)
+        {
+            for (int j = 0; j <= 4; j++)
+            {
+                double t = tmin + (tmax - tmin) * i / 8.0, sv = smin + (smax - smin) * j / 4.0;
+                Vector2 pnt = pos + fwd * t + left * sv;
+                gt.Push(t); gs.Push(sv);
+                gz.Push(Blocked(body, pos, pnt, floor) ? floor : FloorAt(pnt));
+            }
+        }
+    }
+
+    // Lowest plane z = c + mt t + ms s resting on the grid: slope along the body, then across it
+    // once the along slope is removed, each capped at 45 degrees; c puts the plane on the samples.
+    static double, double, double Plane(Array<double> gt, Array<double> gs, Array<double> gz)
+    {
+        Array<double> at, az, bs, bz;
+        for (int i = 0; i <= 8; i++)
+        {
+            double m = -1e9;
+            for (int j = 0; j <= 4; j++) m = max(m, gz[i * 5 + j]);
+            at.Push(gt[i * 5]); az.Push(m);
+        }
+        double mt, c0;
+        [mt, c0] = Support(at, az);
+        double cap = tan(45);
+        mt = clamp(mt, -cap, cap);
+        for (int j = 0; j <= 4; j++)
+        {
+            double m = -1e9;
+            for (int i = 0; i <= 8; i++) m = max(m, gz[i * 5 + j] - mt * gt[i * 5 + j]);
+            bs.Push(gs[j]); bz.Push(m);
+        }
+        double ms, c1;
+        [ms, c1] = Support(bs, bz);
+        ms = clamp(ms, -cap, cap);
+        double c = -1e9;
+        for (int k = 0; k < gz.Size(); k++) c = max(c, gz[k] - mt * gt[k] - ms * gs[k]);
+        return mt, ms, c;
+    }
+
+    // A candidate pose: obstacles crossed first, then how steep the resting tilt is (along the
+    // body is a slope; across it as well is a twisted pose, counted double).
+    static double, double, double, double Evaluate(Actor body, Vector2 pos, double ang, double tmin, double tmax,
+        double smin, double smax)
+    {
+        Vector2 keep = body.Pos.XY;
+        body.SetOrigin((pos, body.Pos.Z), false);
+        double floor = FloorAt(pos);
+        int n = Obstacles(body, ang, floor, tmin, tmax, smin, smax);
+        Array<double> gt, gs, gz;
+        Grid(body, pos, ang, tmin, tmax, smin, smax, floor, gt, gs, gz);
+        double mt, ms, c;
+        [mt, ms, c] = Plane(gt, gs, gz);
+        body.SetOrigin((keep, body.Pos.Z), false);
+        double pa = abs(atan(mt)), ra = abs(atan(ms));
+        return 1000 * n + max(pa, ra) + 2 * min(pa, ra), mt, ms, c;
+    }
+
     static void Settle(Actor body, double tmin, double tmax, double smin, double smax)
     {
         if (body == null) return;
-        double floor = body.floorz;
-        // Heading: the original one if the footprint is clear, else the nearest clearer one.
+        Vector2 home = body.Pos.XY;
+        double homeFloor = FloorAt(home);
+        Vector2 bestPos = home;
         double bestAng = body.angle;
-        int best = Obstacles(body, body.angle, floor, tmin, tmax, smin, smax);
-        for (int k = 1; k <= 8 && best > 0; k++)
+        double best, mt, ms, c;
+        [best, mt, ms, c] = Evaluate(body, home, body.angle, tmin, tmax, smin, smax);
+        // The pose where it fell, unless it crosses an obstacle or has to tilt over 12 degrees:
+        // then the best of 8 headings and small shifts (12 or 24 units, never across a wall),
+        // a change costing a little so that the smallest adequate one wins.
+        if (best > 12)
         {
-            for (int sgn = -1; sgn <= 1; sgn += 2)
+            for (int ring = 0; ring <= 2; ring++)
             {
-                double ang = body.angle + sgn * k * 22.5;
-                int n = Obstacles(body, ang, floor, tmin, tmax, smin, smax);
-                if (n < best) { best = n; bestAng = ang; }
+                for (int dir = 0; dir < (ring == 0 ? 1 : 8); dir++)
+                {
+                    Vector2 pos = home + (cos(dir * 45), sin(dir * 45)) * (ring * 12);
+                    if (ring > 0 && (Blocked(body, home, pos, homeFloor) || abs(FloorAt(pos) - homeFloor) > 24)) continue;
+                    for (int k = 0; k < 8; k++)
+                    {
+                        if (ring == 0 && k == 0) continue;
+                        double ang = body.angle + k * 45;
+                        double cost, m1, m2, c1;
+                        [cost, m1, m2, c1] = Evaluate(body, pos, ang, tmin, tmax, smin, smax);
+                        cost += ring * 3 + (k == 0 ? 0 : 1);
+                        if (cost < best) { best = cost; bestPos = pos; bestAng = ang; mt = m1; ms = m2; c = c1; }
+                    }
+                }
             }
         }
+        body.SetOrigin((bestPos, body.Pos.Z), false);
         body.angle = bestAng;
-        // Floor profile along the body (max across it) and across it (max along it).
-        Vector2 fwd = (cos(bestAng), sin(bestAng)), left = (-sin(bestAng), cos(bestAng));
-        Array<double> ta, za, sa, zs;
-        for (int i = 0; i <= 8; i++)
-        {
-            double t = tmin + (tmax - tmin) * i / 8.0;
-            double z = -1e9;
-            for (int j = 0; j <= 2; j++)
-            {
-                double sv = smin + (smax - smin) * j / 2.0;
-                Vector2 pnt = body.Pos.XY + fwd * t + left * sv;
-                z = max(z, Level.PointInSector(pnt).floorplane.ZAtPoint(pnt));
-            }
-            ta.Push(t); za.Push(z);
-        }
-        for (int j = 0; j <= 4; j++)
-        {
-            double sv = smin + (smax - smin) * j / 4.0;
-            double z = -1e9;
-            for (int i = 0; i <= 2; i++)
-            {
-                double t = tmin + (tmax - tmin) * i / 2.0;
-                Vector2 pnt = body.Pos.XY + fwd * t + left * sv;
-                z = max(z, Level.PointInSector(pnt).floorplane.ZAtPoint(pnt));
-            }
-            sa.Push(sv); zs.Push(z);
-        }
-        double mt, ct, ms, cs;
-        [mt, ct] = Support(ta, za);
-        [ms, cs] = Support(sa, zs);
-        double pitchAngle = -atan(mt), rollAngle = atan(ms);
-        // A drop or a rise too steep for a body to rest on: stay flat on the floor under it.
-        if (abs(pitchAngle) > 35 || abs(rollAngle) > 35) { pitchAngle = 0; rollAngle = 0; ct = floor; cs = floor; }
         body.A_SetSize(4, -1);
         body.bNoGravity = true;
         body.Vel = (0, 0, 0);
-        body.pitch = pitchAngle;
-        body.roll = rollAngle;
-        body.SetZ(max(ct, cs));
+        body.pitch = -atan(mt);
+        body.roll = atan(ms);
+        body.SetZ(c);
     }
 }

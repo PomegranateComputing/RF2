@@ -27,6 +27,8 @@ class RFDevHandler : StaticEventHandler
     // menu pauses the game, so the last capture and the end marker run on the UI clock);
     // rf_dev_ui 2 on the title screen (main menu, options, credits).
     bool uiShots;
+    bool aimShots;          // rf_dev_ui 4: shots at a wall, impacts against the centre dot
+    bool soundProbe;        // rf_dev_ui 5: a voice near then far, player shots (distance, centre)
     bool msgShots;          // rf_dev_ui 3: real pickups and a note at the player's feet, captured
     // Corpse inspection (rf_dev_corpse): each enemy class killed on flat floor, against a wall,
     // on a door threshold and on a stair; the fall is photographed, then the body from four sides
@@ -94,6 +96,8 @@ class RFDevHandler : StaticEventHandler
         weaponShots = CVar.GetCVar('rf_dev_weapons').GetBool() || CVar.GetCVar('rf_dev_art_combat').GetBool();
         uiShots = CVar.GetCVar('rf_dev_ui').GetInt() == 1;
         msgShots = CVar.GetCVar('rf_dev_ui').GetInt() == 3;
+        aimShots = CVar.GetCVar('rf_dev_ui').GetInt() == 4;
+        soundProbe = CVar.GetCVar('rf_dev_ui').GetInt() == 5;
         corpseTest = CVar.GetCVar('rf_dev_corpse').GetBool();
         perfTest = CVar.GetCVar('rf_dev_perf').GetInt() > 0;
         perfBodies = CVar.GetCVar('rf_dev_perf').GetInt() == 2;
@@ -165,6 +169,33 @@ class RFDevHandler : StaticEventHandler
     {
         // next= is empty when the level is torn down to load a savegame (death/resume, load menu).
         if (logging) Console.Printf("RF_DEV_UNLOADED map=%s time=%d next=%s", Level.MapName, Level.Time, e.NextMap);
+        // Bodies at rest when the level ends (they lay there since their death): height above the
+        // floor under them, tilt, and whether they block.
+        if (logging && e.NextMap != "")
+        {
+            let it = ThinkerIterator.Create('RFEnemy');
+            RFEnemy en;
+            while ((en = RFEnemy(it.Next())) != null)
+            {
+                if (en.health > 0) continue;
+                double under = en.CurSector.floorplane.ZAtPoint(en.Pos.XY);
+                Console.Printf("RF_DEV_BODY class=%s x=%.0f y=%.0f dz=%.2f pitch=%.1f roll=%.1f solid=%d vel=%.2f frame=%d",
+                    en.GetClassName(), en.Pos.X, en.Pos.Y, en.Pos.Z - under, en.pitch, en.roll, en.bSolid, en.Vel.Length(), en.frame);
+            }
+        }
+    }
+
+    // Aim test: where each bullet lands, as an angle from the player's line of sight (the dot).
+    override void WorldThingSpawned(WorldEvent e)
+    {
+        if (!aimShots || e.Thing == null || !(e.Thing is 'RFBulletPuff')) return;
+        let pmo = players[consoleplayer].mo;
+        if (pmo == null) return;
+        Vector3 d = e.Thing.Pos - (pmo.Pos.X, pmo.Pos.Y, pmo.Pos.Z + PlayerPawn(pmo).ViewHeight);
+        double dist = d.XY.Length();
+        double yaw = Actor.deltaangle(pmo.angle, atan2(d.Y, d.X));
+        double elev = atan2(d.Z, dist);
+        Console.Printf("RF_DEV_IMPACT weapon=%s dist=%.0f yaw=%.2f elev=%.2f pitch=%.2f", pmo.player.ReadyWeapon ? pmo.player.ReadyWeapon.GetClassName() : 'none', dist, yaw, elev, -pmo.pitch);
     }
 
     override void WorldThingDied(WorldEvent e)
@@ -190,6 +221,8 @@ class RFDevHandler : StaticEventHandler
         if (tour) TourTick();
         if (filmEvery > 0) FilmTick();
         if (msgShots) MessageTick();
+        if (aimShots) AimTick();
+        if (soundProbe) SoundTick();
         if (corpseTest) CorpseTick();
         if (perfTest) PerfTick();
         if (uiShots)
@@ -200,9 +233,12 @@ class RFDevHandler : StaticEventHandler
     }
 
     // Spots: corridor centre, corridor north wall, admissions south door strip, west laundry stair.
-    static const double CP_X[] = { -300, -200, 384, 880 };
-    static const double CP_Y[] = { -368, -323, -64, 736 };
-    static const double CP_A[] = { 0, 180, 90, 0 };
+    // Spots: corridor centre, corridor north wall, admissions south door strip, west laundry stair,
+    // beside the admissions counter (40 high) and beside a table (28 high), feet toward them, and
+    // the courtyard perron where the E3 porte-registre stands.
+    static const double CP_X[] = { -300, -200, 384, 880, 336, 544, 384 };
+    static const double CP_Y[] = { -368, -323, -64, 736, -286, -222, 617 };
+    static const double CP_A[] = { 0, 180, 90, 0, 270, 270, 270 };
 
     void CorpseTick()
     {
@@ -211,14 +247,14 @@ class RFDevHandler : StaticEventHandler
         if (Level.Time == 5) Level.ExecuteSpecial(11, null, null, false, 10, 64);   // Door_Open tag 10: the threshold spot
         if (Level.Time < 70) return;
         static const Name kinds[] = { 'RFOrderly', 'RFBrancardier', 'RFPorteRegistre' };
-        int total = 3 * 4;
+        int total = 3 * 7;
         if (cpIndex >= total)
         {
             if (cpTimer++ == 0) Console.Printf("RF_DEV_CORPSE_DONE");
             return;
         }
-        int spot = cpIndex % 4;
-        class<Actor> kind = kinds[cpIndex / 4];
+        int spot = cpIndex % 7;
+        class<Actor> kind = kinds[cpIndex / 7];
         Vector2 at = (CP_X[spot], CP_Y[spot]);
         Sector sec = Level.PointInSector(at);
         double floor = sec.floorplane.ZAtPoint(at);
@@ -397,6 +433,94 @@ class RFDevHandler : StaticEventHandler
         }
         Console.Printf("RF_DEV_PERF scene=%d point=%d frames=%d mean_ms=%.2f fps=%.1f over16ms=%d over33ms=%d worst_ms=%.2f",
             pfScene, PERF_POINTS[pfScene - 1], pfFrames, pfSum / max(pfFrames, 1), 1000.0 * pfFrames / max(pfSum, 1), over16, over33, pfWorst);
+    }
+
+    // Browning then FAL fired straight at the corridor's north wall 96 units away; the impact particles
+    // must appear under the centre dot.
+    void AimTick()
+    {
+        let pmo = PlayerPawn(players[consoleplayer].mo);
+        if (pmo == null || pmo.player == null) return;
+        pmo.player.cheats |= CF_GODMODE;
+        pmo.player.cmd.buttons &= ~(BT_ATTACK | BT_USE | BT_RELOAD);
+        if (Level.Time == 40)
+        {
+            pmo.SetOrigin((-300, -400, 0), false);
+            pmo.angle = 90; pmo.pitch = 0; pmo.Vel = (0, 0, 0);
+            pmo.GiveInventory('RFBrowning', 1);
+            pmo.player.PendingWeapon = Weapon(pmo.FindInventory('RFBrowning'));
+        }
+        if (Level.Time == 80 || Level.Time == 160) probeFire = 2;
+        if (Level.Time == 82 || Level.Time == 84 || Level.Time == 162 || Level.Time == 164) Level.MakeScreenShot();
+        if (Level.Time == 120)
+        {
+            pmo.GiveInventory('RFFAL', 1);
+            pmo.player.PendingWeapon = Weapon(pmo.FindInventory('RFFAL'));
+        }
+        if (Level.Time == 180) Console.Printf("RF_DEV_UI_DONE");
+    }
+
+    // A sleeping orderly's sight voice at 64 then at 700 units in the corridor, then three player
+    // shots; with devrun audio_wav the levels are compared (distance fall-off, centred weapon).
+    Actor probeFoe;
+    int probeFire;
+
+    // Fire presses of the probes go through the player's think, like the weapon tests: a press
+    // made during the level tick does not reach the weapon.
+    void DriveProbe(PlayerPawn p)
+    {
+        if (p.player == null || probeFire <= 0) return;
+        p.player.cmd.buttons |= BT_ATTACK;
+        probeFire--;
+    }
+    void SoundTick()
+    {
+        let pmo = PlayerPawn(players[consoleplayer].mo);
+        if (pmo == null || pmo.player == null) return;
+        pmo.player.cheats |= CF_GODMODE;
+        pmo.player.cmd.buttons &= ~(BT_ATTACK | BT_USE | BT_RELOAD);
+        if (Level.Time == 1)
+        {
+            pmo.A_StartSound("rf/dev/sync", CHAN_AUTO, CHANF_DEFAULT, 1.0, ATTN_NONE);
+            Console.Printf("RF_DEV_SYNC t=1 ms=%.1f", MSTimeF());
+        }
+        if (Level.Time == 30)
+        {
+            pmo.SetOrigin((-620, -368, 0), false);
+            pmo.angle = 0; pmo.pitch = 0; pmo.Vel = (0, 0, 0);
+            pmo.GiveInventory('RFBrowning', 1);
+            pmo.player.PendingWeapon = Weapon(pmo.FindInventory('RFBrowning'));
+        }
+        if (Level.Time == 170)
+        {
+            // The same voice 64 units to the player's left (north): it must pan to the left.
+            if (probeFoe != null) probeFoe.Destroy();
+            probeFoe = Actor.Spawn('RFOrderly', (-620, -368 + 56, 0));
+            if (probeFoe != null)
+            {
+                probeFoe.bDormant = true;
+                probeFoe.A_StartSound("rf/orderly/sight", CHAN_VOICE, CHANF_DEFAULT, 1.0, ATTN_NORM);
+                Console.Printf("RF_DEV_SND what=voice_left dist=56 ms=%.1f", MSTimeF());
+            }
+        }
+        if (Level.Time == 70 || Level.Time == 140)
+        {
+            double d = Level.Time == 70 ? 64 : 700;
+            if (probeFoe != null) probeFoe.Destroy();
+            probeFoe = Actor.Spawn('RFOrderly', (-620 + d, -368, 0));
+            if (probeFoe != null)
+            {
+                probeFoe.bDormant = true;
+                probeFoe.A_StartSound("rf/orderly/sight", CHAN_VOICE, CHANF_DEFAULT, 1.0, ATTN_NORM);
+                Console.Printf("RF_DEV_SND what=voice dist=%.0f ms=%.1f", d, MSTimeF());
+            }
+        }
+        if (Level.Time == 210 || Level.Time == 240 || Level.Time == 270)
+        {
+            probeFire = 2;
+            Console.Printf("RF_DEV_SND what=shot dist=0 ms=%.1f", MSTimeF());
+        }
+        if (Level.Time == 330) Console.Printf("RF_DEV_UI_DONE");
     }
 
     void MessageTick()
