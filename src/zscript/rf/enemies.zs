@@ -6,6 +6,7 @@
 // also wakes it. A cued enemy goes straight for the player who triggered it.
 class RFEnemy : Actor
 {
+    Default { BloodType "RFArtBlood"; }
     bool awaitingCue;
 
     override void PostBeginPlay()
@@ -150,7 +151,7 @@ class RFOrderly : RFEnemy
     Death:
         ORDY J 6 { Vel.X = Vel.Y = 0; A_Scream(); }
         ORDY K 7 A_NoBlocking;
-        ORDY L 8;
+        ORDY L 8 A_StartSound("rf/world/body_fall", CHAN_BODY, 0, 0.65);
         ORDY M -1;
         Stop;
     }
@@ -295,7 +296,7 @@ class RFBrancardier : RFEnemy
     Death:
         BRCD J 7 { BeginRecovery(); A_Scream(); }
         BRCD K 8 A_NoBlocking;
-        BRCD L 10;
+        BRCD L 10 A_StartSound("rf/world/body_fall", CHAN_BODY, 0, 0.8);
         BRCD M -1;
         Stop;
     }
@@ -426,8 +427,23 @@ class RFPorteRegistre : RFEnemy
         Goto See;
     Death:
         PREG I 7 A_Scream;
-        PREG J 7 A_NoBlocking;
+        PREG J 7 { A_NoBlocking(); A_StartSound("rf/world/body_fall", CHAN_BODY, 0, 0.65); }
         PREG K -1;
+        Stop;
+    }
+}
+
+// Same engine blood physics; original smooth sprites replace the low-resolution IWAD family.
+class RFArtBlood : Blood
+{
+    Default { Scale 0.12; }
+    States
+    {
+    Spawn:
+        RFBX ABC 8;
+        Stop;
+    Spray:
+        RFBX ABC 6;
         Stop;
     }
 }

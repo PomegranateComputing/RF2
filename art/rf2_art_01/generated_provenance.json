@@ -1,0 +1,20 @@
+[
+  {
+    "file": "weapons/browning/master_raw.png",
+    "original_generated_name": "exec-376e7ca4-1341-463d-869a-2d6a3f8754f6.png",
+    "sha256": "4ad1ccaba185f830f8080024d1339a0fdd958d22beb1635b18b3111799f086fc",
+    "mode": "built-in image_gen"
+  },
+  {
+    "file": "weapons/browning/master.png",
+    "original_generated_name": "exec-08158391-bbc2-46fc-ad97-22ca67bc06a1.png",
+    "sha256": "1ba46a27f7cb3fb12c136cde6e2d28ed30c3637b40c4a9f1e23f73d053e73c56",
+    "mode": "built-in image_gen"
+  },
+  {
+    "file": "enemies/material_atlas.png",
+    "original_generated_name": "exec-2a7f9bda-2e9e-49cc-95ec-5ac0fa4f5a22.png",
+    "sha256": "9fa90f77a5c770982b7753f69cefae82424360484a49cedffa4f55bc71a1c898",
+    "mode": "built-in image_gen"
+  }
+]

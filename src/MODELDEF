@@ -72,6 +72,49 @@ Model RFPropLamp
     FrameIndex RFMD A 0 0
 }
 
+// RF2-ART-01: only terminal death frames use a grounded static model.
+Model RFOrderly
+{
+    Path "models/rf2_art_01"
+    Model 0 "orderly.obj"
+    Skin 0 "orderly_skin.png"
+    Scale 5 5 6
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex ORDY M 0 0
+}
+Model RFOrderlyCorpse
+{
+    Path "models/rf2_art_01"
+    Model 0 "orderly.obj"
+    Skin 0 "orderly_skin.png"
+    Scale 5 5 6
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex ORDY M 0 0
+}
+
+Model RFBrancardier
+{
+    Path "models/rf2_art_01"
+    Model 0 "brancardier.obj"
+    Skin 0 "brancardier_skin.png"
+    Scale 5 5 6
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex BRCD M 0 0
+}
+Model RFPorteRegistre
+{
+    Path "models/rf2_art_01"
+    Model 0 "porte_registre.obj"
+    Skin 0 "porte_registre_skin.png"
+    Scale 5 5 6
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex PREG K 0 0
+}
+
 // Weapon pickups lying on the floor (scripts/mapkit/weapon_models.py); first person is unchanged.
 Model RFFAL
 {

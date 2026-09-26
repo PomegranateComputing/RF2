@@ -14,24 +14,27 @@ rf/fal/action             "sounds/fal/action.wav"
 rf/fal/dry                "sounds/fal/dry.wav"
 rf/fal/raise              "sounds/fal/raise.wav"
 rf/fal/cloth              "sounds/fal/cloth.wav"
-$random rf/fal/shell      { rf/fal/shell1 rf/fal/shell2 }
+$random rf/fal/shell      { rf/fal/shell1 rf/fal/shell2 rf/fal/shell3 }
 rf/fal/shell1             "sounds/fal/shell_01.wav"
 rf/fal/shell2             "sounds/fal/shell_02.wav"
 
-rf/browning/fire          "sounds/browning/fire.wav"
+$random rf/browning/fire  { rf/browning/fire1 rf/browning/fire2 rf/browning/fire3 }
+rf/browning/fire1         "sounds/browning/fire_01.wav"
+rf/browning/fire2         "sounds/browning/fire_02.wav"
+rf/browning/fire3         "sounds/browning/fire_03.wav"
 rf/browning/slide         "sounds/browning/slide.wav"
-rf/browning/dry           "sounds/fal/dry.wav"
+rf/browning/dry           "sounds/browning/dry.wav"
 
-$random rf/impact/plaster { rf/impact/plaster1 rf/impact/plaster2 }
+$random rf/impact/plaster { rf/impact/plaster1 rf/impact/plaster2 rf/impact/plaster3 }
 rf/impact/plaster1        "sounds/impact/plaster_01.wav"
 rf/impact/plaster2        "sounds/impact/plaster_02.wav"
-$random rf/impact/wood    { rf/impact/wood1 rf/impact/wood2 }
+$random rf/impact/wood    { rf/impact/wood1 rf/impact/wood2 rf/impact/wood3 }
 rf/impact/wood1           "sounds/impact/wood_01.wav"
 rf/impact/wood2           "sounds/impact/wood_02.wav"
-$random rf/impact/metal   { rf/impact/metal1 rf/impact/metal2 }
+$random rf/impact/metal   { rf/impact/metal1 rf/impact/metal2 rf/impact/metal3 }
 rf/impact/metal1          "sounds/impact/metal_01.wav"
 rf/impact/metal2          "sounds/impact/metal_02.wav"
-$random rf/impact/flesh   { rf/impact/flesh1 rf/impact/flesh2 }
+$random rf/impact/flesh   { rf/impact/flesh1 rf/impact/flesh2 rf/impact/flesh3 }
 rf/impact/flesh1          "sounds/impact/flesh_01.wav"
 rf/impact/flesh2          "sounds/impact/flesh_02.wav"
 
@@ -41,7 +44,7 @@ rf/orderly/pain           "sounds/orderly/penitent_pain.wav"
 rf/orderly/death          "sounds/orderly/penitent_death.wav"
 rf/orderly/active         "sounds/orderly/penitent_active.wav"
 rf/orderly/attack         "sounds/orderly/penitent_attack.wav"
-$random rf/orderly/step   { rf/orderly/step1 rf/orderly/step2 }
+$random rf/orderly/step   { rf/orderly/step1 rf/orderly/step2 rf/orderly/step3 }
 rf/orderly/step1          "sounds/orderly/step_01.wav"
 rf/orderly/step2          "sounds/orderly/step_02.wav"
 
@@ -73,15 +76,15 @@ rf/amb/room               "sounds/world/room_loop.wav"
 
 // Native door sequences use the institution's own door recording.
 doors/dr1_open            "sounds/world/door.wav"
-doors/dr1_clos            "sounds/world/door.wav"
+doors/dr1_clos            "sounds/world/door_close.wav"
 doors/dr2_open            "sounds/world/door.wav"
-doors/dr2_clos            "sounds/world/door.wav"
+doors/dr2_clos            "sounds/world/door_close.wav"
 plats/pt1_strt            "sounds/world/winch.wav"
 plats/pt1_stop            "sounds/world/switch.wav"
 switches/normbutn         "sounds/world/switch.wav"
 
 // Player footsteps (RFPlayer.Footsteps): the legacy staff steps, played quietly with pitch jitter.
-$random rf/player/step    { rf/player/step1 rf/player/step2 }
+$random rf/player/step    { rf/player/step1 rf/player/step2 rf/player/step3 }
 rf/player/step1           "sounds/orderly/step_01.wav"
 rf/player/step2           "sounds/orderly/step_02.wav"
 
@@ -119,3 +122,46 @@ $volume rf/amb/room 0.45
 
 // Dev only: film sync tone (scripts/film.py), played once before the filmed span.
 rf/dev/sync               "sounds/dev/sync.wav"
+
+// RF2-ART-01 additions. Source-specific mono files; natural variation, no pitch shift.
+rf/world/body_fall        "sounds/world/body_fall.wav"
+$random rf/viktor/pain { rf/viktor/pain1 rf/viktor/pain2 }
+rf/viktor/pain1 "sounds/viktor/pain_01.wav"
+rf/viktor/pain2 "sounds/viktor/pain_02.wav"
+rf/viktor/death "sounds/viktor/death.wav"
+$playeralias player male *pain100 rf/viktor/pain
+$playeralias player male *pain75 rf/viktor/pain
+$playeralias player male *pain50 rf/viktor/pain
+$playeralias player male *pain25 rf/viktor/pain
+$playeralias player male *death rf/viktor/death
+$playeralias player male *xdeath rf/viktor/death
+$playeralias player male *gibbed rf/viktor/death
+// Viktor whatever the player's gender setting (the engine picks the alias by gender).
+$playeralias player female *pain100 rf/viktor/pain
+$playeralias player female *pain75 rf/viktor/pain
+$playeralias player female *pain50 rf/viktor/pain
+$playeralias player female *pain25 rf/viktor/pain
+$playeralias player female *death rf/viktor/death
+$playeralias player female *xdeath rf/viktor/death
+$playeralias player female *gibbed rf/viktor/death
+$playeralias player other *pain100 rf/viktor/pain
+$playeralias player other *pain75 rf/viktor/pain
+$playeralias player other *pain50 rf/viktor/pain
+$playeralias player other *pain25 rf/viktor/pain
+$playeralias player other *death rf/viktor/death
+$playeralias player other *xdeath rf/viktor/death
+$playeralias player other *gibbed rf/viktor/death
+
+rf/impact/plaster3 "sounds/impact/plaster_03.wav"
+
+rf/impact/wood3 "sounds/impact/wood_03.wav"
+
+rf/impact/metal3 "sounds/impact/metal_03.wav"
+
+rf/impact/flesh3 "sounds/impact/flesh_03.wav"
+
+rf/orderly/step3 "sounds/orderly/step_03.wav"
+
+rf/fal/shell3 "sounds/fal/shell_03.wav"
+
+rf/player/step3 "sounds/orderly/step_03.wav"

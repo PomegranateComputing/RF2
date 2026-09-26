@@ -1,0 +1,4482 @@
+[
+  {
+    "file": "BRCDA1.png",
+    "state": "idle",
+    "rotation": 1,
+    "dimensions": [
+      176,
+      295
+    ],
+    "grab": [
+      88,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDA2.png",
+    "state": "idle",
+    "rotation": 2,
+    "dimensions": [
+      400,
+      295
+    ],
+    "grab": [
+      180,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDA3.png",
+    "state": "idle",
+    "rotation": 3,
+    "dimensions": [
+      484,
+      294
+    ],
+    "grab": [
+      188,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDA4.png",
+    "state": "idle",
+    "rotation": 4,
+    "dimensions": [
+      424,
+      294
+    ],
+    "grab": [
+      180,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDA5.png",
+    "state": "idle",
+    "rotation": 5,
+    "dimensions": [
+      176,
+      294
+    ],
+    "grab": [
+      88,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDA6.png",
+    "state": "idle",
+    "rotation": 6,
+    "dimensions": [
+      400,
+      293
+    ],
+    "grab": [
+      220,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDA7.png",
+    "state": "idle",
+    "rotation": 7,
+    "dimensions": [
+      484,
+      294
+    ],
+    "grab": [
+      295,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDA8.png",
+    "state": "idle",
+    "rotation": 8,
+    "dimensions": [
+      424,
+      294
+    ],
+    "grab": [
+      244,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDB1.png",
+    "state": "walk_1",
+    "rotation": 1,
+    "dimensions": [
+      176,
+      299
+    ],
+    "grab": [
+      88,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDB2.png",
+    "state": "walk_1",
+    "rotation": 2,
+    "dimensions": [
+      396,
+      298
+    ],
+    "grab": [
+      180,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDB3.png",
+    "state": "walk_1",
+    "rotation": 3,
+    "dimensions": [
+      505,
+      296
+    ],
+    "grab": [
+      188,
+      294
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDB4.png",
+    "state": "walk_1",
+    "rotation": 4,
+    "dimensions": [
+      429,
+      299
+    ],
+    "grab": [
+      180,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDB5.png",
+    "state": "walk_1",
+    "rotation": 5,
+    "dimensions": [
+      176,
+      297
+    ],
+    "grab": [
+      88,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDB6.png",
+    "state": "walk_1",
+    "rotation": 6,
+    "dimensions": [
+      396,
+      298
+    ],
+    "grab": [
+      216,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDB7.png",
+    "state": "walk_1",
+    "rotation": 7,
+    "dimensions": [
+      505,
+      300
+    ],
+    "grab": [
+      317,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDB8.png",
+    "state": "walk_1",
+    "rotation": 8,
+    "dimensions": [
+      429,
+      300
+    ],
+    "grab": [
+      248,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDC1.png",
+    "state": "walk_2",
+    "rotation": 1,
+    "dimensions": [
+      176,
+      297
+    ],
+    "grab": [
+      88,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDC2.png",
+    "state": "walk_2",
+    "rotation": 2,
+    "dimensions": [
+      396,
+      295
+    ],
+    "grab": [
+      180,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDC3.png",
+    "state": "walk_2",
+    "rotation": 3,
+    "dimensions": [
+      506,
+      297
+    ],
+    "grab": [
+      188,
+      294
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDC4.png",
+    "state": "walk_2",
+    "rotation": 4,
+    "dimensions": [
+      428,
+      295
+    ],
+    "grab": [
+      180,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDC5.png",
+    "state": "walk_2",
+    "rotation": 5,
+    "dimensions": [
+      176,
+      296
+    ],
+    "grab": [
+      88,
+      294
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDC6.png",
+    "state": "walk_2",
+    "rotation": 6,
+    "dimensions": [
+      396,
+      295
+    ],
+    "grab": [
+      216,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDC7.png",
+    "state": "walk_2",
+    "rotation": 7,
+    "dimensions": [
+      506,
+      297
+    ],
+    "grab": [
+      317,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDC8.png",
+    "state": "walk_2",
+    "rotation": 8,
+    "dimensions": [
+      428,
+      295
+    ],
+    "grab": [
+      248,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDD1.png",
+    "state": "walk_3",
+    "rotation": 1,
+    "dimensions": [
+      176,
+      299
+    ],
+    "grab": [
+      88,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDD2.png",
+    "state": "walk_3",
+    "rotation": 2,
+    "dimensions": [
+      429,
+      299
+    ],
+    "grab": [
+      180,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDD3.png",
+    "state": "walk_3",
+    "rotation": 3,
+    "dimensions": [
+      505,
+      298
+    ],
+    "grab": [
+      188,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDD4.png",
+    "state": "walk_3",
+    "rotation": 4,
+    "dimensions": [
+      396,
+      298
+    ],
+    "grab": [
+      180,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDD5.png",
+    "state": "walk_3",
+    "rotation": 5,
+    "dimensions": [
+      176,
+      299
+    ],
+    "grab": [
+      88,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDD6.png",
+    "state": "walk_3",
+    "rotation": 6,
+    "dimensions": [
+      429,
+      300
+    ],
+    "grab": [
+      248,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDD7.png",
+    "state": "walk_3",
+    "rotation": 7,
+    "dimensions": [
+      505,
+      298
+    ],
+    "grab": [
+      317,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDD8.png",
+    "state": "walk_3",
+    "rotation": 8,
+    "dimensions": [
+      396,
+      300
+    ],
+    "grab": [
+      216,
+      298
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDE1.png",
+    "state": "walk_4",
+    "rotation": 1,
+    "dimensions": [
+      176,
+      297
+    ],
+    "grab": [
+      88,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDE2.png",
+    "state": "walk_4",
+    "rotation": 2,
+    "dimensions": [
+      428,
+      296
+    ],
+    "grab": [
+      180,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDE3.png",
+    "state": "walk_4",
+    "rotation": 3,
+    "dimensions": [
+      506,
+      296
+    ],
+    "grab": [
+      188,
+      294
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDE4.png",
+    "state": "walk_4",
+    "rotation": 4,
+    "dimensions": [
+      396,
+      295
+    ],
+    "grab": [
+      180,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDE5.png",
+    "state": "walk_4",
+    "rotation": 5,
+    "dimensions": [
+      176,
+      296
+    ],
+    "grab": [
+      88,
+      294
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDE6.png",
+    "state": "walk_4",
+    "rotation": 6,
+    "dimensions": [
+      428,
+      295
+    ],
+    "grab": [
+      248,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDE7.png",
+    "state": "walk_4",
+    "rotation": 7,
+    "dimensions": [
+      506,
+      295
+    ],
+    "grab": [
+      317,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDE8.png",
+    "state": "walk_4",
+    "rotation": 8,
+    "dimensions": [
+      396,
+      298
+    ],
+    "grab": [
+      216,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDF1.png",
+    "state": "charge_prep",
+    "rotation": 1,
+    "dimensions": [
+      180,
+      297
+    ],
+    "grab": [
+      90,
+      294
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDF2.png",
+    "state": "charge_prep",
+    "rotation": 2,
+    "dimensions": [
+      413,
+      297
+    ],
+    "grab": [
+      180,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDF3.png",
+    "state": "charge_prep",
+    "rotation": 3,
+    "dimensions": [
+      535,
+      298
+    ],
+    "grab": [
+      188,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDF4.png",
+    "state": "charge_prep",
+    "rotation": 4,
+    "dimensions": [
+      468,
+      299
+    ],
+    "grab": [
+      180,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDF5.png",
+    "state": "charge_prep",
+    "rotation": 5,
+    "dimensions": [
+      180,
+      297
+    ],
+    "grab": [
+      90,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDF6.png",
+    "state": "charge_prep",
+    "rotation": 6,
+    "dimensions": [
+      413,
+      297
+    ],
+    "grab": [
+      233,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDF7.png",
+    "state": "charge_prep",
+    "rotation": 7,
+    "dimensions": [
+      535,
+      298
+    ],
+    "grab": [
+      347,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDF8.png",
+    "state": "charge_prep",
+    "rotation": 8,
+    "dimensions": [
+      468,
+      298
+    ],
+    "grab": [
+      288,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDG1.png",
+    "state": "charge_1",
+    "rotation": 1,
+    "dimensions": [
+      178,
+      278
+    ],
+    "grab": [
+      89,
+      275
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDG2.png",
+    "state": "charge_1",
+    "rotation": 2,
+    "dimensions": [
+      420,
+      277
+    ],
+    "grab": [
+      180,
+      275
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDG3.png",
+    "state": "charge_1",
+    "rotation": 3,
+    "dimensions": [
+      559,
+      278
+    ],
+    "grab": [
+      188,
+      275
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDG4.png",
+    "state": "charge_1",
+    "rotation": 4,
+    "dimensions": [
+      478,
+      278
+    ],
+    "grab": [
+      180,
+      275
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDG5.png",
+    "state": "charge_1",
+    "rotation": 5,
+    "dimensions": [
+      178,
+      278
+    ],
+    "grab": [
+      89,
+      275
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDG6.png",
+    "state": "charge_1",
+    "rotation": 6,
+    "dimensions": [
+      420,
+      278
+    ],
+    "grab": [
+      240,
+      276
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDG7.png",
+    "state": "charge_1",
+    "rotation": 7,
+    "dimensions": [
+      559,
+      277
+    ],
+    "grab": [
+      370,
+      275
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDG8.png",
+    "state": "charge_1",
+    "rotation": 8,
+    "dimensions": [
+      478,
+      276
+    ],
+    "grab": [
+      298,
+      273
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDH1.png",
+    "state": "recovery",
+    "rotation": 1,
+    "dimensions": [
+      176,
+      307
+    ],
+    "grab": [
+      88,
+      304
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDH2.png",
+    "state": "recovery",
+    "rotation": 2,
+    "dimensions": [
+      421,
+      306
+    ],
+    "grab": [
+      180,
+      303
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDH3.png",
+    "state": "recovery",
+    "rotation": 3,
+    "dimensions": [
+      513,
+      305
+    ],
+    "grab": [
+      188,
+      303
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDH4.png",
+    "state": "recovery",
+    "rotation": 4,
+    "dimensions": [
+      454,
+      305
+    ],
+    "grab": [
+      180,
+      302
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDH5.png",
+    "state": "recovery",
+    "rotation": 5,
+    "dimensions": [
+      176,
+      307
+    ],
+    "grab": [
+      88,
+      304
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDH6.png",
+    "state": "recovery",
+    "rotation": 6,
+    "dimensions": [
+      421,
+      305
+    ],
+    "grab": [
+      241,
+      302
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDH7.png",
+    "state": "recovery",
+    "rotation": 7,
+    "dimensions": [
+      513,
+      306
+    ],
+    "grab": [
+      324,
+      304
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDH8.png",
+    "state": "recovery",
+    "rotation": 8,
+    "dimensions": [
+      454,
+      304
+    ],
+    "grab": [
+      274,
+      301
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDI1.png",
+    "state": "pain",
+    "rotation": 1,
+    "dimensions": [
+      177,
+      315
+    ],
+    "grab": [
+      89,
+      312
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDI2.png",
+    "state": "pain",
+    "rotation": 2,
+    "dimensions": [
+      416,
+      312
+    ],
+    "grab": [
+      180,
+      309
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDI3.png",
+    "state": "pain",
+    "rotation": 3,
+    "dimensions": [
+      494,
+      315
+    ],
+    "grab": [
+      188,
+      313
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDI4.png",
+    "state": "pain",
+    "rotation": 4,
+    "dimensions": [
+      439,
+      313
+    ],
+    "grab": [
+      180,
+      311
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDI5.png",
+    "state": "pain",
+    "rotation": 5,
+    "dimensions": [
+      177,
+      315
+    ],
+    "grab": [
+      88,
+      312
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDI6.png",
+    "state": "pain",
+    "rotation": 6,
+    "dimensions": [
+      416,
+      315
+    ],
+    "grab": [
+      236,
+      312
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDI7.png",
+    "state": "pain",
+    "rotation": 7,
+    "dimensions": [
+      494,
+      315
+    ],
+    "grab": [
+      305,
+      312
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDI8.png",
+    "state": "pain",
+    "rotation": 8,
+    "dimensions": [
+      439,
+      315
+    ],
+    "grab": [
+      258,
+      312
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDJ1.png",
+    "state": "death_1",
+    "rotation": 1,
+    "dimensions": [
+      199,
+      250
+    ],
+    "grab": [
+      80,
+      248
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDJ2.png",
+    "state": "death_1",
+    "rotation": 2,
+    "dimensions": [
+      400,
+      249
+    ],
+    "grab": [
+      180,
+      247
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDJ3.png",
+    "state": "death_1",
+    "rotation": 3,
+    "dimensions": [
+      482,
+      248
+    ],
+    "grab": [
+      188,
+      246
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDJ4.png",
+    "state": "death_1",
+    "rotation": 4,
+    "dimensions": [
+      422,
+      248
+    ],
+    "grab": [
+      180,
+      246
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDJ5.png",
+    "state": "death_1",
+    "rotation": 5,
+    "dimensions": [
+      199,
+      249
+    ],
+    "grab": [
+      119,
+      247
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDJ6.png",
+    "state": "death_1",
+    "rotation": 6,
+    "dimensions": [
+      400,
+      248
+    ],
+    "grab": [
+      220,
+      245
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDJ7.png",
+    "state": "death_1",
+    "rotation": 7,
+    "dimensions": [
+      482,
+      248
+    ],
+    "grab": [
+      293,
+      245
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDJ8.png",
+    "state": "death_1",
+    "rotation": 8,
+    "dimensions": [
+      422,
+      247
+    ],
+    "grab": [
+      242,
+      244
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDK1.png",
+    "state": "death_2",
+    "rotation": 1,
+    "dimensions": [
+      254,
+      199
+    ],
+    "grab": [
+      130,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDK2.png",
+    "state": "death_2",
+    "rotation": 2,
+    "dimensions": [
+      408,
+      199
+    ],
+    "grab": [
+      180,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDK3.png",
+    "state": "death_2",
+    "rotation": 3,
+    "dimensions": [
+      479,
+      199
+    ],
+    "grab": [
+      188,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDK4.png",
+    "state": "death_2",
+    "rotation": 4,
+    "dimensions": [
+      414,
+      199
+    ],
+    "grab": [
+      180,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDK5.png",
+    "state": "death_2",
+    "rotation": 5,
+    "dimensions": [
+      254,
+      199
+    ],
+    "grab": [
+      124,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDK6.png",
+    "state": "death_2",
+    "rotation": 6,
+    "dimensions": [
+      408,
+      199
+    ],
+    "grab": [
+      228,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDK7.png",
+    "state": "death_2",
+    "rotation": 7,
+    "dimensions": [
+      479,
+      199
+    ],
+    "grab": [
+      290,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDK8.png",
+    "state": "death_2",
+    "rotation": 8,
+    "dimensions": [
+      414,
+      199
+    ],
+    "grab": [
+      234,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDL1.png",
+    "state": "death_3",
+    "rotation": 1,
+    "dimensions": [
+      348,
+      199
+    ],
+    "grab": [
+      80,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDL2.png",
+    "state": "death_3",
+    "rotation": 2,
+    "dimensions": [
+      473,
+      199
+    ],
+    "grab": [
+      180,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDL3.png",
+    "state": "death_3",
+    "rotation": 3,
+    "dimensions": [
+      446,
+      199
+    ],
+    "grab": [
+      188,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDL4.png",
+    "state": "death_3",
+    "rotation": 4,
+    "dimensions": [
+      379,
+      199
+    ],
+    "grab": [
+      185,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDL5.png",
+    "state": "death_3",
+    "rotation": 5,
+    "dimensions": [
+      348,
+      199
+    ],
+    "grab": [
+      268,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDL6.png",
+    "state": "death_3",
+    "rotation": 6,
+    "dimensions": [
+      473,
+      199
+    ],
+    "grab": [
+      293,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDL7.png",
+    "state": "death_3",
+    "rotation": 7,
+    "dimensions": [
+      446,
+      199
+    ],
+    "grab": [
+      258,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDL8.png",
+    "state": "death_3",
+    "rotation": 8,
+    "dimensions": [
+      379,
+      199
+    ],
+    "grab": [
+      193,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDM1.png",
+    "state": "corpse",
+    "rotation": 1,
+    "dimensions": [
+      347,
+      199
+    ],
+    "grab": [
+      80,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDM2.png",
+    "state": "corpse",
+    "rotation": 2,
+    "dimensions": [
+      485,
+      199
+    ],
+    "grab": [
+      180,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDM3.png",
+    "state": "corpse",
+    "rotation": 3,
+    "dimensions": [
+      465,
+      199
+    ],
+    "grab": [
+      188,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDM4.png",
+    "state": "corpse",
+    "rotation": 4,
+    "dimensions": [
+      399,
+      199
+    ],
+    "grab": [
+      205,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDM5.png",
+    "state": "corpse",
+    "rotation": 5,
+    "dimensions": [
+      347,
+      199
+    ],
+    "grab": [
+      267,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDM6.png",
+    "state": "corpse",
+    "rotation": 6,
+    "dimensions": [
+      485,
+      199
+    ],
+    "grab": [
+      305,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDM7.png",
+    "state": "corpse",
+    "rotation": 7,
+    "dimensions": [
+      465,
+      199
+    ],
+    "grab": [
+      276,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDM8.png",
+    "state": "corpse",
+    "rotation": 8,
+    "dimensions": [
+      399,
+      199
+    ],
+    "grab": [
+      193,
+      196
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDN1.png",
+    "state": "charge_2",
+    "rotation": 1,
+    "dimensions": [
+      178,
+      275
+    ],
+    "grab": [
+      89,
+      272
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDN2.png",
+    "state": "charge_2",
+    "rotation": 2,
+    "dimensions": [
+      479,
+      277
+    ],
+    "grab": [
+      180,
+      274
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDN3.png",
+    "state": "charge_2",
+    "rotation": 3,
+    "dimensions": [
+      559,
+      279
+    ],
+    "grab": [
+      188,
+      276
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDN4.png",
+    "state": "charge_2",
+    "rotation": 4,
+    "dimensions": [
+      421,
+      279
+    ],
+    "grab": [
+      180,
+      276
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDN5.png",
+    "state": "charge_2",
+    "rotation": 5,
+    "dimensions": [
+      178,
+      275
+    ],
+    "grab": [
+      89,
+      272
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDN6.png",
+    "state": "charge_2",
+    "rotation": 6,
+    "dimensions": [
+      479,
+      277
+    ],
+    "grab": [
+      299,
+      274
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDN7.png",
+    "state": "charge_2",
+    "rotation": 7,
+    "dimensions": [
+      559,
+      278
+    ],
+    "grab": [
+      370,
+      276
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDN8.png",
+    "state": "charge_2",
+    "rotation": 8,
+    "dimensions": [
+      421,
+      279
+    ],
+    "grab": [
+      241,
+      276
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDO1.png",
+    "state": "charge_impact",
+    "rotation": 1,
+    "dimensions": [
+      212,
+      248
+    ],
+    "grab": [
+      106,
+      245
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDO2.png",
+    "state": "charge_impact",
+    "rotation": 2,
+    "dimensions": [
+      418,
+      250
+    ],
+    "grab": [
+      180,
+      247
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDO3.png",
+    "state": "charge_impact",
+    "rotation": 3,
+    "dimensions": [
+      556,
+      251
+    ],
+    "grab": [
+      188,
+      249
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDO4.png",
+    "state": "charge_impact",
+    "rotation": 4,
+    "dimensions": [
+      477,
+      250
+    ],
+    "grab": [
+      180,
+      247
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDO5.png",
+    "state": "charge_impact",
+    "rotation": 5,
+    "dimensions": [
+      212,
+      247
+    ],
+    "grab": [
+      106,
+      244
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDO6.png",
+    "state": "charge_impact",
+    "rotation": 6,
+    "dimensions": [
+      418,
+      249
+    ],
+    "grab": [
+      238,
+      246
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDO7.png",
+    "state": "charge_impact",
+    "rotation": 7,
+    "dimensions": [
+      556,
+      250
+    ],
+    "grab": [
+      367,
+      248
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "BRCDO8.png",
+    "state": "charge_impact",
+    "rotation": 8,
+    "dimensions": [
+      477,
+      248
+    ],
+    "grab": [
+      296,
+      246
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYA1.png",
+    "state": "idle",
+    "rotation": 1,
+    "dimensions": [
+      192,
+      301
+    ],
+    "grab": [
+      96,
+      299
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYA2.png",
+    "state": "idle",
+    "rotation": 2,
+    "dimensions": [
+      168,
+      300
+    ],
+    "grab": [
+      115,
+      298
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYA3.png",
+    "state": "idle",
+    "rotation": 3,
+    "dimensions": [
+      142,
+      301
+    ],
+    "grab": [
+      87,
+      299
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYA4.png",
+    "state": "idle",
+    "rotation": 4,
+    "dimensions": [
+      183,
+      302
+    ],
+    "grab": [
+      120,
+      300
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYA5.png",
+    "state": "idle",
+    "rotation": 5,
+    "dimensions": [
+      192,
+      300
+    ],
+    "grab": [
+      96,
+      298
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYA6.png",
+    "state": "idle",
+    "rotation": 6,
+    "dimensions": [
+      168,
+      301
+    ],
+    "grab": [
+      53,
+      299
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYA7.png",
+    "state": "idle",
+    "rotation": 7,
+    "dimensions": [
+      141,
+      302
+    ],
+    "grab": [
+      54,
+      300
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYA8.png",
+    "state": "idle",
+    "rotation": 8,
+    "dimensions": [
+      183,
+      301
+    ],
+    "grab": [
+      63,
+      299
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYB1.png",
+    "state": "walk_1",
+    "rotation": 1,
+    "dimensions": [
+      168,
+      299
+    ],
+    "grab": [
+      84,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYB2.png",
+    "state": "walk_1",
+    "rotation": 2,
+    "dimensions": [
+      152,
+      298
+    ],
+    "grab": [
+      93,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYB3.png",
+    "state": "walk_1",
+    "rotation": 3,
+    "dimensions": [
+      168,
+      297
+    ],
+    "grab": [
+      76,
+      294
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYB4.png",
+    "state": "walk_1",
+    "rotation": 4,
+    "dimensions": [
+      177,
+      299
+    ],
+    "grab": [
+      93,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYB5.png",
+    "state": "walk_1",
+    "rotation": 5,
+    "dimensions": [
+      168,
+      298
+    ],
+    "grab": [
+      84,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYB6.png",
+    "state": "walk_1",
+    "rotation": 6,
+    "dimensions": [
+      152,
+      299
+    ],
+    "grab": [
+      58,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYB7.png",
+    "state": "walk_1",
+    "rotation": 7,
+    "dimensions": [
+      168,
+      297
+    ],
+    "grab": [
+      91,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYB8.png",
+    "state": "walk_1",
+    "rotation": 8,
+    "dimensions": [
+      177,
+      298
+    ],
+    "grab": [
+      84,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYC1.png",
+    "state": "walk_2",
+    "rotation": 1,
+    "dimensions": [
+      156,
+      294
+    ],
+    "grab": [
+      73,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYC2.png",
+    "state": "walk_2",
+    "rotation": 2,
+    "dimensions": [
+      231,
+      295
+    ],
+    "grab": [
+      142,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYC3.png",
+    "state": "walk_2",
+    "rotation": 3,
+    "dimensions": [
+      241,
+      294
+    ],
+    "grab": [
+      142,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYC4.png",
+    "state": "walk_2",
+    "rotation": 4,
+    "dimensions": [
+      162,
+      293
+    ],
+    "grab": [
+      74,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYC5.png",
+    "state": "walk_2",
+    "rotation": 5,
+    "dimensions": [
+      156,
+      294
+    ],
+    "grab": [
+      82,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYC6.png",
+    "state": "walk_2",
+    "rotation": 6,
+    "dimensions": [
+      231,
+      295
+    ],
+    "grab": [
+      88,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYC7.png",
+    "state": "walk_2",
+    "rotation": 7,
+    "dimensions": [
+      241,
+      293
+    ],
+    "grab": [
+      98,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYC8.png",
+    "state": "walk_2",
+    "rotation": 8,
+    "dimensions": [
+      162,
+      295
+    ],
+    "grab": [
+      88,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYD1.png",
+    "state": "walk_3",
+    "rotation": 1,
+    "dimensions": [
+      168,
+      297
+    ],
+    "grab": [
+      84,
+      294
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYD2.png",
+    "state": "walk_3",
+    "rotation": 2,
+    "dimensions": [
+      177,
+      299
+    ],
+    "grab": [
+      93,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYD3.png",
+    "state": "walk_3",
+    "rotation": 3,
+    "dimensions": [
+      168,
+      299
+    ],
+    "grab": [
+      76,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYD4.png",
+    "state": "walk_3",
+    "rotation": 4,
+    "dimensions": [
+      152,
+      299
+    ],
+    "grab": [
+      93,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYD5.png",
+    "state": "walk_3",
+    "rotation": 5,
+    "dimensions": [
+      168,
+      298
+    ],
+    "grab": [
+      84,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYD6.png",
+    "state": "walk_3",
+    "rotation": 6,
+    "dimensions": [
+      177,
+      299
+    ],
+    "grab": [
+      84,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYD7.png",
+    "state": "walk_3",
+    "rotation": 7,
+    "dimensions": [
+      168,
+      299
+    ],
+    "grab": [
+      91,
+      297
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYD8.png",
+    "state": "walk_3",
+    "rotation": 8,
+    "dimensions": [
+      152,
+      298
+    ],
+    "grab": [
+      58,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYE1.png",
+    "state": "walk_4",
+    "rotation": 1,
+    "dimensions": [
+      156,
+      293
+    ],
+    "grab": [
+      82,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYE2.png",
+    "state": "walk_4",
+    "rotation": 2,
+    "dimensions": [
+      162,
+      293
+    ],
+    "grab": [
+      74,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYE3.png",
+    "state": "walk_4",
+    "rotation": 3,
+    "dimensions": [
+      241,
+      293
+    ],
+    "grab": [
+      142,
+      290
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYE4.png",
+    "state": "walk_4",
+    "rotation": 4,
+    "dimensions": [
+      231,
+      293
+    ],
+    "grab": [
+      142,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYE5.png",
+    "state": "walk_4",
+    "rotation": 5,
+    "dimensions": [
+      156,
+      293
+    ],
+    "grab": [
+      73,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYE6.png",
+    "state": "walk_4",
+    "rotation": 6,
+    "dimensions": [
+      162,
+      294
+    ],
+    "grab": [
+      88,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYE7.png",
+    "state": "walk_4",
+    "rotation": 7,
+    "dimensions": [
+      241,
+      295
+    ],
+    "grab": [
+      98,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYE8.png",
+    "state": "walk_4",
+    "rotation": 8,
+    "dimensions": [
+      231,
+      294
+    ],
+    "grab": [
+      88,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYF1.png",
+    "state": "attack_prep",
+    "rotation": 1,
+    "dimensions": [
+      140,
+      294
+    ],
+    "grab": [
+      84,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYF2.png",
+    "state": "attack_prep",
+    "rotation": 2,
+    "dimensions": [
+      163,
+      295
+    ],
+    "grab": [
+      103,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYF3.png",
+    "state": "attack_prep",
+    "rotation": 3,
+    "dimensions": [
+      241,
+      294
+    ],
+    "grab": [
+      144,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYF4.png",
+    "state": "attack_prep",
+    "rotation": 4,
+    "dimensions": [
+      207,
+      295
+    ],
+    "grab": [
+      111,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYF5.png",
+    "state": "attack_prep",
+    "rotation": 5,
+    "dimensions": [
+      140,
+      295
+    ],
+    "grab": [
+      55,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYF6.png",
+    "state": "attack_prep",
+    "rotation": 6,
+    "dimensions": [
+      163,
+      295
+    ],
+    "grab": [
+      59,
+      293
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYF7.png",
+    "state": "attack_prep",
+    "rotation": 7,
+    "dimensions": [
+      241,
+      294
+    ],
+    "grab": [
+      97,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYF8.png",
+    "state": "attack_prep",
+    "rotation": 8,
+    "dimensions": [
+      207,
+      294
+    ],
+    "grab": [
+      95,
+      292
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYG1.png",
+    "state": "attack",
+    "rotation": 1,
+    "dimensions": [
+      198,
+      278
+    ],
+    "grab": [
+      85,
+      276
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYG2.png",
+    "state": "attack",
+    "rotation": 2,
+    "dimensions": [
+      181,
+      279
+    ],
+    "grab": [
+      75,
+      277
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYG3.png",
+    "state": "attack",
+    "rotation": 3,
+    "dimensions": [
+      279,
+      278
+    ],
+    "grab": [
+      162,
+      275
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYG4.png",
+    "state": "attack",
+    "rotation": 4,
+    "dimensions": [
+      307,
+      280
+    ],
+    "grab": [
+      170,
+      278
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYG5.png",
+    "state": "attack",
+    "rotation": 5,
+    "dimensions": [
+      198,
+      279
+    ],
+    "grab": [
+      112,
+      277
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYG6.png",
+    "state": "attack",
+    "rotation": 6,
+    "dimensions": [
+      181,
+      279
+    ],
+    "grab": [
+      105,
+      277
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYG7.png",
+    "state": "attack",
+    "rotation": 7,
+    "dimensions": [
+      279,
+      279
+    ],
+    "grab": [
+      117,
+      277
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYG8.png",
+    "state": "attack",
+    "rotation": 8,
+    "dimensions": [
+      307,
+      279
+    ],
+    "grab": [
+      137,
+      277
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYH1.png",
+    "state": "attack_recovery",
+    "rotation": 1,
+    "dimensions": [
+      183,
+      297
+    ],
+    "grab": [
+      61,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYH2.png",
+    "state": "attack_recovery",
+    "rotation": 2,
+    "dimensions": [
+      212,
+      296
+    ],
+    "grab": [
+      136,
+      294
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYH3.png",
+    "state": "attack_recovery",
+    "rotation": 3,
+    "dimensions": [
+      243,
+      297
+    ],
+    "grab": [
+      156,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYH4.png",
+    "state": "attack_recovery",
+    "rotation": 4,
+    "dimensions": [
+      211,
+      298
+    ],
+    "grab": [
+      116,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYH5.png",
+    "state": "attack_recovery",
+    "rotation": 5,
+    "dimensions": [
+      183,
+      297
+    ],
+    "grab": [
+      121,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYH6.png",
+    "state": "attack_recovery",
+    "rotation": 6,
+    "dimensions": [
+      212,
+      298
+    ],
+    "grab": [
+      75,
+      296
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYH7.png",
+    "state": "attack_recovery",
+    "rotation": 7,
+    "dimensions": [
+      243,
+      297
+    ],
+    "grab": [
+      86,
+      295
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYH8.png",
+    "state": "attack_recovery",
+    "rotation": 8,
+    "dimensions": [
+      211,
+      296
+    ],
+    "grab": [
+      95,
+      294
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYI1.png",
+    "state": "pain",
+    "rotation": 1,
+    "dimensions": [
+      261,
+      291
+    ],
+    "grab": [
+      156,
+      289
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYI2.png",
+    "state": "pain",
+    "rotation": 2,
+    "dimensions": [
+      218,
+      291
+    ],
+    "grab": [
+      145,
+      288
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYI3.png",
+    "state": "pain",
+    "rotation": 3,
+    "dimensions": [
+      214,
+      293
+    ],
+    "grab": [
+      129,
+      291
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYI4.png",
+    "state": "pain",
+    "rotation": 4,
+    "dimensions": [
+      261,
+      291
+    ],
+    "grab": [
+      159,
+      289
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYI5.png",
+    "state": "pain",
+    "rotation": 5,
+    "dimensions": [
+      261,
+      292
+    ],
+    "grab": [
+      104,
+      290
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYI6.png",
+    "state": "pain",
+    "rotation": 6,
+    "dimensions": [
+      218,
+      292
+    ],
+    "grab": [
+      72,
+      290
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYI7.png",
+    "state": "pain",
+    "rotation": 7,
+    "dimensions": [
+      214,
+      292
+    ],
+    "grab": [
+      84,
+      290
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYI8.png",
+    "state": "pain",
+    "rotation": 8,
+    "dimensions": [
+      261,
+      292
+    ],
+    "grab": [
+      102,
+      290
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYJ1.png",
+    "state": "death_1",
+    "rotation": 1,
+    "dimensions": [
+      212,
+      248
+    ],
+    "grab": [
+      102,
+      246
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYJ2.png",
+    "state": "death_1",
+    "rotation": 2,
+    "dimensions": [
+      174,
+      248
+    ],
+    "grab": [
+      92,
+      246
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYJ3.png",
+    "state": "death_1",
+    "rotation": 3,
+    "dimensions": [
+      188,
+      248
+    ],
+    "grab": [
+      130,
+      246
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYJ4.png",
+    "state": "death_1",
+    "rotation": 4,
+    "dimensions": [
+      183,
+      249
+    ],
+    "grab": [
+      110,
+      247
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYJ5.png",
+    "state": "death_1",
+    "rotation": 5,
+    "dimensions": [
+      212,
+      249
+    ],
+    "grab": [
+      109,
+      247
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYJ6.png",
+    "state": "death_1",
+    "rotation": 6,
+    "dimensions": [
+      174,
+      250
+    ],
+    "grab": [
+      81,
+      248
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYJ7.png",
+    "state": "death_1",
+    "rotation": 7,
+    "dimensions": [
+      188,
+      250
+    ],
+    "grab": [
+      57,
+      248
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYJ8.png",
+    "state": "death_1",
+    "rotation": 8,
+    "dimensions": [
+      183,
+      250
+    ],
+    "grab": [
+      72,
+      248
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYK1.png",
+    "state": "death_2",
+    "rotation": 1,
+    "dimensions": [
+      234,
+      197
+    ],
+    "grab": [
+      112,
+      195
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYK2.png",
+    "state": "death_2",
+    "rotation": 2,
+    "dimensions": [
+      263,
+      195
+    ],
+    "grab": [
+      178,
+      193
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYK3.png",
+    "state": "death_2",
+    "rotation": 3,
+    "dimensions": [
+      259,
+      199
+    ],
+    "grab": [
+      158,
+      197
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYK4.png",
+    "state": "death_2",
+    "rotation": 4,
+    "dimensions": [
+      287,
+      197
+    ],
+    "grab": [
+      183,
+      195
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYK5.png",
+    "state": "death_2",
+    "rotation": 5,
+    "dimensions": [
+      234,
+      197
+    ],
+    "grab": [
+      121,
+      194
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYK6.png",
+    "state": "death_2",
+    "rotation": 6,
+    "dimensions": [
+      263,
+      199
+    ],
+    "grab": [
+      85,
+      197
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYK7.png",
+    "state": "death_2",
+    "rotation": 7,
+    "dimensions": [
+      259,
+      197
+    ],
+    "grab": [
+      101,
+      195
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYK8.png",
+    "state": "death_2",
+    "rotation": 8,
+    "dimensions": [
+      287,
+      199
+    ],
+    "grab": [
+      103,
+      197
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYL1.png",
+    "state": "death_3",
+    "rotation": 1,
+    "dimensions": [
+      247,
+      134
+    ],
+    "grab": [
+      133,
+      132
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYL2.png",
+    "state": "death_3",
+    "rotation": 2,
+    "dimensions": [
+      298,
+      137
+    ],
+    "grab": [
+      181,
+      135
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYL3.png",
+    "state": "death_3",
+    "rotation": 3,
+    "dimensions": [
+      356,
+      136
+    ],
+    "grab": [
+      201,
+      134
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYL4.png",
+    "state": "death_3",
+    "rotation": 4,
+    "dimensions": [
+      259,
+      138
+    ],
+    "grab": [
+      144,
+      136
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYL5.png",
+    "state": "death_3",
+    "rotation": 5,
+    "dimensions": [
+      247,
+      138
+    ],
+    "grab": [
+      114,
+      136
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYL6.png",
+    "state": "death_3",
+    "rotation": 6,
+    "dimensions": [
+      298,
+      136
+    ],
+    "grab": [
+      116,
+      133
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYL7.png",
+    "state": "death_3",
+    "rotation": 7,
+    "dimensions": [
+      356,
+      136
+    ],
+    "grab": [
+      155,
+      134
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYL8.png",
+    "state": "death_3",
+    "rotation": 8,
+    "dimensions": [
+      259,
+      134
+    ],
+    "grab": [
+      115,
+      131
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYM1.png",
+    "state": "corpse",
+    "rotation": 1,
+    "dimensions": [
+      247,
+      70
+    ],
+    "grab": [
+      133,
+      68
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYM2.png",
+    "state": "corpse",
+    "rotation": 2,
+    "dimensions": [
+      306,
+      70
+    ],
+    "grab": [
+      177,
+      68
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYM3.png",
+    "state": "corpse",
+    "rotation": 3,
+    "dimensions": [
+      361,
+      70
+    ],
+    "grab": [
+      188,
+      68
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYM4.png",
+    "state": "corpse",
+    "rotation": 4,
+    "dimensions": [
+      291,
+      69
+    ],
+    "grab": [
+      164,
+      67
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYM5.png",
+    "state": "corpse",
+    "rotation": 5,
+    "dimensions": [
+      247,
+      69
+    ],
+    "grab": [
+      113,
+      67
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYM6.png",
+    "state": "corpse",
+    "rotation": 6,
+    "dimensions": [
+      306,
+      70
+    ],
+    "grab": [
+      129,
+      68
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYM7.png",
+    "state": "corpse",
+    "rotation": 7,
+    "dimensions": [
+      361,
+      69
+    ],
+    "grab": [
+      173,
+      67
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "ORDYM8.png",
+    "state": "corpse",
+    "rotation": 8,
+    "dimensions": [
+      291,
+      70
+    ],
+    "grab": [
+      127,
+      68
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGA1.png",
+    "state": "idle",
+    "rotation": 1,
+    "dimensions": [
+      204,
+      328
+    ],
+    "grab": [
+      102,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGA2.png",
+    "state": "idle",
+    "rotation": 2,
+    "dimensions": [
+      170,
+      328
+    ],
+    "grab": [
+      100,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGA3.png",
+    "state": "idle",
+    "rotation": 3,
+    "dimensions": [
+      107,
+      328
+    ],
+    "grab": [
+      59,
+      325
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGA4.png",
+    "state": "idle",
+    "rotation": 4,
+    "dimensions": [
+      176,
+      329
+    ],
+    "grab": [
+      105,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGA5.png",
+    "state": "idle",
+    "rotation": 5,
+    "dimensions": [
+      204,
+      328
+    ],
+    "grab": [
+      101,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGA6.png",
+    "state": "idle",
+    "rotation": 6,
+    "dimensions": [
+      170,
+      330
+    ],
+    "grab": [
+      70,
+      328
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGA7.png",
+    "state": "idle",
+    "rotation": 7,
+    "dimensions": [
+      107,
+      328
+    ],
+    "grab": [
+      47,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGA8.png",
+    "state": "idle",
+    "rotation": 8,
+    "dimensions": [
+      176,
+      329
+    ],
+    "grab": [
+      71,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGB1.png",
+    "state": "walk_1",
+    "rotation": 1,
+    "dimensions": [
+      162,
+      328
+    ],
+    "grab": [
+      81,
+      325
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGB2.png",
+    "state": "walk_1",
+    "rotation": 2,
+    "dimensions": [
+      156,
+      328
+    ],
+    "grab": [
+      87,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGB3.png",
+    "state": "walk_1",
+    "rotation": 3,
+    "dimensions": [
+      136,
+      329
+    ],
+    "grab": [
+      60,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGB4.png",
+    "state": "walk_1",
+    "rotation": 4,
+    "dimensions": [
+      157,
+      329
+    ],
+    "grab": [
+      87,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGB5.png",
+    "state": "walk_1",
+    "rotation": 5,
+    "dimensions": [
+      162,
+      328
+    ],
+    "grab": [
+      81,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGB6.png",
+    "state": "walk_1",
+    "rotation": 6,
+    "dimensions": [
+      156,
+      328
+    ],
+    "grab": [
+      69,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGB7.png",
+    "state": "walk_1",
+    "rotation": 7,
+    "dimensions": [
+      136,
+      328
+    ],
+    "grab": [
+      75,
+      325
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGB8.png",
+    "state": "walk_1",
+    "rotation": 8,
+    "dimensions": [
+      157,
+      328
+    ],
+    "grab": [
+      70,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGC1.png",
+    "state": "walk_2",
+    "rotation": 1,
+    "dimensions": [
+      158,
+      329
+    ],
+    "grab": [
+      76,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGC2.png",
+    "state": "walk_2",
+    "rotation": 2,
+    "dimensions": [
+      190,
+      329
+    ],
+    "grab": [
+      120,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGC3.png",
+    "state": "walk_2",
+    "rotation": 3,
+    "dimensions": [
+      183,
+      330
+    ],
+    "grab": [
+      106,
+      328
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGC4.png",
+    "state": "walk_2",
+    "rotation": 4,
+    "dimensions": [
+      136,
+      330
+    ],
+    "grab": [
+      65,
+      328
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGC5.png",
+    "state": "walk_2",
+    "rotation": 5,
+    "dimensions": [
+      158,
+      330
+    ],
+    "grab": [
+      82,
+      328
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGC6.png",
+    "state": "walk_2",
+    "rotation": 6,
+    "dimensions": [
+      190,
+      331
+    ],
+    "grab": [
+      70,
+      329
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGC7.png",
+    "state": "walk_2",
+    "rotation": 7,
+    "dimensions": [
+      183,
+      329
+    ],
+    "grab": [
+      77,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGC8.png",
+    "state": "walk_2",
+    "rotation": 8,
+    "dimensions": [
+      136,
+      329
+    ],
+    "grab": [
+      70,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGD1.png",
+    "state": "walk_3",
+    "rotation": 1,
+    "dimensions": [
+      162,
+      329
+    ],
+    "grab": [
+      81,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGD2.png",
+    "state": "walk_3",
+    "rotation": 2,
+    "dimensions": [
+      156,
+      328
+    ],
+    "grab": [
+      87,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGD3.png",
+    "state": "walk_3",
+    "rotation": 3,
+    "dimensions": [
+      136,
+      328
+    ],
+    "grab": [
+      60,
+      325
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGD4.png",
+    "state": "walk_3",
+    "rotation": 4,
+    "dimensions": [
+      157,
+      329
+    ],
+    "grab": [
+      87,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGD5.png",
+    "state": "walk_3",
+    "rotation": 5,
+    "dimensions": [
+      162,
+      328
+    ],
+    "grab": [
+      81,
+      325
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGD6.png",
+    "state": "walk_3",
+    "rotation": 6,
+    "dimensions": [
+      156,
+      328
+    ],
+    "grab": [
+      69,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGD7.png",
+    "state": "walk_3",
+    "rotation": 7,
+    "dimensions": [
+      136,
+      330
+    ],
+    "grab": [
+      75,
+      328
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGD8.png",
+    "state": "walk_3",
+    "rotation": 8,
+    "dimensions": [
+      157,
+      329
+    ],
+    "grab": [
+      70,
+      327
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGE1.png",
+    "state": "walk_4",
+    "rotation": 1,
+    "dimensions": [
+      158,
+      330
+    ],
+    "grab": [
+      82,
+      328
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGE2.png",
+    "state": "walk_4",
+    "rotation": 2,
+    "dimensions": [
+      136,
+      329
+    ],
+    "grab": [
+      66,
+      326
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGE3.png",
+    "state": "walk_4",
+    "rotation": 3,
+    "dimensions": [
+      183,
+      330
+    ],
+    "grab": [
+      106,
+      328
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGE4.png",
+    "state": "walk_4",
+    "rotation": 4,
+    "dimensions": [
+      191,
+      330
+    ],
+    "grab": [
+      120,
+      328
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGE5.png",
+    "state": "walk_4",
+    "rotation": 5,
+    "dimensions": [
+      158,
+      331
+    ],
+    "grab": [
+      76,
+      329
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGE6.png",
+    "state": "walk_4",
+    "rotation": 6,
+    "dimensions": [
+      136,
+      331
+    ],
+    "grab": [
+      69,
+      329
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGE7.png",
+    "state": "walk_4",
+    "rotation": 7,
+    "dimensions": [
+      183,
+      330
+    ],
+    "grab": [
+      77,
+      328
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGE8.png",
+    "state": "walk_4",
+    "rotation": 8,
+    "dimensions": [
+      191,
+      331
+    ],
+    "grab": [
+      71,
+      329
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGF1.png",
+    "state": "telegraph",
+    "rotation": 1,
+    "dimensions": [
+      221,
+      364
+    ],
+    "grab": [
+      110,
+      362
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGF2.png",
+    "state": "telegraph",
+    "rotation": 2,
+    "dimensions": [
+      216,
+      362
+    ],
+    "grab": [
+      71,
+      359
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGF3.png",
+    "state": "telegraph",
+    "rotation": 3,
+    "dimensions": [
+      193,
+      363
+    ],
+    "grab": [
+      66,
+      360
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGF4.png",
+    "state": "telegraph",
+    "rotation": 4,
+    "dimensions": [
+      232,
+      365
+    ],
+    "grab": [
+      67,
+      363
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGF5.png",
+    "state": "telegraph",
+    "rotation": 5,
+    "dimensions": [
+      221,
+      365
+    ],
+    "grab": [
+      110,
+      363
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGF6.png",
+    "state": "telegraph",
+    "rotation": 6,
+    "dimensions": [
+      216,
+      363
+    ],
+    "grab": [
+      144,
+      361
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGF7.png",
+    "state": "telegraph",
+    "rotation": 7,
+    "dimensions": [
+      193,
+      363
+    ],
+    "grab": [
+      127,
+      361
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGF8.png",
+    "state": "telegraph",
+    "rotation": 8,
+    "dimensions": [
+      232,
+      364
+    ],
+    "grab": [
+      164,
+      362
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGG1.png",
+    "state": "release",
+    "rotation": 1,
+    "dimensions": [
+      188,
+      314
+    ],
+    "grab": [
+      70,
+      312
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGG2.png",
+    "state": "release",
+    "rotation": 2,
+    "dimensions": [
+      293,
+      315
+    ],
+    "grab": [
+      161,
+      313
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGG3.png",
+    "state": "release",
+    "rotation": 3,
+    "dimensions": [
+      357,
+      315
+    ],
+    "grab": [
+      218,
+      313
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGG4.png",
+    "state": "release",
+    "rotation": 4,
+    "dimensions": [
+      284,
+      314
+    ],
+    "grab": [
+      153,
+      312
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGG5.png",
+    "state": "release",
+    "rotation": 5,
+    "dimensions": [
+      188,
+      314
+    ],
+    "grab": [
+      118,
+      311
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGG6.png",
+    "state": "release",
+    "rotation": 6,
+    "dimensions": [
+      293,
+      315
+    ],
+    "grab": [
+      131,
+      313
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGG7.png",
+    "state": "release",
+    "rotation": 7,
+    "dimensions": [
+      357,
+      315
+    ],
+    "grab": [
+      139,
+      313
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGG8.png",
+    "state": "release",
+    "rotation": 8,
+    "dimensions": [
+      284,
+      314
+    ],
+    "grab": [
+      131,
+      312
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGH1.png",
+    "state": "pain",
+    "rotation": 1,
+    "dimensions": [
+      275,
+      326
+    ],
+    "grab": [
+      164,
+      324
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGH2.png",
+    "state": "pain",
+    "rotation": 2,
+    "dimensions": [
+      276,
+      324
+    ],
+    "grab": [
+      178,
+      322
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGH3.png",
+    "state": "pain",
+    "rotation": 3,
+    "dimensions": [
+      247,
+      325
+    ],
+    "grab": [
+      154,
+      323
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGH4.png",
+    "state": "pain",
+    "rotation": 4,
+    "dimensions": [
+      280,
+      327
+    ],
+    "grab": [
+      182,
+      325
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGH5.png",
+    "state": "pain",
+    "rotation": 5,
+    "dimensions": [
+      275,
+      325
+    ],
+    "grab": [
+      111,
+      322
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGH6.png",
+    "state": "pain",
+    "rotation": 6,
+    "dimensions": [
+      276,
+      326
+    ],
+    "grab": [
+      97,
+      324
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGH7.png",
+    "state": "pain",
+    "rotation": 7,
+    "dimensions": [
+      247,
+      326
+    ],
+    "grab": [
+      92,
+      324
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGH8.png",
+    "state": "pain",
+    "rotation": 8,
+    "dimensions": [
+      280,
+      324
+    ],
+    "grab": [
+      98,
+      321
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGI1.png",
+    "state": "death_1",
+    "rotation": 1,
+    "dimensions": [
+      280,
+      317
+    ],
+    "grab": [
+      130,
+      315
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGI2.png",
+    "state": "death_1",
+    "rotation": 2,
+    "dimensions": [
+      290,
+      317
+    ],
+    "grab": [
+      182,
+      315
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGI3.png",
+    "state": "death_1",
+    "rotation": 3,
+    "dimensions": [
+      236,
+      317
+    ],
+    "grab": [
+      135,
+      315
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGI4.png",
+    "state": "death_1",
+    "rotation": 4,
+    "dimensions": [
+      290,
+      315
+    ],
+    "grab": [
+      178,
+      313
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGI5.png",
+    "state": "death_1",
+    "rotation": 5,
+    "dimensions": [
+      280,
+      317
+    ],
+    "grab": [
+      149,
+      315
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGI6.png",
+    "state": "death_1",
+    "rotation": 6,
+    "dimensions": [
+      290,
+      316
+    ],
+    "grab": [
+      108,
+      314
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGI7.png",
+    "state": "death_1",
+    "rotation": 7,
+    "dimensions": [
+      236,
+      315
+    ],
+    "grab": [
+      101,
+      312
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGI8.png",
+    "state": "death_1",
+    "rotation": 8,
+    "dimensions": [
+      290,
+      318
+    ],
+    "grab": [
+      112,
+      316
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGJ1.png",
+    "state": "death_2",
+    "rotation": 1,
+    "dimensions": [
+      245,
+      154
+    ],
+    "grab": [
+      133,
+      152
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGJ2.png",
+    "state": "death_2",
+    "rotation": 2,
+    "dimensions": [
+      353,
+      153
+    ],
+    "grab": [
+      200,
+      151
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGJ3.png",
+    "state": "death_2",
+    "rotation": 3,
+    "dimensions": [
+      384,
+      155
+    ],
+    "grab": [
+      226,
+      153
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGJ4.png",
+    "state": "death_2",
+    "rotation": 4,
+    "dimensions": [
+      310,
+      155
+    ],
+    "grab": [
+      157,
+      153
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGJ5.png",
+    "state": "death_2",
+    "rotation": 5,
+    "dimensions": [
+      245,
+      155
+    ],
+    "grab": [
+      111,
+      153
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGJ6.png",
+    "state": "death_2",
+    "rotation": 6,
+    "dimensions": [
+      353,
+      152
+    ],
+    "grab": [
+      153,
+      149
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGJ7.png",
+    "state": "death_2",
+    "rotation": 7,
+    "dimensions": [
+      384,
+      153
+    ],
+    "grab": [
+      158,
+      151
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGJ8.png",
+    "state": "death_2",
+    "rotation": 8,
+    "dimensions": [
+      310,
+      154
+    ],
+    "grab": [
+      152,
+      152
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGK1.png",
+    "state": "corpse",
+    "rotation": 1,
+    "dimensions": [
+      246,
+      81
+    ],
+    "grab": [
+      134,
+      79
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGK2.png",
+    "state": "corpse",
+    "rotation": 2,
+    "dimensions": [
+      355,
+      81
+    ],
+    "grab": [
+      196,
+      79
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGK3.png",
+    "state": "corpse",
+    "rotation": 3,
+    "dimensions": [
+      391,
+      80
+    ],
+    "grab": [
+      214,
+      78
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGK4.png",
+    "state": "corpse",
+    "rotation": 4,
+    "dimensions": [
+      341,
+      81
+    ],
+    "grab": [
+      182,
+      79
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGK5.png",
+    "state": "corpse",
+    "rotation": 5,
+    "dimensions": [
+      246,
+      81
+    ],
+    "grab": [
+      111,
+      79
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGK6.png",
+    "state": "corpse",
+    "rotation": 6,
+    "dimensions": [
+      355,
+      81
+    ],
+    "grab": [
+      158,
+      79
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGK7.png",
+    "state": "corpse",
+    "rotation": 7,
+    "dimensions": [
+      391,
+      81
+    ],
+    "grab": [
+      177,
+      79
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGK8.png",
+    "state": "corpse",
+    "rotation": 8,
+    "dimensions": [
+      341,
+      81
+    ],
+    "grab": [
+      158,
+      79
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGN1.png",
+    "state": "recovery",
+    "rotation": 1,
+    "dimensions": [
+      197,
+      322
+    ],
+    "grab": [
+      81,
+      320
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGN2.png",
+    "state": "recovery",
+    "rotation": 2,
+    "dimensions": [
+      232,
+      322
+    ],
+    "grab": [
+      154,
+      320
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGN3.png",
+    "state": "recovery",
+    "rotation": 3,
+    "dimensions": [
+      237,
+      322
+    ],
+    "grab": [
+      152,
+      320
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGN4.png",
+    "state": "recovery",
+    "rotation": 4,
+    "dimensions": [
+      180,
+      321
+    ],
+    "grab": [
+      95,
+      319
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGN5.png",
+    "state": "recovery",
+    "rotation": 5,
+    "dimensions": [
+      197,
+      322
+    ],
+    "grab": [
+      116,
+      320
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGN6.png",
+    "state": "recovery",
+    "rotation": 6,
+    "dimensions": [
+      232,
+      321
+    ],
+    "grab": [
+      78,
+      319
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGN7.png",
+    "state": "recovery",
+    "rotation": 7,
+    "dimensions": [
+      237,
+      321
+    ],
+    "grab": [
+      84,
+      319
+    ],
+    "scale": 0.18
+  },
+  {
+    "file": "PREGN8.png",
+    "state": "recovery",
+    "rotation": 8,
+    "dimensions": [
+      180,
+      324
+    ],
+    "grab": [
+      84,
+      322
+    ],
+    "scale": 0.18
+  }
+]

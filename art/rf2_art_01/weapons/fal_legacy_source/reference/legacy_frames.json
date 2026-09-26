@@ -1,0 +1,136 @@
+{
+  "schema": 1,
+  "weapon": "fn_fal",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "frames": [
+    {
+      "file": "00_FAL_READY.png",
+      "state": "FAL_READY",
+      "duration_tics": 1,
+      "event": "idle loop; A_WeaponReady"
+    },
+    {
+      "file": "01_FAL_FIRE.png",
+      "state": "FAL_FIRE",
+      "duration_tics": 2,
+      "event": "rf2s1/fal/shot_01; A_GunFlash; case ejection particle"
+    },
+    {
+      "file": "02_FAL_RECOIL_MAX.png",
+      "state": "FAL_RECOIL_MAX",
+      "duration_tics": 2,
+      "event": "peak recoil; A_WeaponOffset optional on top"
+    },
+    {
+      "file": "03_FAL_RECOVERY.png",
+      "state": "FAL_RECOVERY",
+      "duration_tics": 2,
+      "event": "return to READY"
+    },
+    {
+      "file": "04_FAL_RELOAD_01_HAND_LEAVES_FOREND.png",
+      "state": "FAL_RELOAD_01_HAND_LEAVES_FOREND",
+      "duration_tics": 4,
+      "event": "rf2s1/fal/cloth"
+    },
+    {
+      "file": "05_FAL_RELOAD_02_REACH_MAG.png",
+      "state": "FAL_RELOAD_02_REACH_MAG",
+      "duration_tics": 4,
+      "event": "hand opens toward the magazine"
+    },
+    {
+      "file": "06_FAL_RELOAD_03_GRAB_MAG.png",
+      "state": "FAL_RELOAD_03_GRAB_MAG",
+      "duration_tics": 3,
+      "event": "hand closes on the magazine body"
+    },
+    {
+      "file": "07_FAL_RELOAD_04_MAG_RELEASE.png",
+      "state": "FAL_RELOAD_04_MAG_RELEASE",
+      "duration_tics": 3,
+      "event": "rf2s1/fal/latch; catch pressed, rear of magazine drops"
+    },
+    {
+      "file": "08_FAL_RELOAD_05_MAG_ROTATE_OUT.png",
+      "state": "FAL_RELOAD_05_MAG_ROTATE_OUT",
+      "duration_tics": 3,
+      "event": "rf2s1/fal/mag_out; magazine rocks forward, out of the well"
+    },
+    {
+      "file": "09_FAL_RELOAD_06_MAG_CLEAR.png",
+      "state": "FAL_RELOAD_06_MAG_CLEAR",
+      "duration_tics": 4,
+      "event": "magazine clear of the rifle, carried down and away"
+    },
+    {
+      "file": "10_FAL_RELOAD_07_NEW_MAG_ENTER.png",
+      "state": "FAL_RELOAD_07_NEW_MAG_ENTER",
+      "duration_tics": 4,
+      "event": "fresh magazine rises from below the frame, brass visible at the lips"
+    },
+    {
+      "file": "11_FAL_RELOAD_08_NEW_MAG_ALIGN.png",
+      "state": "FAL_RELOAD_08_NEW_MAG_ALIGN",
+      "duration_tics": 3,
+      "event": "front lug presented to the well, magazine tilted"
+    },
+    {
+      "file": "12_FAL_RELOAD_09_MAG_INSERT.png",
+      "state": "FAL_RELOAD_09_MAG_INSERT",
+      "duration_tics": 3,
+      "event": "rf2s1/fal/mag_in; lug in, magazine rocking rearward"
+    },
+    {
+      "file": "13_FAL_RELOAD_10_MAG_LOCK.png",
+      "state": "FAL_RELOAD_10_MAG_LOCK",
+      "duration_tics": 3,
+      "event": "rf2s1/fal/seat; catch clicks (ammunition commit point)"
+    },
+    {
+      "file": "14_FAL_RELOAD_11_HAND_TRANSITION.png",
+      "state": "FAL_RELOAD_11_HAND_TRANSITION",
+      "duration_tics": 3,
+      "event": "hand releases magazine, rises along the receiver"
+    },
+    {
+      "file": "15_FAL_RELOAD_12_CHARGE_START.png",
+      "state": "FAL_RELOAD_12_CHARGE_START",
+      "duration_tics": 3,
+      "event": "fingers close on the charging handle"
+    },
+    {
+      "file": "16_FAL_RELOAD_13_CHARGE_REAR.png",
+      "state": "FAL_RELOAD_13_CHARGE_REAR",
+      "duration_tics": 3,
+      "event": "rf2s1/fal/action; handle at the rear of its travel, bolt back"
+    },
+    {
+      "file": "17_FAL_RELOAD_14_CHARGE_RELEASE.png",
+      "state": "FAL_RELOAD_14_CHARGE_RELEASE",
+      "duration_tics": 2,
+      "event": "handle released, bolt slams home"
+    },
+    {
+      "file": "18_FAL_RELOAD_15_HAND_RETURN.png",
+      "state": "FAL_RELOAD_15_HAND_RETURN",
+      "duration_tics": 3,
+      "event": "rf2s1/fal/cloth; support hand comes back to the handguard"
+    },
+    {
+      "file": "19_FAL_RELOAD_16_READY.png",
+      "state": "FAL_RELOAD_16_READY",
+      "duration_tics": 1,
+      "event": "READY (same drawing as FAL_READY)"
+    }
+  ],
+  "notes": {
+    "method": "layered editable source (art/source/final_weapons/fn_fal): rifle body with occluded surfaces rebuilt, magazine with hidden upper body and feed lips, charging handle, each arm as a separate layer with off-screen elbow pivot and extended sleeve tube; frames are whole-layer transforms composited in z order.",
+    "identity": "unchanged approved FAL master; same rifle, same hands, same sleeves in every frame",
+    "runtime": "same 1536x1024 canvas as fal_idle_v01.png; existing TEXTURES.txt XScale 6 / YScale 7.2 / Offset -700,-300 apply to every frame",
+    "reload_timing": "durations follow the ZScript ReloadPose schedule (tics 0..61); READY/16_READY are the same drawing"
+  }
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "file": "00_BHP_READY.png",
+    "canvas": [
+      1672,
+      941
+    ],
+    "offset": [
+      -700,
+      -300
+    ],
+    "scale": [
+      6,
+      7.2
+    ],
+    "slide_travel": [
+      0,
+      0
+    ],
+    "recoil_degrees": 0
+  },
+  {
+    "file": "01_BHP_FIRE.png",
+    "canvas": [
+      1672,
+      941
+    ],
+    "offset": [
+      -700,
+      -300
+    ],
+    "scale": [
+      6,
+      7.2
+    ],
+    "slide_travel": [
+      0,
+      0
+    ],
+    "recoil_degrees": 0.25
+  },
+  {
+    "file": "02_BHP_SLIDE_REAR.png",
+    "canvas": [
+      1672,
+      941
+    ],
+    "offset": [
+      -700,
+      -300
+    ],
+    "scale": [
+      6,
+      7.2
+    ],
+    "slide_travel": [
+      23,
+      24
+    ],
+    "recoil_degrees": 0.8
+  },
+  {
+    "file": "03_BHP_RECOIL_MAX.png",
+    "canvas": [
+      1672,
+      941
+    ],
+    "offset": [
+      -700,
+      -300
+    ],
+    "scale": [
+      6,
+      7.2
+    ],
+    "slide_travel": [
+      25,
+      27
+    ],
+    "recoil_degrees": 1.25
+  },
+  {
+    "file": "04_BHP_SLIDE_FORWARD.png",
+    "canvas": [
+      1672,
+      941
+    ],
+    "offset": [
+      -700,
+      -300
+    ],
+    "scale": [
+      6,
+      7.2
+    ],
+    "slide_travel": [
+      10,
+      11
+    ],
+    "recoil_degrees": 0.6
+  },
+  {
+    "file": "05_BHP_RECOVERY.png",
+    "canvas": [
+      1672,
+      941
+    ],
+    "offset": [
+      -700,
+      -300
+    ],
+    "scale": [
+      6,
+      7.2
+    ],
+    "slide_travel": [
+      0,
+      0
+    ],
+    "recoil_degrees": 0.2
+  },
+  {
+    "file": "06_BHP_EMPTY.png",
+    "canvas": [
+      1672,
+      941
+    ],
+    "offset": [
+      -700,
+      -300
+    ],
+    "scale": [
+      6,
+      7.2
+    ],
+    "slide_travel": [
+      25,
+      27
+    ],
+    "recoil_degrees": 0
+  }
+]

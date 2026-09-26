@@ -90,7 +90,7 @@ class RFDevHandler : StaticEventHandler
         tour = CVar.GetCVar('rf_dev_tour').GetBool();
         autopilot = CVar.GetCVar('rf_dev_autopilot').GetBool();
         doortest = CVar.GetCVar('rf_dev_doortest').GetBool();
-        weaponShots = CVar.GetCVar('rf_dev_weapons').GetBool();
+        weaponShots = CVar.GetCVar('rf_dev_weapons').GetBool() || CVar.GetCVar('rf_dev_art_combat').GetBool();
         uiShots = CVar.GetCVar('rf_dev_ui').GetInt() == 1;
         msgShots = CVar.GetCVar('rf_dev_ui').GetInt() == 3;
         corpseTest = CVar.GetCVar('rf_dev_corpse').GetBool();
@@ -230,7 +230,7 @@ class RFDevHandler : StaticEventHandler
         }
         if (cpTimer == 4 && cpBody != null) cpBody.DamageMobj(null, null, 1000, 'None');
         // The fall: frames right after the hit, then the resting pose.
-        if (cpTimer == 5 || cpTimer == 11 || cpTimer == 18 || cpTimer == 26 || cpTimer == 40) Level.MakeScreenShot();
+        if (cpTimer == 5 || cpTimer == 11 || cpTimer == 18 || cpTimer == 26 || cpTimer == 40) if (filmEvery == 0) Level.MakeScreenShot();
         if (cpTimer == 60 && cpBody != null)
         {
             double under = cpBody.CurSector.floorplane.ZAtPoint(cpBody.Pos.XY);
@@ -243,10 +243,10 @@ class RFDevHandler : StaticEventHandler
         for (int k = 0; k < 4; k++)
         {
             if (cpTimer == 62 + k * 6 && cpBody != null) ViewFrom(pmo, cpBody, CP_A[spot] + around[k], 96, 0);
-            if (cpTimer == 65 + k * 6) Level.MakeScreenShot();
+            if (cpTimer == 65 + k * 6) if (filmEvery == 0) Level.MakeScreenShot();
         }
         if (cpTimer == 86 && cpBody != null) ViewFrom(pmo, cpBody, CP_A[spot] + 45, 40, 1);
-        if (cpTimer == 89) Level.MakeScreenShot();
+        if (cpTimer == 89) if (filmEvery == 0) Level.MakeScreenShot();
         if (++cpTimer > 95)
         {
             if (cpBody != null) cpBody.Destroy();
@@ -254,6 +254,43 @@ class RFDevHandler : StaticEventHandler
             cpTimer = 0;
             cpIndex++;
         }
+    }
+
+    // Evidence-only stress scene: two waves, all three existing families, existing courtyard.
+    // This is not a campaign playthrough or a change to RF01's encounters.
+    void ArtCombatTick()
+    {
+        let p = PlayerPawn(players[consoleplayer].mo);
+        if (p == null || p.player == null) return;
+        p.player.cheats |= CF_GODMODE;
+        p.player.cmd.buttons &= ~(BT_ATTACK | BT_RELOAD | BT_USE);
+        if (Level.Time == 10)
+        {
+            p.SetOrigin((384, 40, 0), false); p.angle = 90; p.pitch = 0;
+            p.GiveInventory('RFFAL', 1); p.GiveInventory('RFRifleAmmo', 200);
+            p.player.PendingWeapon = Weapon(p.FindInventory('RFFAL'));
+        }
+        if (Level.Time == 12 || Level.Time == 430)
+        {
+            static const class<Actor> kinds[] = { 'RFOrderly', 'RFBrancardier', 'RFPorteRegistre', 'RFOrderly', 'RFPorteRegistre' };
+            static const double xs[] = { 270, 384, 510, 300, 475 };
+            static const double ys[] = { 185, 270, 240, 330, 360 };
+            for (int i = 0; i < 5; i++)
+            {
+                let foe = Actor.Spawn(kinds[i], (xs[i], ys[i], 0));
+                if (foe != null) { foe.SetZ(foe.floorz); foe.target = p; foe.angle = 270; foe.SetStateLabel('See'); }
+            }
+            Console.Printf("RF_ART_STRESS wave_t=%d actors=5 families=3 godmode=1", Level.Time);
+        }
+        if (Level.Time < 55) return;
+        let target = FindFoe(p);
+        if (target == null) return;
+        Vector2 delta = target.Pos.XY - p.Pos.XY;
+        p.angle = atan2(delta.Y, delta.X);
+        p.pitch = -atan2(target.Pos.Z + target.Height * 0.55 - p.Pos.Z - p.ViewHeight, max(1.0, delta.Length()));
+        let fal = RFFAL(p.FindInventory('RFFAL'));
+        if (fal != null && fal.Magazine <= 0) p.player.cmd.buttons |= BT_RELOAD;
+        else if ((ticks & 3) == 0) p.player.cmd.buttons |= BT_ATTACK;
     }
 
     // The view from `dist` units in front of the body along `side`, looking at it; high: from above.
@@ -474,6 +511,7 @@ class RFDevHandler : StaticEventHandler
     // reload, screenshotted in the engine at fixed tics (the promoted Astra frames seen in game).
     void DriveWeaponShots(PlayerPawn p)
     {
+        if (CVar.GetCVar('rf_dev_art_combat').GetBool()) { ArtCombatTick(); return; }
         if (p.player == null) return;
         p.player.cheats |= CF_GODMODE;
         p.player.cmd.forwardmove = 0;
@@ -481,6 +519,8 @@ class RFDevHandler : StaticEventHandler
         p.player.cmd.buttons &= ~(BT_ATTACK | BT_USE | BT_RELOAD);
         if (ticks == 10)
         {
+            p.GiveInventory('RFBrowning', 1);
+            p.player.PendingWeapon = Weapon(p.FindInventory('RFBrowning'));
             // The three families side by side in the courtyard, idle, ~200 units away: scale, ground contact.
             p.SetOrigin((384, 40, p.floorz), false);
             p.angle = 90;
@@ -493,7 +533,9 @@ class RFDevHandler : StaticEventHandler
                 if (mo != null) { mo.angle = 270; mo.bDormant = true; mo.SetZ(mo.floorz); }
             }
         }
-        if (ticks == 45) Level.MakeScreenShot();
+        if (ticks == 32) if (filmEvery == 0) Level.MakeScreenShot();
+        if (ticks == 35) p.player.cmd.buttons |= BT_ATTACK;
+        if (ticks == 36 || ticks == 39 || ticks == 45) if (filmEvery == 0) Level.MakeScreenShot();
         if (ticks == 50)
         {
             p.SetOrigin((384, -500, 0), false);
@@ -505,12 +547,21 @@ class RFDevHandler : StaticEventHandler
         let fal = RFFAL(p.FindInventory('RFFAL'));
         if (fal == null) return;
         if (ticks == 110) p.player.cmd.buttons |= BT_ATTACK;
-        if (ticks == 111 || ticks == 113) Level.MakeScreenShot();        // FIRE + flash, RECOIL
+        if (ticks == 111 || ticks == 113) if (filmEvery == 0) Level.MakeScreenShot();        // FIRE + flash, RECOIL
         if (ticks == 150) fal.Magazine = 0;
         if (ticks == 152) p.player.cmd.buttons |= BT_RELOAD;
-        if (ticks > 152 && ticks <= 212 && (ticks - 152) % 8 == 0) Level.MakeScreenShot();   // reload poses
-        if (ticks == 230) Level.MakeScreenShot();                        // ready again
-        if (ticks == 240) Console.Printf("RF_DEV_WEAPONS_DONE mag=%d reserve=%d", fal.Magazine, fal.ReserveCount());
+        if (ticks > 152 && ticks <= 212 && (ticks - 152) % 8 == 0) if (filmEvery == 0) Level.MakeScreenShot();   // reload poses
+        if (ticks == 230) if (filmEvery == 0) Level.MakeScreenShot();                        // ready again
+        if (ticks == 240) Console.Printf("RF_ART_EMPTY_RELOAD mag=%d reserve=%d", fal.Magazine, fal.ReserveCount());
+        if (ticks == 245) { fal.Magazine = 10; p.GiveInventory('RFRifleAmmo', 20); }
+        if (ticks == 247) p.player.cmd.buttons |= BT_RELOAD;
+        if (ticks == 310) { if (filmEvery == 0) Level.MakeScreenShot(); Console.Printf("RF_ART_PARTIAL_RELOAD mag=%d reserve=%d", fal.Magazine, fal.ReserveCount()); }
+        if (ticks == 325) p.player.PendingWeapon = Weapon(p.FindInventory('RFBrowning'));
+        if (ticks == 360) p.TakeInventory('RFPistolAmmo', 999);
+        if (ticks == 370) if (filmEvery == 0) Level.MakeScreenShot();
+        if (ticks == 375) p.player.cmd.buttons |= BT_ATTACK;
+        if (ticks == 385) if (filmEvery == 0) Level.MakeScreenShot();
+        if (ticks == 420) Console.Printf("RF_DEV_WEAPONS_DONE mag=%d reserve=%d pistol=%d", fal.Magazine, fal.ReserveCount(), p.CountInv('RFPistolAmmo'));
     }
 
     // Door lines bounding a closed door sector, with the side of the room they face.

@@ -1,0 +1,97 @@
+[
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/layers/_mask_overlay.png",
+    "copy": "source/layers/_mask_overlay.png",
+    "sha256": "e85a59f84e3e3c0cde632b3486c63f030623dc8e5586b4391ce4b09e05f7022f"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/layers/arm_l.png",
+    "copy": "source/layers/arm_l.png",
+    "sha256": "b9f402c903a14a9f35de4738d484a0e62292903a612fb004c2e5dc42c1d2c635"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/layers/arm_l2.png",
+    "copy": "source/layers/arm_l2.png",
+    "sha256": "7546cda2982a188403b79a8997e4d39c3c1e5c4e344150af986908b0ed08f292"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/layers/arm_r.png",
+    "copy": "source/layers/arm_r.png",
+    "sha256": "dcaf04bc7e440f86225448c2984d7fe9ed12ffe52ddfe10dd8c148964036a1d9"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/layers/body.png",
+    "copy": "source/layers/body.png",
+    "sha256": "e1c2ab9386353e05be640bb621cf8054635b073962c26e6cd31aadce9c1808d1"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/layers/flash.png",
+    "copy": "source/layers/flash.png",
+    "sha256": "662766263bc810ae19628cd2316a72d066cf0d39e4da0073d47ffc50b5d13e26"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/layers/housing.png",
+    "copy": "source/layers/housing.png",
+    "sha256": "b6aa73c5604e7f065727569e9e2dec3d52ab2f0c2f09831912bb815bab16f96e"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/layers/knob.png",
+    "copy": "source/layers/knob.png",
+    "sha256": "ae4325524506e0ebdafc8512da04bd6579c1bf39e651dc6212196096a5e4ad51"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/layers/mag.png",
+    "copy": "source/layers/mag.png",
+    "sha256": "d0e9e08cb1936bc7ead469ad95314b0bac1b8603eab9bc57a404f6959cb8ee37"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/layers/mag_fresh.png",
+    "copy": "source/layers/mag_fresh.png",
+    "sha256": "f16b7637d12a09fb434a67acad5b28fb0cbaf4fd553fb776516f32377e808168"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/fal_build.py",
+    "copy": "source/reference/fal_build_original.py.txt",
+    "sha256": "bf1d49c4eb8095642e3f7e62a8c745a56a5f4255d18e49364d97605b0a54bc9e"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/_pipeline/rigcomp.py",
+    "copy": "source/reference/rigcomp_original.py.txt",
+    "sha256": "6c86fc1847d186862c1dd0aaec972ab38b96b4534c44f31486c02dcd70cae7c0"
+  },
+  {
+    "original": "legacy/import/art/source/final_weapons/fn_fal/rig.json",
+    "copy": "source/reference/rig_original.json",
+    "sha256": "b747fd81efcf4a8aae8f819e7e73c3aeb2dd47afee278589600d44594d5e1076"
+  },
+  {
+    "original": "legacy/import/art/source/fn_fal/fal_idle_v01.png",
+    "copy": "source/reference/fal_idle_v01.png",
+    "sha256": "443451ff92f118c2922b0fe6388d6be02f67685146cec00075a50759f89c8fb8"
+  },
+  {
+    "original": "legacy/import/art/source/fn_fal/README.md",
+    "copy": "source/reference/master_origin.md",
+    "sha256": "0c604710461c9d419e635471d23c6dedc94a862662a5b5daaebe3a85c67931b0"
+  },
+  {
+    "original": "legacy/import/LICENSE.md",
+    "copy": "source/reference/LEGACY_LICENSE.md",
+    "sha256": "20e253dc6871ce115375116a3d05c024ea7cdab49124499799dc515cb01e3f79"
+  },
+  {
+    "original": "legacy/import/art/manifests/provenance.json",
+    "copy": "source/reference/legacy_provenance.json",
+    "sha256": "8f2b3f34a42ad50972d2af484d8112e601d24b2a31e9e589092bf50c9772e599"
+  },
+  {
+    "original": "legacy/import/art/generated/final_weapons/fn_fal/_manifest.json",
+    "copy": "source/reference/legacy_frames.json",
+    "sha256": "c52978769f50c798c89cb996d587cdf1d67e4de56713d8dfe62735a40944c4b4"
+  },
+  {
+    "original": "legacy/import/art/generated/final_weapons/fn_fal/06_FAL_RELOAD_03_GRAB_MAG.png",
+    "copy": "source/reference/reload_before.png",
+    "sha256": "a2188de9a2d4cb96db1f2ce0a372a10cc6edd08865382bae9085cc51abbe16c8"
+  }
+]

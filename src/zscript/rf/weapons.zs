@@ -140,7 +140,7 @@ class RFBrowning : Weapon
         BHPG G 6 A_StartSound("rf/browning/dry", CHAN_ITEM);
         Goto Ready;
     Flash:
-        TNT1 A 2 A_Light1;
+        BHFX A 2 Bright A_Light1;
         TNT1 A 0 A_Light0;
         Stop;
     Spawn:

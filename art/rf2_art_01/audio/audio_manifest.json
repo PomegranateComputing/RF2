@@ -1,0 +1,1059 @@
+{
+  "sample_rate": 48000,
+  "files": [
+    {
+      "target": "src/sounds/browning/fire_01.wav",
+      "master": "art/rf2_art_01/audio/masters/browning/fire_01.wav",
+      "sources": [
+        "firearms/Prepared SFX Library/Walther PPQ/X_39P.wav",
+        "rpg/Audio/metalClick.ogg"
+      ],
+      "edit": "Independent 9 mm take at 1.405s; 470 ms dry edit + -29 dB metal action at 45 ms; 5:1 peak compression at -24.4 dB relative, instant attack/12 ms release; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.49,
+      "peak_dbfs": -2.2,
+      "rms_dbfs": -24.65,
+      "edit_gain_db": 21.767,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/browning/fire.wav",
+      "master": "art/rf2_art_01/audio/masters/browning/fire.wav",
+      "sources": [
+        "firearms/Prepared SFX Library/Walther PPQ/X_39P.wav",
+        "rpg/Audio/metalClick.ogg"
+      ],
+      "edit": "Compatibility alias of fire_01; existing path remains valid",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.49,
+      "peak_dbfs": -2.2,
+      "rms_dbfs": -24.65,
+      "edit_gain_db": 21.767,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/browning/fire_02.wav",
+      "master": "art/rf2_art_01/audio/masters/browning/fire_02.wav",
+      "sources": [
+        "firearms/Prepared SFX Library/Walther PPQ/X_39P.wav",
+        "rpg/Audio/metalClick.ogg"
+      ],
+      "edit": "Independent 9 mm take at 6.44s; 470 ms dry edit + -29 dB metal action at 45 ms; 5:1 peak compression at -24.4 dB relative, instant attack/12 ms release; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.49,
+      "peak_dbfs": -2.2,
+      "rms_dbfs": -24.87,
+      "edit_gain_db": 20.44,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/browning/fire_03.wav",
+      "master": "art/rf2_art_01/audio/masters/browning/fire_03.wav",
+      "sources": [
+        "firearms/Prepared SFX Library/Walther PPQ/X_39P.wav",
+        "rpg/Audio/metalClick.ogg"
+      ],
+      "edit": "Independent 9 mm take at 10.66s; 470 ms dry edit + -29 dB metal action at 45 ms; 5:1 peak compression at -24.4 dB relative, instant attack/12 ms release; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.49,
+      "peak_dbfs": -2.2,
+      "rms_dbfs": -25.02,
+      "edit_gain_db": 20.192,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/shot_01.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/shot_01.wav",
+      "sources": [
+        "firearms/Prepared SFX Library/1917/B_24P.wav",
+        "firearms/Prepared SFX Library/SKS/U_19P.wav",
+        "rpg/Audio/metalClick.ogg"
+      ],
+      "edit": "Rifle sound design (not claimed to be FAL recording): .30-06 body take 1.305s + 7.62 SKS transient take 2.61s + short action; 5:1 peak compression at -24.4 dB relative, instant attack/12 ms release",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.63,
+      "peak_dbfs": -1.8,
+      "rms_dbfs": -22.76,
+      "edit_gain_db": 17.877,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/shot_02.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/shot_02.wav",
+      "sources": [
+        "firearms/Prepared SFX Library/1917/B_24P.wav",
+        "firearms/Prepared SFX Library/SKS/U_19P.wav",
+        "rpg/Audio/metalClick.ogg"
+      ],
+      "edit": "Rifle sound design (not claimed to be FAL recording): .30-06 body take 6.73s + 7.62 SKS transient take 8.015s + short action; 5:1 peak compression at -24.4 dB relative, instant attack/12 ms release",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.63,
+      "peak_dbfs": -1.8,
+      "rms_dbfs": -21.3,
+      "edit_gain_db": 18.903,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/shot_03.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/shot_03.wav",
+      "sources": [
+        "firearms/Prepared SFX Library/1917/B_24P.wav",
+        "firearms/Prepared SFX Library/SKS/U_19P.wav",
+        "rpg/Audio/metalClick.ogg"
+      ],
+      "edit": "Rifle sound design (not claimed to be FAL recording): .30-06 body take 1.305s + 7.62 SKS transient take 12.785s + short action; 5:1 peak compression at -24.4 dB relative, instant attack/12 ms release",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.63,
+      "peak_dbfs": -1.8,
+      "rms_dbfs": -22.61,
+      "edit_gain_db": 18.156,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/browning/slide.wav",
+      "master": "art/rf2_art_01/audio/masters/browning/slide.wav",
+      "sources": [
+        "rpg/Audio/metalLatch.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2242,
+      "peak_dbfs": -15.0,
+      "rms_dbfs": -36.36,
+      "edit_gain_db": -15.569,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/browning/dry.wav",
+      "master": "art/rf2_art_01/audio/masters/browning/dry.wav",
+      "sources": [
+        "rpg/Audio/metalClick.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.3744,
+      "peak_dbfs": -15.0,
+      "rms_dbfs": -41.23,
+      "edit_gain_db": -6.945,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/dry.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/dry.wav",
+      "sources": [
+        "rpg/Audio/metalClick.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.3744,
+      "peak_dbfs": -15.0,
+      "rms_dbfs": -41.23,
+      "edit_gain_db": -6.945,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/latch.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/latch.wav",
+      "sources": [
+        "rpg/Audio/metalLatch.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2242,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -33.36,
+      "edit_gain_db": -12.569,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/mag_out.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/mag_out.wav",
+      "sources": [
+        "rpg/Audio/drawKnife2.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.347,
+      "peak_dbfs": -13.0,
+      "rms_dbfs": -29.34,
+      "edit_gain_db": 11.43,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/mag_in.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/mag_in.wav",
+      "sources": [
+        "rpg/Audio/metalLatch.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2242,
+      "peak_dbfs": -10.5,
+      "rms_dbfs": -31.86,
+      "edit_gain_db": -11.069,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/seat.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/seat.wav",
+      "sources": [
+        "rpg/Audio/bookPlace2.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2807,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -30.36,
+      "edit_gain_db": -12.774,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/action.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/action.wav",
+      "sources": [
+        "rpg/Audio/drawKnife1.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2474,
+      "peak_dbfs": -11.0,
+      "rms_dbfs": -28.13,
+      "edit_gain_db": 14.916,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/raise.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/raise.wav",
+      "sources": [
+        "rpg/Audio/beltHandle1.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2403,
+      "peak_dbfs": -15.0,
+      "rms_dbfs": -38.61,
+      "edit_gain_db": -10.678,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/cloth.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/cloth.wav",
+      "sources": [
+        "rpg/Audio/cloth2.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.341,
+      "peak_dbfs": -20.0,
+      "rms_dbfs": -38.9,
+      "edit_gain_db": -9.622,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/world/paper.wav",
+      "master": "art/rf2_art_01/audio/masters/world/paper.wav",
+      "sources": [
+        "rpg/Audio/bookFlip2.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.4046,
+      "peak_dbfs": -17.0,
+      "rms_dbfs": -44.28,
+      "edit_gain_db": -7.209,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/world/switch.wav",
+      "master": "art/rf2_art_01/audio/masters/world/switch.wav",
+      "sources": [
+        "rpg/Audio/metalClick.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.3744,
+      "peak_dbfs": -14.0,
+      "rms_dbfs": -40.23,
+      "edit_gain_db": -5.945,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/world/door.wav",
+      "master": "art/rf2_art_01/audio/masters/world/door.wav",
+      "sources": [
+        "rpg/Audio/doorOpen_1.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.9177,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -32.72,
+      "edit_gain_db": -11.32,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/world/door_close.wav",
+      "master": "art/rf2_art_01/audio/masters/world/door_close.wav",
+      "sources": [
+        "rpg/Audio/doorClose_2.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.5662,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -26.97,
+      "edit_gain_db": -7.279,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/porte/telegraph.wav",
+      "master": "art/rf2_art_01/audio/masters/porte/telegraph.wav",
+      "sources": [
+        "rpg/Audio/bookOpen.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.1537,
+      "peak_dbfs": -11.0,
+      "rms_dbfs": -30.47,
+      "edit_gain_db": 4.482,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/porte/throw.wav",
+      "master": "art/rf2_art_01/audio/masters/porte/throw.wav",
+      "sources": [
+        "rpg/Audio/bookFlip3.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2054,
+      "peak_dbfs": -11.0,
+      "rms_dbfs": -36.99,
+      "edit_gain_db": -5.113,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/items/pickup.wav",
+      "master": "art/rf2_art_01/audio/masters/items/pickup.wav",
+      "sources": [
+        "rpg/Audio/beltHandle2.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.3985,
+      "peak_dbfs": -17.0,
+      "rms_dbfs": -44.34,
+      "edit_gain_db": -12.563,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/wood_01.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/wood_01.wav",
+      "sources": [
+        "impact/Audio/impactWood_medium_000.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2551,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -25.14,
+      "edit_gain_db": -3.096,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/plaster_01.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/plaster_01.wav",
+      "sources": [
+        "impact/Audio/impactMining_000.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.6449,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -25.01,
+      "edit_gain_db": -4.981,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/metal_01.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/metal_01.wav",
+      "sources": [
+        "impact/Audio/impactMetal_medium_000.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2444,
+      "peak_dbfs": -8.0,
+      "rms_dbfs": -24.57,
+      "edit_gain_db": -2.846,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/flesh_01.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/flesh_01.wav",
+      "sources": [
+        "impact/Audio/impactSoft_medium_000.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.118,
+      "peak_dbfs": -9.0,
+      "rms_dbfs": -22.96,
+      "edit_gain_db": -7.367,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/orderly/step_01.wav",
+      "master": "art/rf2_art_01/audio/masters/orderly/step_01.wav",
+      "sources": [
+        "impact/Audio/footstep_concrete_000.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.1059,
+      "peak_dbfs": -17.0,
+      "rms_dbfs": -35.88,
+      "edit_gain_db": -13.603,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/shell_01.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/shell_01.wav",
+      "sources": [
+        "impact/Audio/impactMetal_light_000.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.256,
+      "peak_dbfs": -24.0,
+      "rms_dbfs": -41.41,
+      "edit_gain_db": -21.566,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/wood_02.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/wood_02.wav",
+      "sources": [
+        "impact/Audio/impactWood_medium_001.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2581,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -24.89,
+      "edit_gain_db": -2.812,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/plaster_02.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/plaster_02.wav",
+      "sources": [
+        "impact/Audio/impactMining_001.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.5942,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -25.58,
+      "edit_gain_db": -5.436,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/metal_02.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/metal_02.wav",
+      "sources": [
+        "impact/Audio/impactMetal_medium_001.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.1435,
+      "peak_dbfs": -8.0,
+      "rms_dbfs": -23.95,
+      "edit_gain_db": -3.489,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/flesh_02.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/flesh_02.wav",
+      "sources": [
+        "impact/Audio/impactSoft_medium_001.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.1833,
+      "peak_dbfs": -9.0,
+      "rms_dbfs": -22.69,
+      "edit_gain_db": -6.0,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/orderly/step_02.wav",
+      "master": "art/rf2_art_01/audio/masters/orderly/step_02.wav",
+      "sources": [
+        "impact/Audio/footstep_concrete_001.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.1076,
+      "peak_dbfs": -17.0,
+      "rms_dbfs": -37.78,
+      "edit_gain_db": -13.567,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/shell_02.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/shell_02.wav",
+      "sources": [
+        "impact/Audio/impactMetal_light_001.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2147,
+      "peak_dbfs": -24.0,
+      "rms_dbfs": -41.21,
+      "edit_gain_db": -21.438,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/wood_03.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/wood_03.wav",
+      "sources": [
+        "impact/Audio/impactWood_medium_002.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2661,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -26.34,
+      "edit_gain_db": -4.215,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/plaster_03.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/plaster_03.wav",
+      "sources": [
+        "impact/Audio/impactMining_002.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.5354,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -26.82,
+      "edit_gain_db": -3.003,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/metal_03.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/metal_03.wav",
+      "sources": [
+        "impact/Audio/impactMetal_medium_002.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.1191,
+      "peak_dbfs": -8.0,
+      "rms_dbfs": -24.92,
+      "edit_gain_db": -2.255,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/impact/flesh_03.wav",
+      "master": "art/rf2_art_01/audio/masters/impact/flesh_03.wav",
+      "sources": [
+        "impact/Audio/impactSoft_medium_002.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.1352,
+      "peak_dbfs": -9.0,
+      "rms_dbfs": -22.44,
+      "edit_gain_db": -6.427,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/orderly/step_03.wav",
+      "master": "art/rf2_art_01/audio/masters/orderly/step_03.wav",
+      "sources": [
+        "impact/Audio/footstep_concrete_002.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.1128,
+      "peak_dbfs": -17.0,
+      "rms_dbfs": -37.84,
+      "edit_gain_db": -13.423,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/fal/shell_03.wav",
+      "master": "art/rf2_art_01/audio/masters/fal/shell_03.wav",
+      "sources": [
+        "impact/Audio/impactMetal_light_002.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.1908,
+      "peak_dbfs": -24.0,
+      "rms_dbfs": -42.43,
+      "edit_gain_db": -22.085,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/world/body_fall.wav",
+      "master": "art/rf2_art_01/audio/masters/world/body_fall.wav",
+      "sources": [
+        "impact/Audio/impactSoft_heavy_002.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.5723,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -26.51,
+      "edit_gain_db": -7.982,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/brancardier/frame_hit.wav",
+      "master": "art/rf2_art_01/audio/masters/brancardier/frame_hit.wav",
+      "sources": [
+        "impact/Audio/impactMetal_heavy_002.ogg"
+      ],
+      "edit": "trim; high-pass DC/rumble; short edge fades; mono; level to hierarchy",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.1173,
+      "peak_dbfs": -6.5,
+      "rms_dbfs": -22.87,
+      "edit_gain_db": -1.503,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/brancardier/wheel.wav",
+      "master": "art/rf2_art_01/audio/masters/brancardier/wheel.wav",
+      "sources": [
+        "rpg/Audio/creak2.ogg",
+        "impact/Audio/footstep_concrete_002.ogg"
+      ],
+      "edit": "short friction creak and wheel contact",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.65,
+      "peak_dbfs": -15.0,
+      "rms_dbfs": -31.64,
+      "edit_gain_db": 0.721,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/world/winch.wav",
+      "master": "art/rf2_art_01/audio/masters/world/winch.wav",
+      "sources": [
+        "rpg/Audio/creak2.ogg",
+        "impact/Audio/impactMetal_medium_003.ogg"
+      ],
+      "edit": "two mechanism creaks, terminating frame engagement; no constant motor buzz",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 1.65,
+      "peak_dbfs": -13.0,
+      "rms_dbfs": -37.06,
+      "edit_gain_db": -7.783,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/orderly/penitent_sight.wav",
+      "master": "art/rf2_art_01/audio/masters/orderly/penitent_sight.wav",
+      "sources": [
+        "voices/yelling sounds/3grunt1.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.3873,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -19.44,
+      "edit_gain_db": -0.75,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/orderly/penitent_pain.wav",
+      "master": "art/rf2_art_01/audio/masters/orderly/penitent_pain.wav",
+      "sources": [
+        "voices/yelling sounds/3grunt3.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.4944,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -22.87,
+      "edit_gain_db": 3.095,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/orderly/penitent_death.wav",
+      "master": "art/rf2_art_01/audio/masters/orderly/penitent_death.wav",
+      "sources": [
+        "voices/yelling sounds/3yell11.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 1.0229,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -19.97,
+      "edit_gain_db": 0.598,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/orderly/penitent_active.wav",
+      "master": "art/rf2_art_01/audio/masters/orderly/penitent_active.wav",
+      "sources": [
+        "voices/yelling sounds/3grunt2.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.6463,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -28.34,
+      "edit_gain_db": 2.765,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/orderly/penitent_attack.wav",
+      "master": "art/rf2_art_01/audio/masters/orderly/penitent_attack.wav",
+      "sources": [
+        "voices/yelling sounds/3grunt4.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.2452,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -22.9,
+      "edit_gain_db": 0.219,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/brancardier/invalid_sight.wav",
+      "master": "art/rf2_art_01/audio/masters/brancardier/invalid_sight.wav",
+      "sources": [
+        "voices/yelling sounds/1yell5.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.6358,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -22.66,
+      "edit_gain_db": -2.674,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/brancardier/invalid_pain.wav",
+      "master": "art/rf2_art_01/audio/masters/brancardier/invalid_pain.wav",
+      "sources": [
+        "voices/yelling sounds/1yell2.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.7055,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -24.88,
+      "edit_gain_db": 3.103,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/brancardier/invalid_death.wav",
+      "master": "art/rf2_art_01/audio/masters/brancardier/invalid_death.wav",
+      "sources": [
+        "voices/yelling sounds/1yell10.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.6274,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -20.39,
+      "edit_gain_db": 4.514,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/brancardier/invalid_active.wav",
+      "master": "art/rf2_art_01/audio/masters/brancardier/invalid_active.wav",
+      "sources": [
+        "voices/yelling sounds/1yell8.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.5715,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -24.13,
+      "edit_gain_db": 1.618,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/brancardier/brace.wav",
+      "master": "art/rf2_art_01/audio/masters/brancardier/brace.wav",
+      "sources": [
+        "voices/yelling sounds/1yell4.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.6256,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -22.17,
+      "edit_gain_db": -4.983,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/porte/presence.wav",
+      "master": "art/rf2_art_01/audio/masters/porte/presence.wav",
+      "sources": [
+        "voices/yelling sounds/2yell1.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.4319,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -22.1,
+      "edit_gain_db": 2.468,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/porte/pain.wav",
+      "master": "art/rf2_art_01/audio/masters/porte/pain.wav",
+      "sources": [
+        "voices/yelling sounds/2yell3.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.9706,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -24.83,
+      "edit_gain_db": -0.752,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/porte/death.wav",
+      "master": "art/rf2_art_01/audio/masters/porte/death.wav",
+      "sources": [
+        "voices/yelling sounds/2yell10.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.6817,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -20.61,
+      "edit_gain_db": 3.667,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/viktor/pain_01.wav",
+      "master": "art/rf2_art_01/audio/masters/viktor/pain_01.wav",
+      "sources": [
+        "voices/yelling sounds/3grunt5.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.357,
+      "peak_dbfs": -8.0,
+      "rms_dbfs": -21.87,
+      "edit_gain_db": 2.683,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/viktor/pain_02.wav",
+      "master": "art/rf2_art_01/audio/masters/viktor/pain_02.wav",
+      "sources": [
+        "voices/yelling sounds/3grunt6.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 1.1126,
+      "peak_dbfs": -8.0,
+      "rms_dbfs": -26.84,
+      "edit_gain_db": 2.313,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/viktor/death.wav",
+      "master": "art/rf2_art_01/audio/masters/viktor/death.wav",
+      "sources": [
+        "voices/yelling sounds/3yell15.wav"
+      ],
+      "edit": "natural human voice; DC/rumble removed, HF softened; mono; no pitch shift",
+      "format": "WAV PCM16 mono 48000 Hz",
+      "seconds": 0.9758,
+      "peak_dbfs": -8.0,
+      "rms_dbfs": -20.3,
+      "edit_gain_db": -2.181,
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/world/hum_loop.wav",
+      "master": "art/rf2_art_01/audio/masters/world/hum_loop.wav",
+      "sources": [
+        "sources/project_world/hum_loop.wav"
+      ],
+      "edit": "retained project ambience; periodic HF EQ; reduced source gain",
+      "seconds": 8.0,
+      "peak_dbfs": -30,
+      "rms_dbfs": -39.578344652812916,
+      "format": "WAV PCM16 mono 48000 Hz",
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/world/wind_loop.wav",
+      "master": "art/rf2_art_01/audio/masters/world/wind_loop.wav",
+      "sources": [
+        "sources/project_world/wind_loop.wav"
+      ],
+      "edit": "retained project ambience; periodic HF EQ; reduced source gain",
+      "seconds": 10.5,
+      "peak_dbfs": -26,
+      "rms_dbfs": -40.715704632765764,
+      "format": "WAV PCM16 mono 48000 Hz",
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/world/drip_loop.wav",
+      "master": "art/rf2_art_01/audio/masters/world/drip_loop.wav",
+      "sources": [
+        "sources/project_world/drip_loop.wav"
+      ],
+      "edit": "retained project ambience; periodic HF EQ; reduced source gain",
+      "seconds": 13.0,
+      "peak_dbfs": -24,
+      "rms_dbfs": -49.59763565572425,
+      "format": "WAV PCM16 mono 48000 Hz",
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    },
+    {
+      "target": "src/sounds/world/room_loop.wav",
+      "master": "art/rf2_art_01/audio/masters/world/room_loop.wav",
+      "sources": [
+        "sources/project_world/room_loop.wav"
+      ],
+      "edit": "retained project ambience; periodic HF EQ; reduced source gain",
+      "seconds": 9.0,
+      "peak_dbfs": -36,
+      "rms_dbfs": -46.68405600033601,
+      "format": "WAV PCM16 mono 48000 Hz",
+      "clipped_samples": 0,
+      "audition": "NOT_PERFORMED_BY_AGENT"
+    }
+  ],
+  "source_sha256": {
+    "rpg/Audio/metalClick.ogg": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+    "firearms/Prepared SFX Library/Walther PPQ/X_39P.wav": "d679a3cd87eae2898d984159f83544392932e6b77526045b672e3aaa9c2dda9f",
+    "firearms/Prepared SFX Library/1917/B_24P.wav": "6e0ec58bc70c39d68afdc7dc9e6d100ef6394eb7f4ab9671385d468b3b14b931",
+    "firearms/Prepared SFX Library/SKS/U_19P.wav": "90078733c0821922073717a0a656919227ba381e794f70a43a35df9cb4f3a445",
+    "rpg/Audio/metalLatch.ogg": "ba9ba60b172b3ebc131a940f25793cd2e207aca7af73dc80d637277f060f1708",
+    "rpg/Audio/drawKnife2.ogg": "d5df6a4130cbb016f97b4883769a418917b9629cb4c21717030b186e0c73281a",
+    "rpg/Audio/bookPlace2.ogg": "831874e8fd142d4d0a03ff009f1f83966338a7878c0f6f38c613ae5b80dd731e",
+    "rpg/Audio/drawKnife1.ogg": "276403e72c3b71c47bc24db3083970c23f8e5551ffa78f436f83483c56f3f0bb",
+    "rpg/Audio/beltHandle1.ogg": "2ef665bd8b65dbe669f4560be38a6d8f04a162e618b15a49e3e71b58e558aab0",
+    "rpg/Audio/cloth2.ogg": "8a7451193c38bc05483aec25dd193e163a15d44cf7fff04ac7912573231b0201",
+    "rpg/Audio/bookFlip2.ogg": "3409042acbfaebc24c1a6327dc073e36f9250841712e96c5040da566a97df73c",
+    "rpg/Audio/doorOpen_1.ogg": "4ab93bab96522d8eb109ff96dc57cb6765deb02448fe14c10472084be5bb2a0b",
+    "rpg/Audio/doorClose_2.ogg": "4aa4fe79836c53cd6d0cb0b22ddc33b9901429463ae1bb75131f072683f63f21",
+    "rpg/Audio/bookOpen.ogg": "953390534377222bee89ac8cd9e60a58fdc037c71a4d7c18c43cd647c7f34ba8",
+    "rpg/Audio/bookFlip3.ogg": "c85db5dceb3f1df073e960630277eaa88a5afda0477c1ddd68dad707621767be",
+    "rpg/Audio/beltHandle2.ogg": "f3b692d5c83263c25bce779805b212dbab515d18a603c695fc6a1e8650cf5366",
+    "impact/Audio/impactWood_medium_000.ogg": "1723a9fd25103ed41af06054814e84e65f4a772bac86ab2dc927da93d9592ff5",
+    "impact/Audio/impactMining_000.ogg": "36b4ea107222d073c67ca64dde26944975609202d5090b2f2021213c1a7e35cd",
+    "impact/Audio/impactMetal_medium_000.ogg": "a96f879fec0864a8938e0c745b6996a6c5679c16a234ce31a01cc995e8401003",
+    "impact/Audio/impactSoft_medium_000.ogg": "7d3ba0bb5e60a11b5d3e558c141303dcf494256675fbf753c0d252d2cf0481e3",
+    "impact/Audio/footstep_concrete_000.ogg": "d7267e183067757c92c169de2a379abea592cfca6b39bb2e8feea15221ad79fe",
+    "impact/Audio/impactMetal_light_000.ogg": "33b5e6e37c6e9d54e07bf5a89b12c76e879f40c1ea83cdd82714df1d6f9fec6d",
+    "impact/Audio/impactWood_medium_001.ogg": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73",
+    "impact/Audio/impactMining_001.ogg": "61235a18de3f3d92118235398222dbf51d448f1be70b1c8bc962b10b86f2d9c6",
+    "impact/Audio/impactMetal_medium_001.ogg": "e8a9eaba7c4d27422e4eeb3e6c7100d5d7dc0f83e005efc98c960adcc5265337",
+    "impact/Audio/impactSoft_medium_001.ogg": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+    "impact/Audio/footstep_concrete_001.ogg": "507a75eb19b897087855a3be3cf11a12d7fa37d143ad535eeebe0b8031c7325d",
+    "impact/Audio/impactMetal_light_001.ogg": "fba69c467ddd85da7b1d82e259f936b876d9ba6a3d6f1b24bdd10468e46bfe08",
+    "impact/Audio/impactWood_medium_002.ogg": "3f3f1917428b828f733a963167833c707bf88296ff158e1559c57c5cb813d799",
+    "impact/Audio/impactMining_002.ogg": "059558ec751115ca6b1441e00f0adc837c1a3eeb0a066b109e0fd879fc5d0b0c",
+    "impact/Audio/impactMetal_medium_002.ogg": "7e89ce2ca0dbda95ea2b78d4b50791cab35c10d20e9f5ccd45dd0b00e99ff548",
+    "impact/Audio/impactSoft_medium_002.ogg": "5069e3571a77d7f7aae9ef71d0364aa245fb7d64a7c8cc9956f221d03088c089",
+    "impact/Audio/footstep_concrete_002.ogg": "b21fa546d74941196b25da8a20b7010abd8c05c4fcf93545d1f344e66a664e13",
+    "impact/Audio/impactMetal_light_002.ogg": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29",
+    "impact/Audio/impactSoft_heavy_002.ogg": "d130ae541951243d3f6ed963d0057450a445ffe117fbf9a084d34eb1635cb563",
+    "impact/Audio/impactMetal_heavy_002.ogg": "b914c8f1eb7c0f34bb165d7c77f4be0351f6be0660c13c53e65424e262e2c093",
+    "rpg/Audio/creak2.ogg": "8a990afdc03aebb91d528f5385e2f95582dbfa8e2c12c71098ab01be9142294a",
+    "impact/Audio/impactMetal_medium_003.ogg": "2a185e2e57211d02c1bdd33b872d6b6a2fe83e6c14f4e56f426a95e717acf08e",
+    "voices/yelling sounds/3grunt1.wav": "57b3a59c39ffe74a1706bcb85c451443c3b388d1f6423827b2af4af508c8416b",
+    "voices/yelling sounds/3grunt3.wav": "6006516ae7979896a4053cfc88f26ef575a67133fa0c51de5d9a893498960cc9",
+    "voices/yelling sounds/3yell11.wav": "f8ccec37601dc31bcf4fb326bef158ce713548d6a30df940edbdf37c27450df7",
+    "voices/yelling sounds/3grunt2.wav": "a377c43f2151000713a45c18223c94e1de2e2393ad10569a391c1b9f96898544",
+    "voices/yelling sounds/3grunt4.wav": "4ba97adf030acefa10195f88c3fb329ebbea2c9638bd412896e1b4fc0ca35404",
+    "voices/yelling sounds/1yell5.wav": "9c8f8591b96ecc44d58682a438e47cbee446a2c1a64dee24a07309ebfe04715c",
+    "voices/yelling sounds/1yell2.wav": "5bd2d3b068ba08b2d1237676bd441c4edd608624df4c2ed1d7a6a471d5765138",
+    "voices/yelling sounds/1yell10.wav": "186ae615ac7cd5b50752a6c4898837f885c42fe648cd8148425425843f1dfca3",
+    "voices/yelling sounds/1yell8.wav": "eb878527b89573c537c49790450706646fa16dd1cd6f3705c9a7c2e920f917cb",
+    "voices/yelling sounds/1yell4.wav": "6ee9d367fcec4ca722d1fa97a336a8c264ac443156fe51d1e2b7825636a1b0b7",
+    "voices/yelling sounds/2yell1.wav": "7c14c178f7d765cc60e20f72d296de8a6ad26172dcc98e69a36b4f817df7fa25",
+    "voices/yelling sounds/2yell3.wav": "5fbacf0e1d7fca6f8c3022203793af19f6903a6281f6822e022206ec29bf625d",
+    "voices/yelling sounds/2yell10.wav": "718542b6a1ba707b613499f4510c2fe1eb063a28546cc608030bc63354e45b83",
+    "voices/yelling sounds/3grunt5.wav": "32705e7835d0cdce3eb6e9d3a512ef128ee6c50564bd53bb0723b4474be85181",
+    "voices/yelling sounds/3grunt6.wav": "c334b34e7a64d67f226cd0a54fb237b8fbcc09e5ac6258a32fafcecc2c2e0857",
+    "voices/yelling sounds/3yell15.wav": "4a4a26e7c717c4c56e9ef8d7d62cebdde5718506064e508fa31b88346545c9d1"
+  }
+}

@@ -1,0 +1,770 @@
+{
+  "canvas": [
+    1536,
+    1024
+  ],
+  "alpha": "straight RGBA",
+  "png_grAb": [
+    -700,
+    -300
+  ],
+  "texture_scale_proposal": [
+    6,
+    7.2
+  ],
+  "logical_dimensions": [
+    256,
+    142.222222
+  ],
+  "sprite_aliases_require_explicit_engine_mapping": true,
+  "states": [
+    {
+      "state": "FAL_READY",
+      "file": "RF2_FAL_READY_A0.png",
+      "sprite_alias_proposal": "RFLVA0",
+      "duration_tics_proposal": 1,
+      "legacy_event_reference": "idle loop; A_WeaponReady",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": {
+          "angle": 0.0,
+          "tx": 0.0,
+          "ty": 0.0,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null
+      }
+    },
+    {
+      "state": "FAL_FIRE",
+      "file": "RF2_FAL_FIRE_A0.png",
+      "sprite_alias_proposal": "RFLVB0",
+      "duration_tics_proposal": 2,
+      "legacy_event_reference": "rf2s1/fal/shot_01; A_GunFlash; case ejection particle",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": {
+          "angle": 0.0,
+          "tx": 0.0,
+          "ty": 0.0,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null,
+        "group": {
+          "tx": 6,
+          "ty": 14,
+          "angle": -0.8,
+          "pivot": [
+            2112,
+            956
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RECOIL_MAX",
+      "file": "RF2_FAL_RECOIL_MAX_A0.png",
+      "sprite_alias_proposal": "RFLVC0",
+      "duration_tics_proposal": 2,
+      "legacy_event_reference": "peak recoil; A_WeaponOffset optional on top",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": {
+          "angle": 0.0,
+          "tx": 0.0,
+          "ty": 0.0,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null,
+        "group": {
+          "tx": 14,
+          "ty": 36,
+          "angle": -2.2,
+          "pivot": [
+            2112,
+            956
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RECOVERY",
+      "file": "RF2_FAL_RECOVERY_A0.png",
+      "sprite_alias_proposal": "RFLVD0",
+      "duration_tics_proposal": 2,
+      "legacy_event_reference": "return to READY",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": {
+          "angle": 0.0,
+          "tx": 0.0,
+          "ty": 0.0,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null,
+        "group": {
+          "tx": 5,
+          "ty": 12,
+          "angle": -0.6,
+          "pivot": [
+            2112,
+            956
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RELOAD_01_HAND_LEAVES_FOREND",
+      "file": "RF2_FAL_RELOAD_01_HAND_LEAVES_FOREND_A0.png",
+      "sprite_alias_proposal": "RFLVE0",
+      "duration_tics_proposal": 4,
+      "legacy_event_reference": "rf2s1/fal/cloth",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": {
+          "angle": 4.0,
+          "tx": 8,
+          "ty": 4,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null
+      }
+    },
+    {
+      "state": "FAL_RELOAD_02_REACH_MAG",
+      "file": "RF2_FAL_RELOAD_02_REACH_MAG_A0.png",
+      "sprite_alias_proposal": "RFLVF0",
+      "duration_tics_proposal": 4,
+      "legacy_event_reference": "hand opens toward the magazine",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": {
+          "angle": 12.0,
+          "tx": 30,
+          "ty": 30,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null
+      }
+    },
+    {
+      "state": "FAL_RELOAD_03_GRAB_MAG",
+      "file": "RF2_FAL_RELOAD_03_GRAB_MAG_A0.png",
+      "sprite_alias_proposal": "RFLVG0",
+      "duration_tics_proposal": 3,
+      "legacy_event_reference": "hand closes on the magazine body",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0,
+          "ty": 0,
+          "angle": 0,
+          "pivot": [
+            1188,
+            756
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": null,
+        "flash": null,
+        "arm_l2": {
+          "tx": 0,
+          "ty": 0,
+          "angle": 0,
+          "pivot": [
+            1188,
+            756
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RELOAD_04_MAG_RELEASE",
+      "file": "RF2_FAL_RELOAD_04_MAG_RELEASE_A0.png",
+      "sprite_alias_proposal": "RFLVH0",
+      "duration_tics_proposal": 3,
+      "legacy_event_reference": "rf2s1/fal/latch; catch pressed, rear of magazine drops",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0,
+          "ty": 5,
+          "angle": 2.5,
+          "pivot": [
+            1188,
+            756
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": null,
+        "flash": null,
+        "arm_l2": {
+          "tx": 0,
+          "ty": 5,
+          "angle": 2.5,
+          "pivot": [
+            1188,
+            756
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RELOAD_05_MAG_ROTATE_OUT",
+      "file": "RF2_FAL_RELOAD_05_MAG_ROTATE_OUT_A0.png",
+      "sprite_alias_proposal": "RFLVI0",
+      "duration_tics_proposal": 3,
+      "legacy_event_reference": "rf2s1/fal/mag_out; magazine rocks forward, out of the well",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": -6,
+          "ty": 40,
+          "angle": 14.0,
+          "pivot": [
+            1188,
+            756
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": null,
+        "flash": null,
+        "arm_l2": {
+          "tx": -6,
+          "ty": 40,
+          "angle": 14.0,
+          "pivot": [
+            1188,
+            756
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RELOAD_06_MAG_CLEAR",
+      "file": "RF2_FAL_RELOAD_06_MAG_CLEAR_A0.png",
+      "sprite_alias_proposal": "RFLVJ0",
+      "duration_tics_proposal": 4,
+      "legacy_event_reference": "magazine clear of the rifle, carried down and away",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": -70,
+          "ty": 250,
+          "angle": 26.0,
+          "pivot": [
+            1188,
+            756
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": null,
+        "flash": null,
+        "arm_l2": {
+          "tx": -70,
+          "ty": 250,
+          "angle": 26.0,
+          "pivot": [
+            1188,
+            756
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RELOAD_07_NEW_MAG_ENTER",
+      "file": "RF2_FAL_RELOAD_07_NEW_MAG_ENTER_A0.png",
+      "sprite_alias_proposal": "RFLVK0",
+      "duration_tics_proposal": 4,
+      "legacy_event_reference": "fresh magazine rises from below the frame, brass visible at the lips",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": -40,
+          "ty": 190,
+          "angle": 18.0,
+          "pivot": [
+            1188,
+            756
+          ],
+          "use": "mag_fresh"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": null,
+        "flash": null,
+        "arm_l2": {
+          "tx": -40,
+          "ty": 190,
+          "angle": 18.0,
+          "pivot": [
+            1188,
+            756
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RELOAD_08_NEW_MAG_ALIGN",
+      "file": "RF2_FAL_RELOAD_08_NEW_MAG_ALIGN_A0.png",
+      "sprite_alias_proposal": "RFLVL0",
+      "duration_tics_proposal": 3,
+      "legacy_event_reference": "front lug presented to the well, magazine tilted",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": -8,
+          "ty": 58,
+          "angle": 12.0,
+          "pivot": [
+            1188,
+            756
+          ],
+          "use": "mag_fresh"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": null,
+        "flash": null,
+        "arm_l2": {
+          "tx": -8,
+          "ty": 58,
+          "angle": 12.0,
+          "pivot": [
+            1188,
+            756
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RELOAD_09_MAG_INSERT",
+      "file": "RF2_FAL_RELOAD_09_MAG_INSERT_A0.png",
+      "sprite_alias_proposal": "RFLVM0",
+      "duration_tics_proposal": 3,
+      "legacy_event_reference": "rf2s1/fal/mag_in; lug in, magazine rocking rearward",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": -2,
+          "ty": 14,
+          "angle": 5.0,
+          "pivot": [
+            1188,
+            756
+          ],
+          "use": "mag_fresh"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": null,
+        "flash": null,
+        "arm_l2": {
+          "tx": -2,
+          "ty": 14,
+          "angle": 5.0,
+          "pivot": [
+            1188,
+            756
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RELOAD_10_MAG_LOCK",
+      "file": "RF2_FAL_RELOAD_10_MAG_LOCK_A0.png",
+      "sprite_alias_proposal": "RFLVN0",
+      "duration_tics_proposal": 3,
+      "legacy_event_reference": "rf2s1/fal/seat; catch clicks (ammunition commit point)",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0,
+          "ty": -2,
+          "angle": 0.0,
+          "pivot": [
+            1188,
+            756
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": null,
+        "flash": null,
+        "arm_l2": {
+          "tx": 0,
+          "ty": -2,
+          "angle": 0.0,
+          "pivot": [
+            1188,
+            756
+          ]
+        }
+      }
+    },
+    {
+      "state": "FAL_RELOAD_11_HAND_TRANSITION",
+      "file": "RF2_FAL_RELOAD_11_HAND_TRANSITION_A0.png",
+      "sprite_alias_proposal": "RFLVO0",
+      "duration_tics_proposal": 3,
+      "legacy_event_reference": "hand releases magazine, rises along the receiver",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": {
+          "angle": 9.0,
+          "tx": 30,
+          "ty": -60,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null
+      }
+    },
+    {
+      "state": "FAL_RELOAD_12_CHARGE_START",
+      "file": "RF2_FAL_RELOAD_12_CHARGE_START_A0.png",
+      "sprite_alias_proposal": "RFLVP0",
+      "duration_tics_proposal": 3,
+      "legacy_event_reference": "fingers close on the charging handle",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": {
+          "angle": 4.5,
+          "tx": 96,
+          "ty": -84,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null
+      }
+    },
+    {
+      "state": "FAL_RELOAD_13_CHARGE_REAR",
+      "file": "RF2_FAL_RELOAD_13_CHARGE_REAR_A0.png",
+      "sprite_alias_proposal": "RFLVQ0",
+      "duration_tics_proposal": 3,
+      "legacy_event_reference": "rf2s1/fal/action; handle at the rear of its travel, bolt back",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {
+          "tx": 113.044,
+          "ty": 33.866
+        },
+        "arm_r": {},
+        "arm_l": {
+          "angle": 4.5,
+          "tx": 209.04399999999998,
+          "ty": -50.134,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null
+      }
+    },
+    {
+      "state": "FAL_RELOAD_14_CHARGE_RELEASE",
+      "file": "RF2_FAL_RELOAD_14_CHARGE_RELEASE_A0.png",
+      "sprite_alias_proposal": "RFLVR0",
+      "duration_tics_proposal": 2,
+      "legacy_event_reference": "handle released, bolt slams home",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {
+          "tx": 11.495999999999999,
+          "ty": 3.444
+        },
+        "arm_r": {},
+        "arm_l": {
+          "angle": 4.5,
+          "tx": 124.74,
+          "ty": -75.39,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null
+      }
+    },
+    {
+      "state": "FAL_RELOAD_15_HAND_RETURN",
+      "file": "RF2_FAL_RELOAD_15_HAND_RETURN_A0.png",
+      "sprite_alias_proposal": "RFLVS0",
+      "duration_tics_proposal": 3,
+      "legacy_event_reference": "rf2s1/fal/cloth; support hand comes back to the handguard",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": {
+          "angle": 2.0,
+          "tx": 30,
+          "ty": -10,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null
+      }
+    },
+    {
+      "state": "FAL_RELOAD_16_READY",
+      "file": "RF2_FAL_RELOAD_16_READY_A0.png",
+      "sprite_alias_proposal": "RFLVT0",
+      "duration_tics_proposal": 1,
+      "legacy_event_reference": "READY (same drawing as FAL_READY)",
+      "transforms": {
+        "body": {},
+        "mag": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "angle": 0.0,
+          "pivot": [
+            1242,
+            956
+          ],
+          "use": "mag"
+        },
+        "housing": {},
+        "knob": {},
+        "arm_r": {},
+        "arm_l": {
+          "angle": 0.0,
+          "tx": 0.0,
+          "ty": 0.0,
+          "pivot": [
+            312,
+            1426
+          ],
+          "scale": 1.0
+        },
+        "flash": null
+      }
+    }
+  ],
+  "flash": {
+    "file": "RF2_FAL_MUZZLE_FLASH_A0.png",
+    "alias": "RFMZA0",
+    "overlay_state": "FAL_FIRE"
+  },
+  "empty_reload_tics": 49,
+  "tactical_reload": "Use reload 01..11 then 15..16, skip charging 12..14; Fable owns logic.",
+  "sleeve_repair": {
+    "donor": "layers/arm_l.png",
+    "recipient": "layers/arm_l2.png",
+    "donor_scale": 0.8,
+    "donor_pivot": [
+      1060,
+      807
+    ],
+    "translation": [
+      150,
+      187
+    ],
+    "seam_axis_origin": [
+      1210,
+      994
+    ],
+    "seam_axis": [
+      -0.515,
+      0.857
+    ],
+    "seam_blend_interval": [
+      20,
+      55
+    ],
+    "hand_pose": "legacy grasp, unchanged above seam"
+  },
+  "select_deselect": "Use READY with engine vertical offset; no extra frames.",
+  "sound_events": "Legacy references only. No audio supplied or assumed to exist in baseline."
+}

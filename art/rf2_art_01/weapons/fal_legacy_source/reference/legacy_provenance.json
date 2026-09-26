@@ -1,0 +1,163 @@
+{
+  "schema": 1,
+  "project": "Red Flags 2",
+  "records": [
+    {
+      "family": "runtime_candidate_art",
+      "paths": [
+        "src/sprites",
+        "src/textures",
+        "src/flats"
+      ],
+      "origin": "procedurally generated for this foundation",
+      "third_party_game_assets": false,
+      "status": "candidate"
+    },
+    {
+      "family": "fal_master_v01",
+      "paths": [
+        "art/source/fn_fal/fal_idle_v01.png",
+        "src/graphics/weapons/fal_idle_v01.png"
+      ],
+      "origin": "Original built-in imagegen composition, 2026-09-10; no third-party game image input",
+      "status": "candidate",
+      "third_party_game_assets": false,
+      "owner_review": "not-reviewed",
+      "prompt_and_limits": "art/source/fn_fal/README.md"
+    },
+    {
+      "family": "admission_plaster_v01",
+      "paths": [
+        "art/source/materials/admission_plaster_v01.png",
+        "src/graphics/materials/admission_plaster_v01.png"
+      ],
+      "origin": "Original built-in imagegen material, 2026-09-10; no external texture input",
+      "status": "candidate",
+      "third_party_game_assets": false,
+      "owner_review": "not-reviewed",
+      "prompt_and_limits": "art/source/materials/README.md"
+    },
+    {
+      "family": "s1_ceramic_floor_v01",
+      "paths": [
+        "art/source/s1_materials/ceramic_floor_v01.png",
+        "src/graphics/materials/ceramic_floor_v01.png"
+      ],
+      "origin": "Original built-in imagegen material, 2026-09-10; no external texture input",
+      "status": "candidate",
+      "third_party_game_assets": false,
+      "owner_review": "not-reviewed",
+      "sha256": "6f45f6548d1effc6b3e57d4e4ceb61166db2ca191ea9cc176e7b12e082db1a63",
+      "prompt_and_limits": "art/source/s1_materials/GENERATION.md"
+    },
+    {
+      "family": "runtime_candidate_audio",
+      "paths": [
+        "src/sounds",
+        "src/music/RFAMB01.ogg"
+      ],
+      "origin": "procedurally synthesized for this foundation",
+      "third_party_recordings": false,
+      "status": "candidate"
+    },
+    {
+      "family": "mosin_benchmark_archive",
+      "paths": [
+        "RF2_Weapon_Pivot_Windows_Pack_2026-09-10/RF2_Archive_Pack_Weapons_Windows_2026-09-10/references/Mosin-Nagant.zip"
+      ],
+      "sha256": "147ffb60ac8c56eb097b297bbd65c968baf28c92da123133fb791c2bc1aa0b6c",
+      "origin": "Owner-provided comparison archive; embedded CREDITS inspected 2026-09-10",
+      "status": "reference_only",
+      "third_party_game_assets": true,
+      "runtime_import_permitted": false,
+      "packaged": false,
+      "audit": "reports/mosin_reference_audit_2026-09-10.md"
+    },
+    {
+      "family": "visual_reference_boards",
+      "paths": [
+        "art/reference/style_anchor.png",
+        "art/reference/weapon_arsenal.png",
+        "art/reference/map_board.png",
+        "art/reference/gameplay_target.png"
+      ],
+      "origin": "generated specifically for project direction during foundation creation",
+      "status": "reference_only",
+      "commercial_review_required": true
+    },
+    {
+      "family": "s1_props",
+      "paths": [
+        "art/source/s1_props",
+        "src/models/s1_props"
+      ],
+      "origin": "Owner S1 original source meshes and authored service fittings; adapted to UZDoom OBJ",
+      "manifest": "art/manifests/s1_props.json",
+      "status": "candidate",
+      "owner_review": "not-reviewed",
+      "third_party_game_assets": false
+    },
+    {
+      "family": "s1_enemies",
+      "paths": [
+        "art/source/s1_enemies",
+        "src/models/s1_enemies"
+      ],
+      "origin": "Original parametric articulated meshes, MD3 poses and seeded atlas; no external game asset input",
+      "manifest": "art/manifests/s1_enemies.json",
+      "status": "candidate",
+      "owner_review": "not-reviewed",
+      "third_party_game_assets": false
+    },
+    {
+      "family": "s1_audio",
+      "paths": [
+        "art/source/s1_audio",
+        "src/sounds/rf2s1"
+      ],
+      "origin": "Original synthesis from owner S1 pack; integrated under isolated rf2s1 namespace",
+      "manifest": "art/manifests/s1_audio.json",
+      "status": "candidate",
+      "owner_review": "not-reviewed",
+      "third_party_game_assets": false
+    },
+    {
+      "family": "viktor_hud_portrait_states",
+      "paths": [
+        "src/graphics/hud/viktor",
+        "src/graphics/VIKTOR_STATES_SHEET.png"
+      ],
+      "origin": "Owner-supplied identity reference interpreted into a coherent six-state transparent HUD family, 2026-09-11",
+      "status": "candidate",
+      "owner_review": "not-reviewed",
+      "third_party_game_assets": false,
+      "reference": "RF2_FINITION_VIKTOR_2026-09-11/RF2_FINITION_VIKTOR/references/VIKTOR_IDENTITY_REFERENCE.jpg"
+    },
+    {
+      "family": "porte_registre_audio",
+      "paths": [
+        "art/source/s1_audio/generate_porte_audio.py",
+        "src/sounds/monsters/porte",
+        "src/SNDINFO"
+      ],
+      "origin": "Original deterministic synthesis of paper, filing hardware and restrained breath-like textures, 2026-09-11",
+      "status": "candidate",
+      "owner_review": "not-reviewed",
+      "third_party_recordings": false
+    },
+    {
+      "family": "enemy_final_direction_sheets",
+      "paths": [
+        "art/source/s1_enemies/orderly_final_direction_sheet.png",
+        "art/source/s1_enemies/brancardier_final_direction_sheet.png",
+        "art/source/s1_enemies/porte_registre_final_direction_sheet.png"
+      ],
+      "origin": "Original built-in image generation guided by the existing authored enemy rotations, 2026-09-11",
+      "status": "source",
+      "owner_review": "not-reviewed",
+      "third_party_game_assets": false,
+      "runtime": false,
+      "notes": "Direction references for future complete-frame or 3D re-authoring; not shipped runtime sprites or engine captures."
+    }
+  ]
+}

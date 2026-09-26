@@ -1,0 +1,362 @@
+"""FN FAL final first-person family: editable layered source + frame renderer.
+
+    python fal_build.py layers   # segment the approved master into layers, rebuild occluded surfaces
+    python fal_build.py frames   # render the animation family, contact sheet, manifest, reviews
+    python fal_build.py all
+
+Source master: src/graphics/weapons/fal_idle_v01.png (approved FAL identity, 1536x1024).
+Working canvas: master padded by PAD (left, top, right, bottom) so sleeves can be
+extended off-screen and rotated about off-screen elbows. Exports crop back to
+the master frame, so the existing TEXTURES.txt scale/offset stay valid.
+"""
+from __future__ import annotations
+import json, math, sys
+from pathlib import Path
+import numpy as np
+from PIL import Image
+from scipy import ndimage
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[3]
+sys.path.insert(0, str(HERE.parent / "_pipeline"))
+import rigcomp as rc  # noqa: E402
+
+MASTER = ROOT / "src/graphics/weapons/fal_idle_v01.png"
+LAYERS = HERE / "layers"
+OUT = ROOT / "art/generated/final_weapons/fn_fal"
+PAD_L, PAD_T, PAD_R, PAD_B = 512, 256, 384, 512
+W0, H0 = 1536, 1024
+
+
+def P(x, y):
+    """master -> working canvas coordinates"""
+    return (x + PAD_L, y + PAD_T)
+
+
+def poly(shape, pts):
+    return rc.polygon_mask(shape, [P(*p) for p in pts])
+
+
+def piecewise(points):
+    xs = [p[0] for p in points]
+    ys = [p[1] for p in points]
+    return lambda x: float(np.interp(x, xs, ys))
+
+
+def import_layer(path, src_pad, dst_shape, dst_pad, scale, angle, anchor_src, anchor_dst):
+    """Bring a layer authored on another weapon's working canvas onto this canvas:
+    scale/rotate about anchor_src (that master's coords) and place it at anchor_dst (this master's coords)."""
+    src = rc.premul(rc.load_rgba(path))
+    Hd, Wd = dst_shape
+    # place the source canvas so that its master origin coincides with ours, then transform about the anchor
+    canvas = np.zeros((Hd, Wd, 4), np.float32)
+    ox, oy = dst_pad[0] - src_pad[0], dst_pad[1] - src_pad[1]
+    sy0, sx0 = max(0, -oy), max(0, -ox)
+    dy0, dx0 = max(0, oy), max(0, ox)
+    h = min(src.shape[0] - sy0, Hd - dy0); w = min(src.shape[1] - sx0, Wd - dx0)
+    canvas[dy0:dy0 + h, dx0:dx0 + w] = src[sy0:sy0 + h, sx0:sx0 + w]
+    piv = (anchor_src[0] + dst_pad[0], anchor_src[1] + dst_pad[1])
+    out = rc.transform_layer(canvas, angle=angle, scale=scale, tx=anchor_dst[0] - anchor_src[0], ty=anchor_dst[1] - anchor_src[1], pivot=piv)
+    return rc.unpremul(out)
+
+
+# ------------------------------------------------------------------ layers
+def build_layers():
+    LAYERS.mkdir(parents=True, exist_ok=True)
+    m = rc.load_rgba(MASTER)
+    m[..., 3] = np.where(m[..., 3] > 0.97, 1.0, m[..., 3])   # generator alpha tops at 254; make interior truly opaque
+    m = rc.pad_canvas(m, PAD_L, PAD_T, PAD_R, PAD_B)
+    H, W = m.shape[:2]
+    rgb, a = m[..., :3], m[..., 3]
+    alpha0 = (a > 0.5).astype(np.float32)
+    r, g, b = rgb[..., 0], rgb[..., 1], rgb[..., 2]
+    lum = rgb.mean(-1)
+    # skin: measured r-g >= 0.076 / r-b >= 0.117 on shadowed skin; warm metal stays below 0.04 / 0.062
+    skin = ((r - g > 0.055) & (r - b > 0.085) & (r > 0.15) & (alpha0 > 0)).astype(np.float32)
+    skin = rc.closing(skin, 2)
+    neutral = np.abs(r - b) < 0.028   # black cotton is neutral; magazine/grip metal is warm
+    yy, xx = np.mgrid[0:H, 0:W]
+    mx, my = xx - PAD_L, yy - PAD_T   # master coords
+
+    # --- left arm: skin (front) + black sleeve, connected to the frame edge
+    skin_l = skin * (poly((H, W), [(478, 325), (580, 325), (605, 395), (680, 438), (680, 600), (560, 625), (430, 575), (470, 450)]) > 0)
+    skin_l = rc.keep_largest(skin_l, 1)
+    sleeve_l_zone = poly((H, W), [(380, 470), (600, 470), (642, 600), (625, 700), (610, 1024), (0, 1024), (0, 540)])
+    sleeve_l = ((lum < 0.215) & neutral & (alpha0 > 0) & (sleeve_l_zone > 0)).astype(np.float32)
+    sleeve_l = rc.closing(sleeve_l, 3)
+    sleeve_l = rc.keep_largest(sleeve_l, 1)
+    # curled fingertips in deep shadow in front of the magazine-well front: everything opaque
+    # in this lobe is hand except neutral-grey metal
+    # smooth authored outline (no colour test: the shadowed fingertips and the dark metal behind them are too close in tone)
+    lobe = (poly((H, W), [(598, 438), (628, 446), (652, 460), (666, 480), (673, 502), (672, 532), (664, 562), (648, 586), (625, 600), (598, 598)]) > 0) & (alpha0 > 0)
+    arm_l = rc.closing(np.maximum(np.maximum(skin_l, sleeve_l), lobe.astype(np.float32)), 2)
+    arm_l = ndimage.binary_fill_holes(arm_l > 0.5).astype(np.float32)
+    arm_l = rc.keep_largest(arm_l, 1)
+
+    # --- right arm
+    skin_r = skin * (poly((H, W), [(806, 662), (852, 664), (902, 690), (962, 700), (1012, 728), (1062, 758), (1132, 788), (1152, 850), (1132, 1000), (1000, 1024), (840, 1024), (828, 900), (802, 760)]) > 0)
+    skin_r = rc.keep_largest(skin_r, 1)
+    sleeve_r_zone = poly((H, W), [(1095, 845), (1232, 848), (1536, 895), (1536, 1024), (1030, 1024), (1030, 945)])
+    sleeve_r = ((lum < 0.215) & neutral & (alpha0 > 0) & (sleeve_r_zone > 0)).astype(np.float32)
+    sleeve_r = rc.keep_largest(rc.closing(sleeve_r, 3), 1)
+    arm_r = rc.closing(np.maximum(skin_r, sleeve_r), 2)
+    arm_r = ndimage.binary_fill_holes(arm_r > 0.5).astype(np.float32)
+    arm_r = rc.keep_largest(arm_r, 1)
+
+    # --- magazine (leans forward: left edge drifts left toward the floor plate).
+    # Above y=640 the lower receiver / magazine-well housing sits IN FRONT of the
+    # magazine's right face, so the polygon stops at x~750 there; that hidden
+    # strip (notch) is rebuilt from the magazine's own texture further down.
+    mag_poly = [(670, 496), (722, 524), (750, 528), (752, 600), (754, 636), (792, 644), (793, 680), (789, 720), (784, 760),
+                (778, 800), (772, 846), (738, 872), (718, 868), (690, 832), (662, 786), (651, 760), (654, 720),
+                (659, 680), (664, 640), (668, 600), (672, 560), (676, 520)]
+    mag = poly((H, W), mag_poly) * alpha0 * (1 - skin)
+    mag = ndimage.binary_fill_holes(rc.closing(mag, 2) > 0.5).astype(np.float32)
+    mag = rc.keep_largest(mag, 1)
+    notch = poly((H, W), [(749, 527), (783, 529), (783, 643), (755, 638), (751, 600)])
+
+    # --- charging handle knob (non-reciprocating, left side, front of receiver)
+    knob = np.maximum(rc.ellipse_mask((H, W), *P(613, 431), 24, 16, 8), poly((H, W), [(628, 420), (656, 422), (656, 438), (628, 440)])) * alpha0
+
+    # soft-edged versions (1px feather) for the cut
+    cut = np.clip(rc.dilate(arm_l, 1) + rc.dilate(arm_r, 1) + rc.dilate(mag, 1) + rc.dilate(knob, 1), 0, 1)
+    body_a = a * (1 - cut)
+
+    # ---------------------------------------------------------- reconstruction
+    body_rgb = rgb.copy()
+    # (a) handguard tube under the support hand: extrude the visible cross-section rearward
+    top = piecewise([P(455, 262), P(500, 280), P(550, 298), P(600, 317), P(655, 336)])
+    bot = piecewise([P(434, 340), P(481, 360), P(510, 380), P(545, 386), P(600, 389), P(655, 397)])
+    # the hand also casts a contact shadow on the handguard: rebuild a 7px band around the cut too
+    hg_region = (rc.dilate(arm_l, 7) > 0.5) & (mx >= 455) & (mx <= 660)
+    hg_region &= (yy >= np.vectorize(top)(xx.astype(float)) - 1) & (yy <= np.vectorize(bot)(xx.astype(float)) + 1)
+    body_rgb, cov_hg = rc.extrude_between(body_rgb, hg_region.astype(np.float32), P(455, 0)[0], P(660, 0)[0], top, bot,
+                                          (P(500, 0)[0], P(519, 0)[0]), (P(580, 0)[0], P(600, 0)[0]), jitter=4, seed=3)
+    # (b) receiver front block / magazine-well front lip behind the fingertips
+    cut4 = rc.dilate(cut, 4) * alpha0   # include contact-shadow halos around the removed parts
+    recv_region = (cut4 > 0.5) & (poly((H, W), [(630, 396), (682, 396), (682, 502), (676, 504), (630, 498)]) > 0)
+    # (c) charging-handle seat: receiver side surface where the knob was
+    knob_region = (cut4 > 0.5) & (rc.dilate(knob, 4) > 0)
+    # (d) pistol grip / rear receiver under the trigger hand (never exposed at runtime; keeps the plate solid)
+    grip_region = (cut > 0.5) & (poly((H, W), [(846, 636), (1125, 636), (1125, 790), (1010, 1024), (876, 1024), (858, 900), (838, 780)]) > 0)
+    fill_region = (recv_region | knob_region | grip_region) & ~(cov_hg > 0)
+    known = (body_a > 0.5) & ~fill_region | (cov_hg > 0)
+    body_rgb = rc.diffusion_fill(body_rgb, known.astype(np.float32), fill_region.astype(np.float32), iterations=260)
+    # subtle texture on the diffused fill so it does not read as plastic
+    tex = rc.texture_noise((H, W), 1.6, seed=11) * 0.045
+    body_rgb = np.where(fill_region[..., None], np.clip(body_rgb + tex[..., None], 0, 1), body_rgb)
+    # charging handle slot: shallow groove running rearward along the receiver
+    slot = np.zeros((H, W), np.float32)
+    from PIL import ImageDraw
+    im = Image.fromarray((slot * 255).astype(np.uint8))
+    d = ImageDraw.Draw(im)
+    d.line([P(604, 431), P(760, 476)], fill=255, width=3)
+    slot = np.asarray(im, np.float32) / 255.0 * (fill_region | (cut < 0.5)).astype(np.float32) * alpha0
+    slot = rc.soft(slot, 0.8)
+    body_rgb = body_rgb * (1 - 0.35 * slot[..., None])
+    body_alpha = np.maximum(body_a, (cov_hg > 0) | fill_region).astype(np.float32)
+    body_alpha = np.maximum(body_alpha, rc.soft(body_alpha, 0.6) * (cut > 0))  # feather the rebuilt boundary
+    # drop anti-aliased sleeve/hand edge remnants that survived the cut (tiny islands)
+    body_alpha *= rc.remove_small(body_alpha > 0.25, 400)
+    body = np.dstack([body_rgb, np.clip(body_alpha, 0, 1)])
+    np.savez_compressed(LAYERS / "_masks.npz", arm_l=arm_l, arm_r=arm_r, mag=mag, knob=knob, cut=cut, hg_region=hg_region, cov_hg=cov_hg, fill_region=fill_region, skin=skin)
+
+    # ---------------------------------------------------------------- arms
+    def cut_layer(mask):
+        la = a * rc.soft(mask, 0.7)
+        la = np.where(mask > 0.5, a, la)
+        return np.dstack([rgb, np.clip(la, 0, 1)])
+
+    arm_l_layer = cut_layer(arm_l)
+    arm_r_layer = cut_layer(arm_r)
+    # extend the sleeve tubes past the frame so rotations never expose a cut edge
+    arm_l_layer = rc.unpremul(rc.extrude_tube(rc.premul(arm_l_layer), P(300, 760), (-0.75, 0.66), L=220))
+    arm_r_layer = rc.unpremul(rc.extrude_tube(rc.premul(arm_r_layer), P(1330, 960), (0.86, 0.5), L=120, reach=500))
+
+    # ------------------------------------------------------------- magazine
+    mag_layer = np.dstack([rgb, a * np.where(mag > 0.5, 1.0, rc.soft(mag, 0.7))])
+    # notch hidden behind the lower receiver: same magazine, texture cloned from 130px lower
+    notch_src = rc.transform_layer(rc.premul(mag_layer), tx=0, ty=-130)
+    notch_src[..., 3] = np.where(notch > 0.5, 1.0, 0.0)
+    notch_src[..., :3] = np.where(notch[..., None] > 0.5, notch_src[..., :3] / np.maximum(rc.transform_layer(rc.premul(mag_layer), tx=0, ty=-130)[..., 3:4], 1e-3), 0)
+    notch_src[..., :3] = np.clip(notch_src[..., :3], 0, 1) * notch_src[..., 3:4]
+    mag_layer = rc.unpremul(rc.over(rc.premul(mag_layer), notch_src))
+    mag = np.maximum(mag, notch)
+    # hidden upper body (inside the well) + feed-lip top face, revealed when the magazine is out
+    lift = 34
+    up = rc.transform_layer(rc.premul(mag_layer), tx=0, ty=-lift)
+    top_edge = piecewise([P(670, 496), P(722, 524), P(781, 530)])
+    strip = ((yy >= np.vectorize(top_edge)(xx.astype(float)) - lift) & (yy < np.vectorize(top_edge)(xx.astype(float)) + 2) & (mx >= 668) & (mx <= 783)).astype(np.float32)
+    up = up * strip[..., None]
+    up[..., :3] *= 0.92  # slightly darker: shielded steel inside the well
+    mag_p = rc.over(up, rc.premul(mag_layer))
+    # top face (feed lips)
+    face = poly((H, W), [(672, 496 - lift), (722, 524 - lift), (781, 530 - lift), (783, 530 - lift + 9), (722, 524 - lift + 9), (674, 496 - lift + 9)])
+    face_rgb = np.array([0.17, 0.17, 0.18], np.float32)[None, None, :] * np.ones((H, W, 1), np.float32)
+    rim = poly((H, W), [(672, 496 - lift), (722, 524 - lift), (781, 530 - lift), (781, 530 - lift + 2), (722, 524 - lift + 2), (672, 496 - lift + 2)])
+    face_rgb = np.where(rim[..., None] > 0, np.array([0.42, 0.42, 0.44], np.float32), face_rgb)
+    face_p = np.dstack([face_rgb * face[..., None], face])
+    mag_p = rc.over(mag_p, face_p)
+    mag_layer = rc.unpremul(mag_p)
+    # fresh-magazine variant: a brass case visible at the feed lips
+    fresh = mag_layer.copy()
+    brass = rc.ellipse_mask((H, W), *P(700, 496 - lift + 5), 9, 3.5, 25)
+    brass_rgb = np.array([0.78, 0.62, 0.32], np.float32)
+    fresh[..., :3] = np.where(brass[..., None] > 0, brass_rgb, fresh[..., :3])
+    fresh[..., 3] = np.maximum(fresh[..., 3], brass)
+
+    knob_layer = np.dstack([rgb, a * np.where(knob > 0.5, 1.0, rc.soft(knob, 0.6))])
+    # lower receiver / magazine-well housing that sits IN FRONT of the magazine (drawn above it)
+    housing_mask = rc.dilate(np.maximum(np.maximum(notch, poly((H, W), [(744, 606), (796, 602), (798, 640), (748, 642)])),
+                                        poly((H, W), [(636, 426), (804, 440), (804, 606), (752, 606), (750, 528), (722, 524), (670, 496), (636, 500)])), 2) * body[..., 3]
+    housing_layer = np.dstack([body[..., :3], body[..., 3] * housing_mask])
+
+    # muzzle flash (drawn, restrained): core + two lobes along the bore, forward of the muzzle
+    flash = np.zeros((H, W, 4), np.float32)
+    mxp, myp = P(366, 243)
+    fwd = np.array([-0.946, -0.324])
+    for (cx, cy, rx, ry, ang, col, al) in [
+        (mxp + fwd[0] * 10, myp + fwd[1] * 10, 30, 22, -19, (1.0, 0.93, 0.75), 0.95),
+        (mxp + fwd[0] * 46, myp + fwd[1] * 46, 52, 17, -19, (1.0, 0.80, 0.45), 0.75),
+        (mxp + fwd[0] * 20, myp + fwd[1] * 20, 88, 60, -19, (1.0, 0.72, 0.38), 0.35),
+        (mxp + fwd[0] * 4, myp + fwd[1] * 4, 16, 12, -19, (1.0, 1.0, 0.95), 1.0)]:
+        em = rc.soft(rc.ellipse_mask((H, W), cx, cy, rx, ry, ang), 4.0) * al
+        fp = np.dstack([np.array(col, np.float32)[None, None, :] * em[..., None], em])
+        flash = fp + flash * (1 - fp[..., 3:4])
+    flash = rc.unpremul(flash)
+
+    # second support-hand pose: Viktor's left hand wrapped vertically round a grip (from the approved
+    # Browning master: same hands, same sleeve, same light). Used to grasp / carry the magazine.
+    grasp = import_layer(HERE.parent / "browning/layers/arm_l.png", (512, 320), (H, W), (PAD_L, PAD_T),
+                         scale=0.62, angle=0.0, anchor_src=(775, 640), anchor_dst=(724, 690))
+    for name, layer in [("body", body), ("housing", housing_layer), ("arm_l", arm_l_layer), ("arm_l2", grasp), ("arm_r", arm_r_layer), ("mag", mag_layer), ("mag_fresh", fresh), ("knob", knob_layer), ("flash", flash)]:
+        rc.save_rgba(layer, LAYERS / f"{name}.png")
+    # mask overlay for review
+    ov = rgb.copy()
+    for mask, col in [(arm_l, (1, 0.2, 0.2)), (arm_r, (0.2, 0.4, 1)), (mag, (0.2, 1, 0.3)), (knob, (1, 1, 0.2)), (fill_region.astype(np.float32), (1, 0.4, 1)), (cov_hg, (0.2, 1, 1))]:
+        ov = np.where(mask[..., None] > 0.5, 0.45 * ov + 0.55 * np.array(col, np.float32), ov)
+    ov = np.where(alpha0[..., None] > 0, ov, 0.35)
+    Image.fromarray((ov[PAD_T:PAD_T + H0, PAD_L:PAD_L + W0] * 255).astype(np.uint8)).save(LAYERS / "_mask_overlay.png")
+    rig = {
+        "master": str(MASTER.relative_to(ROOT)).replace("\\", "/"),
+        "pad": [PAD_L, PAD_T, PAD_R, PAD_B], "export": [W0, H0],
+        "layers": ["body", "mag", "mag_fresh", "knob", "arm_r", "arm_l", "flash"],
+        "pivots_master_coords": {"elbow_l": [-200, 1170], "elbow_r": [1760, 1260], "wrist_l": [470, 560], "shoulder": [1600, 700], "muzzle": [366, 243]},
+        "axis": {"bore_forward": [-0.946, -0.324], "charging_handle_travel": [0.958, 0.287]},
+        "z_order": "body < mag < knob < arm_r < arm_l < flash",
+    }
+    (HERE / "rig.json").write_text(json.dumps(rig, indent=2), encoding="utf-8")
+    print("layers written", [p.name for p in LAYERS.glob("*.png")])
+
+
+# ------------------------------------------------------------------ frames
+def load_layers():
+    return {p.stem: rc.premul(rc.load_rgba(p)) for p in LAYERS.glob("*.png") if not p.stem.startswith("_")}
+
+
+def compose(L, spec):
+    """spec: dict layer -> transform dict(angle, scale, tx, ty, pivot) or None to hide;
+    'group' transform applies to every visible layer (rifle + hands move together)."""
+    H, W = next(iter(L.values())).shape[:2]
+    canvas = np.zeros((H, W, 4), np.float32)
+    grp = spec.get("group", {})
+    order = ["body", "mag", "housing", "knob", "arm_r", "arm_l", "arm_l2", "flash"]
+    for name in order:
+        t = spec.get(name, {})
+        if t is None or (name not in spec and name in ("arm_l2",)):
+            continue
+        src = L[t.get("use", name)]
+        layer = src
+        if "warp" in t:
+            layer = rc.warp_layer(layer, t["warp"][0], t["warp"][1])
+        piv = t.get("pivot", (0, 0))
+        layer = rc.transform_layer(layer, t.get("angle", 0.0), t.get("scale", 1.0), t.get("tx", 0.0), t.get("ty", 0.0), piv)
+        if grp:
+            layer = rc.transform_layer(layer, grp.get("angle", 0.0), grp.get("scale", 1.0), grp.get("tx", 0.0), grp.get("ty", 0.0), grp.get("pivot", (0, 0)))
+        rc.over(canvas, layer)
+    return canvas
+
+
+EL = P(-200, 1170)      # left elbow pivot (off-screen)
+WR = P(470, 560)        # left wrist
+SH = P(1600, 700)       # shoulder/stock pivot for muzzle rise
+HT = (0.958, 0.287)     # charging handle travel (rearward, toward the shooter)
+
+
+def arm_l(angle=0.0, tx=0.0, ty=0.0, pivot=None, scale=1.0):
+    return {"angle": angle, "tx": tx, "ty": ty, "pivot": pivot or EL, "scale": scale}
+
+
+def mag_t(tx=0.0, ty=0.0, angle=0.0, pivot=None, use="mag"):
+    return {"tx": tx, "ty": ty, "angle": angle, "pivot": pivot or P(730, 700), "use": use}
+
+
+def frame_specs():
+    """Complete family. Each entry: (state, spec, duration_tics, event)."""
+    F = []
+    def add(state, spec, tics, event=""):
+        F.append((state, spec, tics, event))
+    ready = {"body": {}, "mag": mag_t(), "housing": {}, "knob": {}, "arm_r": {}, "arm_l": arm_l(), "flash": None}
+    add("FAL_READY", ready, 1, "idle loop; A_WeaponReady")
+    # fire cycle: whole assembly kicks back and up (stock pivot), flash forward of the muzzle
+    add("FAL_FIRE", {**ready, "flash": {}, "group": {"tx": 6, "ty": 14, "angle": -0.8, "pivot": SH}}, 2, "rf2s1/fal/shot_01; A_GunFlash; case ejection particle")
+    add("FAL_RECOIL_MAX", {**ready, "group": {"tx": 14, "ty": 36, "angle": -2.2, "pivot": SH}}, 2, "peak recoil; A_WeaponOffset optional on top")
+    add("FAL_RECOVERY", {**ready, "group": {"tx": 5, "ty": 12, "angle": -0.6, "pivot": SH}}, 2, "return to READY")
+    # reload: support hand leaves the handguard, comes down and closes round the magazine (vertical grasp
+    # pose), rocks it forward out of the well, carries it down, returns with a fresh one, seats it,
+    # then reaches up to the charging handle (empty reload) and returns to the handguard.
+    MP = P(676, 500)   # magazine front-top corner: the rocking pivot (front lug)
+    def carry(tx, ty, ang, fresh=False):
+        m = mag_t(tx, ty, ang, MP, use="mag_fresh" if fresh else "mag")
+        return {"mag": m, "arm_l": None, "arm_l2": {"tx": tx, "ty": ty, "angle": ang, "pivot": MP}}
+    add("FAL_RELOAD_01_HAND_LEAVES_FOREND", {**ready, "arm_l": arm_l(4.0, 8, 4)}, 4, "rf2s1/fal/cloth")
+    add("FAL_RELOAD_02_REACH_MAG", {**ready, "arm_l": arm_l(12.0, 30, 30)}, 4, "hand opens toward the magazine")
+    add("FAL_RELOAD_03_GRAB_MAG", {**ready, **carry(0, 0, 0)}, 3, "hand closes on the magazine body")
+    add("FAL_RELOAD_04_MAG_RELEASE", {**ready, **carry(0, 5, 2.5)}, 3, "rf2s1/fal/latch; catch pressed, rear of magazine drops")
+    add("FAL_RELOAD_05_MAG_ROTATE_OUT", {**ready, **carry(-6, 40, 14.0)}, 3, "rf2s1/fal/mag_out; magazine rocks forward, out of the well")
+    add("FAL_RELOAD_06_MAG_CLEAR", {**ready, **carry(-70, 250, 26.0)}, 4, "magazine clear of the rifle, carried down and away")
+    add("FAL_RELOAD_07_NEW_MAG_ENTER", {**ready, **carry(-40, 190, 18.0, fresh=True)}, 4, "fresh magazine rises from below the frame, brass visible at the lips")
+    add("FAL_RELOAD_08_NEW_MAG_ALIGN", {**ready, **carry(-8, 58, 12.0, fresh=True)}, 3, "front lug presented to the well, magazine tilted")
+    add("FAL_RELOAD_09_MAG_INSERT", {**ready, **carry(-2, 14, 5.0, fresh=True)}, 3, "rf2s1/fal/mag_in; lug in, magazine rocking rearward")
+    add("FAL_RELOAD_10_MAG_LOCK", {**ready, **carry(0, -2, 0.0)}, 3, "rf2s1/fal/seat; catch clicks (ammunition commit point)")
+    add("FAL_RELOAD_11_HAND_TRANSITION", {**ready, "arm_l": arm_l(9.0, 30, -60)}, 3, "hand releases magazine, rises along the receiver")
+    add("FAL_RELOAD_12_CHARGE_START", {**ready, "arm_l": arm_l(4.5, 96, -84)}, 3, "fingers close on the charging handle")
+    add("FAL_RELOAD_13_CHARGE_REAR", {**ready, "arm_l": arm_l(4.5, 96 + HT[0] * 118, -84 + HT[1] * 118), "knob": {"tx": HT[0] * 118, "ty": HT[1] * 118}}, 3, "rf2s1/fal/action; handle at the rear of its travel, bolt back")
+    add("FAL_RELOAD_14_CHARGE_RELEASE", {**ready, "arm_l": arm_l(4.5, 96 + HT[0] * 30, -84 + HT[1] * 30), "knob": {"tx": HT[0] * 12, "ty": HT[1] * 12}}, 2, "handle released, bolt slams home")
+    add("FAL_RELOAD_15_HAND_RETURN", {**ready, "arm_l": arm_l(2.0, 30, -10)}, 3, "rf2s1/fal/cloth; support hand comes back to the handguard")
+    add("FAL_RELOAD_16_READY", ready, 1, "READY (same drawing as FAL_READY)")
+    return F
+
+
+def render_frames():
+    OUT.mkdir(parents=True, exist_ok=True)
+    L = load_layers()
+    specs = frame_specs()
+    frames, labels, manifest, reviews = [], [], [], []
+    for i, (state, spec, tics, event) in enumerate(specs):
+        canvas = compose(L, spec)
+        rgba = rc.unpremul(canvas)[PAD_T:PAD_T + H0, PAD_L:PAD_L + W0]
+        fname = f"{i:02d}_{state}.png"
+        rc.save_rgba(rgba, OUT / fname)
+        frames.append(rgba)
+        labels.append(state)
+        rev = rc.alpha_review(rgba, fname)
+        reviews.append(rev)
+        manifest.append({"file": fname, "state": state, "duration_tics": tics, "event": event})
+        print(fname, rev)
+    rc.contact_sheet(frames, labels, cols=5, cell=(400, 268), path=OUT / "_contact_sheet.png", title="FN FAL final family / Viktor / candidate frames")
+    rc.write_manifest(OUT / "_manifest.json", "fn_fal", [W0, H0], manifest, {
+        "method": "layered editable source (art/source/final_weapons/fn_fal): rifle body with occluded surfaces rebuilt, magazine with hidden upper body and feed lips, charging handle, each arm as a separate layer with off-screen elbow pivot and extended sleeve tube; frames are whole-layer transforms composited in z order.",
+        "identity": "unchanged approved FAL master; same rifle, same hands, same sleeves in every frame",
+        "runtime": "same 1536x1024 canvas as fal_idle_v01.png; existing TEXTURES.txt XScale 6 / YScale 7.2 / Offset -700,-300 apply to every frame",
+        "reload_timing": "durations follow the ZScript ReloadPose schedule (tics 0..61); READY/16_READY are the same drawing"})
+    (OUT / "_alpha_review.json").write_text(json.dumps(reviews, indent=2), encoding="utf-8")
+    print("frames:", len(frames))
+
+
+if __name__ == "__main__":
+    cmd = sys.argv[1] if len(sys.argv) > 1 else "all"
+    if cmd in ("layers", "all"):
+        build_layers()
+    if cmd in ("frames", "all"):
+        render_frames()

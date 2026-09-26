@@ -1,0 +1,55 @@
+{
+  "master": "src/graphics/weapons/fal_idle_v01.png",
+  "pad": [
+    512,
+    256,
+    384,
+    512
+  ],
+  "export": [
+    1536,
+    1024
+  ],
+  "layers": [
+    "body",
+    "mag",
+    "mag_fresh",
+    "knob",
+    "arm_r",
+    "arm_l",
+    "flash"
+  ],
+  "pivots_master_coords": {
+    "elbow_l": [
+      -200,
+      1170
+    ],
+    "elbow_r": [
+      1760,
+      1260
+    ],
+    "wrist_l": [
+      470,
+      560
+    ],
+    "shoulder": [
+      1600,
+      700
+    ],
+    "muzzle": [
+      366,
+      243
+    ]
+  },
+  "axis": {
+    "bore_forward": [
+      -0.946,
+      -0.324
+    ],
+    "charging_handle_travel": [
+      0.958,
+      0.287
+    ]
+  },
+  "z_order": "body < mag < knob < arm_r < arm_l < flash"
+}

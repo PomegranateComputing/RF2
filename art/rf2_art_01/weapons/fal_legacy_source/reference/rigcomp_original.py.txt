@@ -1,0 +1,426 @@
+"""Layered first-person weapon compositor (RED FLAGS 2 final weapon families).
+
+Every weapon family is an editable set of RGBA layers on a padded working canvas
+plus a rig description. Frames are produced by transforming whole layers
+(rotation about a pivot, scale, translation) and compositing them in z order,
+never by cutting pieces out of a flattened frame. All resampling happens on
+premultiplied float data so no background colour bleeds into edges.
+"""
+from __future__ import annotations
+import json, math
+from pathlib import Path
+import numpy as np
+from PIL import Image, ImageDraw, ImageFont
+from scipy import ndimage
+
+
+# ----------------------------------------------------------------- basics
+def load_rgba(path):
+    return np.asarray(Image.open(path).convert("RGBA"), dtype=np.float32) / 255.0
+
+
+def save_rgba(arr, path):
+    a = np.clip(arr, 0, 1)
+    Image.fromarray((a * 255 + 0.5).astype(np.uint8), "RGBA").save(path, optimize=False)
+
+
+def premul(rgba):
+    out = rgba.copy()
+    out[..., :3] *= out[..., 3:4]
+    return out
+
+
+def unpremul(p):
+    out = p.copy()
+    a = np.maximum(out[..., 3:4], 1e-6)
+    out[..., :3] = np.where(out[..., 3:4] > 1e-6, out[..., :3] / a, 0)
+    out[..., 3] = np.clip(out[..., 3], 0, 1)
+    out[..., :3] = np.clip(out[..., :3], 0, 1)
+    return out
+
+
+def over(dst_p, src_p):
+    """Premultiplied over-compositing, in place on dst."""
+    a = src_p[..., 3:4]
+    dst_p *= (1 - a)
+    dst_p += src_p
+    return dst_p
+
+
+def pad_canvas(rgba, pad_l, pad_t, pad_r, pad_b):
+    h, w = rgba.shape[:2]
+    out = np.zeros((h + pad_t + pad_b, w + pad_l + pad_r, 4), np.float32)
+    out[pad_t:pad_t + h, pad_l:pad_l + w] = rgba
+    return out
+
+
+def polygon_mask(shape, points):
+    im = Image.new("L", (shape[1], shape[0]), 0)
+    ImageDraw.Draw(im).polygon([tuple(map(float, p)) for p in points], fill=255)
+    return np.asarray(im, dtype=np.float32) / 255.0
+
+
+def ellipse_mask(shape, cx, cy, rx, ry, angle=0.0):
+    yy, xx = np.mgrid[0:shape[0], 0:shape[1]].astype(np.float32)
+    c, s = math.cos(math.radians(angle)), math.sin(math.radians(angle))
+    x = (xx - cx) * c + (yy - cy) * s
+    y = -(xx - cx) * s + (yy - cy) * c
+    return ((x / rx) ** 2 + (y / ry) ** 2 <= 1).astype(np.float32)
+
+
+def soft(mask, radius=1.0):
+    return ndimage.gaussian_filter(mask.astype(np.float32), radius) if radius > 0 else mask
+
+
+def dilate(mask, r):
+    return ndimage.binary_dilation(mask > 0.5, iterations=int(r)).astype(np.float32) if r > 0 else mask
+
+
+def erode(mask, r):
+    return ndimage.binary_erosion(mask > 0.5, iterations=int(r)).astype(np.float32) if r > 0 else mask
+
+
+def closing(mask, r):
+    return ndimage.binary_closing(mask > 0.5, iterations=int(r)).astype(np.float32) if r > 0 else mask
+
+
+def remove_small(mask, min_area):
+    lab, cnt = ndimage.label(mask > 0.5)
+    if cnt == 0:
+        return (mask > 0.5).astype(np.float32)
+    sizes = ndimage.sum(mask > 0.5, lab, range(1, cnt + 1))
+    keep = np.isin(lab, [i + 1 for i, s in enumerate(sizes) if s >= min_area])
+    return keep.astype(np.float32)
+
+
+def keep_largest(mask, n=1):
+    lab, cnt = ndimage.label(mask > 0.5)
+    if cnt == 0:
+        return mask
+    sizes = ndimage.sum(mask > 0.5, lab, range(1, cnt + 1))
+    order = np.argsort(sizes)[::-1][:n]
+    keep = np.isin(lab, [int(i) + 1 for i in order])
+    return keep.astype(np.float32)
+
+
+# ------------------------------------------------------------ transforms
+def affine_params(angle_deg, scale, tx, ty, pivot):
+    """PIL affine data (output->input) for: rotate & scale about pivot, then translate."""
+    th = math.radians(angle_deg)
+    c, s = math.cos(th), math.sin(th)
+    px, py = pivot
+    a = c / scale
+    b = s / scale
+    d = -s / scale
+    e = c / scale
+    ox, oy = px + tx, py + ty
+    cx = px - (a * ox + b * oy)
+    cy = py - (d * ox + e * oy)
+    return (a, b, cx, d, e, cy)
+
+
+def transform_layer(layer_p, angle=0.0, scale=1.0, tx=0.0, ty=0.0, pivot=(0, 0)):
+    """Transform a premultiplied RGBA float layer. Returns a new premultiplied array."""
+    if angle == 0 and scale == 1 and tx == 0 and ty == 0:
+        return layer_p.copy()
+    h, w = layer_p.shape[:2]
+    out = np.zeros_like(layer_p)
+    if abs(angle) < 1e-9 and abs(scale - 1) < 1e-9 and float(tx).is_integer() and float(ty).is_integer():
+        itx, ity = int(tx), int(ty)
+        src = layer_p[max(0, -ity):h - max(0, ity), max(0, -itx):w - max(0, itx)]
+        out[max(0, ity):max(0, ity) + src.shape[0], max(0, itx):max(0, itx) + src.shape[1]] = src
+        return out
+    data = affine_params(angle, scale, tx, ty, pivot)
+    for ch in range(4):
+        im = Image.fromarray(np.ascontiguousarray(layer_p[..., ch]), mode="F")
+        im = im.transform((w, h), Image.AFFINE, data, resample=Image.BICUBIC)
+        out[..., ch] = np.asarray(im, dtype=np.float32)
+    out[..., 3] = np.clip(out[..., 3], 0, 1)
+    out[..., :3] = np.clip(out[..., :3], 0, out[..., 3:4])
+    return out
+
+
+def warp_layer(layer_p, src_points, dst_points, smoothing=0.0, margin=60):
+    """Thin-plate-spline warp of a premultiplied layer: src_points move to dst_points.
+    The bbox frame of the layer is pinned so the warp is local."""
+    from scipy.interpolate import RBFInterpolator
+    h, w = layer_p.shape[:2]
+    ys, xs = np.where(layer_p[..., 3] > 0.01)
+    if len(xs) == 0:
+        return layer_p.copy()
+    x0, y0 = max(0, xs.min() - margin), max(0, ys.min() - margin)
+    x1, y1 = min(w - 1, xs.max() + margin), min(h - 1, ys.max() + margin)
+    src = np.asarray(src_points, np.float64)
+    dst = np.asarray(dst_points, np.float64)
+    corners = np.array([[x0, y0], [x1, y0], [x0, y1], [x1, y1],
+                        [(x0 + x1) / 2, y0], [(x0 + x1) / 2, y1],
+                        [x0, (y0 + y1) / 2], [x1, (y0 + y1) / 2]], np.float64)
+    src_all = np.vstack([src, corners])
+    dst_all = np.vstack([dst, corners])
+    rbf = RBFInterpolator(dst_all, src_all - dst_all, kernel="thin_plate_spline", smoothing=smoothing)
+    gy, gx = np.mgrid[y0:y1 + 1, x0:x1 + 1]
+    pts = np.stack([gx.ravel(), gy.ravel()], 1).astype(np.float64)
+    disp = rbf(pts)
+    sx = (pts[:, 0] + disp[:, 0]).reshape(gy.shape)
+    sy = (pts[:, 1] + disp[:, 1]).reshape(gy.shape)
+    out = np.zeros_like(layer_p)
+    for ch in range(4):
+        out[y0:y1 + 1, x0:x1 + 1, ch] = ndimage.map_coordinates(layer_p[..., ch], [sy, sx], order=1, mode="constant", cval=0.0)
+    out[..., 3] = np.clip(out[..., 3], 0, 1)
+    out[..., :3] = np.clip(out[..., :3], 0, out[..., 3:4])
+    return out
+
+
+# --------------------------------------------------------- reconstruction
+def diffusion_fill(rgb, known, mask, iterations=300):
+    """Fill mask pixels of rgb by Laplacian diffusion from known pixels (multi-scale)."""
+    rgb = rgb.astype(np.float32).copy()
+    fill = (mask > 0.5) & ~(known > 0.5)
+    if not fill.any():
+        return rgb
+    # start from the colour of the known ring around the hole, never from what was there
+    ring = ndimage.binary_dilation(fill, iterations=3) & (known > 0.5)
+    if ring.any():
+        # every unknown pixel (transparent, or cut away) starts neutral so hidden
+        # colours under alpha=0 can never leak into the fill
+        rgb[~(known > 0.5)] = rgb[ring].mean(0)
+    for scale in (8, 4, 2, 1):
+        if scale > 1:
+            cur = ndimage.zoom(rgb, (1 / scale, 1 / scale, 1), order=1)
+            fsmall = ndimage.zoom(fill.astype(np.float32), (1 / scale, 1 / scale), order=1) > 0.5
+            for _ in range(iterations):
+                avg = (np.roll(cur, 1, 0) + np.roll(cur, -1, 0) + np.roll(cur, 1, 1) + np.roll(cur, -1, 1)) / 4
+                cur = np.where(fsmall[..., None], avg, cur)
+            up = ndimage.zoom(cur, (rgb.shape[0] / cur.shape[0], rgb.shape[1] / cur.shape[1], 1), order=1)
+            up = up[:rgb.shape[0], :rgb.shape[1]]
+            rgb = np.where(fill[..., None], up, rgb)
+        else:
+            cur = rgb
+            for _ in range(max(20, iterations // 4)):
+                avg = (np.roll(cur, 1, 0) + np.roll(cur, -1, 0) + np.roll(cur, 1, 1) + np.roll(cur, -1, 1)) / 4
+                cur = np.where(fill[..., None], avg, cur)
+            rgb = cur
+    return rgb
+
+
+def directional_extrude(rgb, region, x_from, x_to, top_line, bottom_line, src_x0, src_x1, jitter=6, seed=1):
+    """Rebuild a tapered tube surface (handguard/barrel) hidden behind a hand.
+    For every column x in [x_from, x_to] inside region, a visible cross-section
+    strip taken from a jittered column in src_x0..src_x1 (between its own
+    top/bottom lines) is stretched to the tube height expected at x."""
+    rng = np.random.default_rng(seed)
+    out = rgb.copy()
+    cov = np.zeros(rgb.shape[:2], np.float32)
+    src_cols = np.arange(src_x0, src_x1 + 1)
+    for x in range(x_from, x_to + 1):
+        t0, b0 = top_line(x), bottom_line(x)
+        ht = b0 - t0
+        if ht < 2:
+            continue
+        n = int(round(ht)) + 1
+        sx = int(rng.choice(src_cols))
+        sx2 = int(np.clip(sx + rng.integers(-jitter, jitter + 1), src_x0, src_x1))
+        cols = []
+        for s in (sx, sx2):
+            ys_src = np.linspace(top_line(s), bottom_line(s), n)
+            cols.append(np.stack([ndimage.map_coordinates(rgb[..., c], [ys_src, np.full_like(ys_src, s)], order=1) for c in range(3)], 1))
+        col = 0.5 * cols[0] + 0.5 * cols[1]
+        ys = np.arange(int(math.floor(t0)), int(math.ceil(b0)) + 1)
+        vals = np.stack([np.interp(ys, np.linspace(t0, b0, n), col[:, c]) for c in range(3)], 1)
+        for yy, v in zip(ys, vals):
+            if 0 <= yy < rgb.shape[0] and region[yy, x] > 0.5:
+                out[yy, x] = v
+                cov[yy, x] = 1.0
+    blurred = ndimage.gaussian_filter1d(out, 0.9, axis=1)
+    out = np.where(cov[..., None] > 0, blurred, out)
+    return out, cov
+
+
+def extrude_between(rgb, region, x_from, x_to, top_line, bottom_line, src_left, src_right, jitter=4, seed=1):
+    """Like directional_extrude, but the hidden tube section is interpolated between the
+    visible cross-section profiles on BOTH sides of the occluder, so tone and lighting
+    continue smoothly across the rebuilt span (no notch)."""
+    rng = np.random.default_rng(seed)
+    out = rgb.copy()
+    cov = np.zeros(rgb.shape[:2], np.float32)
+    xl0, xl1 = src_left
+    xr0, xr1 = src_right
+    xl_c, xr_c = (xl0 + xl1) / 2, (xr0 + xr1) / 2
+
+    def profile(s, n):
+        ys_src = np.linspace(top_line(s), bottom_line(s), n)
+        return np.stack([ndimage.map_coordinates(rgb[..., c], [ys_src, np.full_like(ys_src, s)], order=1) for c in range(3)], 1)
+
+    for x in range(x_from, x_to + 1):
+        t0, b0 = top_line(x), bottom_line(x)
+        ht = b0 - t0
+        if ht < 2:
+            continue
+        n = int(round(ht)) + 1
+        w = float(np.clip((xr_c - x) / max(1e-6, xr_c - xl_c), 0, 1))
+        sl = int(np.clip(xl0 + rng.integers(0, xl1 - xl0 + 1), xl0, xl1))
+        sr = int(np.clip(xr0 + rng.integers(0, xr1 - xr0 + 1), xr0, xr1))
+        col = w * (0.5 * profile(sl, n) + 0.5 * profile(int(np.clip(sl + rng.integers(-jitter, jitter + 1), xl0, xl1)), n)) \
+            + (1 - w) * (0.5 * profile(sr, n) + 0.5 * profile(int(np.clip(sr + rng.integers(-jitter, jitter + 1), xr0, xr1)), n))
+        ys = np.arange(int(math.floor(t0)), int(math.ceil(b0)) + 1)
+        vals = np.stack([np.interp(ys, np.linspace(t0, b0, n), col[:, c]) for c in range(3)], 1)
+        for yy, v in zip(ys, vals):
+            if 0 <= yy < rgb.shape[0] and region[yy, x] > 0.5:
+                out[yy, x] = v
+                cov[yy, x] = 1.0
+    blurred = ndimage.gaussian_filter1d(out, 0.9, axis=1)
+    out = np.where(cov[..., None] > 0, blurred, out)
+    return out, cov
+
+
+def extrude_tube(layer_p, axis_pt, axis_dir, L=220.0, reach=900.0, probe=(8.0, 200.0)):
+    """Continue a sleeve tube beyond the frame edge with no seams and no periodic banding.
+
+    axis_pt: a point on the tube axis inside the visible tube (working coords);
+    axis_dir: unit-ish direction pointing outward (toward the frame edge and beyond).
+    The visible tube's lateral edges are fitted linearly along the axis (perspective
+    widening), the clip point where the frame cuts the tube is detected, and every
+    pixel beyond it samples the visible tube with a ping-pong (mirror) mapping along
+    the axis (continuous everywhere) and lateral coordinates normalised to the fitted
+    edges. Works on premultiplied RGBA; returns a new array."""
+    H, W = layer_p.shape[:2]
+    d = np.asarray(axis_dir, np.float64); d /= max(1e-9, np.linalg.norm(d))
+    n = np.array([-d[1], d[0]])
+    O = np.asarray(axis_pt, np.float64)
+    a = layer_p[..., 3]
+    ys, xs = np.nonzero(a > 0.05)
+    t = (xs - O[0]) * d[0] + (ys - O[1]) * d[1]
+    u = (xs - O[0]) * n[0] + (ys - O[1]) * n[1]
+    # lateral bounds of the visible tube at sampled axis positions (inside the frame, before the clip)
+    ts, umin, umax = [], [], []
+    for s in np.arange(-probe[1], -probe[0], 4.0):
+        sel = np.abs(t - s) < 1.5
+        if sel.sum() < 6:
+            continue
+        ts.append(s); umin.append(np.percentile(u[sel], 1.0)); umax.append(np.percentile(u[sel], 99.0))
+    if len(ts) < 4:
+        return layer_p.copy()
+    ts = np.asarray(ts); umin = np.asarray(umin); umax = np.asarray(umax)
+    A = np.stack([np.ones_like(ts), ts], 1)
+    (a0, a1), _, _, _ = np.linalg.lstsq(A, umin, rcond=None)
+    (b0, b1), _, _, _ = np.linalg.lstsq(A, umax, rcond=None)
+    lo = lambda tt: a0 + a1 * tt
+    hi = lambda tt: b0 + b1 * tt
+    # clip point: first axis position (going outward) where the measured width drops below the fit
+    t_clip = 0.0
+    for s in np.arange(-probe[0], 400.0, 2.0):
+        sel = np.abs(t - s) < 1.5
+        if sel.sum() < 6:
+            t_clip = s; break
+        width = np.percentile(u[sel], 99.0) - np.percentile(u[sel], 1.0)
+        if width < 0.93 * (hi(s) - lo(s)):
+            t_clip = s; break
+    t_clip -= 3.0
+    # destination pixels: beyond the clip point, inside the extrapolated tube
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float64)
+    T = (xx - O[0]) * d[0] + (yy - O[1]) * d[1]
+    U = (xx - O[0]) * n[0] + (yy - O[1]) * n[1]
+    # only fill empty pixels: the master's own (partially clipped) sleeve pixels are never overwritten
+    dest = (a < 0.05) & (T > t_clip - 60) & (T < t_clip + reach) & (U > lo(T) - 2) & (U < hi(T) + 2)
+    if not dest.any():
+        return layer_p.copy()
+    dt = T[dest] - t_clip
+    ping = np.abs(np.mod(dt, 2 * L) - L)          # 0..L..0 triangle wave
+    Ts = t_clip - ping                             # source axis position in [t_clip - L, t_clip]
+    frac = (U[dest] - lo(T[dest])) / np.maximum(hi(T[dest]) - lo(T[dest]), 1e-3)
+    Us = lo(Ts) + frac * (hi(Ts) - lo(Ts))
+    sx = O[0] + Ts * d[0] + Us * n[0]
+    sy = O[1] + Ts * d[1] + Us * n[1]
+    out = layer_p.copy()
+    for ch in range(4):
+        out[..., ch][dest] = ndimage.map_coordinates(layer_p[..., ch], [sy, sx], order=1, mode="constant", cval=0.0)
+    out[..., 3] = np.clip(out[..., 3], 0, 1)
+    out[..., :3] = np.clip(out[..., :3], 0, out[..., 3:4])
+    return out
+
+
+def extend_sleeve(layer_p, band_mask, axis, step=16, copies=56):
+    """Extend a sleeve past the frame edge by extruding a thin band of it (the last pixels
+    before the edge) along the arm axis. Thin band + small steps + overlap = no stair steps,
+    and the silhouette continues straight along the axis."""
+    ax = np.asarray(axis, np.float64); ax = ax / max(1e-9, np.linalg.norm(ax))
+    band = layer_p * band_mask[..., None]
+    acc = layer_p.copy()
+    for k in range(1, copies + 1):
+        shifted = transform_layer(band, tx=float(ax[0] * step * k), ty=float(ax[1] * step * k))
+        acc = over(shifted, acc)
+    return acc
+
+
+def extend_tube(layer_p, tube_mask, offset, copies):
+    """Extend a sleeve tube that exits the frame by pasting copies of its in-frame
+    segment along the arm axis, each copy beneath what is already there."""
+    seg = layer_p * tube_mask[..., None]
+    acc = layer_p.copy()
+    for k in range(1, copies + 1):
+        shifted = transform_layer(seg, tx=offset[0] * k, ty=offset[1] * k)
+        acc = over(shifted, acc)
+    return acc
+
+
+def texture_noise(shape, scale=3.0, seed=0):
+    rng = np.random.default_rng(seed)
+    n = rng.standard_normal(shape).astype(np.float32)
+    return ndimage.gaussian_filter(n, scale)
+
+
+# ------------------------------------------------------------- QA & sheets
+def alpha_review(rgba, name=""):
+    a = rgba[..., 3]
+    opaque = a > 0.98
+    filled = ndimage.binary_fill_holes(opaque)
+    holes = filled & ~opaque & (a < 0.5)
+    lab, n = ndimage.label(holes)
+    sizes = ndimage.sum(holes, lab, range(1, n + 1)) if n else []
+    big_holes = int(sum(1 for s in sizes if s > 30))
+    partial = int(((a > 0.02) & (a < 0.98)).sum())
+    edge = int((ndimage.binary_dilation(opaque, iterations=1) & ~opaque).sum())
+    rgb = rgba[..., :3]
+    grey = np.abs(rgb[..., 0] - rgb[..., 1]) + np.abs(rgb[..., 1] - rgb[..., 2])
+    checker_like = float(((grey < 0.03) & (rgb[..., 0] > 0.6) & opaque).mean())
+    return {"name": name, "opaque_px": int(opaque.sum()), "partial_px": partial, "edge_px": edge,
+            "partial_to_edge_ratio": round(partial / max(1, edge), 2), "enclosed_holes_gt30px": big_holes,
+            "alpha_max": float(a.max()), "light_neutral_opaque_fraction": round(checker_like, 4)}
+
+
+def _font(size):
+    for name in ("arial.ttf", "DejaVuSans.ttf", "segoeui.ttf"):
+        try:
+            return ImageFont.truetype(name, size)
+        except Exception:
+            continue
+    return ImageFont.load_default()
+
+
+def contact_sheet(frames, labels, cols, cell=(384, 256), bg=(96, 96, 96), path=None, title=None):
+    rows = int(math.ceil(len(frames) / cols))
+    y_off = 40 if title else 0
+    sheet = Image.new("RGB", (cols * cell[0], rows * cell[1] + y_off), bg)
+    d = ImageDraw.Draw(sheet)
+    font, tfont = _font(14), _font(20)
+    if title:
+        d.text((8, 8), title, fill=(230, 230, 230), font=tfont)
+    for i, (fr, lab) in enumerate(zip(frames, labels)):
+        if isinstance(fr, np.ndarray):
+            im = Image.fromarray((np.clip(fr, 0, 1) * 255 + 0.5).astype(np.uint8), "RGBA")
+        else:
+            im = Image.open(fr).convert("RGBA")
+        im.thumbnail((cell[0] - 8, cell[1] - 28), Image.LANCZOS)
+        cx, cy = (i % cols) * cell[0], y_off + (i // cols) * cell[1]
+        tile = Image.new("RGBA", (cell[0], cell[1]), bg + (255,))
+        tile.alpha_composite(im, (4 + (cell[0] - 8 - im.width) // 2, 4))
+        sheet.paste(tile.convert("RGB"), (cx, cy))
+        d.text((cx + 6, cy + cell[1] - 20), lab, fill=(240, 240, 240), font=font)
+    if path:
+        sheet.save(path)
+    return sheet
+
+
+def write_manifest(path, weapon, canvas, frames, notes):
+    data = {"schema": 1, "weapon": weapon, "canvas": canvas, "frames": frames, "notes": notes}
+    Path(path).write_text(json.dumps(data, indent=2), encoding="utf-8")
