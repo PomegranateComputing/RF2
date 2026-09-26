@@ -91,3 +91,6 @@ RF_NOTE_2 = "Lingerie - Consigne. Le passe de service ouvre la loge du portier e
 RF_NOTE_3 = "Registre d'admission. ARDENT, Viktor. Entré le 11 juin 1940. Motif : observation. Sortie : néant. Note du portier : grille du porche baissée, treuil dans la loge.";
 RF_NOTE_4 = "Chapelle. Dernière messe le 12 juin. Le chapelain a laissé les cierges. Personne n'a fermé.";
 RF_NOTE_5 = "Loge du portier. Treuil de la grille : tourner à fond. Le 14 au matin, j'ai laissé le porche ouvert. Que ceux qui restent sortent.";
+
+// Engine messages the player sees in RF01 (the checkpoint autosaves print this one).
+GGSAVED = "Partie sauvegardée.";

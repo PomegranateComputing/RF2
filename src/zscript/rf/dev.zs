@@ -35,6 +35,7 @@ class RFDevHandler : StaticEventHandler
     // Performance (rf_dev_perf): four fixed tour viewpoints held 5 s each; every rendered frame is
     // timed (RenderOverlay) and RF_DEV_PERF gives the frame count, mean and worst frame times.
     bool perfTest;
+    bool perfBodies;        // rf_dev_perf 2: twelve bodies killed in view at each scene first
     int perfScene, perfTimer;
     ui int pfScene, pfFrames;
     ui double pfLast, pfSum, pfWorst;
@@ -94,7 +95,8 @@ class RFDevHandler : StaticEventHandler
         uiShots = CVar.GetCVar('rf_dev_ui').GetInt() == 1;
         msgShots = CVar.GetCVar('rf_dev_ui').GetInt() == 3;
         corpseTest = CVar.GetCVar('rf_dev_corpse').GetBool();
-        perfTest = CVar.GetCVar('rf_dev_perf').GetBool();
+        perfTest = CVar.GetCVar('rf_dev_perf').GetInt() > 0;
+        perfBodies = CVar.GetCVar('rf_dev_perf').GetInt() == 2;
         perfScene = -1; perfTimer = 0;
         cpIndex = 0; cpTimer = 0; cpBody = null;
         filmEvery = CVar.GetCVar('rf_dev_film').GetInt();
@@ -331,6 +333,27 @@ class RFDevHandler : StaticEventHandler
             pmo.pitch = pt.args[1];
             pmo.Vel = (0, 0, 0);
             if (pmo.player != null) pmo.player.cheats |= CF_NOCLIP | CF_GODMODE;
+            if (perfBodies)
+            {
+                // Twelve bodies (4 per class) in the view cone, 96-320 units ahead, killed at once.
+                static const Name kinds[] = { 'RFOrderly', 'RFBrancardier', 'RFPorteRegistre' };
+                int placed = 0;
+                for (int i = 0; i < 12; i++)
+                {
+                    double a = pt.angle + (i % 4 - 1.5) * 12;
+                    double d = 96 + (i / 4) * 80;
+                    Vector2 at = pt.Pos.XY + (cos(a), sin(a)) * d;
+                    FLineTraceData hit;
+                    if (pmo.LineTrace(a, d + 32, 0, TRF_THRUACTORS, 24, 0, 0, hit)) continue;
+                    Sector sec = Level.PointInSector(at);
+                    let mo = Actor.Spawn(kinds[i % 3], (at, sec.floorplane.ZAtPoint(at)), ALLOW_REPLACE);
+                    if (mo == null) continue;
+                    mo.angle = frandom(0, 360);
+                    mo.DamageMobj(null, null, 1000, 'None');
+                    placed++;
+                }
+                Console.Printf("RF_DEV_PERF_BODIES scene=%d placed=%d", perfScene + 1, placed);
+            }
         }
         pmo.Vel = (0, 0, 0);
         if (++perfTimer >= 35 * 6) perfTimer = 0;   // 1 s to settle, 5 s measured (UI side)

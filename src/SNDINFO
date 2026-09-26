@@ -98,23 +98,13 @@ $playeralias player male *land      rf/impact/flesh
 $playeralias player female *land    rf/impact/flesh
 $playeralias player other *land     rf/impact/flesh
 
-// Mix hierarchy (measured 2026-09-25 in the engine's own output, see docs/RF01_AUDIO.md): the
-// player's weapons first, enemy threats next, impacts and handling, the ambience behind. The
-// voice files sit near -9 dBFS RMS, above the gunshots, and the RFAMB01 bed played at -11 dBFS
-// RMS the whole time: both are brought under the weapons.
+// Mix hierarchy (docs/RF01_AUDIO.md): the player's weapons first, enemy threats next, impacts and
+// handling, the ambience behind. RFAMB01 (a bed at -11 dBFS RMS, played the whole time) stays at
+// 0.25. The RF2-ART-01 voices are mastered 7-9 dB under the old ones (peaks -7 to -10 dBFS, just
+// under the gunshots): the 0.4-0.6 reductions made for the old files would now bury the threats.
 $musicvolume RFAMB01 0.25
-$volume rf/orderly/sight 0.5
-$volume rf/orderly/pain 0.5
-$volume rf/orderly/death 0.55
-$volume rf/orderly/active 0.4
-$volume rf/orderly/attack 0.55
-$volume rf/brancardier/sight 0.5
-$volume rf/brancardier/pain 0.5
-$volume rf/brancardier/death 0.55
-$volume rf/brancardier/active 0.4
-$volume rf/porte/alert 0.6
-$volume rf/porte/pain 0.6
-$volume rf/porte/death 0.6
+$volume rf/orderly/active 0.8
+$volume rf/brancardier/active 0.8
 $volume rf/amb/hum 0.5
 $volume rf/amb/wind 0.55
 $volume rf/amb/drip 0.5
