@@ -42,7 +42,35 @@ téléphone militaire, moteurs lourds venant du nord (colonnes), papier qui brû
 travaille), pluie qui s'arrête. Pas de marche militaire (musique différée) : la voix allemande reste en sous-titre
 tant qu'aucune voix enregistrée n'est fournie avec ses droits.
 
-## 4. Livraison
+## 4. Cibles exactes dans le build (mise à jour du 27/09 après construction de la carte)
+
+La carte existe maintenant (`scripts/mapkit/rf02.py`). Chaque objet ci-dessous a déjà un emplacement et un fichier
+provisoire d'Opus, procédural et clairement inférieur. Un remplacement se fait **fichier pour fichier, même nom, même
+taille en unités**, sans patch de code. Unités : 4 px par unité pour les textures, sauf indication contraire.
+
+| ID | Fichier à remplacer | Taille / ancrage | Où et comment on le voit |
+|---|---|---|---|
+| F02-P02 | `sprites/rf02/RFBKA0.png` | 48×48 px, grAb pied du seau, acteur `Scale 0.55` | trottoir du boulevard Arago, lumière de braises orange au-dessus |
+| F02-P04 | `sprites/rf02/RFBGA0.png` | 48×56 px, grAb en bas, `Scale 0.5`, suspendu à 36 u du plancher du tram | paroi ouest du tram, à portée de main |
+| F02-P06 | `patches/rf02/RF2_TSFS.png` ; `sprites/rf02/RFRDA0.png` (éteint) et `RFRDB0.png` (cadran allumé) | 512×256 px (128×64 u) ; sprites 64×48 px, `Scale 0.5` | vitrine de la TSF (entre 56 et 120 u), étagères ; poste réparé sur le comptoir |
+| F02-P07 | `patches/rf02/RF2_AMIG.png` | 512×256 px (128×64 u), **même cadrage que RF2_TSFS** (il le remplace dans la vitrine) | la vitrine vue de la rue entre 176 et 520 u ; disparaît quand Viktor s'approche |
+| F02-P09 | `sprites/rf02/RFPHA0.png` ; `patches/rf02/RF2_BACH.png` (dessus de bâche) et `RF2_BACS.png` (côté) | 48×40 px, `Scale 0.55` ; 256×256 px | table pliante du barrage ; mitrailleuse sous bâche |
+| F02-P10 | `sprites/rf02/RFMTA0.png` | 112×56 px, sprite **à plat**, `Scale 1` (112×56 u), grAb au centre | trottoirs de Denfert ; reflet dans la vitrine de la pharmacie (visible seulement dans le miroir) |
+| F02-P11 | `models/rf02/morris_luna.png`, `morris_jerma.png`, `morris_dentifrice.png` (+ `patches/rf02/RF2_MORR/MORJ/MORD.png`) | habillage du cylindre : 512×556 px, deux faces de 256 px côte à côte, la première est la face grattée ; le bas des 512 px du haut = l'affiche, bande sombre au-dessus | colonne Morris des Champs-Élysées (modèle d'Opus `morris.obj`, rayon 22 u, hauteur 128 u + dôme) |
+| F02-P12 | `patches/rf02/RF2_LUNA.png` (masqué) et `RF2_LUNF.png` | 1024×256 px (256×64 u) ; 384×128 px (96×32 u) | lettres au-dessus de la grille à 240 u ; panneau à 188 u |
+| F02-P05 | `sprites/rf02/RFSHA0.png` | 96×48 px | **non placé** tant que la jeune femme (F02-07) manque : sans elle, la valise laissée seule contredirait le texte |
+
+Nouvelle figure demandée :
+
+| ID | Figure | Pose | Lignes |
+|---|---|---|---|
+| F02-08 | Viktor en pied pour les reflets : sweat noir (même manche que le bras accepté), anneaux aux oreilles, barbe de plusieurs jours, chaussures montantes | debout 8 rot. ; visible **uniquement dans les miroirs** (le joueur n'a pas de corps à la première personne) | 157 (« son reflet portait le sweat noir, les anneaux, la barbe ») |
+
+Sons : les fichiers provisoires d'Opus sont `sounds/paris/{tsf_loop,fire_loop,street_loop,phone_ring,phone_tone,engines,bell,radio_burst,fuse}.wav` (synthèse numpy, mono 44,1 kHz, sans voix ni musique). Un remplacement garde le nom, la durée
+des boucles libre (bouclage sans clic). Manquent encore : deux poules, tôle du tram, charrette de cages vides (l. 159),
+chien qui boit (l. 87).
+
+## 5. Livraison
 
 `incoming/astra/RF2_MAP_02/` dans ton worktree, même manifeste que RF2-ART-02 (cible, SHA-256, dimensions, grAb,
 source, crédits, preuve). Opus intègre par classes `RFFigure`/props déjà prévues dans la carte ; tant qu'une figure

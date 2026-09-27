@@ -63,7 +63,7 @@ Opus ne renumérote pas la campagne sans décision.
 | ID | Passage source | Statut dans le récit | Première apparition / récurrences | Carte(s) proposée(s) | Forme d'adaptation | Dépendances | État |
 |---|---|---|---|---|---|---|---|
 | **CAN-001** Disquette rouge 3,5″ `JERMA_A1200_04` / `ROOMS / FLOW / FINAL` | trouvée l. 1007–1015 (bureau ENGINEERING, sous un annuaire moisi) ; lecture l. 1869–2075 ; ligne violette `BACK FROM WORK - ROOM 117` l. 1931 ; revient dans le lecteur l. 4965 ; lue à Lausanne l. 12379–12773 ; photo de M. J. Vella « une disquette rouge entre deux doigts » l. 27227 | observation, puis anomalies contestées ; photo | Jerma → atelier de Milan → Lausanne → enveloppe « 4/17 » (Waukegan) | découverte : chapitre Jerma côté service (RF10) ; lecture : chapitre Milan (à placer) ; contenu ROOMS/FLOW/FINAL comme espace : RF11 | objet ramassable à l'endroit exact ; étiquette lisible (deux lignes, cercle barré au dos) ; second état avec la ligne violette | master Astra (coque rouge sombre presque brune, étiquette manuscrite) ; texte composé | présence exigée, **implémentation non commencée** |
-| **CAN-002** Amiga 1200, moniteur, lecteur | reflet dans la vitrine de TSF l. 213 ; atelier de Milan l. 1807–2453 (Workbench, `Disk is unreadable.`, `1 024 objects, 0 bytes free.`, lecture après coupure) ; Amiga de l'unité 117 même numéro de série l. 5455–5467 ; Vella « devant un Amiga 1200 ouvert » (photo) l. 27227 ; bordereau 1997 `2 x AMIGA COMPUTER UNITS` l. 28057 | reflet (vision), puis observation contestée ; documents et photos | RF02 (reflet), Milan, WKG, Echandens, Malte (Vella) | **RF02** : reflet dans la vitrine de TSF (première occurrence) ; atelier de Milan ; RF15 (WKG) | RF02 : apparition brève dans le reflet, disparaît quand Viktor approche ; plus tard machine en espace, écran modulaire, son du lecteur | master Astra de la machine + écran bleu Workbench + boîte à chaussures de disquettes ; son du lecteur | RF02 : mise en scène prévue, **master manquant** |
+| **CAN-002** Amiga 1200, moniteur, lecteur | reflet dans la vitrine de TSF l. 213 ; atelier de Milan l. 1807–2453 (Workbench, `Disk is unreadable.`, `1 024 objects, 0 bytes free.`, lecture après coupure) ; Amiga de l'unité 117 même numéro de série l. 5455–5467 ; Vella « devant un Amiga 1200 ouvert » (photo) l. 27227 ; bordereau 1997 `2 x AMIGA COMPUTER UNITS` l. 28057 | reflet (vision), puis observation contestée ; documents et photos | RF02 (reflet), Milan, WKG, Echandens, Malte (Vella) | **RF02** : reflet dans la vitrine de TSF (première occurrence) ; atelier de Milan ; RF15 (WKG) | RF02 : apparition dans le reflet de la vitrine vue de la rue, disparaît quand Viktor approche ; plus tard machine en espace, écran modulaire, son du lecteur | master Astra de la machine + écran bleu Workbench + boîte à chaussures de disquettes ; son du lecteur | RF02 : **scène intégrée** avec une image procédurale d'Opus (`RF2_AMIG`), master d'Astra attendu ; déclenchement prouvé (marqueur `TSF_AMIGA`, autopilote) |
 | **CAN-003** Escarpin du matelas brûlé | l. 889–935 (dans le matelas jeté dans la piscine vide ; absent des photos d'Elvis l. 909–913 ; réapparaît sur le rebord l. 1095) | observation contre photographie | Jerma ; échos : valise de chaussures (RF02 l. 391), chaussure d'enfant au Niagara (l. 523) | RF09 « La piscine vide » | séquence locale : le matelas, la chaussure visible ; photo diégétique d'Elvis sans elle ; extinction ; réapparition sur le rebord | master Astra (semelle noire, talon bas, boucle latérale) ; matelas brûlé | présence exigée, non commencée |
 | **CAN-004** Couple « M. & L. » → Mark D. et Lena M. (vidéos 2007, StepRoom) | page archivée « M. & L. » l. 1397–1439 ; fragments l. 1545–1587 ; vidéo complète sur la DAT l. 4221–4333 ; « Mark D. and Lena M. » l. 5437 ; noms complets « Mark Dale, Lena March » dans un rapport qui refuse toute identification l. 24281 ; bandes WKG (BACK FROM WORK, ARGUMENT / DELETE, LAKE DAY) l. 5969–6451 ; `M + L / DO NOT MAIL` détruit sans accès l. 41773–44047 ; avant-propos « Ce couple de 2007 » | page, vidéo, souvenir incertain, documents ; identité jamais certifiée | nuit de Malte → DAT → Waukegan → retours | présence substantielle : chapitres Waukegan (RF13–RF16) et RF21 « Retours » ; « M. & L. » d'abord seulement | supports (écrans, bandes) montrant leurs gestes, visages hors cadre ; respect de l'ordre des identités ; ne jamais en faire des ennemis | masters Astra des deux personnes (pas les rigs ennemis) ; lecteurs vidéo ; sons | présence exigée, non commencée |
 
@@ -72,7 +72,7 @@ Opus ne renumérote pas la campagne sans décision.
 | ID | Élément | Passage | Cartes | Forme d'adaptation / état |
 |---|---|---|---|---|
 | CAN-005 | **Carton de pointage** `LUNA PARK - PERSONNEL TECHNIQUE`, n° 017, pointé `06:06` | rendu à Sainte-Anne l. 11, lu l. 75 ; guérite l. 481 ; tombe du matelas du Jerma l. 813 ; local de pointage WKG l. 6637 | RF01 (remise), RF02 (porté), RF04 (pointeuse) | objet porté (HUD « objets ») ; pointage réel au Luna Park. RF01 : ajout borné proposé (voir §7) ; RF02 : porté à partir du départ |
-| CAN-006 | **ERREUR Ø** (et `ERR 0`, `ERREUR O`, `ERROR 0`) | registre de Sainte-Anne au crayon bleu l. 21 ; rideau de la pharmacie, frais l. 153 ; fiche de lecteur l. 315 ; guérite l. 517 ; couloir tous les 20–30 m l. 715 ; Jerma ; code genlock l. 43495 | toutes | occurrences placées selon le texte, jamais expliquées ; RF02 : rideau de la pharmacie (Port-Royal) |
+| CAN-006 | **ERREUR Ø** (et `ERR 0`, `ERREUR O`, `ERROR 0`) | registre de Sainte-Anne au crayon bleu l. 21 ; rideau de la pharmacie, frais l. 153 ; fiche de lecteur l. 315 ; guérite l. 517 ; couloir tous les 20–30 m l. 715 ; Jerma ; code genlock l. 43495 | toutes | occurrences placées selon le texte, jamais expliquées. RF02 intégré : rideau de la pharmacie (frais, coulure sous le R, la tache sur les doigts), fiche de lecteur `JERMA - ERREUR Ø`, `Ø` gravé sous le téléphone |
 | CAN-007 | Bracelet blanc, rendez-vous du **19 août 2026 à midi** ; flacon brun **117** ; montre arrêtée | l. 11, 57 | RF01, RF02 | objets portés ; mention dans les notes |
 | CAN-008 | Sous-station du Luna Park : moteur à courroie, coffret **NODE 0**, levier `MARCHE / ATTENTE / ARRÊT` | l. 551–689 | RF04/RF05 | mécanisme central d'une carte |
 | CAN-009 | Jerma : chambre au matelas qui brûle, graffitis, `ROOM 117 - SEALED` | l. 733–1097 | RF07–RF12 | architecture et scènes |
@@ -88,15 +88,36 @@ Opus ne renumérote pas la campagne sans décision.
 | CAN-017 | Elvis Zaicenoks (personne réelle nommée dans l'avant-propos et le roman) | avant-propos ; l. 735 et suivantes | chapitres Jerma | **demande d'accord à documenter avant toute représentation** |
 | CAN-018 | Motifs 117, 14:58 +2, 03:17, 017/066/117/404 ; grenade (fruit), jamais arme dans le texte | partout | toutes | détails de lieu, pas de mécanique |
 
-## 6. RF02 — couverture visée
+## 6. RF02 — couverture réelle (build de développement du 27/09)
 
-Éléments du passage l. 87–457 retenus pour RF02 (fiche : `docs/production/maps/RF02_FICHE.md`) : registres dans la
-voiture d'enfant, formulaires brûlés au seau, porte close de la Santé et son affiche, **tramway** (valises, cage,
-sacoche du receveur, ticket poinçonné), pancartes des abris, **pharmacie de Port-Royal ERREUR Ø frais**, matelas qui
-avance seul dans le reflet, ambulances de Cochin, **TSF et reflet de l'Amiga (CAN-002)**, librairie et fiche de
-lecteur (`JERMA - ERREUR Ø`), pont, **téléphone du barrage**, **valise de chaussures de la jeune femme**, colonne
-Morris (Luna Park / JERMA PALACE), entrée du Luna Park. Figures humaines : demandées à Astra
-(`docs/production/handoff/RF2-MAP-02/DEMANDE_ASSETS.md`).
+Fiche : `docs/production/maps/RF02_FICHE.md`. « Intégré » = présent dans la carte et déclenché par une traversée
+réelle (pilote automatique, commandes de joueur ordinaires, marqueurs `RF_DEV_SCENE`).
+
+| Élément du texte (lignes) | État RF02 |
+|---|---|
+| Voiture d'enfant pleine de registres ficelés (87) | intégré (bloc + note) ; la femme qui la pousse manque (F02-02) |
+| Formulaires qui brûlent mal dans un seau galvanisé, « Domicile. Père inconnu. Autorisation. Conforme. » (87) | intégré (seau, braises, son, texte) ; l'homme en uniforme manque (F02-01) |
+| Santé : grande porte close, affiche INTERDICTION DE STATIONNER arrachée (95) | intégré ; les trois femmes et l'enfant manquent (F02-03) |
+| Plaques émaillées, affiches de mobilisation, vitrines en croix de papier collant (93) | intégré |
+| Tramway immobilisé, portes ouvertes, valises sur les banquettes, sacoche du receveur, ticket poinçonné au cercle incomplet barré (113–127) | intégré, tram praticable ; cage aux poules et vieil homme manquent (F02-P03, F02-04) |
+| Pancartes des abris CAVE / POSTE DE SECOURS / EAU, sacs de sable, matelas chargés, autobus incliné (129–143) | intégré ; Lion de Belfort absent ; l'homme au matelas manque |
+| Pharmacie : ERREUR Ø frais au pinceau, goutte sous le R, la peinture qui colle (151–155) | intégré |
+| Vitrine latérale : bocaux, réclame de fortifiant ; dans le reflet le matelas avance sans homme, disparaît quand il se retourne (157–159) | intégré (miroir réel, matelas visible **seulement dans le reflet**) ; son propre reflet (sweat noir) manque (F02-08) |
+| Cochin : ambulances moteurs éteints, brancard (163–175) | intégré ; la femme à l'enveloppe « vos résultats » manque (F02-06) — sans elle, la scène n'est pas jouée |
+| Boulevard du Montparnasse : chaises, feuilles de paie collées ; gare fermée, tableaux d'heures sans départ (205–209) | intégré ; foule absente |
+| TSF : postes allumés derrière la grille, trois voix (Paris non défendu, Loire, sirop) ; reflet de l'Amiga (CAN-002) ; poste au fusible noirci réparé, voix allemande et marche (211–253) | intégré (voix et marche en texte, pas en son) ; le garçon manque (F02-05) |
+| Épicerie pillée, vin dans la rigole (285–293) | intégré (décor) ; pillards et commerçant absents |
+| Barricade de livres, atlas des colonies, fiche de lecteur « JERMA - ERREUR Ø » (305–319) | intégré |
+| Pont : papiers militaires, moteurs venant du nord (323–329) | intégré |
+| Barrage près de l'Assemblée : sacs de sable, mitrailleuse sous bâche, téléphone militaire, l'appel (« Ardent ? Incident critique… Nous aussi. »), Ø gravé, sonnerie après la prise arrachée (333–359) | intégré (texte de l'appel à l'écran) ; deux casques absents |
+| Jeune femme de Sainte-Anne, valise de chaussures (361–413) | **absente** (F02-07) ; la valise n'est pas posée seule, ce qui contredirait le texte |
+| Rue de l'Université, borne-fontaine au goût de rouille (419–425) | intégré (la fontaine soigne un peu) |
+| Champs-Élysées, colonne Morris : ANNULÉ, LA VILLE ENCHANTÉE DE LA PORTE MAILLOT, JERMA PALACE « le temps d'un battement », poudre dentifrice, colle couleur grenat (433–445) | intégré (modèle rond, trois états) ; camionnette de conserves absente |
+| Grande-Armée : pneus empilés ; cloche à l'ouest, trois coups, silence, trois (447–449) | intégré |
+| Porte Maillot : taxis abandonnés, LUNA PARK (le U pend), FERMETURE DÉFINITIVE barré au charbon, grille cadenassée, porte de service entrouverte (451–457) | intégré ; sortie par la porte de service |
+
+Écarts assumés : les ennemis (personnel de Sainte-Anne à la poursuite de Viktor) sont l'adaptation acceptée de RF01,
+absente du texte ; aucune troupe allemande n'est combattue. Ordre des lieux conforme au texte.
 
 ## 7. RF01 accepté — éléments du texte absents et ajout borné proposé
 
@@ -109,3 +130,5 @@ admissions. À faire après décision, en commit isolé, avec comparaison du WAD
 ## 8. Journal
 
 - 27/09 : matrice créée après lecture intégrale ; CAN-001 à CAN-004 : présence exigée, rien d'intégré.
+- 27/09 soir : RF02 construit ; CAN-002 (reflet de l'Amiga) et CAN-006 (trois occurrences) intégrés dans RF02 avec des
+  images provisoires d'Opus ; CAN-001, CAN-003, CAN-004 relèvent de cartes non produites.
