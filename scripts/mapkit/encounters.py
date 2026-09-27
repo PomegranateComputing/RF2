@@ -48,6 +48,8 @@ def sees(m, a, b, limit=1000.0, open_tags=()):
         c = m.cells.get((math.floor(x / UNIT), math.floor(y / UNIT)))
         if c is None or (c.role == 'door' and c.tag not in open_tags):
             return False
+        if any(z0 <= c.floor + 44 < z1 for (z0, z1, *_) in c.slabs):   # a solid 3D floor at eye height
+            return False
     return True
 
 
@@ -128,7 +130,7 @@ def embedded(m):
         for x in range(math.floor((t['x'] - r + 0.5) / UNIT), math.floor((t['x'] + r - 0.5) / UNIT) + 1):
             for y in range(math.floor((t['y'] - r + 0.5) / UNIT), math.floor((t['y'] + r - 0.5) / UNIT) + 1):
                 c = m.cells.get((x, y))
-                if c is None or c.role != 'floor' or (home is not None and c.floor - home.floor > STEP):
+                if c is None or c.role != 'floor' or (home is not None and c.floor - home.floor > STEP)                         or (c.slabs and not m.surfaces(c)):
                     bad = True
         if bad:
             out.append(t)

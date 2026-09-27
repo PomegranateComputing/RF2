@@ -39,6 +39,7 @@ class Cell:
     door: tuple = ()       # (kind, speed, delay, lock, lockside)
     extra: tuple = ()      # extra UDMF sector fields as ((key, value), ...)
     env: tuple = ()        # reverb environment (id1, id2) of the sound zone, () = engine default
+    slabs: tuple = ()      # solid 3D floors in this cell: ((z0, z1, side, top, bottom), ...) - see slab()
 
 
 def _val(v):
@@ -118,6 +119,30 @@ class MapBuilder:
 
     def rail(self, x0, y0, x1, y1, base, tex):
         self.box(x0, y0, x1, y1, base, mid=tex, role='rail')
+
+    def slab(self, x0, y0, x1, y1, z0, z1, side, top=None, bottom=None):
+        """Solid 3D floor between z0 and z1 in the existing cells of the rectangle (Sector_Set3DFloor, type
+        solid): a vehicle body or a roof with open sky above it, a bridge deck over water, a mezzanine. side is
+        the texture of its faces, top/bottom of its upper and lower surfaces. A cell may hold several slabs
+        (a window between a sill slab and a lintel slab). Tags and control sectors are assigned at build."""
+        spec = (int(z0), int(z1), side, top or side, bottom or top or side)
+        for p in self._cells(*self._range(x0, y0, x1, y1)):
+            if p in self.cells:
+                c = self.cells[p]
+                self.cells[p] = replace(c, slabs=tuple(sorted(c.slabs + (spec,))))
+
+    @staticmethod
+    def surfaces(c):
+        """Heights a player can stand at in a cell: its floor and the tops of its slabs, each with 56 units of
+        headroom under the next slab or the ceiling."""
+        out = []
+        for z in [c.floor] + [s[1] for s in c.slabs]:
+            if any(a < z + PLAYER_HEIGHT and b > z for (a, b, *_) in c.slabs):
+                continue
+            above = [a for (a, b, *_) in c.slabs if a >= z] + [c.ceil]
+            if min(above) - z >= PLAYER_HEIGHT:
+                out.append(z)
+        return out
 
     def face(self, x0, y0, x1, y1, side, **props):
         """Override sidedef/line props on the `side` edges of cells in the rectangle."""
@@ -320,7 +345,19 @@ class MapBuilder:
                                skill4=True, skill5=True, single=True, coop=True, dm=True))
         return things
 
+    def _tag_slabs(self):
+        """Give every distinct slab set its own sector tag (4000+); the control sectors refer to it."""
+        specs = sorted({c.slabs for c in self.cells.values() if c.slabs})
+        self.slab_tags = {spec: 4000 + i for i, spec in enumerate(specs)}
+        for p, c in list(self.cells.items()):
+            if c.slabs:
+                tag = self.slab_tags[c.slabs]
+                assert c.tag in (0, tag) and c.role != 'door', ('slab on a tagged or door cell', p)
+                if c.tag != tag:
+                    self.cells[p] = replace(c, tag=tag)
+
     def build(self):
+        self._tag_slabs()
         sectors, sector_of = self._sectors()
         edges = {}
         touch = {}  # vertex -> set of axes ('h'/'v') of incident boundary edges
@@ -464,6 +501,28 @@ class MapBuilder:
             for k, v in c.extra:
                 d[k] = v
             sector_dicts.append(d)
+        # 3D floor control sectors: one closed square per slab, outside the map, whose floor/ceiling are the
+        # slab's bottom/top; its first line carries Sector_Set3DFloor(tag, solid, no light effects, opaque).
+        if self.slab_tags:
+            cx0 = (min(p[0] for p in self.cells) - 32) * UNIT
+            cy0 = (min(p[1] for p in self.cells) - 32) * UNIT
+            k = 0
+            for spec, tag in sorted(self.slab_tags.items(), key=lambda kv: kv[1]):
+                for (z0, z1, side, top, bottom) in spec:
+                    x, y, size = cx0 - (k % 64) * 48, cy0 - (k // 64) * 48, 32
+                    base = len(verts)
+                    for (vx, vy) in ((x, y), (x, y + size), (x + size, y + size), (x + size, y)):
+                        verts.append(dict(x=float(vx), y=float(vy)))
+                    sec = len(sector_dicts)
+                    sector_dicts.append(dict(heightfloor=z0, heightceiling=z1, texturefloor=bottom, textureceiling=top,
+                                             lightlevel=160, id=0, special=0))
+                    for e in range(4):
+                        sides.append(dict(sector=sec, texturemiddle=side))
+                        d = dict(v1=base + e, v2=base + (e + 1) % 4, sidefront=len(sides) - 1, blocking=True)
+                        if e == 0:
+                            d.update(special=160, arg0=tag, arg1=1, arg2=1, arg3=255)
+                        out_lines.append(d)
+                    k += 1
         text = f'// {self.name} - Red Flags 2 production map. Authored with scripts/mapkit (cell grid {UNIT}).\n'
         text += 'namespace = "zdoom";\n\n'
         things = self.things + self.sound_zones()
@@ -491,20 +550,34 @@ class MapBuilder:
             return False
         if c.role == 'door':
             return True
+        if c.slabs:
+            return bool(self.surfaces(c))
         return c.ceil - c.floor >= PLAYER_HEIGHT
+
+    def _stand(self, c, z_from):
+        """Surface of cell c reached by a step from height z_from (None when no surface is within a step)."""
+        if c.role == 'door':
+            return c.floor             # a door is entered whatever its height (as before slabs)
+        best = None
+        for z in (self.surfaces(c) if c.slabs else [c.floor]):
+            if abs(z - z_from) <= STEP and (best is None or abs(z - z_from) < abs(best - z_from)):
+                best = z
+        return best
 
     def reachable(self, keys=(), open_tags=()):
         """BFS over cells from the player start. keys: lock numbers considered opened.
         Locked door cells are entered only when the lock is in keys, or from the unlocked side."""
         start = (int(self.start[0] // UNIT), int(self.start[1] // UNIT))
+        c0 = self.cells[start]
+        z0 = self._stand(c0, c0.floor)
         dist = {start: 0}
-        q = deque([start])
+        seen = {(start, z0)}
+        q = deque([(start, z0)])
         while q:
-            u = q.popleft()
-            cu = self.cells[u]
+            u, zu = q.popleft()
             for d, (dx, dy) in DIRS.items():
                 v = (u[0] + dx, u[1] + dy)
-                if v in dist or not self.passable(v):
+                if not self.passable(v):
                     continue
                 cv = self.cells[v]
                 if cv.role == 'door':
@@ -513,12 +586,12 @@ class MapBuilder:
                         # entering from side `d` of the door means the room is on OPP[d]
                         if lockside == '' or lockside == OPP[d]:
                             continue
-                if cu.role != 'door' and cv.role != 'door' and abs(cv.floor - cu.floor) > STEP:
+                zv = self._stand(cv, zu)
+                if zv is None or (v, zv) in seen:
                     continue
-                if cu.role == 'door' and cv.role != 'door' and abs(cv.floor - cu.floor) > STEP:
-                    continue
-                dist[v] = dist[u] + 1
-                q.append(v)
+                seen.add((v, zv))
+                dist.setdefault(v, dist[u] + 1)
+                q.append((v, zv))
         return dist
 
     def _touchable(self, t, dist):
