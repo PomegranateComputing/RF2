@@ -25,6 +25,7 @@ class RFDirector : EventHandler
             winchUsed = false;
             notesRead = 0;
             if (Level.MapName ~== "RF01") objective = StringTable.Localize("$RF_OBJ_WAKE");
+            else objective = ChapterObjective(0);
         }
     }
 
@@ -62,10 +63,26 @@ class RFDirector : EventHandler
         if (line.GetUDMFInt('user_outro') > 0) StartOutro(e.Thing);
     }
 
+    // Objectives of the chapters after RF01: LANGUAGE RF_OBJ_<MAP>_<code>, "" when undefined.
+    static String ChapterObjective(int code)
+    {
+        String key = String.Format("RF_OBJ_%s_%d", Level.MapName.MakeUpper(), code);
+        String text = StringTable.Localize("$" .. key);
+        return text == key ? "" : text;
+    }
+
     // Objectives only move forward: backtracking over an old trigger never regresses them.
     void SetObjective(int code)
     {
         if (code <= objectiveCode) return;
+        if (!(Level.MapName ~== "RF01"))
+        {
+            String text = ChapterObjective(code);
+            if (text == "") return;
+            objectiveCode = code;
+            objective = text;
+            return;
+        }
         String key;
         switch (code)
         {

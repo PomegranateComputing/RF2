@@ -30,6 +30,10 @@ class RFDevHandler : StaticEventHandler
     bool aimShots;          // rf_dev_ui 4: shots at a wall, impacts against the centre dot
     bool soundProbe;        // rf_dev_ui 5: a voice near then far, player shots (distance, centre)
     bool msgShots;          // rf_dev_ui 3: real pickups and a note at the player's feet, captured
+    bool deathShots;        // rf_dev_ui 6: the player dies in place; death and resume screen captured
+    bool viewShots;         // rf_dev_view "x y z angle pitch; ...": clean views (title art, map evidence)
+    Array<double> views;
+    int viewIndex, viewTimer;
     // Corpse inspection (rf_dev_corpse): each enemy class killed on flat floor, against a wall,
     // on a door threshold and on a stair; the fall is photographed, then the body from four sides
     // and from above, and its resting state is logged (Z against the floor under it, flags).
@@ -98,6 +102,23 @@ class RFDevHandler : StaticEventHandler
         msgShots = CVar.GetCVar('rf_dev_ui').GetInt() == 3;
         aimShots = CVar.GetCVar('rf_dev_ui').GetInt() == 4;
         soundProbe = CVar.GetCVar('rf_dev_ui').GetInt() == 5;
+        deathShots = CVar.GetCVar('rf_dev_ui').GetInt() == 6;
+        views.Clear();
+        viewIndex = 0; viewTimer = 0;
+        String spec = CVar.GetCVar('rf_dev_view').GetString();
+        if (spec != "")
+        {
+            Array<String> items;
+            spec.Split(items, ";", TOK_SKIPEMPTY);
+            for (int i = 0; i < items.Size(); i++)
+            {
+                Array<String> v;
+                items[i].Split(v, " ", TOK_SKIPEMPTY);
+                if (v.Size() < 5) continue;
+                for (int j = 0; j < 5; j++) views.Push(v[j].ToDouble());
+            }
+        }
+        viewShots = views.Size() > 0;
         corpseTest = CVar.GetCVar('rf_dev_corpse').GetBool();
         perfTest = CVar.GetCVar('rf_dev_perf').GetInt() > 0;
         perfBodies = CVar.GetCVar('rf_dev_perf').GetInt() == 2;
@@ -108,7 +129,7 @@ class RFDevHandler : StaticEventHandler
         filmEnd = CVar.GetCVar('rf_dev_film_end').GetInt();
         lastPistol = -1;
         lastMag = -1;
-        logging = tour || autopilot || doortest || weaponShots || uiShots || corpseTest || perfTest || filmEvery > 0 || CVar.GetCVar('rf_dev_log').GetBool();
+        logging = tour || autopilot || doortest || weaponShots || uiShots || corpseTest || perfTest || filmEvery > 0 || deathShots || viewShots || CVar.GetCVar('rf_dev_log').GetBool();
         dtLines.Clear();
         dtSides.Clear();
         dtIndex = 0; dtPhase = 0; dtTimer = 0; dtPass = 0; dtOpen = 0; dtShut = 0;
@@ -131,6 +152,9 @@ class RFDevHandler : StaticEventHandler
         }
         SortByArg(tourPoints);
         SortByArg(waypoints);
+        int uimode = CVar.GetCVar('rf_dev_ui').GetInt();
+        if (uimode == 7 || uimode == 8)
+            Console.Printf("RF_DEV_MENU_RESULT map=%s save=%d skill=%d", Level.MapName, e.IsSaveGame, CVar.GetCVar('skill').GetInt());
         if (e.IsSaveGame && startWp > 0) apIndex = clamp(startWp - 1, 0, max(0, waypoints.Size() - 1));
         // After a death the reload may be a later checkpoint autosave: resume from the closest
         // waypoint in sight rather than from rf_dev_start_wp.
@@ -225,6 +249,8 @@ class RFDevHandler : StaticEventHandler
         if (soundProbe) SoundTick();
         if (corpseTest) CorpseTick();
         if (perfTest) PerfTick();
+        if (deathShots) DeathTick();
+        if (viewShots) ViewTick();
         if (uiShots)
         {
             if (Level.Time == 60 || Level.Time == 230) Level.MakeScreenShot();
@@ -523,6 +549,46 @@ class RFDevHandler : StaticEventHandler
         if (Level.Time == 330) Console.Printf("RF_DEV_UI_DONE");
     }
 
+    // Death and resume screen: the player dies where the map starts, the overlay is photographed as it
+    // appears and once complete.
+    void DeathTick()
+    {
+        let pmo = players[consoleplayer].mo;
+        if (pmo == null) return;
+        if (Level.Time == 60) pmo.DamageMobj(null, null, 1000, 'None');
+        if (Level.Time == 60 + 50 || Level.Time == 60 + 120) Level.MakeScreenShot();
+        if (Level.Time == 60 + 130) Console.Printf("RF_DEV_UI_DONE");
+    }
+
+    // Clean views: x y z(above floor) angle pitch per item; noclip and invulnerable, 12 tics to settle.
+    void ViewTick()
+    {
+        let pmo = players[consoleplayer].mo;
+        if (pmo == null || Level.Time < 30) return;
+        int n = views.Size() / 5;
+        if (viewIndex >= n)
+        {
+            if (viewTimer++ == 0) Console.Printf("RF_DEV_UI_DONE");
+            return;
+        }
+        if (pmo.player != null) pmo.player.cheats |= CF_NOCLIP | CF_GODMODE;
+        if (viewTimer == 0)
+        {
+            Vector2 at = (views[viewIndex * 5], views[viewIndex * 5 + 1]);
+            double floor = Level.PointInSector(at).floorplane.ZAtPoint(at);
+            pmo.SetOrigin((at, floor + views[viewIndex * 5 + 2]), false);
+            pmo.angle = views[viewIndex * 5 + 3];
+            pmo.pitch = views[viewIndex * 5 + 4];
+        }
+        pmo.Vel = (0, 0, 0);
+        if (++viewTimer == 12)
+        {
+            Level.MakeScreenShot();
+            Console.Printf("RF_DEV_VIEW index=%d", viewIndex + 1);
+        }
+        if (viewTimer >= 16) { viewTimer = 0; viewIndex++; }
+    }
+
     void MessageTick()
     {
         let pmo = players[consoleplayer].mo;
@@ -573,26 +639,59 @@ class RFDevHandler : StaticEventHandler
 
     override void UiTick()
     {
-        if (CVar.FindCVar('rf_dev_ui').GetInt() == 2)
+        int uimode = CVar.FindCVar('rf_dev_ui').GetInt();
+        if (uimode == 2)
         {
             TitleMenuShots();      // counts from engine start, whatever plays behind the title
             return;
         }
+        if (uimode == 7 || uimode == 8)
+        {
+            MenuDrive(uimode);
+            return;
+        }
         if (!uiShots || Level.Time < 240) return;
+        // Pause, then the save list and the "main menu" confirmation opened from it.
         uiMenuTics++;
         if (uiMenuTics == 20) Level.MakeScreenShot();
-        if (uiMenuTics == 45) Console.Printf("RF_DEV_UI_DONE");
+        if (uiMenuTics == 25) Menu.SetMenu('SaveGameMenu');
+        if (uiMenuTics == 45) Level.MakeScreenShot();
+        if (uiMenuTics == 50) Menu.SetMenu('EndGameMenu');
+        if (uiMenuTics == 70) Level.MakeScreenShot();
+        if (uiMenuTics == 75) Console.Printf("RF_DEV_UI_DONE");
+    }
+
+    // Menu navigation through the menus' own input handling, from the title screen: 7 = "Continuer" (the
+    // newest save), 8 = "Nouvelle partie" then the preselected difficulty. The level that loads reports
+    // RF_DEV_MENU_RESULT (WorldLoaded).
+    ui void MenuDrive(int mode)
+    {
+        uiTitleTics++;
+        if (uiTitleTics == 175) Menu.SetMenu('MainMenu');
+        let m = Menu.GetCurrentMenu();
+        if (m == null) return;
+        if (mode == 7 && uiTitleTics == 200) { Level.MakeScreenShot(); m.MenuEvent(Menu.MKEY_Enter, false); }
+        if (mode == 8)
+        {
+            let main = RFMainMenu(m);
+            if (uiTitleTics == 200 && main != null) { main.sel = 1; Level.MakeScreenShot(); m.MenuEvent(Menu.MKEY_Enter, false); }
+            if (uiTitleTics == 230) { Level.MakeScreenShot(); m.MenuEvent(Menu.MKEY_Enter, false); }
+        }
     }
 
     ui void TitleMenuShots()
     {
-        // The engine's intro logo plays first: menus open after 5 s.
+        // The engine's intro logo plays first: menus open after 5 s. RF2-UI-01: every title-side screen,
+        // each opened over the previous one like a player would (main, difficulty, load, options,
+        // credits, quit confirmation).
         uiTitleTics++;
-        if (uiTitleTics == 175) Menu.SetMenu('MainMenu');
-        if (uiTitleTics == 200 || uiTitleTics == 250 || uiTitleTics == 300) Level.MakeScreenShot();
-        if (uiTitleTics == 225) Menu.SetMenu('RFOptionsMenu');
-        if (uiTitleTics == 275) Menu.SetMenu('RFCreditsMenu');
-        if (uiTitleTics == 325) Console.Printf("RF_DEV_UI_DONE");
+        static const Name menus[] = { 'MainMenu', 'SkillMenu', 'LoadGameMenu', 'RFOptionsMenu', 'RFCreditsMenu', 'QuitMenu' };
+        int k = (uiTitleTics - 175) / 25;
+        int phase = (uiTitleTics - 175) % 25;
+        if (uiTitleTics < 175) return;
+        if (k < 6 && phase == 0) Menu.SetMenu(menus[k]);
+        if (k < 6 && phase == 20) Level.MakeScreenShot();
+        if (k == 6 && phase == 5) Console.Printf("RF_DEV_UI_DONE");
     }
 
     void TourTick()

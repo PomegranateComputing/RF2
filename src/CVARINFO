@@ -15,3 +15,4 @@ server noarchive nosave int rf_dev_film_end = 0;
 user float rf_hud_scale = 1.0;
 server noarchive nosave bool rf_dev_art_combat = false;
 user bool rf_footsteps = true;
+server noarchive nosave string rf_dev_view = "";
