@@ -10,7 +10,7 @@ the termination of the engine process once the autosave file exists; the relaunc
 file with -loadgame. Death is obtained by a pacifist first life after the load; the autopilot
 then presses use on the death screen, which reloads the last save like a player would.
 
-Usage: python scripts/e2e_rf01.py [--speed 4] [--save-at 29] [--only A|B]
+Usage: python scripts/e2e_rf01.py [--speed 4] [--save-at 29] [--only A|B] [--pk3 <candidate.pk3>]
 Writes build/dev/e2e/RF01_E2E_<stamp>.json and prints a short verdict.
 """
 import argparse, json, os, re, sys, time
@@ -85,7 +85,11 @@ def main():
     ap.add_argument('--seconds', type=float, default=600)
     ap.add_argument('--save-at', type=int, default=29, help='waypoint after which run B saves')
     ap.add_argument('--only', choices=('A', 'B'))
+    ap.add_argument('--pk3', help='a frozen candidate build instead of dist/RF2_DEV.pk3')
     a = ap.parse_args()
+    global PK3
+    if a.pk3:
+        PK3 = Path(a.pk3).resolve()
     results = []
     if a.only in (None, 'A'):
         results.append(run_a(a.speed, a.seconds))

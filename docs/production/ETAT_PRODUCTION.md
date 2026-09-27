@@ -60,9 +60,10 @@ mesurent.
 | Lot | Contenu | Statut |
 |---|---|---|
 | Socle | Référence figée, branche de production, contrats, renvois réparés | fait (27/09) |
-| RF2-ART-02 | Ennemis RF01, visuel seulement (Astra) | IN_PRODUCTION chez Astra |
-| RF2-UI-01 | Menus artistiques et parcours fonctionnel | voir §6 |
-| RF2-MAP-02 | RF02 complet | voir §6 |
+| RF2-ART-02 | Ennemis RF01, visuel seulement (Astra) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_ART-02.cmd`, build `RF2_ART-02_20260927_1356`, `docs/RF2_ART_02_INTEGRATION.md` |
+| RF2-UI-01 | Menus artistiques, mort et reprise (art d'Astra) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_UI-01.cmd`, build `RF2_UI-01_20260927_1407`, `docs/RF2_UI_01_INTEGRATION.md` |
+| RF2-CANON-01 | Fidélité au roman : matrice, fiches de scène | matrice active `docs/production/CANON_FIDELITE.md` ; CAN-001 à CAN-004 non intégrés |
+| RF2-MAP-02 | RF02 complet | IN_PRODUCTION (fiche, matières) |
 | Campagne | RF03–RF23 dans l'ordre | après RF02 |
 
 ## 6. Matrice de couverture réelle
@@ -93,7 +94,7 @@ Un statut vaut pour un périmètre et une version.
 
 | Famille | Utilisée par | État |
 |---|---|---|
-| Infirmier `RFOrderly` (ORDY) | RF01 | gameplay accepté ; visuel : RF2-ART-02 en cours |
+| Infirmier `RFOrderly` (ORDY) | RF01 | gameplay accepté ; visuel : candidate RF2-ART-02 à juger |
 | Brancardier `RFBrancardier` (BRCD) | RF01 | idem |
 | Porte-Registre `RFPorteRegistre` (PREG, liasse PRGS) | RF01 | idem |
 | Rifleman, Shotgunner, Custodian (roster du dossier maître §14) | — | INVENTORIED |
@@ -111,7 +112,8 @@ Un statut vaut pour un périmètre et une version.
 
 | Écran | État |
 |---|---|
-| Menu principal, pause, options RF, crédits, HUD, titre de niveau, fin de niveau | fonctionnels (gate D) ; direction artistique : RF2-UI-01 |
+| Menu principal, pause, chargement, sauvegarde, options, crédits, confirmations, mort et reprise | candidate RF2-UI-01 (RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED) |
+| HUD, titre de niveau, fin de niveau | RF01 accepté |
 
 ## 7. Reprise
 
@@ -119,3 +121,8 @@ Voir la dernière section « Reprise » de ce fichier après chaque jalon : comm
 action.
 
 - 27/09 — socle posé sur `prod/rf2-campaign`. Prochaine action : RF2-UI-01 (structure) et RF2-MAP-02 (fiche, carte).
+- 27/09 après-midi — lots Astra ART-02 et UI-01 intégrés chacun sur sa branche candidate, exportés, joués de bout en
+  bout (RF01 A et B PASS avec chaque build). UI-01 re-exporté en 1407 : le moteur affichait « Player died. » à une
+  mort sans attaquant (obituaires du moteur traduits). Matrice de fidélité au roman écrite (lecture intégrale).
+  Branche `prod/rf2-campaign` = cumul (socle + ART-02 + UI-01 + outils). Prochaine action : carte RF02
+  (`scripts/mapkit/rf02.py`), puis candidate RF2-MAP-02.
