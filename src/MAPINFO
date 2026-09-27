@@ -5,7 +5,7 @@ gameinfo
 {
     PlayerClasses = "RFPlayer"
     StatusBarClass = "RFStatusBar"
-    AddEventHandlers = "RFDirector", "RFDevHandler"
+    AddEventHandlers = "RFDirector", "RFParis", "RFDevHandler"
     TitlePage = "TITLEPIC"
     TitleMusic = "RFAMB01"
     TitleTime = 3600
@@ -80,6 +80,15 @@ DoomEdNums
     30621 = RFNote
     30622 = RFLitter
     30623 = RFSignal
+    30631 = RFSacoche
+    30632 = RFFormsBucket
+    30633 = RFFieldPhone
+    30634 = RFRadioSet
+    30635 = RFAtlas
+    30636 = RFFountain
+    30637 = RFSceneSpot
+    30638 = RFMattressProp
+    30639 = RFMorrisColumn
     30901 = RFTourPoint
     30902 = RFDevWaypoint
 }
@@ -116,7 +125,18 @@ map RF01 "Sainte-Anne - Les portes ouvertes"
     lightmode = 8
 }
 
-map RF02 "Paris - Rue de service" { levelnum = 2 next = "RF03" }
+// RF02 (RF2-MAP-02): the walk of the novel from the boulevard Arago to the Porte Maillot. RF03 is still a V1
+// blockout: the chapter ends on the title screen until RF03 is produced (the blockout stays reachable by +map).
+map RF02 "Paris - Rue de service"
+{
+    levelnum = 2
+    next = "EndTitle"
+    music = "RFAMB01"
+    cluster = 1
+    nointermission
+    lightmode = 8
+    sky1 = "RFSKY2", 0
+}
 map RF03 "Batignolles - Refus de reception" { levelnum = 3 next = "RF04" }
 map RF04 "Luna Park - Personnel technique" { levelnum = 4 next = "RF05" }
 map RF05 "Les machines continuent" { levelnum = 5 next = "RF06" }

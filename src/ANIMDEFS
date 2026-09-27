@@ -1,2 +1,4 @@
 // Winch lever in the porter's lodge. Sound comes from the SNDINFO switch route.
 switch RFM_SW0 on pic RFM_SW1 tics 0
+// RF02: the Seine under the bridge.
+warp flat RF2_EAU1

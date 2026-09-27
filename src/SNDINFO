@@ -156,8 +156,8 @@ rf/fal/shell3 "sounds/fal/shell_03.wav"
 
 rf/player/step3 "sounds/orderly/step_03.wav"
 
-// RF2-UI-01 menu sounds (scripts/ui/ui_sounds.py, CC0 Kenney takes): paper and metal touches instead of the
-// IWAD's switch, pistol and "oof" sounds. Short and dry; no music.
+// RF2-UI-01 menu sounds (Astra, from CC0 Kenney / RPG Audio takes; art/rf2_ui_01_astra): paper and metal
+// touches instead of the IWAD's switch, pistol and "oof" sounds. Short and dry; no music.
 menu/cursor               "sounds/ui/cursor.wav"
 menu/choose               "sounds/ui/choose.wav"
 menu/advance              "sounds/ui/choose.wav"
@@ -168,3 +168,20 @@ menu/clear                "sounds/ui/clear.wav"
 menu/invalid              "sounds/ui/invalid.wav"
 menu/prompt               "sounds/ui/prompt.wav"
 menu/dismiss              "sounds/ui/dismiss.wav"
+
+// RF02 place sounds (scripts/mapkit/sounds_rf02.py, synthesized, provisional until Astra's RF02 sounds).
+// No music: the radio voices, the march and the waltz of the text are subtitled, not played.
+rf/paris/tsf              "sounds/paris/tsf_loop.wav"
+rf/paris/fire             "sounds/paris/fire_loop.wav"
+rf/paris/street           "sounds/paris/street_loop.wav"
+rf/paris/phonering        "sounds/paris/phone_ring.wav"
+rf/paris/phonetone        "sounds/paris/phone_tone.wav"
+rf/paris/engines          "sounds/paris/engines.wav"
+rf/paris/bell             "sounds/paris/bell.wav"
+rf/paris/radioburst       "sounds/paris/radio_burst.wav"
+rf/paris/fuse             "sounds/paris/fuse.wav"
+$volume rf/paris/tsf 0.45
+$volume rf/paris/fire 0.5
+$volume rf/paris/street 0.45
+$volume rf/paris/engines 0.8
+$volume rf/paris/bell 0.6

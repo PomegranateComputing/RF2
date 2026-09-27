@@ -1068,6 +1068,8 @@ class RFDevHandler : StaticEventHandler
                         p.player.cmd.buttons |= BT_USE;
                         apUseCooldown = 120;
                         Console.Printf("RF_DEV_USE waypoint=%d", wp.args[0]);
+                        let director = RFDirector(EventHandler.Find('RFDirector'));
+                        if (director != null) director.UsePressed(p, true);
                     }
                 }
             }

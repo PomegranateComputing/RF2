@@ -4,7 +4,8 @@
 class RFLamp : PointLightAttenuated {}
 class RFLampFlicker : PointLightFlickerAttenuated {}
 
-// Looping ambience. args[0]: 0 hum, 1 wind, 2 drip, 3 room. args[1]: volume percent (default 60).
+// Looping ambience. args[0]: 0 hum, 1 wind, 2 drip, 3 room, 4 open street, 5 wireless sets (TSF shop).
+// args[1]: volume percent (default 60).
 class RFAmbientLoop : Actor
 {
     Default
@@ -23,6 +24,8 @@ class RFAmbientLoop : Actor
         if (args[0] == 1) s = "rf/amb/wind";
         else if (args[0] == 2) s = "rf/amb/drip";
         else if (args[0] == 3) s = "rf/amb/room";
+        else if (args[0] == 4) s = "rf/paris/street";
+        else if (args[0] == 5) s = "rf/paris/tsf";
         double volume = args[1] > 0 ? args[1] / 100.0 : 0.6;
         A_StartSound(s, CHAN_BODY, CHANF_LOOP, volume, ATTN_STATIC);
     }
@@ -59,9 +62,14 @@ class RFNote : Actor
         if (args[1] == 1) SetStateLabel("Register");
     }
 
+    int lastRead;
+
     override bool Used(Actor user)
     {
         if (user == null || user.player == null) return false;
+        // One press, one reading (after RF01 the prompt can reach the note in the same moment as the engine).
+        if (lastRead > 0 && Level.maptime - lastRead < 12) return true;
+        lastRead = Level.maptime;
         String key = String.Format("RF_NOTE_%d", args[0]);
         user.A_Print(StringTable.Localize("$" .. key), 6.0);
         A_StartSound("rf/world/paper", CHAN_BODY, 0, 0.8);

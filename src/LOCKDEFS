@@ -26,6 +26,15 @@ Lock 3 Doom
     Mapcolor 160 40 40
 }
 
+// RF02: the Luna Park gate is padlocked (l. 455); the way in is the service door.
+Lock 5 Doom
+{
+    RFNoKey
+    Message "$RF_LOCK_LUNAPARK"
+    RemoteMessage "$RF_LOCK_LUNAPARK"
+    Mapcolor 160 40 40
+}
+
 // The gallery grille over the courtyard perron opens from the gallery side only.
 Lock 4 Doom
 {

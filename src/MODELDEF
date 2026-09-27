@@ -196,3 +196,22 @@ Model RFPasseKey
     IgnoreTranslation
     FrameIndex RFKY B 0 0
 }
+
+// RF02: the Morris column of the Champs-Elysees (scripts/mapkit/materials_rf02.py morris_model). One mesh, three
+// skins: the Luna Park poster, the JERMA PALACE print for a heartbeat, the tooth powder advertisement.
+Model RFMorrisColumn
+{
+    Path "models/rf02"
+    Model 0 "morris.obj"
+    Skin 0 "morris_luna.png"
+    Model 1 "morris.obj"
+    Skin 1 "morris_jerma.png"
+    Model 2 "morris.obj"
+    Skin 2 "morris_dentifrice.png"
+    Scale 1 1 1.2
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMC A 0 0
+    FrameIndex RFMC B 1 0
+    FrameIndex RFMC C 2 0
+}

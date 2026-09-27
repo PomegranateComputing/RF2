@@ -11,6 +11,7 @@ class RFDirector : EventHandler
     bool exiting;
     int outroTics;
     int notesRead;
+    Actor promptThing;     // the note or scene object the prompt designates (chapters after RF01: see WorldTick)
 
     override void WorldLoaded(WorldEvent e)
     {
@@ -25,7 +26,29 @@ class RFDirector : EventHandler
             winchUsed = false;
             notesRead = 0;
             if (Level.MapName ~== "RF01") objective = StringTable.Localize("$RF_OBJ_WAKE");
-            else objective = ChapterObjective(0);
+            else
+            {
+                objective = ChapterObjective(0);
+                StartingKit();
+            }
+        }
+    }
+
+    // A chapter after RF01 started on its own (chapter select, development) gets what Viktor carries out of
+    // Sainte-Anne; arriving from the previous chapter, the inventory is already there and nothing is given.
+    void StartingKit()
+    {
+        if (!playeringame[0] || players[0].mo == null) return;
+        Actor pl = players[0].mo;
+        if (pl.FindInventory('RFBrowning') == null)
+        {
+            pl.GiveInventory('RFBrowning', 1);
+            pl.GiveInventory('RFPistolAmmo', 24);
+        }
+        if (pl.FindInventory('RFFAL') == null)
+        {
+            pl.GiveInventory('RFFAL', 1);
+            pl.GiveInventory('RFRifleAmmo', 20);
         }
     }
 
@@ -160,10 +183,43 @@ class RFDirector : EventHandler
         }
         if (titleTics > 0) titleTics--;
         usePrompt = 0;
+        promptThing = null;
         if (!playeringame[0]) return;
         Actor person = players[0].mo;
         if (person == null || person.health <= 0) return;
         usePrompt = FacedLine(person);
+        FindPromptThing(person);
+        // After RF01 the prompt is a promise: the use key reaches the object it names, even when the engine's
+        // use trace would stop at the edge of the table it lies on or miss a small object by a few units.
+        // (RF01 keeps its accepted behaviour.)
+        let pl = players[0];
+        if ((pl.cmd.buttons & BT_USE) && !(pl.oldbuttons & BT_USE)) UsePressed(person, false);
+    }
+
+    // The use key was pressed: the object named by the prompt is used (chapters after RF01). The development
+    // autopilot presses through here too (its press lands after this handler's tick), with refresh = true.
+    void UsePressed(Actor person, bool refresh)
+    {
+        if (Level.MapName ~== "RF01" || person == null) return;
+        if (refresh) FindPromptThing(person);
+        if (promptThing != null) promptThing.Used(person);
+    }
+
+    void FindPromptThing(Actor person)
+    {
+        // Prompt for the scene objects of a chapter (RFInteract) in front of the player.
+        let things = ThinkerIterator.Create('RFInteract');
+        RFInteract thing;
+        while ((thing = RFInteract(things.Next())) != null)
+        {
+            if (person.Distance2D(thing) > 72 + thing.radius || !person.CheckSight(thing)) continue;
+            Vector2 delta = thing.Pos.XY - person.Pos.XY;
+            double facing = delta.X * cos(person.angle) + delta.Y * sin(person.angle);
+            if (facing < delta.Length() * 0.7) continue;
+            usePrompt = thing.prompt;
+            promptThing = thing;
+            return;
+        }
         // Prompt for readable notes in front of the player.
         let notes = ThinkerIterator.Create('RFNote');
         RFNote note;
@@ -174,6 +230,7 @@ class RFDirector : EventHandler
             double facing = delta.X * cos(person.angle) + delta.Y * sin(person.angle);
             if (facing < delta.Length() * 0.7) continue;
             usePrompt = 1;
+            promptThing = note;
             break;
         }
     }
