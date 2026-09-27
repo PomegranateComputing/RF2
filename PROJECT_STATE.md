@@ -17,7 +17,9 @@ Astra produces assets in its own worktree. Music later. Sans Destination stopped
 
 ## Campaign
 
-RF01 produced from `scripts/mapkit/rf01.py`. RF02-RF23: V1 blockouts until each is produced as a complete level.
+RF01 produced from `scripts/mapkit/rf01.py`. RF02 produced from `scripts/mapkit/rf02.py` (candidate RF2-MAP-02,
+owner review required; human figures pending from Astra). RF03-RF23: V1 blockouts until each is produced.
+Canon fidelity matrix: `docs/production/CANON_FIDELITE.md`.
 
 ## Gates (RF01)
 

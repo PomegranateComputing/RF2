@@ -1,6 +1,8 @@
 # RF02 — Paris, rue de service (fiche de production)
 
-Statut du périmètre : IN_PRODUCTION (27/09/2026). Carte : `scripts/mapkit/rf02.py` → `src/maps/RF02.wad`.
+Statut du périmètre : RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED (27/09/2026, candidate RF2-MAP-02 ; figures humaines
+attendues d'Astra). Carte : `scripts/mapkit/rf02.py` → `src/maps/RF02.wad`. Couverture réelle ligne par ligne :
+`docs/production/CANON_FIDELITE.md` §6 ; intégration et limites : `docs/RF2_MAP_02_INTEGRATION.md`.
 Matières : `scripts/mapkit/materials_rf02.py` → `src/patches/rf02/`, `src/TEXTURES.rf02` (RF01 n'est jamais regénéré).
 
 ## Source

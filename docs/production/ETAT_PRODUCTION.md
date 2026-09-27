@@ -63,7 +63,7 @@ mesurent.
 | RF2-ART-02 | Ennemis RF01, visuel seulement (Astra) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_ART-02.cmd`, build `RF2_ART-02_20260927_1356`, `docs/RF2_ART_02_INTEGRATION.md` |
 | RF2-UI-01 | Menus artistiques, mort et reprise (art d'Astra) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_UI-01.cmd`, build `RF2_UI-01_20260927_1407`, `docs/RF2_UI_01_INTEGRATION.md` |
 | RF2-CANON-01 | Fidélité au roman : matrice, fiches de scène | matrice active `docs/production/CANON_FIDELITE.md` ; CAN-001 à CAN-004 non intégrés |
-| RF2-MAP-02 | RF02 complet | IN_PRODUCTION (fiche, matières) |
+| RF2-MAP-02 | RF02 complet | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_MAP-02_RF02.cmd` (départ direct) / `JOUER_RF2_MAP-02.cmd`, build cumulatif, `docs/RF2_MAP_02_INTEGRATION.md` ; figures humaines attendues d'Astra |
 | Campagne | RF03–RF23 dans l'ordre | après RF02 |
 
 ## 6. Matrice de couverture réelle
@@ -76,8 +76,8 @@ Un statut vaut pour un périmètre et une version.
 | Carte | Titre (repère V1) | État | Preuve / build | Verdict |
 |---|---|---|---|---|
 | RF01 | Sainte-Anne - Les portes ouvertes | OWNER_ACCEPTED (carte, armes, bras, sons) ; ennemis : retouche en cours | build 20260926_1451 | accepté 27/09 hors ennemis |
-| RF02 | Paris - Rue de service | INVENTORIED (blockout V1) | — | — |
-| RF03–RF23 | voir `agent/specs/MAPS_V1_INVENTORY.md` | INVENTORIED (blockouts V1, ennemis Freedoom) | — | — |
+| RF02 | Paris - Rue de service | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED (carte produite, 15 scènes du texte, 7 vagues) ; figures humaines manquantes | candidate RF2-MAP-02, traversées A et B PASS, film | — |
+| RF03–RF23 | voir `agent/specs/MAPS_V1_INVENTORY.md` | INVENTORIED (blockouts V1, ennemis Freedoom) ; RF02 finit sur l'écran titre tant que RF03 n'est pas produit | — | — |
 
 ### Arsenal (liste du dossier maître, `legacy/import/RF2_DOSSIER_MAITRE.md` §10)
 
@@ -106,7 +106,8 @@ Un statut vaut pour un périmètre et une version.
 |---|---|
 | Sons RF01 (66 fichiers, mix) | OWNER_ACCEPTED — référence sonore |
 | Lit `RFAMB01` (déclaré comme musique dans MAPINFO, joué en fond d'ambiance) | existant, inventorié ; traitement musical différé |
-| `$MUSIC_RUNNIN` (Freedoom) en `defaultmap` pour RF02–RF22, `$MUSIC_READ_M` à la fin | existant, inventorié ; non supprimé, traitement différé |
+| `$MUSIC_RUNNIN` (Freedoom) en `defaultmap` pour RF03–RF22, `$MUSIC_READ_M` à la fin | existant, inventorié ; non supprimé, traitement différé (RF02 reprend le fond RFAMB01) |
+| Sons de lieu RF02 (TSF, téléphone, moteurs, cloche, feu, rue) | synthèse provisoire d'Opus, non écoutée par un humain ; demandés à Astra |
 
 ### UI
 
@@ -126,3 +127,8 @@ action.
   mort sans attaquant (obituaires du moteur traduits). Matrice de fidélité au roman écrite (lecture intégrale).
   Branche `prod/rf2-campaign` = cumul (socle + ART-02 + UI-01 + outils). Prochaine action : carte RF02
   (`scripts/mapkit/rf02.py`), puis candidate RF2-MAP-02.
+- 27/09 soir — RF02 produit sur `prod/rf2-campaign` : carte, matières, sons de lieu, scènes, vagues ; traversées A et
+  B PASS ; RF01 rejoué sur le même build (A et B PASS, objectifs identiques). Défauts du code partagé corrigés hors
+  RF01 ; deux défauts probables de RF01 accepté signalés sans correction (panneaux invisibles, registre illisible à
+  la touche d'usage). Prochaine action : retours du propriétaire sur ART-02, UI-01, MAP-02 ; figures RF02 d'Astra ;
+  décision sur l'ordre RF03/Luna Park ; puis RF03.
