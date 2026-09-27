@@ -1,0 +1,74 @@
+[
+  {
+    "event": "menu/cursor",
+    "source": "bookFlip3.ogg",
+    "seconds": 0.075,
+    "peak_dbfs": -27,
+    "rms_dbfs": -50.24873705808639,
+    "audition": false,
+    "origin": "Kenney RPG Audio, CC0"
+  },
+  {
+    "event": "menu/choose + menu/advance",
+    "source": "metalLatch.ogg",
+    "seconds": 0.14,
+    "peak_dbfs": -20,
+    "rms_dbfs": -39.33756667332054,
+    "audition": false,
+    "origin": "Kenney RPG Audio, CC0"
+  },
+  {
+    "event": "menu/change",
+    "source": "metalClick.ogg",
+    "seconds": 0.065,
+    "peak_dbfs": -27,
+    "rms_dbfs": -42.88677582214474,
+    "audition": false,
+    "origin": "Kenney RPG Audio, CC0"
+  },
+  {
+    "event": "menu/backup + menu/activate",
+    "source": "bookPlace2.ogg",
+    "seconds": 0.17,
+    "peak_dbfs": -24,
+    "rms_dbfs": -39.78506987180573,
+    "audition": false,
+    "origin": "Kenney RPG Audio, CC0"
+  },
+  {
+    "event": "menu/clear",
+    "source": "cloth2.ogg",
+    "seconds": 0.2,
+    "peak_dbfs": -26,
+    "rms_dbfs": -42.51603741931828,
+    "audition": false,
+    "origin": "Kenney RPG Audio, CC0"
+  },
+  {
+    "event": "menu/invalid",
+    "source": "beltHandle2.ogg",
+    "seconds": 0.11,
+    "peak_dbfs": -24,
+    "rms_dbfs": -45.268526100058224,
+    "audition": false,
+    "origin": "Kenney RPG Audio, CC0"
+  },
+  {
+    "event": "menu/prompt",
+    "source": "bookOpen.ogg",
+    "seconds": 0.14614583333333334,
+    "peak_dbfs": -23,
+    "rms_dbfs": -43.58089765765017,
+    "audition": false,
+    "origin": "Kenney RPG Audio, CC0"
+  },
+  {
+    "event": "menu/dismiss",
+    "source": "bookFlip2.ogg",
+    "seconds": 0.11,
+    "peak_dbfs": -27,
+    "rms_dbfs": -51.77728416081159,
+    "audition": false,
+    "origin": "Kenney RPG Audio, CC0"
+  }
+]
