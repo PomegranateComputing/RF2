@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""RF01 end-to-end runs in the real engine (gate E), driven by ordinary player input only.
+"""End-to-end runs of a chapter in the real engine (gate E), driven by ordinary player input only.
+RF01 by default; --map RF02 for the next chapter (started directly: the director gives the starting kit).
 
-Run A: new game -> RF01 -> exit.
+Run A: new game -> the map -> exit.
 Run B: new game -> save mid-level -> quit -> relaunch -> load -> die -> resume -> exit.
 
 The autopilot (RFDevHandler, rf_dev_autopilot) walks the RFDevWaypoint route of the map with
@@ -10,8 +11,8 @@ the termination of the engine process once the autosave file exists; the relaunc
 file with -loadgame. Death is obtained by a pacifist first life after the load; the autopilot
 then presses use on the death screen, which reloads the last save like a player would.
 
-Usage: python scripts/e2e_rf01.py [--speed 4] [--save-at 29] [--only A|B] [--pk3 <candidate.pk3>]
-Writes build/dev/e2e/RF01_E2E_<stamp>.json and prints a short verdict.
+Usage: python scripts/e2e_rf01.py [--map RF02] [--speed 4] [--save-at 29] [--only A|B] [--pk3 <candidate.pk3>]
+Writes build/dev/e2e/<MAP>_E2E_<stamp>.json and prints a short verdict.
 """
 import argparse, json, os, re, sys, time
 from pathlib import Path
@@ -23,6 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PK3 = ROOT / 'dist' / 'RF2_DEV.pk3'
 SAVES = devrun.DEV / 'saves'
 FAIL = r'RF_DEV_AUTOPILOT_(STUCK|TIMEOUT|DEAD)\b'
+MAP = 'RF01'
 
 
 def markers(text):
@@ -41,16 +43,16 @@ def markers(text):
     )
 
 
-def exited_rf01(m):
+def exited(m):
     # A real exit names the next map; a teardown for a savegame load has an empty next=.
-    return any(re.search(r'map=RF01 .*next=\S+', l) for l in m['exits'])
+    return any(re.search(rf'map={MAP} .*next=\S+', l) for l in m['exits'])
 
 
 def run_a(speed, seconds):
-    status, text, _ = devrun.run(PK3, 'e2e_A', 'RF01', autopilot=True, seconds=seconds, speed=speed,
-                                 marker=rf're:^(RF_DEV_UNLOADED map=RF01 time=\d+ next=\S+|{FAIL})')
+    status, text, _ = devrun.run(PK3, 'e2e_A', MAP, autopilot=True, seconds=seconds, speed=speed,
+                                 marker=rf're:^(RF_DEV_UNLOADED map={MAP} time=\d+ next=\S+|{FAIL})')
     m = markers(text)
-    ok = exited_rf01(m) and not m['failures'] and not m['script_errors']
+    ok = exited(m) and not m['failures'] and not m['script_errors']
     return dict(run='A', ok=ok, status=status, **m)
 
 
@@ -58,7 +60,7 @@ def run_b(speed, seconds, save_at):
     SAVES.mkdir(parents=True, exist_ok=True)
     before = {p: p.stat().st_mtime for p in SAVES.glob('*.zds')}
     # B1: new game, autosave after waypoint `save_at`, then quit (process terminated after the write).
-    status1, text1, _ = devrun.run(PK3, 'e2e_B1', 'RF01', autopilot=True, seconds=seconds, speed=speed,
+    status1, text1, _ = devrun.run(PK3, 'e2e_B1', MAP, autopilot=True, seconds=seconds, speed=speed,
                                    extra=['+rf_dev_save_at', str(save_at)],
                                    marker=f're:^(RF_DEV_SAVE_REQUESTED|{FAIL})')
     time.sleep(1.0)
@@ -70,10 +72,10 @@ def run_b(speed, seconds, save_at):
     # B2: relaunch, load, pacifist first life -> death -> use -> reload -> autopilot to the exit.
     status2, text2, _ = devrun.run(PK3, 'e2e_B2', None, autopilot=True, seconds=seconds, speed=speed, loadgame=save,
                                    extra=['+rf_dev_start_wp', str(save_at + 1), '+rf_dev_pacifist', '1'],
-                                   marker=rf're:^(RF_DEV_UNLOADED map=RF01 time=\d+ next=\S+|{FAIL})')
+                                   marker=rf're:^(RF_DEV_UNLOADED map={MAP} time=\d+ next=\S+|{FAIL})')
     m2 = markers(text2)
     loaded_from_save = [l for l in m2['loaded'] if 'save=1' in l]
-    ok = (exited_rf01(m2) and len(m2['deaths']) >= 1 and len(m2['resumes']) >= 1 and len(loaded_from_save) >= 2
+    ok = (exited(m2) and len(m2['deaths']) >= 1 and len(m2['resumes']) >= 1 and len(loaded_from_save) >= 2
           and not m2['failures'] and not m1['script_errors'] and not m2['script_errors'])
     return dict(run='B', ok=ok, save=str(save), save_at=save_at,
                 b1=dict(status=status1, **m1), b2=dict(status=status2, loaded_from_save=len(loaded_from_save), **m2))
@@ -86,8 +88,10 @@ def main():
     ap.add_argument('--save-at', type=int, default=29, help='waypoint after which run B saves')
     ap.add_argument('--only', choices=('A', 'B'))
     ap.add_argument('--pk3', help='a frozen candidate build instead of dist/RF2_DEV.pk3')
+    ap.add_argument('--map', default='RF01')
     a = ap.parse_args()
-    global PK3
+    global PK3, MAP
+    MAP = a.map.upper()
     if a.pk3:
         PK3 = Path(a.pk3).resolve()
     results = []
@@ -98,8 +102,8 @@ def main():
     out = devrun.DEV / 'e2e'
     out.mkdir(parents=True, exist_ok=True)
     stamp = time.strftime('%Y%m%d_%H%M%S')
-    report = dict(map='RF01', pk3=str(PK3), speed=a.speed, input='autopilot (ordinary player commands)', results=results)
-    path = out / f'RF01_E2E_{stamp}.json'
+    report = dict(map=MAP, pk3=str(PK3), speed=a.speed, input='autopilot (ordinary player commands)', results=results)
+    path = out / f'{MAP}_E2E_{stamp}.json'
     path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding='utf-8')
     for r in results:
         if r['run'] == 'A':

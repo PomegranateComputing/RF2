@@ -145,16 +145,23 @@ class MapBuilder:
         return out
 
     def face(self, x0, y0, x1, y1, side, **props):
-        """Override sidedef/line props on the `side` edges of cells in the rectangle."""
+        """Override sidedef/line props on the `side` edges of cells in the rectangle: texture, offsets, blocking,
+        special/args/flags (a use line, Line_Mirror) and fields (extra UDMF line fields such as user_scene)."""
         for (cx, cy) in self._cells(*self._range(x0, y0, x1, y1)):
             self.faces[(cx, cy, side)] = props
 
-    def decor_line(self, x0, y0, x1, y1, tex, zbottom=None, blocking=False, offsety=0, **flags):
-        """Two-sided line inside one sector carrying a masked middle texture (signs, rails)."""
+    def decor_line(self, x0, y0, x1, y1, tex, zbottom=None, blocking=False, offsety=0, yscale=None, **flags):
+        """Two-sided line inside one sector carrying a masked middle texture (signs, rails).
+
+        yscale: the texture's YScale. Given, the texture's bottom is put at zbottom as the engine reads it: with
+        the middle texture pegged to the floor, a positive row offset raises it, in texture pixels (height in map
+        units x YScale). Not given (RF01, byte-identical since its acceptance): the legacy offset, negative and
+        unscaled, which the engine draws below the intended height."""
         dx, dy = x1 - x0, y1 - y0
         L = math.hypot(dx, dy) or 1.0
         ix, iy = 2 * dx / L, 2 * dy / L
-        self.decor.append(dict(x0=x0 + ix, y0=y0 + iy, x1=x1 - ix, y1=y1 - iy, tex=tex, zbottom=zbottom, blocking=blocking, offsety=offsety, flags=flags))
+        self.decor.append(dict(x0=x0 + ix, y0=y0 + iy, x1=x1 - ix, y1=y1 - iy, tex=tex, zbottom=zbottom, blocking=blocking,
+                               offsety=offsety, yscale=yscale, flags=flags))
 
     def trigger(self, x0, y0, x1, y1, special, args=(), repeat=False, monster=False, objective=0, fields=None):
         """Invisible walk-over line inside one sector. objective > 0 is written as the UDMF field
@@ -269,6 +276,8 @@ class MapBuilder:
                         ls[f'arg{i}'] = a
                     for k, v in face.get('flags', {}).items():
                         ls[k] = v
+                for k, v in face.get('fields', {}).items():
+                    ls[k] = v
             return fs, None, ls
         B = self.cells[pb]
         bs = {'sector': sb}
@@ -301,6 +310,18 @@ class MapBuilder:
         if faceb and 'texture' in faceb:
             bs['texturemiddle'] = faceb['texture']
             ls['clipmidtex'] = True
+        # a use special and scene fields on a two-sided edge (a raised block's side, a window), from either side
+        for f in (face, faceb):
+            if not f:
+                continue
+            if 'special' in f:
+                ls['special'] = f['special']
+                for i, a in enumerate(f.get('args', ())):
+                    ls[f'arg{i}'] = a
+                for k, v in f.get('flags', {}).items():
+                    ls[k] = v
+            for k, v in f.get('fields', {}).items():
+                ls[k] = v
         # door activation
         if A.role == 'door' and B.role != 'door':
             special, args, flags = self._door_special(A, da)
@@ -463,7 +484,10 @@ class MapBuilder:
                 d['clipmidtex'] = True
                 if dl.get('zbottom') is not None:
                     d['dontpegbottom'] = True
-                    off = -(dl['zbottom'] - c.floor)
+                    if dl.get('yscale') is None:
+                        off = -(dl['zbottom'] - c.floor)
+                    else:
+                        off = (dl['zbottom'] - c.floor) * dl['yscale']
                     fs['offsety'] = off
                     bs['offsety'] = off
                 if dl.get('offsety'):
@@ -601,8 +625,9 @@ class MapBuilder:
             return True
         return any((p[0] + dx, p[1] + dy) in dist for dx, dy in DIRS.values())
 
-    def check(self, key_items, exit_cells, winch_cell=None, winch_tag=None):
-        """Iterate reachability, collecting keys from reachable item things. Returns a report."""
+    def check(self, key_items, exit_cells, winch_cell=None, winch_tag=None, decor_types=()):
+        """Iterate reachability, collecting keys from reachable item things. Returns a report. decor_types:
+        thing types that are only dressing (a mattress on a handcart) and need not be reachable."""
         keys = set()
         open_tags = set()
         for _ in range(6):
@@ -619,7 +644,7 @@ class MapBuilder:
             if not gained:
                 break
         unreachable = [(t['type'], t['x'], t['y']) for t in self.things
-                       if not self._touchable(t, dist) and t['type'] not in (30901, 30902, 30601, 30602, 30611, 30315)]
+                       if not self._touchable(t, dist) and t['type'] not in (30901, 30902, 30601, 30602, 30611, 30315) + tuple(decor_types)]
         exit_ok = any(c in dist for c in exit_cells)
         exit_dist = min((dist[c] for c in exit_cells if c in dist), default=None)
         return dict(reachable_cells=len(dist), keys=sorted(keys), exit_reachable=exit_ok,

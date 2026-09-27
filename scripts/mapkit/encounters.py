@@ -42,6 +42,8 @@ def sees(m, a, b, limit=1000.0, open_tags=()):
     if dist > limit:
         return False
     steps = max(1, int(dist / 4))
+    ca = m.cells.get((math.floor(x0 / UNIT), math.floor(y0 / UNIT)))
+    base = ca.floor if ca is not None else 0
     for k in range(1, steps):
         x = x0 + dx * k / steps
         y = y0 + dy * k / steps
@@ -49,6 +51,8 @@ def sees(m, a, b, limit=1000.0, open_tags=()):
         if c is None or (c.role == 'door' and c.tag not in open_tags):
             return False
         if any(z0 <= c.floor + 44 < z1 for (z0, z1, *_) in c.slabs):   # a solid 3D floor at eye height
+            return False
+        if c.floor >= base + 60:   # a vehicle or a block taller than a standing figure seen at eye height
             return False
     return True
 
@@ -178,11 +182,32 @@ def decal_problems(m):
     return out
 
 
-def analyze(m):
-    """All problems of a built MapBuilder as printable lines (empty list = clean)."""
+def spawn_in_view(m, pts, samples, opened):
+    """Wave spots (RFWaveSpot) spawn their enemy when cued: it must not appear in front of the player. A spot
+    seen from the route between the cue and the next waypoint pops into view."""
+    out = []
+    for t in m.things:
+        if t['type'] != SPOT or not t.get('id'):
+            continue
+        cue = cue_segment(m, pts, t['id'])
+        if cue is None:
+            continue
+        seen = next(((i, x, y) for (i, x, y) in samples if i == cue and
+                     sees(m, (x, y), (t['x'], t['y']), open_tags={tag for tag, j in opened.items() if j <= i})), None)
+        if seen:
+            out.append(f"SPAWN IN VIEW  spot tid={t['id']:3} kind={t.get('arg0', 1)} at ({t['x']:.0f},{t['y']:.0f}) "
+                       f"seen from ({seen[1]:.0f},{seen[2]:.0f}) when it spawns (segment {cue + 1})")
+    return out
+
+
+def analyze(m, spawn_view=False):
+    """All problems of a built MapBuilder as printable lines (empty list = clean). spawn_view adds the
+    wave-spot visibility check (maps authored with street waves; RF01 predates it)."""
     pts, samples = route_points(m)
     opened = doors_opened(m, samples)
     problems = []
+    if spawn_view:
+        problems += spawn_in_view(m, pts, samples, opened)
     for t in m.things:
         if t['type'] not in ENEMIES or not t.get('dormant') or not t.get('id'):
             continue
