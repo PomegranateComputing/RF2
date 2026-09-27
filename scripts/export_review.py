@@ -46,6 +46,14 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--label', default='')
     a = ap.parse_args()
+    # 27/09/2026: the build this script last exported is the one the owner accepted, and
+    # JOUER_RF2_ART_REVIEW.cmd follows LATEST.txt. Re-running it would re-point the accepted
+    # launcher at a new build: candidates go through scripts/export_candidate.py instead.
+    latest = REVIEW / 'LATEST.txt'
+    if latest.exists():
+        print('Refus : dist\\review\\LATEST.txt designe le build RF01 accepte (reference figee).\n'
+              'Nouvelles candidates : python scripts/export_candidate.py --lot <ID> (lanceur distinct).')
+        return 1
     REVIEW.mkdir(parents=True, exist_ok=True)
     subprocess.run(['pwsh', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', str(ROOT / 'scripts' / 'build.ps1')], check=True)
     stamp = time.strftime('%Y%m%d_%H%M')
