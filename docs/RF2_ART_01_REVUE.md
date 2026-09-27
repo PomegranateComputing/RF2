@@ -13,7 +13,10 @@ personne.
   (`user\uzdoom_art_review.ini`, copie de ta configuration au premier lancement ; `user\savegames_art_review`) : ta
   configuration n'est pas modifiée.
 - Preuves : `dist\review\RF2_ART_REVIEW_20260926_1451\evidence\` (`index.html`). Livraison Codex et ses propres
-  preuves : `C:\PROJECTS\RF2_ART_HANDOFF_20260925\CODEX_LIVRAISON\` (`evidence\index.html`, `RAPPORT.md`).
+  preuves : `C:\PROJECTS\RF2_ART_HANDOFF_20260925\CODEX_LIVRAISON\` — **dossier externe disparu (constat du
+  27/09/2026) / preuve originale indisponible.** Ce qui en survit est versionné : rapport d'import
+  ([import_codex_report_20260926_1349.json](production/recovery/import_codex_report_20260926_1349.json)), sources et
+  crédits (`art/rf2_art_01/`) ; voir [RECUPERATION_RF2_ART_01.md](production/recovery/RECUPERATION_RF2_ART_01.md).
 
 ## Ce qui a changé
 
@@ -67,5 +70,9 @@ armes / voix / ambiance), le confort des voix et des tirs, le sang.
 
 - La base est intacte : branche `main` (`6e1a31b`) ; `dist\review\RF2_BASELINE_6e1a31b.pk3` pour comparer (même
   commande que le lanceur, avec ce fichier).
-- Retour ciblé : `git checkout 6e1a31b -- <chemins>` (liste dans `CODEX_LIVRAISON\MANIFEST.json`) ou `git revert` des
-  commits `43ce8e1` (import Codex), `54f33b9` et `e1d007c` (pose des corps), `405df6a` (mix).
+- Retour ciblé : `git revert` des commits `43ce8e1` (import Codex), `54f33b9` et `e1d007c` (pose des corps), `405df6a`
+  (mix), ou retour d'une famille de chemins. La liste de `CODEX_LIVRAISON\MANIFEST.json` n'est plus disponible
+  (**dossier externe disparu / preuve originale indisponible**) ; elle est remplacée par une reconstruction datée de
+  l'import observé dans Git :
+  [RF2_ART_01_IMPORT_43ce8e1_RECONSTRUCTION.json](production/recovery/RF2_ART_01_IMPORT_43ce8e1_RECONSTRUCTION.json),
+  procédure dans [RECUPERATION_RF2_ART_01.md](production/recovery/RECUPERATION_RF2_ART_01.md).
