@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / 'src'
-ENGINE_KEYS = {'MUSIC_READ_M', 'MUSIC_RUNNIN', 'MNU_EPISODE'}
+ENGINE_KEYS = {'MUSIC_READ_M', 'MUSIC_RUNNIN', 'MNU_EPISODE', 'LOADNET', 'DOSY', 'PRESSYN'}
 
 
 def read(p):
@@ -38,7 +38,11 @@ def check_language():
             if 'type = 30621;' in block:
                 arg = re.search(r'arg0 = (\d+);', block)
                 used.add(f'RF_NOTE_{arg.group(1) if arg else 0}')
-    return [f'LANGUAGE: missing {k}' for k in sorted(used - defined - ENGINE_KEYS)]
+    # A key ending in '_' is the prefix of keys built with a number ("$RF_SKILL_HINT_%d"): at least one must exist.
+    prefixes = {k for k in used if k.endswith('_')}
+    missing = [k for k in sorted(used - defined - ENGINE_KEYS - prefixes)]
+    missing += [k + '*' for k in sorted(prefixes) if not any(d.startswith(k) for d in defined)]
+    return [f'LANGUAGE: missing {k}' for k in missing]
 
 
 def check_sprites():
