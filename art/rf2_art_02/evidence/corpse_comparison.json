@@ -1,0 +1,7 @@
+{
+  "placements": 21,
+  "telemetry_exactly_equal": true,
+  "classes": 3,
+  "spots_per_class": 7,
+  "note": "Exact comparison of actor position, floor, size, frame, velocity, angle, pitch, roll; screenshots require visual review."
+}

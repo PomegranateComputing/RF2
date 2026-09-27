@@ -1,0 +1,198 @@
+// Legacy S1 furniture: original OBJ meshes with one matte albedo atlas.
+// OBJ export is Y-up; 0.32 world units per source centimetre, pixel stretch corrected.
+
+Model RFPropDesk
+{
+    Path "models/props"
+    Model 0 "desk.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropCabinet
+{
+    Path "models/props"
+    Model 0 "cabinet.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropChair
+{
+    Path "models/props"
+    Model 0 "chair.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropRadiator
+{
+    Path "models/props"
+    Model 0 "radiator.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropTrolley
+{
+    Path "models/props"
+    Model 0 "trolley.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropBench
+{
+    Path "models/props"
+    Model 0 "bench.obj"
+    Skin 0 "atlas.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFPropLamp
+{
+    Path "models/props"
+    Model 0 "service_ceiling_lamp.obj"
+    Skin 0 "atlas.png"
+    Scale 1.0 1.0 1.2
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+
+// RF2-ART-01: only terminal death frames use a grounded static model.
+Model RFOrderly
+{
+    Path "models/rf2_art_01"
+    Model 0 "orderly.obj"
+    Skin 0 "orderly_skin.png"
+    Scale 5 5 6
+    CorrectPixelStretch
+    IgnoreTranslation
+    USEACTORPITCH
+    USEACTORROLL
+    FrameIndex ORDY M 0 0
+}
+Model RFOrderlyCorpse
+{
+    Path "models/rf2_art_01"
+    Model 0 "orderly.obj"
+    Skin 0 "orderly_skin.png"
+    Scale 5 5 6
+    CorrectPixelStretch
+    IgnoreTranslation
+    USEACTORPITCH
+    USEACTORROLL
+    FrameIndex ORDY M 0 0
+}
+
+Model RFBrancardier
+{
+    Path "models/rf2_art_01"
+    Model 0 "brancardier.obj"
+    Skin 0 "brancardier_skin.png"
+    Scale 5 5 6
+    CorrectPixelStretch
+    IgnoreTranslation
+    USEACTORPITCH
+    USEACTORROLL
+    FrameIndex BRCD M 0 0
+}
+Model RFPorteRegistre
+{
+    Path "models/rf2_art_01"
+    Model 0 "porte_registre.obj"
+    Skin 0 "porte_registre_skin.png"
+    Scale 5 5 6
+    CorrectPixelStretch
+    IgnoreTranslation
+    USEACTORPITCH
+    USEACTORROLL
+    FrameIndex PREG K 0 0
+}
+
+// Weapon pickups lying on the floor (scripts/mapkit/weapon_models.py); first person is unchanged.
+Model RFFAL
+{
+    Path "models/weapons"
+    Model 0 "fal_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex MGUN A 0 0
+}
+Model RFBrowning
+{
+    Path "models/weapons"
+    Model 0 "browning_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex PIST A 0 0
+}
+
+// Item pickups (same generator): the sprites remain as HUD icons.
+Model RFRifleAmmo
+{
+    Path "models/weapons"
+    Model 0 "mag_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFRM A 0 0
+}
+Model RFPistolAmmo
+{
+    Path "models/weapons"
+    Model 0 "box9_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RF9M A 0 0
+}
+Model RFFieldDressing
+{
+    Path "models/weapons"
+    Model 0 "dressing_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFMD A 0 0
+}
+Model RFGrilleKey
+{
+    Path "models/weapons"
+    Model 0 "key_grille_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFKY A 0 0
+}
+Model RFPasseKey
+{
+    Path "models/weapons"
+    Model 0 "key_passe_world.obj"
+    Skin 0 "weapons_palette.png"
+    Scale 0.32 0.32 0.384
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFKY B 0 0
+}

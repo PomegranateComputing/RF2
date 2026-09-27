@@ -1,0 +1,145 @@
+{
+  "base_commit": "5b53d9eaaaf088f49ae98f667fc1d575779dc74e",
+  "origin": "Observed in local base and matched to Opus contract received during this session",
+  "families": [
+    {
+      "name": "orderly",
+      "actor": "RFOrderly",
+      "prefix": "ORDY",
+      "frames": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M"
+      ],
+      "rotation_yaw": {
+        "1": 180.0,
+        "2": 135.0,
+        "3": 90.0,
+        "4": 45.0,
+        "5": 0.0,
+        "6": -45.0,
+        "7": -90.0,
+        "8": -135.0
+      },
+      "scale": 0.18,
+      "consumers": [
+        {
+          "map": "RF01",
+          "direct_placements": 16
+        }
+      ]
+    },
+    {
+      "name": "brancardier",
+      "actor": "RFBrancardier",
+      "prefix": "BRCD",
+      "frames": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "N",
+        "O",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M"
+      ],
+      "rotation_yaw": {
+        "1": 180.0,
+        "2": 135.0,
+        "3": 90.0,
+        "4": 45.0,
+        "5": 0.0,
+        "6": -45.0,
+        "7": -90.0,
+        "8": -135.0
+      },
+      "scale": 0.18,
+      "consumers": [
+        {
+          "map": "RF01",
+          "direct_placements": 2
+        }
+      ]
+    },
+    {
+      "name": "porte_registre",
+      "actor": "RFPorteRegistre",
+      "prefix": "PREG",
+      "frames": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "N",
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "rotation_yaw": {
+        "1": 180.0,
+        "2": 135.0,
+        "3": 90.0,
+        "4": 45.0,
+        "5": 0.0,
+        "6": -45.0,
+        "7": -90.0,
+        "8": -135.0
+      },
+      "scale": 0.18,
+      "consumers": [
+        {
+          "map": "RF01",
+          "direct_placements": 2
+        }
+      ]
+    }
+  ],
+  "map_consumers": {
+    "RFOrderly": [
+      {
+        "map": "RF01",
+        "direct_placements": 16
+      }
+    ],
+    "RFBrancardier": [
+      {
+        "map": "RF01",
+        "direct_placements": 2
+      }
+    ],
+    "RFPorteRegistre": [
+      {
+        "map": "RF01",
+        "direct_placements": 2
+      }
+    ],
+    "RFOrderlyCorpse": [
+      {
+        "map": "RF01",
+        "direct_placements": 2
+      }
+    ]
+  },
+  "wave_consumers": "RFWaveSpot args 1/2/3 can spawn the same classes; RF02 reuse intended by Opus"
+}

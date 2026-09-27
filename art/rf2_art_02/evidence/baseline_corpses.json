@@ -1,0 +1,30 @@
+{
+  "name": "baseline_corpses",
+  "package": "C:\\PROJECTS\\RF2_UZDOOM_ASTRA_20260927\\incoming\\astra\\RF2_ART_02\\review\\REFERENCE_5b53d9e.pk3",
+  "package_sha256": "04bdd0ae918761370c7620318f6e2add8bd1e1ac0acf88d55741c8be1883544f",
+  "status": "marker:RF_DEV_CORPSE_DONE",
+  "screenshots": 210,
+  "width": 1920,
+  "height": 1080,
+  "config_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "extra": [
+    "+rf_dev_autopilot",
+    "0",
+    "+rf_dev_art_combat",
+    "0",
+    "+rf_dev_weapons",
+    "0",
+    "+rf_dev_corpse",
+    "0",
+    "+screenshot_quiet",
+    "1",
+    "+r_drawplayersprites",
+    "0",
+    "+screenblocks",
+    "12",
+    "+rf_dev_corpse",
+    "1"
+  ],
+  "hidden_desktop": true,
+  "audio_audition": false
+}
