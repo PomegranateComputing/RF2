@@ -1,0 +1,6927 @@
+{
+ "lot": "RF2-ART-02",
+ "base_commit": "5b53d9eaaaf088f49ae98f667fc1d575779dc74e",
+ "generated_by": "scripts/production/handoff_manifest.py",
+ "families": [
+  "ORDY",
+  "BRCD",
+  "PREG",
+  "PRGS"
+ ],
+ "sprite_count": 322,
+ "sprites": [
+  {
+   "path": "src/sprites/enemies/ORDYA1.png",
+   "sha256": "4a09165b12bcb683fe8f3c68ff2b3f07810d1f3eb66d4cf9601b8e708b9f5436",
+   "family": "ORDY",
+   "frame": "A",
+   "rotation": "1",
+   "width": 192,
+   "height": 301,
+   "grAb": [
+    96,
+    299
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYA2.png",
+   "sha256": "c8f4e656e4753bf82d028b04aa502eb482ff55feca6cf53b7a190e0f63360c33",
+   "family": "ORDY",
+   "frame": "A",
+   "rotation": "2",
+   "width": 168,
+   "height": 300,
+   "grAb": [
+    115,
+    298
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYA3.png",
+   "sha256": "18b5666b02e8f2cc59c26a9e0b1f5dd18ba5b84f7935fc4ef532b10db6aa217e",
+   "family": "ORDY",
+   "frame": "A",
+   "rotation": "3",
+   "width": 142,
+   "height": 301,
+   "grAb": [
+    87,
+    299
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYA4.png",
+   "sha256": "7889ff4587629dd9b71f4ea5b7520cafcef6b038efe5ed6884ef7ee5d8b5846d",
+   "family": "ORDY",
+   "frame": "A",
+   "rotation": "4",
+   "width": 183,
+   "height": 302,
+   "grAb": [
+    120,
+    300
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYA5.png",
+   "sha256": "4abf1312e424ed967af8c5afd55006abb08eb4fa538c72ba174868ebbc5c656c",
+   "family": "ORDY",
+   "frame": "A",
+   "rotation": "5",
+   "width": 192,
+   "height": 300,
+   "grAb": [
+    96,
+    298
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYA6.png",
+   "sha256": "4bed0d4ecb4b3d6a47410804cbebd0037383f46cc6cd2d6de153df8c67960b64",
+   "family": "ORDY",
+   "frame": "A",
+   "rotation": "6",
+   "width": 168,
+   "height": 301,
+   "grAb": [
+    53,
+    299
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYA7.png",
+   "sha256": "bc9752d1e89dc56f69b8de215a1d7d332934a719247e0b6187e5a1373acf3365",
+   "family": "ORDY",
+   "frame": "A",
+   "rotation": "7",
+   "width": 141,
+   "height": 302,
+   "grAb": [
+    54,
+    300
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYA8.png",
+   "sha256": "371fdefda4a7f20a3beee71e663dcb103d40f1d27aa111b8b1d488898a52c38b",
+   "family": "ORDY",
+   "frame": "A",
+   "rotation": "8",
+   "width": 183,
+   "height": 301,
+   "grAb": [
+    63,
+    299
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYB1.png",
+   "sha256": "22a02c27794ebf5707e4b4b693211f76d5e5ef5ddec04f54b7f1158d62b46838",
+   "family": "ORDY",
+   "frame": "B",
+   "rotation": "1",
+   "width": 168,
+   "height": 299,
+   "grAb": [
+    84,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYB2.png",
+   "sha256": "e0060bfa76b64855197e2ce86d253f2ef7ee3d8a90168280c80a43b9ea08c211",
+   "family": "ORDY",
+   "frame": "B",
+   "rotation": "2",
+   "width": 152,
+   "height": 298,
+   "grAb": [
+    93,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYB3.png",
+   "sha256": "c23a05651982a89cc78732aa0bdf9d77a62cbc75573bfe2e27a6a544739ebbab",
+   "family": "ORDY",
+   "frame": "B",
+   "rotation": "3",
+   "width": 168,
+   "height": 297,
+   "grAb": [
+    76,
+    294
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYB4.png",
+   "sha256": "4ccb96d611e71dfecd7214934c1f5ab4bbd5a999ffc9d7bd1db0cc56161a5f8c",
+   "family": "ORDY",
+   "frame": "B",
+   "rotation": "4",
+   "width": 177,
+   "height": 299,
+   "grAb": [
+    93,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYB5.png",
+   "sha256": "109a1cbb6ecd374ae2bb61989c407a1db96a54daf1dcfcec165a9b6383e211d6",
+   "family": "ORDY",
+   "frame": "B",
+   "rotation": "5",
+   "width": 168,
+   "height": 298,
+   "grAb": [
+    84,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYB6.png",
+   "sha256": "42223b0801b054dad42eff15ebd4c48bed79cdb77c178ca15e6382b9af7151a2",
+   "family": "ORDY",
+   "frame": "B",
+   "rotation": "6",
+   "width": 152,
+   "height": 299,
+   "grAb": [
+    58,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYB7.png",
+   "sha256": "c2a6f1ce400bb1604538649e13884d6952a0f7c4c0678a9febef782e0e6fc636",
+   "family": "ORDY",
+   "frame": "B",
+   "rotation": "7",
+   "width": 168,
+   "height": 297,
+   "grAb": [
+    91,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYB8.png",
+   "sha256": "d991861679bfde97fed9fb80b98cee4a3a18bb1dc61d8365277f4fcd739219dc",
+   "family": "ORDY",
+   "frame": "B",
+   "rotation": "8",
+   "width": 177,
+   "height": 298,
+   "grAb": [
+    84,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYC1.png",
+   "sha256": "232709b7226e4ce90b0be9542910dc53aef69807606c305e9ee9f5d76fc157ca",
+   "family": "ORDY",
+   "frame": "C",
+   "rotation": "1",
+   "width": 156,
+   "height": 294,
+   "grAb": [
+    73,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYC2.png",
+   "sha256": "809c4cc2010bc5b4f71098419d9a970f22d12681e2ae45627f0db7b44cecdfba",
+   "family": "ORDY",
+   "frame": "C",
+   "rotation": "2",
+   "width": 231,
+   "height": 295,
+   "grAb": [
+    142,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYC3.png",
+   "sha256": "6b6627d1e9616266d64dbf5b3269c03e5e97761c25312140bfabce69fb690e5b",
+   "family": "ORDY",
+   "frame": "C",
+   "rotation": "3",
+   "width": 241,
+   "height": 294,
+   "grAb": [
+    142,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYC4.png",
+   "sha256": "d5202dc0489db6c4415cc16d00c3b226fbfaeec3f7f76789917e5de891a75bb5",
+   "family": "ORDY",
+   "frame": "C",
+   "rotation": "4",
+   "width": 162,
+   "height": 293,
+   "grAb": [
+    74,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYC5.png",
+   "sha256": "6787b03b8fb76a4996b15fd0920a8faf37526f35906dbba1ae497fd1522cf611",
+   "family": "ORDY",
+   "frame": "C",
+   "rotation": "5",
+   "width": 156,
+   "height": 294,
+   "grAb": [
+    82,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYC6.png",
+   "sha256": "cbf0e5d528ff890c0d2672adc79d1b3dbffdc35bb0efbfb299d53c2ae41c9057",
+   "family": "ORDY",
+   "frame": "C",
+   "rotation": "6",
+   "width": 231,
+   "height": 295,
+   "grAb": [
+    88,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYC7.png",
+   "sha256": "fbb6e2ce7f18ba25043af8a58b5ffb32024209770482170358093d28a73ddda2",
+   "family": "ORDY",
+   "frame": "C",
+   "rotation": "7",
+   "width": 241,
+   "height": 293,
+   "grAb": [
+    98,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYC8.png",
+   "sha256": "707f1dbb82b9000bf4bf6fb8b89041de3eef7d2eda70074fa8e45832fca3aed0",
+   "family": "ORDY",
+   "frame": "C",
+   "rotation": "8",
+   "width": 162,
+   "height": 295,
+   "grAb": [
+    88,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYD1.png",
+   "sha256": "d4f9e13832c74892cf0ba555aa9c8976719b76ac206a9f09970d2878de5f6d46",
+   "family": "ORDY",
+   "frame": "D",
+   "rotation": "1",
+   "width": 168,
+   "height": 297,
+   "grAb": [
+    84,
+    294
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYD2.png",
+   "sha256": "6d2ddbe90cb4a2fbb9614c6da68e52c080e1a8d371f4044e79b3ce499b1ef0e2",
+   "family": "ORDY",
+   "frame": "D",
+   "rotation": "2",
+   "width": 177,
+   "height": 299,
+   "grAb": [
+    93,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYD3.png",
+   "sha256": "d9f6d1e3764760744d278407aeeb523a69ed8bfad0a262a552ba35ad471200ce",
+   "family": "ORDY",
+   "frame": "D",
+   "rotation": "3",
+   "width": 168,
+   "height": 299,
+   "grAb": [
+    76,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYD4.png",
+   "sha256": "df44080d3afadd3ffbfcb4ca30d57231cdf62482ef17c48ee251017093f5400c",
+   "family": "ORDY",
+   "frame": "D",
+   "rotation": "4",
+   "width": 152,
+   "height": 299,
+   "grAb": [
+    93,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYD5.png",
+   "sha256": "4ccfc4e2ca9ec4698f78d82a5148648d6d1e9e180b5a58cac58d1664fa9ea181",
+   "family": "ORDY",
+   "frame": "D",
+   "rotation": "5",
+   "width": 168,
+   "height": 298,
+   "grAb": [
+    84,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYD6.png",
+   "sha256": "6b156e5e987d4d9c997145d129beedb78fd5acbbae0373e8881b2e90a9642191",
+   "family": "ORDY",
+   "frame": "D",
+   "rotation": "6",
+   "width": 177,
+   "height": 299,
+   "grAb": [
+    84,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYD7.png",
+   "sha256": "9f9153a78166cfa099bde0a6eb0bf55b0d1e9d5bbb6700bad00096cd64a50f35",
+   "family": "ORDY",
+   "frame": "D",
+   "rotation": "7",
+   "width": 168,
+   "height": 299,
+   "grAb": [
+    91,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYD8.png",
+   "sha256": "2618fde2c58bdcf8333a56fb59dd7902b02c63fa854de16803b6d7b7cf0e61f1",
+   "family": "ORDY",
+   "frame": "D",
+   "rotation": "8",
+   "width": 152,
+   "height": 298,
+   "grAb": [
+    58,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYE1.png",
+   "sha256": "cd3c7b7bb7f68261822963842cc9d6118c0676fb8cae3b82883fa43312782355",
+   "family": "ORDY",
+   "frame": "E",
+   "rotation": "1",
+   "width": 156,
+   "height": 293,
+   "grAb": [
+    82,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYE2.png",
+   "sha256": "cd4d032fa7c7ed626adac9a4ea1f3b5202ab2db42045e64188cec5b31676aa16",
+   "family": "ORDY",
+   "frame": "E",
+   "rotation": "2",
+   "width": 162,
+   "height": 293,
+   "grAb": [
+    74,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYE3.png",
+   "sha256": "5acc974d33a6dbcb477d1eb9400d198acb80ea2b05b03807cf094eb20f92835d",
+   "family": "ORDY",
+   "frame": "E",
+   "rotation": "3",
+   "width": 241,
+   "height": 293,
+   "grAb": [
+    142,
+    290
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYE4.png",
+   "sha256": "71b4748683cd8ffe592fe1c880317486546b9cece73a7768b04222d899b5651d",
+   "family": "ORDY",
+   "frame": "E",
+   "rotation": "4",
+   "width": 231,
+   "height": 293,
+   "grAb": [
+    142,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYE5.png",
+   "sha256": "da65d335339a05827cf32706895fbea7e7692a1263f8248536e2a35e149a8bd7",
+   "family": "ORDY",
+   "frame": "E",
+   "rotation": "5",
+   "width": 156,
+   "height": 293,
+   "grAb": [
+    73,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYE6.png",
+   "sha256": "2c898189fa1533afee3fef535e7d1383aca1c6bb472896c7b304ca9bbe95e92b",
+   "family": "ORDY",
+   "frame": "E",
+   "rotation": "6",
+   "width": 162,
+   "height": 294,
+   "grAb": [
+    88,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYE7.png",
+   "sha256": "d520467e069e1b30ec8b33a546a2ac9e9659fab304bf25b300606ab953f0365d",
+   "family": "ORDY",
+   "frame": "E",
+   "rotation": "7",
+   "width": 241,
+   "height": 295,
+   "grAb": [
+    98,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYE8.png",
+   "sha256": "6f4cc0e9ac7b20efc67e25e5294c81a372d3ce1d5bbf13a82e33aed26961f19c",
+   "family": "ORDY",
+   "frame": "E",
+   "rotation": "8",
+   "width": 231,
+   "height": 294,
+   "grAb": [
+    88,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "See",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYF1.png",
+   "sha256": "ea7f7742a11fc53c3ba9e12994c21d1fd32f767a22f27dfd2322b2383c685a95",
+   "family": "ORDY",
+   "frame": "F",
+   "rotation": "1",
+   "width": 140,
+   "height": 294,
+   "grAb": [
+    84,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYF2.png",
+   "sha256": "84f5130497e36219be81fe6f3d7f77d56cca01df73df0a5ccf0d148411f92d04",
+   "family": "ORDY",
+   "frame": "F",
+   "rotation": "2",
+   "width": 163,
+   "height": 295,
+   "grAb": [
+    103,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYF3.png",
+   "sha256": "891270b13a13535228ef4f93a604e2ab46284e1b98ab534be40ab54b409aeea5",
+   "family": "ORDY",
+   "frame": "F",
+   "rotation": "3",
+   "width": 241,
+   "height": 294,
+   "grAb": [
+    144,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYF4.png",
+   "sha256": "99b28cc67b9b93432454fa268ef01b844abac43f64868cb8b9e2add7cb6afdb1",
+   "family": "ORDY",
+   "frame": "F",
+   "rotation": "4",
+   "width": 207,
+   "height": 295,
+   "grAb": [
+    111,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYF5.png",
+   "sha256": "fe11817df01f8225c5f2cc0e3545d5ad647c59969398a19ada92835a657db075",
+   "family": "ORDY",
+   "frame": "F",
+   "rotation": "5",
+   "width": 140,
+   "height": 295,
+   "grAb": [
+    55,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYF6.png",
+   "sha256": "36abc6a260f0a9f8c1624e828a19944a299871ff246c96b26b67aab6c7407272",
+   "family": "ORDY",
+   "frame": "F",
+   "rotation": "6",
+   "width": 163,
+   "height": 295,
+   "grAb": [
+    59,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYF7.png",
+   "sha256": "9f87fb0a7314d8c64582d2b64e4228d85294429be08b269148d7814cc7e210ce",
+   "family": "ORDY",
+   "frame": "F",
+   "rotation": "7",
+   "width": 241,
+   "height": 294,
+   "grAb": [
+    97,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYF8.png",
+   "sha256": "ed08178a17a9edb2742310153c4165cafc68a5b32f9a2d09d57e16376b63d666",
+   "family": "ORDY",
+   "frame": "F",
+   "rotation": "8",
+   "width": 207,
+   "height": 294,
+   "grAb": [
+    95,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYG1.png",
+   "sha256": "00644f6ffdc71b58679dd85ed7ca5520642c2519243a353c8ba33c80e4ffc5ca",
+   "family": "ORDY",
+   "frame": "G",
+   "rotation": "1",
+   "width": 198,
+   "height": 278,
+   "grAb": [
+    85,
+    276
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYG2.png",
+   "sha256": "ef2ecd736759bac491789e3d875ff31fdcc04e197df326b029076212ad217e57",
+   "family": "ORDY",
+   "frame": "G",
+   "rotation": "2",
+   "width": 181,
+   "height": 279,
+   "grAb": [
+    75,
+    277
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYG3.png",
+   "sha256": "668b38858c013072c35a0bbd0527640b230866619ca832f34ea37ae5b2a5ea1e",
+   "family": "ORDY",
+   "frame": "G",
+   "rotation": "3",
+   "width": 279,
+   "height": 278,
+   "grAb": [
+    162,
+    275
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYG4.png",
+   "sha256": "84f33aa90ac1ce3619a51f0f1393cb88326f6a3e3bed05b8c9108fae44b65e75",
+   "family": "ORDY",
+   "frame": "G",
+   "rotation": "4",
+   "width": 307,
+   "height": 280,
+   "grAb": [
+    170,
+    278
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYG5.png",
+   "sha256": "f72fc75c6b1ddc35927c778f92124c90b77883cf7653c1414aafd058941e3670",
+   "family": "ORDY",
+   "frame": "G",
+   "rotation": "5",
+   "width": 198,
+   "height": 279,
+   "grAb": [
+    112,
+    277
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYG6.png",
+   "sha256": "7560b6354c9eab9eba2f8750283034baa726db9f5135aec474bf4dd37482bdbb",
+   "family": "ORDY",
+   "frame": "G",
+   "rotation": "6",
+   "width": 181,
+   "height": 279,
+   "grAb": [
+    105,
+    277
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYG7.png",
+   "sha256": "56491d884fca9ddf6b4522790104a2804e253112b9ff38776005dd9a8a9798d3",
+   "family": "ORDY",
+   "frame": "G",
+   "rotation": "7",
+   "width": 279,
+   "height": 279,
+   "grAb": [
+    117,
+    277
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYG8.png",
+   "sha256": "425cbed64bc9900770d902e114c1417d12a172161ea81ecb9535fa1aa72e66e8",
+   "family": "ORDY",
+   "frame": "G",
+   "rotation": "8",
+   "width": 307,
+   "height": 279,
+   "grAb": [
+    137,
+    277
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYH1.png",
+   "sha256": "771996a1a53fc83ad2cf71d62cc178d4c297e646d2710e8ae553c63f1735f08d",
+   "family": "ORDY",
+   "frame": "H",
+   "rotation": "1",
+   "width": 183,
+   "height": 297,
+   "grAb": [
+    61,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 14
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYH2.png",
+   "sha256": "5e3822e8ad25b5a14632b6566f20bdf8d6b82407846e19a374d7dbecb928a30d",
+   "family": "ORDY",
+   "frame": "H",
+   "rotation": "2",
+   "width": 212,
+   "height": 296,
+   "grAb": [
+    136,
+    294
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 14
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYH3.png",
+   "sha256": "b5240b3e5e27391ed317961ecc1c29706ba2179bae825c401ba08eed201fe523",
+   "family": "ORDY",
+   "frame": "H",
+   "rotation": "3",
+   "width": 243,
+   "height": 297,
+   "grAb": [
+    156,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 14
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYH4.png",
+   "sha256": "d1b9a6175f74aeaafe7c8702e47e598b08cfe54a7e05fd18b9d90425c3aa7224",
+   "family": "ORDY",
+   "frame": "H",
+   "rotation": "4",
+   "width": 211,
+   "height": 298,
+   "grAb": [
+    116,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 14
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYH5.png",
+   "sha256": "6ada6652f4f29c22a45dd04761698f4612277ec53a0bfc91b6bc9f904bb59e9a",
+   "family": "ORDY",
+   "frame": "H",
+   "rotation": "5",
+   "width": 183,
+   "height": 297,
+   "grAb": [
+    121,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 14
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYH6.png",
+   "sha256": "fe52dee0e946c958b9c7c486134af85a9ca234c4402971e94764df4e5ef0e686",
+   "family": "ORDY",
+   "frame": "H",
+   "rotation": "6",
+   "width": 212,
+   "height": 298,
+   "grAb": [
+    75,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 14
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYH7.png",
+   "sha256": "1bd26bc1e3b9cf0fc2b611f3747bf7dca0f28a0567d2cedb52a139983cc33c72",
+   "family": "ORDY",
+   "frame": "H",
+   "rotation": "7",
+   "width": 243,
+   "height": 297,
+   "grAb": [
+    86,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 14
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYH8.png",
+   "sha256": "9915bc8e7506566ed7f894c757052138c8112dba92681a094f83ee8f1cd3810c",
+   "family": "ORDY",
+   "frame": "H",
+   "rotation": "8",
+   "width": 211,
+   "height": 296,
+   "grAb": [
+    95,
+    294
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Melee",
+     "tics": 14
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYI1.png",
+   "sha256": "951cd86ff37bc808919c4234030a3ea6d0f85a36de43f28ac2135ea4580a26e5",
+   "family": "ORDY",
+   "frame": "I",
+   "rotation": "1",
+   "width": 261,
+   "height": 291,
+   "grAb": [
+    156,
+    289
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 3
+    },
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYI2.png",
+   "sha256": "26ef900ec227ce63b6dacaa2e1d1ef2bb107f503b68b3a50d7a29e360028face",
+   "family": "ORDY",
+   "frame": "I",
+   "rotation": "2",
+   "width": 218,
+   "height": 291,
+   "grAb": [
+    145,
+    288
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 3
+    },
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYI3.png",
+   "sha256": "fb64e8739a5ed9cb4e3f85ea3cddaf156e798ea0cf058099f2007760416a0f39",
+   "family": "ORDY",
+   "frame": "I",
+   "rotation": "3",
+   "width": 214,
+   "height": 293,
+   "grAb": [
+    129,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 3
+    },
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYI4.png",
+   "sha256": "320e19fcb2c94dae7add4af647906baa3d10fea467cf4c1921ad692ff23d4374",
+   "family": "ORDY",
+   "frame": "I",
+   "rotation": "4",
+   "width": 261,
+   "height": 291,
+   "grAb": [
+    159,
+    289
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 3
+    },
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYI5.png",
+   "sha256": "cb8c0d9a152e652b1d35013bfdb5ca5338c8e4a4333a373ca9e9162073d481f7",
+   "family": "ORDY",
+   "frame": "I",
+   "rotation": "5",
+   "width": 261,
+   "height": 292,
+   "grAb": [
+    104,
+    290
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 3
+    },
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYI6.png",
+   "sha256": "f6676a3685d079fa3461d5359125d5d35647a6f3d1fd1d2521f6f976764c807d",
+   "family": "ORDY",
+   "frame": "I",
+   "rotation": "6",
+   "width": 218,
+   "height": 292,
+   "grAb": [
+    72,
+    290
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 3
+    },
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYI7.png",
+   "sha256": "ddb477635b9ec8db8aaf137c376ad25cd4074ded0c2916cd6e1cf8823c5888b6",
+   "family": "ORDY",
+   "frame": "I",
+   "rotation": "7",
+   "width": 214,
+   "height": 292,
+   "grAb": [
+    84,
+    290
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 3
+    },
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYI8.png",
+   "sha256": "57f8ac20c183393a4900c81da12ee4c2a7848a0cdab96ccd840f0b9a96471bff",
+   "family": "ORDY",
+   "frame": "I",
+   "rotation": "8",
+   "width": 261,
+   "height": 292,
+   "grAb": [
+    102,
+    290
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 3
+    },
+    {
+     "actor": "RFOrderly",
+     "state": "Pain",
+     "tics": 4
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYJ1.png",
+   "sha256": "f72dca4cad0f741b091349dded0b40913e908d645c6b20142c84ff170600fe70",
+   "family": "ORDY",
+   "frame": "J",
+   "rotation": "1",
+   "width": 212,
+   "height": 248,
+   "grAb": [
+    102,
+    246
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 6
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYJ2.png",
+   "sha256": "2fd0725b887f0e31a8dfd708d3c02d891d8e5ab33df43b493848f9efe8b6667f",
+   "family": "ORDY",
+   "frame": "J",
+   "rotation": "2",
+   "width": 174,
+   "height": 248,
+   "grAb": [
+    92,
+    246
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 6
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYJ3.png",
+   "sha256": "bc3e95794b50a82fbbef4040d87a0fb6f36df1b9a5ffa52e5cf81ad6512a0b32",
+   "family": "ORDY",
+   "frame": "J",
+   "rotation": "3",
+   "width": 188,
+   "height": 248,
+   "grAb": [
+    130,
+    246
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 6
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYJ4.png",
+   "sha256": "9ec52245dae3bcd89808a85e73acf94757d5e600baeb8c8f64d7d92fdaa56a28",
+   "family": "ORDY",
+   "frame": "J",
+   "rotation": "4",
+   "width": 183,
+   "height": 249,
+   "grAb": [
+    110,
+    247
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 6
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYJ5.png",
+   "sha256": "1491f7fa1d25d8e73d8dad79c283e64f1959bc833dbc19b7a7e40d877b0c7f56",
+   "family": "ORDY",
+   "frame": "J",
+   "rotation": "5",
+   "width": 212,
+   "height": 249,
+   "grAb": [
+    109,
+    247
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 6
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYJ6.png",
+   "sha256": "00d43484fdccf0cac63f8591e764947f7057648ce2da19d83824531aa4daa31c",
+   "family": "ORDY",
+   "frame": "J",
+   "rotation": "6",
+   "width": 174,
+   "height": 250,
+   "grAb": [
+    81,
+    248
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 6
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYJ7.png",
+   "sha256": "5b9b376a5d9364570c9b879bee0518447b0e95fdf2a0728659e968d13f53e47e",
+   "family": "ORDY",
+   "frame": "J",
+   "rotation": "7",
+   "width": 188,
+   "height": 250,
+   "grAb": [
+    57,
+    248
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 6
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYJ8.png",
+   "sha256": "16d7102a596a2e0728dff4d0c07d65b91e5485de67f62154e70e68e9c7f11481",
+   "family": "ORDY",
+   "frame": "J",
+   "rotation": "8",
+   "width": 183,
+   "height": 250,
+   "grAb": [
+    72,
+    248
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 6
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYK1.png",
+   "sha256": "2206d5a3e33cb435dab9006116f501e0b811f8d6a405b93816c237bec9826daf",
+   "family": "ORDY",
+   "frame": "K",
+   "rotation": "1",
+   "width": 234,
+   "height": 197,
+   "grAb": [
+    112,
+    195
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYK2.png",
+   "sha256": "c736b86e5214318d602fa687d027bb7ad9ef8d4f3b15e3f619cccfacc780524c",
+   "family": "ORDY",
+   "frame": "K",
+   "rotation": "2",
+   "width": 263,
+   "height": 195,
+   "grAb": [
+    178,
+    193
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYK3.png",
+   "sha256": "7278376425e1a1b4ce9aea42958931295624b9d0599600e63b7cc8246b52ef8f",
+   "family": "ORDY",
+   "frame": "K",
+   "rotation": "3",
+   "width": 259,
+   "height": 199,
+   "grAb": [
+    158,
+    197
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYK4.png",
+   "sha256": "05a1e1000c2230b8ec72c2ae11c9e9a6844d51250ccd7ce11edcf576fb2e879a",
+   "family": "ORDY",
+   "frame": "K",
+   "rotation": "4",
+   "width": 287,
+   "height": 197,
+   "grAb": [
+    183,
+    195
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYK5.png",
+   "sha256": "2d9da9373fe1fdf0aa970baf9fefa4c2b973a0d0db970e25f8325244869b0dfd",
+   "family": "ORDY",
+   "frame": "K",
+   "rotation": "5",
+   "width": 234,
+   "height": 197,
+   "grAb": [
+    121,
+    194
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYK6.png",
+   "sha256": "b71ade56abefe72228d3e0a67da2c73c9a19c4fcc2fb86d9d7cbaef0f1c086c3",
+   "family": "ORDY",
+   "frame": "K",
+   "rotation": "6",
+   "width": 263,
+   "height": 199,
+   "grAb": [
+    85,
+    197
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYK7.png",
+   "sha256": "12bc0445d78566e8cdf687f6f481174cbe0ef0077492213ee01f6283bad5190c",
+   "family": "ORDY",
+   "frame": "K",
+   "rotation": "7",
+   "width": 259,
+   "height": 197,
+   "grAb": [
+    101,
+    195
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYK8.png",
+   "sha256": "d51031111827835cebe0c136993c05a4d53990bdc55092efd6b57a9bd2de381f",
+   "family": "ORDY",
+   "frame": "K",
+   "rotation": "8",
+   "width": 287,
+   "height": 199,
+   "grAb": [
+    103,
+    197
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYL1.png",
+   "sha256": "1b36762c326a44e4e2aa7aff6a208dc894110a6c83184a770431ce0bed705596",
+   "family": "ORDY",
+   "frame": "L",
+   "rotation": "1",
+   "width": 247,
+   "height": 134,
+   "grAb": [
+    133,
+    132
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYL2.png",
+   "sha256": "b51608b7595b3efccde3328b6c76b8d4b21cddb7e173525965759d9619d77de3",
+   "family": "ORDY",
+   "frame": "L",
+   "rotation": "2",
+   "width": 298,
+   "height": 137,
+   "grAb": [
+    181,
+    135
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYL3.png",
+   "sha256": "62ea3eabbc8c20edec52262a75541333b332f8c362cf3773a27f97f53f90e4f4",
+   "family": "ORDY",
+   "frame": "L",
+   "rotation": "3",
+   "width": 356,
+   "height": 136,
+   "grAb": [
+    201,
+    134
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYL4.png",
+   "sha256": "340a46f89b1fca71bada6ba95f82b4df1399630ed095e62c0ad7baea2b91f54a",
+   "family": "ORDY",
+   "frame": "L",
+   "rotation": "4",
+   "width": 259,
+   "height": 138,
+   "grAb": [
+    144,
+    136
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYL5.png",
+   "sha256": "8abb14f4b247514a138e04a0bdbb78d853b0f3d9af65e4a289d9150420b51335",
+   "family": "ORDY",
+   "frame": "L",
+   "rotation": "5",
+   "width": 247,
+   "height": 138,
+   "grAb": [
+    114,
+    136
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYL6.png",
+   "sha256": "49fbb12e368c6ac5e542bad01d7861776409aeab7a11184b5ceefd8d3d340e73",
+   "family": "ORDY",
+   "frame": "L",
+   "rotation": "6",
+   "width": 298,
+   "height": 136,
+   "grAb": [
+    116,
+    133
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYL7.png",
+   "sha256": "ba162f28ca23847e2ce92b46b7fcc1d213c9c5e84acb09765b3594ca2846c078",
+   "family": "ORDY",
+   "frame": "L",
+   "rotation": "7",
+   "width": 356,
+   "height": 136,
+   "grAb": [
+    155,
+    134
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYL8.png",
+   "sha256": "d90b6e45dc526ba807cf723e33ff974ff77cb4c898d8c853f213fa053b822e97",
+   "family": "ORDY",
+   "frame": "L",
+   "rotation": "8",
+   "width": 259,
+   "height": 134,
+   "grAb": [
+    115,
+    131
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/ORDYM1.png",
+   "sha256": "3cac280f9276675c854135e906a5beae7ab3f17239bbe8a77821b20ac3383a4c",
+   "family": "ORDY",
+   "frame": "M",
+   "rotation": "1",
+   "width": 247,
+   "height": 70,
+   "grAb": [
+    133,
+    68
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": -1
+    },
+    {
+     "actor": "RFOrderlyCorpse",
+     "state": "Spawn",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/ORDYM2.png",
+   "sha256": "0f91f2696f4f397d97b0929513bdc164bd6a0b4abfb73a886721bac6685fb49e",
+   "family": "ORDY",
+   "frame": "M",
+   "rotation": "2",
+   "width": 306,
+   "height": 70,
+   "grAb": [
+    177,
+    68
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": -1
+    },
+    {
+     "actor": "RFOrderlyCorpse",
+     "state": "Spawn",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/ORDYM3.png",
+   "sha256": "c04858de645facf0c447cedaf4409809bb5d8b5476c885ecb0163abc0ca216d7",
+   "family": "ORDY",
+   "frame": "M",
+   "rotation": "3",
+   "width": 361,
+   "height": 70,
+   "grAb": [
+    188,
+    68
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": -1
+    },
+    {
+     "actor": "RFOrderlyCorpse",
+     "state": "Spawn",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/ORDYM4.png",
+   "sha256": "e95948eabc0668bc3b522f78949bde0108d2f067e48db1fc002824769d0f19c9",
+   "family": "ORDY",
+   "frame": "M",
+   "rotation": "4",
+   "width": 291,
+   "height": 69,
+   "grAb": [
+    164,
+    67
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": -1
+    },
+    {
+     "actor": "RFOrderlyCorpse",
+     "state": "Spawn",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/ORDYM5.png",
+   "sha256": "98b4a65bac7e508464b1c0c0c991904013f3209a04b4135d11afc506076e7d44",
+   "family": "ORDY",
+   "frame": "M",
+   "rotation": "5",
+   "width": 247,
+   "height": 69,
+   "grAb": [
+    113,
+    67
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": -1
+    },
+    {
+     "actor": "RFOrderlyCorpse",
+     "state": "Spawn",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/ORDYM6.png",
+   "sha256": "b816eda8f64c2749958b64b0c701ec0aa8f299da4770eac105ed602be495e270",
+   "family": "ORDY",
+   "frame": "M",
+   "rotation": "6",
+   "width": 306,
+   "height": 70,
+   "grAb": [
+    129,
+    68
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": -1
+    },
+    {
+     "actor": "RFOrderlyCorpse",
+     "state": "Spawn",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/ORDYM7.png",
+   "sha256": "1fcf440c8e9c4c39bc713fc8083c81c14457761bfd4a8da11bbb2e53da40f1a0",
+   "family": "ORDY",
+   "frame": "M",
+   "rotation": "7",
+   "width": 361,
+   "height": 69,
+   "grAb": [
+    173,
+    67
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": -1
+    },
+    {
+     "actor": "RFOrderlyCorpse",
+     "state": "Spawn",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/ORDYM8.png",
+   "sha256": "4a69cca7ae5b03a80cdf82aef1b22e03f53b1e9a74d3ca33b3fb545f8c987e1f",
+   "family": "ORDY",
+   "frame": "M",
+   "rotation": "8",
+   "width": 291,
+   "height": 70,
+   "grAb": [
+    127,
+    68
+   ],
+   "states": [
+    {
+     "actor": "RFOrderly",
+     "state": "Death",
+     "tics": -1
+    },
+    {
+     "actor": "RFOrderlyCorpse",
+     "state": "Spawn",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/BRCDA1.png",
+   "sha256": "6bfa3a99ec2b994501ecefb2e3383d90926d68a8a6a84dc1c5eb30839dde7d0e",
+   "family": "BRCD",
+   "frame": "A",
+   "rotation": "1",
+   "width": 176,
+   "height": 295,
+   "grAb": [
+    88,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDA2.png",
+   "sha256": "135fcc0fa5d399ecffffd5dd96340c93be306b906bfac7fb0ef6b6ec0d1ff7cb",
+   "family": "BRCD",
+   "frame": "A",
+   "rotation": "2",
+   "width": 400,
+   "height": 295,
+   "grAb": [
+    180,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDA3.png",
+   "sha256": "b30f9c415cde59ec683c1ab6ab55f4912c6fefff51f12cdaaf31a568df8827b7",
+   "family": "BRCD",
+   "frame": "A",
+   "rotation": "3",
+   "width": 484,
+   "height": 294,
+   "grAb": [
+    188,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDA4.png",
+   "sha256": "0e1db4276dc84e86dacb83ce59d9a9a800f87c0d6f3e80b3b078415713df34d0",
+   "family": "BRCD",
+   "frame": "A",
+   "rotation": "4",
+   "width": 424,
+   "height": 294,
+   "grAb": [
+    180,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDA5.png",
+   "sha256": "3920b4abb9fe99b865803910630b99428a97178a650aee1d285c0ea9ad9af51e",
+   "family": "BRCD",
+   "frame": "A",
+   "rotation": "5",
+   "width": 176,
+   "height": 294,
+   "grAb": [
+    88,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDA6.png",
+   "sha256": "a5324e110f8716228af9267ada4c7b6789401affae9c4bcf40e69678fe05dfe0",
+   "family": "BRCD",
+   "frame": "A",
+   "rotation": "6",
+   "width": 400,
+   "height": 293,
+   "grAb": [
+    220,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDA7.png",
+   "sha256": "a295a3e57cac1867b1051aef2d2a5a89f3735f912d0ef30334c767adf7dd8e10",
+   "family": "BRCD",
+   "frame": "A",
+   "rotation": "7",
+   "width": 484,
+   "height": 294,
+   "grAb": [
+    295,
+    291
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDA8.png",
+   "sha256": "93fb029ad1ad42d6db02dbc965aac7efcf1c338acb8db1f4a4988f370a268942",
+   "family": "BRCD",
+   "frame": "A",
+   "rotation": "8",
+   "width": 424,
+   "height": 294,
+   "grAb": [
+    244,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Spawn",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDB1.png",
+   "sha256": "d000d34489a12663ed6326baa1f0051dc2aba26adc948414d5f756abe9d6f254",
+   "family": "BRCD",
+   "frame": "B",
+   "rotation": "1",
+   "width": 176,
+   "height": 299,
+   "grAb": [
+    88,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDB2.png",
+   "sha256": "321e6a1c2084b06e2a204ad93994b6ca955eec5a9d38a084c16f0adceaa640ae",
+   "family": "BRCD",
+   "frame": "B",
+   "rotation": "2",
+   "width": 396,
+   "height": 298,
+   "grAb": [
+    180,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDB3.png",
+   "sha256": "501f0891d9238a8e941759fe332ab95139a0be3dd927bfa50228a738f929822e",
+   "family": "BRCD",
+   "frame": "B",
+   "rotation": "3",
+   "width": 505,
+   "height": 296,
+   "grAb": [
+    188,
+    294
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDB4.png",
+   "sha256": "5dc5e0b23b3b47f2c6f5045c83476c6ad5de3a0388bc9a4996fc4ee4c800de5e",
+   "family": "BRCD",
+   "frame": "B",
+   "rotation": "4",
+   "width": 429,
+   "height": 299,
+   "grAb": [
+    180,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDB5.png",
+   "sha256": "34f76914bdbdb2859b67fd68bf734f9bf1fb4fb7f1fc51b4e2bf1fcd84310f6f",
+   "family": "BRCD",
+   "frame": "B",
+   "rotation": "5",
+   "width": 176,
+   "height": 297,
+   "grAb": [
+    88,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDB6.png",
+   "sha256": "c67e9ca1e9abddc489a985798b179eef9eb35d19374928a3776d682fc6b3b8b3",
+   "family": "BRCD",
+   "frame": "B",
+   "rotation": "6",
+   "width": 396,
+   "height": 298,
+   "grAb": [
+    216,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDB7.png",
+   "sha256": "b6b2f180e7f837a8951a715ec612ea807cdf6f1da4c7c060ec483d442f29b2ad",
+   "family": "BRCD",
+   "frame": "B",
+   "rotation": "7",
+   "width": 505,
+   "height": 300,
+   "grAb": [
+    317,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDB8.png",
+   "sha256": "d58819ba77c1110acacab96d757798d6ef7e03c0672bf0872e16d4e8e26d5986",
+   "family": "BRCD",
+   "frame": "B",
+   "rotation": "8",
+   "width": 429,
+   "height": 300,
+   "grAb": [
+    248,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDC1.png",
+   "sha256": "6e1fb1a0f2b2496c690f5b5b8afc4d23b60b76f2f5c6d4bd4298f3e1901d721c",
+   "family": "BRCD",
+   "frame": "C",
+   "rotation": "1",
+   "width": 176,
+   "height": 297,
+   "grAb": [
+    88,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDC2.png",
+   "sha256": "bd4a97ff91cae361b8b344a7c9288fe52b8388e42bf8195729557fd0970bbf0b",
+   "family": "BRCD",
+   "frame": "C",
+   "rotation": "2",
+   "width": 396,
+   "height": 295,
+   "grAb": [
+    180,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDC3.png",
+   "sha256": "bd4f0683872966513c025f68c7b10e0c8bf8a6b50fe404d5be9c002175852424",
+   "family": "BRCD",
+   "frame": "C",
+   "rotation": "3",
+   "width": 506,
+   "height": 297,
+   "grAb": [
+    188,
+    294
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDC4.png",
+   "sha256": "8e9591dcf537303956f06b178e329e630b588006073ad1790ac22142b7f9a765",
+   "family": "BRCD",
+   "frame": "C",
+   "rotation": "4",
+   "width": 428,
+   "height": 295,
+   "grAb": [
+    180,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDC5.png",
+   "sha256": "0e1b77b387ef64e81f972257c0295567051c2104c04ea3829a61919d29fc2717",
+   "family": "BRCD",
+   "frame": "C",
+   "rotation": "5",
+   "width": 176,
+   "height": 296,
+   "grAb": [
+    88,
+    294
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDC6.png",
+   "sha256": "dec978062db2e766f54840849db5243069de889f731e88342329686417eeb7ce",
+   "family": "BRCD",
+   "frame": "C",
+   "rotation": "6",
+   "width": 396,
+   "height": 295,
+   "grAb": [
+    216,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDC7.png",
+   "sha256": "abac62f9e480758db0693b7381a5475a900aa0b6ed2e2e8c970c8318f9872a0a",
+   "family": "BRCD",
+   "frame": "C",
+   "rotation": "7",
+   "width": 506,
+   "height": 297,
+   "grAb": [
+    317,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDC8.png",
+   "sha256": "4a5f0771fc63f5ca2b47fae08719b9dab1652247ebf2c7fe82f56145f7dfe41d",
+   "family": "BRCD",
+   "frame": "C",
+   "rotation": "8",
+   "width": 428,
+   "height": 295,
+   "grAb": [
+    248,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDD1.png",
+   "sha256": "642974bfae7587ace13d96055e29e4e58722f2cbe0ad206b05b65d2f7a556eeb",
+   "family": "BRCD",
+   "frame": "D",
+   "rotation": "1",
+   "width": 176,
+   "height": 299,
+   "grAb": [
+    88,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDD2.png",
+   "sha256": "0607732542429a60746c479afd0a4c2f8bd6a7be54f5d83cfd7d6d2d7b9e2071",
+   "family": "BRCD",
+   "frame": "D",
+   "rotation": "2",
+   "width": 429,
+   "height": 299,
+   "grAb": [
+    180,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDD3.png",
+   "sha256": "88e0dc52c47877cf13c64e7ebcdada8c69aa27101afe66264b1dac78fc93dce7",
+   "family": "BRCD",
+   "frame": "D",
+   "rotation": "3",
+   "width": 505,
+   "height": 298,
+   "grAb": [
+    188,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDD4.png",
+   "sha256": "a50612cfcb632f44b5c86f39dfd37d870c3b27f34cf7b496f07cc7e4f3bdee45",
+   "family": "BRCD",
+   "frame": "D",
+   "rotation": "4",
+   "width": 396,
+   "height": 298,
+   "grAb": [
+    180,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDD5.png",
+   "sha256": "dbf715aac653a33835f5c10e04ce3ddf580474c92fac93e344eb44c7030f0a25",
+   "family": "BRCD",
+   "frame": "D",
+   "rotation": "5",
+   "width": 176,
+   "height": 299,
+   "grAb": [
+    88,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDD6.png",
+   "sha256": "cf92fd5c0d1b2932176aa16f7670b075ee7cd44144ddc41e9340fd0cebdb9fd1",
+   "family": "BRCD",
+   "frame": "D",
+   "rotation": "6",
+   "width": 429,
+   "height": 300,
+   "grAb": [
+    248,
+    297
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDD7.png",
+   "sha256": "fe5c1a0ba94cd4775d46f7c1643fe866e1123364e765df6742360ef69dc205b3",
+   "family": "BRCD",
+   "frame": "D",
+   "rotation": "7",
+   "width": 505,
+   "height": 298,
+   "grAb": [
+    317,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDD8.png",
+   "sha256": "1743b929e15b769a669a6fab52ca7ed2a636266b08b32cc1924ef4d765f5554b",
+   "family": "BRCD",
+   "frame": "D",
+   "rotation": "8",
+   "width": 396,
+   "height": 300,
+   "grAb": [
+    216,
+    298
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDE1.png",
+   "sha256": "1fbd6c574e522c3d1b09dadbebed8633ce5de0d23f374f2b211802ce8b4c6518",
+   "family": "BRCD",
+   "frame": "E",
+   "rotation": "1",
+   "width": 176,
+   "height": 297,
+   "grAb": [
+    88,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDE2.png",
+   "sha256": "716b14c7f48895a2218abbb5fec4e360edb466388015f974ccfaaeb5241822fd",
+   "family": "BRCD",
+   "frame": "E",
+   "rotation": "2",
+   "width": 428,
+   "height": 296,
+   "grAb": [
+    180,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDE3.png",
+   "sha256": "60725c6d0b942dc90ff1825a5be4fa56c930c1b0a24c7a3a83c8921736c5070e",
+   "family": "BRCD",
+   "frame": "E",
+   "rotation": "3",
+   "width": 506,
+   "height": 296,
+   "grAb": [
+    188,
+    294
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDE4.png",
+   "sha256": "f6a00f56c1cf3fd6216b8a87a2396ece05978aa3232e43f2811ace89382baa1e",
+   "family": "BRCD",
+   "frame": "E",
+   "rotation": "4",
+   "width": 396,
+   "height": 295,
+   "grAb": [
+    180,
+    293
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDE5.png",
+   "sha256": "c2461bb35e14358c78ab1ff9c3ef39b62b523b4b524102acf9b470aa67bf622b",
+   "family": "BRCD",
+   "frame": "E",
+   "rotation": "5",
+   "width": 176,
+   "height": 296,
+   "grAb": [
+    88,
+    294
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDE6.png",
+   "sha256": "5b9d6738b0335548e9489f74d80351bd12d6d985b518490e0a1b612c4c2410bb",
+   "family": "BRCD",
+   "frame": "E",
+   "rotation": "6",
+   "width": 428,
+   "height": 295,
+   "grAb": [
+    248,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDE7.png",
+   "sha256": "5d82b02d2edaa15eb7d92fdabbb93a6fe7c070f017d391e82ae1d49a4ecdab07",
+   "family": "BRCD",
+   "frame": "E",
+   "rotation": "7",
+   "width": 506,
+   "height": 295,
+   "grAb": [
+    317,
+    292
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDE8.png",
+   "sha256": "7b11ce19309c6e66bc48a245e872b9ca46eaebcdab10e116a89aba18afce7673",
+   "family": "BRCD",
+   "frame": "E",
+   "rotation": "8",
+   "width": 396,
+   "height": 298,
+   "grAb": [
+    216,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDF1.png",
+   "sha256": "80e89747d29f2217fcc6d35487c61c78a2664785c7cd97c63f6bb07381fce9f5",
+   "family": "BRCD",
+   "frame": "F",
+   "rotation": "1",
+   "width": 180,
+   "height": 297,
+   "grAb": [
+    90,
+    294
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 24
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDF2.png",
+   "sha256": "cd57ad7941aaed7828bf2334383b8c17022dc47d948cd984cbd5db1d08fbe621",
+   "family": "BRCD",
+   "frame": "F",
+   "rotation": "2",
+   "width": 413,
+   "height": 297,
+   "grAb": [
+    180,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 24
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDF3.png",
+   "sha256": "ca29e4399898fc17852259cb2281404679c5021a75e025d2c445f686268e4601",
+   "family": "BRCD",
+   "frame": "F",
+   "rotation": "3",
+   "width": 535,
+   "height": 298,
+   "grAb": [
+    188,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 24
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDF4.png",
+   "sha256": "90c46634d2f1fbe5caf15c87d500183cfde686c9f72d46a341581d211e82a80d",
+   "family": "BRCD",
+   "frame": "F",
+   "rotation": "4",
+   "width": 468,
+   "height": 299,
+   "grAb": [
+    180,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 24
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDF5.png",
+   "sha256": "d8f5d91ea9920392fe517bfffa8923afd1b28b80aad415b50e2db1d4429fd530",
+   "family": "BRCD",
+   "frame": "F",
+   "rotation": "5",
+   "width": 180,
+   "height": 297,
+   "grAb": [
+    90,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 24
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDF6.png",
+   "sha256": "ebf4976de6644ec65a13d8400f66bfa6323418db90e373755abb9573ac1263e7",
+   "family": "BRCD",
+   "frame": "F",
+   "rotation": "6",
+   "width": 413,
+   "height": 297,
+   "grAb": [
+    233,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 24
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDF7.png",
+   "sha256": "95edad0b03b91c691ea5f4edda402990ac9c1677b450d0f4491e1dc5aa606b48",
+   "family": "BRCD",
+   "frame": "F",
+   "rotation": "7",
+   "width": 535,
+   "height": 298,
+   "grAb": [
+    347,
+    296
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 24
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDF8.png",
+   "sha256": "fc764c1b23e9fa53d395594a74dcd1cebc61f84c3c9eccc1c6bc7047960816db",
+   "family": "BRCD",
+   "frame": "F",
+   "rotation": "8",
+   "width": 468,
+   "height": 298,
+   "grAb": [
+    288,
+    295
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 24
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDG1.png",
+   "sha256": "2a5080889639a24802e018b3fcac5d4bcfab53e38eebc5406662a7e670cc8115",
+   "family": "BRCD",
+   "frame": "G",
+   "rotation": "1",
+   "width": 178,
+   "height": 278,
+   "grAb": [
+    89,
+    275
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 1
+    },
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDG2.png",
+   "sha256": "a74bf39cceca000ec4c21c66e6fdc48016d352cec8fb8dcfb4262a17289a2877",
+   "family": "BRCD",
+   "frame": "G",
+   "rotation": "2",
+   "width": 420,
+   "height": 277,
+   "grAb": [
+    180,
+    275
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 1
+    },
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDG3.png",
+   "sha256": "5c44f438a454d66574a97d95837ff58d0b9219235f0ae5675e6579932c6a7b2d",
+   "family": "BRCD",
+   "frame": "G",
+   "rotation": "3",
+   "width": 559,
+   "height": 278,
+   "grAb": [
+    188,
+    275
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 1
+    },
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDG4.png",
+   "sha256": "75ab8a3c036af9c383ebca181f070089713f67c3ba9e060619d4926d3f4c2505",
+   "family": "BRCD",
+   "frame": "G",
+   "rotation": "4",
+   "width": 478,
+   "height": 278,
+   "grAb": [
+    180,
+    275
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 1
+    },
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDG5.png",
+   "sha256": "56371906792c96977c0d2405eb6349f887b7cc8a4afd2b8098d7c31f2504830e",
+   "family": "BRCD",
+   "frame": "G",
+   "rotation": "5",
+   "width": 178,
+   "height": 278,
+   "grAb": [
+    89,
+    275
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 1
+    },
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDG6.png",
+   "sha256": "7cb6d9d0d4c5d8142c8496d52c548c1cbaeecca4447def46614a44230801605f",
+   "family": "BRCD",
+   "frame": "G",
+   "rotation": "6",
+   "width": 420,
+   "height": 278,
+   "grAb": [
+    240,
+    276
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 1
+    },
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDG7.png",
+   "sha256": "e9c2097eadaf148ae249cda22924cfbab7194633094b78113615ba7b3eaac5f0",
+   "family": "BRCD",
+   "frame": "G",
+   "rotation": "7",
+   "width": 559,
+   "height": 277,
+   "grAb": [
+    370,
+    275
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 1
+    },
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDG8.png",
+   "sha256": "9952baf3ce13a10c13cfc8354a00d96de946c6fa7f2a89203767fbd665f35eeb",
+   "family": "BRCD",
+   "frame": "G",
+   "rotation": "8",
+   "width": 478,
+   "height": 276,
+   "grAb": [
+    298,
+    273
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Missile",
+     "tics": 1
+    },
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDH1.png",
+   "sha256": "04977aa44ed5a5069b0a7fc6621bd7bb64141824027dc026228fafd2b0696f74",
+   "family": "BRCD",
+   "frame": "H",
+   "rotation": "1",
+   "width": 176,
+   "height": 307,
+   "grAb": [
+    88,
+    304
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Recovery",
+     "tics": 28
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDH2.png",
+   "sha256": "509b026a86637f4b816919569b9a4e2012cd651fef5a77bbe87c6815fe59f370",
+   "family": "BRCD",
+   "frame": "H",
+   "rotation": "2",
+   "width": 421,
+   "height": 306,
+   "grAb": [
+    180,
+    303
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Recovery",
+     "tics": 28
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDH3.png",
+   "sha256": "1803a448e8a91b9223f7d7a61858e1b1ee99146cd5ecace5dfe812d1cb415a38",
+   "family": "BRCD",
+   "frame": "H",
+   "rotation": "3",
+   "width": 513,
+   "height": 305,
+   "grAb": [
+    188,
+    303
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Recovery",
+     "tics": 28
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDH4.png",
+   "sha256": "3c20876bcc60450fae3f09634c3f70bdd7e1b3e3f55fb75801346bd056f65e56",
+   "family": "BRCD",
+   "frame": "H",
+   "rotation": "4",
+   "width": 454,
+   "height": 305,
+   "grAb": [
+    180,
+    302
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Recovery",
+     "tics": 28
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDH5.png",
+   "sha256": "ef721dc607ea8f0a4ceaa3af6bea17a228f564fa35bad646084104944dba9062",
+   "family": "BRCD",
+   "frame": "H",
+   "rotation": "5",
+   "width": 176,
+   "height": 307,
+   "grAb": [
+    88,
+    304
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Recovery",
+     "tics": 28
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDH6.png",
+   "sha256": "0e38b76737aaeabe37031c40c113441b4c074728717b40b93310c4212b0f8617",
+   "family": "BRCD",
+   "frame": "H",
+   "rotation": "6",
+   "width": 421,
+   "height": 305,
+   "grAb": [
+    241,
+    302
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Recovery",
+     "tics": 28
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDH7.png",
+   "sha256": "e39a86705f4baeeb0236c3eccd5a42bd9073d7b9fae2d656dac52d47bc93c59e",
+   "family": "BRCD",
+   "frame": "H",
+   "rotation": "7",
+   "width": 513,
+   "height": 306,
+   "grAb": [
+    324,
+    304
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Recovery",
+     "tics": 28
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDH8.png",
+   "sha256": "3d713758e90388018ff512db8e434f0a9876d0e20c94b8fc70dc95edf973aa6c",
+   "family": "BRCD",
+   "frame": "H",
+   "rotation": "8",
+   "width": 454,
+   "height": 304,
+   "grAb": [
+    274,
+    301
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Recovery",
+     "tics": 28
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDI1.png",
+   "sha256": "4bbc3175aa5f5dafc20f197e7b8ccdc06f22f59e1127cdac863edf149d410c31",
+   "family": "BRCD",
+   "frame": "I",
+   "rotation": "1",
+   "width": 177,
+   "height": 315,
+   "grAb": [
+    89,
+    312
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Pain",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDI2.png",
+   "sha256": "2fc4db120c73df2e7c1cf294e229598421b3f95eaf197d42477930fcff7497af",
+   "family": "BRCD",
+   "frame": "I",
+   "rotation": "2",
+   "width": 416,
+   "height": 312,
+   "grAb": [
+    180,
+    309
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Pain",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDI3.png",
+   "sha256": "861344da8dbc75e0e779fb61747ff6cd31471d6d45b05cba682d0765fb5c584c",
+   "family": "BRCD",
+   "frame": "I",
+   "rotation": "3",
+   "width": 494,
+   "height": 315,
+   "grAb": [
+    188,
+    313
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Pain",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDI4.png",
+   "sha256": "78c703f41c643b6e8eb8ca122c3b11e1d78e91d0a6cc0df58914f326ead80aa2",
+   "family": "BRCD",
+   "frame": "I",
+   "rotation": "4",
+   "width": 439,
+   "height": 313,
+   "grAb": [
+    180,
+    311
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Pain",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDI5.png",
+   "sha256": "65654b5c2800fd7ef74504a9c1194599a14720f55b110b6dde3ddba1cda4952c",
+   "family": "BRCD",
+   "frame": "I",
+   "rotation": "5",
+   "width": 177,
+   "height": 315,
+   "grAb": [
+    88,
+    312
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Pain",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDI6.png",
+   "sha256": "06534c3cd1da9056d62371e10f59aeeb6a03dd932961dbd58541144e18a00959",
+   "family": "BRCD",
+   "frame": "I",
+   "rotation": "6",
+   "width": 416,
+   "height": 315,
+   "grAb": [
+    236,
+    312
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Pain",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDI7.png",
+   "sha256": "5144b07226d1a6f6b5dc8077f43288e01bc1b39372ce00583940d5c2865185e8",
+   "family": "BRCD",
+   "frame": "I",
+   "rotation": "7",
+   "width": 494,
+   "height": 315,
+   "grAb": [
+    305,
+    312
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Pain",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDI8.png",
+   "sha256": "8bacf3f9b80377e42bc8265fd786a2b7912e993ce76fb7e49424c4cf0be4d564",
+   "family": "BRCD",
+   "frame": "I",
+   "rotation": "8",
+   "width": 439,
+   "height": 315,
+   "grAb": [
+    258,
+    312
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Pain",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDJ1.png",
+   "sha256": "9aa1f66916be4bcffcc8f00c97cd45192a1fa7b0447b7128908dc96ea06abd06",
+   "family": "BRCD",
+   "frame": "J",
+   "rotation": "1",
+   "width": 199,
+   "height": 250,
+   "grAb": [
+    80,
+    248
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDJ2.png",
+   "sha256": "3d98fd4d821e09bd96a86c98d1e25098ec72f274c196e572583724ac1b7e93ef",
+   "family": "BRCD",
+   "frame": "J",
+   "rotation": "2",
+   "width": 400,
+   "height": 249,
+   "grAb": [
+    180,
+    247
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDJ3.png",
+   "sha256": "977749bd267b80b6a622b409d8cf896e1c7d5a988c6fba99fe9208253b8a4a9d",
+   "family": "BRCD",
+   "frame": "J",
+   "rotation": "3",
+   "width": 482,
+   "height": 248,
+   "grAb": [
+    188,
+    246
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDJ4.png",
+   "sha256": "481ac931f7736a956b8874c3af69959ffd9fe2474bc6ce415b42f8b3530f4dfd",
+   "family": "BRCD",
+   "frame": "J",
+   "rotation": "4",
+   "width": 422,
+   "height": 248,
+   "grAb": [
+    180,
+    246
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDJ5.png",
+   "sha256": "0a5a0b776e410e3f43684507fb12e11d902b070da05b2627c6e4feced9a12684",
+   "family": "BRCD",
+   "frame": "J",
+   "rotation": "5",
+   "width": 199,
+   "height": 249,
+   "grAb": [
+    119,
+    247
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDJ6.png",
+   "sha256": "dfe1608c8ffa37950d10c7c56ffd8977a61bea559e0afb932d13b626971734a3",
+   "family": "BRCD",
+   "frame": "J",
+   "rotation": "6",
+   "width": 400,
+   "height": 248,
+   "grAb": [
+    220,
+    245
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDJ7.png",
+   "sha256": "d8bccf0de2a7c41baf9c8339d724505f38889ce0023bdddb423942c9c4533f5a",
+   "family": "BRCD",
+   "frame": "J",
+   "rotation": "7",
+   "width": 482,
+   "height": 248,
+   "grAb": [
+    293,
+    245
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDJ8.png",
+   "sha256": "f2e9615dde64ee2fc30fe8a9b21c6f2cd661554d3700293cd630aa2c97ea96ff",
+   "family": "BRCD",
+   "frame": "J",
+   "rotation": "8",
+   "width": 422,
+   "height": 247,
+   "grAb": [
+    242,
+    244
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDK1.png",
+   "sha256": "27a8a4a191e2016a4ce30a343502bfd88dfe8bab425fd824bf477c133b7e7c24",
+   "family": "BRCD",
+   "frame": "K",
+   "rotation": "1",
+   "width": 254,
+   "height": 199,
+   "grAb": [
+    130,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDK2.png",
+   "sha256": "72b25b0cc8cb387c948e09eadf16e12bac8d4dd7fed57cd4e7b8e75d5d74dffa",
+   "family": "BRCD",
+   "frame": "K",
+   "rotation": "2",
+   "width": 408,
+   "height": 199,
+   "grAb": [
+    180,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDK3.png",
+   "sha256": "8a1b1743b985378523fb7aad4bb75b1278d49f8278996bdb7ea90643ebd0e747",
+   "family": "BRCD",
+   "frame": "K",
+   "rotation": "3",
+   "width": 479,
+   "height": 199,
+   "grAb": [
+    188,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDK4.png",
+   "sha256": "72531738b8497485888af6ace438078dac7bc11a5258f193b167fa90e9548c90",
+   "family": "BRCD",
+   "frame": "K",
+   "rotation": "4",
+   "width": 414,
+   "height": 199,
+   "grAb": [
+    180,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDK5.png",
+   "sha256": "e1817390be91e1e1a0322423b93fcd9e1763ccf401cfaaea5e8d744296f1849e",
+   "family": "BRCD",
+   "frame": "K",
+   "rotation": "5",
+   "width": 254,
+   "height": 199,
+   "grAb": [
+    124,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDK6.png",
+   "sha256": "53fb05787485736d6fdbeaf2d1abcaa9abbdcbc0828e659c184fab2b02ebf5d9",
+   "family": "BRCD",
+   "frame": "K",
+   "rotation": "6",
+   "width": 408,
+   "height": 199,
+   "grAb": [
+    228,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDK7.png",
+   "sha256": "85b4f3e88fd07f6b389cc5918a5625c2b62eef6e8f3065658efe62aa859723ae",
+   "family": "BRCD",
+   "frame": "K",
+   "rotation": "7",
+   "width": 479,
+   "height": 199,
+   "grAb": [
+    290,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDK8.png",
+   "sha256": "6accc623a30ffb4649a45feb65a170bcc18c8f06c255f3a1ee26f8357ace45eb",
+   "family": "BRCD",
+   "frame": "K",
+   "rotation": "8",
+   "width": 414,
+   "height": 199,
+   "grAb": [
+    234,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDL1.png",
+   "sha256": "f29529ef929b56dc6be10d311d3b1255e0f8aea5cdac7892ee5ce056c816d5e1",
+   "family": "BRCD",
+   "frame": "L",
+   "rotation": "1",
+   "width": 348,
+   "height": 199,
+   "grAb": [
+    80,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDL2.png",
+   "sha256": "84f9f969f842e0a630ee6435b0c11d4a5399bb6919f15f8529bd5c05e76ca081",
+   "family": "BRCD",
+   "frame": "L",
+   "rotation": "2",
+   "width": 473,
+   "height": 199,
+   "grAb": [
+    180,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDL3.png",
+   "sha256": "18527ee7114abe8e69b0c07d0885996a7c4329fec516c7db8a29cc24a80f2f5b",
+   "family": "BRCD",
+   "frame": "L",
+   "rotation": "3",
+   "width": 446,
+   "height": 199,
+   "grAb": [
+    188,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDL4.png",
+   "sha256": "27b941e4947f5542852000ce096875de8dccb9d04b0a40d0893b948059ffb136",
+   "family": "BRCD",
+   "frame": "L",
+   "rotation": "4",
+   "width": 379,
+   "height": 199,
+   "grAb": [
+    185,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDL5.png",
+   "sha256": "7eef2dd3b8b5f9fecf6b192c5771116cfd4858732ac344c02cbeaf31d38eeff3",
+   "family": "BRCD",
+   "frame": "L",
+   "rotation": "5",
+   "width": 348,
+   "height": 199,
+   "grAb": [
+    268,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDL6.png",
+   "sha256": "aa50fb7eb9c48f9d3972d08406777dead4311f11009ea8a4f3a9841f2e212388",
+   "family": "BRCD",
+   "frame": "L",
+   "rotation": "6",
+   "width": 473,
+   "height": 199,
+   "grAb": [
+    293,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDL7.png",
+   "sha256": "7c2c84fbe6a37f7dace58bea436b1761dec1cd0a7eb6d25c51b1f20ab15e4485",
+   "family": "BRCD",
+   "frame": "L",
+   "rotation": "7",
+   "width": 446,
+   "height": 199,
+   "grAb": [
+    258,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDL8.png",
+   "sha256": "e57a3ea72aa92f3df2920433dff08994416eeb854e3aa44cfbc03b6608a37d81",
+   "family": "BRCD",
+   "frame": "L",
+   "rotation": "8",
+   "width": 379,
+   "height": 199,
+   "grAb": [
+    193,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": 10
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDM1.png",
+   "sha256": "ba40b28e9eaf23c1919a24033b077d5d03f4e49ff6e26c169c4e429308dd2e14",
+   "family": "BRCD",
+   "frame": "M",
+   "rotation": "1",
+   "width": 347,
+   "height": 199,
+   "grAb": [
+    80,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/BRCDM2.png",
+   "sha256": "36c126c2e2d77d6f65864aa5f21169d825661c58e607fb268b715f08bbf17e10",
+   "family": "BRCD",
+   "frame": "M",
+   "rotation": "2",
+   "width": 485,
+   "height": 199,
+   "grAb": [
+    180,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/BRCDM3.png",
+   "sha256": "4678f055e955968d0d05ea72ade50a3474fdd1df253aa065a66ea5db801d8795",
+   "family": "BRCD",
+   "frame": "M",
+   "rotation": "3",
+   "width": 465,
+   "height": 199,
+   "grAb": [
+    188,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/BRCDM4.png",
+   "sha256": "b549f61a824c3cb52efd966fb89a35bc15c35d89cf033a69d4a98e7703193623",
+   "family": "BRCD",
+   "frame": "M",
+   "rotation": "4",
+   "width": 399,
+   "height": 199,
+   "grAb": [
+    205,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/BRCDM5.png",
+   "sha256": "a06bffa0722d34bcf8da4147515a0b6b4cd2424a5bc839fcdf019ec579ea3161",
+   "family": "BRCD",
+   "frame": "M",
+   "rotation": "5",
+   "width": 347,
+   "height": 199,
+   "grAb": [
+    267,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/BRCDM6.png",
+   "sha256": "791da9d2ef8bbfa06976991eaf80bf883cdb8c1051129c7b94ba96db825f5f49",
+   "family": "BRCD",
+   "frame": "M",
+   "rotation": "6",
+   "width": 485,
+   "height": 199,
+   "grAb": [
+    305,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/BRCDM7.png",
+   "sha256": "67badf75fc2bb648f706d7ba790c4ce7cf2a5a92b0d38637a401904779a5c478",
+   "family": "BRCD",
+   "frame": "M",
+   "rotation": "7",
+   "width": 465,
+   "height": 199,
+   "grAb": [
+    276,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/BRCDM8.png",
+   "sha256": "9ca500258f3caada74c3f43e753db89b8523c216f3c74821ea344265e961657d",
+   "family": "BRCD",
+   "frame": "M",
+   "rotation": "8",
+   "width": 399,
+   "height": 199,
+   "grAb": [
+    193,
+    196
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/BRCDN1.png",
+   "sha256": "fe6d164558c590b4e07e26164382707dbab5f0b103e9af1590ed5e88d8c4070f",
+   "family": "BRCD",
+   "frame": "N",
+   "rotation": "1",
+   "width": 178,
+   "height": 275,
+   "grAb": [
+    89,
+    272
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDN2.png",
+   "sha256": "ecf69e55ecc718c677b90d0b3dde4e74db389ab396231dd6d785c8050ac34393",
+   "family": "BRCD",
+   "frame": "N",
+   "rotation": "2",
+   "width": 479,
+   "height": 277,
+   "grAb": [
+    180,
+    274
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDN3.png",
+   "sha256": "59498d6c452302b404e1f09e6dc75e3a1feed8cb00eff65a7d27c5c448f4a263",
+   "family": "BRCD",
+   "frame": "N",
+   "rotation": "3",
+   "width": 559,
+   "height": 279,
+   "grAb": [
+    188,
+    276
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDN4.png",
+   "sha256": "59a9c13343d123e1a9d37388d44d735b16aa09c535e1576607f8372cdcf9689d",
+   "family": "BRCD",
+   "frame": "N",
+   "rotation": "4",
+   "width": 421,
+   "height": 279,
+   "grAb": [
+    180,
+    276
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDN5.png",
+   "sha256": "da0fa888932de150a2640eae4acb2783e890f32b5e3d011d5a5cf95338378030",
+   "family": "BRCD",
+   "frame": "N",
+   "rotation": "5",
+   "width": 178,
+   "height": 275,
+   "grAb": [
+    89,
+    272
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDN6.png",
+   "sha256": "6745368a5bc469c77e0536fc919cceaf40426c3fdfd841c2851ca5e03c3b196e",
+   "family": "BRCD",
+   "frame": "N",
+   "rotation": "6",
+   "width": 479,
+   "height": 277,
+   "grAb": [
+    299,
+    274
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDN7.png",
+   "sha256": "0f59c52277a53e1fe97ad02e77666f707fff66df2de94dba049527e0b7d0cf2e",
+   "family": "BRCD",
+   "frame": "N",
+   "rotation": "7",
+   "width": 559,
+   "height": 278,
+   "grAb": [
+    370,
+    276
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDN8.png",
+   "sha256": "6b1c11791dbc1922698320b16c690483fce0f94afb118325e95fc70daca20770",
+   "family": "BRCD",
+   "frame": "N",
+   "rotation": "8",
+   "width": 421,
+   "height": 279,
+   "grAb": [
+    241,
+    276
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Charge",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDO1.png",
+   "sha256": "9120b0039feb2737f60fd06b144401119d99141ac126c65a8c2e159cc117775a",
+   "family": "BRCD",
+   "frame": "O",
+   "rotation": "1",
+   "width": 212,
+   "height": 248,
+   "grAb": [
+    106,
+    245
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Impact",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDO2.png",
+   "sha256": "594b1fe99b92c7bb082c106cd740118f316ff5c399f0048fc4a465e028919440",
+   "family": "BRCD",
+   "frame": "O",
+   "rotation": "2",
+   "width": 418,
+   "height": 250,
+   "grAb": [
+    180,
+    247
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Impact",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDO3.png",
+   "sha256": "e0279e7dde7c3b20d844348bbec9a24c641a7fd47e9aea4b39379f8990c59aca",
+   "family": "BRCD",
+   "frame": "O",
+   "rotation": "3",
+   "width": 556,
+   "height": 251,
+   "grAb": [
+    188,
+    249
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Impact",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDO4.png",
+   "sha256": "05b5282a01d43c17a74f754ed40ff59791d88cfe394265aaaa392b54e6dee914",
+   "family": "BRCD",
+   "frame": "O",
+   "rotation": "4",
+   "width": 477,
+   "height": 250,
+   "grAb": [
+    180,
+    247
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Impact",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDO5.png",
+   "sha256": "d262b8afc635c28381750d283d1e7f644b09d351ece8edeb64b5de07ee03947b",
+   "family": "BRCD",
+   "frame": "O",
+   "rotation": "5",
+   "width": 212,
+   "height": 247,
+   "grAb": [
+    106,
+    244
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Impact",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDO6.png",
+   "sha256": "08bf50592c80f163a24cdce1231d0178eec656aa11d103cdaba2defceb66a32a",
+   "family": "BRCD",
+   "frame": "O",
+   "rotation": "6",
+   "width": 418,
+   "height": 249,
+   "grAb": [
+    238,
+    246
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Impact",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDO7.png",
+   "sha256": "324ee16c31bfde79c72f8d751f1e76f7f881756bc0eb1b56211da950d3cdd500",
+   "family": "BRCD",
+   "frame": "O",
+   "rotation": "7",
+   "width": 556,
+   "height": 250,
+   "grAb": [
+    367,
+    248
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Impact",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/BRCDO8.png",
+   "sha256": "29f2c103f03819233155099b8e5e62cb57b6952f8cb7d3e8249ec0c029d7ac1d",
+   "family": "BRCD",
+   "frame": "O",
+   "rotation": "8",
+   "width": 477,
+   "height": 248,
+   "grAb": [
+    296,
+    246
+   ],
+   "states": [
+    {
+     "actor": "RFBrancardier",
+     "state": "Impact",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGA1.png",
+   "sha256": "7374c38903e7ff9c263f2323f87e11f703e65f7b66c025c0c0fc5033cfe170a5",
+   "family": "PREG",
+   "frame": "A",
+   "rotation": "1",
+   "width": 204,
+   "height": 328,
+   "grAb": [
+    102,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Spawn",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGA2.png",
+   "sha256": "b3fa66e829093f166822df6dd42b62a9e59c89a39dd3d5741dbeb468c22fcc38",
+   "family": "PREG",
+   "frame": "A",
+   "rotation": "2",
+   "width": 170,
+   "height": 328,
+   "grAb": [
+    100,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Spawn",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGA3.png",
+   "sha256": "5cb40eeb9dbbaedc14a96310b231405b610125784b6aeed2ef35fe48c59a5170",
+   "family": "PREG",
+   "frame": "A",
+   "rotation": "3",
+   "width": 107,
+   "height": 328,
+   "grAb": [
+    59,
+    325
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Spawn",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGA4.png",
+   "sha256": "4e543f767bb9f765e2f653844a6f5327c35697a1f290eaf5e38074dac1f30cce",
+   "family": "PREG",
+   "frame": "A",
+   "rotation": "4",
+   "width": 176,
+   "height": 329,
+   "grAb": [
+    105,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Spawn",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGA5.png",
+   "sha256": "3107d1b8560a0df1372dd940621c7d6299d8751b8b28ec1c8bfcd73bdad8ffd6",
+   "family": "PREG",
+   "frame": "A",
+   "rotation": "5",
+   "width": 204,
+   "height": 328,
+   "grAb": [
+    101,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Spawn",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGA6.png",
+   "sha256": "ccb109d6ff1b077d9005e20789c75fb78c7da18c84975e7e2dadfbee1e2184c5",
+   "family": "PREG",
+   "frame": "A",
+   "rotation": "6",
+   "width": 170,
+   "height": 330,
+   "grAb": [
+    70,
+    328
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Spawn",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGA7.png",
+   "sha256": "a38f88b9bfea33cfe2ae86817f9a7c434268533713b80405e3b5153e61bde537",
+   "family": "PREG",
+   "frame": "A",
+   "rotation": "7",
+   "width": 107,
+   "height": 328,
+   "grAb": [
+    47,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Spawn",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGA8.png",
+   "sha256": "c177a17ee8e65d32edc3fbb1121ed2f1f18d0dea10fb63c3bf8a52ca152203ae",
+   "family": "PREG",
+   "frame": "A",
+   "rotation": "8",
+   "width": 176,
+   "height": 329,
+   "grAb": [
+    71,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Spawn",
+     "tics": 8
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGB1.png",
+   "sha256": "20f18f6bb241c113066db849883c67e427e9a7c17ea0e0127c9f4cad9d56c29b",
+   "family": "PREG",
+   "frame": "B",
+   "rotation": "1",
+   "width": 162,
+   "height": 328,
+   "grAb": [
+    81,
+    325
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGB2.png",
+   "sha256": "e496a934c9b3f37a07933c7a475d64b86911f65187e3482f888aec006b7ec870",
+   "family": "PREG",
+   "frame": "B",
+   "rotation": "2",
+   "width": 156,
+   "height": 328,
+   "grAb": [
+    87,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGB3.png",
+   "sha256": "799b3df6c6739c6c6b6ccc914a50eab49dc3ecd1bc584dff8e37aa3109c024ac",
+   "family": "PREG",
+   "frame": "B",
+   "rotation": "3",
+   "width": 136,
+   "height": 329,
+   "grAb": [
+    60,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGB4.png",
+   "sha256": "131a31fc8b3c2f4df55b8c254a08e4ef8e185d9faaf8f0b8657ba081f47e54aa",
+   "family": "PREG",
+   "frame": "B",
+   "rotation": "4",
+   "width": 157,
+   "height": 329,
+   "grAb": [
+    87,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGB5.png",
+   "sha256": "3484ea0c6ac504c7bbe92ec166a0171329ef398442897971c0d60df10560ddbd",
+   "family": "PREG",
+   "frame": "B",
+   "rotation": "5",
+   "width": 162,
+   "height": 328,
+   "grAb": [
+    81,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGB6.png",
+   "sha256": "7492f85605677f8557b6be6eb2e039060a779db6c67d207e3636dc894495d9b7",
+   "family": "PREG",
+   "frame": "B",
+   "rotation": "6",
+   "width": 156,
+   "height": 328,
+   "grAb": [
+    69,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGB7.png",
+   "sha256": "99d93ebb2bf2b50a60115e4f06a5b843fdffb9b540e7e0203465c0ca6559b753",
+   "family": "PREG",
+   "frame": "B",
+   "rotation": "7",
+   "width": 136,
+   "height": 328,
+   "grAb": [
+    75,
+    325
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGB8.png",
+   "sha256": "7b5bb36f5a16ada4f0e3ba1db0398980d28e680eb71175ca22166145374f37d7",
+   "family": "PREG",
+   "frame": "B",
+   "rotation": "8",
+   "width": 157,
+   "height": 328,
+   "grAb": [
+    70,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGC1.png",
+   "sha256": "e465419b8057d8f84503046339099237f65704eefc12d2d1f4bd7e56b1b783be",
+   "family": "PREG",
+   "frame": "C",
+   "rotation": "1",
+   "width": 158,
+   "height": 329,
+   "grAb": [
+    76,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGC2.png",
+   "sha256": "439a8eb39ad6b17564632ef45345770807d229ac8ba49261c40e38ae043809d1",
+   "family": "PREG",
+   "frame": "C",
+   "rotation": "2",
+   "width": 190,
+   "height": 329,
+   "grAb": [
+    120,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGC3.png",
+   "sha256": "439e1e8cce51eb917ac310537b921f539bfa2c1c80b260ae4ed3de8952e5f845",
+   "family": "PREG",
+   "frame": "C",
+   "rotation": "3",
+   "width": 183,
+   "height": 330,
+   "grAb": [
+    106,
+    328
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGC4.png",
+   "sha256": "17376c89cb379859b3e281123e02dc9dc2a283e2f03452d33d2a2827f63fe2db",
+   "family": "PREG",
+   "frame": "C",
+   "rotation": "4",
+   "width": 136,
+   "height": 330,
+   "grAb": [
+    65,
+    328
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGC5.png",
+   "sha256": "5422b466ce56dfe2bb32496e3432958cda3a209e550e653cbfbdd328796b2820",
+   "family": "PREG",
+   "frame": "C",
+   "rotation": "5",
+   "width": 158,
+   "height": 330,
+   "grAb": [
+    82,
+    328
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGC6.png",
+   "sha256": "b98fe39319a5fb1a7ca1ca58980aea844346171f73e50513414362482b28bf0f",
+   "family": "PREG",
+   "frame": "C",
+   "rotation": "6",
+   "width": 190,
+   "height": 331,
+   "grAb": [
+    70,
+    329
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGC7.png",
+   "sha256": "e596826a5f0fc6406b02e8ac5a0b5a9cda2060ad8b3acc604757c5e362a1de69",
+   "family": "PREG",
+   "frame": "C",
+   "rotation": "7",
+   "width": 183,
+   "height": 329,
+   "grAb": [
+    77,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGC8.png",
+   "sha256": "f72796aeed157aa7ed5c6d7a091bf8d258895881f04e5edcc97eb7e1b1e4fafc",
+   "family": "PREG",
+   "frame": "C",
+   "rotation": "8",
+   "width": 136,
+   "height": 329,
+   "grAb": [
+    70,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGD1.png",
+   "sha256": "64f3ca2857776d71618f5a4b0a7d1a15e7fd82244fbf01627ed1898b69cb837a",
+   "family": "PREG",
+   "frame": "D",
+   "rotation": "1",
+   "width": 162,
+   "height": 329,
+   "grAb": [
+    81,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGD2.png",
+   "sha256": "c6150b882eefb09f465730ca1ecf4cb314dc0d675e37a8cded478f271c240915",
+   "family": "PREG",
+   "frame": "D",
+   "rotation": "2",
+   "width": 156,
+   "height": 328,
+   "grAb": [
+    87,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGD3.png",
+   "sha256": "f28b37cd894b29ba1331a22fc3ca4a27e4d9c22dcf0a2aa0efaad0bcbf8ae72b",
+   "family": "PREG",
+   "frame": "D",
+   "rotation": "3",
+   "width": 136,
+   "height": 328,
+   "grAb": [
+    60,
+    325
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGD4.png",
+   "sha256": "4b03cc4ba5b20eee4e183acdf0d118b8e4508137e51a522966327295cdf57d30",
+   "family": "PREG",
+   "frame": "D",
+   "rotation": "4",
+   "width": 157,
+   "height": 329,
+   "grAb": [
+    87,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGD5.png",
+   "sha256": "de92cb663d7f5f413ee5875ed9ac7e62b2a444088333456c656353db6720dd02",
+   "family": "PREG",
+   "frame": "D",
+   "rotation": "5",
+   "width": 162,
+   "height": 328,
+   "grAb": [
+    81,
+    325
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGD6.png",
+   "sha256": "5e9a06017f2375ea637ee560c6ae85df9184c18672dfa322988b42675164bb2e",
+   "family": "PREG",
+   "frame": "D",
+   "rotation": "6",
+   "width": 156,
+   "height": 328,
+   "grAb": [
+    69,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGD7.png",
+   "sha256": "d7d8d1043fdb2c6bd573f61abe6a264f878b7e5574f76ea4e2ee3d6360aead1e",
+   "family": "PREG",
+   "frame": "D",
+   "rotation": "7",
+   "width": 136,
+   "height": 330,
+   "grAb": [
+    75,
+    328
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGD8.png",
+   "sha256": "9e73af00080a024cc2ab9a59aa1be3e3dfef277f07be37ba1214605cfe9d2691",
+   "family": "PREG",
+   "frame": "D",
+   "rotation": "8",
+   "width": 157,
+   "height": 329,
+   "grAb": [
+    70,
+    327
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGE1.png",
+   "sha256": "2b5f6c25bc8498aec5e54197d57e6ecf6e1a36fc5e4d9c007e7ce0f75b753d02",
+   "family": "PREG",
+   "frame": "E",
+   "rotation": "1",
+   "width": 158,
+   "height": 330,
+   "grAb": [
+    82,
+    328
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGE2.png",
+   "sha256": "bd4b0f21c0921be9f80af6796f254b8906afdfb31303d2b680389820579df9b8",
+   "family": "PREG",
+   "frame": "E",
+   "rotation": "2",
+   "width": 136,
+   "height": 329,
+   "grAb": [
+    66,
+    326
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGE3.png",
+   "sha256": "524993ee7df8d5e4438dbfe02d33730697604ecd0c7c78d94936b1cb991075b1",
+   "family": "PREG",
+   "frame": "E",
+   "rotation": "3",
+   "width": 183,
+   "height": 330,
+   "grAb": [
+    106,
+    328
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGE4.png",
+   "sha256": "fb81456647e9116a7a4720940c6207392af4098a80543b0b8cc24a20c512d9d3",
+   "family": "PREG",
+   "frame": "E",
+   "rotation": "4",
+   "width": 191,
+   "height": 330,
+   "grAb": [
+    120,
+    328
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGE5.png",
+   "sha256": "b64d988bd5d534082384eda5bea7ecf9488503e1487d0fda5bbb3d4ac7aff43e",
+   "family": "PREG",
+   "frame": "E",
+   "rotation": "5",
+   "width": 158,
+   "height": 331,
+   "grAb": [
+    76,
+    329
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGE6.png",
+   "sha256": "3f597c9e623061a52bb81bc291b6d8a97a07aac32e5ca887465e692f07264737",
+   "family": "PREG",
+   "frame": "E",
+   "rotation": "6",
+   "width": 136,
+   "height": 331,
+   "grAb": [
+    69,
+    329
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGE7.png",
+   "sha256": "2afe994f14edf6979397eb5f61fa8295c63470629616f07bf87ffef182285423",
+   "family": "PREG",
+   "frame": "E",
+   "rotation": "7",
+   "width": 183,
+   "height": 330,
+   "grAb": [
+    77,
+    328
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGE8.png",
+   "sha256": "63c887e44fb1f7af7efd61b65f39cc4ecb68a67f44f633caea73cf4670d11e16",
+   "family": "PREG",
+   "frame": "E",
+   "rotation": "8",
+   "width": 191,
+   "height": 331,
+   "grAb": [
+    71,
+    329
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "See",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGF1.png",
+   "sha256": "69287f10b1ac1c20403866021b6ba5f6b262d5541b90e35f0648b9f22d6a7e22",
+   "family": "PREG",
+   "frame": "F",
+   "rotation": "1",
+   "width": 221,
+   "height": 364,
+   "grAb": [
+    110,
+    362
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 26
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGF2.png",
+   "sha256": "f11a80eba6880a1a8686a649494aa7e42a702cb2e0898886cfcd601613292b2d",
+   "family": "PREG",
+   "frame": "F",
+   "rotation": "2",
+   "width": 216,
+   "height": 362,
+   "grAb": [
+    71,
+    359
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 26
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGF3.png",
+   "sha256": "4761fbbae5c9feaadbe266cb7335790ac0fbfd8a525a9ff490d780be2050691c",
+   "family": "PREG",
+   "frame": "F",
+   "rotation": "3",
+   "width": 193,
+   "height": 363,
+   "grAb": [
+    66,
+    360
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 26
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGF4.png",
+   "sha256": "87a9ddb20bc793e7c8c431758cf4e767b88b0760a68cc8aef22d66606c037f04",
+   "family": "PREG",
+   "frame": "F",
+   "rotation": "4",
+   "width": 232,
+   "height": 365,
+   "grAb": [
+    67,
+    363
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 26
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGF5.png",
+   "sha256": "4c349c65c6df38264bb13b39f940155bbe4a8b1bda639eb9058762e138eb626a",
+   "family": "PREG",
+   "frame": "F",
+   "rotation": "5",
+   "width": 221,
+   "height": 365,
+   "grAb": [
+    110,
+    363
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 26
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGF6.png",
+   "sha256": "4395c9736595b04cc6247e7ce825969db87601119e594926d1131a05b6ce0bf1",
+   "family": "PREG",
+   "frame": "F",
+   "rotation": "6",
+   "width": 216,
+   "height": 363,
+   "grAb": [
+    144,
+    361
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 26
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGF7.png",
+   "sha256": "1ba1cd58f90bda5ef4a29d4bb9685b72a293a1492ab5d3e293f67bcbf4675347",
+   "family": "PREG",
+   "frame": "F",
+   "rotation": "7",
+   "width": 193,
+   "height": 363,
+   "grAb": [
+    127,
+    361
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 26
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGF8.png",
+   "sha256": "15797d147c4db599e694983dcdb1868bf0853cb353e5a723c8552392d133aa6f",
+   "family": "PREG",
+   "frame": "F",
+   "rotation": "8",
+   "width": 232,
+   "height": 364,
+   "grAb": [
+    164,
+    362
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 26
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGG1.png",
+   "sha256": "b79b142a65fd202ab7fba4b547a026d4fc9cdc4ea8019505e5d3095b77bde8c6",
+   "family": "PREG",
+   "frame": "G",
+   "rotation": "1",
+   "width": 188,
+   "height": 314,
+   "grAb": [
+    70,
+    312
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGG2.png",
+   "sha256": "f30b9b330c17a3ace4ac7806e2ae21873ef61c2c937646f78d9a2529a50091e8",
+   "family": "PREG",
+   "frame": "G",
+   "rotation": "2",
+   "width": 293,
+   "height": 315,
+   "grAb": [
+    161,
+    313
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGG3.png",
+   "sha256": "2e283b6cbd0233bc949f63a15a68512fdd57f01fef5ee49ef62e7f627eefcd43",
+   "family": "PREG",
+   "frame": "G",
+   "rotation": "3",
+   "width": 357,
+   "height": 315,
+   "grAb": [
+    218,
+    313
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGG4.png",
+   "sha256": "fb68aa9e931f04f30f7844a05ce735ff81be4622eef8e7f58e9f41edaf6fc141",
+   "family": "PREG",
+   "frame": "G",
+   "rotation": "4",
+   "width": 284,
+   "height": 314,
+   "grAb": [
+    153,
+    312
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGG5.png",
+   "sha256": "57e8e88e8baab81463227c5d0a309111c4e013d868d37f6c4349a611338ddca7",
+   "family": "PREG",
+   "frame": "G",
+   "rotation": "5",
+   "width": 188,
+   "height": 314,
+   "grAb": [
+    118,
+    311
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGG6.png",
+   "sha256": "525b0fdd6acfc882bd315177d444749f568f757e1c96e2ce0a73692ed2a54d5b",
+   "family": "PREG",
+   "frame": "G",
+   "rotation": "6",
+   "width": 293,
+   "height": 315,
+   "grAb": [
+    131,
+    313
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGG7.png",
+   "sha256": "c04bfabe5cc46136df404fe006ee969bd14035acb57298c1d807fc6907797ff4",
+   "family": "PREG",
+   "frame": "G",
+   "rotation": "7",
+   "width": 357,
+   "height": 315,
+   "grAb": [
+    139,
+    313
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGG8.png",
+   "sha256": "0f1d95bbace765238162a0f68d6f8c73113f4f84fbd45a6f04ab34f7250ce619",
+   "family": "PREG",
+   "frame": "G",
+   "rotation": "8",
+   "width": 284,
+   "height": 314,
+   "grAb": [
+    131,
+    312
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 2
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGH1.png",
+   "sha256": "b8e5f4ed5aee204724e921a552bd57cfb1b2d83c311a3e3da435ac7300c36b4f",
+   "family": "PREG",
+   "frame": "H",
+   "rotation": "1",
+   "width": 275,
+   "height": 326,
+   "grAb": [
+    164,
+    324
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Pain",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGH2.png",
+   "sha256": "178ce8d10f2db0743980eed6bd9d6e86300a93d8ccb5ced5ebfd2375fc83a97d",
+   "family": "PREG",
+   "frame": "H",
+   "rotation": "2",
+   "width": 276,
+   "height": 324,
+   "grAb": [
+    178,
+    322
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Pain",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGH3.png",
+   "sha256": "f91f9a8462344396cedc8b3c2b129b7b7138b56f0cf530886b21a08d4f0ad8f7",
+   "family": "PREG",
+   "frame": "H",
+   "rotation": "3",
+   "width": 247,
+   "height": 325,
+   "grAb": [
+    154,
+    323
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Pain",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGH4.png",
+   "sha256": "8ed87f03b150eda73dcd5096d898cd3c3b1e299f2a30bc71225c25a9139a8e1e",
+   "family": "PREG",
+   "frame": "H",
+   "rotation": "4",
+   "width": 280,
+   "height": 327,
+   "grAb": [
+    182,
+    325
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Pain",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGH5.png",
+   "sha256": "7b142ff37e82ee46298dcde6cdff15a1c1d09bec85123188f729d8c15b259eff",
+   "family": "PREG",
+   "frame": "H",
+   "rotation": "5",
+   "width": 275,
+   "height": 325,
+   "grAb": [
+    111,
+    322
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Pain",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGH6.png",
+   "sha256": "d7879df0427096b43e760dc298271ba2c8d76605e8b6c33f18b685b58cce4000",
+   "family": "PREG",
+   "frame": "H",
+   "rotation": "6",
+   "width": 276,
+   "height": 326,
+   "grAb": [
+    97,
+    324
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Pain",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGH7.png",
+   "sha256": "9b8598f1c698a40326f7b0616842f9e3e1add4d99af49779be33eb9b5c3f3f87",
+   "family": "PREG",
+   "frame": "H",
+   "rotation": "7",
+   "width": 247,
+   "height": 326,
+   "grAb": [
+    92,
+    324
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Pain",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGH8.png",
+   "sha256": "5df0b10839766ce9d8d056bfb125068cb99099041deb46d96c6d2bd4cabf9d5e",
+   "family": "PREG",
+   "frame": "H",
+   "rotation": "8",
+   "width": 280,
+   "height": 324,
+   "grAb": [
+    98,
+    321
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Pain",
+     "tics": 5
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGI1.png",
+   "sha256": "64c6c15147a37962f64d0341b2e4c0ac93fc03a65aacd501841f8b04d855016f",
+   "family": "PREG",
+   "frame": "I",
+   "rotation": "1",
+   "width": 280,
+   "height": 317,
+   "grAb": [
+    130,
+    315
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGI2.png",
+   "sha256": "7dc28dbfc40341f588e898b29e6a48cb083ec2d16ced223e52300d8dbc2bef6b",
+   "family": "PREG",
+   "frame": "I",
+   "rotation": "2",
+   "width": 290,
+   "height": 317,
+   "grAb": [
+    182,
+    315
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGI3.png",
+   "sha256": "216b0370f2a6df1dcf84087620ecc17baa233488986827768c62772113aa027d",
+   "family": "PREG",
+   "frame": "I",
+   "rotation": "3",
+   "width": 236,
+   "height": 317,
+   "grAb": [
+    135,
+    315
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGI4.png",
+   "sha256": "efb45de996a9dacf1831acf95b28c2fc909db5f7ca98d41387f53e55c89b3982",
+   "family": "PREG",
+   "frame": "I",
+   "rotation": "4",
+   "width": 290,
+   "height": 315,
+   "grAb": [
+    178,
+    313
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGI5.png",
+   "sha256": "350e17264f9dd88fdf60ee8947611915abcef0ce80023f5ba54b4a1c9247f0bd",
+   "family": "PREG",
+   "frame": "I",
+   "rotation": "5",
+   "width": 280,
+   "height": 317,
+   "grAb": [
+    149,
+    315
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGI6.png",
+   "sha256": "af78a08ff42ae4cfefd824571bca38c74dbf9f00aa9a2d4aa0ac44f016a3b059",
+   "family": "PREG",
+   "frame": "I",
+   "rotation": "6",
+   "width": 290,
+   "height": 316,
+   "grAb": [
+    108,
+    314
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGI7.png",
+   "sha256": "2ece242e77daa09d01519af08c03f0264753fe6beda54c5b736d169c348c7ecf",
+   "family": "PREG",
+   "frame": "I",
+   "rotation": "7",
+   "width": 236,
+   "height": 315,
+   "grAb": [
+    101,
+    312
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGI8.png",
+   "sha256": "8547179143b0215e1730ad242b956351d03ba0d271f02e3ea15dc9b9b863d5a6",
+   "family": "PREG",
+   "frame": "I",
+   "rotation": "8",
+   "width": 290,
+   "height": 318,
+   "grAb": [
+    112,
+    316
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGJ1.png",
+   "sha256": "209d1de32f03dcc77470d4342fbd793f539cd9d5d906d0ec92ad35e5dcbfaa52",
+   "family": "PREG",
+   "frame": "J",
+   "rotation": "1",
+   "width": 245,
+   "height": 154,
+   "grAb": [
+    133,
+    152
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGJ2.png",
+   "sha256": "f1773bfc0da3b39285c582a480040cd56a22862d16635c8f0b8a0c3e876200c6",
+   "family": "PREG",
+   "frame": "J",
+   "rotation": "2",
+   "width": 353,
+   "height": 153,
+   "grAb": [
+    200,
+    151
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGJ3.png",
+   "sha256": "1b0f59e7fe83ac51d418299ff79a684ef524549d7c98bf87118ce6650e3488c2",
+   "family": "PREG",
+   "frame": "J",
+   "rotation": "3",
+   "width": 384,
+   "height": 155,
+   "grAb": [
+    226,
+    153
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGJ4.png",
+   "sha256": "9016e375c941d3ac637611cff74cc9307dc6efe79641ab00a9e5edba3bd46499",
+   "family": "PREG",
+   "frame": "J",
+   "rotation": "4",
+   "width": 310,
+   "height": 155,
+   "grAb": [
+    157,
+    153
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGJ5.png",
+   "sha256": "818dfcddb935b94e44dec518ceef7e39b65fbc60ff7aafd5c852a1d6760d7234",
+   "family": "PREG",
+   "frame": "J",
+   "rotation": "5",
+   "width": 245,
+   "height": 155,
+   "grAb": [
+    111,
+    153
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGJ6.png",
+   "sha256": "6f810c1b4853cf6e3b7f2a8684b186541d4d7a0f180300ba86b0ad1d3c429312",
+   "family": "PREG",
+   "frame": "J",
+   "rotation": "6",
+   "width": 353,
+   "height": 152,
+   "grAb": [
+    153,
+    149
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGJ7.png",
+   "sha256": "9c627f97e5e1521f79e0798c3cda309e296e5325ea852025c9ff374aa56f53ed",
+   "family": "PREG",
+   "frame": "J",
+   "rotation": "7",
+   "width": 384,
+   "height": 153,
+   "grAb": [
+    158,
+    151
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGJ8.png",
+   "sha256": "2760baed07b72270e51a07975aa0c4d3c4f08c4409311bb8ee64ed84671b5c96",
+   "family": "PREG",
+   "frame": "J",
+   "rotation": "8",
+   "width": 310,
+   "height": 154,
+   "grAb": [
+    152,
+    152
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": 7
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGK1.png",
+   "sha256": "05bee06b38297155c1b0cd625d66a0b0b45c49cdbe819d90ac92b55d8b343445",
+   "family": "PREG",
+   "frame": "K",
+   "rotation": "1",
+   "width": 246,
+   "height": 81,
+   "grAb": [
+    134,
+    79
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/PREGK2.png",
+   "sha256": "15371c904aef9182e8334eec5693b6b34f64b4e7264613c9efe7f125f86c12b5",
+   "family": "PREG",
+   "frame": "K",
+   "rotation": "2",
+   "width": 355,
+   "height": 81,
+   "grAb": [
+    196,
+    79
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/PREGK3.png",
+   "sha256": "773a87c10ab1edb7baac7bdc09ba46e7c7d9a6806ca6754b9199fb8c8b8cb029",
+   "family": "PREG",
+   "frame": "K",
+   "rotation": "3",
+   "width": 391,
+   "height": 80,
+   "grAb": [
+    214,
+    78
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/PREGK4.png",
+   "sha256": "e1ad19bceb0f9a1c816a37463d60820a2d32ea929004795192a861c40553dc83",
+   "family": "PREG",
+   "frame": "K",
+   "rotation": "4",
+   "width": 341,
+   "height": 81,
+   "grAb": [
+    182,
+    79
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/PREGK5.png",
+   "sha256": "735bf36a5fef0dab82640c5d6f94d3e2e95a67c18a7199b53da60333b1a6f53a",
+   "family": "PREG",
+   "frame": "K",
+   "rotation": "5",
+   "width": 246,
+   "height": 81,
+   "grAb": [
+    111,
+    79
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/PREGK6.png",
+   "sha256": "cbd6f018540608d0b68ffcf9300bede4a380813ecf1ba408e3917786f5827767",
+   "family": "PREG",
+   "frame": "K",
+   "rotation": "6",
+   "width": 355,
+   "height": 81,
+   "grAb": [
+    158,
+    79
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/PREGK7.png",
+   "sha256": "2a6b552d37caf62e4d93851ef924dbde3d4f5fbaaa958f9339a53157b576bb5e",
+   "family": "PREG",
+   "frame": "K",
+   "rotation": "7",
+   "width": 391,
+   "height": 81,
+   "grAb": [
+    177,
+    79
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/PREGK8.png",
+   "sha256": "b2914c1322e5ba9589f4c195992c2c6f5187b982b0472a08d7f2715d0c39c711",
+   "family": "PREG",
+   "frame": "K",
+   "rotation": "8",
+   "width": 341,
+   "height": 81,
+   "grAb": [
+    158,
+    79
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Death",
+     "tics": -1
+    }
+   ],
+   "terminal_model": true
+  },
+  {
+   "path": "src/sprites/enemies/PREGN1.png",
+   "sha256": "b30df320ef08bb985ebf23ff6be66c38a324dd177a3295713f0dd5f59e48e4fb",
+   "family": "PREG",
+   "frame": "N",
+   "rotation": "1",
+   "width": 197,
+   "height": 322,
+   "grAb": [
+    81,
+    320
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 12
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGN2.png",
+   "sha256": "1fed853f0a012e09184a76fe1ea6226e83b9bc804de0cf5d8526e2ff61b7939e",
+   "family": "PREG",
+   "frame": "N",
+   "rotation": "2",
+   "width": 232,
+   "height": 322,
+   "grAb": [
+    154,
+    320
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 12
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGN3.png",
+   "sha256": "f1856d68b9b476dbdd56aafbbe59ca694fd281f405808d1f512aaf097f703bbf",
+   "family": "PREG",
+   "frame": "N",
+   "rotation": "3",
+   "width": 237,
+   "height": 322,
+   "grAb": [
+    152,
+    320
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 12
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGN4.png",
+   "sha256": "21a17f11d2982676c34a878a08bb34e5debe7d15f2e1794dd44a024f16e39712",
+   "family": "PREG",
+   "frame": "N",
+   "rotation": "4",
+   "width": 180,
+   "height": 321,
+   "grAb": [
+    95,
+    319
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 12
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGN5.png",
+   "sha256": "f08f6111f0213abe56795b7267f19c1f22cd82f44e7004fea7739574176f1b8a",
+   "family": "PREG",
+   "frame": "N",
+   "rotation": "5",
+   "width": 197,
+   "height": 322,
+   "grAb": [
+    116,
+    320
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 12
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGN6.png",
+   "sha256": "fc84393759df7813bdc9db54b894964915cdf44f806459afd990050364297154",
+   "family": "PREG",
+   "frame": "N",
+   "rotation": "6",
+   "width": 232,
+   "height": 321,
+   "grAb": [
+    78,
+    319
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 12
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGN7.png",
+   "sha256": "727843c590ab94c34aa1d1fc57cfb41ff8f67b5f42e25c7528348b685503d711",
+   "family": "PREG",
+   "frame": "N",
+   "rotation": "7",
+   "width": 237,
+   "height": 321,
+   "grAb": [
+    84,
+    319
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 12
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PREGN8.png",
+   "sha256": "383bf39cf009cc120aa197ba06315f0f49e05c22cf3f2c64aac99c07409ccb63",
+   "family": "PREG",
+   "frame": "N",
+   "rotation": "8",
+   "width": 180,
+   "height": 324,
+   "grAb": [
+    84,
+    322
+   ],
+   "states": [
+    {
+     "actor": "RFPorteRegistre",
+     "state": "Missile",
+     "tics": 12
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PRGSA0.png",
+   "sha256": "693a1212db7f1cd59f66031fa6584aab6bf311253c377196f1e581d5827af326",
+   "family": "PRGS",
+   "frame": "A",
+   "rotation": "0",
+   "width": 72,
+   "height": 60,
+   "grAb": [
+    36,
+    30
+   ],
+   "states": [
+    {
+     "actor": "RFRegistryBundle",
+     "state": "Spawn",
+     "tics": 3
+    },
+    {
+     "actor": "RFRegistryBundle",
+     "state": "Death",
+     "tics": 6
+    }
+   ],
+   "terminal_model": false
+  },
+  {
+   "path": "src/sprites/enemies/PRGSB0.png",
+   "sha256": "86155ec874e4b1717c14a38b65e6a339a6605a9337ec5804bbdd17565844244a",
+   "family": "PRGS",
+   "frame": "B",
+   "rotation": "0",
+   "width": 72,
+   "height": 55,
+   "grAb": [
+    36,
+    27
+   ],
+   "states": [
+    {
+     "actor": "RFRegistryBundle",
+     "state": "Spawn",
+     "tics": 3
+    }
+   ],
+   "terminal_model": false
+  }
+ ],
+ "terminal_models": [
+  {
+   "path": "src/models/rf2_art_01/brancardier.obj",
+   "sha256": "8c269d4a826d4d09cfa9844196018b665b9537db9f2161fb07dedc057bb57c2b"
+  },
+  {
+   "path": "src/models/rf2_art_01/brancardier_skin.png",
+   "sha256": "2c425d7218f8859008befe91681ae2acebf19bfae38c76a00eb70e30c4d46e93"
+  },
+  {
+   "path": "src/models/rf2_art_01/orderly.obj",
+   "sha256": "345102b7b87184ceab4a9afae4ab066ee828d6158c58d6a89a4011e6140d1d9f"
+  },
+  {
+   "path": "src/models/rf2_art_01/orderly_skin.png",
+   "sha256": "d36b89b5b0bb3de5ac4fdc0b7e863f80a8f48adbd2d712cfd92a1de3f1452af7"
+  },
+  {
+   "path": "src/models/rf2_art_01/porte_registre.obj",
+   "sha256": "0aa8f3e4f6ef2eb9e42f21270521f4bc9d3257305e67f6c0c9c6e0f1df8f7618"
+  },
+  {
+   "path": "src/models/rf2_art_01/porte_registre_skin.png",
+   "sha256": "d1b089a0d56396f98d9c5b4d7275e0656cd7efc703f2f1aefec0e7533ad34547"
+  }
+ ]
+}
