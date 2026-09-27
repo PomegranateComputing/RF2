@@ -49,8 +49,8 @@ set "CFG=%ROOT%user\uzdoom_{slug}.ini"
 if not exist "%ROOT%user" mkdir "%ROOT%user"
 if not exist "%CFG%" if exist "%ROOT%user\uzdoom.ini" copy /y "%ROOT%user\uzdoom.ini" "%CFG%" >nul
 if not exist "%ROOT%user\savegames_{slug}" mkdir "%ROOT%user\savegames_{slug}"
-echo RF2 candidate {lot} : {pk3_rel}
-"%ENGINE%" -iwad "%IWAD%" -file "%PK3%" -config "%CFG%" -savedir "%ROOT%user\savegames_{slug}" %*
+echo RF2 candidate {lot} : {pk3_rel}{direct_note}
+"%ENGINE%" -iwad "%IWAD%" -file "%PK3%" -config "%CFG%" -savedir "%ROOT%user\savegames_{slug}" {direct}%*
 exit /b %errorlevel%
 '''
 
@@ -72,6 +72,8 @@ def main():
     ap.add_argument('--lot', required=True, help='lot id, e.g. UI-01, MAP-02, ART-02')
     ap.add_argument('--label', default='')
     ap.add_argument('--allow-dirty', action='store_true', help='export even with uncommitted changes (recorded)')
+    ap.add_argument('--direct', metavar='MAP', help='also write launchers that start this chapter directly '
+                    '(difficulty Service, the starting kit of the chapter), besides the ones that open the title')
     a = ap.parse_args()
     if not re.fullmatch(r'[A-Z0-9][A-Z0-9-]{1,24}', a.lot):
         print('lot: capitals, digits and dashes only')
@@ -97,9 +99,14 @@ def main():
                          f'config user\\uzdoom_{slug}.ini, saves user\\savegames_{slug}')
     (folder / 'BUILD_INFO.json').write_text(json.dumps(info, indent=2, ensure_ascii=False), encoding='utf-8')
     label_ascii = unicodedata.normalize('NFKD', a.label).encode('ascii', 'ignore').decode('ascii')   # cmd comments: plain ASCII
-    common = dict(lot=a.lot, label_ascii=label_ascii, pk3_rel=pk3_rel, sha=info['sha256'], slug=slug)
+    common = dict(lot=a.lot, label_ascii=label_ascii, pk3_rel=pk3_rel, sha=info['sha256'], slug=slug, direct='', direct_note='')
     (ROOT / f'JOUER_RF2_{a.lot}.cmd').write_text(LAUNCHER.format(root_expr='%~dp0', **common).replace('\n', '\r\n'), encoding='ascii')
     (folder / 'JOUER.cmd').write_text(LAUNCHER.format(root_expr='%~dp0..\\..\\..\\', **common).replace('\n', '\r\n'), encoding='ascii')
+    if a.direct:
+        m = a.direct.upper()
+        common.update(direct=f'-skill 2 +map {m} ', direct_note=f' - depart direct {m}')
+        (ROOT / f'JOUER_RF2_{a.lot}_{m}.cmd').write_text(LAUNCHER.format(root_expr='%~dp0', **common).replace('\n', '\r\n'), encoding='ascii')
+        (folder / f'JOUER_{m}.cmd').write_text(LAUNCHER.format(root_expr='%~dp0..\\..\\..\\', **common).replace('\n', '\r\n'), encoding='ascii')
     print(json.dumps(info, indent=2, ensure_ascii=False))
     return 0
 
