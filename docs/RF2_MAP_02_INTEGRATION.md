@@ -46,7 +46,22 @@ porte Maillot). Aucune troupe allemande n'est combattue ; les moteurs et la radi
 
 ## Preuves
 
-À compléter à l'export (dossier de la candidate) : traversées de bout en bout, film avec son, captures.
+Build `dist\candidates\RF2_MAP-02_20260927_1543\RF2_MAP-02.pk3`, sha256 `11167ce2…78b7c1`, commit `b3d14b0`.
+Dans `evidence/` :
+
+- `RF02_E2E.json` — RF02 joué avec ce build par le pilote automatique (commandes de joueur ordinaires, départ direct) :
+  passe A, 54 points de passage, 17 ennemis abattus, objectifs 1 à 8 dans l'ordre, sortie réelle du niveau ;
+  passe B, sauvegarde avant Cochin, arrêt du moteur, relance, chargement, mort, reprise au dernier point de
+  sauvegarde, sortie. PASS.
+- `RF01_E2E.json` — RF01 rejoué avec ce même build : A et B PASS, objectifs identiques à ceux du build accepté.
+- `film/RF02_traversee_avec_son.mp4` — la traversée complète en temps réel, 2 min 10 s, 1280×720, son du moteur
+  (mixage du jeu enregistré par OpenAL, gain inchangé, aucun échantillon saturé).
+- `scenes/` — treize vues des scènes (Santé, tram dehors et dedans, vitrine-miroir, ERREUR Ø, reflet de l'Amiga,
+  tableau des départs, atlas, pont, téléphone, colonne Morris, entrée du Luna Park, porte de service) ; `tour/` —
+  27 vues de la visite, en 1920×1080.
+- Les quinze scènes se déclenchent chacune une fois dans la traversée (marqueurs `RF_DEV_SCENE` du journal).
+- Lanceurs essayés depuis un autre dossier : départ direct (RF02 chargé en 3,6 s) et écran titre (pk3 chargé, titre
+  stable).
 
 ## Limites honnêtes
 
@@ -66,11 +81,13 @@ porte Maillot). Aucune troupe allemande n'est combattue ; les moteurs et la radi
 
 - Le directeur n'appliquait les lignes d'objectif et de fin de niveau qu'à RF01 : corrigé pour tous les chapitres,
   RF01 inchangé.
-- Les panneaux posés sur les murs : l'ancien calcul du kit place la texture sous la hauteur voulue (le moteur relève
-  une texture médiane avec un décalage positif, en pixels de texture). RF02 utilise le calcul corrigé. **RF01 accepté
-  n'a pas été modifié** : ses panneaux (ADMISSIONS, SORTIE, PAVILLON EST…) sont vraisemblablement affichés trop bas
-  ou masqués. À confirmer par le propriétaire ; correction possible en lot séparé.
+- **Les panneaux muraux de RF01 accepté ne s'affichent pas.** L'ancien calcul du kit enfonce la texture sous le sol
+  (le moteur relève une texture médiane avec un décalage positif, en pixels de texture). Preuve dans le dossier de la
+  candidate, `evidence/rf01_panneaux/` : même vue du hall, build accepté (porte de la cour sans panneau) et même carte
+  avec le seul décalage corrigé (PAVILLON EST au-dessus de la porte). RF02 utilise le calcul corrigé ; **RF01 n'a pas
+  été modifié**. Correction possible en lot séparé (treize panneaux : ADMISSIONS, SORTIE, PAVILLON EST, LINGERIE…),
+  sur décision du propriétaire.
 - Le rayon « utiliser » du moteur s'arrête au bord d'une table ou d'un comptoir surélevé et rate les petits objets :
-  après RF01, l'invite affichée devient la règle (la touche utilise l'objet nommé par l'invite). En RF01 (inchangé),
-  le pilote automatique ne lit jamais le registre d'admission posé sur une table (objectif 7 jamais atteint en test) :
-  même cause probable, à confirmer, correction possible en lot séparé.
+  après RF01, l'invite affichée devient la règle (la touche utilise l'objet nommé par l'invite). RF01 garde son
+  comportement accepté. Sa note du registre d'admission, posée sur une table, n'a pas pu être vérifiée par les tests
+  (le pilote automatique saute cet appui) : non vérifié, rien n'est affirmé.
