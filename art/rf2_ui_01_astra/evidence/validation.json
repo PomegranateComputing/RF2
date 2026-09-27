@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "runtime_files": 10,
+  "images_identical": true,
+  "sounds": [
+    {
+      "file": "sounds/ui/backup.wav",
+      "seconds": 0.17,
+      "peak_dbfs": -24.00218916664859,
+      "edge_samples_zero": true
+    },
+    {
+      "file": "sounds/ui/change.wav",
+      "seconds": 0.065,
+      "peak_dbfs": -27.00411217668814,
+      "edge_samples_zero": true
+    },
+    {
+      "file": "sounds/ui/choose.wav",
+      "seconds": 0.14,
+      "peak_dbfs": -20.00212083742674,
+      "edge_samples_zero": true
+    },
+    {
+      "file": "sounds/ui/clear.wav",
+      "seconds": 0.2,
+      "peak_dbfs": -26.00153564352592,
+      "edge_samples_zero": true
+    },
+    {
+      "file": "sounds/ui/cursor.wav",
+      "seconds": 0.075,
+      "peak_dbfs": -27.00411217668814,
+      "edge_samples_zero": true
+    },
+    {
+      "file": "sounds/ui/dismiss.wav",
+      "seconds": 0.11,
+      "peak_dbfs": -27.00411217668814,
+      "edge_samples_zero": true
+    },
+    {
+      "file": "sounds/ui/invalid.wav",
+      "seconds": 0.11,
+      "peak_dbfs": -23.99798801075626,
+      "edge_samples_zero": true
+    },
+    {
+      "file": "sounds/ui/prompt.wav",
+      "seconds": 0.14614583333333334,
+      "peak_dbfs": -22.999239001376367,
+      "edge_samples_zero": true
+    }
+  ],
+  "protected_package_entries_identical": 1338,
+  "package_sha256": "789305070b88baaacf02fd4d21c8115f834488ca5ab4472bb546c6b20c335a2c",
+  "menu_code_and_sndinfo_unchanged": true,
+  "audio_audition": false,
+  "owner_approval": false
+}
