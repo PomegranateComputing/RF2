@@ -71,17 +71,18 @@ class RFDirector : EventHandler
 
     override void WorldLineActivated(WorldEvent e)
     {
-        if (!(Level.MapName ~== "RF01") || e.ActivatedLine == null || e.Thing == null) return;
+        if (e.ActivatedLine == null || e.Thing == null) return;
         let line = e.ActivatedLine;
-        // Door_Open on tag 50: the porch grille winch.
-        if (line.special == 11 && line.args[0] == 50 && !winchUsed)
+        // Door_Open on tag 50: the porch grille winch (RF01).
+        if (Level.MapName ~== "RF01" && line.special == 11 && line.args[0] == 50 && !winchUsed)
         {
             winchUsed = true;
             SetObjective(8);
             e.Thing.A_Print(StringTable.Localize("$RF_MSG_WINCH"), 5.0);
             e.Thing.A_StartSound("rf/world/winch", CHAN_AUTO, 0, 1.0, ATTN_NONE);
         }
-        // Trigger lines carry objective updates in their UDMF field user_objective.
+        // Trigger lines carry objective updates in their UDMF field user_objective, the ending in user_outro
+        // (every chapter).
         SetObjective(line.GetUDMFInt('user_objective'));
         if (line.GetUDMFInt('user_outro') > 0) StartOutro(e.Thing);
     }
