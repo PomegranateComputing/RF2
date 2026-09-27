@@ -95,6 +95,22 @@ RF_MONSTER_PORTE = "Porte-Registre";
 RF_OBIT_ORDERLY = "Viktor a été maîtrisé par un infirmier.";
 RF_OBIT_BRANCARDIER = "Viktor a été heurté par le brancardier.";
 RF_OBIT_PORTE = "Viktor a été classé par un porte-registre.";
+// Engine obituaries (a death without an RF attacker: fall, crusher, hazard, console): the player is Viktor,
+// never the engine's default player name.
+OB_DEFAULT = "Viktor n'a pas tenu.";
+OB_FALLING = "Viktor est tombé de trop haut.";
+OB_CRUSH = "Viktor a été écrasé.";
+OB_EXIT = "Viktor n'est pas sorti.";
+OB_WATER = "Viktor s'est noyé.";
+OB_SLIME = "Viktor a respiré ce qu'il ne fallait pas.";
+OB_LAVA = "Viktor a brûlé.";
+OB_BARREL = "Viktor était trop près de l'explosion.";
+OB_SPLASH = "Viktor était au mauvais endroit.";
+OB_R_SPLASH = "Viktor était trop près de l'explosion.";
+OB_ROCKET = "Viktor était trop près de l'explosion.";
+OB_KILLEDSELF = "Viktor s'est blessé lui-même.";
+OB_SUICIDE = "Viktor a abandonné.";
+OB_VOODOO = "Viktor n'a pas tenu.";
 
 RF_OBJ_WAKE = "Sortir de la chambre.";
 RF_OBJ_GRILLE = "Trouver la clé de la grille du pavillon.";
