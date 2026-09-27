@@ -514,6 +514,7 @@ class RFParis : EventHandler
             {
                 if (phoneThing != null) phoneThing.A_StartSound("rf/paris/phonetone", CHAN_VOICE, 0, 0.7);
                 Say(u, "RF_RF02_PHONE_5", 5.0);
+                Wake(PHONE_WAVE_TID, u);          // the line is dead; the staff are already coming out of the side streets
             }
             else if (t == 720)
             {
@@ -523,7 +524,6 @@ class RFParis : EventHandler
             else if (t == 800)
             {
                 phoneState = 3;
-                Wake(PHONE_WAVE_TID, u);
                 Objective(7);
                 seqScene = 0;
             }
