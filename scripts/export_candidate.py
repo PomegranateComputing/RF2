@@ -15,6 +15,7 @@ The launchers start on the title screen; extra arguments pass through (for examp
 
 Usage: python scripts/export_candidate.py --lot UI-01 --label "texte" [--allow-dirty]
 """
+import unicodedata
 import argparse, hashlib, json, re, shutil, subprocess, sys, time
 from pathlib import Path
 
@@ -95,7 +96,7 @@ def main():
                 launcher=f'JOUER_RF2_{a.lot}.cmd (newest of the lot) / {folder.name}\\JOUER.cmd (this build); '
                          f'config user\\uzdoom_{slug}.ini, saves user\\savegames_{slug}')
     (folder / 'BUILD_INFO.json').write_text(json.dumps(info, indent=2, ensure_ascii=False), encoding='utf-8')
-    label_ascii = a.label.encode('ascii', 'replace').decode('ascii')
+    label_ascii = unicodedata.normalize('NFKD', a.label).encode('ascii', 'ignore').decode('ascii')   # cmd comments: plain ASCII
     common = dict(lot=a.lot, label_ascii=label_ascii, pk3_rel=pk3_rel, sha=info['sha256'], slug=slug)
     (ROOT / f'JOUER_RF2_{a.lot}.cmd').write_text(LAUNCHER.format(root_expr='%~dp0', **common).replace('\n', '\r\n'), encoding='ascii')
     (folder / 'JOUER.cmd').write_text(LAUNCHER.format(root_expr='%~dp0..\\..\\..\\', **common).replace('\n', '\r\n'), encoding='ascii')
