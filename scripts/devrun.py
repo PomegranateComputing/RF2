@@ -43,7 +43,8 @@ def run(pk3, name, map_name=None, norun=False, tour=False, autopilot=False, seco
     args = [str(ENGINE), '-stdout', '-iwad', str(IWAD), '-file', str(pk3), '-config', str(cfg),
             '-savedir', str(DEV / 'saves'),
             '+vid_fullscreen', '0', '+screenshot_dir', str(shots), '+screenshot_type', 'png', '+enablescriptscreenshot', '1',
-            '+i_pauseinbackground', '0']   # a shared machine: another window taking focus must not pause the test
+            '+i_pauseinbackground', '0',   # a shared machine: another window taking focus must not pause the test
+            '+screenshot_quiet', '1']      # no "Captured ..." line in the next capture (dev config only)
     if norun:
         args.append('-norun')
     if width and height:
