@@ -155,3 +155,16 @@ rf/orderly/step3 "sounds/orderly/step_03.wav"
 rf/fal/shell3 "sounds/fal/shell_03.wav"
 
 rf/player/step3 "sounds/orderly/step_03.wav"
+
+// RF2-UI-01 menu sounds (scripts/ui/ui_sounds.py, CC0 Kenney takes): paper and metal touches instead of the
+// IWAD's switch, pistol and "oof" sounds. Short and dry; no music.
+menu/cursor               "sounds/ui/cursor.wav"
+menu/choose               "sounds/ui/choose.wav"
+menu/advance              "sounds/ui/choose.wav"
+menu/change               "sounds/ui/change.wav"
+menu/backup               "sounds/ui/backup.wav"
+menu/activate             "sounds/ui/backup.wav"
+menu/clear                "sounds/ui/clear.wav"
+menu/invalid              "sounds/ui/invalid.wav"
+menu/prompt               "sounds/ui/prompt.wav"
+menu/dismiss              "sounds/ui/dismiss.wav"

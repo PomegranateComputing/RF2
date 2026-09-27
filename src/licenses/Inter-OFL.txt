@@ -1,5 +1,5 @@
-The RF2 fonts RFText, RFTitle, RFMenu and RFHud (fonts/rftext, fonts/rftitle, fonts/rfmenu,
-fonts/rfhud) are rasterized from the Inter typeface. They are a Modified Version of the Font
+The RF2 fonts RFText, RFTitle, RFMenu, RFHud and RFLogo (fonts/rftext, fonts/rftitle, fonts/rfmenu,
+fonts/rfhud, fonts/rflogo) are rasterized from the Inter typeface. They are a Modified Version of the Font
 Software below and are distributed under the same license.
 
 Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)

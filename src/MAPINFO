@@ -15,8 +15,15 @@ gameinfo
     dimcolor = "0a 08 09"
     dimamount = 0.6
     MenuFontColor_Title = "White"
-    MenuFontColor_Label = "White"
+    MenuFontColor_Label = "Gray"
+    MenuFontColor_Value = "Tan"
+    MenuFontColor_Action = "Gray"
+    MenuFontColor_Header = "DarkRed"
+    MenuFontColor_Highlight = "White"
+    MenuFontColor_Selection = "White"
+    MenuSliderColor = "DarkRed"
     SkyFlatName = "F_SKY1"
+    MessageBoxClass = "RFMessageBox"
 }
 
 clearskills

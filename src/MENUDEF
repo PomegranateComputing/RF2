@@ -5,6 +5,8 @@ DefaultListMenu
     LineSpacing 18
 }
 
+// RF2-UI-01: main menu and pause (one class, built from the game state), difficulty, credits and the
+// engine's load/save lists are drawn by the RF classes of zscript/rf/menu.zs.
 ListMenu "MainMenu"
 {
     Class "RFMainMenu"
@@ -21,7 +23,7 @@ ListMenu "RFCreditsMenu"
 
 ListMenu "SkillMenu"
 {
-    StaticText 56, 48, "$RF_MENU_SKILL", "Red"
+    Class "RFSkillMenu"
     Position 56, 96
     LineSpacing 18
 }
@@ -30,6 +32,21 @@ ListMenu "EpisodeMenu"
 {
     Position 56, 96
     LineSpacing 18
+}
+
+ListMenu "LoadGameMenu"
+{
+    NetgameMessage "$LOADNET"
+    Position 80, 54
+    Class "RFLoadMenu"
+    Size Clean
+}
+
+ListMenu "SaveGameMenu"
+{
+    Position 80, 40
+    Class "RFSaveMenu"
+    Size Clean
 }
 
 // Options (UI spec): the native UZDoom pages in the order of the spec, the game's own settings,

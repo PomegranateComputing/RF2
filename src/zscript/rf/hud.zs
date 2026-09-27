@@ -12,6 +12,31 @@ class RFStatusBar : BaseStatusBar
     Array<int> noteStart;
     String midText;
     int midStart, midTics;
+    int deathStart;          // map time of the player's death, -1 while alive
+
+    // A per-chapter LANGUAGE string (RF_<MAP>_<suffix>), "" when the chapter has none.
+    static String ChapterText(String suffix)
+    {
+        String key = String.Format("RF_%s_%s", Level.MapName.MakeUpper(), suffix);
+        String text = StringTable.Localize("$" .. key);
+        return text == key ? "" : text;
+    }
+
+    // Death and resume (RF2-UI-01): the view sinks to charcoal, one line, and the two real actions:
+    // use resumes (the engine reloads the last save, or restarts the chapter without one), Escape opens the menu.
+    void DrawDeath(double s)
+    {
+        double t = (Level.maptime - deathStart) / 35.0;
+        double a = clamp((t - 0.6) / 1.4, 0.0, 1.0);
+        if (a <= 0) return;
+        Screen.Dim(0x0e0c0e, 0.72 * a, 0, 0, Screen.GetWidth(), Screen.GetHeight());
+        Fill(Color(int(255 * a), 0x7a, 0x1f, 0x2b), -150 * s, 150 * s, 300 * s, 2 * s, DI_SCREEN_CENTER_TOP);
+        DrawString(bigFont, StringTable.Localize("$RF_UI_DEAD"), (0, 160 * s), DI_SCREEN_CENTER_TOP | DI_TEXT_ALIGN_CENTER, Font.CR_WHITE, a, -1, 0, (s * 1.2, s * 1.2));
+        double b = clamp((t - 1.6) / 0.6, 0.0, 1.0);
+        if (b <= 0) return;
+        String line = KeyPrompt("+use", "$RF_UI_RESUME") .. "        [Esc] " .. StringTable.Localize("$RF_UI_MENU");
+        DrawString(labelFont, line, (0, 196 * s), DI_SCREEN_CENTER_TOP | DI_TEXT_ALIGN_CENTER, Font.CR_GREY, b, -1, 0, (s * 0.85, s * 0.85));
+    }
 
     TextureID ViktorPortrait() const
     {
@@ -39,7 +64,7 @@ class RFStatusBar : BaseStatusBar
         double t = tics / 35.0;
         Screen.Dim(0, clamp(t / 2.5, 0.0, 1.0), 0, 0, Screen.GetWidth(), Screen.GetHeight());
         Array<String> lines;
-        StringTable.Localize("$RF_RF01_EXIT").Split(lines, "\n");
+        ChapterText("EXIT").Split(lines, "\n");
         double y = 150 - lines.Size() * 9;
         for (int i = 0; i < lines.Size(); i++)
         {
@@ -153,6 +178,7 @@ class RFStatusBar : BaseStatusBar
     {
         Super.Init();
         SetSize(0, 640, 360);
+        deathStart = -1;
         // RF2 font folders (scripts/mapkit/fonts.py); engine fonts only as a fallback.
         Font text = Font.GetFont('RFText');
         Font digits = Font.GetFont('RFHud');
@@ -233,11 +259,11 @@ class RFStatusBar : BaseStatusBar
         // Objective (top left, small) and level title flash.
         if (director != null)
         {
-            if (director.titleTics > 0)
+            if (director.titleTics > 0 && CPlayer.health > 0)
             {
                 double a = min(1.0, director.titleTics / 35.0);
                 String title = Level.LevelName.MakeUpper();
-                String date = StringTable.Localize("$RF_RF01_DATE");
+                String date = ChapterText("DATE");
                 // Soft drop shadow first: the title sits over bright plaster at the start.
                 DrawString(bigFont, title, (1.5 * s, 93.5 * s), DI_SCREEN_CENTER_TOP | DI_TEXT_ALIGN_CENTER, Font.CR_BLACK, a * 0.65, -1, 0, (s * 1.35, s * 1.35));
                 DrawString(bigFont, title, (0, 92 * s), DI_SCREEN_CENTER_TOP | DI_TEXT_ALIGN_CENTER, Font.CR_WHITE, a, -1, 0, (s * 1.35, s * 1.35));
@@ -252,6 +278,14 @@ class RFStatusBar : BaseStatusBar
         }
 
         DrawMessages(s, director != null ? director.objective : "");
+
+        if (CPlayer.health <= 0)
+        {
+            if (deathStart < 0 || deathStart > Level.maptime) deathStart = Level.maptime;
+            DrawDeath(s);
+            return;
+        }
+        deathStart = -1;
 
         if (director != null && director.outro)
         {
