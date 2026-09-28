@@ -124,12 +124,18 @@ class MapBuilder:
         for (cx, cy) in self._cells(*self._range(x0, y0, x1, y1)):
             self.faces[(cx, cy, side)] = props
 
-    def decor_line(self, x0, y0, x1, y1, tex, zbottom=None, blocking=False, offsety=0, **flags):
-        """Two-sided line inside one sector carrying a masked middle texture (signs, rails)."""
+    def decor_line(self, x0, y0, x1, y1, tex, zbottom=None, blocking=False, offsety=0, yscale=None, **flags):
+        """Two-sided line inside one sector carrying a masked middle texture (signs, rails).
+
+        yscale: the texture's YScale. Given, the texture's bottom is put at zbottom as the engine reads it: with
+        the middle texture pegged to the floor, a positive row offset raises it, in texture pixels (height in map
+        units x YScale). Not given: the legacy offset, negative and unscaled, which the engine draws below the
+        intended height (RF01 accepted on 27/09 used it: its plaques were not visible)."""
         dx, dy = x1 - x0, y1 - y0
         L = math.hypot(dx, dy) or 1.0
         ix, iy = 2 * dx / L, 2 * dy / L
-        self.decor.append(dict(x0=x0 + ix, y0=y0 + iy, x1=x1 - ix, y1=y1 - iy, tex=tex, zbottom=zbottom, blocking=blocking, offsety=offsety, flags=flags))
+        self.decor.append(dict(x0=x0 + ix, y0=y0 + iy, x1=x1 - ix, y1=y1 - iy, tex=tex, zbottom=zbottom, blocking=blocking,
+                               offsety=offsety, yscale=yscale, flags=flags))
 
     def trigger(self, x0, y0, x1, y1, special, args=(), repeat=False, monster=False, objective=0, fields=None):
         """Invisible walk-over line inside one sector. objective > 0 is written as the UDMF field
@@ -426,7 +432,10 @@ class MapBuilder:
                 d['clipmidtex'] = True
                 if dl.get('zbottom') is not None:
                     d['dontpegbottom'] = True
-                    off = -(dl['zbottom'] - c.floor)
+                    if dl.get('yscale') is None:
+                        off = -(dl['zbottom'] - c.floor)
+                    else:
+                        off = (dl['zbottom'] - c.floor) * dl['yscale']
                     fs['offsety'] = off
                     bs['offsety'] = off
                 if dl.get('offsety'):

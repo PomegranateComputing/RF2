@@ -119,15 +119,17 @@ def pillar(x, y, size=32):
 
 
 def sign(x, y, side, name, zbottom=92):
-    """Enamel plaque: 64-long decor line 4 units off a wall. side = wall the sign hangs on."""
+    """Enamel plaque: 64-long decor line against a wall (1 unit off it). side = wall the sign hangs on.
+    zbottom: height of the plaque's lower edge. RFSIGN textures are 4 pixels per unit (TEXTURES.rf01): the offset is
+    computed as the engine reads it (RF01-PAN, 27/09 evening; before, the 13 plaques were drawn under the floor)."""
     if side == 'W':
-        m.decor_line(x + 4, y, x + 4, y + 64, name, zbottom)
+        m.decor_line(x + 1, y, x + 1, y + 64, name, zbottom, yscale=4)
     elif side == 'E':
-        m.decor_line(x - 4, y + 64, x - 4, y, name, zbottom)
+        m.decor_line(x - 1, y + 64, x - 1, y, name, zbottom, yscale=4)
     elif side == 'S':
-        m.decor_line(x + 64, y + 4, x, y + 4, name, zbottom)
+        m.decor_line(x + 64, y + 1, x, y + 1, name, zbottom, yscale=4)
     else:
-        m.decor_line(x, y - 4, x + 64, y - 4, name, zbottom)
+        m.decor_line(x, y - 1, x + 64, y - 1, name, zbottom, yscale=4)
 
 
 def lamp(x, y, z, r=255, g=214, b=160, radius=200):
