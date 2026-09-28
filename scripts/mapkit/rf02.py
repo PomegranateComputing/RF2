@@ -76,6 +76,7 @@ T_SACOCHE, T_BUCKET, T_PHONE, T_RADIO, T_ATLAS, T_FOUNTAIN, T_SPOT, T_MATTRESS, 
 # the figures of Astra (RF2_MAP_02_REPRISE, 28/09), src/zscript/rf/figures.zs: visual only
 T_FIG_FORMS, T_FIG_PRAM, T_FIG_SANTE_A, T_FIG_SANTE_B, T_FIG_SANTE_C, T_FIG_SANTE_D = 30641, 30642, 30643, 30644, 30645, 30646
 T_FIG_TRAM, T_FIG_TSF, T_FIG_COCHIN, T_FIG_VALISE, T_VIKTOR_MIRROR = 30647, 30648, 30649, 30650, 30651
+T_PRAM = 30652                  # Astra's pram model (RF02-B)
 T_DECAL = 9200
 DAMP, GRIME, STREAK, SCUFF = 11001, 11002, 11003, 11004
 
@@ -225,9 +226,9 @@ m.thing(3456, 36, T_BUCKET, args=(S_FORMS,))
 m.thing(3456, 36, T_FLICKER, args=(255, 150, 80, 110, 80), z=28)
 m.thing(3478, 30, T_FIG_FORMS, angle=180)                           # F02-01 feeds them to the fire, 20 u from the bucket
 # the pram full of registers
-block(2992, 272, 3040, 304, 36, 'RFW_TOP', 'RFW_TBLS', m.cells[(2992 // UNIT, 272 // UNIT)])
-m.thing(3016, 288, T_NOTE, angle=90, args=(20, 1), z=36)
-m.thing(3060, 288, T_FIG_PRAM, angle=180)                           # F02-02 at the handle (she walks when the pram model comes)
+m.thing(3016, 288, T_PRAM, angle=180)                               # pointing west, the handle toward the woman
+m.thing(3006, 288, T_NOTE, angle=90, args=(20, 1, 3), z=35)        # the registers of the model, read with the use key
+m.thing(3054, 288, T_FIG_PRAM, angle=180)                           # F02-02 her hands on the handle (still: no walk yet)
 litter([(3620, 150, 20), (3500, 210, 130), (3300, 110, 250), (3150, 180, 75), (2950, 90, 300), (2700, 230, 190),
         (3420, 280, 40), (3200, 30, 160)])
 m.thing(3200, 160, T_AMB, args=(4, 45))

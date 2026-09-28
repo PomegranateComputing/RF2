@@ -95,6 +95,19 @@ class RFAtlas : RFInteract          // the atlas of the colonies on the book bar
     States { Spawn: RFNP B -1; Stop; }
 }
 
+class RFPram : Actor                // the pram full of registers tied with string (l. 91): Astra's model, 47 x 30 u
+{
+    Default
+    {
+        +SOLID
+        +NOBLOOD
+        +DONTTHRUST
+        Radius 18;
+        Height 38;
+    }
+    States { Spawn: RFPR A -1; Stop; }
+}
+
 class RFMorrisColumn : RFInteract   // the Morris column (l. 437): scratched, it shows JERMA PALACE for a heartbeat
 {
     Default

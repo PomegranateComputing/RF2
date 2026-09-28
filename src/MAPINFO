@@ -100,6 +100,7 @@ DoomEdNums
     30649 = RFFigureCochin
     30650 = RFFigureValise
     30651 = RFViktorMirror
+    30652 = RFPram
     30901 = RFTourPoint
     30902 = RFDevWaypoint
 }

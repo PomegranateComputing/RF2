@@ -57,8 +57,12 @@ class RFNote : Actor
     override void PostBeginPlay()
     {
         Super.PostBeginPlay();
+        // args[2], bits: 1 the note lies at the height it was placed at (on an object such as the RF02 pram) instead
+        // of the floor under it; 2 no sheet is drawn, the object itself shows what is read (the registers of the
+        // pram model). 0 for every note of RF01 (unchanged).
         Sector under = Level.PointInSector(Pos.XY);
-        SetZ(under.floorplane.ZAtPoint(Pos.XY) + 0.4);
+        if (!(args[2] & 1)) SetZ(under.floorplane.ZAtPoint(Pos.XY) + 0.4);
+        if (args[2] & 2) A_SetRenderStyle(0, STYLE_None);
         if (args[1] == 1) SetStateLabel("Register");
     }
 

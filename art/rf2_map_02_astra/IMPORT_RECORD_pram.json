@@ -1,0 +1,17 @@
+{
+ "batch": "RF2_MAP_02 (source/models, no consumer patch supplied by Astra)",
+ "imported": "2026-09-28 08:38",
+ "files": [
+  {
+   "target": "models/rf02/pram.obj",
+   "source": "source/models/pram.obj",
+   "sha256": "ca9400f7ef7f24fc5b7bc5cc6c4260c47d594267c2af909f5ede71fd18f2d176"
+  },
+  {
+   "target": "models/rf02/rf2_material_atlas.png",
+   "source": "source/masters/RF2_MATERIAL_ATLAS.png",
+   "sha256": "56da2d3a0bfe6bdd62176a74a47de65cd8dd72a786eb8443b3de3a82c0ab89e6"
+  }
+ ],
+ "note": "32690 faces (contract budget for a near prop: 6000); accepted for this single object, frame time measured in the scene"
+}

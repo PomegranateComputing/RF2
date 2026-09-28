@@ -215,3 +215,16 @@ Model RFMorrisColumn
     FrameIndex RFMC B 1 0
     FrameIndex RFMC C 2 0
 }
+
+// The pram of registers (RF02, Arago): Astra's original mesh (batch RF2_MAP_02, source/models/pram.obj, tested in
+// UZDoom by Astra), its packed material atlas. Map units, OBJ Y-up, +X = forward (the handle is at -X).
+Model RFPram
+{
+    Path "models/rf02"
+    Model 0 "pram.obj"
+    Skin 0 "rf2_material_atlas.png"
+    Scale 1 1 1.2
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFPR A 0 0
+}
