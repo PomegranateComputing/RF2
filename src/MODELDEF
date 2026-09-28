@@ -261,3 +261,16 @@ Model RFTrackHalf
     IgnoreTranslation
     FrameIndex RFRL A 0 0
 }
+
+// COMBAT-02: the crowbar lying on the ground (the pickup): Astra's model (batch RF2_MAP_02_REPRISE), 24.6 u long.
+// Only the R2CW frame is bound: the first-person frames stay sprites (TEXTURES.crowbar).
+Model RFCrowbar
+{
+    Path "models/rf02_props"
+    Model 0 "crowbar.obj"
+    Skin 0 "crowbar_atlas.png"
+    Scale 1 1 1.2
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex R2CW A 0 0
+}

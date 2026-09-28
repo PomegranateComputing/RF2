@@ -104,6 +104,7 @@ DoomEdNums
     30653 = RFTram
     30654 = RFTrack
     30655 = RFTrackHalf
+    30656 = RFCrowbar
     30901 = RFTourPoint
     30902 = RFDevWaypoint
 }

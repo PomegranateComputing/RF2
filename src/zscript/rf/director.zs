@@ -50,6 +50,8 @@ class RFDirector : EventHandler
             pl.GiveInventory('RFFAL', 1);
             pl.GiveInventory('RFRifleAmmo', 20);
         }
+        // The crowbar is found in the yard of Cochin (RF02); the chapters after it start with it.
+        if (!(Level.MapName ~== "RF02") && pl.FindInventory('RFCrowbar') == null) pl.GiveInventory('RFCrowbar', 1);
     }
 
     void NoteRead(int index, Actor user)

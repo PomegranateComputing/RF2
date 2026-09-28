@@ -185,3 +185,22 @@ $volume rf/paris/fire 0.5
 $volume rf/paris/street 0.45
 $volume rf/paris/engines 0.8
 $volume rf/paris/bell 0.6
+
+// COMBAT-02 crowbar: Astra's melee proposals (batch RF2_MAP_02, audio_proposal), 24 -> 16 bit; never heard by Astra
+// nor Opus (art/rf2_map_02_astra/IMPORT_RECORD_crowbar_audio.json)
+$random rf/crowbar/swing     { rf/crowbar/swing1 rf/crowbar/swing2 rf/crowbar/swing3 }
+rf/crowbar/swing1            "sounds/crowbar/swing_01.wav"
+rf/crowbar/swing2            "sounds/crowbar/swing_02.wav"
+rf/crowbar/swing3            "sounds/crowbar/swing_03.wav"
+$random rf/crowbar/flesh     { rf/crowbar/flesh1 rf/crowbar/flesh2 rf/crowbar/flesh3 }
+rf/crowbar/flesh1            "sounds/crowbar/hit_flesh_01.wav"
+rf/crowbar/flesh2            "sounds/crowbar/hit_flesh_02.wav"
+rf/crowbar/flesh3            "sounds/crowbar/hit_flesh_03.wav"
+$random rf/crowbar/metal     { rf/crowbar/metal1 rf/crowbar/metal2 rf/crowbar/metal3 }
+rf/crowbar/metal1            "sounds/crowbar/hit_metal_01.wav"
+rf/crowbar/metal2            "sounds/crowbar/hit_metal_02.wav"
+rf/crowbar/metal3            "sounds/crowbar/hit_metal_03.wav"
+$random rf/crowbar/wood      { rf/crowbar/wood1 rf/crowbar/wood2 rf/crowbar/wood3 }
+rf/crowbar/wood1             "sounds/crowbar/hit_wood_01.wav"
+rf/crowbar/wood2             "sounds/crowbar/hit_wood_02.wav"
+rf/crowbar/wood3             "sounds/crowbar/hit_wood_03.wav"

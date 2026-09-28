@@ -34,6 +34,15 @@ class RFBulletPuff : Actor
         return 1;
     }
 
+    // The sound of the impact for the struck material (the crowbar's puff has its own).
+    virtual void PlayImpact(int material)
+    {
+        if (material == 4) A_StartSound("rf/impact/flesh", CHAN_BODY, 0, 0.85);
+        else if (material == 1) A_StartSound("rf/impact/plaster", CHAN_BODY, 0, 0.85);
+        else if (material == 2) A_StartSound("rf/impact/wood", CHAN_BODY, 0, 0.85);
+        else if (material == 3) A_StartSound("rf/impact/metal", CHAN_BODY, 0, 0.85);
+    }
+
     override void PostBeginPlay()
     {
         Super.PostBeginPlay();
@@ -41,10 +50,7 @@ class RFBulletPuff : Actor
         bool body = material == 4;
         Color grit = body ? 0x762d28 : material == 2 ? 0x795137 : material == 3 ? 0xc7c4ad : 0xc1b39a;
         Color haze = body ? 0x713932 : material == 2 ? 0x635044 : 0xa39d90;
-        if (body) A_StartSound("rf/impact/flesh", CHAN_BODY, 0, 0.85);
-        else if (material == 1) A_StartSound("rf/impact/plaster", CHAN_BODY, 0, 0.85);
-        else if (material == 2) A_StartSound("rf/impact/wood", CHAN_BODY, 0, 0.85);
-        else if (material == 3) A_StartSound("rf/impact/metal", CHAN_BODY, 0, 0.85);
+        PlayImpact(material);
         if (material == 0) return;
         for (int i = 0; i < 8; i++)
         {
@@ -295,6 +301,68 @@ class RFFAL : Weapon
         Stop;
     Spawn:
         MGUN A -1;
+        Stop;
+    }
+}
+
+// COMBAT-02: a workshop crowbar (adaptation choice, not an object of the novel), found in the yard of Cochin. Frames
+// by Codex Astra (batch RF2_MAP_02_REPRISE, black sweatshirt sleeve): A ready, B wind-up, C strike, D follow-through,
+// E recovery; about 0.63 s a blow. Strong but in the reach of the enemies' own blows: 45-55 a hit (an orderly falls in
+// two, a brancardier in four), no ammunition. The swing alerts nobody; a hit is heard by its victim.
+class RFCrowbarPuff : RFBulletPuff
+{
+    override void PlayImpact(int material)
+    {
+        if (material == 4) A_StartSound("rf/crowbar/flesh", CHAN_BODY, 0, 1.0);
+        else if (material == 3) A_StartSound("rf/crowbar/metal", CHAN_BODY, 0, 1.0);
+        else if (material != 0) A_StartSound("rf/crowbar/wood", CHAN_BODY, 0, 0.9);   // wood, and plaster: a dull knock
+    }
+}
+
+class RFCrowbar : Weapon
+{
+    Default
+    {
+        Weapon.SlotNumber 3;
+        Weapon.SelectionOrder 2500;             // never chosen over a loaded firearm
+        Weapon.Kickback 30;                     // a shove (about 17 u on an orderly), not a throw out of reach
+        Weapon.BobStyle "InverseSmooth";
+        Weapon.BobRangeX 0.5;
+        Weapon.BobRangeY 0.35;
+        Inventory.PickupMessage "$RF_PICKUP_CROWBAR";
+        Inventory.PickupSound "rf/item/pickup";
+        Tag "$RF_WEAPON_CROWBAR";
+        +WEAPON.MELEEWEAPON
+        +WEAPON.NOALERT
+        +WEAPON.NOAUTOFIRE
+    }
+
+    action void A_RFCrowbarBlow()
+    {
+        A_CustomPunch(random(45, 55), true, CPF_NOTURN, "RFCrowbarPuff", DEFMELEERANGE);
+    }
+
+    States
+    {
+    Ready:
+        R2CB A 1 A_WeaponReady();
+        Loop;
+    Deselect:
+        R2CB A 1 A_Lower(12);
+        Loop;
+    Select:
+        R2CB A 1 A_Raise(12);
+        Loop;
+    Fire:
+        R2CB B 5 A_WeaponOffset(2, 36);
+        R2CB C 3 { A_StartSound("rf/crowbar/swing", CHAN_WEAPON); A_WeaponOffset(0, 32); }
+        R2CB C 2 A_RFCrowbarBlow();
+        R2CB D 4;
+        // Recovery: the weapon can be put away (not swung again) before the arm is back.
+        R2CB EEEEEEEE 1 A_WeaponReady(WRF_NOFIRE | WRF_NOBOB);
+        Goto Ready;
+    Spawn:
+        R2CW A -1;
         Stop;
     }
 }

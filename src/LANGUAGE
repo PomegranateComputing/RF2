@@ -119,6 +119,8 @@ RF_NOTE_22 = "Ordres de mouvement, laissez-passer, listes de véhicules.\nLe ven
 RF_NOTE_23 = "Gare fermée. Les tableaux montrent des heures sans départ, des voies sans convois.";
 
 RF_WEAPON_BROWNING = "Browning Hi-Power";
+RF_WEAPON_CROWBAR = "Pied-de-biche";
+RF_PICKUP_CROWBAR = "Un pied-de-biche.";
 RF_WEAPON_FAL = "FN FAL";
 RF_PICKUP_BROWNING = "Browning Hi-Power.";
 RF_PICKUP_FAL = "FN FAL.";

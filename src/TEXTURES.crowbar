@@ -1,0 +1,47 @@
+Sprite R2CBA0, 1536, 1024
+{
+    XScale 6.8
+    YScale 8.16
+    Offset -750, -460
+    Patch "graphics/weapons/crowbar/RF2_CROWBAR_READY.png", 0, 0
+}
+
+Sprite R2CBB0, 1536, 1024
+{
+    XScale 6.8
+    YScale 8.16
+    Offset -750, -460
+    Patch "graphics/weapons/crowbar/RF2_CROWBAR_WINDUP.png", 0, 0
+}
+
+Sprite R2CBC0, 1536, 1024
+{
+    XScale 6.8
+    YScale 8.16
+    Offset -750, -460
+    Patch "graphics/weapons/crowbar/RF2_CROWBAR_STRIKE.png", 0, 0
+}
+
+Sprite R2CBD0, 1536, 1024
+{
+    XScale 6.8
+    YScale 8.16
+    Offset -750, -460
+    Patch "graphics/weapons/crowbar/RF2_CROWBAR_FOLLOW.png", 0, 0
+}
+
+Sprite R2CBE0, 1536, 1024
+{
+    XScale 6.8
+    YScale 8.16
+    Offset -750, -460
+    Patch "graphics/weapons/crowbar/RF2_CROWBAR_RECOVERY.png", 0, 0
+}
+
+Sprite R2CWA0, 176, 112
+{
+    XScale 6.5
+    YScale 7.8
+    Offset 88,104
+    Patch "graphics/props/crowbar_floor.png",0,0
+}

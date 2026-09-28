@@ -1,0 +1,164 @@
+{
+ "batch": "RF2_MAP_02 audio_proposal (Astra, 27/09)",
+ "imported": "2026-09-28 16:55",
+ "audition": "NOT PERFORMED (by Astra nor by Opus)",
+ "use": "COMBAT-02 crowbar",
+ "files": [
+  {
+   "target": "sounds/crowbar/swing_01.wav",
+   "source": "audio_proposal/RF2_MELEE_SWING_01.wav",
+   "source_sha256": "35fa6e4aa24a5548767f16da7fc51ad15e08a976b0c41e8795bb54734ede88ee",
+   "sha256": "3130f54a32e49d07baf55ad90d1e9583a82e56532b865f75493e30e4cdc70cf0",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4638125,
+   "peak_dbfs": -10.0,
+   "sources": [
+    "sources/rpg/Audio/cloth2.ogg",
+    "sources/rpg/Audio/drawKnife2.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/swing_02.wav",
+   "source": "audio_proposal/RF2_MELEE_SWING_02.wav",
+   "source_sha256": "579e50117973404671595876c85c06685d54891890f4775954e3d9c40c833af9",
+   "sha256": "1e80a181653f60ba732869c779939c1e7599e8425758796a394f7271e2973db9",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4638125,
+   "peak_dbfs": -10.0,
+   "sources": [
+    "sources/rpg/Audio/cloth2.ogg",
+    "sources/rpg/Audio/drawKnife2.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/swing_03.wav",
+   "source": "audio_proposal/RF2_MELEE_SWING_03.wav",
+   "source_sha256": "168b4f81a650f42c82c5d1220754a84dd65e15cb4a49110a214b15605508f999",
+   "sha256": "0bddf1ae1877f46a4cf6b8618240e55faf46b979c0d5792c1138c5ba5f82cb3f",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4638125,
+   "peak_dbfs": -10.0,
+   "sources": [
+    "sources/rpg/Audio/cloth2.ogg",
+    "sources/rpg/Audio/drawKnife2.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/hit_flesh_01.wav",
+   "source": "audio_proposal/RF2_MELEE_FLESH_01.wav",
+   "source_sha256": "e4053738b0d1d2432a7c75ea55b87363c54070deeb8f9740fe85650bf2ddfe2b",
+   "sha256": "f70ea319fb5b3c5553d72f69974c83682667c791cbed7219fe156390b16c0233",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4678333333333333,
+   "peak_dbfs": -5.0,
+   "sources": [
+    "sources/impact/Audio/impactSoft_medium_000.ogg",
+    "sources/rpg/Audio/metalClick.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/hit_flesh_02.wav",
+   "source": "audio_proposal/RF2_MELEE_FLESH_02.wav",
+   "source_sha256": "30504236cae3ab6accb78595a6a904665ccab31d837b9498b87e1f5126ecd8a7",
+   "sha256": "5d44f68158af3d8e6038f9cd510dbb411e0b078d99e1c14dc508597978731094",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4678333333333333,
+   "peak_dbfs": -5.0,
+   "sources": [
+    "sources/impact/Audio/impactSoft_medium_001.ogg",
+    "sources/rpg/Audio/metalClick.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/hit_flesh_03.wav",
+   "source": "audio_proposal/RF2_MELEE_FLESH_03.wav",
+   "source_sha256": "0319ae41d23a3b22512a389f42b77c7c4f45b553baf33467062449565c16b5c1",
+   "sha256": "e80968c017cbeedf9a93ffa68a9265de8ecd421109c8e17eb4841342d8eb8b3d",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4678333333333333,
+   "peak_dbfs": -5.0,
+   "sources": [
+    "sources/impact/Audio/impactSoft_medium_002.ogg",
+    "sources/rpg/Audio/metalClick.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/hit_metal_01.wav",
+   "source": "audio_proposal/RF2_MELEE_METAL_01.wav",
+   "source_sha256": "49f2960eaed545473dd6f323497d981a76c0916e8091fb532b6245f452498467",
+   "sha256": "dcc8367fb5b51c5e8b80cf1707c20bc7290e6a9228a9f9855d3b5026ba572784",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4678333333333333,
+   "peak_dbfs": -5.103857580893241,
+   "sources": [
+    "sources/impact/Audio/impactMetal_medium_000.ogg",
+    "sources/rpg/Audio/metalClick.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/hit_metal_02.wav",
+   "source": "audio_proposal/RF2_MELEE_METAL_02.wav",
+   "source_sha256": "5152ef7407f4e14248a243b0d133196b95ff61d992ea2a093855abaa741cfad5",
+   "sha256": "32232a2bea0689ed6f247d3bf5bb0257ede770cce3db5d1a33579e5b583f8256",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4678333333333333,
+   "peak_dbfs": -5.0,
+   "sources": [
+    "sources/impact/Audio/impactMetal_medium_001.ogg",
+    "sources/rpg/Audio/metalClick.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/hit_metal_03.wav",
+   "source": "audio_proposal/RF2_MELEE_METAL_03.wav",
+   "source_sha256": "d8f99d2c5e66ff65ec2441602d6a37ec0676663b4a2d2567345e717fd22fada9",
+   "sha256": "94d4718e2606ff9690626f8080ac265f390630b9a92babf27a4399df4f310d96",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4678333333333333,
+   "peak_dbfs": -5.169191708269189,
+   "sources": [
+    "sources/impact/Audio/impactMetal_medium_002.ogg",
+    "sources/rpg/Audio/metalClick.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/hit_wood_01.wav",
+   "source": "audio_proposal/RF2_MELEE_WOOD_01.wav",
+   "source_sha256": "b0697d13c905cbab7d95197681a5ff358421d295685bbda9970e6ca4047f3b59",
+   "sha256": "55bab15d6013b86d367acca73d86a06d29022daef8d5f8045947267928f1fd1d",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4678333333333333,
+   "peak_dbfs": -5.0,
+   "sources": [
+    "sources/impact/Audio/impactWood_medium_000.ogg",
+    "sources/rpg/Audio/metalClick.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/hit_wood_02.wav",
+   "source": "audio_proposal/RF2_MELEE_WOOD_02.wav",
+   "source_sha256": "8ba5d52acaccc745e699cceba2d76a1236ce32e3af882d1ef692c7953b117032",
+   "sha256": "50e179f7943b30c4728226902118a308b21df46fe4cb44fa17aec9f61705e0f3",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4678333333333333,
+   "peak_dbfs": -5.0,
+   "sources": [
+    "sources/impact/Audio/impactWood_medium_001.ogg",
+    "sources/rpg/Audio/metalClick.ogg"
+   ]
+  },
+  {
+   "target": "sounds/crowbar/hit_wood_03.wav",
+   "source": "audio_proposal/RF2_MELEE_WOOD_03.wav",
+   "source_sha256": "b98bc813a2a57048937f9012aa0f2e433447d7c775bccf3fc8f378875e79a898",
+   "sha256": "801353117b18b0f6a6878496d1705e2bb51aac80ee88410a4f5ec15af25d6e8b",
+   "conversion": "24 -> 16 bit, 48 kHz mono kept, no other change",
+   "duration_seconds": 0.4678333333333333,
+   "peak_dbfs": -5.0,
+   "sources": [
+    "sources/impact/Audio/impactWood_medium_002.ogg",
+    "sources/rpg/Audio/metalClick.ogg"
+   ]
+  }
+ ]
+}

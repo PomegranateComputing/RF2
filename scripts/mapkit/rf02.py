@@ -77,6 +77,7 @@ T_SACOCHE, T_BUCKET, T_PHONE, T_RADIO, T_ATLAS, T_FOUNTAIN, T_SPOT, T_MATTRESS, 
 T_FIG_FORMS, T_FIG_PRAM, T_FIG_SANTE_A, T_FIG_SANTE_B, T_FIG_SANTE_C, T_FIG_SANTE_D = 30641, 30642, 30643, 30644, 30645, 30646
 T_FIG_TRAM, T_FIG_TSF, T_FIG_COCHIN, T_FIG_VALISE, T_VIKTOR_MIRROR = 30647, 30648, 30649, 30650, 30651
 T_PRAM, T_TRAM, T_TRACK, T_TRACK_HALF = 30652, 30653, 30654, 30655   # Astra's models (RF02-B)
+T_CROWBAR = 30656              # COMBAT-02: the crowbar, found in the yard of Cochin
 T_DECAL = 9200
 DAMP, GRIME, STREAK, SCUFF = 11001, 11002, 11003, 11004
 
@@ -363,6 +364,7 @@ m.thing(1216, 284, T_FIG_COCHIN, angle=90)                          # F02-06 in 
 m.box(1024, -32, 1408, 240, YARD)
 block(1056, 64, 1184, 112, 96, 'RF2_ZINC', 'RF2_AMBU', YARD)
 block(1232, 128, 1360, 176, 96, 'RF2_ZINC', 'RF2_AMBU', YARD)
+m.thing(1176, 226, T_CROWBAR, angle=20)                            # just inside the gateway, beside the nurse's line: seen from the boulevard
 m.thing(1300, 40, T_TROLLEY, angle=100)                            # a man on a stretcher (figure requested)
 m.thing(1060, 200, T_BENCH, angle=0)
 lamp(1216, 0, 140, 230, 226, 214, 220)
