@@ -1,2 +1,6 @@
 // Winch lever in the porter's lodge. Sound comes from the SNDINFO switch route.
 switch RFM_SW0 on pic RFM_SW1 tics 0
+
+// RF01-TEXTURES-1940: the same winch lever in the 1940 materials (Astra, RF01 only); the pair above stays for
+// its other uses.
+switch RFMSW0A on pic RFMSW1A tics 0

@@ -126,6 +126,19 @@ class RFPropBase : Actor
         RFMD A -1;
         Stop;
     }
+
+    override void PostBeginPlay()
+    {
+        Super.PostBeginPlay();
+        RFPropBase.Skin1940(self);
+    }
+
+    // RF01-TEXTURES-1940 (28/09): in RF01 alone, the props wear Codex Astra's 1940 atlas (same meshes, same UV); the
+    // shared MODELDEF skin stays for the other maps.
+    static void Skin1940(Actor prop)
+    {
+        if (Level.MapName ~== "RF01") prop.A_ChangeModel("", 0, "", "", 0, "models/rf01_1940/", "RF2_SA_ATLAS.png");
+    }
 }
 class RFPropDesk : RFPropBase { Default { Radius 26; Height 26; } }
 class RFPropCabinet : RFPropBase { Default { Radius 16; Height 60; } }
@@ -148,6 +161,12 @@ class RFPropLamp : Actor
     Spawn:
         RFMD A -1 Bright;
         Stop;
+    }
+
+    override void PostBeginPlay()
+    {
+        Super.PostBeginPlay();
+        RFPropBase.Skin1940(self);
     }
 }
 
