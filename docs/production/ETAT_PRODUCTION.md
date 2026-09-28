@@ -77,9 +77,9 @@ narratif : Luna Park (ID technique RF04), sans écraser le blockout RF03 (Batign
 | RF01-PAN | Opus | tag `rf01-owner-accepted-20260927` | `scripts/mapkit/rf01.py` (panneaux), `src/maps/RF01.wad`, `udmf.py` (`texwidth=`), `materials.py` (`sign()`), `patches/rf01/RFSIGN*` | 13 panneaux lisibles ; registre vérifié en jeu : **lisible, aucun défaut** (`RF01_REGISTRE_VERIFICATION.md`) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_RF01-PAN.cmd`, build isolé `RF2_RF01-PAN_20260928_0725` (remplace 2245), `docs/RF2_RF01_PAN.md` ; porté sur `prod/rf2-campaign` |
 | HUD-02 | Opus | `prod/rf2-campaign` | `src/zscript/rf/hud.zs`, `src/graphics/hud/viktor/` | portrait de Viktor en six états (commande du propriétaire) | candidate `RF2_HUD-02_20260927_2230` |
 | RF02-A | Opus + Astra | `prod/rf2-campaign` | Opus : `scripts/mapkit/rf02.py`, runtime ; Astra : ressources | tranche de rue de référence | en cours — 23 enseignes accrochées (`e1e176c`, relevé 21/23) ; lot Astra `RF2_MAP_02` importé en HD (`7ceaf38`) ; V01–V10 et tranche de référence à faire ; `docs/RF2_RF02_A.md` |
-| RF02-B | Astra produit, Opus intègre | idem | modèles tram/voie/props (Astra), collisions/ancrages (Opus) | tram complet sur rails, poussette, objets fixés | en cours |
-| RF02-C | Opus + Astra | idem | idem | parcours complet, figures F02-01…08, Luna Park | à faire |
-| COMBAT-02 | Opus runtime, Astra présentation/audio | idem | `src/zscript/rf/weapons.zs`, rencontres | sons et retours d'armes, pied-de-biche, difficulté | à faire |
+| RF02-B | Astra produit, Opus intègre | idem | modèles tram/voie/props (Astra), collisions/ancrages (Opus) | tram complet sur rails, poussette, objets fixés | poussette (`51a7912`) et tram sur rails (`499244d`) intégrés, `docs/RF2_RF02_B.md` ; tableau des départs, barrage, Cochin : modèles attendus |
+| RF02-C | Opus + Astra | idem | idem | parcours complet, figures F02-01…08, Luna Park | figures F02-01…08 placées (`9510b39`), `docs/RF2_RF02_C.md` ; entrée de Luna Park : modèle attendu |
+| COMBAT-02 | Opus runtime, Astra présentation/audio | idem | `src/zscript/rf/weapons.zs`, rencontres | sons et retours d'armes, pied-de-biche, difficulté | pied-de-biche intégré et vérifié (`85fc6a1`), `docs/RF2_COMBAT_02.md` ; ressenti des armes à feu, rencontres, mesures : à faire |
 | SUITE-03 | Opus + Astra | RF02 figé | `scripts/mapkit/rf04.py` (nouveau), campagne | premier segment Luna Park jouable | à faire |
 | RF01-TEXTURES-1940 | Opus intègre, Astra produit | `candidate/rf01-textures-1940` (tag accepté + socle) | Opus : `TEXTURES.rf01`, affectations RF01, `MODELDEF` ; Astra : images | matières « Sainte-Anne 1940 » (mandat du 28/09) | contrat et inventaire remis (`docs/production/handoff/RF01-TEXTURES-1940/`, copie dans `incoming/astra/RF01_TEXTURES_1940/00_CONTRAT_OPUS/`) ; premier ensemble attendu |
 
@@ -163,3 +163,9 @@ action.
   propriétaire : passe de textures RF01 « Sainte-Anne 1940 » ; inventaire de 60 surfaces, contrat et 52 captures de
   la base remis à Astra ; branche `candidate/rf01-textures-1940` créée. Prochaine action : premier ensemble Astra
   (chambre, couloir), intégration des figures et du pied-de-biche, V01–V10.
+- 28/09 après-midi — lot Astra `RF2_MAP_02_REPRISE` intégré : figures F02-01…08 placées dans RF02 (`9510b39`),
+  pied-de-biche (COMBAT-02, `85fc6a1`, essais en jeu cas par cas). RF02-B : poussette et tram d'Astra (le tram sur de
+  vrais rails, son volume jouable gardé invisible dans la carte, `499244d`). V01–V10 reconstitués aux cadrages du
+  propriétaire, avant/après (`2d44f86`). Scène du ticket fiabilisée (cône d'usage). Aucune nouvelle livraison d'Astra
+  pour la passe de textures RF01 à cette heure. Prochaine action : lisibilité de l'interface (messages, attribution,
+  relecture, compteurs), rencontres et mesures de difficulté, puis Luna Park dès les modèles d'Astra.
