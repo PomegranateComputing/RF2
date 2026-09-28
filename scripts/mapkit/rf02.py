@@ -28,6 +28,7 @@ from Astra; the map does not pretend they are there.
 Units: 1 cell = 16. Streets: sky at 448 (facade textures are 448 high), pavements +8.
 Usage: python scripts/mapkit/rf02.py   (writes src/maps/RF02.wad, build/RF02_plan.png, build/RF02_TEXTMAP.txt)
 """
+import math
 import sys
 from pathlib import Path
 from dataclasses import replace
@@ -117,10 +118,15 @@ def daylight(x, y, z, radius=420):
     m.thing(x, y, T_LAMP, args=(round(200 * DAY_GAIN), round(208 * DAY_GAIN), round(222 * DAY_GAIN), radius), z=z)
 
 
-def sign(x0, y0, x1, y1, tex, zbottom):
-    """Masked sign on a decor line (plaque, fascia, poster, stencil): endpoints given along the wall, 4 units
-    off it, the visible face toward the street."""
-    m.decor_line(x0, y0, x1, y1, tex, zbottom, yscale=4)      # RF02 sign textures are all at 4 pixels per unit
+def sign(x0, y0, x1, y1, tex, zbottom, off=1):
+    """Masked sign on a decor line (plaque, fascia, poster, stencil): endpoints given on the face of the wall that
+    holds it, the visible face toward the street (right of x0,y0 -> x1,y1). The line is drawn `off` units in front
+    of that face (1: against it) and the whole texture is fitted between the endpoints, which span its width.
+    RF02-A (28/09): the endpoints used to be given 4 units off the wall and the last 4 units of every texture were
+    cut (decor lines are 2 units shorter at each end); scripts/production/sign_survey.py checks every sign."""
+    L = math.hypot(x1 - x0, y1 - y0)
+    nx, ny = (y1 - y0) / L * off, -(x1 - x0) / L * off
+    m.decor_line(x0 + nx, y0 + ny, x1 + nx, y1 + ny, tex, zbottom, yscale=4, texwidth=L)   # 4 pixels per unit
 
 
 def across(x0, y0, x1, y1, special, args=(), objective=0, fields=None, repeat=False):
@@ -166,8 +172,8 @@ def checkpoint(x0, y0, x1, y1):
 
 
 def use_decor(x0, y0, x1, y1, tex, zbottom, sc):
-    """A masked decor line that can be used (the ERREUR 0 on the shutter)."""
-    m.decor_line(x0, y0, x1, y1, tex, zbottom, yscale=4)
+    """A masked decor line that can be used (the ERREUR 0 on the shutter); placed like sign()."""
+    sign(x0, y0, x1, y1, tex, zbottom)
     m.decor[-1].update(special=130, args=[SIGNAL_TID, 0, 0, 0, 0], repeat=False,
                        fields={'user_scene': sc})
     m.decor[-1]['flags'] = dict(m.decor[-1]['flags'], playeruse=True, playeruseback=True)
@@ -200,8 +206,8 @@ roofline(2816, 320, 3136, 336, 384, 'RF2_SANT', A_RD)
 roofline(3264, 320, 3584, 336, 384, 'RF2_SANT', A_RD)
 m.box(3136, 320, 3264, 336, pave(A_RD, 'RF2_SANT'), ceil=200, ctex='RFP_CEID', upper='RF2_SANT')
 m.face(3136, 320, 3264, 336, 'N', texture='RF2_SGAT')
-sign(3312, 316, 3360, 316, 'RF2_AFST', 60)                        # INTERDICTION DE STATIONNER, half torn
-sign(2664, 4, 2600, 4, 'RF2_PL01', 120)                           # BOULEVARD ARAGO
+sign(3312, 320, 3360, 320, 'RF2_AFST', 60)                        # INTERDICTION DE STATIONNER, half torn
+sign(2664, 0, 2600, 0, 'RF2_PL01', 120)                           # BOULEVARD ARAGO
 # side street to the south (the staff come out of it)
 m.box(3264, -320, 3328, 0, A_RD, wall='RF2_FAC3', ftex='RF2_SETT', light=150, env=ENV_ALLEY)
 block(3264, -320, 3328, -272, 40, 'RFW_TOP', 'RFW_PANL', m.cells[(3264 // UNIT, -320 // UNIT)])   # handcart, crates
@@ -254,12 +260,12 @@ m.box(2048, 576, 2080, 896, pave(B_RD, 'RF2_FAC1'), light=160)
 m.box(2208, 576, 2240, 896, pave(B_RD, 'RF2_FAC3'), light=160)
 block(2080, 848, 2208, 896, 48, 'RF2_SABT', 'RF2_SABL', m.cells[(2080 // UNIT, 848 // UNIT)])
 block(2112, 624, 2208, 672, 104, 'RF2_ZINC', 'RF2_BUSV', m.cells[(2112 // UNIT, 624 // UNIT)])   # the tilted bus
-sign(2052, 600, 2052, 664, 'RF2_PL02', 120)                       # RUE DE LA SANTE (west wall of the street)
+sign(2048, 600, 2048, 664, 'RF2_PL02', 120)                       # RUE DE LA SANTE (west wall of the street)
 # shelter stencils and sandbags (l. 129)
-sign(2232, -188, 2168, -188, 'RF2_STCA', 56)
-sign(1796, 40, 1796, 136, 'RF2_STPS', 56)
-sign(2280, 572, 2344, 572, 'RF2_STEA', 56)
-sign(2492, -188, 2444, -188, 'RF2_AFMO', 64)                      # mobilisation order
+sign(2232, -192, 2168, -192, 'RF2_STCA', 56)
+sign(1792, 40, 1792, 136, 'RF2_STPS', 56)
+sign(2280, 576, 2344, 576, 'RF2_STEA', 56)
+sign(2492, -192, 2444, -192, 'RF2_AFMO', 64)                      # mobilisation order
 block(1904, -128, 2032, -112, 48, 'RF2_SABT', 'RF2_SABL', B_RD)
 block(1888, -112, 1904, -64, 48, 'RF2_SABT', 'RF2_SABL', B_RD)
 for (x, y, a) in ((2400, -80, 20), (2440, 460, 95), (1900, 460, 170), (2300, 420, 10)):
@@ -332,18 +338,18 @@ m.box(1152, 256, 1280, 320, pave(C_RD, 'RFS_HOSP'))
 # the pharmacy: iron shutter in a shallow recess, ERREUR 0 fresh at shoulder height (l. 151), fascia over it
 m.box(1408, 576, 1536, 592, pave(C_RD, 'RF2_SHOP'), ceil=136, ctex='RFP_CEID', upper='RF2_FACU')
 m.face(1408, 576, 1536, 592, 'N', texture='RF2_RIDO')
-sign(1408, 572, 1536, 572, 'RF2_FPHA', 140)
-use_decor(1440, 589, 1504, 589, 'RF2_ERPH', 50, S_SHUTTER)
+sign(1408, 576, 1536, 576, 'RF2_FPHA', 140)
+use_decor(1440, 592, 1504, 592, 'RF2_ERPH', 50, S_SHUTTER)
 # the side window: a mirror behind the jars and the tonic card (l. 157)
 m.box(1536, 576, 1600, 592, pave(C_RD, 'RF2_SHOP'), floor=32, ceil=112, ctex='RFP_CEID', upper='RF2_FACU', lower='RF2_SHOP')
 m.face(1536, 576, 1600, 592, 'N', texture='RF2_SHOP', special=182)
-sign(1540, 586, 1596, 586, 'RF2_PHVI', 40)
+sign(1536, 592, 1600, 592, 'RF2_PHVI', 40, off=6)   # the jars stand in front of the mirror
 m.thing(1568, 548, T_SPOT, angle=90, args=(S_MIRROR,))
 m.thing(1720, 400, T_SPOT, angle=180, args=(S_MATTRESS,))
-sign(1196, 572, 1276, 572, 'RF2_PL03', 120)                        # BOULEVARD DE PORT-ROYAL
+sign(1344, 576, 1424, 576, 'RF2_PL03', 164)                        # BOULEVARD DE PORT-ROYAL: on the corner, as high as its neighbour
 # Hopital Cochin: gateway, carved name, forecourt with the ambulances, engines off (l. 175)
 m.box(1152, 240, 1280, 256, YARD, ceil=208, ctex='RFP_CEID', upper='RFS_HOSP')
-sign(1280, 260, 1152, 260, 'RF2_COCP', 212)
+sign(1280, 256, 1152, 256, 'RF2_COCP', 212)
 m.box(1024, -32, 1408, 240, YARD)
 block(1056, 64, 1184, 112, 96, 'RF2_ZINC', 'RF2_AMBU', YARD)
 block(1232, 128, 1360, 176, 96, 'RF2_ZINC', 'RF2_AMBU', YARD)
@@ -376,15 +382,15 @@ for (y0, y1, fac) in ((576, 1024, 'RF2_FAC3'), (1216, 1472, 'RF2_FAC2'), (1600, 
     m.modify(1280, y0, 1344, y1, wall=fac)
 for (y0, y1, fac) in ((576, 656, 'RF2_FAC1'), (768, 1344, 'RF2_FAC3'), (1472, 1792, 'RF2_FAC1')):
     m.modify(1024, y0, 1088, y1, wall=fac)
-sign(1340, 664, 1340, 584, 'RF2_PL07', 164)                        # BOULEVARD DU MONTPARNASSE
-sign(1028, 580, 1028, 644, 'RF2_PL04', 124)                        # RUE DE RENNES
+sign(1344, 664, 1344, 584, 'RF2_PL07', 164)                        # BOULEVARD DU MONTPARNASSE
+sign(1024, 580, 1024, 644, 'RF2_PL04', 124)                        # RUE DE RENNES
 # the station, closed: a gate of bars, the board of hours without departures (l. 207)
 m.box(1008, 656, 1024, 768, pave(D_RD, 'RFM_GRIL'), ceil=176, ctex='RFP_CEID', upper='RF2_FACU')
 m.face(1008, 656, 1024, 768, 'W', texture='RFM_GRIL')
-sign(1028, 784, 1028, 912, 'RF2_TABL', 72)
+sign(1024, 784, 1024, 912, 'RF2_TABL', 72)
 m.thing(1040, 840, T_NOTE, angle=0, args=(23,))
 # the cafe: chairs stacked inside, pay sheets stuck to the pavement by the rain (l. 205)
-sign(1340, 704, 1340, 640, 'RF2_FCAF', 124)
+sign(1344, 704, 1344, 640, 'RF2_FCAF', 124)
 for (x, y, a) in ((1316, 660, 0), (1320, 690, 90), (1300, 720, 180), (1318, 750, 270)):
     m.thing(x, y, T_CHAIR, angle=a)
 m.thing(1060, 980, T_NOTE, angle=30, args=(21,))
@@ -397,7 +403,7 @@ m.face(1328, 1040, 1344, 1168, 'E', fields={'user_scene': S_TSF_WINDOW})
 door(1344, 1168, 1376, 1216, 60, 'RF2_RIDO', SHOP, 'W', lintel=104, track='RFW_PANL', speed=24)
 m.carve(1360, 1152, 1376, 1168)
 m.modify(1344, 1168, 1360, 1216, upper='RF2_FACU')
-sign(1340, 1168, 1340, 1040, 'RF2_FTSF', 124)
+sign(1344, 1168, 1344, 1040, 'RF2_FTSF', 124)
 m.raise_block(1536, 1024, 1568, 1216, 64, 'RFW_TOP', 'RF2_TSFS', SHOP)
 m.raise_block(1376, 1024, 1536, 1040, 64, 'RFW_TOP', 'RF2_TSFS', SHOP)
 m.raise_block(1424, 1072, 1520, 1104, 32, 'RFW_TOP', 'RFW_PANL', SHOP)          # counter
@@ -412,7 +418,7 @@ scene(1088, 936, 1344, 936, S_TSF_VOICES)
 GROC = replace(SHOP, ftex='RFF_CER', light=112)
 m.box(880, 1360, 1008, 1472, GROC)
 m.box(1008, 1376, 1024, 1456, GROC, ceil=112, upper='RF2_FACU')
-sign(1028, 1360, 1028, 1472, 'RF2_FEPI', 116)
+sign(1024, 1360, 1024, 1472, 'RF2_FEPI', 116)
 m.box(1088, 1360, 1104, 1600, D_RD, ftex='RF2_VIN1')
 block(1040, 1392, 1072, 1424, 28, 'RFW_TOP', 'RFW_PANL', m.cells[(1040 // UNIT, 1392 // UNIT)])  # a broken crate
 for (x, y) in ((912, 1376), (960, 1440)):
@@ -421,7 +427,7 @@ lamp(950, 1416, 100, 220, 200, 170, 150)
 # the bookshop: books piled in front of its door (l. 305), the atlas on top (l. 311)
 m.box(1344, 1520, 1360, 1568, pave(D_RD, 'RFW_PANL'), ceil=112, ctex='RFP_CEID', upper='RF2_FACU')
 m.face(1344, 1520, 1360, 1568, 'E', texture='RFD_SGL')
-sign(1340, 1600, 1340, 1488, 'RF2_FLIB', 120)
+sign(1344, 1600, 1344, 1488, 'RF2_FLIB', 120)
 block(1296, 1504, 1328, 1584, 44, 'RFW_TOP', 'RF2_LIVR', m.cells[(1296 // UNIT, 1504 // UNIT)])
 m.thing(1300, 1544, T_ATLAS, angle=180, args=(S_ATLAS,))
 m.thing(1300, 1620, T_MAG)
@@ -449,7 +455,7 @@ for (x0, x1) in ((768, 1088), (1280, 1600)):
 m.box(1088, 1904, 1104, 1920, E_RD, floor=32, ftex='RFF_SLAB', lower='RF2_QUAI', wall='RF2_QUAI')
 m.box(1264, 1904, 1280, 1920, E_RD, floor=32, ftex='RFF_SLAB', lower='RF2_QUAI', wall='RF2_QUAI')
 m.box(1104, 1904, 1264, 1920, E_RD)
-sign(1500, 1796, 1436, 1796, 'RF2_PL05', 110)                       # QUAI D'ORSAY
+sign(1500, 1792, 1436, 1792, 'RF2_PL05', 110)                       # QUAI D'ORSAY
 # the Seine: water well below, walls of the quays, the bridge deck with its parapets
 m.box(256, 1920, 1104, 2432, WATER)
 m.box(1264, 1920, 2112, 2432, WATER)
@@ -533,7 +539,7 @@ m.box(-1664, 2624, -768, 2656, pave(G_RD, 'RF2_FAC1'))
 m.box(-1664, 2848, -768, 2880, pave(G_RD, 'RF2_FAC3'))
 for x in (-1408, -1296, -1008):
     block(x, 2848, x + 64, 2880, 32, 'RFM_TOP', 'RF2_TYRE', m.cells[(x // UNIT, 2848 // UNIT)])
-sign(-800, 2628, -880, 2628, 'RF2_PL06', 110)
+sign(-800, 2624, -880, 2624, 'RF2_PL06', 110)
 scene(-792, 2624, -792, 2880, S_BELL)
 m.thing(-1200, 2750, T_AMB, args=(4, 40))
 m.thing(-1500, 2700, T_DRESS)
@@ -552,8 +558,8 @@ roofline(-1984, 3200, -1776, 3216, 256, 'RF2_PALI', M_RD)
 roofline(-1728, 3200, -1664, 3216, 256, 'RF2_PALI', M_RD)
 m.box(-2144, 3200, -1984, 3216, pave(M_RD, 'RFM_GRIL'), ceil=176, ctex='RFP_CEID', upper='RF2_PALI')
 m.door(-2144, 3216, -1984, 3232, 70, 'RFM_GRIL', 'RF2_PALI', replace(pave(M_RD), ctex='RFP_CEID'), kind='open', lock=5, lockside='')
-sign(-2192, 3196, -1936, 3196, 'RF2_LUNA', 240)
-sign(-2112, 3198, -2016, 3198, 'RF2_LUNF', 188)
+sign(-2192, 3200, -1936, 3200, 'RF2_LUNA', 240)
+sign(-2112, 3200, -2016, 3200, 'RF2_LUNF', 188)
 # the service door ajar behind a heap of planks (l. 457): the way in
 m.box(-1776, 3200, -1728, 3216, pave(M_RD, 'RFW_PANL'), ceil=120, ctex='RFP_CEID', upper='RF2_PALI', light=120)
 m.box(-1792, 3216, -1712, 3328, Cell(floor=8, ceil=120, ftex='RFF_WOOD', ctex='RFP_CEID', light=96, wall='RFW_PANL',

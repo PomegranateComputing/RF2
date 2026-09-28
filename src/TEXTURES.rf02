@@ -120,13 +120,13 @@ Texture RF2_FTSF, 512, 64
     YScale 4
     Patch "patches/rf02/RF2_FTSF.png", 0, 0
 }
-Texture RF2_FLIB, 512, 64
+Texture RF2_FLIB, 448, 64
 {
     XScale 4
     YScale 4
     Patch "patches/rf02/RF2_FLIB.png", 0, 0
 }
-Texture RF2_FEPI, 512, 64
+Texture RF2_FEPI, 448, 64
 {
     XScale 4
     YScale 4

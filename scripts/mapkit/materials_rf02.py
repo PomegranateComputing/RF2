@@ -11,6 +11,7 @@ Output: src/patches/rf02/*.png, src/TEXTURES.rf02, src/textures/RFSKY2.png, src/
 Usage: python scripts/mapkit/materials_rf02.py
 """
 import math
+import zlib
 from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -222,6 +223,12 @@ def prison_gate(name, seed, wunits=128, hunits=192, ppu=4):
 
 
 # ----------------------------------------------------------------------------- composed inscriptions
+def stable(name):
+    """Noise seed from a texture name, the same in every run (Python's hash() of a string changes from one
+    process to the next: before 28/09 the plaques and fascias got a different grain at each generation)."""
+    return zlib.crc32(name.encode('utf-8'))
+
+
 def paris_plaque(name, text, arrondissement=0, wunits=64, hunits=24):
     """Paris street plaque: dark blue enamel, white condensed capitals, green frame; the arrondissement on top
     as on the real plaques ("13e Arrt", the e and the t raised)."""
@@ -243,7 +250,7 @@ def paris_plaque(name, text, arrondissement=0, wunits=64, hunits=24):
     else:
         text_center(d, (5 * PPU, 0, W - 5 * PPU, H), text, font(int(H * 0.44), face=NARROW), ink)
     arr = np.asarray(pil).astype(float) / 255.0
-    arr = arr * (0.92 + 0.14 * (fbm(H, W, hash(name) % 1000, 2.2)[..., None] - 0.5))
+    arr = arr * (0.92 + 0.14 * (fbm(H, W, stable(name) % 1000, 2.2)[..., None] - 0.5))
     save('Texture', name, np.clip(arr, 0, 1))
 
 
@@ -258,8 +265,8 @@ def fascia(name, text, bg, fg, wunits=128, hunits=16, gold=False):
         text_center(d, (2, 2, W + 2, H + 2), text, fnt, (40, 30, 10))
     text_center(d, (0, 0, W, H), text, fnt, fg)
     arr = np.asarray(pil).astype(float) / 255.0
-    arr = soot(arr, hash(name) % 997, 0.2, top=False)
-    arr = arr * (0.9 + 0.2 * (fbm(H, W, hash(name) % 991, 2.0)[..., None] - 0.5))
+    arr = soot(arr, stable(name) % 997, 0.2, top=False)
+    arr = arr * (0.9 + 0.2 * (fbm(H, W, stable(name) % 991, 2.0)[..., None] - 0.5))
     save('Texture', name, np.clip(arr, 0, 1))
 
 
@@ -1069,8 +1076,8 @@ def main():
         paris_plaque(name, text, arr, wunits=64 if len(text) < 18 else 80)
     fascia('RF2_FPHA', 'PHARMACIE', (26, 60, 40), (226, 214, 170), gold=True)
     fascia('RF2_FTSF', 'T. S. F.  -  RÉPARATIONS', (24, 24, 26), (222, 212, 186))
-    fascia('RF2_FLIB', 'LIBRAIRIE', (90, 30, 28), (226, 214, 170), gold=True)
-    fascia('RF2_FEPI', 'ÉPICERIE  -  VINS', (60, 50, 34), (230, 206, 150), gold=True)
+    fascia('RF2_FLIB', 'LIBRAIRIE', (90, 30, 28), (226, 214, 170), wunits=112, gold=True)
+    fascia('RF2_FEPI', 'ÉPICERIE  -  VINS', (60, 50, 34), (230, 206, 150), wunits=112, gold=True)
     fascia('RF2_FCAF', 'CAFÉ', (32, 52, 40), (224, 210, 160), wunits=64, gold=True)
     torn_poster('RF2_AFST', [('INTERDICTION', 11), ('DE', 8), ('STATIONNER', 11)], seed=31, torn=0.5)
     torn_poster('RF2_AFMO', [('ORDRE DE', 8), ('MOBILISATION', 9), ('GÉNÉRALE', 9)], seed=32, torn=0.3, bg=(232, 226, 210))
