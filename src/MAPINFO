@@ -89,6 +89,17 @@ DoomEdNums
     30637 = RFSceneSpot
     30638 = RFMattressProp
     30639 = RFMorrisColumn
+    30641 = RFFigureForms
+    30642 = RFFigurePram
+    30643 = RFFigureSanteA
+    30644 = RFFigureSanteB
+    30645 = RFFigureSanteC
+    30646 = RFFigureSanteD
+    30647 = RFFigureTram
+    30648 = RFFigureTSF
+    30649 = RFFigureCochin
+    30650 = RFFigureValise
+    30651 = RFViktorMirror
     30901 = RFTourPoint
     30902 = RFDevWaypoint
 }

@@ -73,6 +73,9 @@ T_ORDERLY, T_BRANC, T_PORTE, T_CORPSE, T_WAVE = 30401, 30402, 30403, 30410, 3040
 ORD, BRA, POR = 1, 2, 3   # RFWaveSpot kinds
 T_LAMP, T_FLICKER, T_AMB, T_NOTE, T_LITTER, T_SIGNAL, T_TOUR, T_WP = 30601, 30602, 30611, 30621, 30622, 30623, 30901, 30902
 T_SACOCHE, T_BUCKET, T_PHONE, T_RADIO, T_ATLAS, T_FOUNTAIN, T_SPOT, T_MATTRESS, T_MORRIS = 30631, 30632, 30633, 30634, 30635, 30636, 30637, 30638, 30639
+# the figures of Astra (RF2_MAP_02_REPRISE, 28/09), src/zscript/rf/figures.zs: visual only
+T_FIG_FORMS, T_FIG_PRAM, T_FIG_SANTE_A, T_FIG_SANTE_B, T_FIG_SANTE_C, T_FIG_SANTE_D = 30641, 30642, 30643, 30644, 30645, 30646
+T_FIG_TRAM, T_FIG_TSF, T_FIG_COCHIN, T_FIG_VALISE, T_VIKTOR_MIRROR = 30647, 30648, 30649, 30650, 30651
 T_DECAL = 9200
 DAMP, GRIME, STREAK, SCUFF = 11001, 11002, 11003, 11004
 
@@ -220,9 +223,11 @@ m.thing(3700, 290, T_SIGNAL, tid=SIGNAL_TID)
 # forms burning badly in a galvanised bucket; a uniform nobody fills (figure requested from Astra)
 m.thing(3456, 36, T_BUCKET, args=(S_FORMS,))
 m.thing(3456, 36, T_FLICKER, args=(255, 150, 80, 110, 80), z=28)
+m.thing(3478, 30, T_FIG_FORMS, angle=180)                           # F02-01 feeds them to the fire, 20 u from the bucket
 # the pram full of registers
 block(2992, 272, 3040, 304, 36, 'RFW_TOP', 'RFW_TBLS', m.cells[(2992 // UNIT, 272 // UNIT)])
 m.thing(3016, 288, T_NOTE, angle=90, args=(20, 1), z=36)
+m.thing(3060, 288, T_FIG_PRAM, angle=180)                           # F02-02 at the handle (she walks when the pram model comes)
 litter([(3620, 150, 20), (3500, 210, 130), (3300, 110, 250), (3150, 180, 75), (2950, 90, 300), (2700, 230, 190),
         (3420, 280, 40), (3200, 30, 160)])
 m.thing(3200, 160, T_AMB, args=(4, 45))
@@ -230,6 +235,10 @@ m.thing(3296, -160, T_AMB, args=(1, 30))
 for x in (2750, 3350):
     daylight(x, 160, 300)
 m.thing(3600, 60, T_9MM)
+m.thing(3620, 40, T_VIKTOR_MIRROR)                                  # F02-08: follows the player, seen only in mirrors
+for (x, y, t, a) in ((3170, 298, T_FIG_SANTE_A, 270), (3200, 302, T_FIG_SANTE_B, 270), (3230, 298, T_FIG_SANTE_C, 270),
+                     (3212, 282, T_FIG_SANTE_D, 300)):             # F02-03 the group at the Sante gate, the child in front
+    m.thing(x, y, t, angle=a)
 m.thing(2600, 290, T_DRESS)
 # E1: two orderlies come out of the side street when Viktor passes it
 spot(3296, -200, ORD, 101, 90)
@@ -308,6 +317,7 @@ for (y0, y1) in ((TY0 + 16, TY0 + 32), (TY1 - 32, TY1 - 16)):
 for (x, y) in ((2112, 192), (2176, 192), (2304, 192), (2112, 256), (2176, 256), (2240, 256)):
     m.raise_block(x, y, x + 32, y + 16, 24, 'RFW_TOP', 'RF2_VALI', m.cells[(x // UNIT, y // UNIT)])
 m.thing(2046, 264, T_SACOCHE, angle=270, args=(S_TICKET,), z=36)
+m.thing(2072, 264, T_FIG_TRAM, angle=270)                           # F02-04 asleep on the bench of the rear platform
 lamp(2192, 232, 110, 220, 214, 190, 140)
 m.label(2040, 300, 'TRAMWAY')
 m.thing(2176, 232, T_AMB, args=(3, 25))
@@ -350,6 +360,7 @@ sign(1344, 576, 1424, 576, 'RF2_PL03', 164)                        # BOULEVARD D
 # Hopital Cochin: gateway, carved name, forecourt with the ambulances, engines off (l. 175)
 m.box(1152, 240, 1280, 256, YARD, ceil=208, ctex='RFP_CEID', upper='RFS_HOSP')
 sign(1280, 256, 1152, 256, 'RF2_COCP', 212)
+m.thing(1216, 284, T_FIG_COCHIN, angle=90)                          # F02-06 in front of the gateway, the envelope held
 m.box(1024, -32, 1408, 240, YARD)
 block(1056, 64, 1184, 112, 96, 'RF2_ZINC', 'RF2_AMBU', YARD)
 block(1232, 128, 1360, 176, 96, 'RF2_ZINC', 'RF2_AMBU', YARD)
@@ -408,6 +419,7 @@ m.raise_block(1536, 1024, 1568, 1216, 64, 'RFW_TOP', 'RF2_TSFS', SHOP)
 m.raise_block(1376, 1024, 1536, 1040, 64, 'RFW_TOP', 'RF2_TSFS', SHOP)
 m.raise_block(1424, 1072, 1520, 1104, 32, 'RFW_TOP', 'RFW_PANL', SHOP)          # counter
 m.thing(1472, 1100, T_RADIO, angle=180, args=(S_RADIO,))   # at the edge of the counter: within reach of the use key
+m.thing(1472, 1056, T_FIG_TSF, angle=90)                    # F02-05 crouched behind the counter
 m.thing(1352, 1104, T_SPOT, angle=0, args=(S_TSF_WINDOW,))
 m.thing(1470, 1150, T_AMB, args=(5, 60))
 lamp(1470, 1130, 110, 255, 210, 150, 200)
@@ -494,6 +506,7 @@ for (x0, y0, x1, y1) in ((1040, 2624, 1168, 2640), (1232, 2624, 1360, 2640), (10
 block(1200, 2720, 1264, 2752, 28, 'RF2_BACH', 'RF2_BACS', F_RD)
 block(1104, 2688, 1152, 2720, 30, 'RFW_TOP', 'RFW_TBLS', F_RD)
 m.thing(1128, 2692, T_PHONE, angle=270, args=(S_PHONE,))
+m.thing(1296, 2680, T_FIG_VALISE, angle=225)                        # F02-07 inside the chicane, turned to the way in
 scene(640, 2472, 1600, 2472, S_PHONE_RING)
 objective(640, 2600, 1600, 2600, 6)
 m.thing(1300, 2780, T_MAG)

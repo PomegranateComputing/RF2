@@ -1,0 +1,73 @@
+class RFArt_R2F1 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 66; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2F1 A -1; Stop;
+    PreviewMotion: R2F1 ABC 16; Loop;
+    Burn: R2F1 A 20; R2F1 B 16; R2F1 C 12; R2F1 B 16; Loop; }
+}
+
+class RFArt_R2F2 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 64; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2F2 A -1; Stop;
+    PreviewMotion: R2F2 ABCD 7; Loop;
+    Walk: R2F2 ABCD 7; Loop;
+    Idle: R2F2 A -1; Stop; }
+}
+
+class RFArt_R2B1 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 62; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2B1 A -1; Stop; }
+}
+
+class RFArt_R2B2 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 64; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2B2 A -1; Stop; }
+}
+
+class RFArt_R2B3 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 64; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2B3 A -1; Stop; }
+}
+
+class RFArt_R2B4 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 44; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2B4 A -1; Stop; }
+}
+
+class RFArt_R2F4 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 44; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2F4 A -1; Stop;
+    PreviewMotion: R2F4 AB 16; Loop;
+    Sleep: R2F4 A -1; Stop;
+    Awake: R2F4 B -1; Stop; }
+}
+
+class RFArt_R2F5 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 36; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2F5 A -1; Stop; }
+}
+
+class RFArt_R2F6 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 60; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2F6 A -1; Stop; }
+}
+
+class RFArt_R2F7 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 64; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2F7 A -1; Stop; }
+}
+
+class RFArt_R2F8 : Actor
+{
+    Default { Scale 0.18; Radius 16; Height 68; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION +ONLYVISIBLEINMIRRORS }
+    States { Spawn: R2F8 A -1; Stop; }
+}

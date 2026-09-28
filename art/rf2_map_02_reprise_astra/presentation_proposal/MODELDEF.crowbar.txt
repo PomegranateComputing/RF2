@@ -1,0 +1,10 @@
+Model RFArtCrowbarWorld
+{
+    Path "models/rf02_props"
+    Model 0 "crowbar.obj"
+    Skin 0 "crowbar_atlas.png"
+    Scale 1 1 1.2
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex R2CW A 0 0
+}

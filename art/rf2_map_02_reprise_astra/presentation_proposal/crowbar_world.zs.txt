@@ -1,0 +1,5 @@
+class RFArtCrowbarWorld : Actor
+{
+    Default { Radius 13; Height 5; +NOGRAVITY +NOBLOCKMAP +NOINTERACTION }
+    States { Spawn: R2CW A -1; Stop; }
+}

@@ -1,0 +1,27 @@
+class RFArtCrowbarPresentation : Weapon
+{
+    Default
+    {
+        Weapon.SlotNumber 3;
+        Weapon.SelectionOrder 500;
+        Weapon.BobRangeX 0.5; Weapon.BobRangeY 0.35;
+        +WEAPON.AMMO_OPTIONAL +WEAPON.NOAUTOFIRE
+        Tag "Pied-de-biche";
+    }
+    States
+    {
+    Ready:
+        R2CB A 1 A_WeaponReady();
+        Loop;
+    Select: R2CB A 1 A_Raise(12); Loop;
+    Deselect: R2CB A 1 A_Lower(12); Loop;
+    Fire:
+        R2CB B 5;
+        R2CB C 2 A_StartSound("rf/astra/crowbar/swing", CHAN_WEAPON);
+        R2CB D 3;
+        R2CB E 5;
+        R2CB A 3;
+        Goto Ready;
+    Spawn: TNT1 A -1; Stop;
+    }
+}

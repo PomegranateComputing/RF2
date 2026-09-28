@@ -1,0 +1,46 @@
+{
+  "name": "crowbar_floor",
+  "origin": [
+    0,
+    0,
+    0
+  ],
+  "bounds_min": [
+    -12.018677711486816,
+    -0.6399999856948853,
+    0.0
+  ],
+  "bounds_max": [
+    12.563425064086914,
+    0.6399999856948853,
+    4.382397651672363
+  ],
+  "dimensions_world_units": [
+    24.582103729248047,
+    1.2799999713897705,
+    4.382397651672363
+  ],
+  "authoring_axes": "Z up, X length",
+  "obj_axes": "X,Z,-Y",
+  "MODELDEF_scale": [
+    1,
+    1,
+    1.2
+  ],
+  "CorrectPixelStretch": true,
+  "material_source": "source/masters/RF2_MATERIAL_ATLAS.png, original generated atlas from RF2_MAP_02",
+  "files": [
+    {
+      "file": "runtime/models/rf02_props/crowbar.obj",
+      "target_relpath": "models/rf02_props/crowbar.obj",
+      "sha256": "2442a39a52519ac961c1d9bca7b1d501d6ca7ca097e21f0035720aa7df5c5e19",
+      "bytes": 35798
+    },
+    {
+      "file": "runtime/models/rf02_props/crowbar_atlas.png",
+      "target_relpath": "models/rf02_props/crowbar_atlas.png",
+      "sha256": "56da2d3a0bfe6bdd62176a74a47de65cd8dd72a786eb8443b3de3a82c0ab89e6",
+      "bytes": 3205615
+    }
+  ]
+}

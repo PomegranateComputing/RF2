@@ -1,0 +1,298 @@
+[
+  {
+    "id": "F02-01",
+    "prefix": "R2F1",
+    "proposed_height": 66,
+    "scale": 0.18,
+    "states": 3,
+    "rotations": 8,
+    "source_masters": [
+      "F02_01_FORMS_A",
+      "F02_01_FORMS_B",
+      "F02_01_FORMS_C"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2F1A1.png",
+      "runtime/sprites/rf02_figures/R2F1A2.png",
+      "runtime/sprites/rf02_figures/R2F1A3.png",
+      "runtime/sprites/rf02_figures/R2F1A4.png",
+      "runtime/sprites/rf02_figures/R2F1A5.png",
+      "runtime/sprites/rf02_figures/R2F1A6.png",
+      "runtime/sprites/rf02_figures/R2F1A7.png",
+      "runtime/sprites/rf02_figures/R2F1A8.png",
+      "runtime/sprites/rf02_figures/R2F1B1.png",
+      "runtime/sprites/rf02_figures/R2F1B2.png",
+      "runtime/sprites/rf02_figures/R2F1B3.png",
+      "runtime/sprites/rf02_figures/R2F1B4.png",
+      "runtime/sprites/rf02_figures/R2F1B5.png",
+      "runtime/sprites/rf02_figures/R2F1B6.png",
+      "runtime/sprites/rf02_figures/R2F1B7.png",
+      "runtime/sprites/rf02_figures/R2F1B8.png",
+      "runtime/sprites/rf02_figures/R2F1C1.png",
+      "runtime/sprites/rf02_figures/R2F1C2.png",
+      "runtime/sprites/rf02_figures/R2F1C3.png",
+      "runtime/sprites/rf02_figures/R2F1C4.png",
+      "runtime/sprites/rf02_figures/R2F1C5.png",
+      "runtime/sprites/rf02_figures/R2F1C6.png",
+      "runtime/sprites/rf02_figures/R2F1C7.png",
+      "runtime/sprites/rf02_figures/R2F1C8.png"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "F02-02",
+    "prefix": "R2F2",
+    "proposed_height": 64,
+    "scale": 0.18,
+    "states": 4,
+    "rotations": 8,
+    "source_masters": [
+      "F02_02_PRAM_A",
+      "F02_02_PRAM_B",
+      "F02_02_PRAM_C",
+      "F02_02_PRAM_D"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2F2A1.png",
+      "runtime/sprites/rf02_figures/R2F2A2.png",
+      "runtime/sprites/rf02_figures/R2F2A3.png",
+      "runtime/sprites/rf02_figures/R2F2A4.png",
+      "runtime/sprites/rf02_figures/R2F2A5.png",
+      "runtime/sprites/rf02_figures/R2F2A6.png",
+      "runtime/sprites/rf02_figures/R2F2A7.png",
+      "runtime/sprites/rf02_figures/R2F2A8.png",
+      "runtime/sprites/rf02_figures/R2F2B1.png",
+      "runtime/sprites/rf02_figures/R2F2B2.png",
+      "runtime/sprites/rf02_figures/R2F2B3.png",
+      "runtime/sprites/rf02_figures/R2F2B4.png",
+      "runtime/sprites/rf02_figures/R2F2B5.png",
+      "runtime/sprites/rf02_figures/R2F2B6.png",
+      "runtime/sprites/rf02_figures/R2F2B7.png",
+      "runtime/sprites/rf02_figures/R2F2B8.png",
+      "runtime/sprites/rf02_figures/R2F2C1.png",
+      "runtime/sprites/rf02_figures/R2F2C2.png",
+      "runtime/sprites/rf02_figures/R2F2C3.png",
+      "runtime/sprites/rf02_figures/R2F2C4.png",
+      "runtime/sprites/rf02_figures/R2F2C5.png",
+      "runtime/sprites/rf02_figures/R2F2C6.png",
+      "runtime/sprites/rf02_figures/R2F2C7.png",
+      "runtime/sprites/rf02_figures/R2F2C8.png",
+      "runtime/sprites/rf02_figures/R2F2D1.png",
+      "runtime/sprites/rf02_figures/R2F2D2.png",
+      "runtime/sprites/rf02_figures/R2F2D3.png",
+      "runtime/sprites/rf02_figures/R2F2D4.png",
+      "runtime/sprites/rf02_figures/R2F2D5.png",
+      "runtime/sprites/rf02_figures/R2F2D6.png",
+      "runtime/sprites/rf02_figures/R2F2D7.png",
+      "runtime/sprites/rf02_figures/R2F2D8.png"
+    ],
+    "notes": "Walking sheets are a raster animation proposal; no rig or matched pram trajectory."
+  },
+  {
+    "id": "F02-03a",
+    "prefix": "R2B1",
+    "proposed_height": 62,
+    "scale": 0.18,
+    "states": 1,
+    "rotations": 8,
+    "source_masters": [
+      "F02_03A_BASKET"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2B1A1.png",
+      "runtime/sprites/rf02_figures/R2B1A2.png",
+      "runtime/sprites/rf02_figures/R2B1A3.png",
+      "runtime/sprites/rf02_figures/R2B1A4.png",
+      "runtime/sprites/rf02_figures/R2B1A5.png",
+      "runtime/sprites/rf02_figures/R2B1A6.png",
+      "runtime/sprites/rf02_figures/R2B1A7.png",
+      "runtime/sprites/rf02_figures/R2B1A8.png"
+    ],
+    "notes": "Four independent actors compose the group."
+  },
+  {
+    "id": "F02-03b",
+    "prefix": "R2B2",
+    "proposed_height": 64,
+    "scale": 0.18,
+    "states": 1,
+    "rotations": 8,
+    "source_masters": [
+      "F02_03B_BLANKET"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2B2A1.png",
+      "runtime/sprites/rf02_figures/R2B2A2.png",
+      "runtime/sprites/rf02_figures/R2B2A3.png",
+      "runtime/sprites/rf02_figures/R2B2A4.png",
+      "runtime/sprites/rf02_figures/R2B2A5.png",
+      "runtime/sprites/rf02_figures/R2B2A6.png",
+      "runtime/sprites/rf02_figures/R2B2A7.png",
+      "runtime/sprites/rf02_figures/R2B2A8.png"
+    ],
+    "notes": "Four independent actors compose the group."
+  },
+  {
+    "id": "F02-03c",
+    "prefix": "R2B3",
+    "proposed_height": 64,
+    "scale": 0.18,
+    "states": 1,
+    "rotations": 8,
+    "source_masters": [
+      "F02_03C_MOTHER"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2B3A1.png",
+      "runtime/sprites/rf02_figures/R2B3A2.png",
+      "runtime/sprites/rf02_figures/R2B3A3.png",
+      "runtime/sprites/rf02_figures/R2B3A4.png",
+      "runtime/sprites/rf02_figures/R2B3A5.png",
+      "runtime/sprites/rf02_figures/R2B3A6.png",
+      "runtime/sprites/rf02_figures/R2B3A7.png",
+      "runtime/sprites/rf02_figures/R2B3A8.png"
+    ],
+    "notes": "Four independent actors compose the group."
+  },
+  {
+    "id": "F02-03d",
+    "prefix": "R2B4",
+    "proposed_height": 44,
+    "scale": 0.18,
+    "states": 1,
+    "rotations": 8,
+    "source_masters": [
+      "F02_03D_CHILD"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2B4A1.png",
+      "runtime/sprites/rf02_figures/R2B4A2.png",
+      "runtime/sprites/rf02_figures/R2B4A3.png",
+      "runtime/sprites/rf02_figures/R2B4A4.png",
+      "runtime/sprites/rf02_figures/R2B4A5.png",
+      "runtime/sprites/rf02_figures/R2B4A6.png",
+      "runtime/sprites/rf02_figures/R2B4A7.png",
+      "runtime/sprites/rf02_figures/R2B4A8.png"
+    ],
+    "notes": "Four independent actors compose the group."
+  },
+  {
+    "id": "F02-04",
+    "prefix": "R2F4",
+    "proposed_height": 44,
+    "scale": 0.18,
+    "states": 2,
+    "rotations": 8,
+    "source_masters": [
+      "F02_04_TRAM_SLEEP",
+      "F02_04_TRAM_WAKE"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2F4A1.png",
+      "runtime/sprites/rf02_figures/R2F4A2.png",
+      "runtime/sprites/rf02_figures/R2F4A3.png",
+      "runtime/sprites/rf02_figures/R2F4A4.png",
+      "runtime/sprites/rf02_figures/R2F4A5.png",
+      "runtime/sprites/rf02_figures/R2F4A6.png",
+      "runtime/sprites/rf02_figures/R2F4A7.png",
+      "runtime/sprites/rf02_figures/R2F4A8.png",
+      "runtime/sprites/rf02_figures/R2F4B1.png",
+      "runtime/sprites/rf02_figures/R2F4B2.png",
+      "runtime/sprites/rf02_figures/R2F4B3.png",
+      "runtime/sprites/rf02_figures/R2F4B4.png",
+      "runtime/sprites/rf02_figures/R2F4B5.png",
+      "runtime/sprites/rf02_figures/R2F4B6.png",
+      "runtime/sprites/rf02_figures/R2F4B7.png",
+      "runtime/sprites/rf02_figures/R2F4B8.png"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "F02-05",
+    "prefix": "R2F5",
+    "proposed_height": 36,
+    "scale": 0.18,
+    "states": 1,
+    "rotations": 8,
+    "source_masters": [
+      "F02_05_TSF_A"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2F5A1.png",
+      "runtime/sprites/rf02_figures/R2F5A2.png",
+      "runtime/sprites/rf02_figures/R2F5A3.png",
+      "runtime/sprites/rf02_figures/R2F5A4.png",
+      "runtime/sprites/rf02_figures/R2F5A5.png",
+      "runtime/sprites/rf02_figures/R2F5A6.png",
+      "runtime/sprites/rf02_figures/R2F5A7.png",
+      "runtime/sprites/rf02_figures/R2F5A8.png"
+    ],
+    "notes": "Second boy state not produced: image tool output moderation rejected two benign edits."
+  },
+  {
+    "id": "F02-06",
+    "prefix": "R2F6",
+    "proposed_height": 60,
+    "scale": 0.18,
+    "states": 1,
+    "rotations": 8,
+    "source_masters": [
+      "F02_06_COCHIN"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2F6A1.png",
+      "runtime/sprites/rf02_figures/R2F6A2.png",
+      "runtime/sprites/rf02_figures/R2F6A3.png",
+      "runtime/sprites/rf02_figures/R2F6A4.png",
+      "runtime/sprites/rf02_figures/R2F6A5.png",
+      "runtime/sprites/rf02_figures/R2F6A6.png",
+      "runtime/sprites/rf02_figures/R2F6A7.png",
+      "runtime/sprites/rf02_figures/R2F6A8.png"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "F02-07",
+    "prefix": "R2F7",
+    "proposed_height": 64,
+    "scale": 0.18,
+    "states": 1,
+    "rotations": 8,
+    "source_masters": [
+      "F02_07_SAINTE_ANNE"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2F7A1.png",
+      "runtime/sprites/rf02_figures/R2F7A2.png",
+      "runtime/sprites/rf02_figures/R2F7A3.png",
+      "runtime/sprites/rf02_figures/R2F7A4.png",
+      "runtime/sprites/rf02_figures/R2F7A5.png",
+      "runtime/sprites/rf02_figures/R2F7A6.png",
+      "runtime/sprites/rf02_figures/R2F7A7.png",
+      "runtime/sprites/rf02_figures/R2F7A8.png"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "F02-08",
+    "prefix": "R2F8",
+    "proposed_height": 68,
+    "scale": 0.18,
+    "states": 1,
+    "rotations": 8,
+    "source_masters": [
+      "F02_08_VIKTOR"
+    ],
+    "files": [
+      "runtime/sprites/rf02_figures/R2F8A1.png",
+      "runtime/sprites/rf02_figures/R2F8A2.png",
+      "runtime/sprites/rf02_figures/R2F8A3.png",
+      "runtime/sprites/rf02_figures/R2F8A4.png",
+      "runtime/sprites/rf02_figures/R2F8A5.png",
+      "runtime/sprites/rf02_figures/R2F8A6.png",
+      "runtime/sprites/rf02_figures/R2F8A7.png",
+      "runtime/sprites/rf02_figures/R2F8A8.png"
+    ],
+    "notes": ""
+  }
+]

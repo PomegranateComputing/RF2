@@ -1,0 +1,4734 @@
+{
+  "batch_id": "RF2_MAP_02_REPRISE",
+  "status": "OWNER_REVIEW_REQUIRED",
+  "base_commit": "bc563206a52c4da129fffcaaf8248f25ed3c34a4",
+  "scope": "New figure sprites and crowbar presentation; no active map or gameplay edits",
+  "pixel_aspect_compensation": 1.2,
+  "rotation_source_indices": [
+    0,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "files": [
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1A1.png",
+      "target_relpath": "sprites/rf02_figures/R2F1A1.png",
+      "sha256": "a7e0d65fb386ee39c53c3b3c73562044a807c0cda0282d35f8ae463e1cc9b6d8",
+      "bytes": 91092,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_01_FORMS_A.png",
+      "source_sha256": "4399127703e7ca573a6bf3abe9cc95277c9452cc88d96c442661f79c543546ed",
+      "source_box": [
+        65,
+        11,
+        288,
+        613
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7308970099667774,
+        0.6090808416389812
+      ],
+      "world_visible_height": 66.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1A2.png",
+      "target_relpath": "sprites/rf02_figures/R2F1A2.png",
+      "sha256": "2d818ff00dd69456f59ccd8b18a264d7ee370f0cfa80123f894b37b99b51d75c",
+      "bytes": 88548,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_01_FORMS_A.png",
+      "source_sha256": "4399127703e7ca573a6bf3abe9cc95277c9452cc88d96c442661f79c543546ed",
+      "source_box": [
+        1021,
+        637,
+        1212,
+        1229
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7432432432432432,
+        0.6193693693693694
+      ],
+      "world_visible_height": 66.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1A3.png",
+      "target_relpath": "sprites/rf02_figures/R2F1A3.png",
+      "sha256": "10cad9490c05c7ecd929c223b495cf31d6a20e74e07e393fe070e6f578bbc222",
+      "bytes": 75379,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_01_FORMS_A.png",
+      "source_sha256": "4399127703e7ca573a6bf3abe9cc95277c9452cc88d96c442661f79c543546ed",
+      "source_box": [
+        696,
+        637,
+        873,
+        1218
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7573149741824441,
+        0.6310958118187034
+      ],
+      "world_visible_height": 66.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1A4.png",
+      "target_relpath": "sprites/rf02_figures/R2F1A4.png",
+      "sha256": "4eade6066d2d2b2c2e784ea6cd5ae898c245e98d19ded23b1bf88740b9638616",
+      "bytes": 89150,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_01_FORMS_A.png",
+      "source_sha256": "4399127703e7ca573a6bf3abe9cc95277c9452cc88d96c442661f79c543546ed",
+      "source_box": [
+        386,
+        641,
+        586,
+        1221
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7586206896551724,
+        0.632183908045977
+      ],
+      "world_visible_height": 66.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1A5.png",
+      "target_relpath": "sprites/rf02_figures/R2F1A5.png",
+      "sha256": "676ca431159c24ab64d372e60220e1a6e4e1ae0670f21d8b24a5daec88c13f56",
+      "bytes": 90839,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_01_FORMS_A.png",
+      "source_sha256": "4399127703e7ca573a6bf3abe9cc95277c9452cc88d96c442661f79c543546ed",
+      "source_box": [
+        58,
+        640,
+        282,
+        1220
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7586206896551724,
+        0.632183908045977
+      ],
+      "world_visible_height": 66.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1A6.png",
+      "target_relpath": "sprites/rf02_figures/R2F1A6.png",
+      "sha256": "1000bd9eeb41874934b869cf8db8015384ad4384a512edf8afe0337e5b619c09",
+      "bytes": 79165,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_01_FORMS_A.png",
+      "source_sha256": "4399127703e7ca573a6bf3abe9cc95277c9452cc88d96c442661f79c543546ed",
+      "source_box": [
+        1012,
+        15,
+        1205,
+        613
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.7357859531772575,
+        0.6131549609810479
+      ],
+      "world_visible_height": 66.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1A7.png",
+      "target_relpath": "sprites/rf02_figures/R2F1A7.png",
+      "sha256": "6be527d2c4df0cdee15c8265a6855deb527b6528fb6311eb66c17d0fdc4be35d",
+      "bytes": 72780,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_01_FORMS_A.png",
+      "source_sha256": "4399127703e7ca573a6bf3abe9cc95277c9452cc88d96c442661f79c543546ed",
+      "source_box": [
+        723,
+        16,
+        909,
+        615
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7345575959933223,
+        0.6121313299944352
+      ],
+      "world_visible_height": 66.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1A8.png",
+      "target_relpath": "sprites/rf02_figures/R2F1A8.png",
+      "sha256": "5849be5f13b753c72edb737034745ca696c1d4af401ee1fe50592dbfb825b174",
+      "bytes": 87915,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_01_FORMS_A.png",
+      "source_sha256": "4399127703e7ca573a6bf3abe9cc95277c9452cc88d96c442661f79c543546ed",
+      "source_box": [
+        378,
+        13,
+        577,
+        615
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7308970099667774,
+        0.6090808416389812
+      ],
+      "world_visible_height": 66.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1B1.png",
+      "target_relpath": "sprites/rf02_figures/R2F1B1.png",
+      "sha256": "4270640c7db702e202affa14cc4f00c0ab896e71ea07c32635065f52caec7cdd",
+      "bytes": 84309,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "B",
+      "rotation": 1,
+      "source": "source/masters/F02_01_FORMS_B.png",
+      "source_sha256": "5a9180ff3d50ffb77207b5e56b12415d998e42f486b1ff8687c4ae1f54899de7",
+      "source_box": [
+        85,
+        47,
+        287,
+        613
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7308970099667774,
+        0.6090808416389812
+      ],
+      "world_visible_height": 62.05315614617941,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1B2.png",
+      "target_relpath": "sprites/rf02_figures/R2F1B2.png",
+      "sha256": "c6975e63c0c7d28ca1c95ecf9cb1758c27484a4526427c6ef0771629ea7ed14f",
+      "bytes": 93419,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "B",
+      "rotation": 2,
+      "source": "source/masters/F02_01_FORMS_B.png",
+      "source_sha256": "5a9180ff3d50ffb77207b5e56b12415d998e42f486b1ff8687c4ae1f54899de7",
+      "source_box": [
+        981,
+        661,
+        1229,
+        1226
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7432432432432432,
+        0.6193693693693694
+      ],
+      "world_visible_height": 62.98986486486487,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1B3.png",
+      "target_relpath": "sprites/rf02_figures/R2F1B3.png",
+      "sha256": "52bdd9e6a2986dc567082cecf8a54b1280aa8dbd8d3bd3b2d663360e2f94e6c7",
+      "bytes": 78541,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "B",
+      "rotation": 3,
+      "source": "source/masters/F02_01_FORMS_B.png",
+      "source_sha256": "5a9180ff3d50ffb77207b5e56b12415d998e42f486b1ff8687c4ae1f54899de7",
+      "source_box": [
+        673,
+        669,
+        918,
+        1219
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7573149741824441,
+        0.6310958118187034
+      ],
+      "world_visible_height": 62.47848537005164,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1B4.png",
+      "target_relpath": "sprites/rf02_figures/R2F1B4.png",
+      "sha256": "63f509632ca45ef92da599d1d7a1c7ca7b3224aa52e2a2146722603441892b68",
+      "bytes": 89394,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "B",
+      "rotation": 4,
+      "source": "source/masters/F02_01_FORMS_B.png",
+      "source_sha256": "5a9180ff3d50ffb77207b5e56b12415d998e42f486b1ff8687c4ae1f54899de7",
+      "source_box": [
+        358,
+        664,
+        592,
+        1220
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7586206896551724,
+        0.632183908045977
+      ],
+      "world_visible_height": 63.26896551724138,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1B5.png",
+      "target_relpath": "sprites/rf02_figures/R2F1B5.png",
+      "sha256": "f1a99f674fcc0288414249b399c8b8a0d3f1d1217e4cd75509d9c715c0d528f9",
+      "bytes": 89786,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "B",
+      "rotation": 5,
+      "source": "source/masters/F02_01_FORMS_B.png",
+      "source_sha256": "5a9180ff3d50ffb77207b5e56b12415d998e42f486b1ff8687c4ae1f54899de7",
+      "source_box": [
+        58,
+        661,
+        281,
+        1220
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7586206896551724,
+        0.632183908045977
+      ],
+      "world_visible_height": 63.610344827586204,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1B6.png",
+      "target_relpath": "sprites/rf02_figures/R2F1B6.png",
+      "sha256": "64349f92a246f63fdace5a195db1742c70efc47541cd85ba512bd4a25d537045",
+      "bytes": 82840,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "B",
+      "rotation": 6,
+      "source": "source/masters/F02_01_FORMS_B.png",
+      "source_sha256": "5a9180ff3d50ffb77207b5e56b12415d998e42f486b1ff8687c4ae1f54899de7",
+      "source_box": [
+        998,
+        59,
+        1248,
+        616
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.7357859531772575,
+        0.6131549609810479
+      ],
+      "world_visible_height": 61.47491638795986,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1B7.png",
+      "target_relpath": "sprites/rf02_figures/R2F1B7.png",
+      "sha256": "6e561c06aaa6936407d9fb5bd626fb00a30a9adfc3a0bd51204afbca116f15ec",
+      "bytes": 73016,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "B",
+      "rotation": 7,
+      "source": "source/masters/F02_01_FORMS_B.png",
+      "source_sha256": "5a9180ff3d50ffb77207b5e56b12415d998e42f486b1ff8687c4ae1f54899de7",
+      "source_box": [
+        688,
+        60,
+        930,
+        616
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7345575959933223,
+        0.6121313299944352
+      ],
+      "world_visible_height": 61.26210350584307,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1B8.png",
+      "target_relpath": "sprites/rf02_figures/R2F1B8.png",
+      "sha256": "4bb362f0e99f8ef2bcab4e324dc3817b30aa872fb44e67bc07f224788fffbf63",
+      "bytes": 82535,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "B",
+      "rotation": 8,
+      "source": "source/masters/F02_01_FORMS_B.png",
+      "source_sha256": "5a9180ff3d50ffb77207b5e56b12415d998e42f486b1ff8687c4ae1f54899de7",
+      "source_box": [
+        396,
+        50,
+        583,
+        615
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7308970099667774,
+        0.6090808416389812
+      ],
+      "world_visible_height": 61.94352159468439,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1C1.png",
+      "target_relpath": "sprites/rf02_figures/R2F1C1.png",
+      "sha256": "360b92743f199e2bf2da7d9447716d52a158812068a6ebdc5ca437a01a393b75",
+      "bytes": 87308,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "C",
+      "rotation": 1,
+      "source": "source/masters/F02_01_FORMS_C.png",
+      "source_sha256": "5e9b4b971699be952ca4503ff82783572d883ac6f14be6cd766eba12e310d4e9",
+      "source_box": [
+        90,
+        20,
+        285,
+        615
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7308970099667774,
+        0.6090808416389812
+      ],
+      "world_visible_height": 65.23255813953489,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1C2.png",
+      "target_relpath": "sprites/rf02_figures/R2F1C2.png",
+      "sha256": "6a6938dd96ca24d43a66693d189345ea8aa1e6eb4925c39bc5a4806c24055f51",
+      "bytes": 95670,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "C",
+      "rotation": 2,
+      "source": "source/masters/F02_01_FORMS_C.png",
+      "source_sha256": "5e9b4b971699be952ca4503ff82783572d883ac6f14be6cd766eba12e310d4e9",
+      "source_box": [
+        963,
+        650,
+        1232,
+        1229
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7432432432432432,
+        0.6193693693693694
+      ],
+      "world_visible_height": 64.55067567567566,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1C3.png",
+      "target_relpath": "sprites/rf02_figures/R2F1C3.png",
+      "sha256": "388706904490c17d887db67f8e8687f91b81a46f4711ec6bde5085908b32e762",
+      "bytes": 81513,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "C",
+      "rotation": 3,
+      "source": "source/masters/F02_01_FORMS_C.png",
+      "source_sha256": "5e9b4b971699be952ca4503ff82783572d883ac6f14be6cd766eba12e310d4e9",
+      "source_box": [
+        655,
+        645,
+        908,
+        1221
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7573149741824441,
+        0.6310958118187034
+      ],
+      "world_visible_height": 65.43201376936317,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1C4.png",
+      "target_relpath": "sprites/rf02_figures/R2F1C4.png",
+      "sha256": "1feebb71488272c54415bde6fb252937e2b412cf111618aabb831721d4efa406",
+      "bytes": 87454,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "C",
+      "rotation": 4,
+      "source": "source/masters/F02_01_FORMS_C.png",
+      "source_sha256": "5e9b4b971699be952ca4503ff82783572d883ac6f14be6cd766eba12e310d4e9",
+      "source_box": [
+        392,
+        646,
+        591,
+        1223
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7586206896551724,
+        0.632183908045977
+      ],
+      "world_visible_height": 65.65862068965517,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1C5.png",
+      "target_relpath": "sprites/rf02_figures/R2F1C5.png",
+      "sha256": "a2ba5a384086cefd07545d07c17aa4ed0799a4a9689d025b60db42333b63c0e0",
+      "bytes": 94739,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "C",
+      "rotation": 5,
+      "source": "source/masters/F02_01_FORMS_C.png",
+      "source_sha256": "5e9b4b971699be952ca4503ff82783572d883ac6f14be6cd766eba12e310d4e9",
+      "source_box": [
+        54,
+        649,
+        301,
+        1221
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7586206896551724,
+        0.632183908045977
+      ],
+      "world_visible_height": 65.08965517241379,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1C6.png",
+      "target_relpath": "sprites/rf02_figures/R2F1C6.png",
+      "sha256": "cb364719c5802ea119c88062586e0262c8d011a258e59a1175d00c2f81e67499",
+      "bytes": 86004,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "C",
+      "rotation": 6,
+      "source": "source/masters/F02_01_FORMS_C.png",
+      "source_sha256": "5e9b4b971699be952ca4503ff82783572d883ac6f14be6cd766eba12e310d4e9",
+      "source_box": [
+        1003,
+        28,
+        1249,
+        616
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.7357859531772575,
+        0.6131549609810479
+      ],
+      "world_visible_height": 64.89632107023411,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1C7.png",
+      "target_relpath": "sprites/rf02_figures/R2F1C7.png",
+      "sha256": "5492c7bf0d2d465c06dce8e9611014fa4dea70a0c5aae11babe2d0a335ffe746",
+      "bytes": 75601,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "C",
+      "rotation": 7,
+      "source": "source/masters/F02_01_FORMS_C.png",
+      "source_sha256": "5e9b4b971699be952ca4503ff82783572d883ac6f14be6cd766eba12e310d4e9",
+      "source_box": [
+        704,
+        32,
+        936,
+        617
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7345575959933223,
+        0.6121313299944352
+      ],
+      "world_visible_height": 64.45742904841403,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F1C8.png",
+      "target_relpath": "sprites/rf02_figures/R2F1C8.png",
+      "sha256": "c60e949a36039189b2296c928f9582b267857926176bec0ab7ad7e46fd9efa93",
+      "bytes": 85711,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-01",
+      "state": "C",
+      "rotation": 8,
+      "source": "source/masters/F02_01_FORMS_C.png",
+      "source_sha256": "5e9b4b971699be952ca4503ff82783572d883ac6f14be6cd766eba12e310d4e9",
+      "source_box": [
+        393,
+        28,
+        575,
+        617
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7308970099667774,
+        0.6090808416389812
+      ],
+      "world_visible_height": 64.5747508305648,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2A1.png",
+      "target_relpath": "sprites/rf02_figures/R2F2A1.png",
+      "sha256": "28eed62abfb1076e4278527be75d6dbee4dfc1b039eee5e18f7d6d1336409534",
+      "bytes": 83412,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_02_PRAM_A.png",
+      "source_sha256": "d38f4085caea1a680f49ab9e00dd3be9b5e6cc3994741c017c8ab4a715aff012",
+      "source_box": [
+        88,
+        28,
+        260,
+        607
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7369027058146228,
+        0.6140855881788524
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2A2.png",
+      "target_relpath": "sprites/rf02_figures/R2F2A2.png",
+      "sha256": "f0e8ff8d5903dd3f3f0ba3ab8e9f975e66c7a7a9d5bab54b506503aa4a1b8791",
+      "bytes": 86467,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_02_PRAM_A.png",
+      "source_sha256": "d38f4085caea1a680f49ab9e00dd3be9b5e6cc3994741c017c8ab4a715aff012",
+      "source_box": [
+        996,
+        642,
+        1221,
+        1218
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2A3.png",
+      "target_relpath": "sprites/rf02_figures/R2F2A3.png",
+      "sha256": "f6f3388af0f0871702a0e50f5b3d355c0025922ccd27c2f706d2f828455b717b",
+      "bytes": 87456,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_02_PRAM_A.png",
+      "source_sha256": "d38f4085caea1a680f49ab9e00dd3be9b5e6cc3994741c017c8ab4a715aff012",
+      "source_box": [
+        643,
+        643,
+        901,
+        1209
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7538280329799764,
+        0.6281900274833137
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2A4.png",
+      "target_relpath": "sprites/rf02_figures/R2F2A4.png",
+      "sha256": "16ed2f4e00cc870afc160ce51f4fa1a7f4c591bc75a620ef25a57812abc54441",
+      "bytes": 85427,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_02_PRAM_A.png",
+      "source_sha256": "d38f4085caea1a680f49ab9e00dd3be9b5e6cc3994741c017c8ab4a715aff012",
+      "source_box": [
+        347,
+        643,
+        569,
+        1208
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7551622418879055,
+        0.6293018682399213
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2A5.png",
+      "target_relpath": "sprites/rf02_figures/R2F2A5.png",
+      "sha256": "88839ca53795ed8549b89bd58582e5d26dd13d2a84efa91b14a47d2e46f215b7",
+      "bytes": 80684,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_02_PRAM_A.png",
+      "source_sha256": "d38f4085caea1a680f49ab9e00dd3be9b5e6cc3994741c017c8ab4a715aff012",
+      "source_box": [
+        78,
+        643,
+        252,
+        1215
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7459207459207459,
+        0.6216006216006216
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2A6.png",
+      "target_relpath": "sprites/rf02_figures/R2F2A6.png",
+      "sha256": "8fcf86f778a7c7b2fca6b3093904b4e011605e57b000d15fb37959679c0ad219",
+      "bytes": 84503,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_02_PRAM_A.png",
+      "source_sha256": "d38f4085caea1a680f49ab9e00dd3be9b5e6cc3994741c017c8ab4a715aff012",
+      "source_box": [
+        994,
+        31,
+        1221,
+        604
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.7446189645142524,
+        0.620515803761877
+      ],
+      "world_visible_height": 63.999999999999986,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2A7.png",
+      "target_relpath": "sprites/rf02_figures/R2F2A7.png",
+      "sha256": "5d381e47e062a23f50ea97b6f90464a391c65ba5d87665952b4a5b43e757fb79",
+      "bytes": 82821,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_02_PRAM_A.png",
+      "source_sha256": "d38f4085caea1a680f49ab9e00dd3be9b5e6cc3994741c017c8ab4a715aff012",
+      "source_box": [
+        680,
+        30,
+        924,
+        606
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2A8.png",
+      "target_relpath": "sprites/rf02_figures/R2F2A8.png",
+      "sha256": "0db171c276ef6d32ef7650e9a65510ddbb16b08f711911fc6db6d8b5e21caa0c",
+      "bytes": 83215,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_02_PRAM_A.png",
+      "source_sha256": "d38f4085caea1a680f49ab9e00dd3be9b5e6cc3994741c017c8ab4a715aff012",
+      "source_box": [
+        401,
+        29,
+        596,
+        605
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2B1.png",
+      "target_relpath": "sprites/rf02_figures/R2F2B1.png",
+      "sha256": "9b72802921767e2226b7305d241c3c5b91481c999151e8c237cde9955f3abd61",
+      "bytes": 80330,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "B",
+      "rotation": 1,
+      "source": "source/masters/F02_02_PRAM_B.png",
+      "source_sha256": "2dde58280cc1a846cb852dd5739e41325fe6c7d9b4b6035fb2c86debefbffe03",
+      "source_box": [
+        84,
+        26,
+        257,
+        609
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7369027058146228,
+        0.6140855881788524
+      ],
+      "world_visible_height": 64.44214162348877,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2B2.png",
+      "target_relpath": "sprites/rf02_figures/R2F2B2.png",
+      "sha256": "555b24b64fb828ed197449cc333f674a04d2ab7550d89ef1fd23e460defa73af",
+      "bytes": 85836,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "B",
+      "rotation": 2,
+      "source": "source/masters/F02_02_PRAM_B.png",
+      "source_sha256": "2dde58280cc1a846cb852dd5739e41325fe6c7d9b4b6035fb2c86debefbffe03",
+      "source_box": [
+        1006,
+        641,
+        1226,
+        1206
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 62.77777777777777,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2B3.png",
+      "target_relpath": "sprites/rf02_figures/R2F2B3.png",
+      "sha256": "08b49317318e2a9b0377a51992a7fbea7b9f6fb06ca4bf3a7dafae198a962958",
+      "bytes": 86740,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "B",
+      "rotation": 3,
+      "source": "source/masters/F02_02_PRAM_B.png",
+      "source_sha256": "2dde58280cc1a846cb852dd5739e41325fe6c7d9b4b6035fb2c86debefbffe03",
+      "source_box": [
+        641,
+        642,
+        912,
+        1199
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7538280329799764,
+        0.6281900274833137
+      ],
+      "world_visible_height": 62.98233215547702,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2B4.png",
+      "target_relpath": "sprites/rf02_figures/R2F2B4.png",
+      "sha256": "ab654e3d26befe805a9f2c3c02db8d583a591022e5372c25fd8bd656174f15b1",
+      "bytes": 83979,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "B",
+      "rotation": 4,
+      "source": "source/masters/F02_02_PRAM_B.png",
+      "source_sha256": "2dde58280cc1a846cb852dd5739e41325fe6c7d9b4b6035fb2c86debefbffe03",
+      "source_box": [
+        345,
+        642,
+        567,
+        1206
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7551622418879055,
+        0.6293018682399213
+      ],
+      "world_visible_height": 63.88672566371681,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2B5.png",
+      "target_relpath": "sprites/rf02_figures/R2F2B5.png",
+      "sha256": "626b4b56a7bd9bd2722fcb412be44546890fb4f633b54582e296b15a98bdb890",
+      "bytes": 78088,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "B",
+      "rotation": 5,
+      "source": "source/masters/F02_02_PRAM_B.png",
+      "source_sha256": "2dde58280cc1a846cb852dd5739e41325fe6c7d9b4b6035fb2c86debefbffe03",
+      "source_box": [
+        78,
+        642,
+        256,
+        1214
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7459207459207459,
+        0.6216006216006216
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2B6.png",
+      "target_relpath": "sprites/rf02_figures/R2F2B6.png",
+      "sha256": "53605b6b278ca7fb5ded128e44c313b1eec91765dc8eeba40f7d033f45d337fc",
+      "bytes": 81370,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "B",
+      "rotation": 6,
+      "source": "source/masters/F02_02_PRAM_B.png",
+      "source_sha256": "2dde58280cc1a846cb852dd5739e41325fe6c7d9b4b6035fb2c86debefbffe03",
+      "source_box": [
+        1016,
+        27,
+        1226,
+        606
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.7446189645142524,
+        0.620515803761877
+      ],
+      "world_visible_height": 64.67015706806282,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2B7.png",
+      "target_relpath": "sprites/rf02_figures/R2F2B7.png",
+      "sha256": "88bed5e05b86a9f890e2fff3cfbcc3619dc30baaf9fa937791332ba5caba583b",
+      "bytes": 83728,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "B",
+      "rotation": 7,
+      "source": "source/masters/F02_02_PRAM_B.png",
+      "source_sha256": "2dde58280cc1a846cb852dd5739e41325fe6c7d9b4b6035fb2c86debefbffe03",
+      "source_box": [
+        679,
+        27,
+        927,
+        604
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 64.1111111111111,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2B8.png",
+      "target_relpath": "sprites/rf02_figures/R2F2B8.png",
+      "sha256": "bb14a07063c67c45cf52409658a5625649b0b07bce18fa2e61fab386a11078d3",
+      "bytes": 85071,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "B",
+      "rotation": 8,
+      "source": "source/masters/F02_02_PRAM_B.png",
+      "source_sha256": "2dde58280cc1a846cb852dd5739e41325fe6c7d9b4b6035fb2c86debefbffe03",
+      "source_box": [
+        398,
+        27,
+        599,
+        606
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 64.33333333333333,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2C1.png",
+      "target_relpath": "sprites/rf02_figures/R2F2C1.png",
+      "sha256": "8ada849d52e01f04f5c329ea66705e39f31b02dea7d8d6bbadc179fd52079d05",
+      "bytes": 82390,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "C",
+      "rotation": 1,
+      "source": "source/masters/F02_02_PRAM_C.png",
+      "source_sha256": "90648ea282599285b72c066939ce870ba782ba8213d1c0042fd9993bbac9873a",
+      "source_box": [
+        76,
+        28,
+        260,
+        613
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7369027058146228,
+        0.6140855881788524
+      ],
+      "world_visible_height": 64.66321243523316,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2C2.png",
+      "target_relpath": "sprites/rf02_figures/R2F2C2.png",
+      "sha256": "f50720b7a451bfb5a427488f3a299d148e9547e46f0094f8ef8b53d600a7c061",
+      "bytes": 89134,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "C",
+      "rotation": 2,
+      "source": "source/masters/F02_02_PRAM_C.png",
+      "source_sha256": "90648ea282599285b72c066939ce870ba782ba8213d1c0042fd9993bbac9873a",
+      "source_box": [
+        986,
+        639,
+        1225,
+        1222
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 64.77777777777777,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2C3.png",
+      "target_relpath": "sprites/rf02_figures/R2F2C3.png",
+      "sha256": "eef42f464641b975697f5531eacf4e70020f005a6c5ecb66be87de7cdff93eda",
+      "bytes": 88540,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "C",
+      "rotation": 3,
+      "source": "source/masters/F02_02_PRAM_C.png",
+      "source_sha256": "90648ea282599285b72c066939ce870ba782ba8213d1c0042fd9993bbac9873a",
+      "source_box": [
+        643,
+        642,
+        916,
+        1214
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7538280329799764,
+        0.6281900274833137
+      ],
+      "world_visible_height": 64.67844522968197,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2C4.png",
+      "target_relpath": "sprites/rf02_figures/R2F2C4.png",
+      "sha256": "6d095e3c5d8f5574b4a747157d5e29f0c3cba6d9f5661083a2c85b64a772cdf7",
+      "bytes": 85654,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "C",
+      "rotation": 4,
+      "source": "source/masters/F02_02_PRAM_C.png",
+      "source_sha256": "90648ea282599285b72c066939ce870ba782ba8213d1c0042fd9993bbac9873a",
+      "source_box": [
+        348,
+        639,
+        578,
+        1212
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7551622418879055,
+        0.6293018682399213
+      ],
+      "world_visible_height": 64.90619469026548,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2C5.png",
+      "target_relpath": "sprites/rf02_figures/R2F2C5.png",
+      "sha256": "2ce93c7112a9956ac4eaf556c9f12a5db60b760117203c981a56d2068f8007af",
+      "bytes": 80745,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "C",
+      "rotation": 5,
+      "source": "source/masters/F02_02_PRAM_C.png",
+      "source_sha256": "90648ea282599285b72c066939ce870ba782ba8213d1c0042fd9993bbac9873a",
+      "source_box": [
+        78,
+        639,
+        266,
+        1220
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7459207459207459,
+        0.6216006216006216
+      ],
+      "world_visible_height": 65.006993006993,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2C6.png",
+      "target_relpath": "sprites/rf02_figures/R2F2C6.png",
+      "sha256": "abb0fa868d65ee4825431ffa71c5937840df2991a67e471a7a4d6d0fd39ca281",
+      "bytes": 85240,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "C",
+      "rotation": 6,
+      "source": "source/masters/F02_02_PRAM_C.png",
+      "source_sha256": "90648ea282599285b72c066939ce870ba782ba8213d1c0042fd9993bbac9873a",
+      "source_box": [
+        999,
+        29,
+        1233,
+        611
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.7446189645142524,
+        0.620515803761877
+      ],
+      "world_visible_height": 65.00523560209423,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2C7.png",
+      "target_relpath": "sprites/rf02_figures/R2F2C7.png",
+      "sha256": "d1e51eec9557e7f1cea7cb3cd8f3219525ee91ac9f885107ad669fbc05aaa91d",
+      "bytes": 84500,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "C",
+      "rotation": 7,
+      "source": "source/masters/F02_02_PRAM_C.png",
+      "source_sha256": "90648ea282599285b72c066939ce870ba782ba8213d1c0042fd9993bbac9873a",
+      "source_box": [
+        649,
+        29,
+        928,
+        611
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 64.66666666666666,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2C8.png",
+      "target_relpath": "sprites/rf02_figures/R2F2C8.png",
+      "sha256": "d70536b7af0f35898b3f3d3cf19275e9a8c09dfb8ead9a841adcc872229ebbd7",
+      "bytes": 86307,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "C",
+      "rotation": 8,
+      "source": "source/masters/F02_02_PRAM_C.png",
+      "source_sha256": "90648ea282599285b72c066939ce870ba782ba8213d1c0042fd9993bbac9873a",
+      "source_box": [
+        384,
+        29,
+        600,
+        609
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 64.44444444444443,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2D1.png",
+      "target_relpath": "sprites/rf02_figures/R2F2D1.png",
+      "sha256": "37af92dbc4d2a6a29a17f99ec8dab18032ad930d4ad7645b07772f1de4846871",
+      "bytes": 79621,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "D",
+      "rotation": 1,
+      "source": "source/masters/F02_02_PRAM_D.png",
+      "source_sha256": "46236ee056927a3d920b1af04caac8016ff19858f32fc73f756183f98a9a9b4a",
+      "source_box": [
+        96,
+        32,
+        267,
+        612
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7369027058146228,
+        0.6140855881788524
+      ],
+      "world_visible_height": 64.11053540587218,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2D2.png",
+      "target_relpath": "sprites/rf02_figures/R2F2D2.png",
+      "sha256": "c8a2262db0833b6fa0f1f37820f5d52f4f523341a42ae8cd141a1d0bcfa66ef2",
+      "bytes": 84102,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "D",
+      "rotation": 2,
+      "source": "source/masters/F02_02_PRAM_D.png",
+      "source_sha256": "46236ee056927a3d920b1af04caac8016ff19858f32fc73f756183f98a9a9b4a",
+      "source_box": [
+        999,
+        648,
+        1233,
+        1210
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 62.44444444444444,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2D3.png",
+      "target_relpath": "sprites/rf02_figures/R2F2D3.png",
+      "sha256": "62430c6829d3b70240f980b1f9ba75d99be497a1621969e917a4f44b6d213919",
+      "bytes": 87044,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "D",
+      "rotation": 3,
+      "source": "source/masters/F02_02_PRAM_D.png",
+      "source_sha256": "46236ee056927a3d920b1af04caac8016ff19858f32fc73f756183f98a9a9b4a",
+      "source_box": [
+        637,
+        649,
+        907,
+        1209
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7538280329799764,
+        0.6281900274833137
+      ],
+      "world_visible_height": 63.32155477031801,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2D4.png",
+      "target_relpath": "sprites/rf02_figures/R2F2D4.png",
+      "sha256": "184c070724db26c024f1715ebbede620606cdb43530addaa19dae11c84e0e035",
+      "bytes": 82935,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "D",
+      "rotation": 4,
+      "source": "source/masters/F02_02_PRAM_D.png",
+      "source_sha256": "46236ee056927a3d920b1af04caac8016ff19858f32fc73f756183f98a9a9b4a",
+      "source_box": [
+        354,
+        649,
+        580,
+        1205
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7551622418879055,
+        0.6293018682399213
+      ],
+      "world_visible_height": 62.980530973451316,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2D5.png",
+      "target_relpath": "sprites/rf02_figures/R2F2D5.png",
+      "sha256": "f11c9aa971fe8d72b2d8a860afc323320abd866d9d46dd94eda813b45db753aa",
+      "bytes": 76384,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "D",
+      "rotation": 5,
+      "source": "source/masters/F02_02_PRAM_D.png",
+      "source_sha256": "46236ee056927a3d920b1af04caac8016ff19858f32fc73f756183f98a9a9b4a",
+      "source_box": [
+        86,
+        649,
+        260,
+        1212
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7459207459207459,
+        0.6216006216006216
+      ],
+      "world_visible_height": 62.993006993006986,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2D6.png",
+      "target_relpath": "sprites/rf02_figures/R2F2D6.png",
+      "sha256": "deac957be88eed20e17744244562dc17c5a3484fb8059f0c83c1b19b423650a0",
+      "bytes": 83135,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "D",
+      "rotation": 6,
+      "source": "source/masters/F02_02_PRAM_D.png",
+      "source_sha256": "46236ee056927a3d920b1af04caac8016ff19858f32fc73f756183f98a9a9b4a",
+      "source_box": [
+        1011,
+        35,
+        1235,
+        614
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.7446189645142524,
+        0.620515803761877
+      ],
+      "world_visible_height": 64.67015706806282,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2D7.png",
+      "target_relpath": "sprites/rf02_figures/R2F2D7.png",
+      "sha256": "6c43aadbc9cf5f151bdad43f19f96fd4166fa91d06961a831299e98841997b62",
+      "bytes": 82858,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "D",
+      "rotation": 7,
+      "source": "source/masters/F02_02_PRAM_D.png",
+      "source_sha256": "46236ee056927a3d920b1af04caac8016ff19858f32fc73f756183f98a9a9b4a",
+      "source_box": [
+        679,
+        35,
+        929,
+        607
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 63.55555555555554,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F2D8.png",
+      "target_relpath": "sprites/rf02_figures/R2F2D8.png",
+      "sha256": "d737e3b5d136f1f1c4e1abc2c9040d4b1e7f60708095236cfe237526c92d136e",
+      "bytes": 84852,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-02",
+      "state": "D",
+      "rotation": 8,
+      "source": "source/masters/F02_02_PRAM_D.png",
+      "source_sha256": "46236ee056927a3d920b1af04caac8016ff19858f32fc73f756183f98a9a9b4a",
+      "source_box": [
+        409,
+        33,
+        612,
+        610
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 64.1111111111111,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B1A1.png",
+      "target_relpath": "sprites/rf02_figures/R2B1A1.png",
+      "sha256": "cdbbdcdfb87dfd0778ecc852d75ead3d32fde9fa3cc81984639fab2038ed12df",
+      "bytes": 83148,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03a",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_03A_BASKET.png",
+      "source_sha256": "fb6fbb1099d755080706aaf086878f7c8ce8a2be82e6d72d6aea19971cafd08b",
+      "source_box": [
+        77,
+        20,
+        284,
+        618
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.6911928651059086,
+        0.5759940542549239
+      ],
+      "world_visible_height": 62.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B1A2.png",
+      "target_relpath": "sprites/rf02_figures/R2B1A2.png",
+      "sha256": "609a692cf5aa23ac7bd3fa1a831512d40e2d9e8eaf1f8d7e562b034091813614",
+      "bytes": 80991,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03a",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_03A_BASKET.png",
+      "source_sha256": "fb6fbb1099d755080706aaf086878f7c8ce8a2be82e6d72d6aea19971cafd08b",
+      "source_box": [
+        983,
+        639,
+        1191,
+        1227
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7029478458049887,
+        0.5857898715041573
+      ],
+      "world_visible_height": 62.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B1A3.png",
+      "target_relpath": "sprites/rf02_figures/R2B1A3.png",
+      "sha256": "f818aa42b72ff899ebca9de1dfdb2160ef5e0db2ba90c259894b24f5e691ba3b",
+      "bytes": 69936,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03a",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_03A_BASKET.png",
+      "source_sha256": "fb6fbb1099d755080706aaf086878f7c8ce8a2be82e6d72d6aea19971cafd08b",
+      "source_box": [
+        648,
+        639,
+        866,
+        1223
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7077625570776256,
+        0.5898021308980214
+      ],
+      "world_visible_height": 62.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B1A4.png",
+      "target_relpath": "sprites/rf02_figures/R2B1A4.png",
+      "sha256": "4115c324231e2126584b724145ac153192d765424805391e22159ad2d56d40eb",
+      "bytes": 74867,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03a",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_03A_BASKET.png",
+      "source_sha256": "fb6fbb1099d755080706aaf086878f7c8ce8a2be82e6d72d6aea19971cafd08b",
+      "source_box": [
+        361,
+        639,
+        577,
+        1225
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7053469852104665,
+        0.5877891543420554
+      ],
+      "world_visible_height": 62.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B1A5.png",
+      "target_relpath": "sprites/rf02_figures/R2B1A5.png",
+      "sha256": "db415987bb42b323a8518a466bc9b785b13afd364dc5fa4f939aec78a5623be4",
+      "bytes": 74666,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03a",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_03A_BASKET.png",
+      "source_sha256": "fb6fbb1099d755080706aaf086878f7c8ce8a2be82e6d72d6aea19971cafd08b",
+      "source_box": [
+        69,
+        639,
+        281,
+        1223
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7077625570776256,
+        0.5898021308980214
+      ],
+      "world_visible_height": 62.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B1A6.png",
+      "target_relpath": "sprites/rf02_figures/R2B1A6.png",
+      "sha256": "53aee7c0238200ac38b4d65ca2b94d7b27785395a6e53343e021d2474520b936",
+      "bytes": 72813,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03a",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_03A_BASKET.png",
+      "source_sha256": "fb6fbb1099d755080706aaf086878f7c8ce8a2be82e6d72d6aea19971cafd08b",
+      "source_box": [
+        1004,
+        21,
+        1224,
+        618
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.6923506420993858,
+        0.5769588684161548
+      ],
+      "world_visible_height": 62.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B1A7.png",
+      "target_relpath": "sprites/rf02_figures/R2B1A7.png",
+      "sha256": "6122c2c9f589efcb84cbdfe11ebeef6e3daa50bdbdf8dc956a4088e2d21f51c1",
+      "bytes": 70576,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03a",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_03A_BASKET.png",
+      "source_sha256": "fb6fbb1099d755080706aaf086878f7c8ce8a2be82e6d72d6aea19971cafd08b",
+      "source_box": [
+        711,
+        20,
+        927,
+        618
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.6911928651059086,
+        0.5759940542549239
+      ],
+      "world_visible_height": 62.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B1A8.png",
+      "target_relpath": "sprites/rf02_figures/R2B1A8.png",
+      "sha256": "6629660b99167f03f43d496534eeac24f508aac805d37786d672c0ad857519a1",
+      "bytes": 80184,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03a",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_03A_BASKET.png",
+      "source_sha256": "fb6fbb1099d755080706aaf086878f7c8ce8a2be82e6d72d6aea19971cafd08b",
+      "source_box": [
+        397,
+        20,
+        603,
+        620
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.6888888888888889,
+        0.5740740740740741
+      ],
+      "world_visible_height": 62.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B2A1.png",
+      "target_relpath": "sprites/rf02_figures/R2B2A1.png",
+      "sha256": "50c65a2336c2bad546eedb1eb6727053eb74cabd7c5a9342c6ce049f49688cc8",
+      "bytes": 98409,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03b",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_03B_BLANKET.png",
+      "source_sha256": "ad1992b29e50766b3d6f1b9d5bdd2dc96c1a257feb678add400e2c5601336f1f",
+      "source_box": [
+        68,
+        22,
+        290,
+        611
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7243916242218448,
+        0.6036596868515374
+      ],
+      "world_visible_height": 63.999999999999986,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B2A2.png",
+      "target_relpath": "sprites/rf02_figures/R2B2A2.png",
+      "sha256": "2c5e5de5a755fc54b490878c29400a6beb2f3f209221fbb5086c990b96bc215c",
+      "bytes": 96583,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03b",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_03B_BLANKET.png",
+      "source_sha256": "ad1992b29e50766b3d6f1b9d5bdd2dc96c1a257feb678add400e2c5601336f1f",
+      "source_box": [
+        989,
+        644,
+        1197,
+        1224
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7356321839080459,
+        0.6130268199233716
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B2A3.png",
+      "target_relpath": "sprites/rf02_figures/R2B2A3.png",
+      "sha256": "db5ff4de69f2a983e021ea6d5a2d988825cc6c3167deec7f700fc53155ad6fed",
+      "bytes": 79569,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03b",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_03B_BLANKET.png",
+      "source_sha256": "ad1992b29e50766b3d6f1b9d5bdd2dc96c1a257feb678add400e2c5601336f1f",
+      "source_box": [
+        679,
+        644,
+        860,
+        1219
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7420289855072463,
+        0.6183574879227053
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B2A4.png",
+      "target_relpath": "sprites/rf02_figures/R2B2A4.png",
+      "sha256": "dc7317ab452e9d01c03dd5aa8be99c71665a0cc63ffa64337c1f3d421342e356",
+      "bytes": 90590,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03b",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_03B_BLANKET.png",
+      "source_sha256": "ad1992b29e50766b3d6f1b9d5bdd2dc96c1a257feb678add400e2c5601336f1f",
+      "source_box": [
+        371,
+        643,
+        580,
+        1221
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7381776239907727,
+        0.6151480199923106
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B2A5.png",
+      "target_relpath": "sprites/rf02_figures/R2B2A5.png",
+      "sha256": "3d1d449a020d6b96991aae58637f698df8802b0e8ef1d5f5a76991e56051e757",
+      "bytes": 95784,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03b",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_03B_BLANKET.png",
+      "source_sha256": "ad1992b29e50766b3d6f1b9d5bdd2dc96c1a257feb678add400e2c5601336f1f",
+      "source_box": [
+        63,
+        644,
+        278,
+        1221
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7394569612940496,
+        0.616214134411708
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B2A6.png",
+      "target_relpath": "sprites/rf02_figures/R2B2A6.png",
+      "sha256": "411d1a93945d502f9558195320b4b950dd1aaac9902161b836d76d4e1f8f7363",
+      "bytes": 88295,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03b",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_03B_BLANKET.png",
+      "source_sha256": "ad1992b29e50766b3d6f1b9d5bdd2dc96c1a257feb678add400e2c5601336f1f",
+      "source_box": [
+        1013,
+        21,
+        1197,
+        608
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.7268597387847814,
+        0.6057164489873178
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B2A7.png",
+      "target_relpath": "sprites/rf02_figures/R2B2A7.png",
+      "sha256": "9d763be68ca146bf305a2e55b94927d631a597bc4bc09ad8fd192afbd2e45bcf",
+      "bytes": 79564,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03b",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_03B_BLANKET.png",
+      "source_sha256": "ad1992b29e50766b3d6f1b9d5bdd2dc96c1a257feb678add400e2c5601336f1f",
+      "source_box": [
+        718,
+        22,
+        899,
+        613
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7219402143260011,
+        0.6016168452716676
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B2A8.png",
+      "target_relpath": "sprites/rf02_figures/R2B2A8.png",
+      "sha256": "2fdcf931ffa84ff3b700786ece0486a8a31324f1b39f25300445bf866bb4240d",
+      "bytes": 93546,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03b",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_03B_BLANKET.png",
+      "source_sha256": "ad1992b29e50766b3d6f1b9d5bdd2dc96c1a257feb678add400e2c5601336f1f",
+      "source_box": [
+        401,
+        22,
+        609,
+        612
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7231638418079095,
+        0.6026365348399246
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B3A1.png",
+      "target_relpath": "sprites/rf02_figures/R2B3A1.png",
+      "sha256": "9d473bfdb006244b7737b2650e11a650f9bae9aaecadea9256761d197422d19d",
+      "bytes": 89088,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03c",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_03C_MOTHER.png",
+      "source_sha256": "ea7a5e268eeef33f24e9d99d5d87773d22238811dcacc4f4e8928bceec83419e",
+      "source_box": [
+        86,
+        21,
+        326,
+        603
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7331042382588774,
+        0.6109201985490645
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B3A2.png",
+      "target_relpath": "sprites/rf02_figures/R2B3A2.png",
+      "sha256": "68e6926609d6757f1f13464f006ced541aae9cd688c79dc42308e81216a599e4",
+      "bytes": 87826,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03c",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_03C_MOTHER.png",
+      "source_sha256": "ea7a5e268eeef33f24e9d99d5d87773d22238811dcacc4f4e8928bceec83419e",
+      "source_box": [
+        991,
+        646,
+        1213,
+        1223
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7394569612940496,
+        0.616214134411708
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B3A3.png",
+      "target_relpath": "sprites/rf02_figures/R2B3A3.png",
+      "sha256": "fa0b79700785d8770fa6d6aebce5d46631950ea7dfe29ce6990b5a223a0fedaf",
+      "bytes": 66565,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03c",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_03C_MOTHER.png",
+      "source_sha256": "ea7a5e268eeef33f24e9d99d5d87773d22238811dcacc4f4e8928bceec83419e",
+      "source_box": [
+        700,
+        646,
+        852,
+        1221
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7420289855072463,
+        0.6183574879227053
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B3A4.png",
+      "target_relpath": "sprites/rf02_figures/R2B3A4.png",
+      "sha256": "30bfa798759cd5bba437abccb7b35a4bf4479373f6cf8452917451be4aea616a",
+      "bytes": 82665,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03c",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_03C_MOTHER.png",
+      "source_sha256": "ea7a5e268eeef33f24e9d99d5d87773d22238811dcacc4f4e8928bceec83419e",
+      "source_box": [
+        355,
+        646,
+        572,
+        1221
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7420289855072463,
+        0.6183574879227053
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B3A5.png",
+      "target_relpath": "sprites/rf02_figures/R2B3A5.png",
+      "sha256": "a3c50c591261edf82f5cde564f52eee14139f673481754313f52785f580fb5ed",
+      "bytes": 87078,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03c",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_03C_MOTHER.png",
+      "source_sha256": "ea7a5e268eeef33f24e9d99d5d87773d22238811dcacc4f4e8928bceec83419e",
+      "source_box": [
+        41,
+        647,
+        273,
+        1222
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7420289855072463,
+        0.6183574879227053
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B3A6.png",
+      "target_relpath": "sprites/rf02_figures/R2B3A6.png",
+      "sha256": "800fe7952e9d8d29717f8ef8f3e4947de9d2e316f82462b4dd52070f645de1ff",
+      "bytes": 73950,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03c",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_03C_MOTHER.png",
+      "source_sha256": "ea7a5e268eeef33f24e9d99d5d87773d22238811dcacc4f4e8928bceec83419e",
+      "source_box": [
+        1006,
+        21,
+        1179,
+        602
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.7343660355708548,
+        0.6119716963090457
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B3A7.png",
+      "target_relpath": "sprites/rf02_figures/R2B3A7.png",
+      "sha256": "4d2aa09db29a1273b8bfbfeee8fa700c7a342ea0a8ecf4d6be7c5824b1d90d06",
+      "bytes": 66865,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03c",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_03C_MOTHER.png",
+      "source_sha256": "ea7a5e268eeef33f24e9d99d5d87773d22238811dcacc4f4e8928bceec83419e",
+      "source_box": [
+        700,
+        21,
+        854,
+        603
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7331042382588774,
+        0.6109201985490645
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B3A8.png",
+      "target_relpath": "sprites/rf02_figures/R2B3A8.png",
+      "sha256": "7b330e8fa03239c848ab18fdc859b1264cd60b3c8a125ff5dd8d54bc0e59b3cb",
+      "bytes": 85498,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03c",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_03C_MOTHER.png",
+      "source_sha256": "ea7a5e268eeef33f24e9d99d5d87773d22238811dcacc4f4e8928bceec83419e",
+      "source_box": [
+        396,
+        21,
+        629,
+        603
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7331042382588774,
+        0.6109201985490645
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B4A1.png",
+      "target_relpath": "sprites/rf02_figures/R2B4A1.png",
+      "sha256": "5242fae4aaef1502a59f9e24f966ab6d8f41dc0ce44d552d9795be55ffc90e2c",
+      "bytes": 47712,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03d",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_03D_CHILD.png",
+      "source_sha256": "77b49f99a17663a9f014f70f707751f5825cd4cefa33d4ae158deeefe8b49c3a",
+      "source_box": [
+        27,
+        34,
+        297,
+        586
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.5314009661835749,
+        0.4428341384863124
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B4A2.png",
+      "target_relpath": "sprites/rf02_figures/R2B4A2.png",
+      "sha256": "b6c0d0bd3f01f5f6c37ef219f308f5987584dbe4e1bf5648b22785d62ce33687",
+      "bytes": 44089,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03d",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_03D_CHILD.png",
+      "source_sha256": "77b49f99a17663a9f014f70f707751f5825cd4cefa33d4ae158deeefe8b49c3a",
+      "source_box": [
+        973,
+        661,
+        1143,
+        1206
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.5382262996941897,
+        0.4485219164118247
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B4A3.png",
+      "target_relpath": "sprites/rf02_figures/R2B4A3.png",
+      "sha256": "2008d0047b372f178f853188d984d5d744bee5866b0f5e34a4a8f0670dd0266c",
+      "bytes": 36921,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03d",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_03D_CHILD.png",
+      "source_sha256": "77b49f99a17663a9f014f70f707751f5825cd4cefa33d4ae158deeefe8b49c3a",
+      "source_box": [
+        706,
+        660,
+        866,
+        1206
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.5372405372405372,
+        0.4477004477004477
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B4A4.png",
+      "target_relpath": "sprites/rf02_figures/R2B4A4.png",
+      "sha256": "c419fcc8e0fa93df0a0e28b8e17274c248beb51a92cd03238f2f5509ae4d93e7",
+      "bytes": 45374,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03d",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_03D_CHILD.png",
+      "source_sha256": "77b49f99a17663a9f014f70f707751f5825cd4cefa33d4ae158deeefe8b49c3a",
+      "source_box": [
+        405,
+        657,
+        661,
+        1205
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.5352798053527981,
+        0.4460665044606651
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B4A5.png",
+      "target_relpath": "sprites/rf02_figures/R2B4A5.png",
+      "sha256": "74667df9e33070519c4a3633ea20641407a4107673bc3dac9b398f1d18583dbf",
+      "bytes": 47318,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03d",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_03D_CHILD.png",
+      "source_sha256": "77b49f99a17663a9f014f70f707751f5825cd4cefa33d4ae158deeefe8b49c3a",
+      "source_box": [
+        80,
+        655,
+        343,
+        1200
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.5382262996941897,
+        0.4485219164118247
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B4A6.png",
+      "target_relpath": "sprites/rf02_figures/R2B4A6.png",
+      "sha256": "44959addb210c3ddb62c857232c013c5776d511b1326eb89307b7ff5a13f80d5",
+      "bytes": 44863,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03d",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_03D_CHILD.png",
+      "source_sha256": "77b49f99a17663a9f014f70f707751f5825cd4cefa33d4ae158deeefe8b49c3a",
+      "source_box": [
+        969,
+        37,
+        1227,
+        589
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.5314009661835749,
+        0.4428341384863124
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B4A7.png",
+      "target_relpath": "sprites/rf02_figures/R2B4A7.png",
+      "sha256": "da5380308ab9a0161709ca61c9b740f74ec80f1584d9f77afb8d8371df3b49bc",
+      "bytes": 37112,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03d",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_03D_CHILD.png",
+      "source_sha256": "77b49f99a17663a9f014f70f707751f5825cd4cefa33d4ae158deeefe8b49c3a",
+      "source_box": [
+        745,
+        43,
+        912,
+        585
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.5412054120541205,
+        0.45100451004510045
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2B4A8.png",
+      "target_relpath": "sprites/rf02_figures/R2B4A8.png",
+      "sha256": "086de39a4af41ac215dcc86f56cb7a2639df9070f7da7847223e2c70976689ca",
+      "bytes": 47571,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-03d",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_03D_CHILD.png",
+      "source_sha256": "77b49f99a17663a9f014f70f707751f5825cd4cefa33d4ae158deeefe8b49c3a",
+      "source_box": [
+        338,
+        35,
+        614,
+        589
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.529482551143201,
+        0.44123545928600083
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4A1.png",
+      "target_relpath": "sprites/rf02_figures/R2F4A1.png",
+      "sha256": "bd779e7b6fee8c0b8b7999e5a346aedbc54ec387168ccb1016af5bd097e49c05",
+      "bytes": 59552,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_04_TRAM_SLEEP.png",
+      "source_sha256": "add4620cd7c049aa1c1e0e4d6805533225d4dc926e7fc66c3385cb533f11d996",
+      "source_box": [
+        36,
+        38,
+        281,
+        599
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.5228758169934641,
+        0.4357298474945534
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4A2.png",
+      "target_relpath": "sprites/rf02_figures/R2F4A2.png",
+      "sha256": "b476504f7b4dfcf3ddeb5223212ae1df217e161e20db4eb17490145673380050",
+      "bytes": 61273,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_04_TRAM_SLEEP.png",
+      "source_sha256": "add4620cd7c049aa1c1e0e4d6805533225d4dc926e7fc66c3385cb533f11d996",
+      "source_box": [
+        948,
+        663,
+        1218,
+        1216
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.5304400241109102,
+        0.4420333534257585
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4A3.png",
+      "target_relpath": "sprites/rf02_figures/R2F4A3.png",
+      "sha256": "2f6d76366865399262806a5e8c27ab9a35da049d5990bc09887c16e7cf704557",
+      "bytes": 56203,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_04_TRAM_SLEEP.png",
+      "source_sha256": "add4620cd7c049aa1c1e0e4d6805533225d4dc926e7fc66c3385cb533f11d996",
+      "source_box": [
+        636,
+        668,
+        912,
+        1208
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.54320987654321,
+        0.4526748971193416
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4A4.png",
+      "target_relpath": "sprites/rf02_figures/R2F4A4.png",
+      "sha256": "7603e8b08c657a1697b01cb83ed55572ff0e94d63c47a632b893c6a089d29b9c",
+      "bytes": 59166,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_04_TRAM_SLEEP.png",
+      "source_sha256": "add4620cd7c049aa1c1e0e4d6805533225d4dc926e7fc66c3385cb533f11d996",
+      "source_box": [
+        315,
+        668,
+        586,
+        1195
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.5566097406704618,
+        0.4638414505587181
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4A5.png",
+      "target_relpath": "sprites/rf02_figures/R2F4A5.png",
+      "sha256": "25fea3151b5212b1f006ff7099427dfd3dea4f0a03dd2e5013e546c88cb6b224",
+      "bytes": 56216,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_04_TRAM_SLEEP.png",
+      "source_sha256": "add4620cd7c049aa1c1e0e4d6805533225d4dc926e7fc66c3385cb533f11d996",
+      "source_box": [
+        45,
+        666,
+        284,
+        1193
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.5566097406704618,
+        0.4638414505587181
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4A6.png",
+      "target_relpath": "sprites/rf02_figures/R2F4A6.png",
+      "sha256": "38e1e9b52f03ff01cb5f382b3472b8bb2491906189d509b844ac02975fe4297b",
+      "bytes": 57078,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_04_TRAM_SLEEP.png",
+      "source_sha256": "add4620cd7c049aa1c1e0e4d6805533225d4dc926e7fc66c3385cb533f11d996",
+      "source_box": [
+        968,
+        48,
+        1237,
+        587
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.54421768707483,
+        0.45351473922902497
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4A7.png",
+      "target_relpath": "sprites/rf02_figures/R2F4A7.png",
+      "sha256": "5426b758d6e15550dc3a7d65cb1a292d42a7606e4587762d0a8730197186998a",
+      "bytes": 55248,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_04_TRAM_SLEEP.png",
+      "source_sha256": "add4620cd7c049aa1c1e0e4d6805533225d4dc926e7fc66c3385cb533f11d996",
+      "source_box": [
+        659,
+        43,
+        942,
+        597
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.529482551143201,
+        0.44123545928600083
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4A8.png",
+      "target_relpath": "sprites/rf02_figures/R2F4A8.png",
+      "sha256": "55036808cb13a12d1812d60b3aefb5d429e2131b1555e3727b27bb0b24be62f3",
+      "bytes": 62249,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_04_TRAM_SLEEP.png",
+      "source_sha256": "add4620cd7c049aa1c1e0e4d6805533225d4dc926e7fc66c3385cb533f11d996",
+      "source_box": [
+        352,
+        40,
+        616,
+        599
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.5247465712581992,
+        0.4372888093818327
+      ],
+      "world_visible_height": 44.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4B1.png",
+      "target_relpath": "sprites/rf02_figures/R2F4B1.png",
+      "sha256": "4fd91bc1fad3518b4b7dc3aca0f56c0acebd04179e0bd5251239238886eca35f",
+      "bytes": 62204,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "B",
+      "rotation": 1,
+      "source": "source/masters/F02_04_TRAM_WAKE.png",
+      "source_sha256": "b450fa1a1f315c8e30a8bc0ffc5d79d7bdb0f343f63b76c62fd77b109d83baff",
+      "source_box": [
+        35,
+        32,
+        284,
+        599
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.5228758169934641,
+        0.4357298474945534
+      ],
+      "world_visible_height": 44.470588235294116,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4B2.png",
+      "target_relpath": "sprites/rf02_figures/R2F4B2.png",
+      "sha256": "d2bb020b033fa8c0c16dcab7545456d9b64fddd6ca812e0f487345e33cbf541a",
+      "bytes": 64581,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "B",
+      "rotation": 2,
+      "source": "source/masters/F02_04_TRAM_WAKE.png",
+      "source_sha256": "b450fa1a1f315c8e30a8bc0ffc5d79d7bdb0f343f63b76c62fd77b109d83baff",
+      "source_box": [
+        947,
+        649,
+        1224,
+        1218
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.5304400241109102,
+        0.4420333534257585
+      ],
+      "world_visible_height": 45.273056057866185,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4B3.png",
+      "target_relpath": "sprites/rf02_figures/R2F4B3.png",
+      "sha256": "9237b8d4457ebd7b41d9ee12fed65b5cbec8611a4d83473f3952a76289adaa29",
+      "bytes": 58646,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "B",
+      "rotation": 3,
+      "source": "source/masters/F02_04_TRAM_WAKE.png",
+      "source_sha256": "b450fa1a1f315c8e30a8bc0ffc5d79d7bdb0f343f63b76c62fd77b109d83baff",
+      "source_box": [
+        636,
+        646,
+        916,
+        1211
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.54320987654321,
+        0.4526748971193416
+      ],
+      "world_visible_height": 46.03703703703704,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4B4.png",
+      "target_relpath": "sprites/rf02_figures/R2F4B4.png",
+      "sha256": "a4baf7ed77bd097545fe5391319b838304eb6c4ec975a15dd35488f4ea0b162c",
+      "bytes": 62163,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "B",
+      "rotation": 4,
+      "source": "source/masters/F02_04_TRAM_WAKE.png",
+      "source_sha256": "b450fa1a1f315c8e30a8bc0ffc5d79d7bdb0f343f63b76c62fd77b109d83baff",
+      "source_box": [
+        316,
+        648,
+        592,
+        1196
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.5566097406704618,
+        0.4638414505587181
+      ],
+      "world_visible_height": 45.75332068311195,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4B5.png",
+      "target_relpath": "sprites/rf02_figures/R2F4B5.png",
+      "sha256": "cd52e422bb04ea2a4565618d2fa3258d308d996b575432d73142fcf9db57e778",
+      "bytes": 59555,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "B",
+      "rotation": 5,
+      "source": "source/masters/F02_04_TRAM_WAKE.png",
+      "source_sha256": "b450fa1a1f315c8e30a8bc0ffc5d79d7bdb0f343f63b76c62fd77b109d83baff",
+      "source_box": [
+        41,
+        651,
+        290,
+        1195
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.5566097406704618,
+        0.4638414505587181
+      ],
+      "world_visible_height": 45.41935483870967,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4B6.png",
+      "target_relpath": "sprites/rf02_figures/R2F4B6.png",
+      "sha256": "b853ecdf0088d6930f435e89708747959afa711a03e97f325988235643a9519c",
+      "bytes": 59052,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "B",
+      "rotation": 6,
+      "source": "source/masters/F02_04_TRAM_WAKE.png",
+      "source_sha256": "b450fa1a1f315c8e30a8bc0ffc5d79d7bdb0f343f63b76c62fd77b109d83baff",
+      "source_box": [
+        973,
+        35,
+        1247,
+        588
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.54421768707483,
+        0.45351473922902497
+      ],
+      "world_visible_height": 45.142857142857146,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4B7.png",
+      "target_relpath": "sprites/rf02_figures/R2F4B7.png",
+      "sha256": "91579ffdb6839dc4ffb6812082cd70ef7c49930aec6654f2d7a43638292bf557",
+      "bytes": 56787,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "B",
+      "rotation": 7,
+      "source": "source/masters/F02_04_TRAM_WAKE.png",
+      "source_sha256": "b450fa1a1f315c8e30a8bc0ffc5d79d7bdb0f343f63b76c62fd77b109d83baff",
+      "source_box": [
+        663,
+        33,
+        947,
+        599
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.529482551143201,
+        0.44123545928600083
+      ],
+      "world_visible_height": 44.95306859205776,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F4B8.png",
+      "target_relpath": "sprites/rf02_figures/R2F4B8.png",
+      "sha256": "61f129b3779a8509d9ef488eded2510c964706ae183fded90f42550f3382485d",
+      "bytes": 64363,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-04",
+      "state": "B",
+      "rotation": 8,
+      "source": "source/masters/F02_04_TRAM_WAKE.png",
+      "source_sha256": "b450fa1a1f315c8e30a8bc0ffc5d79d7bdb0f343f63b76c62fd77b109d83baff",
+      "source_box": [
+        353,
+        35,
+        620,
+        600
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.5247465712581992,
+        0.4372888093818327
+      ],
+      "world_visible_height": 44.472271914132385,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F5A1.png",
+      "target_relpath": "sprites/rf02_figures/R2F5A1.png",
+      "sha256": "60e56e284e337b4ac6ebbe69db2a6a39891468548634349567ebbd95a6d4c8d8",
+      "bytes": 58059,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-05",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_05_TSF_A.png",
+      "source_sha256": "de811273ea8d8652da4aeafce1be34a849c9bc866dcced932112cb10462962ff",
+      "source_box": [
+        15,
+        98,
+        320,
+        563
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.5161290322580645,
+        0.43010752688172044
+      ],
+      "world_visible_height": 36.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F5A2.png",
+      "target_relpath": "sprites/rf02_figures/R2F5A2.png",
+      "sha256": "a9992129b6feb10d1a89d10da07b676f787da107c73105f311a96181e7db4952",
+      "bytes": 56766,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-05",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_05_TSF_A.png",
+      "source_sha256": "de811273ea8d8652da4aeafce1be34a849c9bc866dcced932112cb10462962ff",
+      "source_box": [
+        931,
+        691,
+        1241,
+        1158
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.5139186295503212,
+        0.4282655246252677
+      ],
+      "world_visible_height": 36.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F5A3.png",
+      "target_relpath": "sprites/rf02_figures/R2F5A3.png",
+      "sha256": "6f901daa49c43059297502358717f851c388614fb38bae34f6bdf1a34e5bdf7c",
+      "bytes": 51516,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-05",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_05_TSF_A.png",
+      "source_sha256": "de811273ea8d8652da4aeafce1be34a849c9bc866dcced932112cb10462962ff",
+      "source_box": [
+        627,
+        692,
+        924,
+        1166
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.5063291139240507,
+        0.4219409282700422
+      ],
+      "world_visible_height": 36.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F5A4.png",
+      "target_relpath": "sprites/rf02_figures/R2F5A4.png",
+      "sha256": "7c3d2229f8cb565147124e1538a794fd91b14d0814a3eb975751988bd8742e60",
+      "bytes": 55393,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-05",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_05_TSF_A.png",
+      "source_sha256": "de811273ea8d8652da4aeafce1be34a849c9bc866dcced932112cb10462962ff",
+      "source_box": [
+        326,
+        693,
+        627,
+        1156
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.5183585313174945,
+        0.4319654427645788
+      ],
+      "world_visible_height": 36.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F5A5.png",
+      "target_relpath": "sprites/rf02_figures/R2F5A5.png",
+      "sha256": "20bfcfab3b287c1b62d8868e4bcf53b0543d0fa087319b04a0315c27e24d7683",
+      "bytes": 56146,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-05",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_05_TSF_A.png",
+      "source_sha256": "de811273ea8d8652da4aeafce1be34a849c9bc866dcced932112cb10462962ff",
+      "source_box": [
+        11,
+        693,
+        300,
+        1145
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.5309734513274337,
+        0.4424778761061947
+      ],
+      "world_visible_height": 36.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F5A6.png",
+      "target_relpath": "sprites/rf02_figures/R2F5A6.png",
+      "sha256": "94cfe7956b3ed55050ca44d16d94ca8e78af41e609b062ed39acd1076ba717f2",
+      "bytes": 53277,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-05",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_05_TSF_A.png",
+      "source_sha256": "de811273ea8d8652da4aeafce1be34a849c9bc866dcced932112cb10462962ff",
+      "source_box": [
+        949,
+        102,
+        1248,
+        569
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.5139186295503212,
+        0.4282655246252677
+      ],
+      "world_visible_height": 36.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F5A7.png",
+      "target_relpath": "sprites/rf02_figures/R2F5A7.png",
+      "sha256": "708f2d89008b6ec5a596648811e0eea5dca16af4beaf74a720f4e0c885198d12",
+      "bytes": 52075,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-05",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_05_TSF_A.png",
+      "source_sha256": "de811273ea8d8652da4aeafce1be34a849c9bc866dcced932112cb10462962ff",
+      "source_box": [
+        639,
+        99,
+        943,
+        573
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.5063291139240507,
+        0.4219409282700422
+      ],
+      "world_visible_height": 36.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F5A8.png",
+      "target_relpath": "sprites/rf02_figures/R2F5A8.png",
+      "sha256": "3cbe120442f7f63a1ca54c7e10d14b0ffb8441b112c205bb51c3b11ca613fa9c",
+      "bytes": 56159,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-05",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_05_TSF_A.png",
+      "source_sha256": "de811273ea8d8652da4aeafce1be34a849c9bc866dcced932112cb10462962ff",
+      "source_box": [
+        340,
+        98,
+        634,
+        566
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.5128205128205128,
+        0.42735042735042733
+      ],
+      "world_visible_height": 36.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F6A1.png",
+      "target_relpath": "sprites/rf02_figures/R2F6A1.png",
+      "sha256": "947986f6d80ad539f6c4f2e4b51b34d8477119b01151e376d26f7ee5aacf4c53",
+      "bytes": 80043,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-06",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_06_COCHIN.png",
+      "source_sha256": "1b4bdadba5a939b62a4282d2a030c4b931ef61037e919a26ede308f362457cdd",
+      "source_box": [
+        74,
+        16,
+        269,
+        600
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.684931506849315,
+        0.5707762557077626
+      ],
+      "world_visible_height": 60.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F6A2.png",
+      "target_relpath": "sprites/rf02_figures/R2F6A2.png",
+      "sha256": "3bb12fe2924166a273650b75dff6009271719fbeb7ac52ea4b507527d4f68bd8",
+      "bytes": 77250,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-06",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_06_COCHIN.png",
+      "source_sha256": "1b4bdadba5a939b62a4282d2a030c4b931ef61037e919a26ede308f362457cdd",
+      "source_box": [
+        999,
+        642,
+        1175,
+        1223
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.6884681583476765,
+        0.5737234652897304
+      ],
+      "world_visible_height": 60.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F6A3.png",
+      "target_relpath": "sprites/rf02_figures/R2F6A3.png",
+      "sha256": "933f209e734d5c4b07b8447860026b825b000e9111fe15ead823844071f4bc18",
+      "bytes": 65725,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-06",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_06_COCHIN.png",
+      "source_sha256": "1b4bdadba5a939b62a4282d2a030c4b931ef61037e919a26ede308f362457cdd",
+      "source_box": [
+        689,
+        643,
+        848,
+        1223
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.6896551724137931,
+        0.574712643678161
+      ],
+      "world_visible_height": 60.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F6A4.png",
+      "target_relpath": "sprites/rf02_figures/R2F6A4.png",
+      "sha256": "145388a7e77ebc3b0a18e488442817e325a546233ae5e55c374d3441aca06b82",
+      "bytes": 72370,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-06",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_06_COCHIN.png",
+      "source_sha256": "1b4bdadba5a939b62a4282d2a030c4b931ef61037e919a26ede308f362457cdd",
+      "source_box": [
+        384,
+        642,
+        554,
+        1224
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.6872852233676977,
+        0.5727376861397481
+      ],
+      "world_visible_height": 60.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F6A5.png",
+      "target_relpath": "sprites/rf02_figures/R2F6A5.png",
+      "sha256": "1c56f5b4e2e2e65d18344c70de8317827fd3a32fc8f1f14b6f0f82ff4ee8ac67",
+      "bytes": 78949,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-06",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_06_COCHIN.png",
+      "source_sha256": "1b4bdadba5a939b62a4282d2a030c4b931ef61037e919a26ede308f362457cdd",
+      "source_box": [
+        77,
+        642,
+        269,
+        1219
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.6932409012131716,
+        0.5777007510109764
+      ],
+      "world_visible_height": 60.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F6A6.png",
+      "target_relpath": "sprites/rf02_figures/R2F6A6.png",
+      "sha256": "1cbb8da02268175439a22c8e9e1db1d2a0b4ba52bd983f6e11d89ace70be88e9",
+      "bytes": 71993,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-06",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_06_COCHIN.png",
+      "source_sha256": "1b4bdadba5a939b62a4282d2a030c4b931ef61037e919a26ede308f362457cdd",
+      "source_box": [
+        1006,
+        18,
+        1167,
+        598
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.6896551724137931,
+        0.574712643678161
+      ],
+      "world_visible_height": 60.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F6A7.png",
+      "target_relpath": "sprites/rf02_figures/R2F6A7.png",
+      "sha256": "b7f56c4378933dd4d7c4c7c566d1f9d01874c5981ec34ccbf9ec183314449db5",
+      "bytes": 64779,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-06",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_06_COCHIN.png",
+      "source_sha256": "1b4bdadba5a939b62a4282d2a030c4b931ef61037e919a26ede308f362457cdd",
+      "source_box": [
+        704,
+        18,
+        861,
+        601
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.686106346483705,
+        0.5717552887364209
+      ],
+      "world_visible_height": 60.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F6A8.png",
+      "target_relpath": "sprites/rf02_figures/R2F6A8.png",
+      "sha256": "70dc23cca1fbfed7169defd37723f1b0b8d99189ebaff6efb6f5d7de79fd7010",
+      "bytes": 76700,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-06",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_06_COCHIN.png",
+      "source_sha256": "1b4bdadba5a939b62a4282d2a030c4b931ef61037e919a26ede308f362457cdd",
+      "source_box": [
+        391,
+        17,
+        565,
+        603
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.6825938566552902,
+        0.5688282138794085
+      ],
+      "world_visible_height": 60.00000000000001,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F7A1.png",
+      "target_relpath": "sprites/rf02_figures/R2F7A1.png",
+      "sha256": "3529b7bb90776895701a4aa95cd13c4d9fffd3912af76259c5e93a900b0651f6",
+      "bytes": 86601,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-07",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_07_SAINTE_ANNE.png",
+      "source_sha256": "6674a710b3ff22ec416e73470bf39c588dc49f886f48f764229c3158aa80e312",
+      "source_box": [
+        126,
+        16,
+        312,
+        615
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7122982749026154,
+        0.5935818957521796
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F7A2.png",
+      "target_relpath": "sprites/rf02_figures/R2F7A2.png",
+      "sha256": "66b3dc673c4c38bb380f0c338b95607366b7c759d8104f36cec908616f6aadd2",
+      "bytes": 85409,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-07",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_07_SAINTE_ANNE.png",
+      "source_sha256": "6674a710b3ff22ec416e73470bf39c588dc49f886f48f764229c3158aa80e312",
+      "source_box": [
+        970,
+        637,
+        1147,
+        1223
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7281001137656428,
+        0.6067500948047023
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F7A3.png",
+      "target_relpath": "sprites/rf02_figures/R2F7A3.png",
+      "sha256": "4ca619c96072c022a88f4e7735478bc51966b6de871c820f4ee33fb2c5f33954",
+      "bytes": 69264,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-07",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_07_SAINTE_ANNE.png",
+      "source_sha256": "6674a710b3ff22ec416e73470bf39c588dc49f886f48f764229c3158aa80e312",
+      "source_box": [
+        701,
+        637,
+        846,
+        1218
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7343660355708548,
+        0.6119716963090457
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F7A4.png",
+      "target_relpath": "sprites/rf02_figures/R2F7A4.png",
+      "sha256": "db38ad998ee90bbbf64eebaeb126e16cbb630f32de25faa530f2a0eb759f0fbc",
+      "bytes": 82687,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-07",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_07_SAINTE_ANNE.png",
+      "source_sha256": "6674a710b3ff22ec416e73470bf39c588dc49f886f48f764229c3158aa80e312",
+      "source_box": [
+        405,
+        639,
+        573,
+        1220
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7343660355708548,
+        0.6119716963090457
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F7A5.png",
+      "target_relpath": "sprites/rf02_figures/R2F7A5.png",
+      "sha256": "520a1a0bd38a8bbcac5281fca63a3713dd0ea2a09df1ff3605138c92b3a0c391",
+      "bytes": 88183,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-07",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_07_SAINTE_ANNE.png",
+      "source_sha256": "6674a710b3ff22ec416e73470bf39c588dc49f886f48f764229c3158aa80e312",
+      "source_box": [
+        114,
+        637,
+        296,
+        1219
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.7331042382588774,
+        0.6109201985490645
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F7A6.png",
+      "target_relpath": "sprites/rf02_figures/R2F7A6.png",
+      "sha256": "9d2487ef9afcf369481b1c7d020c79c83956d6bbe41c91762ab2cfb8b251d745",
+      "bytes": 78063,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-07",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_07_SAINTE_ANNE.png",
+      "source_sha256": "6674a710b3ff22ec416e73470bf39c588dc49f886f48f764229c3158aa80e312",
+      "source_box": [
+        961,
+        18,
+        1131,
+        616
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.713489409141583,
+        0.5945745076179858
+      ],
+      "world_visible_height": 63.999999999999986,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F7A7.png",
+      "target_relpath": "sprites/rf02_figures/R2F7A7.png",
+      "sha256": "952f0e06023eaf0ff340fa84759c51276a1e3b5942c568d4028d2e338a239627",
+      "bytes": 67276,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-07",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_07_SAINTE_ANNE.png",
+      "source_sha256": "6674a710b3ff22ec416e73470bf39c588dc49f886f48f764229c3158aa80e312",
+      "source_box": [
+        697,
+        18,
+        841,
+        614
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7158836689038031,
+        0.5965697240865026
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F7A8.png",
+      "target_relpath": "sprites/rf02_figures/R2F7A8.png",
+      "sha256": "8b6631c896305aac2c6bc63cea599a334321cfcb8b4b5ba37921483eae889666",
+      "bytes": 82021,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-07",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_07_SAINTE_ANNE.png",
+      "source_sha256": "6674a710b3ff22ec416e73470bf39c588dc49f886f48f764229c3158aa80e312",
+      "source_box": [
+        401,
+        17,
+        573,
+        616
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7122982749026154,
+        0.5935818957521796
+      ],
+      "world_visible_height": 63.99999999999999,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F8A1.png",
+      "target_relpath": "sprites/rf02_figures/R2F8A1.png",
+      "sha256": "123bf89e34673869c18870286b30b1c047fd77c70732991ba54ee3418a4c809c",
+      "bytes": 91806,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-08",
+      "state": "A",
+      "rotation": 1,
+      "source": "source/masters/F02_08_VIKTOR.png",
+      "source_sha256": "5dd08e2313f8ef4719ce7cb03da4bce7598b5a274d9324f9d4ecbc52b4def68c",
+      "source_box": [
+        93,
+        15,
+        318,
+        624
+      ],
+      "source_sheet_cell": 0,
+      "source_scale_xy": [
+        0.7443897099069512,
+        0.6203247582557927
+      ],
+      "world_visible_height": 68.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F8A2.png",
+      "target_relpath": "sprites/rf02_figures/R2F8A2.png",
+      "sha256": "338d3da87fc94bf3b4992f524dec7a2d191dc0638c7fdb67a6f260b50db537f8",
+      "bytes": 88225,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-08",
+      "state": "A",
+      "rotation": 2,
+      "source": "source/masters/F02_08_VIKTOR.png",
+      "source_sha256": "5dd08e2313f8ef4719ce7cb03da4bce7598b5a274d9324f9d4ecbc52b4def68c",
+      "source_box": [
+        951,
+        637,
+        1162,
+        1240
+      ],
+      "source_sheet_cell": 7,
+      "source_scale_xy": [
+        0.7517965726920951,
+        0.6264971439100793
+      ],
+      "world_visible_height": 68.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F8A3.png",
+      "target_relpath": "sprites/rf02_figures/R2F8A3.png",
+      "sha256": "1d468c847b3d2ea5e0f4f85640668f9d6f7825970a4457118078d7d54693329f",
+      "bytes": 61767,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-08",
+      "state": "A",
+      "rotation": 3,
+      "source": "source/masters/F02_08_VIKTOR.png",
+      "source_sha256": "5dd08e2313f8ef4719ce7cb03da4bce7598b5a274d9324f9d4ecbc52b4def68c",
+      "source_box": [
+        724,
+        637,
+        847,
+        1238
+      ],
+      "source_sheet_cell": 6,
+      "source_scale_xy": [
+        0.7542983915696062,
+        0.6285819929746719
+      ],
+      "world_visible_height": 68.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F8A4.png",
+      "target_relpath": "sprites/rf02_figures/R2F8A4.png",
+      "sha256": "4eb9178aa78abca0dbc9943658243a0c7a1eb8f14a2be80c40427f4e945f8a51",
+      "bytes": 84268,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-08",
+      "state": "A",
+      "rotation": 4,
+      "source": "source/masters/F02_08_VIKTOR.png",
+      "source_sha256": "5dd08e2313f8ef4719ce7cb03da4bce7598b5a274d9324f9d4ecbc52b4def68c",
+      "source_box": [
+        392,
+        636,
+        592,
+        1237
+      ],
+      "source_sheet_cell": 5,
+      "source_scale_xy": [
+        0.7542983915696062,
+        0.6285819929746719
+      ],
+      "world_visible_height": 68.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F8A5.png",
+      "target_relpath": "sprites/rf02_figures/R2F8A5.png",
+      "sha256": "7a84a6e885ee75ce7e1942272be9555d60e0f758ad766222b2e7b4f37d1f77a0",
+      "bytes": 89381,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-08",
+      "state": "A",
+      "rotation": 5,
+      "source": "source/masters/F02_08_VIKTOR.png",
+      "source_sha256": "5dd08e2313f8ef4719ce7cb03da4bce7598b5a274d9324f9d4ecbc52b4def68c",
+      "source_box": [
+        98,
+        635,
+        316,
+        1233
+      ],
+      "source_sheet_cell": 4,
+      "source_scale_xy": [
+        0.758082497212932,
+        0.63173541434411
+      ],
+      "world_visible_height": 68.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F8A6.png",
+      "target_relpath": "sprites/rf02_figures/R2F8A6.png",
+      "sha256": "ab15190b13b7ac9385d9b403acd87d75d720084f350ed3b4554db070ea56c3dd",
+      "bytes": 82867,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-08",
+      "state": "A",
+      "rotation": 6,
+      "source": "source/masters/F02_08_VIKTOR.png",
+      "source_sha256": "5dd08e2313f8ef4719ce7cb03da4bce7598b5a274d9324f9d4ecbc52b4def68c",
+      "source_box": [
+        972,
+        13,
+        1166,
+        624
+      ],
+      "source_sheet_cell": 3,
+      "source_scale_xy": [
+        0.7419530823786142,
+        0.6182942353155119
+      ],
+      "world_visible_height": 68.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F8A7.png",
+      "target_relpath": "sprites/rf02_figures/R2F8A7.png",
+      "sha256": "dc4943654a77c1b74b62237a31556db5127312468b987fa52325850f89058d89",
+      "bytes": 65333,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-08",
+      "state": "A",
+      "rotation": 7,
+      "source": "source/masters/F02_08_VIKTOR.png",
+      "source_sha256": "5dd08e2313f8ef4719ce7cb03da4bce7598b5a274d9324f9d4ecbc52b4def68c",
+      "source_box": [
+        714,
+        15,
+        850,
+        625
+      ],
+      "source_sheet_cell": 2,
+      "source_scale_xy": [
+        0.7431693989071038,
+        0.6193078324225865
+      ],
+      "world_visible_height": 68.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/sprites/rf02_figures/R2F8A8.png",
+      "target_relpath": "sprites/rf02_figures/R2F8A8.png",
+      "sha256": "7fba72ed216a66193e96975d9dc3a193d2d43abc9ecec368ddc2c687412544a1",
+      "bytes": 84910,
+      "width": 512,
+      "height": 448,
+      "grAb": [
+        256,
+        424
+      ],
+      "scale": 0.18,
+      "family": "F02-08",
+      "state": "A",
+      "rotation": 8,
+      "source": "source/masters/F02_08_VIKTOR.png",
+      "source_sha256": "5dd08e2313f8ef4719ce7cb03da4bce7598b5a274d9324f9d4ecbc52b4def68c",
+      "source_box": [
+        407,
+        14,
+        604,
+        626
+      ],
+      "source_sheet_cell": 1,
+      "source_scale_xy": [
+        0.7407407407407407,
+        0.6172839506172839
+      ],
+      "world_visible_height": 68.0,
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_ACTOR_PROPOSAL",
+      "anchor_method": "median of visible lowest 8% soles, bottom alpha-core boundary",
+      "origin_limit": "2D support anchor; hand/seat contacts require scene geometry review"
+    },
+    {
+      "file": "runtime/graphics/weapons/crowbar/RF2_CROWBAR_READY.png",
+      "target_relpath": "graphics/weapons/crowbar/RF2_CROWBAR_READY.png",
+      "sha256": "d5b28ef7a2f63cbf77fbab741bba3add473388e519dfbb1cbdd491e9a2c72f08",
+      "bytes": 1012113,
+      "width": 1536,
+      "height": 1024,
+      "family": "COMBAT-02",
+      "state": "A",
+      "source": "source/masters/CROWBAR_READY.png",
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_TEXTURES_PROPOSAL"
+    },
+    {
+      "file": "runtime/graphics/weapons/crowbar/RF2_CROWBAR_WINDUP.png",
+      "target_relpath": "graphics/weapons/crowbar/RF2_CROWBAR_WINDUP.png",
+      "sha256": "ac3624f6551574cd59f190abae85d5b41ef172e340d6f90c2525e158a2f00a99",
+      "bytes": 1055050,
+      "width": 1536,
+      "height": 1024,
+      "family": "COMBAT-02",
+      "state": "B",
+      "source": "source/masters/CROWBAR_WINDUP.png",
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_TEXTURES_PROPOSAL"
+    },
+    {
+      "file": "runtime/graphics/weapons/crowbar/RF2_CROWBAR_STRIKE.png",
+      "target_relpath": "graphics/weapons/crowbar/RF2_CROWBAR_STRIKE.png",
+      "sha256": "470af2d49ab6ef7da5312979881e7f5ac7e67c496879efb5e75dab00b533dfdb",
+      "bytes": 1065147,
+      "width": 1536,
+      "height": 1024,
+      "family": "COMBAT-02",
+      "state": "C",
+      "source": "source/masters/CROWBAR_STRIKE.png",
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_TEXTURES_PROPOSAL"
+    },
+    {
+      "file": "runtime/graphics/weapons/crowbar/RF2_CROWBAR_FOLLOW.png",
+      "target_relpath": "graphics/weapons/crowbar/RF2_CROWBAR_FOLLOW.png",
+      "sha256": "e640bbb473f11284cdd94499e381e501feb714124c56be41e1980d78205d4d41",
+      "bytes": 1102437,
+      "width": 1536,
+      "height": 1024,
+      "family": "COMBAT-02",
+      "state": "D",
+      "source": "source/masters/CROWBAR_FOLLOW.png",
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_TEXTURES_PROPOSAL"
+    },
+    {
+      "file": "runtime/graphics/weapons/crowbar/RF2_CROWBAR_RECOVERY.png",
+      "target_relpath": "graphics/weapons/crowbar/RF2_CROWBAR_RECOVERY.png",
+      "sha256": "d4c238d65255d76366f53f893905506b1c4f25459a7ec41f7b5fd60ce5fea854",
+      "bytes": 1063367,
+      "width": 1536,
+      "height": 1024,
+      "family": "COMBAT-02",
+      "state": "E",
+      "source": "source/masters/CROWBAR_RECOVERY.png",
+      "base_sha256": null,
+      "integration": "NEW_RESOURCE_WITH_SEPARATE_TEXTURES_PROPOSAL"
+    },
+    {
+      "file": "runtime/graphics/props/crowbar_floor.png",
+      "target_relpath": "graphics/props/crowbar_floor.png",
+      "sha256": "4a08ba6b57b478d7c14180cb318b59cf4e04ca2e4e45895c92723b6678279410",
+      "bytes": 7340,
+      "width": 176,
+      "height": 112,
+      "family": "COMBAT-02-WORLD",
+      "source": "source/renders/crowbar/view_045.png",
+      "integration": "MODELDEF proposal and scale-preserving fallback TEXTURES required",
+      "base_sha256": null
+    }
+  ],
+  "model_files": [
+    {
+      "file": "runtime/models/rf02_props/crowbar.obj",
+      "target_relpath": "models/rf02_props/crowbar.obj",
+      "sha256": "2442a39a52519ac961c1d9bca7b1d501d6ca7ca097e21f0035720aa7df5c5e19",
+      "bytes": 35798
+    },
+    {
+      "file": "runtime/models/rf02_props/crowbar_atlas.png",
+      "target_relpath": "models/rf02_props/crowbar_atlas.png",
+      "sha256": "56da2d3a0bfe6bdd62176a74a47de65cd8dd72a786eb8443b3de3a82c0ab89e6",
+      "bytes": 3205615
+    }
+  ]
+}
