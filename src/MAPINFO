@@ -101,6 +101,9 @@ DoomEdNums
     30650 = RFFigureValise
     30651 = RFViktorMirror
     30652 = RFPram
+    30653 = RFTram
+    30654 = RFTrack
+    30655 = RFTrackHalf
     30901 = RFTourPoint
     30902 = RFDevWaypoint
 }

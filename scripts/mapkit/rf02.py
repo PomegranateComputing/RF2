@@ -76,7 +76,7 @@ T_SACOCHE, T_BUCKET, T_PHONE, T_RADIO, T_ATLAS, T_FOUNTAIN, T_SPOT, T_MATTRESS, 
 # the figures of Astra (RF2_MAP_02_REPRISE, 28/09), src/zscript/rf/figures.zs: visual only
 T_FIG_FORMS, T_FIG_PRAM, T_FIG_SANTE_A, T_FIG_SANTE_B, T_FIG_SANTE_C, T_FIG_SANTE_D = 30641, 30642, 30643, 30644, 30645, 30646
 T_FIG_TRAM, T_FIG_TSF, T_FIG_COCHIN, T_FIG_VALISE, T_VIKTOR_MIRROR = 30647, 30648, 30649, 30650, 30651
-T_PRAM = 30652                  # Astra's pram model (RF02-B)
+T_PRAM, T_TRAM, T_TRACK, T_TRACK_HALF = 30652, 30653, 30654, 30655   # Astra's models (RF02-B)
 T_DECAL = 9200
 DAMP, GRIME, STREAK, SCUFF = 11001, 11002, 11003, 11004
 
@@ -252,7 +252,7 @@ m.label(3140, 360, 'SANTE (porte close)')
 # ============================================================================ B. CARREFOUR DU TRAMWAY / DENFERT
 m.box(1856, -128, 2496, 512, B_RD)
 # rails across the square (and under the tram)
-m.box(1856, 192, 2496, 272, B_RD, ftex='RF2_RAIL')
+m.box(1856, 192, 2496, 272, B_RD)                                  # the rails are models (the tram section)
 # pavement ring with openings east (Arago) and west (Port-Royal)
 m.box(1792, -192, 2560, -128, pave(B_RD, 'RF2_FAC3'))
 m.box(1792, 512, 2560, 576, pave(B_RD, 'RF2_FAC2'))
@@ -283,42 +283,40 @@ for (x, y, a) in ((2400, -80, 20), (2440, 460, 95), (1900, 460, 170), (2300, 420
 block(2352, 400, 2448, 448, 36, 'RFW_TOP', 'RFW_PANL', B_RD)       # a handcart loaded with a mattress
 m.thing(2400, 424, T_MATTRESS, angle=0, z=36)
 
-# The tram: stopped in the middle of the crossing, doors open (l. 113). Floor 24, body of solid 3D floors:
-# lower panel 24-72 and window band 120-152 along the sides (windows lowered), pillars full height, the roof
-# 136-152 over the aisle. Two doors on the south side.
+# The tram (RF02-B, 28/09): Astra's model (models/rf02/tram.obj, 344 x 112 x 136, floor 30 above the rail head, open
+# platforms at both ends, the cabin between them open at its ends, benches and the dozen suitcases, the cage, the
+# pole lowered), stopped in the middle of the crossing on its rails (l. 113). Tram and rails stand 1 unit above the
+# setts so that the rail heads show. The map keeps the walkable volume and makes it invisible (slabs of alpha 0,
+# solid): the deck 1 unit under the model's floor, two steps of 15 on each side of each platform, the cabin walls
+# with the aisle open at both ends, the benches, the dashboards at the ends. Under the body the street shows.
 TX0, TX1, TY0, TY1 = 2016, 2368, 176, 288
-TRAM = replace(B_RD, floor=24, ftex='RF2_TFLR', lower='RFP_DRK')
-m.box(TX0, TY0, TX1, TY1, TRAM)
-for x in range(TX0, TX1, 16):
-    for (y0, y1) in ((TY0, TY0 + 16), (TY1 - 16, TY1)):
-        door_cell = y0 == TY0 and (2080 <= x < 2128 or 2272 <= x < 2320)
-        pillar = (x - TX0) % 64 == 0 or x == TX1 - 16
-        if door_cell:
-            m.slab(x, y0, x + 16, y1, 120, 152, 'RF2_TRMU')
-        elif pillar:
-            m.slab(x, y0, x + 16, y1, 24, 152, 'RF2_TRAM')
-        else:
-            m.slab(x, y0, x + 16, y1, 24, 72, 'RF2_TRML')
-            m.slab(x, y0, x + 16, y1, 120, 152, 'RF2_TRMU')
-for (x0, x1) in ((TX0, TX0 + 16), (TX1 - 16, TX1)):                 # ends: a window between two pillars
-    for y in range(TY0 + 16, TY1 - 16, 16):
-        if y in (TY0 + 16, TY1 - 32):
-            m.slab(x0, y, x1, y + 16, 24, 152, 'RF2_TRAM')
-        else:
-            m.slab(x0, y, x1, y + 16, 24, 72, 'RF2_TRML')
-            m.slab(x0, y, x1, y + 16, 120, 152, 'RF2_TRMU')
-m.slab(TX0 + 16, TY0 + 16, TX1 - 16, TY1 - 16, 136, 152, 'RF2_TRMU', 'RF2_ZINC', 'RFP_CEID')
-# benches along both sides, the dozen suitcases left on them, the satchel on its hook
-DOORS = ((2080, 2128), (2272, 2320))
-for (y0, y1) in ((TY0 + 16, TY0 + 32), (TY1 - 32, TY1 - 16)):
-    for x in range(TX0 + 32, TX1 - 32, 64):
-        if y0 == TY0 + 16 and any(x < b and x + 48 > a for (a, b) in DOORS):
-            continue
-        m.raise_block(x, y0, x + 48, y1, 16, 'RF2_TFLR', 'RF2_BNCH', m.cells[(x // UNIT, y0 // UNIT)])
-for (x, y) in ((2112, 192), (2176, 192), (2304, 192), (2112, 256), (2176, 256), (2240, 256)):
-    m.raise_block(x, y, x + 32, y + 16, 24, 'RFW_TOP', 'RF2_VALI', m.cells[(x // UNIT, y // UNIT)])
-m.thing(2046, 264, T_SACOCHE, angle=270, args=(S_TICKET,), z=36)
-m.thing(2072, 264, T_FIG_TRAM, angle=270)                           # F02-04 asleep on the bench of the rear platform
+TZ = B_RD.floor + 1 + 30                     # the model's floor
+GHOST = dict(alpha=0)
+m.box(TX0, TY0, TX1, TY1, B_RD)
+m.slab(TX0, TY0, TX1, TY1, B_RD.floor, TZ - 1, 'RF2_TRAM', **GHOST)          # deck, solid from the setts: the engine
+# does not let a player step from one 3D floor onto another that starts at its top (the steps would lead nowhere);
+# the street under the body still shows, the slab is not drawn
+for (x0, x1) in ((TX0 + 16, TX0 + 64), (TX1 - 64, TX1 - 16)):                 # steps beside each platform
+    for (y0, y1) in ((TY0 - 16, TY0), (TY1, TY1 + 16)):
+        m.slab(x0, y0, x1, y1, B_RD.floor, B_RD.floor + 15, 'RF2_TRAM', **GHOST)   # from the setts: a step, not a shelf
+for (x0, x1) in ((TX0, TX0 + 16), (TX1 - 16, TX1)):                          # dashboards at the ends
+    m.slab(x0, TY0, x1, TY1, TZ - 1, TZ + 48, 'RF2_TRAM', **GHOST)
+CX0, CX1 = TX0 + 64, TX1 - 64                                                # the cabin (its invisible walls 8 u inside
+# the model's, so that a player passes between the dashboard and the cabin: 48 u, not 32)
+for (y0, y1) in ((TY0, TY0 + 16), (TY1 - 16, TY1)):                          # its sides
+    m.slab(CX0, y0, CX1, y1, TZ - 1, TZ + 96, 'RF2_TRAM', **GHOST)
+for (x0, x1) in ((CX0, CX0 + 16), (CX1 - 16, CX1)):                          # its ends, the aisle open (48)
+    for (y0, y1) in ((TY0 + 16, TY0 + 32), (TY1 - 32, TY1 - 16)):
+        m.slab(x0, y0, x1, y1, TZ - 1, TZ + 96, 'RF2_TRAM', **GHOST)
+for (y0, y1) in ((TY0 + 16, TY0 + 32), (TY1 - 32, TY1 - 16)):                # benches along both sides
+    m.slab(CX0 + 16, y0, CX1 - 16, y1, TZ - 1, TZ + 15, 'RF2_TRAM', **GHOST)
+m.thing((TX0 + TX1) // 2, (TY0 + TY1) // 2, T_TRAM, angle=0, z=1)
+for (x, half) in ((1984, False), (2240, False), (2432, True)):               # rails across the square (256 u modules)
+    m.thing(x, (TY0 + TY1) // 2, T_TRACK_HALF if half else T_TRACK, angle=0, z=1)
+# the fare collector's satchel on its hook, on the west (rear) platform, against the cabin; the old man on the
+# first bench beside it
+m.thing(CX0 - 8, TY1 - 20, T_SACOCHE, angle=180, args=(S_TICKET,), z=TZ - B_RD.floor + 38)   # at chest height
+m.thing(CX0 + 28, TY1 - 24, T_FIG_TRAM, angle=270, z=TZ - B_RD.floor + 15)   # F02-04 asleep on the bench
 lamp(2192, 232, 110, 220, 214, 190, 140)
 m.label(2040, 300, 'TRAMWAY')
 m.thing(2176, 232, T_AMB, args=(3, 25))
@@ -629,12 +627,12 @@ route = [
     (2900, 160, 0, 0, 0, 0),
     (2560, 160, 0, 0, 0, 0),
     (2400, 120, 0, 0, 0, 0),
-    (2104, 140, 0, 0, 0, 0),
-    (2104, 216, 0, 0, 0, 0),               # through the south door of the tram
+    (2056, 140, 0, 0, 0, 0),
+    (2056, 200, 0, 0, 0, 0),               # up the steps onto the west platform of the tram
     (2064, 232, 0, 0, 0, 0),
-    (2056, 244, 1, 120, 0, 90),            # the satchel: a punched ticket
-    (2104, 216, 0, 0, 0, 0),
-    (2104, 140, 0, 0, 0, 0),
+    (2052, 264, 1, 120, 0, 45),            # the satchel on the cabin wall (faced from where it stops): a punched ticket
+    (2056, 200, 0, 0, 0, 0),
+    (2056, 140, 0, 0, 0, 0),
     (1960, 140, 0, 0, 0, 0),               # E2
     (1900, 420, 0, 0, 0, 0),
     (1700, 440, 0, 0, 0, 0),

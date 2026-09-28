@@ -228,3 +228,36 @@ Model RFPram
     IgnoreTranslation
     FrameIndex RFPR A 0 0
 }
+
+// The tram and its rails (RF02, carrefour): Astra's original meshes (batch RF2_MAP_02, source/models/tram.obj and
+// track_straight.obj), same material atlas as the pram. The map holds the invisible walkable volume (rf02.py).
+Model RFTram
+{
+    Path "models/rf02"
+    Model 0 "tram.obj"
+    Skin 0 "rf2_material_atlas.png"
+    Scale 1 1 1.2
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFTM A 0 0
+}
+Model RFTrack
+{
+    Path "models/rf02"
+    Model 0 "track_straight.obj"
+    Skin 0 "rf2_material_atlas.png"
+    Scale 1 1 1.2
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFRL A 0 0
+}
+Model RFTrackHalf
+{
+    Path "models/rf02"
+    Model 0 "track_straight.obj"
+    Skin 0 "rf2_material_atlas.png"
+    Scale 0.5 1 1.2
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFRL A 0 0
+}

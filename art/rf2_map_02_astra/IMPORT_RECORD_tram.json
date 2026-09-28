@@ -1,0 +1,32 @@
+{
+ "batch": "RF2_MAP_02 (source/models, SOURCE_REQUIRES_OPUS_CONTRACT)",
+ "imported": "2026-09-28 08:53",
+ "files": [
+  {
+   "target": "models/rf02/tram.obj",
+   "source": "source/models/tram.obj",
+   "sha256": "df78ff1752b250083fbb6a7b0c16079d7dde3a4781c2458c85b0fc74eeb4d76b",
+   "faces": 53032
+  },
+  {
+   "target": "models/rf02/track_straight.obj",
+   "source": "source/models/track_straight.obj",
+   "sha256": "2a7bef742f4844dc330d73b01e5365dca645a581c0e94717dbc38083052deb63",
+   "faces": 17388
+  }
+ ],
+ "contract": {
+  "floor_z": 30,
+  "rail_centrelines_y": [
+   -30,
+   30
+  ],
+  "module": 256,
+  "origin": [
+   2192,
+   232
+  ],
+  "raised_by": 1,
+  "map": "invisible solid slabs: deck, steps of 15, cabin walls with the aisle open, benches, dashboards"
+ }
+}

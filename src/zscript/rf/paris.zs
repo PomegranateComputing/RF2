@@ -108,6 +108,39 @@ class RFPram : Actor                // the pram full of registers tied with stri
     States { Spawn: RFPR A -1; Stop; }
 }
 
+class RFTram : Actor                 // the tram stopped on its rails (l. 113): Astra's model; the map holds its volume
+{
+    Default
+    {
+        // Small body, large render radius: a body as large as the model would meet the invisible slabs of the
+        // map at spawn and be pushed under the deck (the model then shows only its roof at street level); the
+        // render radius keeps it drawn whenever a part of it is in view.
+        Radius 8;
+        Height 8;
+        RenderRadius 180;
+        +NOGRAVITY
+        +NOBLOCKMAP
+        +DONTSPLASH
+    }
+    States { Spawn: RFTM A -1; Stop; }
+}
+
+class RFTrack : Actor                // a 256 u module of rails set in the setts
+{
+    Default
+    {
+        Radius 4;
+        Height 2;
+        RenderRadius 130;
+        +NOGRAVITY
+        +NOBLOCKMAP
+        +DONTSPLASH
+    }
+    States { Spawn: RFRL A -1; Stop; }
+}
+
+class RFTrackHalf : RFTrack { Default { RenderRadius 66; } }   // the half module at the east end of the square
+
 class RFMorrisColumn : RFInteract   // the Morris column (l. 437): scratched, it shows JERMA PALACE for a heartbeat
 {
     Default

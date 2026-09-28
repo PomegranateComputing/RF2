@@ -120,12 +120,15 @@ class MapBuilder:
     def rail(self, x0, y0, x1, y1, base, tex):
         self.box(x0, y0, x1, y1, base, mid=tex, role='rail')
 
-    def slab(self, x0, y0, x1, y1, z0, z1, side, top=None, bottom=None):
+    def slab(self, x0, y0, x1, y1, z0, z1, side, top=None, bottom=None, alpha=255):
         """Solid 3D floor between z0 and z1 in the existing cells of the rectangle (Sector_Set3DFloor, type
         solid): a vehicle body or a roof with open sky above it, a bridge deck over water, a mezzanine. side is
         the texture of its faces, top/bottom of its upper and lower surfaces. A cell may hold several slabs
-        (a window between a sill slab and a lintel slab). Tags and control sectors are assigned at build."""
+        (a window between a sill slab and a lintel slab). Tags and control sectors are assigned at build.
+        alpha 0: the slab is not drawn but stays solid (the collision of a model that shows the object)."""
         spec = (int(z0), int(z1), side, top or side, bottom or top or side)
+        if alpha != 255:
+            spec += (int(alpha),)
         for p in self._cells(*self._range(x0, y0, x1, y1)):
             if p in self.cells:
                 c = self.cells[p]
@@ -539,7 +542,8 @@ class MapBuilder:
             cy0 = (min(p[1] for p in self.cells) - 32) * UNIT
             k = 0
             for spec, tag in sorted(self.slab_tags.items(), key=lambda kv: kv[1]):
-                for (z0, z1, side, top, bottom) in spec:
+                for (z0, z1, side, top, bottom, *rest) in spec:
+                    alpha = rest[0] if rest else 255
                     x, y, size = cx0 - (k % 64) * 48, cy0 - (k // 64) * 48, 32
                     base = len(verts)
                     for (vx, vy) in ((x, y), (x, y + size), (x + size, y + size), (x + size, y)):
@@ -551,7 +555,7 @@ class MapBuilder:
                         sides.append(dict(sector=sec, texturemiddle=side))
                         d = dict(v1=base + e, v2=base + (e + 1) % 4, sidefront=len(sides) - 1, blocking=True)
                         if e == 0:
-                            d.update(special=160, arg0=tag, arg1=1, arg2=1, arg3=255)
+                            d.update(special=160, arg0=tag, arg1=1, arg2=1, arg3=alpha)
                         out_lines.append(d)
                     k += 1
         text = f'// {self.name} - Red Flags 2 production map. Authored with scripts/mapkit (cell grid {UNIT}).\n'

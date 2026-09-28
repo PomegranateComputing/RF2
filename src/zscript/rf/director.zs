@@ -216,7 +216,8 @@ class RFDirector : EventHandler
             if (person.Distance2D(thing) > 72 + thing.radius || !person.CheckSight(thing)) continue;
             Vector2 delta = thing.Pos.XY - person.Pos.XY;
             double facing = delta.X * cos(person.angle) + delta.Y * sin(person.angle);
-            if (facing < delta.Length() * 0.7) continue;
+            // Within 45 degrees, or within 72 degrees when the object is right against the player (40 units).
+            if (facing < delta.Length() * (delta.Length() < 40 ? 0.3 : 0.7)) continue;
             usePrompt = thing.prompt;
             promptThing = thing;
             return;
