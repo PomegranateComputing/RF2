@@ -1,0 +1,2323 @@
+{
+ "carte": "RF01",
+ "wad_sha256": "ada65ca8783336f341e91cc63c28e0c449e393849987a7ae9035f458f03f65b7",
+ "entrees": [
+  {
+   "id": "F_SKY1",
+   "famille": "plat",
+   "perimetre": "hors lot (ciel)",
+   "source": null,
+   "sha256": null,
+   "png_px": null,
+   "definition": null,
+   "texture_px": null,
+   "echelle": null,
+   "taille_monde": null,
+   "transparence": null,
+   "usages_rf01": {
+    "secteurs": 24
+   },
+   "roles_cellules": {
+    "plafond": 2488
+   },
+   "zones": [
+    "COUR DES HOMMES",
+    "RUE CABANIS / SORTIE",
+    "PAVILLON EST - SALLE COMMUNE",
+    "COULOIR OUEST",
+    "LINGERIE",
+    "CHAMBRE",
+    "CHAPELLE VIDE",
+    "ECONOMAT"
+   ],
+   "autres_cartes": [
+    "RF02",
+    "RF03",
+    "RF04",
+    "RF05",
+    "RF06",
+    "RF07",
+    "RF09",
+    "RF12",
+    "RF13",
+    "RF14",
+    "RF18",
+    "RF19"
+   ],
+   "dependances": [
+    "MAPINFO"
+   ]
+  },
+  {
+   "id": "RFD_DBL",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFD_DBL.png",
+   "sha256": "2174947926d0fc3e54e4c06cd89c29bc1c344ff3409977c7b15896b87dafd436",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 6
+   },
+   "roles_cellules": {
+    "mur": 20
+   },
+   "zones": [
+    "COULOIR OUEST",
+    "ECONOMAT",
+    "PAVILLON EST - SALLE COMMUNE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFD_SGL",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFD_SGL.png",
+   "sha256": "5320d6fe27e6d9372f19abe1fab844bc044dc20ac9cf10f3afaf1401c703ea4c",
+   "png_px": [
+    256,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 30
+   },
+   "roles_cellules": {
+    "mur": 59
+   },
+   "zones": [
+    "POSTE",
+    "CONSULTATIONS",
+    "COULOIR DU PAVILLON OUEST",
+    "LOGE",
+    "PAVILLON EST - SALLE COMMUNE",
+    "GALERIE NORD",
+    "REGISTRES",
+    "SALLE D'ATTENTE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFF_CER",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFF_CER.png",
+   "sha256": "b7db2d444d5b5bfaffb53f7421147874b7cc044c6ee27db0f9d7977cee763ff3",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 24
+   },
+   "roles_cellules": {
+    "sol": 1473
+   },
+   "zones": [
+    "ADMISSIONS",
+    "COULOIR OUEST",
+    "ECONOMAT",
+    "POSTE",
+    "COULOIR DU PAVILLON OUEST",
+    "LOGE",
+    "CONSULTATIONS",
+    "GALERIE NORD"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFF_CERD",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFF_CERD.png",
+   "sha256": "cfd3d3ff7cee6f5ed122c89674713d0bfb087cbda7cefc52f2cc1f8052c693bc",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 1
+   },
+   "roles_cellules": {
+    "sol": 36
+   },
+   "zones": [
+    "COUR DES HOMMES"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFF_CHK",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFF_CHK.png",
+   "sha256": "ad60baaf5c1d888970d528710f204840099213f05938143b164200816ba08e0e",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 23
+   },
+   "roles_cellules": {
+    "sol": 1037
+   },
+   "zones": [
+    "LINGERIE",
+    "POSTE",
+    "SALLE D'ATTENTE",
+    "CONSULTATIONS",
+    "ADMISSIONS",
+    "COULOIR OUEST",
+    "PORCHE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFF_CONC",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFF_CONC.png",
+   "sha256": "97d0177b3dcadabfb3bb65a80a160723c9e150cc55c0c88c6238f77266dea94a",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 19
+   },
+   "roles_cellules": {
+    "sol": 176
+   },
+   "zones": [
+    "LINGERIE",
+    "PORCHE",
+    "RUE CABANIS / SORTIE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFF_GRAV",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFF_GRAV.png",
+   "sha256": "e7bf64fbb6c91603e8a0ca674653092ca7fd21028e1455e8d6784782e9d0243a",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 8
+   },
+   "roles_cellules": {
+    "sol": 1728
+   },
+   "zones": [
+    "COUR DES HOMMES",
+    "PAVILLON EST - SALLE COMMUNE",
+    "COULOIR OUEST",
+    "LINGERIE",
+    "CHAMBRE",
+    "CHAPELLE VIDE",
+    "ECONOMAT",
+    "COULOIR DU PAVILLON OUEST"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFF_LINO",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFF_LINO.png",
+   "sha256": "3fcfab738712f9ef44a273451995ee09e3280974e36d8187a784577423eb7591",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 16
+   },
+   "roles_cellules": {
+    "sol": 580
+   },
+   "zones": [
+    "PAVILLON EST - SALLE COMMUNE",
+    "LINGERIE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFF_PAVE",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFF_PAVE.png",
+   "sha256": "fc1a93696e46fc95d0f44479a2d0f799599ab80310748804121900b02a451403",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 1
+   },
+   "roles_cellules": {
+    "sol": 278
+   },
+   "zones": [
+    "RUE CABANIS / SORTIE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFF_SLAB",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFF_SLAB.png",
+   "sha256": "9a93c4fa9b09cf3b843bf3a0816075d02565064d50b44362bc345fd749c0ffad",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 26
+   },
+   "roles_cellules": {
+    "sol": 1569
+   },
+   "zones": [
+    "CHAPELLE VIDE",
+    "COULOIR OUEST",
+    "PAVILLON EST - SALLE COMMUNE",
+    "COUR DES HOMMES",
+    "RUE CABANIS / SORTIE",
+    "ECONOMAT",
+    "PORCHE",
+    "POSTE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFF_WOOD",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFF_WOOD.png",
+   "sha256": "5d2f4de6c82eacdafa41386c93fa47f2227990406ba4167b6d40fd22d75432f1",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 40
+   },
+   "roles_cellules": {
+    "sol": 1416
+   },
+   "zones": [
+    "GALERIE NORD",
+    "REGISTRES",
+    "POSTE",
+    "LINGERIE",
+    "PAVILLON EST - SALLE COMMUNE",
+    "CHAMBRE",
+    "ECONOMAT",
+    "LOGE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFG_VITR",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFG_VITR.png",
+   "sha256": "661d8397cf14a6b4328e5bc63bc4769d0293287a8898ed29e008f4e28df1cda3",
+   "png_px": [
+    256,
+    256
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    256
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    64.0
+   ],
+   "transparence": "masque (0/255)",
+   "usages_rf01": {
+    "cotes": 12
+   },
+   "roles_cellules": {
+    "milieu": 12
+   },
+   "zones": [
+    "CHAPELLE VIDE",
+    "REGISTRES"
+   ],
+   "autres_cartes": [],
+   "dependances": [
+    "GLDEFS"
+   ]
+  },
+  {
+   "id": "RFG_WIN",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFG_WIN.png",
+   "sha256": "1ddd653b758c609244eaab248905f7ed6fcd0a85f904c42dbcf30c3a66f6c004",
+   "png_px": [
+    256,
+    256
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    256
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    64.0
+   ],
+   "transparence": "alpha progressif",
+   "usages_rf01": {
+    "cotes": 110
+   },
+   "roles_cellules": {
+    "milieu": 96
+   },
+   "zones": [
+    "PAVILLON EST - SALLE COMMUNE",
+    "GALERIE NORD",
+    "COULOIR OUEST",
+    "LINGERIE",
+    "CHAMBRE",
+    "POSTE",
+    "COUR DES HOMMES",
+    "LOGE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFM_DOOR",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFM_DOOR.png",
+   "sha256": "b1fa87a9f7d5c2c529b3241180ecbbf7ae9cd425ae7524a98b341d788b9a425b",
+   "png_px": [
+    256,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 6
+   },
+   "roles_cellules": {
+    "mur": 12
+   },
+   "zones": [
+    "LINGERIE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFM_GRIL",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFM_GRIL.png",
+   "sha256": "5712e966639b8dfe360be461158b379098763d939392c09ce75a81350f96fc18",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 6
+   },
+   "roles_cellules": {
+    "mur": 14
+   },
+   "zones": [
+    "ADMISSIONS",
+    "GALERIE NORD",
+    "PORCHE",
+    "LOGE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFM_PANL",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFM_PANL.png",
+   "sha256": "ed2f8bca63add0f8f7822b3a908f16ccb5c211acdade92da2bc06c68865cb1b8",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 5
+   },
+   "roles_cellules": {
+    "contremarche": 33
+   },
+   "zones": [
+    "LINGERIE",
+    "RUE CABANIS / SORTIE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFM_SW0",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFM_SW0.png",
+   "sha256": "0b073181c2e3360a33460e099b822b30dd6b92fe55a2d42a03904fa2b26fee95",
+   "png_px": [
+    256,
+    256
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    256
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    64.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 2
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": [
+    "ANIMDEFS"
+   ]
+  },
+  {
+   "id": "RFM_TOP",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFM_TOP.png",
+   "sha256": "aa684d8d5d9051a58f43bfcd9269105158e0f8d5601cf2dc13ae97adf0660cea",
+   "png_px": [
+    256,
+    256
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    256
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    64.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 16
+   },
+   "roles_cellules": {
+    "sol": 101
+   },
+   "zones": [
+    "LINGERIE",
+    "PAVILLON EST - SALLE COMMUNE",
+    "CHAMBRE",
+    "ADMISSIONS",
+    "POSTE",
+    "RUE CABANIS / SORTIE",
+    "CONSULTATIONS"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFM_VATS",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFM_VATS.png",
+   "sha256": "1717de213a770dd2fdfdf340a8e4bc1d2eb0d6775d8e5376d15b4d5f5e03a311",
+   "png_px": [
+    256,
+    192
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    192
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    48.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 16
+   },
+   "roles_cellules": {
+    "contremarche": 64
+   },
+   "zones": [
+    "LINGERIE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFP_CEID",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFP_CEID.png",
+   "sha256": "efdc8a493522f749dcbbf9a77db9a57a9f79e5ae4c8e185ff4220728add9847d",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 60
+   },
+   "roles_cellules": {
+    "plafond": 2360
+   },
+   "zones": [
+    "LINGERIE",
+    "REGISTRES",
+    "CHAPELLE VIDE",
+    "COULOIR OUEST",
+    "PAVILLON EST - SALLE COMMUNE",
+    "ECONOMAT",
+    "PORCHE",
+    "LOGE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFP_CEIL",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFP_CEIL.png",
+   "sha256": "ad9d5cbc6c8fccf482123f6ba7f4a5be35aec8696ddadce8b5bae2ea0e13e80d",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 119
+   },
+   "roles_cellules": {
+    "plafond": 3922
+   },
+   "zones": [
+    "PAVILLON EST - SALLE COMMUNE",
+    "POSTE",
+    "ADMISSIONS",
+    "GALERIE NORD",
+    "ECONOMAT",
+    "COULOIR OUEST",
+    "CONSULTATIONS",
+    "LINGERIE"
+   ],
+   "autres_cartes": [],
+   "dependances": [
+    "MAPINFO"
+   ]
+  },
+  {
+   "id": "RFP_DADB",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFP_DADB.png",
+   "sha256": "323b779c9fd471b01d48c2e9a24732942a922eaff5248bd452c40c35298a8378",
+   "png_px": [
+    1024,
+    1024
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    1024,
+    1024
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    256.0,
+    256.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 183
+   },
+   "roles_cellules": {
+    "mur": 1952,
+    "embrasure": 12
+   },
+   "zones": [
+    "GALERIE NORD",
+    "ADMISSIONS",
+    "COULOIR OUEST",
+    "ECONOMAT",
+    "POSTE",
+    "COULOIR DU PAVILLON OUEST",
+    "LOGE",
+    "CONSULTATIONS"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFP_DADG",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFP_DADG.png",
+   "sha256": "b44f1ab3639f1308734074660f900e7b0fb5190b2afe7a84698e745d14cc2e0b",
+   "png_px": [
+    1024,
+    1024
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    1024,
+    1024
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    256.0,
+    256.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 130
+   },
+   "roles_cellules": {
+    "mur": 1162
+   },
+   "zones": [
+    "PAVILLON EST - SALLE COMMUNE",
+    "CHAMBRE",
+    "LINGERIE",
+    "POSTE",
+    "CONSULTATIONS",
+    "COULOIR DU PAVILLON OUEST"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFP_DADR",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFP_DADR.png",
+   "sha256": "f93a20ef1edac25582f511861aca2cc7ea81e41356ae711de3b7eaea1d0d041e",
+   "png_px": [
+    1024,
+    1024
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    1024,
+    1024
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    256.0,
+    256.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 47
+   },
+   "roles_cellules": {
+    "mur": 573,
+    "embrasure": 8
+   },
+   "zones": [
+    "REGISTRES",
+    "ECONOMAT",
+    "LOGE",
+    "POSTE",
+    "GALERIE NORD"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFP_DRK",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFP_DRK.png",
+   "sha256": "ff3eb663e8ae7d7687337f6f5714eeb8798942a1aa7dc983acb1d423aa190b26",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 75
+   },
+   "roles_cellules": {
+    "mur": 258,
+    "embrasure": 12
+   },
+   "zones": [
+    "LINGERIE",
+    "SALLE D'ATTENTE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFP_PLN",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFP_PLN.png",
+   "sha256": "612e3fe42d3718540507f42d397f88515e5ad70de1b145d49e4865d1bf4c2758",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 81
+   },
+   "roles_cellules": {
+    "mur": 37,
+    "embrasure": 37,
+    "contremarche": 136
+   },
+   "zones": [
+    "COULOIR OUEST",
+    "POSTE",
+    "PAVILLON EST - SALLE COMMUNE",
+    "GALERIE NORD",
+    "LINGERIE",
+    "ECONOMAT",
+    "CHAMBRE",
+    "COULOIR DU PAVILLON OUEST"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFP_TILE",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFP_TILE.png",
+   "sha256": "d6355a80d3ccdc26187a39ed5494bfc604a9ad2c55ececd08baf30b2ee3cb360",
+   "png_px": [
+    1024,
+    1024
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    1024,
+    1024
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    256.0,
+    256.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 77
+   },
+   "roles_cellules": {
+    "mur": 1057,
+    "contremarche": 6,
+    "embrasure": 16
+   },
+   "zones": [
+    "LINGERIE",
+    "POSTE",
+    "SALLE D'ATTENTE",
+    "CONSULTATIONS",
+    "ADMISSIONS",
+    "COULOIR OUEST",
+    "PORCHE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFSIGN0",
+   "famille": "texture murale",
+   "perimetre": "hors lot (plaques RF01-PAN)",
+   "source": "src/patches/rf01/RFSIGN0.png",
+   "sha256": "957dbaff2a366e826330fe8e31ddb53c69304bb830473c0b87936ca1dab6d6c4",
+   "png_px": [
+    256,
+    64
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    64
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    16.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 2
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFSIGN1",
+   "famille": "texture murale",
+   "perimetre": "hors lot (plaques RF01-PAN)",
+   "source": "src/patches/rf01/RFSIGN1.png",
+   "sha256": "33d50ad77865a85548e3e51a1d38ddc4320b54ef231f8520809263dcb86443ec",
+   "png_px": [
+    256,
+    64
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    64
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    16.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 4
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFSIGN2",
+   "famille": "texture murale",
+   "perimetre": "hors lot (plaques RF01-PAN)",
+   "source": "src/patches/rf01/RFSIGN2.png",
+   "sha256": "2c280caf9e6f4124892935e7e69dfeb253fc8af8f7964f7e564ef818e5971be0",
+   "png_px": [
+    256,
+    64
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    64
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    16.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 6
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFSIGN3",
+   "famille": "texture murale",
+   "perimetre": "hors lot (plaques RF01-PAN)",
+   "source": "src/patches/rf01/RFSIGN3.png",
+   "sha256": "a2e71d1f48795e02031d2445293dc5f64f4a950d74d8e6383ca6345e3935f92d",
+   "png_px": [
+    256,
+    64
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    64
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    16.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 2
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFSIGN4",
+   "famille": "texture murale",
+   "perimetre": "hors lot (plaques RF01-PAN)",
+   "source": "src/patches/rf01/RFSIGN4.png",
+   "sha256": "6dc5a691ea4cdae47b4e28952cb6796f738282754fe234bf92f20e6061b073ed",
+   "png_px": [
+    256,
+    64
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    64
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    16.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 2
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFSIGN5",
+   "famille": "texture murale",
+   "perimetre": "hors lot (plaques RF01-PAN)",
+   "source": "src/patches/rf01/RFSIGN5.png",
+   "sha256": "62f077f5ea4f9a173f7901f225063ac25f8340f992259284d57bbb5aec997752",
+   "png_px": [
+    256,
+    64
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    64
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    16.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 2
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFSIGN6",
+   "famille": "texture murale",
+   "perimetre": "hors lot (plaques RF01-PAN)",
+   "source": "src/patches/rf01/RFSIGN6.png",
+   "sha256": "614485b6bf5ae9bc11894d8d6ea4facd8efb33d5575aaaebba4cc6752adbf90c",
+   "png_px": [
+    256,
+    64
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    64
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    16.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 2
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFSIGN7",
+   "famille": "texture murale",
+   "perimetre": "hors lot (plaques RF01-PAN)",
+   "source": "src/patches/rf01/RFSIGN7.png",
+   "sha256": "21b840546245a5ff74b84fa8d5fddf5fc08fed312574c179cb4abeb1e4487375",
+   "png_px": [
+    256,
+    64
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    64
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    16.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 2
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFSIGN8",
+   "famille": "texture murale",
+   "perimetre": "hors lot (plaques RF01-PAN)",
+   "source": "src/patches/rf01/RFSIGN8.png",
+   "sha256": "5f1e0786fde516e85104516aa7b5c317a70546150d0d25d13685847cdf531226",
+   "png_px": [
+    256,
+    64
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    64
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    16.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 2
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFSIGN9",
+   "famille": "texture murale",
+   "perimetre": "hors lot (plaques RF01-PAN)",
+   "source": "src/patches/rf01/RFSIGN9.png",
+   "sha256": "a27e1993f7be946aa3c19d763b29e1c649b7427f040c154ada3f4a891bec975e",
+   "png_px": [
+    256,
+    64
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    64
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    16.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 2
+   },
+   "roles_cellules": {},
+   "zones": [],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFS_BASE",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFS_BASE.png",
+   "sha256": "0b89bc55f462be9f553049efb3b6f2e9fb065c7830a1e3db659abc6bfe761274",
+   "png_px": [
+    512,
+    256
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    256
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    64.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 50
+   },
+   "roles_cellules": {
+    "contremarche": 671,
+    "embrasure": 4
+   },
+   "zones": [
+    "COUR DES HOMMES",
+    "RUE CABANIS / SORTIE",
+    "LINGERIE",
+    "GALERIE NORD",
+    "PAVILLON EST - SALLE COMMUNE",
+    "CHAPELLE VIDE",
+    "COULOIR OUEST",
+    "PORCHE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFS_FACD",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFS_FACD.png",
+   "sha256": "8fc39bfd3d292abc25d1e2c1e67dec3baff4522b5eb81614a3e004bc2cd51c56",
+   "png_px": [
+    512,
+    896
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    896
+   ],
+   "echelle": [
+    2.0,
+    2.0
+   ],
+   "taille_monde": [
+    256.0,
+    448.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 7
+   },
+   "roles_cellules": {
+    "mur": 432
+   },
+   "zones": [
+    "RUE CABANIS / SORTIE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFS_HOSP",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFS_HOSP.png",
+   "sha256": "4c9005bfdb7fa38e748fbc9d7086f51c5665be88335c4da4c0ff516ae6b8516c",
+   "png_px": [
+    512,
+    640
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    640
+   ],
+   "echelle": [
+    2.0,
+    2.0
+   ],
+   "taille_monde": [
+    256.0,
+    320.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 6
+   },
+   "roles_cellules": {
+    "au-dessus": 140,
+    "mur": 48
+   },
+   "zones": [
+    "PORCHE",
+    "RUE CABANIS / SORTIE",
+    "LOGE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFS_LIME",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFS_LIME.png",
+   "sha256": "9ffc6bf048e5271a6dec13ee1b073a941b984e56a9c61304319d03fcf5bbd81a",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 87
+   },
+   "roles_cellules": {
+    "embrasure": 24,
+    "mur": 710,
+    "contremarche": 56
+   },
+   "zones": [
+    "CHAPELLE VIDE",
+    "COULOIR OUEST",
+    "PORCHE",
+    "LOGE",
+    "RUE CABANIS / SORTIE",
+    "SALLE D'ATTENTE",
+    "PAVILLON EST - SALLE COMMUNE",
+    "REGISTRES"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFS_REND",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFS_REND.png",
+   "sha256": "0c8ca347ebf75acbefb2e2a436f0cbae8119f517d364b035c68ee8183fd672a6",
+   "png_px": [
+    512,
+    1024
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    1024
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    256.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 136
+   },
+   "roles_cellules": {
+    "mur": 2436
+   },
+   "zones": [
+    "COUR DES HOMMES",
+    "PAVILLON EST - SALLE COMMUNE",
+    "ECONOMAT",
+    "COULOIR OUEST",
+    "LINGERIE",
+    "CHAMBRE",
+    "POSTE",
+    "CHAPELLE VIDE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFT_BED",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFT_BED.png",
+   "sha256": "3912c965290ca45a44b11f28aeccb2ebf57b7ed44c67886b8629e156d015d76a",
+   "png_px": [
+    256,
+    256
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    256
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    64.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 10
+   },
+   "roles_cellules": {
+    "sol": 120
+   },
+   "zones": [
+    "PAVILLON EST - SALLE COMMUNE",
+    "CHAMBRE",
+    "LINGERIE",
+    "POSTE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFT_BEDS",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFT_BEDS.png",
+   "sha256": "3a4ae228c12ca8cacfd3ffe8a0fbcfccb0556f99f3d5a810ff752908702335f7",
+   "png_px": [
+    256,
+    128
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    128
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    32.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 19
+   },
+   "roles_cellules": {
+    "contremarche": 120
+   },
+   "zones": [
+    "PAVILLON EST - SALLE COMMUNE",
+    "CHAMBRE",
+    "LINGERIE",
+    "POSTE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFT_HEAD",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFT_HEAD.png",
+   "sha256": "5dc6c4db0f7aa3a469740f1008abe206f102f593a70c75885a84ed4c36f140e4",
+   "png_px": [
+    256,
+    192
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    192
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    48.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 33
+   },
+   "roles_cellules": {
+    "contremarche": 30
+   },
+   "zones": [
+    "PAVILLON EST - SALLE COMMUNE",
+    "CHAMBRE",
+    "LINGERIE",
+    "POSTE",
+    "CONSULTATIONS"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFW_PANL",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFW_PANL.png",
+   "sha256": "c8ec44020a05f08c1d931406b0892d67f766961c5b8c202671df6df98250a29f",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 24
+   },
+   "roles_cellules": {
+    "contremarche": 224
+   },
+   "zones": [
+    "PAVILLON EST - SALLE COMMUNE",
+    "LINGERIE",
+    "ADMISSIONS",
+    "RUE CABANIS / SORTIE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFW_SHLF",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFW_SHLF.png",
+   "sha256": "80318a03466893112fb4a48bbf1d709154280d50cf3fa5ced2c302b608037164",
+   "png_px": [
+    256,
+    256
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    256
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    64.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 15
+   },
+   "roles_cellules": {
+    "contremarche": 110
+   },
+   "zones": [
+    "REGISTRES",
+    "CONSULTATIONS",
+    "POSTE"
+   ],
+   "autres_cartes": [],
+   "dependances": []
+  },
+  {
+   "id": "RFW_TBLS",
+   "famille": "texture murale",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFW_TBLS.png",
+   "sha256": "caa61d239dc6ee9404526a7a6d5057ec337fa1ba6f62e1e634017173a465c43a",
+   "png_px": [
+    256,
+    128
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    256,
+    128
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    64.0,
+    32.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "cotes": 37
+   },
+   "roles_cellules": {
+    "contremarche": 82
+   },
+   "zones": [
+    "ECONOMAT",
+    "POSTE",
+    "PAVILLON EST - SALLE COMMUNE",
+    "LOGE",
+    "REGISTRES",
+    "SALLE D'ATTENTE",
+    "CHAMBRE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFW_TOP",
+   "famille": "plat",
+   "perimetre": "dans le lot",
+   "source": "src/patches/rf01/RFW_TOP.png",
+   "sha256": "bafa800c005d2abe18a2a49a95420332601e68f762a8dab279e45ebea239d09d",
+   "png_px": [
+    512,
+    512
+   ],
+   "definition": "TEXTURES.rf01",
+   "texture_px": [
+    512,
+    512
+   ],
+   "echelle": [
+    4.0,
+    4.0
+   ],
+   "taille_monde": [
+    128.0,
+    128.0
+   ],
+   "transparence": "aucune",
+   "usages_rf01": {
+    "secteurs": 19
+   },
+   "roles_cellules": {
+    "sol": 256
+   },
+   "zones": [
+    "REGISTRES",
+    "ADMISSIONS",
+    "ECONOMAT",
+    "PAVILLON EST - SALLE COMMUNE",
+    "POSTE",
+    "RUE CABANIS / SORTIE",
+    "LOGE",
+    "SALLE D'ATTENTE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "dependances": []
+  },
+  {
+   "id": "RFPropChair",
+   "famille": "modele (accessoire)",
+   "perimetre": "dans le lot",
+   "source": "src/models/props/chair.obj",
+   "peau": "src/models/props/atlas.png",
+   "sha256_peau": "1a8bd444166d728986d07117ca41c397fe74b7400b5df97d4f37db9cb182ca90",
+   "peau_px": [
+    2048,
+    2048
+   ],
+   "sha256_modele": "7f221084ec9097aeb770aa0e5acd3da707b04d8098253d3c51f0b0073c505e1a",
+   "echelle_modele": [
+    "0.32",
+    "0.32",
+    "0.384"
+   ],
+   "usages_rf01": {
+    "objets": 10
+   },
+   "zones": [
+    "PAVILLON EST - SALLE COMMUNE",
+    "ADMISSIONS",
+    "LOGE",
+    "CHAMBRE",
+    "POSTE",
+    "REGISTRES",
+    "SALLE D'ATTENTE",
+    "ECONOMAT"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "peau_partagee_avec": [
+    "RFPropBench",
+    "RFPropCabinet",
+    "RFPropChair",
+    "RFPropDesk",
+    "RFPropLamp",
+    "RFPropRadiator",
+    "RFPropTrolley"
+   ],
+   "dependances": [
+    "MAPINFO",
+    "MODELDEF",
+    "zscript/rf/world.zs"
+   ]
+  },
+  {
+   "id": "RFPropCabinet",
+   "famille": "modele (accessoire)",
+   "perimetre": "dans le lot",
+   "source": "src/models/props/cabinet.obj",
+   "peau": "src/models/props/atlas.png",
+   "sha256_peau": "1a8bd444166d728986d07117ca41c397fe74b7400b5df97d4f37db9cb182ca90",
+   "peau_px": [
+    2048,
+    2048
+   ],
+   "sha256_modele": "b07ba915a11060276173dd4479ba58e9dae2ba0c0b006b260992eb81d41f4466",
+   "echelle_modele": [
+    "0.32",
+    "0.32",
+    "0.384"
+   ],
+   "usages_rf01": {
+    "objets": 5
+   },
+   "zones": [
+    "POSTE",
+    "LOGE",
+    "SALLE D'ATTENTE",
+    "ECONOMAT"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "peau_partagee_avec": [
+    "RFPropBench",
+    "RFPropCabinet",
+    "RFPropChair",
+    "RFPropDesk",
+    "RFPropLamp",
+    "RFPropRadiator",
+    "RFPropTrolley"
+   ],
+   "dependances": [
+    "MAPINFO",
+    "MODELDEF",
+    "zscript/rf/world.zs"
+   ]
+  },
+  {
+   "id": "RFPropRadiator",
+   "famille": "modele (accessoire)",
+   "perimetre": "dans le lot",
+   "source": "src/models/props/radiator.obj",
+   "peau": "src/models/props/atlas.png",
+   "sha256_peau": "1a8bd444166d728986d07117ca41c397fe74b7400b5df97d4f37db9cb182ca90",
+   "peau_px": [
+    2048,
+    2048
+   ],
+   "sha256_modele": "538c9ce379de013b1c64b398076752747d3ececc0ac074d135848dcc1aeb2d0b",
+   "echelle_modele": [
+    "0.32",
+    "0.32",
+    "0.384"
+   ],
+   "usages_rf01": {
+    "objets": 8
+   },
+   "zones": [
+    "POSTE",
+    "CHAMBRE",
+    "COULOIR DU PAVILLON OUEST",
+    "PAVILLON EST - SALLE COMMUNE",
+    "GALERIE NORD",
+    "COULOIR OUEST",
+    "ECONOMAT"
+   ],
+   "autres_cartes": [],
+   "peau_partagee_avec": [
+    "RFPropBench",
+    "RFPropCabinet",
+    "RFPropChair",
+    "RFPropDesk",
+    "RFPropLamp",
+    "RFPropRadiator",
+    "RFPropTrolley"
+   ],
+   "dependances": [
+    "MAPINFO",
+    "MODELDEF",
+    "zscript/rf/world.zs"
+   ]
+  },
+  {
+   "id": "RFPropTrolley",
+   "famille": "modele (accessoire)",
+   "perimetre": "dans le lot",
+   "source": "src/models/props/trolley.obj",
+   "peau": "src/models/props/atlas.png",
+   "sha256_peau": "1a8bd444166d728986d07117ca41c397fe74b7400b5df97d4f37db9cb182ca90",
+   "peau_px": [
+    2048,
+    2048
+   ],
+   "sha256_modele": "d0733f2cd690041f5104d23cc820c2fa46f979d705c9a2db688f6af65a7beddf",
+   "echelle_modele": [
+    "0.32",
+    "0.32",
+    "0.384"
+   ],
+   "usages_rf01": {
+    "objets": 6
+   },
+   "zones": [
+    "LINGERIE",
+    "RUE CABANIS / SORTIE",
+    "CONSULTATIONS",
+    "PAVILLON EST - SALLE COMMUNE",
+    "ECONOMAT"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "peau_partagee_avec": [
+    "RFPropBench",
+    "RFPropCabinet",
+    "RFPropChair",
+    "RFPropDesk",
+    "RFPropLamp",
+    "RFPropRadiator",
+    "RFPropTrolley"
+   ],
+   "dependances": [
+    "MAPINFO",
+    "MODELDEF",
+    "zscript/rf/world.zs"
+   ]
+  },
+  {
+   "id": "RFPropBench",
+   "famille": "modele (accessoire)",
+   "perimetre": "dans le lot",
+   "source": "src/models/props/bench.obj",
+   "peau": "src/models/props/atlas.png",
+   "sha256_peau": "1a8bd444166d728986d07117ca41c397fe74b7400b5df97d4f37db9cb182ca90",
+   "peau_px": [
+    2048,
+    2048
+   ],
+   "sha256_modele": "31d9823a3598c47583c44fb39a8334abdd41ca8c43c168265f22113d72e53d8e",
+   "echelle_modele": [
+    "0.32",
+    "0.32",
+    "0.384"
+   ],
+   "usages_rf01": {
+    "objets": 17
+   },
+   "zones": [
+    "CHAPELLE VIDE",
+    "PORCHE",
+    "POSTE",
+    "ECONOMAT",
+    "PAVILLON EST - SALLE COMMUNE",
+    "GALERIE NORD",
+    "SALLE D'ATTENTE",
+    "RUE CABANIS / SORTIE"
+   ],
+   "autres_cartes": [
+    "RF02"
+   ],
+   "peau_partagee_avec": [
+    "RFPropBench",
+    "RFPropCabinet",
+    "RFPropChair",
+    "RFPropDesk",
+    "RFPropLamp",
+    "RFPropRadiator",
+    "RFPropTrolley"
+   ],
+   "dependances": [
+    "MAPINFO",
+    "MODELDEF",
+    "zscript/rf/world.zs"
+   ]
+  },
+  {
+   "id": "RFPropLamp",
+   "famille": "modele (accessoire)",
+   "perimetre": "dans le lot",
+   "source": "src/models/props/service_ceiling_lamp.obj",
+   "peau": "src/models/props/atlas.png",
+   "sha256_peau": "1a8bd444166d728986d07117ca41c397fe74b7400b5df97d4f37db9cb182ca90",
+   "peau_px": [
+    2048,
+    2048
+   ],
+   "sha256_modele": "e5487dc5daabe3753da62f85c24283450b03cc7e85d353350fb51df92b057732",
+   "echelle_modele": [
+    "1.0",
+    "1.0",
+    "1.2"
+   ],
+   "usages_rf01": {
+    "objets": 1
+   },
+   "zones": [
+    "PORCHE"
+   ],
+   "autres_cartes": [],
+   "peau_partagee_avec": [
+    "RFPropBench",
+    "RFPropCabinet",
+    "RFPropChair",
+    "RFPropDesk",
+    "RFPropLamp",
+    "RFPropRadiator",
+    "RFPropTrolley"
+   ],
+   "dependances": [
+    "MAPINFO",
+    "MODELDEF",
+    "zscript/rf/world.zs"
+   ]
+  },
+  {
+   "id": "RFDamp",
+   "famille": "decalque d'usure",
+   "perimetre": "dans le lot",
+   "source": "src/graphics/decals/RFDSTN1.png",
+   "sha256": "ffed428a80a549ca1607ca822e4600bcf76b420d9854615684ce52670ee6a5ff",
+   "png_px": [
+    128,
+    128
+   ],
+   "usages_rf01": {
+    "objets": 6
+   },
+   "autres_cartes": [],
+   "transparence": "alpha progressif",
+   "dependances": [
+    "DECALDEF"
+   ]
+  },
+  {
+   "id": "RFGrime",
+   "famille": "decalque d'usure",
+   "perimetre": "dans le lot",
+   "source": "src/graphics/decals/RFDSTN2.png",
+   "sha256": "d29be1284f0bf3bfb0d2914a59f34ee7c104ec5c36607cd3cb1db0d3a63460b0",
+   "png_px": [
+    128,
+    128
+   ],
+   "usages_rf01": {
+    "objets": 5
+   },
+   "autres_cartes": [],
+   "transparence": "alpha progressif",
+   "dependances": [
+    "DECALDEF"
+   ]
+  },
+  {
+   "id": "RFStreak",
+   "famille": "decalque d'usure",
+   "perimetre": "dans le lot",
+   "source": "src/graphics/decals/RFDSTN3.png",
+   "sha256": "bb9f2337b7d7f9fdfab1d734e551162179abc551a9d727d0c274fec82165a407",
+   "png_px": [
+    128,
+    128
+   ],
+   "usages_rf01": {
+    "objets": 2
+   },
+   "autres_cartes": [],
+   "transparence": "alpha progressif",
+   "dependances": [
+    "DECALDEF"
+   ]
+  },
+  {
+   "id": "RFScuff",
+   "famille": "decalque d'usure",
+   "perimetre": "dans le lot",
+   "source": "src/graphics/decals/RFDSTN4.png",
+   "sha256": "cf39e697c25aa6ee53cadaaa7b39919849eb5f990c9ff5aa6f64ba96c9a06d9e",
+   "png_px": [
+    128,
+    128
+   ],
+   "usages_rf01": {
+    "objets": 4
+   },
+   "autres_cartes": [],
+   "transparence": "alpha progressif",
+   "dependances": [
+    "DECALDEF"
+   ]
+  }
+ ]
+}

@@ -76,11 +76,12 @@ narratif : Luna Park (ID technique RF04), sans écraser le blockout RF03 (Batign
 |---|---|---|---|---|---|
 | RF01-PAN | Opus | tag `rf01-owner-accepted-20260927` | `scripts/mapkit/rf01.py` (panneaux), `src/maps/RF01.wad`, `udmf.py` (`texwidth=`), `materials.py` (`sign()`), `patches/rf01/RFSIGN*` | 13 panneaux lisibles ; registre vérifié en jeu : **lisible, aucun défaut** (`RF01_REGISTRE_VERIFICATION.md`) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_RF01-PAN.cmd`, build isolé `RF2_RF01-PAN_20260928_0725` (remplace 2245), `docs/RF2_RF01_PAN.md` ; porté sur `prod/rf2-campaign` |
 | HUD-02 | Opus | `prod/rf2-campaign` | `src/zscript/rf/hud.zs`, `src/graphics/hud/viktor/` | portrait de Viktor en six états (commande du propriétaire) | candidate `RF2_HUD-02_20260927_2230` |
-| RF02-A | Opus + Astra | `prod/rf2-campaign` | Opus : `scripts/mapkit/rf02.py`, runtime ; Astra : ressources | tranche de rue de référence ; enseignes : même défaut que RF01 (texture coupée de 4 unités, 4 unités du mur) → `texwidth=`, 1 unité | en cours |
+| RF02-A | Opus + Astra | `prod/rf2-campaign` | Opus : `scripts/mapkit/rf02.py`, runtime ; Astra : ressources | tranche de rue de référence | en cours — 23 enseignes accrochées (`e1e176c`, relevé 21/23) ; lot Astra `RF2_MAP_02` importé en HD (`7ceaf38`) ; V01–V10 et tranche de référence à faire ; `docs/RF2_RF02_A.md` |
 | RF02-B | Astra produit, Opus intègre | idem | modèles tram/voie/props (Astra), collisions/ancrages (Opus) | tram complet sur rails, poussette, objets fixés | en cours |
 | RF02-C | Opus + Astra | idem | idem | parcours complet, figures F02-01…08, Luna Park | à faire |
 | COMBAT-02 | Opus runtime, Astra présentation/audio | idem | `src/zscript/rf/weapons.zs`, rencontres | sons et retours d'armes, pied-de-biche, difficulté | à faire |
 | SUITE-03 | Opus + Astra | RF02 figé | `scripts/mapkit/rf04.py` (nouveau), campagne | premier segment Luna Park jouable | à faire |
+| RF01-TEXTURES-1940 | Opus intègre, Astra produit | `candidate/rf01-textures-1940` (tag accepté + socle) | Opus : `TEXTURES.rf01`, affectations RF01, `MODELDEF` ; Astra : images | matières « Sainte-Anne 1940 » (mandat du 28/09) | contrat et inventaire remis (`docs/production/handoff/RF01-TEXTURES-1940/`, copie dans `incoming/astra/RF01_TEXTURES_1940/00_CONTRAT_OPUS/`) ; premier ensemble attendu |
 
 ## 6. Matrice de couverture réelle
 
@@ -155,3 +156,10 @@ action.
   à la ligne. Candidate `RF2_RF01-PAN_20260928_0725` (sha256 `1439a27e…`) : 26 vues avant/après et 7 portes
   ouvertes, rapport `docs/RF2_RF01_PAN.md`. Correction portée sur `prod/rf2-campaign` (RF01.wad identique à celui
   de la candidate, RF02 inchangé). Prochaine action : lots RF02-A/B (livraisons Astra), COMBAT-02.
+- 28/09 matin (suite) — RF02-A : les 23 enseignes de RF02 avaient la même erreur que RF01 (4 u du mur, texture
+  coupée ; Port-Royal sans mur) : testée dans le moteur puis corrigée à la source (`e1e176c`). Lot Astra `RF2_MAP_02`
+  importé en présentation HD (`7ceaf38`, contrôles d'empreintes, patch d'échelles, RF02 A et B PASS). Lot
+  `RF2_MAP_02_REPRISE` (figures, pied-de-biche) terminé côté Astra, à intégrer ensuite. Nouveau mandat du
+  propriétaire : passe de textures RF01 « Sainte-Anne 1940 » ; inventaire de 60 surfaces, contrat et 52 captures de
+  la base remis à Astra ; branche `candidate/rf01-textures-1940` créée. Prochaine action : premier ensemble Astra
+  (chambre, couloir), intégration des figures et du pied-de-biche, V01–V10.
