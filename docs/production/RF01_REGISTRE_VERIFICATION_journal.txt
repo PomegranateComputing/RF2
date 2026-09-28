@@ -1,0 +1,80 @@
+UZDoom version 5.0.1
+Build: Win32 dated 2026-09-05T12:05:31-04:00
+OS: Windows 11 (or higher) (NT 10.0) Build 26200 
+M_LoadDefaults: Load system defaults.
+W_Init: Init WADfiles.
+adding C:/PROJECTS/TOOLS/UZDoom-5.0.1/uzdoom.pk3, 734 lumps
+adding C:/PROJECTS/TOOLS/UZDoom-5.0.1/game_support.pk3, 3310 lumps
+adding C:/PROJECTS/TOOLS/Freedoom-0.13.0/freedoom2.wad, 3610 lumps
+adding C:/PROJECTS/TOOLS/UZDoom-5.0.1/lights.pk3, 7 lumps
+adding C:/PROJECTS/TOOLS/UZDoom-5.0.1/brightmaps.pk3, 500 lumps
+adding C:/PROJECTS/TOOLS/UZDoom-5.0.1/game_widescreen_gfx.pk3, 214 lumps
+adding dist/review/RF2_ART_REVIEW_20260926_1451/RF2_ART_REVIEW.pk3, 1146 lumps
+adding C:/Users/zecol/AppData/Local/Temp/claude/c--PROJECTS-RF2-UZDOOM/bb1c3341-b067-4f03-aec6-6a42849fffe5/scratchpad/usetest.pk3, 2 lumps
+S_Init: Setting up sound.
+I_InitSound: Initializing OpenAL
+  Opened device No Output
+  EFX enabled
+I_Init: Setting up machine state.
+CPU speed: 3693 MHz
+CPU Vendor ID: AuthenticAMD
+  Name: AMD Ryzen 9 7900 12-Core Processor 
+  Family 25 (25), Model 97, Stepping 2
+  Features: SSE2 SSE3 SSSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512 F16C FMA3 BMI1 BMI2 HyperThreading
+Selecting Vulkan backend...
+ST_Init: Init startup screen.
+Checking cmd-line parameters...
+S_InitData: Load sound definitions.
+G_ParseMapInfo: Load map definitions.
+Texman.Init: Init texture manager.
+ParseTeamInfo: Load team definitions.
+LoadActors: Load actor definitions.
+script parsing took 322.08 ms
+Key already bound to "+reload"
+Key already bound to "+use"
+R_Init: Init Doom refresh subsystem.
+DecalLibrary: Load decals.
+Adding dehacked patch freedoom2.wad:DEHACKED
+Patch installed
+M_Init: Init menus.
+P_Init: Init Playloop state.
+ParseSBarInfo: Loading custom status bar definition.
+===========================================================================
+This is Freedoom, the free content first person shooter.
+
+Freedoom is freely redistributable under the terms of the modified BSD
+license. Check out the Freedoom website for more information:
+
+    https://freedoom.github.io/
+============================================================================
+D_CheckNetGame: Checking network game status.
+I_InitInput
+I_StartupMouse
+I_StartupKeyboard
+I_StartupXInput
+I_StartupRawPS2
+I_StartupDirectInputJoystick
+Vulkan device: NVIDIA GeForce RTX 5070 Ti
+Vulkan device type: discrete gpu
+Vulkan version: 1.4.351 (api) 617.56.0 (driver)
+Max. texture size: 32768
+Max. uniform buffer range: 65536
+Min. uniform buffer offset alignment: 64
+Resolution: 3050 x 1672
+V_Init: allocate screen.
+Init complete.
+
+----------------------------------------
+
+RF01 - Sainte-Anne - Les portes ouvertes
+
+RF_USETEST step=1 at -544 -500 z 0 angle 90: notes read 0, objective 'Sortir de la chambre.', chamber door opening 100
+RF_USETEST step=2 at -548 416 z 0 angle 180: notes read 1, objective 'Sortir de la chambre.', chamber door opening 108
+RF_USETEST step=3 at -566 390 z 16 angle 110: notes read 1, objective 'Sortir de la chambre.', chamber door opening 108
+RF_USETEST step=4 at -80 745 z 32 angle 90: notes read 1, objective 'Atteindre la loge du portier par les consultations.', chamber door opening 50
+RF_USETEST step=5 at -80 752 z 32 angle 90: notes read 1, objective 'Atteindre la loge du portier par les consultations.', chamber door opening 0
+RF_USETEST step=6 at -60 742 z 32 angle 105: notes read 1, objective 'Atteindre la loge du portier par les consultations.', chamber door opening 0
+RF_USETEST step=7 at -104 744 z 32 angle 72: notes read 1, objective 'Atteindre la loge du portier par les consultations.', chamber door opening 0
+RF_USETEST step=8 at -80 730 z 32 angle 90: notes read 1, objective 'Atteindre la loge du portier par les consultations.', chamber door opening 0
+RF_USETEST step=9 at 320 -290 z 0 angle 270: notes read 1, objective 'Atteindre la loge du portier par les consultations.', chamber door opening 0
+RF_DEV_UI_DONE

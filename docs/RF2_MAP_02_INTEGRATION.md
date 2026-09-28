@@ -89,5 +89,5 @@ Dans `evidence/` :
   sur décision du propriétaire.
 - Le rayon « utiliser » du moteur s'arrête au bord d'une table ou d'un comptoir surélevé et rate les petits objets :
   après RF01, l'invite affichée devient la règle (la touche utilise l'objet nommé par l'invite). RF01 garde son
-  comportement accepté. Sa note du registre d'admission, posée sur une table, n'a pas pu être vérifiée par les tests
-  (le pilote automatique saute cet appui) : non vérifié, rien n'est affirmé.
+  comportement accepté. Sa note du registre d'admission, posée sur une table, **se lit bien** à la touche d'usage
+  (vérification réelle du 27/09 soir sur le build accepté : `docs/production/RF01_REGISTRE_VERIFICATION.md`).

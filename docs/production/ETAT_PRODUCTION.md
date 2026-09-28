@@ -74,7 +74,8 @@ narratif : Luna Park (ID technique RF04), sans écraser le blockout RF03 (Batign
 
 | Lot | Agent | Base | Fichiers possédés | Résultat attendu | État |
 |---|---|---|---|---|---|
-| RF01-PAN | Opus | tag `rf01-owner-accepted-20260927` | `scripts/mapkit/rf01.py` (panneaux), `src/maps/RF01.wad` | 13 panneaux lisibles, registre vérifié en jeu | en cours |
+| RF01-PAN | Opus | tag `rf01-owner-accepted-20260927` | `scripts/mapkit/rf01.py` (panneaux), `src/maps/RF01.wad` | 13 panneaux lisibles ; registre vérifié en jeu : **lisible, aucun défaut** (`RF01_REGISTRE_VERIFICATION.md`) | panneaux à faire |
+| HUD-02 | Opus | `prod/rf2-campaign` | `src/zscript/rf/hud.zs`, `src/graphics/hud/viktor/` | portrait de Viktor en six états (commande du propriétaire) | candidate `RF2_HUD-02_20260927_2230` |
 | RF02-A | Opus + Astra | `prod/rf2-campaign` | Opus : `scripts/mapkit/rf02.py`, runtime ; Astra : ressources | tranche de rue de référence | en cours |
 | RF02-B | Astra produit, Opus intègre | idem | modèles tram/voie/props (Astra), collisions/ancrages (Opus) | tram complet sur rails, poussette, objets fixés | en cours |
 | RF02-C | Opus + Astra | idem | idem | parcours complet, figures F02-01…08, Luna Park | à faire |
