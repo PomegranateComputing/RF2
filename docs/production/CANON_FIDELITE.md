@@ -38,7 +38,7 @@ Ordre courant du projet = ordre MAPINFO RF01–RF23 (titres V1 = repères histor
 |---|---|---|---|
 | Sainte-Anne, 14 juin 1940, 6 h 20 | 3–85 | RF01 (accepté) | |
 | Traversée de Paris : Arago, Santé, tramway, Denfert, Port-Royal, Cochin, Montparnasse, TSF rue de Rennes, librairie, pont, barrage de l'Assemblée, Champs-Élysées, porte Maillot | 87–457 | RF02 « Rue de service » (titre justifié l. 415–417) | en production |
-| Luna Park, premier passage : guérite, pointage 06:06, clés, décors, salle de danse, sous-station (NODE 0, levier MARCHE/ATTENTE/ARRÊT) | 451–689 | RF04 « Personnel technique », RF05 « Les machines continuent » | **avant** Batignolles dans le roman |
+| Luna Park, premier passage : guérite, pointage 06:06, clés, décors, salle de danse, sous-station (NODE 0, levier MARCHE/ATTENTE/ARRÊT) | 451–689 | RF04 « Personnel technique », RF05 « Les machines continuent » | **avant** Batignolles dans le roman. Mandat du 27/09 soir : troisième niveau narratif = Luna Park, ID technique existant RF04 ; RF03 (Batignolles) conservé, placé plus tard |
 | Couloir ERREUR Ø vers le Jerma | 691–731 | transition | |
 | Jerma Palace, décembre 2022 : terrasse, chambre au matelas, escalier de service, cuisines et chambres froides, quai, piscine (escarpin), bureau ENGINEERING (disquette) | 733–1097 | RF07–RF12 | |
 | Malte, nuit des générations ; page StepRoom « M. & L. » | 1099–1451 | chapitre Jerma (local vidéo RF12 ?) | |
@@ -53,7 +53,8 @@ Ordre courant du projet = ordre MAPINFO RF01–RF23 (titres V1 = repères histor
 | Décommission SQL « VERIFY RESTORE TO ISOLATED HOST », Vella, retours StepRoom `M + L / DO NOT MAIL` | 31877–44067 | RF20 « Copie de secours », RF21 « Retours », RF22 « Destinataire présent » | |
 | Hôpital 2026, salle d'attente, « trois hommes se levèrent » ; épilogue | 44763–45015 ; `ch004` | RF23 « Salle d'attente » | |
 
-**Écart d'ordre à trancher par le propriétaire** : dans le roman, le premier Luna Park et le Jerma précèdent les
+**Écart d'ordre tranché par le propriétaire (27/09 soir)** : le troisième niveau narratif est le Luna Park ; le
+blockout Batignolles RF03 est conservé sans être écrasé. Rappel du constat : dans le roman, le premier Luna Park et le Jerma précèdent les
 Batignolles (RF03). RF02 se termine à la porte de service du Luna Park (fidèle au texte). Options : (a) garder l'ordre
 V1 et faire de RF03 un saut assumé ; (b) permuter pour suivre le roman (RF03 = Luna Park, Batignolles plus tard).
 Opus ne renumérote pas la campagne sans décision.
@@ -85,7 +86,7 @@ Opus ne renumérote pas la campagne sans décision.
 | CAN-019 | Luna Park, juin 1940, second fil : convoyeur réparé, brassard gris `T.D.`, effets personnels évacués (`EFFETS PERSONNELS — NE PAS UTILISER`, cahier `DÉPÔTS PROVISOIRES`), caisses civiles marquées Sainte-Anne, guichet de billetterie, réserve de confiserie, autos tamponneuses, salle de tir, manteau gris à la croix de craie | l. 22771–27779 | RF04–RF06 | espaces et objets du Luna Park réquisitionné ; aucun combat dans le texte |
 | CAN-020 | Viktor porte un « sweat noir » dans le Luna Park de 1940 | l. 22783 | tout l'arsenal | appui textuel du bras en sweat noir accepté en RF01 |
 | CAN-016 | Salle d'attente 2026 : borne, étiquette `VIKTOR ARDENT`, grenade en plastique aux 47 trombones, `FOLLOW CLINICALLY`, trois hommes qui se lèvent | l. 44763–45015 ; épilogue | RF23 | chapitre calme, sans combat |
-| CAN-017 | Elvis Zaicenoks (personne réelle nommée dans l'avant-propos et le roman) | avant-propos ; l. 735 et suivantes | chapitres Jerma | **demande d'accord à documenter avant toute représentation** |
+| CAN-017 | Elvis Zaicenoks (personne réelle nommée dans l'avant-propos et le roman) | avant-propos ; l. 735 et suivantes | chapitres Jerma | **accord donné selon le propriétaire** (mandat du 27/09 soir, `RF2_CORRECTIONS_ET_SUITE_20260927`) ; production de son personnage et de ses scènes ouverte avec les références fournies ; aucun modèle vocal ni clonage de voix n'a été livré ou demandé |
 | CAN-018 | Motifs 117, 14:58 +2, 03:17, 017/066/117/404 ; grenade (fruit), jamais arme dans le texte | partout | toutes | détails de lieu, pas de mécanique |
 
 ## 6. RF02 — couverture réelle (build de développement du 27/09)

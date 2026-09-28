@@ -64,7 +64,22 @@ mesurent.
 | RF2-UI-01 | Menus artistiques, mort et reprise (art d'Astra) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_UI-01.cmd`, build `RF2_UI-01_20260927_1407`, `docs/RF2_UI_01_INTEGRATION.md` |
 | RF2-CANON-01 | Fidélité au roman : matrice, fiches de scène | matrice active `docs/production/CANON_FIDELITE.md` ; CAN-001 à CAN-004 non intégrés |
 | RF2-MAP-02 | RF02 complet | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_MAP-02_RF02.cmd` (départ direct) / `JOUER_RF2_MAP-02.cmd`, build cumulatif, `docs/RF2_MAP_02_INTEGRATION.md` ; figures humaines attendues d'Astra |
-| Campagne | RF03–RF23 dans l'ordre | après RF02 |
+| Campagne | RF03–RF23 dans l'ordre | remplacé par le mandat du 27/09 soir ci-dessous |
+
+### Mandat du 27/09 soir (`C:\PROJECTS\RF2_CORRECTIONS_ET_SUITE_20260927`)
+
+Revue jouée de RF02 par le propriétaire (dix captures). Autorisés : retouches de combat, mêlée (pied-de-biche),
+équilibrage, décor, placements, UI défectueuse. Accord d'Elvis donné selon le propriétaire. Troisième niveau
+narratif : Luna Park (ID technique RF04), sans écraser le blockout RF03 (Batignolles).
+
+| Lot | Agent | Base | Fichiers possédés | Résultat attendu | État |
+|---|---|---|---|---|---|
+| RF01-PAN | Opus | tag `rf01-owner-accepted-20260927` | `scripts/mapkit/rf01.py` (panneaux), `src/maps/RF01.wad` | 13 panneaux lisibles, registre vérifié en jeu | en cours |
+| RF02-A | Opus + Astra | `prod/rf2-campaign` | Opus : `scripts/mapkit/rf02.py`, runtime ; Astra : ressources | tranche de rue de référence | en cours |
+| RF02-B | Astra produit, Opus intègre | idem | modèles tram/voie/props (Astra), collisions/ancrages (Opus) | tram complet sur rails, poussette, objets fixés | en cours |
+| RF02-C | Opus + Astra | idem | idem | parcours complet, figures F02-01…08, Luna Park | à faire |
+| COMBAT-02 | Opus runtime, Astra présentation/audio | idem | `src/zscript/rf/weapons.zs`, rencontres | sons et retours d'armes, pied-de-biche, difficulté | à faire |
+| SUITE-03 | Opus + Astra | RF02 figé | `scripts/mapkit/rf04.py` (nouveau), campagne | premier segment Luna Park jouable | à faire |
 
 ## 6. Matrice de couverture réelle
 
