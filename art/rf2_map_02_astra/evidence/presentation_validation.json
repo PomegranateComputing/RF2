@@ -1,0 +1,20 @@
+{
+  "status": "executed",
+  "runs": {
+    "hd": {
+      "status": "marker:RF_DEV_UI_DONE",
+      "package_sha256": "696b020c596cdb498bc59e25284b3eba73fe7b660171e5da3a2ab93c427d870d",
+      "views": "3500 160 0 180 -12; 3400 52 0 344 26; 2990 140 0 270 -14; 2200 48 0 90 -6; 2100 230 0 150 -8; 1140 1104 0 0 -8; 1288 1104 0 0 -26; 1472 1150 0 270 20; 1128 2650 0 90 20; 1500 2700 0 180 -14",
+      "shots": 10,
+      "hidden_weapons_hud": false
+    },
+    "pram": {
+      "status": "marker:RF_DEV_UI_DONE",
+      "package_sha256": "443043954abb7e7d3d754dd168d920e4342460c1085863e0fc4f93636e6176a5",
+      "views": "3110 70 0 90 18; 3190 150 0 180 18; 3110 230 0 270 18; 3030 150 0 0 18; 3110 80 48 90 45",
+      "shots": 5,
+      "hidden_weapons_hud": true
+    }
+  },
+  "scope": "HD scale presentation proposal plus isolated 3D pram at a test location. Not integrated scene or collision playtest."
+}

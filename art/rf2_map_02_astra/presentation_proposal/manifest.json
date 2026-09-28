@@ -1,0 +1,135 @@
+{
+  "status": "OWNER_REVIEW_REQUIRED",
+  "base_package_sha256": "11167ce28e37d07e84914435cc561d50d222e09824c142424c12c98c8778b7c1",
+  "no_gameplay_timing_changes": true,
+  "requires_atomic_import": [
+    "all chosen high-resolution assets",
+    "corresponding dimensions/scale patch"
+  ],
+  "files": [
+    {
+      "file": "source/masters/RF2_FAC1.png",
+      "target_relpath": "patches/rf02/RF2_FAC1.png",
+      "sha256": "72b45d790b797f56af20da8846d907a8bf4e0fcca612c6ab49a48bf318014040",
+      "kind": "texture",
+      "width": 948,
+      "height": 1659,
+      "required_patch": "presentation.diff"
+    },
+    {
+      "file": "source/masters/RF2_FAC2.png",
+      "target_relpath": "patches/rf02/RF2_FAC2.png",
+      "sha256": "6943eebe10923dfd92cc041857f52b3c5ff6940bb2efefa3e873fb03c99dde4d",
+      "kind": "texture",
+      "width": 948,
+      "height": 1659,
+      "required_patch": "presentation.diff"
+    },
+    {
+      "file": "source/masters/RF2_FAC3.png",
+      "target_relpath": "patches/rf02/RF2_FAC3.png",
+      "sha256": "59788c7cbc830f55cba8e065f074deb8235fc46702cbb7eba720d32504d79d78",
+      "kind": "texture",
+      "width": 948,
+      "height": 1660,
+      "required_patch": "presentation.diff"
+    },
+    {
+      "file": "source/masters/RF2_FACU.png",
+      "target_relpath": "patches/rf02/RF2_FACU.png",
+      "sha256": "4d40e8f867fba25753de9d162af76fa05651463836b0fc31d3e7d268398bc354",
+      "kind": "texture",
+      "width": 948,
+      "height": 1659,
+      "required_patch": "presentation.diff"
+    },
+    {
+      "file": "source/masters/RF2_TSFS.png",
+      "target_relpath": "patches/rf02/RF2_TSFS.png",
+      "sha256": "befe801697f546817feba4a820f0759e3cbeb564df80abfcbd7ccfe2079ecfb2",
+      "kind": "texture",
+      "width": 1774,
+      "height": 887,
+      "required_patch": "presentation.diff"
+    },
+    {
+      "file": "source/masters/RF2_AMIG.png",
+      "target_relpath": "patches/rf02/RF2_AMIG.png",
+      "sha256": "ffede80f6657e273c24f5471a0b56f247ebe0a79166c618fcb4d8670088e7a70",
+      "kind": "texture",
+      "width": 1774,
+      "height": 887,
+      "required_patch": "presentation.diff"
+    },
+    {
+      "file": "presentation_proposal/sprites/RFBKA0.png",
+      "target_relpath": "sprites/rf02/RFBKA0.png",
+      "sha256": "951058aa41352c8c0b8759048df41d8ceb3e0983365140450e6f1b3f7c0daf67",
+      "kind": "sprite",
+      "width": 192,
+      "height": 192,
+      "grAb": [
+        96,
+        188
+      ],
+      "actor_scale": 0.1375,
+      "required_patch": "presentation.diff"
+    },
+    {
+      "file": "presentation_proposal/sprites/RFBGA0.png",
+      "target_relpath": "sprites/rf02/RFBGA0.png",
+      "sha256": "1ecc42dc537840cb683a3de277ddad2412b195ea39b62f41b2c9990441a0380b",
+      "kind": "sprite",
+      "width": 192,
+      "height": 224,
+      "grAb": [
+        96,
+        220
+      ],
+      "actor_scale": 0.125,
+      "required_patch": "presentation.diff"
+    },
+    {
+      "file": "presentation_proposal/sprites/RFRDA0.png",
+      "target_relpath": "sprites/rf02/RFRDA0.png",
+      "sha256": "676a47ff85eaca38f25651ea7f6686f95066bec9c316cbca8ac76628e2266796",
+      "kind": "sprite",
+      "width": 256,
+      "height": 192,
+      "grAb": [
+        128,
+        188
+      ],
+      "actor_scale": 0.125,
+      "required_patch": "presentation.diff"
+    },
+    {
+      "file": "presentation_proposal/sprites/RFRDB0.png",
+      "target_relpath": "sprites/rf02/RFRDB0.png",
+      "sha256": "c75ad9bcd9b63b11f17d4d48468fba4a229e683d50c24b66d014a17d12b1b78f",
+      "kind": "sprite",
+      "width": 256,
+      "height": 192,
+      "grAb": [
+        128,
+        188
+      ],
+      "actor_scale": 0.125,
+      "required_patch": "presentation.diff"
+    },
+    {
+      "file": "presentation_proposal/sprites/RFPHA0.png",
+      "target_relpath": "sprites/rf02/RFPHA0.png",
+      "sha256": "eba67df0e05463a89c54346425ef42ea834486b9c63e75abb20778a2a4fc1d0b",
+      "kind": "sprite",
+      "width": 192,
+      "height": 160,
+      "grAb": [
+        96,
+        156
+      ],
+      "actor_scale": 0.1375,
+      "required_patch": "presentation.diff"
+    }
+  ]
+}

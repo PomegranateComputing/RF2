@@ -1,0 +1,36 @@
+{
+  "base_package_sha256": "11167ce28e37d07e84914435cc561d50d222e09824c142424c12c98c8778b7c1",
+  "candidate_package_sha256": "6d490b5889a4e5af50e4dac73e83703b81ef51ec9599d65d29d9ca2700e33f65",
+  "changed_entries": [
+    "patches/rf02/RF2_AMIG.png",
+    "patches/rf02/RF2_FAC1.png",
+    "patches/rf02/RF2_FAC2.png",
+    "patches/rf02/RF2_FAC3.png",
+    "patches/rf02/RF2_FACU.png",
+    "patches/rf02/RF2_TSFS.png",
+    "sprites/rf02/RFBGA0.png",
+    "sprites/rf02/RFBKA0.png",
+    "sprites/rf02/RFPHA0.png",
+    "sprites/rf02/RFRDA0.png",
+    "sprites/rf02/RFRDB0.png"
+  ],
+  "unchanged_entries": 1437,
+  "maps_code_audio_weapons_unchanged": true,
+  "runs": [
+    {
+      "name": "baseline",
+      "package_sha256": "11167ce28e37d07e84914435cc561d50d222e09824c142424c12c98c8778b7c1",
+      "status": "marker:RF_DEV_UI_DONE",
+      "screenshots": 10,
+      "camera_spec": "3500 160 0 180 -12; 3400 52 0 344 26; 2990 140 0 270 -14; 2200 48 0 90 -6; 2100 230 0 150 -8; 1140 1104 0 0 -8; 1288 1104 0 0 -26; 1472 1150 0 270 20; 1128 2650 0 90 20; 1500 2700 0 180 -14"
+    },
+    {
+      "name": "candidate",
+      "package_sha256": "6d490b5889a4e5af50e4dac73e83703b81ef51ec9599d65d29d9ca2700e33f65",
+      "status": "marker:RF_DEV_UI_DONE",
+      "screenshots": 10,
+      "camera_spec": "3500 160 0 180 -12; 3400 52 0 344 26; 2990 140 0 270 -14; 2200 48 0 90 -6; 2100 230 0 150 -8; 1140 1104 0 0 -8; 1288 1104 0 0 -26; 1472 1150 0 270 20; 1128 2650 0 90 20; 1500 2700 0 180 -14"
+    }
+  ],
+  "evidence_scope": "Fixed-camera actual-engine comparison. Not playthrough, owner approval or audition."
+}

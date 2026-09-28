@@ -1,0 +1,54 @@
+{
+  "runtime_files": [
+    {
+      "file": "runtime/patches/rf02/RF2_FAC1.png",
+      "hash_dimensions_grAb_match": true
+    },
+    {
+      "file": "runtime/patches/rf02/RF2_FAC2.png",
+      "hash_dimensions_grAb_match": true
+    },
+    {
+      "file": "runtime/patches/rf02/RF2_FAC3.png",
+      "hash_dimensions_grAb_match": true
+    },
+    {
+      "file": "runtime/patches/rf02/RF2_FACU.png",
+      "hash_dimensions_grAb_match": true
+    },
+    {
+      "file": "runtime/patches/rf02/RF2_TSFS.png",
+      "hash_dimensions_grAb_match": true
+    },
+    {
+      "file": "runtime/patches/rf02/RF2_AMIG.png",
+      "hash_dimensions_grAb_match": true
+    },
+    {
+      "file": "runtime/sprites/rf02/RFBKA0.png",
+      "hash_dimensions_grAb_match": true
+    },
+    {
+      "file": "runtime/sprites/rf02/RFBGA0.png",
+      "hash_dimensions_grAb_match": true
+    },
+    {
+      "file": "runtime/sprites/rf02/RFRDA0.png",
+      "hash_dimensions_grAb_match": true
+    },
+    {
+      "file": "runtime/sprites/rf02/RFRDB0.png",
+      "hash_dimensions_grAb_match": true
+    },
+    {
+      "file": "runtime/sprites/rf02/RFPHA0.png",
+      "hash_dimensions_grAb_match": true
+    }
+  ],
+  "audio_files": 19,
+  "audio_audition": "NOT_PERFORMED",
+  "obj_sources_valid": 11,
+  "owner_approval": false,
+  "scope_complete": false,
+  "missing_corrections_pack": true
+}

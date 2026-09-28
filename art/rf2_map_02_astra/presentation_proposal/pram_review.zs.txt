@@ -1,0 +1,17 @@
+
+class RFArtPram : Actor
+{
+    Default { Radius 24; Height 38; +NOGRAVITY +NOBLOCKMAP }
+    States { Spawn: RFAP A -1; Stop; }
+}
+class RFArtPramReview : EventHandler
+{
+    override void WorldLoaded(WorldEvent e)
+    {
+        if (Level.MapName ~== "RF02")
+        {
+            Actor a = Actor.Spawn("RFArtPram", (3110,150,0.15));
+            if (a != null) Console.Printf("RF2_PRAM_REVIEW x=%.3f y=%.3f z=%.3f",a.Pos.X,a.Pos.Y,a.Pos.Z);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+
+Model RFArtPram
+{
+    Path "models/astra_review"
+    Model 0 "pram.obj"
+    Skin 0 "atlas.png"
+    Scale 1 1 1.2
+    CorrectPixelStretch
+    IgnoreTranslation
+    FrameIndex RFAP A 0 0
+}

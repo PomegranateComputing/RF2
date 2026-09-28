@@ -1,0 +1,11 @@
+{
+  "python": "3.12",
+  "blender": "5.2.2 LTS d13f752e3b9c",
+  "image_generation": "built-in image_gen; no CLI fallback",
+  "python_libraries": {
+    "Pillow": "12.3.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  }
+}

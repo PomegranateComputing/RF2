@@ -1,0 +1,10 @@
+{
+  "file": "RF2_REPRISE_20260927_01.zip",
+  "sha256": "97dd6eb15bd25922dd87ce10369ee966c30d6aeb4b878ddd197468c78b86fef9",
+  "bytes": 150207635,
+  "contents": "Assets, source, proposals, evidence; no executable game package or private configuration",
+  "batches": [
+    "RF2_MAP_02",
+    "RF2_ELVIS_01"
+  ]
+}

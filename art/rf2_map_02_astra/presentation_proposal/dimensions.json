@@ -1,0 +1,224 @@
+{
+  "textures": [
+    {
+      "target_relpath": "patches/rf02/RF2_FAC1.png",
+      "native_master": "source/masters/RF2_FAC1.png",
+      "native_pixels": [
+        948,
+        1659
+      ],
+      "current_pixels": [
+        512,
+        896
+      ],
+      "scale_multiplier": [
+        1.8515625,
+        1.8515625
+      ],
+      "instruction": "Change TEXTURES dimensions AND XScale/YScale by the same multiplier if importing native source. Do not replace PNG alone."
+    },
+    {
+      "target_relpath": "patches/rf02/RF2_FAC2.png",
+      "native_master": "source/masters/RF2_FAC2.png",
+      "native_pixels": [
+        948,
+        1659
+      ],
+      "current_pixels": [
+        512,
+        896
+      ],
+      "scale_multiplier": [
+        1.8515625,
+        1.8515625
+      ],
+      "instruction": "Change TEXTURES dimensions AND XScale/YScale by the same multiplier if importing native source. Do not replace PNG alone."
+    },
+    {
+      "target_relpath": "patches/rf02/RF2_FAC3.png",
+      "native_master": "source/masters/RF2_FAC3.png",
+      "native_pixels": [
+        948,
+        1660
+      ],
+      "current_pixels": [
+        512,
+        896
+      ],
+      "scale_multiplier": [
+        1.8515625,
+        1.8526785714285714
+      ],
+      "instruction": "Change TEXTURES dimensions AND XScale/YScale by the same multiplier if importing native source. Do not replace PNG alone."
+    },
+    {
+      "target_relpath": "patches/rf02/RF2_FACU.png",
+      "native_master": "source/masters/RF2_FACU.png",
+      "native_pixels": [
+        948,
+        1659
+      ],
+      "current_pixels": [
+        512,
+        896
+      ],
+      "scale_multiplier": [
+        1.8515625,
+        1.8515625
+      ],
+      "instruction": "Change TEXTURES dimensions AND XScale/YScale by the same multiplier if importing native source. Do not replace PNG alone."
+    },
+    {
+      "target_relpath": "patches/rf02/RF2_TSFS.png",
+      "native_master": "source/masters/RF2_TSFS.png",
+      "native_pixels": [
+        1774,
+        887
+      ],
+      "current_pixels": [
+        512,
+        256
+      ],
+      "scale_multiplier": [
+        3.46484375,
+        3.46484375
+      ],
+      "instruction": "Change TEXTURES dimensions AND XScale/YScale by the same multiplier if importing native source. Do not replace PNG alone."
+    },
+    {
+      "target_relpath": "patches/rf02/RF2_AMIG.png",
+      "native_master": "source/masters/RF2_AMIG.png",
+      "native_pixels": [
+        1774,
+        887
+      ],
+      "current_pixels": [
+        512,
+        256
+      ],
+      "scale_multiplier": [
+        3.46484375,
+        3.46484375
+      ],
+      "instruction": "Change TEXTURES dimensions AND XScale/YScale by the same multiplier if importing native source. Do not replace PNG alone."
+    }
+  ],
+  "sprites": [
+    {
+      "resource": "RFBKA0",
+      "legacy_canvas": [
+        48,
+        48
+      ],
+      "legacy_grAb": [
+        24,
+        47
+      ],
+      "legacy_scale": 0.55,
+      "proposed_canvas": [
+        192,
+        192
+      ],
+      "proposed_grAb": [
+        96,
+        188
+      ],
+      "proposed_actor_scale": 0.1375,
+      "world_envelope_preserved": true,
+      "model": "bucket"
+    },
+    {
+      "resource": "RFBGA0",
+      "legacy_canvas": [
+        48,
+        56
+      ],
+      "legacy_grAb": [
+        24,
+        55
+      ],
+      "legacy_scale": 0.5,
+      "proposed_canvas": [
+        192,
+        224
+      ],
+      "proposed_grAb": [
+        96,
+        220
+      ],
+      "proposed_actor_scale": 0.125,
+      "world_envelope_preserved": true,
+      "model": "satchel"
+    },
+    {
+      "resource": "RFRDA0",
+      "legacy_canvas": [
+        64,
+        48
+      ],
+      "legacy_grAb": [
+        32,
+        47
+      ],
+      "legacy_scale": 0.5,
+      "proposed_canvas": [
+        256,
+        192
+      ],
+      "proposed_grAb": [
+        128,
+        188
+      ],
+      "proposed_actor_scale": 0.125,
+      "world_envelope_preserved": true,
+      "model": "radio_off"
+    },
+    {
+      "resource": "RFRDB0",
+      "legacy_canvas": [
+        64,
+        48
+      ],
+      "legacy_grAb": [
+        32,
+        47
+      ],
+      "legacy_scale": 0.5,
+      "proposed_canvas": [
+        256,
+        192
+      ],
+      "proposed_grAb": [
+        128,
+        188
+      ],
+      "proposed_actor_scale": 0.125,
+      "world_envelope_preserved": true,
+      "model": "radio_on"
+    },
+    {
+      "resource": "RFPHA0",
+      "legacy_canvas": [
+        48,
+        40
+      ],
+      "legacy_grAb": [
+        24,
+        39
+      ],
+      "legacy_scale": 0.55,
+      "proposed_canvas": [
+        192,
+        160
+      ],
+      "proposed_grAb": [
+        96,
+        156
+      ],
+      "proposed_actor_scale": 0.1375,
+      "world_envelope_preserved": true,
+      "model": "phone"
+    }
+  ],
+  "status": "PROPOSAL_NOT_APPLIED"
+}

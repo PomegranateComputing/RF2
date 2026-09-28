@@ -1,0 +1,169 @@
+{
+ "batch": "RF2_MAP_02",
+ "batch_path": "C:\\PROJECTS\\RF2_UZDOOM_ASTRA_20260927\\incoming\\astra\\RF2_MAP_02",
+ "variant": "presentation HD (presentation_proposal)",
+ "imported": "2026-09-28 08:00",
+ "manifest_sha256": "3424a484f3a76ec396c6f7dc7f627710442a516db80e41bfcdad27692092de14",
+ "presentation_manifest_sha256": "42528a0746720d9dfda5b745fe55422302d612e32aa0df9570790d3f22be6a40",
+ "patch_sha256": "0ddbeb696c641f4c3681aa357b773e460e9271f1a280ef592e457b147d56ea73",
+ "files": [
+  {
+   "target": "patches/rf02/RF2_FAC1.png",
+   "source": "source/masters/RF2_FAC1.png",
+   "base_sha256": "782b3da60885bf9b301dbf43a131e18eb37b47bb731b2d98486dc70743f20452",
+   "new_sha256": "72b45d790b797f56af20da8846d907a8bf4e0fcca612c6ab49a48bf318014040",
+   "size": [
+    948,
+    1659
+   ],
+   "grAb": null
+  },
+  {
+   "target": "patches/rf02/RF2_FAC2.png",
+   "source": "source/masters/RF2_FAC2.png",
+   "base_sha256": "3dc40947613863baf50ef1a4b8168e6356a39a4ab538e70882cced0ac2335279",
+   "new_sha256": "6943eebe10923dfd92cc041857f52b3c5ff6940bb2efefa3e873fb03c99dde4d",
+   "size": [
+    948,
+    1659
+   ],
+   "grAb": null
+  },
+  {
+   "target": "patches/rf02/RF2_FAC3.png",
+   "source": "source/masters/RF2_FAC3.png",
+   "base_sha256": "133d93bb0684fa69e82c33546a57fba2082324eaaa3f6ef8b2d30900270fc665",
+   "new_sha256": "59788c7cbc830f55cba8e065f074deb8235fc46702cbb7eba720d32504d79d78",
+   "size": [
+    948,
+    1660
+   ],
+   "grAb": null
+  },
+  {
+   "target": "patches/rf02/RF2_FACU.png",
+   "source": "source/masters/RF2_FACU.png",
+   "base_sha256": "346148cc235bc37c7ddb3b11fc5ab940e5b747eadb4351c8b8aab7ddd5e07732",
+   "new_sha256": "4d40e8f867fba25753de9d162af76fa05651463836b0fc31d3e7d268398bc354",
+   "size": [
+    948,
+    1659
+   ],
+   "grAb": null
+  },
+  {
+   "target": "patches/rf02/RF2_TSFS.png",
+   "source": "source/masters/RF2_TSFS.png",
+   "base_sha256": "7a99a1cf1a0485010ca3ef402592a0d3cbf5a64e8f2dfdde644adcfc53c3cb33",
+   "new_sha256": "befe801697f546817feba4a820f0759e3cbeb564df80abfcbd7ccfe2079ecfb2",
+   "size": [
+    1774,
+    887
+   ],
+   "grAb": null
+  },
+  {
+   "target": "patches/rf02/RF2_AMIG.png",
+   "source": "source/masters/RF2_AMIG.png",
+   "base_sha256": "bd7c1197854388769779535bb6d5c6a7a94ead9a7c3c5bd008d049d42a4215c3",
+   "new_sha256": "ffede80f6657e273c24f5471a0b56f247ebe0a79166c618fcb4d8670088e7a70",
+   "size": [
+    1774,
+    887
+   ],
+   "grAb": null
+  },
+  {
+   "target": "sprites/rf02/RFBKA0.png",
+   "source": "presentation_proposal/sprites/RFBKA0.png",
+   "base_sha256": "65ae4d26fc8c00a35ade7bb8d5fcd563843c28d812390a33fe7157685f510535",
+   "new_sha256": "951058aa41352c8c0b8759048df41d8ceb3e0983365140450e6f1b3f7c0daf67",
+   "size": [
+    192,
+    192
+   ],
+   "grAb": [
+    96,
+    188
+   ]
+  },
+  {
+   "target": "sprites/rf02/RFBGA0.png",
+   "source": "presentation_proposal/sprites/RFBGA0.png",
+   "base_sha256": "35c22547bce225ffc153a0b58aa505309c1b3445ada2d87f33051b50ae9b96f3",
+   "new_sha256": "1ecc42dc537840cb683a3de277ddad2412b195ea39b62f41b2c9990441a0380b",
+   "size": [
+    192,
+    224
+   ],
+   "grAb": [
+    96,
+    220
+   ]
+  },
+  {
+   "target": "sprites/rf02/RFRDA0.png",
+   "source": "presentation_proposal/sprites/RFRDA0.png",
+   "base_sha256": "f1b635bd134ed265f64de1b3f853640be0c93e45418a1fd3c850ddc04e84e42c",
+   "new_sha256": "676a47ff85eaca38f25651ea7f6686f95066bec9c316cbca8ac76628e2266796",
+   "size": [
+    256,
+    192
+   ],
+   "grAb": [
+    128,
+    188
+   ]
+  },
+  {
+   "target": "sprites/rf02/RFRDB0.png",
+   "source": "presentation_proposal/sprites/RFRDB0.png",
+   "base_sha256": "210660e632aed44c6b2040b23ae71108687ed45a49f6540c2fc26c769a4b19e9",
+   "new_sha256": "c75ad9bcd9b63b11f17d4d48468fba4a229e683d50c24b66d014a17d12b1b78f",
+   "size": [
+    256,
+    192
+   ],
+   "grAb": [
+    128,
+    188
+   ]
+  },
+  {
+   "target": "sprites/rf02/RFPHA0.png",
+   "source": "presentation_proposal/sprites/RFPHA0.png",
+   "base_sha256": "cb2360cba7b884afe3a36b83b7f78770daf4d18c90319a0b35711bbf60b256e7",
+   "new_sha256": "eba67df0e05463a89c54346425ef42ea834486b9c63e75abb20778a2a4fc1d0b",
+   "size": [
+    192,
+    160
+   ],
+   "grAb": [
+    96,
+    156
+   ]
+  }
+ ],
+ "patched": [
+  {
+   "file": "src/TEXTURES.rf02",
+   "astra_base_sha256": "77a680c49af67b6dd445ae6f1151a89970928c2efdf6da51976d602cbdded8c1",
+   "tree_base_sha256": "1e623342667a3d5efafd652966f96478607c2f396a1cabaf59a05e0d94ad5d7f",
+   "sha256": "2e70b52c2f51e2a02483f3bcd21253fc330f99744c0149f0ae8a61c3c3e26231",
+   "matches_astra": false
+  },
+  {
+   "file": "src/zscript/rf/paris.zs",
+   "astra_base_sha256": "102bba013a1a10fcf001a5c16df1fc04866ac08aa4d726d51038645ad00bc9d7",
+   "tree_base_sha256": "102bba013a1a10fcf001a5c16df1fc04866ac08aa4d726d51038645ad00bc9d7",
+   "sha256": "65b71b16d4e7017f59e5779b0932cc6191e4e2743de51d02f662f59c544d154f",
+   "matches_astra": true
+  }
+ ],
+ "not_imported": [
+  "source/models (3D masters: pram, bucket, satchel, radios, phone, suitcase, mattress, Amiga, tram, track) - RF02-B",
+  "audio_proposal (19 WAV, never heard by Astra) - COMBAT-02",
+  "runtime/ (compatibility variant at the historical sizes, superseded by the HD one)",
+  "review/ and delivery/ (review builds and archive)"
+ ]
+}

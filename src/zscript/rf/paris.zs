@@ -52,13 +52,13 @@ class RFInteract : Actor
 
 class RFSacoche : RFInteract        // the fare collector's satchel on its hook (l. 117)
 {
-    Default { Scale 0.5; }
+    Default { Scale 0.125; }
     States { Spawn: RFBG A -1; Stop; }
 }
 
 class RFFormsBucket : RFInteract    // forms burning badly in a galvanised bucket (l. 87)
 {
-    Default { Scale 0.55; RFInteract.Prompt 1; }
+    Default { Scale 0.1375; RFInteract.Prompt 1; }
     override void PostBeginPlay()
     {
         Super.PostBeginPlay();
@@ -69,13 +69,13 @@ class RFFormsBucket : RFInteract    // forms burning badly in a galvanised bucke
 
 class RFFieldPhone : RFInteract     // the military field telephone on the folding table (l. 333)
 {
-    Default { Scale 0.55; }
+    Default { Scale 0.1375; }
     States { Spawn: RFPH A -1; Stop; }
 }
 
 class RFRadioSet : RFInteract       // the set whose dial lamp stays dark (l. 229)
 {
-    Default { Scale 0.5; }
+    Default { Scale 0.125; }
     States
     {
     Spawn: RFRD A -1; Stop;

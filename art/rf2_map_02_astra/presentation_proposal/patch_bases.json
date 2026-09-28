@@ -1,0 +1,12 @@
+[
+  {
+    "file": "src/TEXTURES.rf02",
+    "base_sha256": "77a680c49af67b6dd445ae6f1151a89970928c2efdf6da51976d602cbdded8c1",
+    "patched_sha256": "0f2db87094245838d2cf2db227a418ce4454803486e3a32747f979e36e0bebec"
+  },
+  {
+    "file": "src/zscript/rf/paris.zs",
+    "base_sha256": "102bba013a1a10fcf001a5c16df1fc04866ac08aa4d726d51038645ad00bc9d7",
+    "patched_sha256": "65b71b16d4e7017f59e5779b0932cc6191e4e2743de51d02f662f59c544d154f"
+  }
+]

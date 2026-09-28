@@ -1,0 +1,78 @@
+{
+  "tool": "built-in image_gen",
+  "jobs": [
+    {
+      "prompt": "source/prompts/MATERIAL_ATLAS.txt",
+      "output": "source/masters/RF2_MATERIAL_ATLAS.png",
+      "output_sha256": "56da2d3a0bfe6bdd62176a74a47de65cd8dd72a786eb8443b3de3a82c0ab89e6",
+      "references": [],
+      "retained_for_export": true
+    },
+    {
+      "prompt": "source/prompts/FAC1.txt",
+      "output": "source/masters/RF2_FAC1.png",
+      "output_sha256": "72b45d790b797f56af20da8846d907a8bf4e0fcca612c6ab49a48bf318014040",
+      "references": [
+        "source/references/RF2_FAC1.png"
+      ],
+      "retained_for_export": true
+    },
+    {
+      "prompt": "source/prompts/FAC2.txt",
+      "output": "source/masters/RF2_FAC2.png",
+      "output_sha256": "6943eebe10923dfd92cc041857f52b3c5ff6940bb2efefa3e873fb03c99dde4d",
+      "references": [
+        "source/references/RF2_FAC2.png",
+        "source/masters/RF2_FAC1.png"
+      ],
+      "retained_for_export": true
+    },
+    {
+      "prompt": "source/prompts/FAC3_DRAFT.txt",
+      "output": "source/masters/RF2_FAC3_DRAFT.png",
+      "output_sha256": "ba03f11a965f2d6bad95eaa5417eea0fe3ebba843f759136fa60522db846cb19",
+      "references": [
+        "source/references/RF2_FAC3.png",
+        "source/masters/RF2_FAC1.png"
+      ],
+      "retained_for_export": false
+    },
+    {
+      "prompt": "source/prompts/FACU.txt",
+      "output": "source/masters/RF2_FACU.png",
+      "output_sha256": "4d40e8f867fba25753de9d162af76fa05651463836b0fc31d3e7d268398bc354",
+      "references": [
+        "source/references/RF2_FACU.png",
+        "source/masters/RF2_FAC1.png"
+      ],
+      "retained_for_export": true
+    },
+    {
+      "prompt": "source/prompts/FAC3_CORRECTION.txt",
+      "output": "source/masters/RF2_FAC3.png",
+      "output_sha256": "59788c7cbc830f55cba8e065f074deb8235fc46702cbb7eba720d32504d79d78",
+      "references": [
+        "source/masters/RF2_FAC3_DRAFT.png"
+      ],
+      "retained_for_export": true
+    },
+    {
+      "prompt": "source/prompts/TSFS.txt",
+      "output": "source/masters/RF2_TSFS.png",
+      "output_sha256": "befe801697f546817feba4a820f0759e3cbeb564df80abfcbd7ccfe2079ecfb2",
+      "references": [
+        "source/references/RF2_TSFS.png"
+      ],
+      "retained_for_export": true
+    },
+    {
+      "prompt": "source/prompts/AMIG.txt",
+      "output": "source/masters/RF2_AMIG.png",
+      "output_sha256": "ffede80f6657e273c24f5471a0b56f247ebe0a79166c618fcb4d8670088e7a70",
+      "references": [
+        "source/masters/RF2_TSFS.png"
+      ],
+      "retained_for_export": true
+    }
+  ]
+}
