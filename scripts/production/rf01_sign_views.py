@@ -3,7 +3,8 @@
 written): one front view and one oblique view (45 degrees) each, for scripts/production/view_check_pk3.py.
 Each camera stands in front of the plaque it looks at, on the side the plaque faces, at eye height (41 units) on the
 floor of the room the plaque faces, and moves back from the plaque (up to 208 units, 136 for the oblique view) only
-across open cells at that floor level (no wall, no door, no furniture): it never sees the plaque through a wall.
+across open cells at that floor level (no wall, no door, no furniture, 16 units of clearance on each side): it never
+sees the plaque through a wall and never stands against one.
 The same list is used on the accepted build (plaques under the floor) and on the candidate.
 
 Usage: python scripts/production/rf01_sign_views.py views.json [rf01.py]
@@ -36,12 +37,16 @@ for dl in m.decor:
     for kind, dist, turn in (('face', 208, 0), ('biais', 136, 45)):
         a = math.radians(turn)
         dx, dy = nx * math.cos(a) - ny * math.sin(a), nx * math.sin(a) + ny * math.cos(a)
+        def clear(px, py):
+            c = m.cell_at(px, py)
+            return c is not None and c.role != 'door' and c.ceil - c.floor >= 56 and abs(c.floor - f0) <= 24
         d, ok = 4, 0
         while d <= dist:
-            c = m.cell_at(cx + dx * d, cy + dy * d)
-            if c is None or c.role == 'door' or c.ceil - c.floor < 56 or abs(c.floor - f0) > 24:
+            px, py = cx + dx * d, cy + dy * d
+            if not clear(px, py):
                 break
-            ok = d
+            if d >= 16 and all(clear(px + e * dy * 16, py - e * dx * 16) for e in (1, -1)):
+                ok = d
             d += 4
         d = max(ok - 12, 16)                        # keep the camera clear of whatever stopped it
         px, py = cx + dx * d, cy + dy * d
