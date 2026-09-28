@@ -13,7 +13,8 @@ The checks are the contract's rules (RF2-ARSENAL 4), read from the bench's own l
   - fire pressed during a reload: a shot comes before any further round goes in;
   - weapon switched during a reload: no round goes in afterwards for that weapon;
   - an empty reserve starts no reload;
-  - after save and load, the counts are the ones saved, and the weapon fires.
+  - after save and load, the counts are the ones saved, and the weapon fires;
+  - death during a reload: no round goes in and nothing is fired afterwards.
 Nothing here says whether the animation looks or sounds right: that needs eyes and ears.
 """
 import argparse, json, re, subprocess, sys, time, zipfile
@@ -52,7 +53,7 @@ class RFBenchProbe : RFPlayer
         if (player != null)
         {
             t++;
-            player.cheats |= CF_GODMODE;
+            if (t < 1420) player.cheats |= CF_GODMODE;
             player.cmd.buttons = 0; player.cmd.forwardmove = 0; player.cmd.sidemove = 0;
             int b = 0;
             // ---- W03: 6 shots (5 in the tube + 1 chambered), then a dry fire
@@ -119,7 +120,15 @@ class RFBenchProbe : RFPlayer
             if (t == 1365 && !live) Say("apres_chargement");
             if (t == 1370 && !live) b |= BT_ATTACK;
             if (t == 1405 && !live) Say("apres_tir");
-            if (t == 1410 && !live) Console.Printf("RF_DEV_UI_DONE");
+            // death during a reload: nothing more goes in, nothing is fired
+            if (t == 1412 && !live) b |= BT_RELOAD;
+            if (t == 1426 && !live)
+            {
+                Say("mort_pendant_recharge");
+                player.cheats &= ~CF_GODMODE;
+                DamageMobj(null, null, 1000, 'None', DMG_FORCED);
+            }
+            if (t == 1500 && !live) { Say("apres_mort"); Console.Printf("RF_DEV_UI_DONE"); }
             player.cmd.buttons = b;
         }
         Super.PlayerThink();
@@ -227,6 +236,20 @@ def evaluate(lines, reload_lines):
             fails.append(f'tir apres chargement : {fired[0]}')
         notes.append(f"sauvegarde/chargement : {loaded[0]['arme']} charge {loaded[0]['charge']} reserve {loaded[0]['reserve']} "
                      f"tirs {loaded[0]['tirs']} ; apres un tir : tirs {fired[0]['tirs']}, ecart {fired[0]['ecart']}")
+    # death during a reload
+    death = next((i for i, l in enumerate(reload_lines) if 'mort_pendant_recharge' in l), None)
+    if death is None:
+        fails.append('mort pendant la recharge : non jouee')
+    else:
+        before = [l for l in reload_lines[:death] if l.startswith('RF_BENCH') and 'recharge_debut' in l]
+        after = [l for l in reload_lines[death + 1:] if l.startswith('RF_BENCH') and (' shell_in' in l or ' shot ' in l + ' ')
+                 and 'sans_cartouche' not in l]
+        if not before:
+            fails.append("mort pendant la recharge : la recharge n'avait pas commence")
+        if after:
+            fails.append('apres la mort : ' + after[0])
+        end = [kv(l) for l in reload_lines if 'apres_mort' in l]
+        notes.append('mort pendant la recharge : ' + (f"rien apres (compte {end[0].get('charge', '?')} + reserve {end[0].get('reserve', '?')})" if end and not after else 'voir echecs'))
     if not any('banc=ARSENAL sauvegarde=1' in l for l in reload_lines):
         notes.append('WorldLoaded du banc non journalise au chargement')
     return fails, notes, probe
@@ -243,7 +266,7 @@ def main():
     p1 = work / 'probe_run.pk3'
     probe_pk3(p1, 'RFBenchProbe')
     lines = run(a.base, a.module, p1, 'bench_probe', 120)
-    reload_lines = run(a.base, a.module, p1, 'bench_probe_reload', 60, loadgame='latest')
+    reload_lines = run(a.base, a.module, p1, 'bench_probe_reload', 70, loadgame='latest')
     fails, notes, probe = evaluate(lines, reload_lines)
     for l in probe:
         print(l)
