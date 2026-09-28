@@ -1,5 +1,32 @@
 // RF2 HUD: only live data. Health with Viktor's portrait, active weapon and its
 // real ammunition model, contextual keys, brief objective, use prompt, crosshair.
+
+// Viktor's portrait state from the health of the player shown, as a share of his normal maximum (overhealth keeps
+// the intact face; armour plays no part). Shared by the HUD and the development checks. 0 intact (> 80 %),
+// 1 lightly injured (> 60 %), 2 wounded (> 40 %), 3 severely wounded (> 20 %), 4 critical (alive, <= 20 %), 5 dead.
+class RFPortrait
+{
+    static clearscope int StateOf(PlayerInfo p)
+    {
+        if (p == null || p.mo == null) return 0;
+        if (p.health <= 0 || p.playerstate == PST_DEAD) return 5;
+        int normal = p.mo.GetMaxHealth(false);
+        if (normal <= 0) normal = 100;
+        double share = clamp(p.health * 100.0 / normal, 0.0, 100.0);
+        if (share > 80) return 0;
+        if (share > 60) return 1;
+        if (share > 40) return 2;
+        if (share > 20) return 3;
+        return 4;
+    }
+
+    static clearscope String FileOf(int state)
+    {
+        static const String FILES[] = { "VIKTOR_H100", "VIKTOR_H080", "VIKTOR_H060", "VIKTOR_H040", "VIKTOR_H020", "VIKTOR_DEAD" };
+        return "graphics/hud/viktor/" .. FILES[clamp(state, 0, 5)] .. ".png";
+    }
+}
+
 class RFStatusBar : BaseStatusBar
 {
     HUDFont labelFont;
@@ -38,15 +65,18 @@ class RFStatusBar : BaseStatusBar
         DrawString(labelFont, line, (0, 196 * s), DI_SCREEN_CENTER_TOP | DI_TEXT_ALIGN_CENTER, Font.CR_GREY, b, -1, 0, (s * 0.85, s * 0.85));
     }
 
-    TextureID ViktorPortrait() const
+    // The six portraits are looked up once (texture ids, no disk access afterwards).
+    TextureID portraits[6];
+    bool portraitsReady;
+
+    TextureID ViktorPortrait()
     {
-        if (CPlayer == null || CPlayer.mo == null || CPlayer.health <= 0)
-            return TexMan.CheckForTexture("graphics/hud/viktor/VIKTOR_dead.png", TexMan.Type_MiscPatch);
-        if (CPlayer.health <= 20) return TexMan.CheckForTexture("graphics/hud/viktor/VIKTOR_critical.png", TexMan.Type_MiscPatch);
-        if (CPlayer.health <= 40) return TexMan.CheckForTexture("graphics/hud/viktor/VIKTOR_fatigue.png", TexMan.Type_MiscPatch);
-        if (CPlayer.health <= 65) return TexMan.CheckForTexture("graphics/hud/viktor/VIKTOR_injured.png", TexMan.Type_MiscPatch);
-        if (CPlayer.health <= 85) return TexMan.CheckForTexture("graphics/hud/viktor/VIKTOR_bruised.png", TexMan.Type_MiscPatch);
-        return TexMan.CheckForTexture("graphics/hud/viktor/VIKTOR_intact.png", TexMan.Type_MiscPatch);
+        if (!portraitsReady)
+        {
+            for (int i = 0; i < 6; i++) portraits[i] = TexMan.CheckForTexture(RFPortrait.FileOf(i), TexMan.Type_MiscPatch);
+            portraitsReady = true;
+        }
+        return portraits[RFPortrait.StateOf(CPlayer)];
     }
 
     // "[key] VERB" with the key the player really bound to the command.

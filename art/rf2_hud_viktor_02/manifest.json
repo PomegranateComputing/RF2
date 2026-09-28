@@ -1,0 +1,72 @@
+{
+  "source": "art/rf2_hud_viktor_02/source/RF2_VIKTOR_HUD_SHEET.png",
+  "source_sha256": "2b7fde2fbe251a638fdb956acc8c4324e3b373f5a1c22920fb1654a57ad1cc3c",
+  "frame": [
+    512,
+    512
+  ],
+  "skull_top_y": 9,
+  "head_axis_x": 256,
+  "states": [
+    {
+      "state": 1,
+      "file": "graphics/hud/viktor/VIKTOR_H100.png",
+      "label": "intact",
+      "health": "> 80 %",
+      "sheet_head_axis_x": 268.0,
+      "sheet_skull_top_y": 11,
+      "skull_width_px": 271,
+      "sha256": "16649968e43ba2069e077af25fb5e905520bf8b4c43d0020fdad54ad0faaa5fe"
+    },
+    {
+      "state": 2,
+      "file": "graphics/hud/viktor/VIKTOR_H080.png",
+      "label": "légèrement blessé",
+      "health": "61-80 %",
+      "sheet_head_axis_x": 765.0,
+      "sheet_skull_top_y": 11,
+      "skull_width_px": 271,
+      "sha256": "d5c0a771bb37c8c3c2bfe426359adb90c845b8da777bbce2e825f63970bd688d"
+    },
+    {
+      "state": 3,
+      "file": "graphics/hud/viktor/VIKTOR_H060.png",
+      "label": "blessé",
+      "health": "41-60 %",
+      "sheet_head_axis_x": 1261.0,
+      "sheet_skull_top_y": 10,
+      "skull_width_px": 271,
+      "sha256": "f858bd6428d0c65cb62b839116a1d5268dd86f27e34bd257b5613285a27006d0"
+    },
+    {
+      "state": 4,
+      "file": "graphics/hud/viktor/VIKTOR_H040.png",
+      "label": "grièvement blessé",
+      "health": "21-40 %",
+      "sheet_head_axis_x": 267.0,
+      "sheet_skull_top_y": 516,
+      "skull_width_px": 273,
+      "sha256": "6baaba1568d06d6d2c6be9b2412dc3d0c866912764bd012cb2fc68ada58e2305"
+    },
+    {
+      "state": 5,
+      "file": "graphics/hud/viktor/VIKTOR_H020.png",
+      "label": "critique",
+      "health": "1-20 %",
+      "sheet_head_axis_x": 768.5,
+      "sheet_skull_top_y": 516,
+      "skull_width_px": 274,
+      "sha256": "a37eee01011223e190c8a11e86cb942fca1b5b0b0d0aad8ae00613e091e88e6d"
+    },
+    {
+      "state": 6,
+      "file": "graphics/hud/viktor/VIKTOR_DEAD.png",
+      "label": "mort",
+      "health": "joueur mort",
+      "sheet_head_axis_x": 1262.5,
+      "sheet_skull_top_y": 515,
+      "skull_width_px": 274,
+      "sha256": "16b03bd277ca993bdbfeff4d0962f142f77f941bb508743ad8f85abef0909e48"
+    }
+  ]
+}
