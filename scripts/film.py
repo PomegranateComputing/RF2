@@ -111,6 +111,7 @@ def main():
     ap.add_argument('--width', type=int, default=1280)
     ap.add_argument('--height', type=int, default=720)
     ap.add_argument('--seconds', type=float, default=240)
+    ap.add_argument('--no-autopilot', action='store_true', help='film a scripted development scene instead of the waypoint run')
     ap.add_argument('extra', nargs='*')
     a = ap.parse_args()
     out = devrun.DEV / 'film' / a.name
@@ -119,7 +120,7 @@ def main():
     out.mkdir(parents=True)
     raw_wav = out / 'capture_float.wav'
     extra = ['+rf_dev_film', str(a.every), '+rf_dev_film_start', str(a.start), '+rf_dev_film_end', str(a.end)] + a.extra
-    status, text, shots = devrun.run(PK3, f'film_{a.name}', a.map, autopilot=True, seconds=a.seconds,
+    status, text, shots = devrun.run(PK3, f'film_{a.name}', a.map, autopilot=not a.no_autopilot, seconds=a.seconds,
                                      width=a.width, height=a.height, extra=extra, marker='RF_DEV_FILM_DONE',
                                      audio_wav=raw_wav)
     frames = [(int(t), float(ms)) for t, ms in re.findall(r'RF_DEV_FILM t=(\d+) ms=([\d.]+)', text)]

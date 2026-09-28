@@ -32,6 +32,10 @@ class RFDevHandler : StaticEventHandler
     bool msgShots;          // rf_dev_ui 3: real pickups and a note at the player's feet, captured
     bool deathShots;        // rf_dev_ui 6: the player dies in place; death and resume screen captured
     bool viewShots;         // rf_dev_view "x y z angle pitch; ...": clean views (title art, map evidence)
+    // rf_dev_portrait: Viktor's HUD portrait. 1 thresholds, overhealth, heal across states, low-health save, death,
+    // resume by use; 2 health carried to the next chapter; 3 a short damage, heal, death, resume sequence to film;
+    // 4 two states only (resolutions, HUD scales).
+    int portraitMode, ptStep, ptTimer, ptLoads;
     Array<double> views;
     int viewIndex, viewTimer;
     // Corpse inspection (rf_dev_corpse): each enemy class killed on flat floor, against a wall,
@@ -125,11 +129,13 @@ class RFDevHandler : StaticEventHandler
         perfScene = -1; perfTimer = 0;
         cpIndex = 0; cpTimer = 0; cpBody = null;
         filmEvery = CVar.GetCVar('rf_dev_film').GetInt();
+        portraitMode = CVar.GetCVar('rf_dev_portrait').GetInt();
+        if (portraitMode > 0 && e.IsSaveGame) { ptLoads++; ptTimer = 0; }
         filmStart = CVar.GetCVar('rf_dev_film_start').GetInt();
         filmEnd = CVar.GetCVar('rf_dev_film_end').GetInt();
         lastPistol = -1;
         lastMag = -1;
-        logging = tour || autopilot || doortest || weaponShots || uiShots || corpseTest || perfTest || filmEvery > 0 || deathShots || viewShots || CVar.GetCVar('rf_dev_log').GetBool();
+        logging = tour || autopilot || doortest || weaponShots || uiShots || corpseTest || perfTest || filmEvery > 0 || deathShots || viewShots || portraitMode > 0 || CVar.GetCVar('rf_dev_log').GetBool();
         dtLines.Clear();
         dtSides.Clear();
         dtIndex = 0; dtPhase = 0; dtTimer = 0; dtPass = 0; dtOpen = 0; dtShut = 0;
@@ -547,6 +553,93 @@ class RFDevHandler : StaticEventHandler
             Console.Printf("RF_DEV_SND what=shot dist=0 ms=%.1f", MSTimeF());
         }
         if (Level.Time == 330) Console.Printf("RF_DEV_UI_DONE");
+    }
+
+    // Viktor's portrait, driven from the player's think (a use press lands like a player's).
+    void PortraitReport(PlayerPawn p, String what)
+    {
+        int st = RFPortrait.StateOf(p.player);
+        Console.Printf("RF_DEV_PORTRAIT map=%s step=%d %s health=%d state=%d file=%s t=%d", Level.MapName, ptStep, what, p.player.health, st, RFPortrait.FileOf(st), Level.maptime);
+    }
+
+    void DrivePortrait(PlayerPawn p)
+    {
+        if (p.player == null) return;
+        p.player.cmd.buttons &= ~(BT_ATTACK | BT_USE);
+        p.player.cmd.forwardmove = 0;
+        p.player.cmd.sidemove = 0;
+        if (Level.maptime < 40) return;
+        int t = ptTimer++;
+        if (portraitMode == 1)
+        {
+            static const int SERIES[] = { 100, 81, 80, 61, 60, 41, 40, 21, 20, 1 };
+            if (ptStep < 10)
+            {
+                if (t == 0) p.A_SetHealth(SERIES[ptStep]);
+                if (t == 12) { Level.MakeScreenShot(); PortraitReport(p, "threshold"); }
+                if (t >= 18) { ptStep++; ptTimer = 0; }
+            }
+            else if (ptStep == 10)                                   // overhealth keeps the intact face
+            {
+                if (t == 0) p.A_SetHealth(150);
+                if (t == 12) { Level.MakeScreenShot(); PortraitReport(p, "overhealth"); }
+                if (t >= 18) { ptStep++; ptTimer = 0; }
+            }
+            else if (ptStep == 11)                                   // a heal across several states
+            {
+                if (t == 0) p.A_SetHealth(15);
+                if (t == 12) PortraitReport(p, "before_heal");
+                if (t == 14) p.GiveBody(75);
+                if (t == 26) { Level.MakeScreenShot(); PortraitReport(p, "after_heal"); }
+                if (t >= 32) { ptStep++; ptTimer = 0; }
+            }
+            else if (ptStep == 12)                                   // low-health save, then death
+            {
+                if (t == 0) p.A_SetHealth(15);
+                if (t == 8) { Level.MakeAutoSave(); PortraitReport(p, "saved"); }
+                if (t == 40) p.DamageMobj(null, null, 1000, 'None');
+                if (t == 110) { Level.MakeScreenShot(); PortraitReport(p, "dead"); }
+                if (t == 120) { ptStep = 13; p.player.cmd.buttons |= BT_USE; }   // resume like a player
+            }
+            else if (ptStep == 13 && ptLoads > 0)                    // reloaded from the low-health save
+            {
+                if (t == 30) { Level.MakeScreenShot(); PortraitReport(p, "resumed"); }
+                if (t == 40) { ptStep++; Console.Printf("RF_DEV_UI_DONE"); }
+            }
+        }
+        else if (portraitMode == 2)                                  // health carried to the next chapter
+        {
+            if (ptStep == 0)
+            {
+                if (t == 0) p.A_SetHealth(35);
+                if (t == 12) { Level.MakeScreenShot(); PortraitReport(p, "before_exit"); }
+                if (t == 20) { ptStep = 1; ptTimer = 0; Level.ExitLevel(0, false); }
+            }
+            else if (t == 30) { Level.MakeScreenShot(); PortraitReport(p, "next_chapter"); }
+            else if (t == 40) Console.Printf("RF_DEV_UI_DONE");
+        }
+        else if (portraitMode == 4)                                  // two states, for resolutions and HUD scales
+        {
+            if (t == 0) p.A_SetHealth(30);
+            if (t == 12) { Level.MakeScreenShot(); PortraitReport(p, "resolution"); }
+            if (t == 20) p.A_SetHealth(100);
+            if (t == 32) { Level.MakeScreenShot(); PortraitReport(p, "resolution"); }
+            if (t == 40) Console.Printf("RF_DEV_UI_DONE");
+        }
+        else if (portraitMode == 3)                                  // damage, heal, death, resume (filmed)
+        {
+            if (ptStep == 0)
+            {
+                if (t == 0) Level.MakeAutoSave();
+                if (t == 35 || t == 70 || t == 105) { p.DamageMobj(null, null, 22, 'None'); }
+                if (t == 150) p.GiveBody(60);
+                if (t == 200 || t == 235) p.DamageMobj(null, null, 30, 'None');
+                if (t == 270) p.DamageMobj(null, null, 500, 'None');
+                if (t >= 36 && (t % 35) == 1) PortraitReport(p, "sequence");
+                if (t == 360) { ptStep = 1; p.player.cmd.buttons |= BT_USE; }
+            }
+            else if (ptLoads > 0 && t == 60) { PortraitReport(p, "resumed"); Console.Printf("RF_DEV_UI_DONE"); }
+        }
     }
 
     // Death and resume screen: the player dies where the map starts, the overlay is photographed as it
