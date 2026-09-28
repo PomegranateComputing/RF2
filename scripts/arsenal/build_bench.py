@@ -326,13 +326,18 @@ if not exist "%ROOT%user" mkdir "%ROOT%user"
 if not exist "%CFG%" if exist "%ROOT%user\uzdoom.ini" copy /y "%ROOT%user\uzdoom.ini" "%CFG%" >nul
 if not exist "%ROOT%user\savegames_arsenal_essai" mkdir "%ROOT%user\savegames_arsenal_essai"
 if not exist "%ROOT%user\logs_arsenal_essai" mkdir "%ROOT%user\logs_arsenal_essai"
-set "STAMP=%DATE:/=-%_%TIME::=-%"
-set "STAMP=%STAMP: =0%"
-set "STAMP=%STAMP:,=-%"
-set "STAMP=%STAMP:.=-%"
+set "D=%DATE:/=-%"
+set "D=%D: =_%"
+set "T=%TIME: =0%"
+set "T=%T::=-%"
+set "T=%T:.=-%"
+set "T=%T:,=-%"
+set "STAMP=%D%_%T%"
+set "LOG=%ROOT%user\logs_arsenal_essai\essai_%STAMP%.log"
 echo RF2 BANC D'ESSAI ARSENAL (hors campagne) : {module_rel}
-echo Journal : user\logs_arsenal_essai\essai_%STAMP%.log
-"%ENGINE%" -iwad "%IWAD%" -file "%BASE%" "%MODULE%" -config "%CFG%" -savedir "%ROOT%user\savegames_arsenal_essai" -skill 2 +logfile "%ROOT%user\logs_arsenal_essai\essai_%STAMP%.log" +map ARSENAL %*
+echo Journal : %LOG%
+rem Journal par la sortie standard du moteur (+logfile n'est pas pris en compte en ligne de commande par UZDoom 5.0.1).
+"%ENGINE%" -iwad "%IWAD%" -file "%BASE%" "%MODULE%" -config "%CFG%" -savedir "%ROOT%user\savegames_arsenal_essai" -skill 2 -stdout +map ARSENAL %* > "%LOG%" 2>&1
 exit /b %errorlevel%
 '''
 
