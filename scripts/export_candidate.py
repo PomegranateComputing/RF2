@@ -75,8 +75,8 @@ def main():
     ap.add_argument('--direct', metavar='MAP', help='also write launchers that start this chapter directly '
                     '(difficulty Service, the starting kit of the chapter), besides the ones that open the title')
     a = ap.parse_args()
-    if not re.fullmatch(r'[A-Z0-9][A-Z0-9-]{1,24}', a.lot):
-        print('lot: capitals, digits and dashes only')
+    if not re.fullmatch(r'[A-Z0-9][A-Z0-9_-]{1,24}', a.lot):
+        print('lot: capitals, digits, dashes and underscores only')
         return 2
     dirty = git('status', '--porcelain', '--untracked-files=no') != ''
     if dirty and not a.allow_dirty:
@@ -100,13 +100,17 @@ def main():
     (folder / 'BUILD_INFO.json').write_text(json.dumps(info, indent=2, ensure_ascii=False), encoding='utf-8')
     label_ascii = unicodedata.normalize('NFKD', a.label).encode('ascii', 'ignore').decode('ascii')   # cmd comments: plain ASCII
     common = dict(lot=a.lot, label_ascii=label_ascii, pk3_rel=pk3_rel, sha=info['sha256'], slug=slug, direct='', direct_note='')
-    (ROOT / f'JOUER_RF2_{a.lot}.cmd').write_text(LAUNCHER.format(root_expr='%~dp0', **common).replace('\n', '\r\n'), encoding='ascii')
-    (folder / 'JOUER.cmd').write_text(LAUNCHER.format(root_expr='%~dp0..\\..\\..\\', **common).replace('\n', '\r\n'), encoding='ascii')
+    # write_bytes: on Windows write_text turned the CRLF into CR CR LF (launchers of 27-28/09; cmd.exe drops the
+    # extra CR, they are left as delivered)
+    def write_cmd(path, root_expr):
+        path.write_bytes(LAUNCHER.format(root_expr=root_expr, **common).replace('\n', '\r\n').encode('ascii'))
+    write_cmd(ROOT / f'JOUER_RF2_{a.lot}.cmd', '%~dp0')
+    write_cmd(folder / 'JOUER.cmd', '%~dp0..\\..\\..\\')
     if a.direct:
         m = a.direct.upper()
         common.update(direct=f'-skill 2 +map {m} ', direct_note=f' - depart direct {m}')
-        (ROOT / f'JOUER_RF2_{a.lot}_{m}.cmd').write_text(LAUNCHER.format(root_expr='%~dp0', **common).replace('\n', '\r\n'), encoding='ascii')
-        (folder / f'JOUER_{m}.cmd').write_text(LAUNCHER.format(root_expr='%~dp0..\\..\\..\\', **common).replace('\n', '\r\n'), encoding='ascii')
+        write_cmd(ROOT / f'JOUER_RF2_{a.lot}_{m}.cmd', '%~dp0')
+        write_cmd(folder / f'JOUER_{m}.cmd', '%~dp0..\\..\\..\\')
     print(json.dumps(info, indent=2, ensure_ascii=False))
     return 0
 
