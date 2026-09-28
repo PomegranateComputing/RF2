@@ -63,3 +63,26 @@ jamais écoutées par Astra), la variante de compatibilité, les builds de revue
 Contrôles : build, `check_runtime` PASS, RF02 A et B PASS. Une première traversée A a manqué la sacoche du ticket
 (l'autopilote est arrivé par un autre chemin ; le test d'orientation de la sacoche est étroit) ; la seconde a déclenché
 les 27 scènes. L'import ne change aucune donnée de collision, d'usage ou de visibilité.
+
+## 3. Les dix captures du propriétaire (V01–V10), mêmes cadrages
+
+Caméras reconstruites en trois passes sur le build que le propriétaire a joué (`RF2_MAP-02_20260927_1543`, même
+résolution 1786×1011, FOV 90) jusqu'à retrouver ses cadrages ; puis mêmes caméras sur le build de développement du
+commit `9510b39` (enseignes, lot HD d'Astra, figures), sans HUD (art) et avec HUD (lisibilité). Les ennemis
+éveillés et les messages de la capture d'origine ne sont pas reproduits (ils dépendent du moment de la partie).
+Preuves hors dépôt : `dist/evidence_wip/RF02_V01-V10_20260928/` (40 captures, deux planches, caméras, build).
+
+| ID | État au commit `9510b39` | Reste |
+|---|---|---|
+| V01 | seau galvanisé HD (sprite d'Astra), l'uniforme qui brûle les formulaires à côté | objet en volume (master 3D d'Astra, RF02-B) ; combustion |
+| V02 | la femme est à la poignée | poussette réelle (modèle d'Astra testé, RF02-B) ; registres ficelés ; approche des deux côtés |
+| V03 | façades HD | tram complet et rails (RF02-B) ; durée du message précédent (UI) |
+| V04 | vieil homme assis, yeux qui s'ouvrent | intérieur du tram (RF02-B), inspection du ticket |
+| V05 | **plaque Port-Royal accrochée** à l'angle ; façades HD | profondeur et matières de la pharmacie (bocaux) |
+| V06 | tableau plaqué contre la façade | support d'époque (modèle commandé à Astra) |
+| V07 | **vitrine TSF HD** (postes crédibles) | grille, éclairage, cycle de fondu du texte à vérifier |
+| V08 | façades HD | variantes d'ennemis, messages hors zone de combat et relecture (UI), livres de la barricade |
+| V09 | **téléphone de campagne identifiable** (HD) | table, sacs de sable, câblage ; compteur du Browning ; attribution des répliques |
+| V10 | façades HD | entrée et abords de Luna Park en volume (RF02-C) |
+
+Aucun ID n'est déclaré corrigé sans son état chargé en jeu ; aucun n'est accepté par le propriétaire.
