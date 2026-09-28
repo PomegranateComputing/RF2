@@ -72,8 +72,8 @@ def main():
     ap.add_argument('--label', default='')
     ap.add_argument('--allow-dirty', action='store_true', help='export even with uncommitted changes (recorded)')
     a = ap.parse_args()
-    if not re.fullmatch(r'[A-Z0-9][A-Z0-9-]{1,24}', a.lot):
-        print('lot: capitals, digits and dashes only')
+    if not re.fullmatch(r'[A-Z0-9][A-Z0-9_-]{1,24}', a.lot):
+        print('lot: capitals, digits, dashes and underscores only')
         return 2
     dirty = git('status', '--porcelain', '--untracked-files=no') != ''
     if dirty and not a.allow_dirty:
@@ -97,8 +97,10 @@ def main():
     (folder / 'BUILD_INFO.json').write_text(json.dumps(info, indent=2, ensure_ascii=False), encoding='utf-8')
     label_ascii = a.label.encode('ascii', 'replace').decode('ascii')
     common = dict(lot=a.lot, label_ascii=label_ascii, pk3_rel=pk3_rel, sha=info['sha256'], slug=slug)
-    (ROOT / f'JOUER_RF2_{a.lot}.cmd').write_text(LAUNCHER.format(root_expr='%~dp0', **common).replace('\n', '\r\n'), encoding='ascii')
-    (folder / 'JOUER.cmd').write_text(LAUNCHER.format(root_expr='%~dp0..\\..\\..\\', **common).replace('\n', '\r\n'), encoding='ascii')
+    # write_bytes: on Windows write_text turned the CRLF below into CR CR LF (launchers of 27-28/09; cmd.exe drops
+    # the extra CR, they are left as delivered)
+    (ROOT / f'JOUER_RF2_{a.lot}.cmd').write_bytes(LAUNCHER.format(root_expr='%~dp0', **common).replace('\n', '\r\n').encode('ascii'))
+    (folder / 'JOUER.cmd').write_bytes(LAUNCHER.format(root_expr='%~dp0..\\..\\..\\', **common).replace('\n', '\r\n').encode('ascii'))
     print(json.dumps(info, indent=2, ensure_ascii=False))
     return 0
 
