@@ -119,15 +119,20 @@ def pillar(x, y, size=32):
 
 
 def sign(x, y, side, name, zbottom=92):
-    """Enamel plaque: 64-long decor line 4 units off a wall. side = wall the sign hangs on."""
+    """Enamel plaque: 64-long decor line 1 unit off a wall. side = wall the sign hangs on, seen from the room the
+    plaque faces (W: faces east, E: west, S: north, N: south); x/y: that wall's face, on the 16-unit grid.
+    zbottom: height of the plaque's lower edge; over a doorway, above the lintel or above the door's open height.
+    RFSIGN textures are 4 pixels per unit (TEXTURES.rf01): the offset is computed as the engine reads it and the
+    whole 64-unit texture is fitted on the line (RF01-PAN, 27-28/09; before, the 13 plaques were drawn under the
+    floor). scripts/production/rf01_sign_survey.py checks each plaque against the geometry."""
     if side == 'W':
-        m.decor_line(x + 4, y, x + 4, y + 64, name, zbottom)
+        m.decor_line(x + 1, y, x + 1, y + 64, name, zbottom, yscale=4, texwidth=64)
     elif side == 'E':
-        m.decor_line(x - 4, y + 64, x - 4, y, name, zbottom)
+        m.decor_line(x - 1, y + 64, x - 1, y, name, zbottom, yscale=4, texwidth=64)
     elif side == 'S':
-        m.decor_line(x + 64, y + 4, x, y + 4, name, zbottom)
+        m.decor_line(x + 64, y + 1, x, y + 1, name, zbottom, yscale=4, texwidth=64)
     else:
-        m.decor_line(x, y - 4, x + 64, y - 4, name, zbottom)
+        m.decor_line(x, y - 1, x + 64, y - 1, name, zbottom, yscale=4, texwidth=64)
 
 
 def lamp(x, y, z, r=255, g=214, b=160, radius=200):
@@ -316,8 +321,8 @@ for x in (-480, -240, 0):
 wake_line(-200, -432, -200, -304, 101, 1)
 m.thing(-8, -224, T_AMB, args=(3, 50))
 m.label(-620, -370, 'COULOIR DU PAVILLON OUEST')
-sign(132, -376, 'W', 'RFSIGN8')          # PAVILLON OUEST (hall side of the grille)
-sign(-60, -368, 'S', 'RFSIGN0', 96)      # ADMISSIONS plaque above the corridor near the grille
+sign(128, -400, 'W', 'RFSIGN8', 132)     # PAVILLON OUEST above the grille, hall side (the grille opens to 124)
+sign(96, -400, 'E', 'RFSIGN0', 136)      # ADMISSIONS above the grille, corridor side (lintel 128)
 
 # --------------------------------------------------------------------------- COUR DES HOMMES
 m.box(0, 0, 768, 640, YARD)
@@ -351,7 +356,7 @@ m.thing(720, 330, T_ORDERLY, angle=180, tid=301, dormant=True)
 m.thing(200, 560, T_ORDERLY, angle=270, tid=301, dormant=True, skill='hard')
 wake_line(336, 24, 432, 24, 301, 4)
 m.label(300, 480, 'COUR DES HOMMES')
-sign(400, 8, 'S', 'RFSIGN2', 96)      # PAVILLON EST direction plaque under the arcade
+sign(432, 0, 'S', 'RFSIGN2', 84)       # PAVILLON EST direction plaque under the arcade, beside the passage
 
 # --------------------------------------------------------------------------- PAVILLON EST
 door(768, 272, 800, 368, 40, 'RFD_DBL', ARC, 'W', lintel=112, track='RFS_LIME')
@@ -403,7 +408,7 @@ m.box(1440, 688, 1504, 752, SERV, floor=-96, ceil=48)
 door(1408, 688, 1440, 752, 47, 'RFM_DOOR', LGR, 'E', lintel=104, track='RFP_DRK')
 lamp(1472, 432, 130, 230, 224, 200, 150)
 lamp(1472, 600, 40, 230, 224, 200, 150)
-sign(1404, 400, 'E', 'RFSIGN3', 120)   # LINGERIE plaque beside the service door
+sign(1408, 336, 'E', 'RFSIGN3', 120)   # LINGERIE plaque beside the service door
 
 # --------------------------------------------------------------------------- LINGERIE
 m.box(1040, 656, 1408, 1008, LGR)
@@ -454,7 +459,7 @@ m.thing(300, 740, T_AMB, args=(0, 45))
 m.thing(200, 700, T_MAG)
 m.label(280, 770, 'GALERIE NORD')
 objective_line(744, 706, 744, 766, 6)
-sign(384, 660, 'S', 'RFSIGN9', 120)
+sign(416, 656, 'S', 'RFSIGN9', 120)    # GALERIE NORD beside the courtyard grille (it opens to 220)
 door(-32, 704, 0, 768, 46, 'RFD_SGL', GAL, 'E', lintel=112, track='RFP_DADB')
 
 # --------------------------------------------------------------------------- REGISTRES
@@ -473,7 +478,7 @@ lamp(-192, 800, 160, radius=220)
 lamp(-80, 700, 160, radius=180)
 m.thing(-190, 780, T_AMB, args=(3, 40))
 m.label(-330, 930, 'REGISTRES')
-sign(-4, 704, 'E', 'RFSIGN4', 120)
+sign(0, 704, 'W', 'RFSIGN4', 152)      # REGISTRES above the door, gallery side (lintel 144)
 door(-144, 624, -80, 656, 48, 'RFD_SGL', REG, 'N', lintel=112, track='RFP_DADR')
 
 # --------------------------------------------------------------------------- COULOIR OUEST + CHAPELLE
@@ -513,7 +518,7 @@ for y in (300, 540):
     m.thing(-380, y, T_BENCH, angle=0)
 m.thing(-400, 416, T_AMB, args=(3, 35))
 m.label(-630, 560, 'CHAPELLE VIDE')
-sign(-164, 384, 'E', 'RFSIGN5', 100)
+sign(-160, 384, 'W', 'RFSIGN5', 136)   # CHAPELLE above the double door, corridor side (lintel 128)
 door(-544, 224, -480, 256, 51, 'RFS_LIME', CHA, 'N', lintel=96, track='RFS_LIME')
 m.box(-576, 160, -448, 224, CHA, special=1024, light=88, wall='RFP_DRK', ftex='RFF_WOOD', ceil=128)
 m.thing(-512, 190, T_MAG)
@@ -553,8 +558,8 @@ wake_line(-224, -72, -112, -72, 601)
 wake_line(-100, -192, -100, -80, 602)
 m.label(-300, -180, 'CONSULTATIONS')
 m.label(-290, 30, "SALLE D'ATTENTE")
-sign(-48, -100, 'N', 'RFSIGN1', 96)
-sign(132, -184, 'W', 'RFSIGN1', 100)
+sign(-48, -80, 'N', 'RFSIGN1', 96)
+sign(128, -176, 'W', 'RFSIGN1', 116)   # CONSULTATIONS above the grille, hall side (it opens to 108)
 sign(432, -448, 'S', 'RFSIGN7', 120)
 
 # --------------------------------------------------------------------------- ECONOMAT (steward's office)
@@ -598,8 +603,8 @@ m.thing(470, 40, T_SPOT, angle=270, tid=700, args=(SPOT_ORDERLY,))     # from th
 m.thing(160, 30, T_SPOT, angle=0, tid=700, args=(SPOT_ORDERLY,), skill='hard')
 m.thing(40, -136, T_SPOT, angle=0, tid=700, args=(SPOT_PORTE,))
 wake_line(496, -424, 592, -424, 700, 9)
-sign(352, -440, 'S', 'RFSIGN6', 136)   # SORTIE above the vestibule opening
-sign(352, -96, 'N', 'RFSIGN2', 136)    # PAVILLON EST above the courtyard door
+sign(352, -448, 'S', 'RFSIGN6', 136)   # SORTIE above the vestibule opening
+sign(352, -80, 'N', 'RFSIGN2', 136)    # PAVILLON EST above the courtyard door
 
 # --------------------------------------------------------------------------- situated wear (decals)
 for (x, y, w, z) in ((1100, 1000, 'N', 18), (1180, 1000, 'N', 12), (1250, 664, 'S', 16), (1048, 900, 'W', 20),

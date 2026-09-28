@@ -332,14 +332,19 @@ def sign(name, text, seed, wunits=64, hunits=16, bg=(30, 62, 118), fg=(236, 236,
     d.rectangle([0, 0, W - 1, H - 1], outline=fg, width=PPU)
     d.rectangle([PPU, PPU, W - PPU - 1, H - PPU - 1], outline=bg, width=PPU)
     font = None
-    for f in ('C:/Windows/Fonts/arialbd.ttf', 'C:/Windows/Fonts/arial.ttf', 'DejaVuSans-Bold.ttf'):
-        try:
-            font = ImageFont.truetype(f, int(H * 0.5))
+    size = int(H * 0.5)
+    while font is None or (size > 8 and d.textbbox((0, 0), text, font=font)[2] - d.textbbox((0, 0), text, font=font)[0] > W - 6 * PPU):
+        font = None
+        for f in ('C:/Windows/Fonts/arialbd.ttf', 'C:/Windows/Fonts/arial.ttf', 'DejaVuSans-Bold.ttf'):
+            try:
+                font = ImageFont.truetype(f, size)
+                break
+            except OSError:
+                continue
+        if font is None:
+            font = ImageFont.load_default()
             break
-        except OSError:
-            continue
-    if font is None:
-        font = ImageFont.load_default()
+        size -= 1                                   # the text stays inside the enamel border (3 units each side)
     bbox = d.textbbox((0, 0), text, font=font)
     tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
     d.text(((W - tw) / 2 - bbox[0], (H - th) / 2 - bbox[1]), text, font=font, fill=fg)
