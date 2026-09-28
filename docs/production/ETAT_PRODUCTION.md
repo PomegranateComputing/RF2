@@ -74,9 +74,9 @@ narratif : Luna Park (ID technique RF04), sans écraser le blockout RF03 (Batign
 
 | Lot | Agent | Base | Fichiers possédés | Résultat attendu | État |
 |---|---|---|---|---|---|
-| RF01-PAN | Opus | tag `rf01-owner-accepted-20260927` | `scripts/mapkit/rf01.py` (panneaux), `src/maps/RF01.wad` | 13 panneaux lisibles ; registre vérifié en jeu : **lisible, aucun défaut** (`RF01_REGISTRE_VERIFICATION.md`) | panneaux à faire |
+| RF01-PAN | Opus | tag `rf01-owner-accepted-20260927` | `scripts/mapkit/rf01.py` (panneaux), `src/maps/RF01.wad`, `udmf.py` (`texwidth=`), `materials.py` (`sign()`), `patches/rf01/RFSIGN*` | 13 panneaux lisibles ; registre vérifié en jeu : **lisible, aucun défaut** (`RF01_REGISTRE_VERIFICATION.md`) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_RF01-PAN.cmd`, build isolé `RF2_RF01-PAN_20260928_0725` (remplace 2245), `docs/RF2_RF01_PAN.md` ; porté sur `prod/rf2-campaign` |
 | HUD-02 | Opus | `prod/rf2-campaign` | `src/zscript/rf/hud.zs`, `src/graphics/hud/viktor/` | portrait de Viktor en six états (commande du propriétaire) | candidate `RF2_HUD-02_20260927_2230` |
-| RF02-A | Opus + Astra | `prod/rf2-campaign` | Opus : `scripts/mapkit/rf02.py`, runtime ; Astra : ressources | tranche de rue de référence | en cours |
+| RF02-A | Opus + Astra | `prod/rf2-campaign` | Opus : `scripts/mapkit/rf02.py`, runtime ; Astra : ressources | tranche de rue de référence ; enseignes : même défaut que RF01 (texture coupée de 4 unités, 4 unités du mur) → `texwidth=`, 1 unité | en cours |
 | RF02-B | Astra produit, Opus intègre | idem | modèles tram/voie/props (Astra), collisions/ancrages (Opus) | tram complet sur rails, poussette, objets fixés | en cours |
 | RF02-C | Opus + Astra | idem | idem | parcours complet, figures F02-01…08, Luna Park | à faire |
 | COMBAT-02 | Opus runtime, Astra présentation/audio | idem | `src/zscript/rf/weapons.zs`, rencontres | sons et retours d'armes, pied-de-biche, difficulté | à faire |
@@ -148,3 +148,10 @@ action.
   RF01 ; un défaut de RF01 accepté prouvé et signalé sans correction (panneaux muraux invisibles, preuve dans la
   candidate MAP-02). Prochaine action : retours du propriétaire sur ART-02, UI-01, MAP-02 ; figures RF02 d'Astra ;
   décision sur l'ordre RF03/Luna Park ; puis RF03.
+- 28/09 matin — RF01-PAN : vues dans le moteur de la candidate 2245 → plaques visibles mais 11 sur 13 pas contre
+  leur mur (coordonnées hors de la grille, deux dans l'embrasure tournées vers la porte, une au milieu du couloir) et
+  quatre textes coupés dans la texture. Relevé outillé (`scripts/production/rf01_sign_survey.py` : source acceptée
+  0/13, candidate 13/13), plaques reposées sur leur mur ou leur linteau, textures corrigées, texture entière ajustée
+  à la ligne. Candidate `RF2_RF01-PAN_20260928_0725` (sha256 `1439a27e…`) : 26 vues avant/après et 7 portes
+  ouvertes, rapport `docs/RF2_RF01_PAN.md`. Correction portée sur `prod/rf2-campaign` (RF01.wad identique à celui
+  de la candidate, RF02 inchangé). Prochaine action : lots RF02-A/B (livraisons Astra), COMBAT-02.
