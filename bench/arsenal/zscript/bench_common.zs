@@ -400,6 +400,217 @@ class RFBenchRevolver : RFBenchWeapon abstract
     }
 }
 
+// Magazine rifle with a fire selector (W05 FAMAS). The magazine is the loaded ammunition, the rest is the reserve (as
+// the FAL: a partial reload tops the magazine up, nothing is lost). Selector on the alternate fire button: single
+// shot, burst (BurstSize rounds for one press, as long as the magazine holds), automatic (while fire is held). The
+// reload commits at its "seat" frame, under the same rule as the others (not after a switch request or death).
+class RFBenchMagazine : RFBenchWeapon abstract
+{
+    int Mag;
+    int Mode;
+    int BurstLeft;
+
+    virtual int MagCap() { return 25; }
+    virtual int BurstSize() { return 3; }
+    override int Capacity() { return MagCap(); }
+    override int Loaded() { return Mag; }
+    clearscope String ModeName() const { return Mode == 0 ? "coup par coup" : (Mode == 1 ? "rafale" : "automatique"); }
+    override String Counter() { return String.Format("chargeur %d | reserve %d | %s", Mag, Reserve(), ModeName()); }
+    override String AmmoText() { return String.Format("%d | %d", Mag, Reserve()); }
+    override String AmmoLabel() { return "chargeur | reserve  " .. ModeName(); }
+
+    override void BeginPlay()
+    {
+        Super.BeginPlay();
+        Mag = MagCap();
+    }
+
+    action State A_MagFire()
+    {
+        if (invoker.Mag <= 0) return ResolveState("DrySeq");
+        if (invoker.Mode == 1 && invoker.BurstLeft <= 0) invoker.BurstLeft = invoker.BurstSize();
+        return ResolveState("FireSeq");
+    }
+
+    action void A_MagShot(int pellets, int damage, double spreadH, double spreadV)
+    {
+        if (invoker.Mag <= 0) { invoker.Log("ERREUR tir_sans_cartouche"); return; }
+        if (invoker.Owner == null || invoker.Owner.health <= 0) { invoker.Log("shot_annule mort"); return; }
+        invoker.Mag--;
+        invoker.Shots++;
+        if (invoker.BurstLeft > 0) invoker.BurstLeft--;
+        A_BenchFireBullets(pellets, damage, spreadH, spreadV);
+        invoker.Log(String.Format("shot mode=%d degats=%d", invoker.Mode, damage));
+    }
+
+    action State A_MagAfterShot()
+    {
+        bool free = invoker.CommitBlock() == "";
+        if (free && invoker.Mode == 1 && invoker.BurstLeft > 0 && invoker.Mag > 0) return ResolveState("FireSeq");
+        invoker.BurstLeft = 0;
+        if (free && invoker.Mode == 2 && player != null && (player.cmd.buttons & BT_ATTACK) && invoker.Mag > 0) return ResolveState("FireSeq");
+        return ResolveState("Ready");
+    }
+
+    action void A_MagMode()
+    {
+        invoker.Mode = (invoker.Mode + 1) % 3;
+        invoker.BurstLeft = 0;
+        invoker.Mech("mode");
+        invoker.Log("mode=" .. invoker.ModeName());
+    }
+
+    action State A_MagReloadCheck()
+    {
+        if (invoker.Mag >= invoker.MagCap() || invoker.Reserve() <= 0) return ResolveState("Ready");
+        invoker.Reloading = true;
+        invoker.FireQueued = false;
+        invoker.Log("recharge_debut");
+        if (invoker.Mag == 0 && invoker.FindState("ReloadEmptySeq") != null) return ResolveState("ReloadEmptySeq");
+        return ResolveState("ReloadSeq");
+    }
+
+    action void A_MagSeat()
+    {
+        String block = invoker.CommitBlock();
+        if (block != "") { invoker.Log("seat_annule " .. block); return; }
+        invoker.Mech("seat");
+        int transfer = min(invoker.MagCap() - invoker.Mag, invoker.Reserve());
+        if (transfer > 0 && invoker.Owner.TakeInventory(invoker.AmmoType1, transfer, true))
+        {
+            invoker.Mag += transfer;
+            invoker.Commits++;
+            invoker.Log(String.Format("seat cartouches=%d", transfer));
+        }
+    }
+
+    action State A_MagAfterReload()
+    {
+        invoker.Reloading = false;
+        invoker.Log("recharge_fin");
+        bool fire = invoker.FireQueued && invoker.CommitBlock() == "";
+        invoker.FireQueued = false;
+        if (fire) return ResolveState("Fire");
+        return ResolveState("Ready");
+    }
+}
+
+// Powered saw (W09 Scorpion): a contact tool. Fire starts it (start), it runs while fire is held (a sound loop on the
+// weapon channel), cuts what is really in front of the blade within Range (a line trace from the eyes: a wall or a
+// pillar stops it, nothing is hurt through an obstacle) every ContactEvery tics, and stops when fire is released
+// (stop). The loop sound always ends with the saw: on release, when the weapon is put away, when its owner dies.
+// Power supply: a fictional convention still to be fixed with Astra (no ammunition on the bench).
+class RFBenchSaw : RFBenchWeapon abstract
+{
+    bool Running;
+    int RunTics, Hits, WallHits;
+
+    virtual int Range() { return 56; }
+    virtual int ContactDamage() { return 6; }
+    virtual int ContactEvery() { return 4; }
+    override String Counter() { return String.Format("scie %s | touches %d | contre obstacle %d", Running ? "en marche" : "arretee", Hits, WallHits); }
+    override String AmmoText() { return Running ? "en marche" : "arret"; }
+    override String AmmoLabel() { return "scie"; }
+
+    void StopLoop(String why)
+    {
+        if (Owner != null) Owner.A_StopSound(CHAN_WEAPON);
+        if (Running) Log("scie_arret " .. why);
+        Running = false;
+    }
+
+    action void A_SawStart()
+    {
+        invoker.Running = true;
+        invoker.RunTics = 0;
+        A_StartSound(invoker.SoundPrefix() .. "start", CHAN_ITEM);
+        A_StartSound(invoker.SoundPrefix() .. "loop", CHAN_WEAPON, CHANF_LOOP);
+        invoker.Log("scie_depart");
+    }
+
+    action State A_SawRun()
+    {
+        if (!invoker.Running) return ResolveState("StopSeq");
+        String block = invoker.CommitBlock();
+        if (block != "") { invoker.StopLoop(block == "mort" ? "mort" : "rangement"); return ResolveState("StopSeq"); }
+        if (player == null || !(player.cmd.buttons & BT_ATTACK)) { invoker.StopLoop("relachee"); return ResolveState("StopSeq"); }
+        invoker.RunTics++;
+        if (invoker.RunTics % invoker.ContactEvery() != 0) return null;
+        FLineTraceData d;
+        LineTrace(angle, invoker.Range(), pitch, 0, player.viewheight, 0, 0, d);
+        if (d.HitType == TRACE_HitActor && d.HitActor != null && d.HitActor.bShootable)
+        {
+            d.HitActor.DamageMobj(invoker, self, invoker.ContactDamage(), 'Melee');
+            invoker.Hits++;
+            A_StartSound(invoker.SoundPrefix() .. "contact", CHAN_ITEM, CHANF_NOSTOP);
+            invoker.Log(String.Format("scie_contact cible=%s distance=%.0f", d.HitActor.GetClassName(), d.Distance));
+        }
+        else if (d.HitType == TRACE_HitWall || d.HitType == TRACE_HitFloor || d.HitType == TRACE_HitCeiling)
+        {
+            invoker.WallHits++;
+            invoker.Log(String.Format("scie_contre_obstacle distance=%.0f", d.Distance));
+        }
+        return null;
+    }
+
+    action void A_SawStop()
+    {
+        invoker.StopLoop("relachee");
+        A_StartSound(invoker.SoundPrefix() .. "stop", CHAN_ITEM);
+    }
+
+    override void OnDeselect(bool fromPowerup, bool onToss)
+    {
+        StopLoop((Owner != null && Owner.health <= 0) ? "mort" : "rangement");      // death puts the weapon away too
+        Super.OnDeselect(fromPowerup, onToss);
+    }
+
+    override void DoEffect()
+    {
+        Super.DoEffect();
+        if (Running && (Owner == null || Owner.health <= 0)) StopLoop("mort");
+    }
+}
+
+// Melee weapon (W10 crowbar): the "strike" frame is the contact window; a line trace from the eyes decides hit
+// (a shootable in reach: damage and the material sound of the base game's crowbar puff), obstacle (a wall: impact,
+// no damage behind it) or miss.
+class RFBenchMelee : RFBenchWeapon abstract
+{
+    int Hits, WallHits, Misses;
+
+    virtual int Range() { return 64; }
+    virtual int StrikeDamage() { return 50; }
+    override String Counter() { return String.Format("coups : touches %d, obstacle %d, rates %d", Hits, WallHits, Misses); }
+    override String AmmoText() { return "-"; }
+    override String AmmoLabel() { return "melee"; }
+
+    action void A_MeleeStrike()
+    {
+        if (invoker.Owner == null || invoker.Owner.health <= 0) return;
+        FLineTraceData d;
+        LineTrace(angle, invoker.Range(), pitch, 0, player.viewheight, 0, 0, d);
+        if (d.HitType == TRACE_HitActor && d.HitActor != null && d.HitActor.bShootable)
+        {
+            A_CustomPunch(invoker.StrikeDamage(), true, CPF_NOTURN, "RFCrowbarPuff", invoker.Range());
+            invoker.Hits++;
+            invoker.Log(String.Format("coup_touche cible=%s distance=%.0f", d.HitActor.GetClassName(), d.Distance));
+        }
+        else if (d.HitType != TRACE_HitNone)
+        {
+            A_CustomPunch(invoker.StrikeDamage(), true, CPF_NOTURN, "RFCrowbarPuff", invoker.Range());
+            invoker.WallHits++;
+            invoker.Log(String.Format("coup_obstacle distance=%.0f", d.Distance));
+        }
+        else
+        {
+            invoker.Mech("miss");
+            invoker.Misses++;
+            invoker.Log("coup_rate");
+        }
+    }
+}
+
 // A paper target on a board: takes every hit, never falls, reports hits and damage per shot (per tic).
 class RFBenchTarget : Actor
 {

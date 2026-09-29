@@ -1,0 +1,16 @@
+{
+  "schema": "rf2-bench-animation/1",
+  "weapon": "W09", "name": "Scie Black & Decker Scorpion (essai)", "tag": "W09 Scorpion (essai)", "class": "RFBenchScorpion", "kind": "saw",
+  "provisional": true,
+  "provisional_note": "Scie alternative (pas circulaire, dossier maitre). Images, sons, portee et degats provisoires ; alimentation : convention fictionnelle a fixer avec Astra.",
+  "sprite": "RFSC", "file_prefix": "graphics/weapons/scorpion/RF2_SCORPION_",
+  "canvas": [1536, 1024], "scale": [6.8, 8.16], "offset": [-750, -460], "slot": 7,
+  "contact": {"range": 56, "damage": 6, "every": 4},
+  "sounds": {"start": ["start"], "loop": ["loop"], "contact": ["contact"], "stop": ["stop"], "cloth": ["cloth"], "raise": ["raise"]},
+  "sequences": {
+    "ready": [{"image": "READY_00", "tics": 1}],
+    "start": [{"image": "START_00", "tics": 4, "event": "start"}, {"image": "START_01", "tics": 4}],
+    "run":   [{"image": "RUN_00", "tics": 2}, {"image": "RUN_01", "tics": 2}],
+    "stop":  [{"image": "STOP_00", "tics": 4, "event": "stop"}, {"image": "READY_00", "tics": 4}]
+  }
+}

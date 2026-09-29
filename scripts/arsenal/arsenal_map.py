@@ -29,6 +29,11 @@ def build():
         m.modify(d - 16, 320, d + 16, 576, ftex='RFF_PAVE')
     m.modify(-16, -64, 0, 640, ftex='RFF_PAVE')          # the firing line; distances are counted from it
     m.thing(-8, 128, 1, angle=0)
+    # Contact tools (saw, crowbar): a 16-unit pillar with a target just behind it, and a control target at the same
+    # distance in the open; the player stands at y = 490 facing north. Nothing may be hurt through the pillar.
+    m.carve(-128, 528, -112, 544)
+    m.thing(-120, 560, TARGET, angle=270, args=(70, 0))
+    m.thing(-40, 560, TARGET, angle=270, args=(71, 0))
     for y, dark_flag, _ in LANES:
         for d in DISTANCES:
             m.thing(d, y, TARGET, angle=180, args=(d, dark_flag))

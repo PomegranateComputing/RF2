@@ -215,14 +215,15 @@ def make_images(anim, out_root):
         for f in frames:
             label = f"{seq} {f['tics']} t" + (f" [{f['event']}]" if f.get('event') else '')
             uses.setdefault(f['image'], []).append(label)
-    uses.setdefault(anim['flash']['image'], []).append(f"flash {anim['flash']['tics']} t")
+    if anim.get('flash'):
+        uses.setdefault(anim['flash']['image'], []).append(f"flash {anim['flash']['tics']} t")
     for layer in anim.get('chamber_layers', []):
         uses.setdefault(layer, []).append('couche de chambre')
-    draw = draw_rapid if anim['kind'] == 'pump' else draw_mr73
+    draw = {'pump': draw_rapid, 'revolver': draw_mr73}.get(anim['kind'], lambda name: draw_generic(anim, name))
     paths = {}
     for image, labels in uses.items():
         im = draw(image)
-        if image != anim['flash']['image'] and not image.startswith('CHAMBER_'):
+        if image != (anim.get('flash') or {}).get('image') and not image.startswith('CHAMBER_'):
             _plate(ImageDraw.Draw(im), [f"{anim['weapon']} {anim['name'].split(' (')[0]} - IMAGE PROVISOIRE",
                                         f"{image}", '; '.join(labels)[:80], '; '.join(labels)[80:160]])
         rel = anim['file_prefix'] + image + '.png'
@@ -323,12 +324,24 @@ def synth(event, variant, heavy):
                           + [(0, _click(rnd, 8), 1.0)]), -14.0)
     if event == 'cyl_close':
         return _norm(_mix(0.15, [(0, _click(rnd, 8, 1.3), 1.0), (0.004, _tone(1800, 80, 0.02), 0.4)]), -12.0)
+    if event == 'loop':          # a motor hum that loops cleanly (whole periods)
+        n = int(RATE * 0.5)
+        return _norm([math.sin(2 * math.pi * 120 * i / RATE) + 0.4 * math.sin(2 * math.pi * 240 * i / RATE) + 0.15 * rnd.uniform(-1, 1) for i in range(n)], -18.0)
+    if event in ('start', 'stop'):
+        n = int(RATE * 0.35)
+        up = event == 'start'
+        return _norm([math.sin(2 * math.pi * (40 + 80 * (i / n if up else 1 - i / n)) * i / RATE) * (i / n if up else 1 - i / n) for i in range(n)], -18.0)
+    if event == 'contact':
+        return _norm([v * math.sin(math.pi * i / 4800) for i, v in enumerate(_noise(4800, rnd, 2))], -14.0)
+    if event in ('swing', 'miss'):
+        n = int(RATE * 0.25)
+        return _norm([v * math.sin(math.pi * i / n) for i, v in enumerate(_noise(n, rnd, 8))], -20.0)
     return _norm(_click(rnd, 6), -18.0)
 
 
 def make_sounds(anim, out_root):
     """{logical sound: [relative wav paths]} for every event of the animation."""
-    folder = 'sounds/bench/' + ('rapid' if anim['kind'] == 'pump' else 'mr73')
+    folder = 'sounds/bench/' + {'pump': 'rapid', 'revolver': 'mr73'}.get(anim['kind'], anim['weapon'].lower())
     heavy = anim['kind'] == 'pump'
     result = {}
     for event, variants in anim['sounds'].items():
@@ -380,3 +393,33 @@ def make_pickup(path, label, colour):
     d.text((14, 20), label, font=_font(28), fill=(250, 240, 210, 255))
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     im.save(path)
+
+
+# ------------------------------------------------------------------ next weapons (W05, W09, W10): plain labelled shapes
+def draw_generic(anim, name):
+    """A plain silhouette per kind (rifle, saw, bar) moved by the image name, with the same sleeves: enough to see
+    the timing of the sequences on the bench, nothing more."""
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    if name.startswith('FLASH'):
+        _flash(d, (430, 330), 1.0)
+        return im
+    lift = {'FIRE': -26, 'RECOIL': -14, 'SWING': -120, 'STRIKE': -40, 'RUN': 0, 'START': -6}.get(name.split('_')[0], 0)
+    deg = {'SWING': 25, 'STRIKE': -20, 'RELOAD': -18, 'MAG': -18, 'SEAT': -12}.get(name.split('_')[0], 0)
+    T = Pose(0, lift, deg, (1040, 820))
+    kind = anim['kind']
+    if kind == 'magazine':
+        d.polygon(T(_bar((430, 330), (1000, 640), 40)), fill=METAL)
+        d.polygon(T([(880, 560), (1100, 640), (1536, 760), (1536, 1024), (1180, 1024), (940, 700)]), fill=METAL_D)
+        if not name.startswith('MAG_OUT'):
+            d.polygon(T(_bar((780, 560), (720, 700), 44)), fill=METAL_D)             # magazine
+    elif kind == 'saw':
+        d.polygon(T([(700, 520), (1080, 600), (1100, 780), (720, 720)]), fill=(200, 120, 20, 255))    # body
+        off = 14 if name.startswith('RUN') and name.endswith('1') else 0
+        d.polygon(T(_bar((720, 610 + off), (380, 560 + off), 18)), fill=(180, 180, 185, 255))       # blade
+    else:
+        d.polygon(T(_bar((460, 300), (1040, 800), 30)), fill=(150, 30, 26, 255))                    # bar
+        d.polygon(T(_bar((460, 300), (400, 250), 30)), fill=(150, 30, 26, 255))
+    d.polygon(T([(1000, 800), (1130, 830), (1330, 1024), (880, 1024)]), fill=SLEEVE)
+    d.polygon(T(_ellipse((1046, 790), 62, 50)), fill=HAND)
+    return im

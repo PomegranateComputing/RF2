@@ -30,23 +30,57 @@ OUT = ROOT / 'dist' / 'arsenal'
 ENGINE = Path(r'C:\PROJECTS\TOOLS\UZDoom-5.0.1\uzdoom.exe')
 IWAD = Path(r'C:\PROJECTS\TOOLS\Freedoom-0.13.0\freedoom2.wad')
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-WEAPONS = {'W03': 'W03_rapid.json', 'W04': 'W04_mr73.json'}
+WEAPONS = {'W03': 'W03_rapid.json', 'W04': 'W04_mr73.json', 'W05': 'W05_famas.json', 'W09': 'W09_scorpion.json',
+           'W10': 'W10_pied_de_biche.json'}
 
-PUMP = dict(base='RFBenchPump', labels={'fire': 'FireSeq', 'pump': 'PumpSeq', 'dry': 'DrySeq', 'reload_start': 'ReloadStartSeq',
-                                        'reload_shell': 'ReloadShellSeq', 'reload_end': 'ReloadEndSeq'},
+# One spec per mechanism: base class, sequences (state labels, in order), events that must appear, event -> code,
+# the Fire entry, the reload check, what ends each sequence ("0 X" = a 0-tic frame calling X, else a Goto).
+PUMP = dict(kind='pump', base='RFBenchPump', shots=True,
+            labels={'fire': 'FireSeq', 'pump': 'PumpSeq', 'dry': 'DrySeq', 'reload_start': 'ReloadStartSeq',
+                    'reload_shell': 'ReloadShellSeq', 'reload_end': 'ReloadEndSeq'},
             reload=('reload_start', 'reload_shell', 'reload_end'),
             need={'fire': {'shot': 1}, 'pump': {'pump_back': 1, 'pump_fwd': 1}, 'reload_shell': {'shell_in': 1}, 'dry': {}},
             events={'shot': 'A_PumpShot({pellets}, {damage}, {sh}, {sv})', 'pump_back': 'A_PumpBack()', 'pump_fwd': 'A_PumpFwd()',
-                    'shell_in': 'A_PumpShellIn()', 'dry': 'A_BenchDry()'})
-REVOLVER = dict(base='RFBenchRevolver', labels={'fire': 'FireSeq', 'dry': 'DrySeq', 'reload_open': 'ReloadOpenSeq',
-                                                'reload_eject': 'ReloadEjectSeq', 'reload_round': 'ReloadRoundSeq',
-                                                'reload_close': 'ReloadCloseSeq'},
+                    'shell_in': 'A_PumpShellIn()', 'dry': 'A_BenchDry()'},
+            entry='A_PumpFire()', reload_check='A_PumpReloadCheck()',
+            tails={'fire': 'Goto PumpSeq', 'pump': '0 A_PumpAfterPump()', 'dry': 'Goto Ready', 'reload_start': 'Goto ReloadShellSeq',
+                   'reload_shell': '0 A_PumpShellNext()', 'reload_end': '0 A_PumpAfterReload()'})
+REVOLVER = dict(kind='revolver', base='RFBenchRevolver', shots=True,
+                labels={'fire': 'FireSeq', 'dry': 'DrySeq', 'reload_open': 'ReloadOpenSeq', 'reload_eject': 'ReloadEjectSeq',
+                        'reload_round': 'ReloadRoundSeq', 'reload_close': 'ReloadCloseSeq'},
                 reload=('reload_open', 'reload_eject', 'reload_round', 'reload_close'),
                 need={'fire': {'shot': 1}, 'reload_eject': {'eject': 1}, 'reload_round': {'round_in': 1}, 'dry': {},
                       'reload_open': {}, 'reload_close': {}},
                 events={'shot': 'A_RevShot({pellets}, {damage}, {sh}, {sv})', 'dry': 'A_BenchDry()', 'cyl_open': 'A_RevOpen()',
-                        'eject': 'A_RevEject()', 'round_in': 'A_RevRoundIn()', 'cyl_close': 'A_RevClose()'})
+                        'eject': 'A_RevEject()', 'round_in': 'A_RevRoundIn()', 'cyl_close': 'A_RevClose()'},
+                entry='A_RevFire()', reload_check='A_RevReloadCheck()',
+                tails={'fire': 'Goto Ready', 'dry': 'Goto Ready', 'reload_open': 'Goto ReloadEjectSeq', 'reload_eject': 'Goto ReloadRoundSeq',
+                       'reload_round': '0 A_RevRoundNext()', 'reload_close': '0 A_RevAfterReload()'})
+MAGAZINE = dict(kind='magazine', base='RFBenchMagazine', shots=True,
+                labels={'fire': 'FireSeq', 'dry': 'DrySeq', 'reload': 'ReloadSeq', 'reload_empty': 'ReloadEmptySeq', 'mode': 'ModeSeq'},
+                reload=('reload', 'reload_empty'),
+                need={'fire': {'shot': 1}, 'dry': {}, 'reload': {'seat': 1}},
+                optional={'reload_empty': {'seat': 1}, 'mode': {'mode': 1}},
+                events={'shot': 'A_MagShot({pellets}, {damage}, {sh}, {sv})', 'seat': 'A_MagSeat()', 'dry': 'A_BenchDry()', 'mode': 'A_MagMode()'},
+                entry='A_MagFire()', reload_check='A_MagReloadCheck()',
+                tails={'fire': '0 A_MagAfterShot()', 'dry': 'Goto Ready', 'reload': '0 A_MagAfterReload()',
+                       'reload_empty': '0 A_MagAfterReload()', 'mode': 'Goto Ready'})
+SAW = dict(kind='saw', base='RFBenchSaw', shots=False,
+           labels={'start': 'StartSeq', 'run': 'RunSeq', 'stop': 'StopSeq'}, reload=(),
+           need={'start': {'start': 1}, 'run': {}, 'stop': {'stop': 1}},
+           events={'start': 'A_SawStart()', 'stop': 'A_SawStop()'},
+           entry=None, fire_goto='StartSeq', frame_state={'run': 'A_SawRun()'},
+           tails={'start': 'Goto RunSeq', 'run': 'Goto RunSeq', 'stop': 'Goto Ready'})
+MELEE = dict(kind='melee', base='RFBenchMelee', shots=False,
+             labels={'swing': 'SwingSeq'}, reload=(),
+             need={'swing': {'strike': 1}},
+             events={'strike': 'A_MeleeStrike()'},
+             entry=None, fire_goto='SwingSeq', tails={'swing': 'Goto Ready'})
+SPECS = {s['kind']: s for s in (PUMP, REVOLVER, MAGAZINE, SAW, MELEE)}
 
+
+def sound_prefix(anim):
+    return 'rf/bench/' + {'pump': 'rapid', 'revolver': 'mr73'}.get(anim['kind'], anim['weapon'].lower()) + '/'
 
 def sha256(data):
     return hashlib.sha256(data).hexdigest()
@@ -106,7 +140,7 @@ def load_weapon(weapon, deliveries, files):
                     targets[f['file']] = f['target_relpath']
         prefix = anim.get('file_prefix', '')
         rig = rig_of(anim)
-        names = ({f['image'] for fr in anim['sequences'].values() for f in fr} | {anim['flash']['image']}
+        names = ({f['image'] for fr in anim['sequences'].values() for f in fr} | ({anim['flash']['image']} if anim.get('flash') else set())
                  | {img for group in rig.values() if group for poses in group for img in poses})
         for image in sorted(names):
             rel = anim.get('files', {}).get(image, prefix + image + '.png')
@@ -115,7 +149,7 @@ def load_weapon(weapon, deliveries, files):
             files[target] = src.read_bytes()
             images[image] = target
             provenance[target] = dict(file=rel, sha256=sha256(files[target]))
-        folder = 'sounds/bench/' + ('rapid' if anim['kind'] == 'pump' else 'mr73')
+        folder = 'sounds/bench/' + sound_prefix(anim).split('/')[2]
         for event, variants in anim.get('sounds', {}).items():
             rels = []
             for v in variants:
@@ -236,7 +270,9 @@ def rig_sprites(anim):
 # ------------------------------------------------------------------ generation
 def check(anim, spec):
     problems = []
-    for seq, need in spec['need'].items():
+    needs = dict(spec['need'])
+    needs.update({seq: need for seq, need in spec.get('optional', {}).items() if seq in anim['sequences']})
+    for seq, need in needs.items():
         frames = anim['sequences'].get(seq)
         if not frames:
             problems.append(f'sequence absente : {seq}')
@@ -245,12 +281,14 @@ def check(anim, spec):
             n = sum(1 for f in frames if f.get('event') == event)
             if n != count:
                 problems.append(f'{seq} : {n} evenement(s) {event}, {count} attendu(s)')
+    for seq, frames in anim['sequences'].items():
         for f in frames:
             if not isinstance(f.get('tics'), int) or f['tics'] < 1:
                 problems.append(f"{seq} : duree invalide {f.get('tics')} ({f.get('image')})")
-    shots = sum(1 for fr in anim['sequences'].values() for f in fr if f.get('event') == 'shot')
-    if shots != 1:
-        problems.append(f'{shots} evenements shot au total, 1 attendu (le tir est un seul evenement)')
+    if spec['shots']:
+        shots = sum(1 for fr in anim['sequences'].values() for f in fr if f.get('event') == 'shot')
+        if shots != 1:
+            problems.append(f'{shots} evenements shot au total, 1 attendu (le tir est un seul evenement)')
     if spec is REVOLVER:
         rig = rig_of(anim)
         poses = [int(f.get('chamber_pose') or (1 if f.get('chambers') else 0)) for fr in anim['sequences'].values() for f in fr]
@@ -278,8 +316,8 @@ def letters_for(anim):
     return {img: LETTERS[i] for i, img in enumerate(order)}
 
 
-def frame_line(anim, spec, seq, i, f, letter, prefix_sound):
-    b = anim['ballistics']
+def frame_line(anim, spec, seq, i, f, letter):
+    b = anim.get('ballistics') or dict(pellets=1, damage=0, spread=[0, 0])
     parts = []
     if i == 0:
         parts.append(f'A_BenchSeq("{seq}")')
@@ -295,61 +333,77 @@ def frame_line(anim, spec, seq, i, f, letter, prefix_sound):
         parts.append(f"A_RevRig({pose}, {int(f.get('hand_stage') or 0)})")
     if f.get('ready_point'):
         parts.append('A_WeaponReady(WRF_NOFIRE | WRF_NOBOB)')
+    state_fn = spec.get('frame_state', {}).get(seq)        # a check that may leave the sequence (the saw's run)
     bright = ' Bright' if ev == 'shot' else ''
-    body = (' { ' + '; '.join(parts) + '; }') if len(parts) > 1 else (' ' + parts[0] + ';' if parts else ';')
+    if state_fn:
+        body = (' { ' + '; '.join(parts) + f'; return {state_fn}; }}') if parts else f' {state_fn};'
+    else:
+        body = (' { ' + '; '.join(parts) + '; }') if len(parts) > 1 else (' ' + parts[0] + ';' if parts else ';')
     return f"        {anim['sprite']} {letter} {f['tics']}{bright}{body}"
 
 
 def gen_class(anim):
-    spec = PUMP if anim['kind'] == 'pump' else REVOLVER
+    spec = SPECS[anim['kind']]
     check(anim, spec)
     L = letters_for(anim)
     spr, ready = anim['sprite'], L[anim['sequences']['ready'][0]['image']]
-    prefix = 'rf/bench/' + ('rapid/' if spec is PUMP else 'mr73/')
-    cap = anim['capacity']
-    out = [f"class {anim['class']} : {spec['base']}", '{', '    Default', '    {',
-           f"        Weapon.AmmoType \"{anim['ammo']['class']}\";", '        Weapon.AmmoUse 0;', '        Weapon.AmmoGive 0;',
-           f"        Weapon.SlotNumber {anim['slot']};", f"        Weapon.SelectionOrder {3000 + anim['slot']};",
-           '        Weapon.BobStyle "InverseSmooth";', '        Weapon.BobRangeX 0.5;', '        Weapon.BobRangeY 0.35;']
+    prefix = sound_prefix(anim)
+    cap = anim.get('capacity') or {}
+    contact = anim.get('contact') or {}
+    out = [f"class {anim['class']} : {spec['base']}", '{', '    Default', '    {']
+    if anim.get('ammo'):
+        out += [f"        Weapon.AmmoType \"{anim['ammo']['class']}\";", '        Weapon.AmmoUse 0;', '        Weapon.AmmoGive 0;']
+    out += [f"        Weapon.SlotNumber {anim['slot']};", f"        Weapon.SelectionOrder {3000 + anim['slot']};",
+            '        Weapon.BobStyle "InverseSmooth";', '        Weapon.BobRangeX 0.5;', '        Weapon.BobRangeY 0.35;']
     if 'raise' in anim['_sounds']:
         out.append(f'        Weapon.UpSound "{prefix}raise";')
-    out += [f"        Tag {zs_str(anim.get('tag') or anim['name'])};", '        +WEAPON.AMMO_OPTIONAL', '        +WEAPON.NOAUTOFIRE', '    }', '',
-            f'    override String SoundPrefix() {{ return "{prefix}"; }}']
+    out += [f"        Tag {zs_str(anim.get('tag') or anim['name'])};", '        +WEAPON.AMMO_OPTIONAL', '        +WEAPON.NOAUTOFIRE']
+    if spec in (SAW, MELEE):
+        out += ['        +WEAPON.MELEEWEAPON']
+    out += ['    }', '', f'    override String SoundPrefix() {{ return "{prefix}"; }}']
     if spec is PUMP:
         out += [f"    override int TubeCap() {{ return {int(cap['tube'])}; }}",
                 f"    override bool CarriesChamber() {{ return {'true' if cap.get('chamber', 1) else 'false'}; }}"]
-    else:
+    elif spec is REVOLVER:
         out += [f"    override int Cylinder() {{ return {int(cap.get('cylinder', 6))}; }}", '',
                 '    override State RigState(int kind, int i, int j)', '    {', '        switch (kind * 100 + i * 10 + j)', '        {']
         out += [f'        case {code}: return FindState("{label}");' for label, _, _, _, code in rig_sprites(anim)]
         out += ['        }', '        return null;', '    }']
+    elif spec is MAGAZINE:
+        out += [f"    override int MagCap() {{ return {int(cap.get('magazine', 25))}; }}",
+                f"    override int BurstSize() {{ return {int(anim.get('burst', 3))}; }}"]
+    elif spec is SAW:
+        out += [f"    override int Range() {{ return {int(contact.get('range', 56))}; }}",
+                f"    override int ContactDamage() {{ return {int(contact.get('damage', 6))}; }}",
+                f"    override int ContactEvery() {{ return {int(contact.get('every', 4))}; }}"]
+    elif spec is MELEE:
+        out += [f"    override int Range() {{ return {int(contact.get('range', 64))}; }}",
+                f"    override int StrikeDamage() {{ return {int(contact.get('damage', 50))}; }}"]
     out += ['', '    States', '    {',
             '    Ready:', f'        {spr} {ready} 1 A_BenchReady();', '        Loop;',
             '    Deselect:', f'        {spr} {ready} 1 A_Lower(12);', '        Loop;',
-            '    Select:', f'        {spr} {ready} 1 A_Raise(12);', '        Loop;',
-            '    Fire:', f"        {spr} {ready} 0 {'A_PumpFire()' if spec is PUMP else 'A_RevFire()'};", '        Goto Ready;']
-    tails = ({'fire': 'Goto PumpSeq;', 'pump': f'{spr} {ready} 0 A_PumpAfterPump();', 'dry': 'Goto Ready;',
-              'reload_start': 'Goto ReloadShellSeq;', 'reload_shell': f'{spr} {ready} 0 A_PumpShellNext();',
-              'reload_end': f'{spr} {ready} 0 A_PumpAfterReload();'} if spec is PUMP else
-             {'fire': 'Goto Ready;', 'dry': 'Goto Ready;', 'reload_open': 'Goto ReloadEjectSeq;',
-              'reload_eject': 'Goto ReloadRoundSeq;', 'reload_round': f'{spr} {ready} 0 A_RevRoundNext();',
-              'reload_close': f'{spr} {ready} 0 A_RevAfterReload();'})
-    order = list(spec['labels'])
-    for seq in order:
-        if seq == spec['reload'][0]:
-            out += ['    Reload:', f"        {spr} {ready} 0 {'A_PumpReloadCheck()' if spec is PUMP else 'A_RevReloadCheck()'};"]
+            '    Select:', f'        {spr} {ready} 1 A_Raise(12);', '        Loop;', '    Fire:']
+    out += [f"        {spr} {ready} 0 {spec['entry']};", '        Goto Ready;'] if spec['entry'] else [f"        Goto {spec['fire_goto']};"]
+    if spec is MAGAZINE:
+        out += ['    AltFire:'] + (['        Goto ModeSeq;'] if 'mode' in anim['sequences'] else [f'        {spr} {ready} 6 A_MagMode();', '        Goto Ready;'])
+    present = [seq for seq in spec['labels'] if seq in anim['sequences']]
+    for seq in present:
+        if spec['reload'] and seq == spec['reload'][0]:
+            out += ['    Reload:', f"        {spr} {ready} 0 {spec['reload_check']};"]
         out.append(f"    {spec['labels'][seq]}:")
         for i, f in enumerate(anim['sequences'][seq]):
-            out.append(frame_line(anim, spec, seq, i, f, L[f['image']], prefix))
-        tail = tails[seq]
-        out.append('        ' + tail if not tail.startswith('Goto') else '        ' + tail)
-        if not tail.startswith('Goto'):
-            out.append('        Goto Ready;')
+            out.append(frame_line(anim, spec, seq, i, f, L[f['image']]))
+        tail = spec['tails'][seq]
+        if tail.startswith('Goto'):
+            out.append(f'        {tail};')
+        else:
+            out += [f'        {spr} {ready} {tail};', '        Goto Ready;']
     if spec is REVOLVER:
         for label, sprite, letter, _, _ in rig_sprites(anim):      # rig layers (101-107), set by RFBenchRevolver.ShowRig
             out += [f'    {label}:', f'        {sprite} {letter} -1;', '        Stop;']
-    out += ['    Flash:', f"        {anim['flash_sprite']} A {anim['flash']['tics']} Bright A_Light2;", '        TNT1 A 0 A_Light0;',
-            '        Stop;', '    Spawn:', '        TNT1 A -1;', '        Stop;', '    }', '}', '']
+    if anim.get('flash'):
+        out += ['    Flash:', f"        {anim['flash_sprite']} A {anim['flash']['tics']} Bright A_Light2;", '        TNT1 A 0 A_Light0;', '        Stop;']
+    out += ['    Spawn:', '        TNT1 A -1;', '        Stop;', '    }', '}', '']
     return '\n'.join(out), L
 
 
@@ -365,7 +419,8 @@ def gen_textures(anim, L, files):
                 f'    Patch "{rel}", 0, 0', '}']
     for image, letter in L.items():
         out += sprite(f"{anim['sprite']}{letter}0", anim['_images'][image])
-    out += sprite(f"{anim['flash_sprite']}A0", anim['_images'][anim['flash']['image']])
+    if anim.get('flash'):
+        out += sprite(f"{anim['flash_sprite']}A0", anim['_images'][anim['flash']['image']])
     if anim['kind'] == 'revolver':
         for _, spr, letter, image, _ in rig_sprites(anim):
             out += sprite(f'{spr}{letter}0', anim['_images'][image])
@@ -373,7 +428,7 @@ def gen_textures(anim, L, files):
 
 
 def gen_sndinfo(anim):
-    prefix = 'rf/bench/' + ('rapid/' if anim['kind'] == 'pump' else 'mr73/')
+    prefix = sound_prefix(anim)
     out = [f"// {anim['weapon']} {anim['name']} - {anim['_source']['kind']}"]
     for event, rels in anim['_sounds'].items():
         if len(rels) == 1:
@@ -387,17 +442,21 @@ def gen_sndinfo(anim):
 def gen_setup(anims):
     out = ['class RFBenchSetup play', '{', '    static void Give(Actor pl)', '    {']
     for a in anims:
-        out += [f"        pl.GiveInventory('{a['class']}', 1);", f"        pl.GiveInventory('{a['ammo']['class']}', {a['ammo']['start_reserve']});"]
+        out += [f"        pl.GiveInventory('{a['class']}', 1);"]
+        if a.get('ammo'):
+            out += [f"        pl.GiveInventory('{a['ammo']['class']}', {a['ammo']['start_reserve']});"]
     for a in anims:
         out.append(f"        {{ let w = RFBenchWeapon(pl.FindInventory('{a['class']}')); if (w != null) w.Baseline = w.Loaded() + w.Reserve(); }}")
     out += [f"        if (pl.player != null) pl.player.PendingWeapon = Weapon(pl.FindInventory('{anims[0]['class']}'));",
             '        RFBench.Log("dotation Browning FAL pied-de-biche ' + ' '.join(a['class'] for a in anims) + '");', '    }', '',
             '    static clearscope String Source()', '    {']
-    provisional, delivered = '\\cgPROVISOIRE\\c-', 'livraison'
-    text = '  '.join(f"{a['weapon']} " + (provisional if a['_source']['kind'] == 'placeholder' else delivered)
-                     + (' + recul banc' if a.get('_presentation') and a['_presentation']['offsets'] else '') for a in anims)
-    out += [f'        return "{text}";', '    }', '}', '']
+    groups = {}
     for a in anims:
+        key = 'provisoire' if a['_source']['kind'] == 'placeholder' else ('livraison + recul banc' if a.get('_presentation') and a['_presentation']['offsets'] else 'livraison')
+        groups.setdefault(key, []).append(a['weapon'])
+    text = ' ; '.join(','.join(ws) + ' ' + (key.upper() if key == 'provisoire' else key) for key, ws in groups.items())
+    out += [f'        return "{text}";', '    }', '}', '']
+    for a in [a for a in anims if a.get('ammo')]:
         out += [f"class {a['ammo']['class']} : Ammo", '{', '    Default', '    {', '        Inventory.Amount 1;',
                 '        Inventory.MaxAmount 999;', '        Ammo.BackpackAmount 0;', '        Ammo.BackpackMaxAmount 999;',
                 f"        Tag {zs_str(a['ammo']['tag'])};", '        +INVENTORY.IGNORESKILL', '    }',
@@ -587,7 +646,7 @@ def main():
                            sequences={k: [dict(image=f['image'], tics=f['tics'], event=f.get('event')) for f in v]
                                       for k, v in anim['sequences'].items()},
                            tics={k: sum(f['tics'] for f in v) for k, v in anim['sequences'].items()},
-                           capacity=anim['capacity'], ballistics=anim['ballistics'], provisional=anim.get('provisional', False),
+                           capacity=anim.get('capacity'), ballistics=anim.get('ballistics'), contact=anim.get('contact'), provisional=anim.get('provisional', False),
                            presentation=anim.get('_presentation')))
     weapons_zs.append(gen_setup(anims))
     voices = load_voices(a.delivery, files)

@@ -1,0 +1,18 @@
+{
+  "schema": "rf2-bench-animation/1",
+  "weapon": "W10", "name": "Pied-de-biche (essai)", "tag": "W10 pied-de-biche (essai)", "class": "RFBenchCrowbar", "kind": "melee",
+  "provisional": true,
+  "provisional_note": "Meme bras en hoodie ; durees reprises du pied-de-biche du jeu (arme 5, frappe 3, coup 2, suivi 4, retour 8). Images et sons provisoires ; les sons d'impact par matiere sont ceux du jeu (RFCrowbarPuff).",
+  "sprite": "RFPB", "file_prefix": "graphics/weapons/pied_de_biche/RF2_PDB_",
+  "canvas": [1536, 1024], "scale": [6.8, 8.16], "offset": [-750, -460], "slot": 8,
+  "contact": {"range": 64, "damage": 50},
+  "sounds": {"swing": ["swing"], "miss": ["miss"], "raise": ["raise"]},
+  "sequences": {
+    "ready": [{"image": "READY_00", "tics": 1}],
+    "swing": [{"image": "SWING_00", "tics": 5, "event": "swing"},
+              {"image": "STRIKE_00", "tics": 3},
+              {"image": "STRIKE_01", "tics": 2, "event": "strike"},
+              {"image": "RECOVER_00", "tics": 4},
+              {"image": "RECOVER_01", "tics": 8, "ready_point": true}]
+  }
+}
