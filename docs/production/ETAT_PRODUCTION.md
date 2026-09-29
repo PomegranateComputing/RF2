@@ -42,7 +42,7 @@ tag. Chaque candidate reçoit son build et son lanceur (`scripts/export_candidat
 | Zone | Écrivain |
 |---|---|
 | Maps, acteurs, scripts, audio en jeu, UI runtime, builds, rapports | Opus 5.5 (unique intégrateur de `C:\PROJECTS\RF2_UZDOOM`) |
-| Sources et exports artistiques des lots attribués | Astra, dans son worktree `C:\PROJECTS\RF2_UZDOOM_ASTRA_20260927` (branche `art/rf2-art-02-astra`, base `5b53d9e`) |
+| Sources et exports artistiques des lots attribués | Astra. Espace actif depuis le 29/09 (confirmé) : `C:\PROJECTS\RF2_UZDOOM\incoming\astra\`, où Astra écrit seule ; ses livraisons figées restent où elles ont été remises. Anciens worktrees (`RF2_UZDOOM_ASTRA_20260927`, `…_ARSENAL_20260928`, `…_RF01_TEXTURES_1940_20260928`) conservés, plus utilisés pour les remises |
 | Acceptation artistique | Propriétaire |
 | Fable | Tâche bornée attribuée explicitement, puis relais |
 
@@ -81,8 +81,8 @@ narratif : Luna Park (ID technique RF04), sans écraser le blockout RF03 (Batign
 | RF02-C | Opus + Astra | idem | idem | parcours complet, figures F02-01…08, Luna Park | figures F02-01…08 placées (`9510b39`), `docs/RF2_RF02_C.md` ; entrée de Luna Park : modèle attendu |
 | COMBAT-02 | Opus runtime, Astra présentation/audio | idem | `src/zscript/rf/weapons.zs`, rencontres | sons et retours d'armes, pied-de-biche, difficulté | pied-de-biche intégré et vérifié (`85fc6a1`), `docs/RF2_COMBAT_02.md` ; ressenti des armes à feu, rencontres, mesures : à faire |
 | SUITE-03 | Opus + Astra | RF02 figé | `scripts/mapkit/rf04.py` (nouveau), campagne | premier segment Luna Park jouable | à faire |
-| RF01-TEXTURES-1940 | Opus intègre, Astra produit | `candidate/rf01-textures-1940` (tag accepté + socle) | Opus : `TEXTURES.rf01`, affectations RF01, `MODELDEF` ; Astra : images | matières « Sainte-Anne 1940 » (mandat du 28/09) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_RF01_TEXTURES_1940.cmd`, build isolé `RF2_RF01_TEXTURES_1940_20260928_1745` (`1c77187c…`, commit `82d85a7`), `docs/RF2_RF01_TEXTURES_1940.md` ; 44 entrées remplacées, 12 conservées, 4 décalques non livrés ; **décision du propriétaire attendue sur les soubassements** (les trois familles de couleur, repère d'orientation, sont devenues une seule) ; retour à Astra `handoff/RF01-TEXTURES-1940/RETOUR_OPUS_1.md`. Le contrat, déposé par erreur dans le worktree d'Astra du 27/09 (`RF2_UZDOOM_ASTRA_20260927/incoming/astra/RF01_TEXTURES_1940/00_CONTRAT_OPUS/`), ne lui est pas parvenu. Pas encore porté sur `prod/rf2-campaign` |
-| RF2-ARSENAL | Opus mène, Astra produit | tag accepté + socle (worktree d'Astra `RF2_UZDOOM_ASTRA_ARSENAL_20260928`) | Opus : contrat moteur, banc d'essai séparé ; Astra : W03 Manufrance Rapid, W04 Manurhin MR73 | deux armes jouables sur un banc d'essai hors campagne (`JOUER_RF2_ARSENAL_ESSAI.cmd`) | contrat remis (`e508a5b`, `docs/production/handoff/RF2-ARSENAL/CONTRAT.md`, copie `C:\PROJECTS\RF2_ARSENAL_20260928_CONTRAT_OPUS\`) ; Astra au travail ; **banc d'essai prêt, images et sons provisoires** : branche `bench/rf2-arsenal` (`b4766d3`), `JOUER_RF2_ARSENAL_ESSAI.cmd` (sur cette branche), build `dist\arsenal\RF2_ARSENAL_ESSAI_20260928_1822`, sonde PASS, `docs/RF2_ARSENAL_BANC.md` ; note `BANC_POUR_ASTRA.md` (format du fichier d'animation) ; rien entendu |
+| RF01-TEXTURES-1940 | Opus intègre, Astra produit | `candidate/rf01-textures-1940` (tag accepté + socle) | Opus : `TEXTURES.rf01`, affectations RF01, `MODELDEF` ; Astra : images | matières « Sainte-Anne 1940 » (mandat du 28/09) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_RF01_TEXTURES_1940.cmd` → build isolé **`RF2_RF01_TEXTURES_1940_20260929_1606`** (`67485285…`, commit `fadb3d8`), `docs/RF2_RF01_TEXTURES_1940.md`. Choix B du propriétaire : trois soubassements distincts d'Astra (écarts 19,9 / 30,8 / 29,8 ; 28,6 / 37,8 / 43,5 dans le jeu), enduit, carrelage, côté de table, à 8 px/u ; 4 décals d'usure reçus mais trop discrets, non intégrés ; RF01 A et B PASS ; RF02 identique au build accepté. Retours à Astra `handoff/RF01-TEXTURES-1940/RETOUR_OPUS_1.md` et `RETOUR_OPUS_2.md` (décals à reprendre, sang-de-bœuf plus sombre seulement sur demande du propriétaire, puis lot complet). Candidate 1745 conservée (`…_1745\JOUER.cmd`). Pas porté sur `prod/rf2-campaign` avant le lot complet et la revue du propriétaire |
+| RF2-ARSENAL | Opus mène, Astra produit | tag accepté + socle (worktree d'Astra `RF2_UZDOOM_ASTRA_ARSENAL_20260928`) | Opus : contrat moteur, banc d'essai séparé ; Astra : W03 Manufrance Rapid, W04 Manurhin MR73 | deux armes jouables sur un banc d'essai hors campagne (`JOUER_RF2_ARSENAL_ESSAI.cmd`) | **Contrat v2** (29/09, seul en vigueur ; `docs/production/handoff/RF2-ARSENAL/CONTRAT.md`, identique sur `bench/rf2-arsenal` `d200735` ; copie `C:\PROJECTS\RF2_ARSENAL_20260928_CONTRAT_OPUS\`, v1 conservée et marquée remplacée). **W03 Rapid (4+1) et W04 MR73 de la livraison V01 d'Astra intégrés au banc et vérifiés au banc** : `JOUER_RF2_ARSENAL_ESSAI.cmd` → `dist\arsenal\RF2_ARSENAL_ESSAI_20260929_1545` (`5aaec05f…`), sondes armes, répliques (repères provisoires) et armes suivantes PASS ; W05 FAMAS et W09 Scorpion en essai ; W10 = le pied-de-biche du jeu, réemployé tel quel et éprouvé au banc. Défauts d'image renvoyés à Astra (recul, extraction MR73 sans geste, étuis tirés identiques aux cartouches intactes) ; `docs/RF2_ARSENAL_BANC.md`, retour `handoff/SUITE-20260929/RETOUR_OPUS.md`. **Aucun son écouté.** Répliques de Viktor : pas de prise. Aucune arme en campagne ni dans les cartes |
 
 ## 6. Matrice de couverture réelle
 
@@ -103,10 +103,14 @@ Un statut vaut pour un périmètre et une version.
 |---|---|
 | Browning Hi-Power | OWNER_ACCEPTED (RF01) — master du bras et de la manche |
 | FN FAL | OWNER_ACCEPTED (RF01) |
-| Fusil à pompe type riot | INVENTORIED (première tranche historique, modèle exact ouvert) |
-| FAMAS | INVENTORIED |
-| Scie Black & Decker Skorpion, Browning M2 .50, pistolet taser | INVENTORIED (seconde vague) |
-| Lance-flammes | INVENTORIED, demande à reconfirmer |
+| Pied-de-biche (`RFCrowbar`) | INTEGRATED sur `prod/rf2-campaign` (COMBAT-02, `85fc6a1`) ; réemployé comme W10 de l'arsenal ; non jugé par le propriétaire |
+| Fusil à pompe : W03 Manufrance Rapid 12/70, tube 4 + 1 | banc d'essai seulement (V01 d'Astra, vérifié au banc, non écouté) ; hors campagne |
+| Revolver : W04 Manurhin MR73 Gendarmerie | banc d'essai seulement (V01 d'Astra, vérifié au banc, non écouté) ; hors campagne |
+| FAMAS F1 (W05) | master de travail d'Astra ; mécanique éprouvée au banc sur images d'essai |
+| Scie Black & Decker Scorpion (W09) | master de travail d'Astra ; mécanique éprouvée au banc sur images d'essai ; alimentation à décider par le propriétaire |
+| Browning M2 .50, pistolet taser | INVENTORIED (seconde vague) ; références préparatoires d'Astra pour la M2HB (présentation joueur à préciser) |
+| RPG (W07) | références préparatoires d'Astra (RPG-7V) |
+| Lance-flammes | INVENTORIED, demande à reconfirmer ; M2-2 proposé par Astra (références seulement) |
 
 ### Ennemis
 
@@ -170,3 +174,14 @@ action.
   propriétaire, avant/après (`2d44f86`). Scène du ticket fiabilisée (cône d'usage). Aucune nouvelle livraison d'Astra
   pour la passe de textures RF01 à cette heure. Prochaine action : lisibilité de l'interface (messages, attribution,
   relecture, compteurs), rencontres et mesures de difficulté, puis Luna Park dès les modèles d'Astra.
+- 29/09 — mandat « Suite Opus/Fable » (`C:\PROJECTS\RF2_SUITE_V01_20260928\`). Arsenal : V01 W03/W04 d'Astra
+  contrôlé (3665 fichiers) et lu tel quel par le banc (`bench/rf2-arsenal`) ; son adaptateur de barillet reporté dans
+  le constructeur ; règle de changement d'arme tenue par le code (l'arme engageait au tic de la demande) ; Rapid 4+1
+  partout ; captures classées par le tic qu'elles montrent et films à son natif ; builds `…_1532` (revue) et `…_1545`
+  (lanceur) ; W05/W09/W10 éprouvés au banc, le W10 réel compris. Contrat v2, seul en vigueur, sur les deux branches.
+  RF01 : envoi d'Astra du 29/09 comparé dans le moteur, six matières intégrées (candidate 1606), décals retenus.
+  Retours à Astra déposés dans son espace (`incoming/astra/RF2_SUITE_20260929/RETOUR_OPUS.md`, `RETOUR_OPUS_2.md`).
+  Aucun son écouté ; aucune nouvelle candidate approuvée. Ce mandat ne remplace pas les corrections RF02 ni la
+  production MAP03 : leur ordre sur cette branche est inchangé, aucune arme du banc n'entre dans les cartes. Prochaine
+  action : décals et lot complet RF01 d'Astra (nouvelle candidate datée), V02 W03/W04 si Astra corrige, W05/W09
+  animés, prises de Viktor ; décisions du propriétaire : alimentation de la scie, sang-de-bœuf.

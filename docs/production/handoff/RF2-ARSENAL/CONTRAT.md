@@ -1,140 +1,124 @@
-# RF2-ARSENAL — contrat moteur d'Opus pour Astra (W03 Manufrance Rapid, W04 Manurhin MR73)
+# RF2-ARSENAL — contrat moteur, version 2 (29/09/2026)
 
-Mandat du 28/09 (`C:\PROJECTS\RF2_ARSENAL_20260928`, `04_OPUS_FABLE.md`, `05_ASTRA.md`). Astra produit les armes ;
-Opus fixe le contrat moteur, monte le banc d'essai séparé et éprouve les livraisons. Aucune arme n'entre dans la
-campagne, les maps, les inventaires normaux ou les lanceurs acceptés dans ce lot. Les valeurs ci-dessous sont
-relevées dans le dépôt réel ; ce qui n'y est pas encore fixé est marqué **À FIXER** avec la personne qui le fixe.
+Document de référence commun à Opus (intégration, banc) et Codex Astra (production des armes). Il remplace la
+version 1 du 28/09 (sha256 `2acc1329…`, reçue par Astra ; conservée sous `CONTRAT_V1_20260928.md` dans le dossier de
+transmission, marquée remplacée). Mandats : `C:\PROJECTS\RF2_SUITE_V01_20260928\` (`RF2_SUITE_OPUS_FABLE.md`,
+`RF2_SUITE_ASTRA.md`, `08_ADDENDUM_REPLIQUES_VIKTOR.md`). Rien ici ne vaut verdict du propriétaire ; aucune arme
+n'entre dans la campagne dans ce lot.
 
-## 0. Base
+Mise à jour du 29/09, 16 h (même version, complétée, rien de retiré) : lot W05_W09_W10_V01 reçu (§0, §1), durées
+et repères W10 (§4), règle 8 (§5), tableau §8 mis à jour, corrections communes du master (§9).
 
-- Dépôt `C:\PROJECTS\RF2_UZDOOM`, branche `prod/rf2-campaign`, commit `f9a5c0e` au moment de ce contrat.
-- Browning et FAL de référence : ceux du build RF01 accepté (tag `rf01-owner-accepted-20260927`, pk3 `04bdd0ae…`,
-  `JOUER_RF2_ART_REVIEW.cmd`). Leurs images, déclarations et sons n'ont pas changé depuis (diff vide jusqu'à
-  `f9a5c0e`).
-- Moteur UZDoom 5.0.1 ; 35 tics par seconde ; FOV joueur 90 ; résolutions éprouvées dans les preuves récentes :
-  1920×1080 (référence), 1440×1080 (4:3), 2560×1080 (21:9), 2560×1440, 3840×2160, 1600×900.
+## 0. Espaces et versions
 
-## 1. Masters à utiliser (autorité pour les mains et le hoodie)
-
-| Source | Chemin (dépôt) | Nature |
-|---|---|---|
-| FAL, rig 2D en couches | `art/rf2_art_01/weapons/fal_legacy_source/` : `layers/arm_l.png`, `arm_l2.png` (manche continue), `arm_r.png`, `body.png`, `housing.png`, `knob.png`, `mag.png`, `mag_fresh.png`, `flash.png` ; `rigcomp.py` (composition), `animation.json` (poses), `reference/master_origin.md` | master articulé : **c'est la convention à reprendre** (une frame = une composition de couches, pas une image régénérée) |
-| FAL, réparation de manche | `incoming/astra/RF01_P0_FAL/` (preuve `evidence/RF2_FAL_SLEEVE_REPAIR.png`, `source/`) | manche noire continue acceptée |
-| Browning | `art/rf2_art_01/weapons/browning/master.png`, `master_raw.png` (1536×1024), `animation.json`, `export_browning.py` | master de la main droite et du hoodie |
-| Exports acceptés | `src/graphics/weapons/fal/RF2_FAL_*_A0.png` (1536×1024), `src/graphics/weapons/browning/0?_BHP_*.png` (1672×941) | rendu final, frame par frame |
-| Captures du propriétaire | `C:\PROJECTS\RF2_ARSENAL_20260928\references\` | rendu en jeu |
-
-Si un fichier manque dans ton espace, demande-le ; copie ces sources dans ton worktree et ne modifie pas l'original.
-
-## 2. Présentation (valeurs réelles)
-
-| | FAL (et pied-de-biche) | Browning |
-|---|---|---|
-| Type | sprites d'arme (calque `PSP_WEAPON`), 2D | idem |
-| Toile par frame | 1536×1024 RGBA | 1672×941 RGBA |
-| Échelle | XScale 6.8, YScale 8.16 | XScale 6, YScale 7.2 (et non 6.8/8.16 comme le dit l'en-tête de `TEXTURES.weapons`) |
-| Décalage | Offset -750, -460 | Offset -700, -300 |
-| Flash | frame à part `RFMZ A0`, même toile et même décalage, dessinée sur le calque flash (`A_GunFlash`), 2 tics, `Bright` | `BHFX A0`, 2 tics |
-| Mouvement du recul | par le code (`A_WeaponOffset`) : FAL (1,35) → (2,39) → (1,35) → (0,32) ; Browning (-1,34) → (-2,37) → (-3,40) → (-1,35) → (0,32) | |
-| Balancement | `InverseSmooth`, X 0.5–0.6, Y 0.35–0.4 | |
-| Côté | main droite à la poignée, main gauche en soutien (FAL) ; Browning à deux mains | |
-
-**W03 et W04 reprennent la convention du FAL** : toile 1536×1024, XScale 6.8, YScale 8.16, Offset -750,-460, flash à part
-sur la même toile. Alpha : bords nets, pas de halo (fond transparent, aucune frange claire ou noire). Le bas et les
-côtés de la toile doivent couvrir le bras jusqu'au bord en 21:9 et en 4:3 (aucun poignet coupé visible). Le Rapid peut
-déborder la toile vers la droite si son canon l'exige : dans ce cas agrandir la toile à droite en gardant l'origine
-(décalage inchangé), et le signaler.
-
-Noms réservés (libres dans le dépôt) : sprites `RFRP` (Rapid) et `RFMR` (MR73), flashs `RPFX` et `MRFX`, une lettre
-de frame par image (A…Z, puis `[`, `\`, `]` si besoin, comme le moteur le permet), fichiers
-`graphics/weapons/rapid/RF2_RAPID_<ETAT>_<NN>.png` et `graphics/weapons/mr73/RF2_MR73_<ETAT>_<NN>.png`, sons
-`sounds/rapid/…` et `sounds/mr73/…`.
-
-## 3. Animation : format du moteur
-
-Durées en tics (1/35 s). Un état = une suite de frames, chacune avec sa durée et, au besoin, un événement de code. Le
-tir est **un seul** événement (munition, flash, son, trace) sur la première frame de tir ; aucun autre son ou flash ne
-redéclenche un tir. Les points où l'on peut changer d'arme pendant une séquence sont des frames `A_WeaponReady(WRF_NOFIRE)`.
-
-Références mesurées :
-
-| Arme | Tir | Recharge |
-|---|---|---|
-| Browning | B 2 (tir, flash, son) · C 1 · D 2 (son de culasse, étui) · E 2 · F 3 : 10 tics | pas de chargeur modélisé ; vide : G 6 (clic) |
-| FAL | B 2 (tir) · C 2 (étui) · D 2 · A 1 : 7 tics | partielle 41 tics (1,17 s), vide 49 tics ; munitions engagées à la frame N (« seat ») ; interruptible à chaque frame |
-| Pied-de-biche | armé 5 · frappe 3 · coup 2 · suivi 4 · retour 8 : 22 tics | — |
-
-Sélection et rangement : le moteur fait monter et descendre l'image entière (`A_Raise`/`A_Lower` de 12 unités par tic,
-de 128 à 32, soit environ 8 tics) ; des frames propres d'entrée/sortie sont possibles mais pas exigées.
-
-Livrer pour chaque séquence : la liste des frames, leur durée en tics, les événements (nom et frame), et un
-`animation.json` qui reprend ces valeurs ; une prévisualisation à 35 i/s réels.
-
-### W03 — Manufrance Rapid (fusil de chasse à pompe)
-
-- États : prêt ; tir → recul → retour ; **cycle de pompe distinct du tir** (fût vers l'arrière : étui éjecté ; fût
-  vers l'avant : nouvelle cartouche) ; vide (clic, pas de pompe) ; recharge cartouche par cartouche.
-- Enchaînement visé (valeurs de départ, à régler au banc) : tir 2–3 tics, retour 6, fût arrière 5, fût avant 5 ; environ
-  20 tics entre deux tirs (0,57 s).
-- Recharge : entrée (arme tournée, fût accessible) ~6 tics ; **une cartouche** introduite ~12 tics (événement
-  « cartouche entrée » : +1 au magasin à cette frame) ; répétée tant qu'il reste de la place et de la réserve ; sortie
-  ~6 tics ; si la chambre était vide, un cycle de pompe à la fin (chambrage). Interruptible entre deux cartouches (tir
-  ou changement d'arme) sans perdre ni créer de cartouche.
-- Munitions représentées : **À FIXER par Astra avec une source concordante** (capacité du magasin tubulaire de la
-  variante retenue, chambre comprise ou non ; ne rien reprendre d'un autre jeu). Le modèle du jeu suivra exactement
-  cette représentation : nombre de cartouches dans le tube + une en chambre, affichées « tube | réserve » comme le FAL.
-- Cartouches visibles : intactes pendant la recharge ; seul l'étui éjecté au fût arrière est un étui tiré.
-
-### W04 — Manurhin MR73 (revolver)
-
-- Six chambres. États : prêt ; tir (départ double action, sans étui éjecté) → récupération, plus posée que le Browning
-  (valeur de départ : 14 tics entre deux tirs, 0,4 s) ; vide (clic du chien) ; recharge.
-- Recharge (valeur de départ ~70 tics pour six cartouches, à régler) : ouverture du barillet (à gauche), éjection des
-  étuis, introduction des cartouches **une à une** (événement « cartouche entrée » : +1), fermeture, retour. Pas
-  d'accessoire de rechargement rapide sans source.
-- **Chambres visibles = état du jeu.** Proposition d'Opus pour y arriver sans six versions de chaque frame : livrer le
-  barillet ouvert sans cartouches, puis **une couche par chambre** (cartouche en place, même toile et même décalage) ;
-  le moteur superpose les couches (calques d'arme supplémentaires) selon le nombre réellement chargé. Même principe pour
-  les culots visibles barillet fermé si la vue les montre.
-- Recharge partielle : **À FIXER** entre deux lectures, à déclarer et tenir partout : (a) l'éjection vide tout, les
-  cartouches intactes retournent à la réserve, puis on recharge à six ; ou (b) seuls les étuis tirés sont remplacés. Opus
-  propose (a), plus simple à lire.
-- Munition : .357 Magnum représentée ; ressource de jeu distincte du 9 mm (intégration future).
-
-## 4. Munitions : règles communes
-
-Aucune munition ou réserve négative ; clic sur vide sans projectile ; tir impossible pendant les frames de recharge ; les
-changements de compte n'arrivent qu'aux frames d'événement ; après sauvegarde et chargement, compte, image et son se
-retrouvent d'accord.
-
-## 5. Audio : valeurs réelles
-
-| | Existant |
+| | |
 |---|---|
-| Format du jeu | WAV PCM 16 bits, 48 kHz, mono (tous les sons d'armes actuels) |
-| Variantes | tir en trois variantes aléatoires (`$random` dans `SNDINFO`), ex. `rf/fal/shot1..3` |
-| Canaux | tir : canal arme avec chevauchement (`CHAN_WEAPON`, `CHANF_OVERLAP`) pour ne pas couper la queue du précédent ; mécanique : canal objet (`CHAN_ITEM`, un son y coupe le précédent) |
-| Événements FAL | `raise`, `shot`, `shell`, `dry`, `cloth`, `latch`, `mag_out`, `mag_in`, `seat`, `action` |
-| Événements Browning | `fire`, `slide`, `dry` |
-| Niveaux | crêtes des tirs actuels autour de -2 dBFS ; garder au moins 1 dB de marge ; comparer à `sounds/fal/shot_0?.wav` à écoute constante |
+| Espace actif d'Astra | `C:\PROJECTS\RF2_UZDOOM\incoming\astra\` (Astra n'écrit que là ; confirmé le 29/09) |
+| Livraisons figées | restent où elles ont été remises ; Opus consomme une copie contrôlée fichier par fichier (`scripts/arsenal/import_astra_lot.py`, fiche `art/rf2_arsenal_astra/IMPORT_<lot>.json`) |
+| Banc | branche `bench/rf2-arsenal` du dépôt `C:\PROJECTS\RF2_UZDOOM` ; construction `scripts/arsenal/build_bench.py` ; lanceur `JOUER_RF2_ARSENAL_ESSAI.cmd` |
+| Base du banc | `dist/arsenal/base/RF2_BASE_src_23773520f797.pk3`, sha256 `a03fad5f…` (jeu construit depuis `src/`, Browning et FAL identiques au build accepté) |
+| Lot consommé | W03/W04 V01 (sha256 de `SHA256SUMS.txt` : voir la fiche d'import) ; V02 seulement pour un changement d'asset |
+| Lot reçu | W05_W09_W10_V01 (fiches `IMPORT_W05_W09_W10_V01.json` et `…_W10_REEMPLOI.json`) : W10 = les 5 poses et 12 sons de la base, identiques octet pour octet, rien à importer ; W05/W09 = masters de travail, rien que le banc puisse charger |
 
-Livrer masters sans perte (24 bits acceptés) **et** exports 16 bits 48 kHz mono ; un fichier par événement, noms en
-minuscules. Événements attendus : Rapid `raise`, `shot` (×3), `pump_back`, `pump_fwd`, `shell_in` (×2–3), `dry`,
-`cloth` ; MR73 `raise`, `shot` (×3), `dry`, `cyl_open`, `eject`, `round_in` (×2–3), `cyl_close`. Documenter sources,
-licences et crédits ; dire ce qui a été écouté, par qui, avec quoi.
+## 1. Décisions fixées
 
-## 6. Livraison
+| Sujet | Décision | Origine |
+|---|---|---|
+| W03 | Manufrance Rapid de chasse 12/70, canon lisse 700 mm, **tube 4 + chambre 1** (RGA BE050) | Astra, `DECISIONS_V01.md` ; extrait RGA conservé, ligne BE050 relue par Opus dans le CSV conservé (pas une vérification indépendante du RGA) |
+| W04 | Manurhin MR73 Gendarmerie 4 pouces, poignée bois, six .357 Magnum | contrat v1, V01 |
+| Recharge partielle W04 | règle **(a)** : l'extraction retire tout ; cartouches intactes rendues à la réserve ; étuis perdus ; puis une à une | propriétaire (`LIRE_D_ABORD.md`), V01 |
+| Répliques | Manurhin « Police, Milice, prête à tirer ! » + ricanement ; fusil « Y a les bons et les mauvais chasseurs ! » ; une fois par campagne, à la première acquisition effective | propriétaire, `08_ADDENDUM_REPLIQUES_VIKTOR.md` |
+| Suite | W05 FAMAS (F1 si rien d'autre n'est fixé), W09 Scorpion (scie alternative Black & Decker, pas circulaire), W10 pied-de-biche ; puis W06 M2 .50, W07 RPG, W08 lance-flammes | `RF2_SUITE_ASTRA.md` ; dossier maître §arsenal |
+| W10 | le pied-de-biche du jeu (`RFCrowbar`, COMBAT-02) réemployé tel quel : poses, sons, code et réglages inchangés | Astra, `W10_REUSE_RECORD.json` ; identité vérifiée par Opus |
+| Alimentation W09 | proposition d'Astra : câble vers une alimentation portée fictionnelle, aucun modèle à batterie inventé. **À décider par le propriétaire** (ressource limitée ou non, arrêt à vide). En attendant, le banc fait tourner la scie sans ressource | Astra, `POUR_OPUS.md` du lot W05_W09_W10_V01 |
+| Campagne | aucune activation ; placement, équilibrage, munitions de campagne : étape ultérieure | mandats |
 
-Dans ton worktree : `incoming/astra/RF2_ARSENAL/<lot>/` (un lot par arme ou par envoi, jamais réécrit), avec
-`manifest.json` : pour chaque fichier `file`, `target_relpath`, `sha256`, taille en px, et pour les images `sprite`,
-`frame`, `state`, `tics`, `event` ; pour les sons `event`, durée, crête, format ; plus `animation.json`,
-`TEXTURES.<arme>.txt` et `SNDINFO.<arme>.txt` en propositions, les sources (couches, rig, scripts), les aperçus et les
-preuves. Ne dépose rien dans les chemins actifs du dépôt.
+## 2. Présentation
 
-## 7. Le banc d'essai (Opus)
+Convention FAL inchangée pour toutes les armes à feu : toile 1536×1024 RGBA, XScale 6.8, YScale 8.16, Offset −750,−460,
+flash sur son propre calque, même toile. Manche noire continue jusqu'au bord en 16:9, 21:9 et 4:3. Le banc vérifie
+les collisions de noms de sprites et de chemins avec la base, le moteur et l'IWAD ; il refuse un module qui en a.
 
-Opus monte un module séparé, chargé explicitement, dans une scène distincte de RF01/RF02 (stand de tir : cibles à
-plusieurs distances, zone sombre et zone claire, mur proche), avec le Browning, le FAL et le pied-de-biche pour
-comparer, et des classes d'essai pour W03/W04 construites depuis ta livraison ; lanceur `JOUER_RF2_ARSENAL_ESSAI.cmd`,
-configuration, sauvegardes et journaux séparés ; jamais chargé par les lanceurs acceptés. Un script construit le module
-depuis le dossier d'une livraison : tu pourras l'utiliser pour tes propres vérifications moteur.
+## 3. Fichier d'animation (`rf2-bench-animation/1`)
+
+Tel que décrit dans `bench/arsenal/README.md`, avec l'extension V01 désormais lue nativement par le banc :
+
+- `files` : image → chemin dans la livraison ; le module range chaque fichier à son `target_relpath` du manifeste.
+- Revolver : `rig_layers.chambers` (6 listes, une image par pose du barillet), `rig_layers.hands` (6 listes, une image
+  par étape de main), optionnel `rig_layers.chambers_fired` (même forme : image de l'étui tiré) ; par image :
+  `chamber_pose` (0 = aucun calque, 1…n) et `hand_stage` (0 = pas de main, 1…n). Sprites `RMC1…RMC6` (chambres :
+  poses puis étuis tirés) et `RMH1…RMH6` (mains), calques 101–106 (culots) et 107 (main).
+- Culots visibles : chambres 1…(Étuis + Cartouches) ; étuis tirés d'abord (image `chambers_fired` si livrée), puis
+  cartouches intactes ; après l'extraction, les seules cartouches chargées. La main suit la chambre en cours de
+  remplissage (Cartouches + 1 à l'étape 1).
+- Le tir reste **un seul** événement `shot` ; une introduction = **un** événement `shell_in` / `round_in`.
+
+## 4. Durées en vigueur (V01 ; ajustables avec Astra, tout changement aligne événements et sons)
+
+| | Séquences (tics à 35/s) |
+|---|---|
+| Rapid | tir 9 ; pompe 11 (`pump_back` à +4, `pump_fwd` à +7) ; recharge : entrée 6, une cartouche 12 (engagement à +6 de chaque cycle), sortie 6 ; premier engagement 12 tics après la demande de recharge |
+| MR73 | tir 14 ; recharge complète 85 (ouverture 10, extraction 4, six introductions de 10 avec engagement à la 5e étape de main, fermeture 11) ; premier engagement 19 tics après la demande |
+| Pied-de-biche | coup 22 depuis l'entrée en Fire (au tic de l'appui) : armé 5, course 3 (balayage au tic 5), impact 2 (**un** coup au tic 8), poursuite 4, retour 8 (changement d'arme permis, pas de second coup) ; prêt au tic 22. Mesuré au banc sur `RFCrowbar` : 5 / 8 / 22 |
+
+## 5. Règles de jeu du banc (les mêmes dans l'image, le code et le HUD)
+
+1. Le compte ne change qu'aux images d'événement : chargé + réserve + tiré reste constant.
+2. **Engagement et changement d'arme** : une cartouche engagée (événement passé) avant la demande de changement
+   finit son geste, puis l'arme est rangée à son point prévu (`ready_point`). Aucun engagement au tic de la demande ni
+   après ; rien après le rangement effectif ; rien après la mort. Éprouvé au banc 2 et 1 tics avant, au tic même, 1
+   et 2 tics après le point d'engagement : cartouche annulée avant et au tic, finie avant pour +1 et +2.
+3. Détente pendant la recharge : la cartouche en cours finit, puis sortie de recharge (pompe si la chambre est vide)
+   et tir.
+4. Chambre vide, tube non vide : la détente fait une course de pompe sans tir. Tout vide : clic.
+5. Réserve vide : aucune recharge ne commence ; réserve courte : on charge ce qu'il y a.
+6. Sauvegarde pendant une animation : chargement avec les mêmes compteurs, la même séquence et les mêmes calques ; la
+   recharge reprend et finit.
+7. HUD d'essai, panneau d'arme : `4+1 | 24` (tube + chambre | réserve), `6 | 18` (barillet | réserve) ; panneau de
+   diagnostic complémentaire.
+8. Dégâts, dispersion, portées et cadences du banc : provisoires, pour la revue ; aucun n'est un équilibrage.
+
+## 6. Preuves
+
+- Une capture d'écran peut montrer un état plus ancien que le tic demandé (une image en attente de capture n'est
+  pas redessinée) : le banc inscrit le tic dans chaque image (bande en haut à gauche, `scripts/arsenal/ticcode.py`)
+  et journalise ce que chaque image montre ; captures et films sont classés par le tic qu'ils montrent.
+- Preuve sonore : le son sorti du moteur (OpenAL, écrivain WAV) pendant la même session que l'image, calé par le
+  bip de synchronisation du tic 1. Une piste reconstruite depuis un journal reste une prévisualisation étiquetée.
+- Écoute : dire qui a écouté quoi, avec quel matériel ; à défaut, « à écouter ».
+
+## 7. Répliques de Viktor (addendum)
+
+Astra livre les prises (principale et variante par réplique), le ricanement séparé avec son repère temporel, masters,
+exports 16 bits 48 kHz mono, sous-titres exacts, crédits et provenance. Opus relie le déclenchement à l'acquisition
+effective (pas au ramassage d'un doublon, au changement d'arme, à une dotation technique ni à un chargement), avec
+un état par arme persistant entre maps et sauvegardes, remis à zéro par une nouvelle campagne, joué une seule fois
+par la file de dialogue avec le sous-titre ; la prise complète et ses éléments séparés ne sont jamais joués ensemble.
+
+## 8. Armes suivantes : ce que le banc éprouvera
+
+| | Mécanique au banc | Événements attendus (en plus de `raise`, `cloth`) |
+|---|---|---|
+| W05 FAMAS | chargeur (comme le FAL), sélecteur de tir à décider avec la bible (coup par coup / rafale), cadence propre | `shot` (un par cartouche), `dry`, `mag_out`, `mag_in`, `seat` (engagement du chargeur), `bolt` si la culasse est manœuvrée |
+| W09 Scorpion | outil de contact continu : départ, marche à vide en boucle, contact (dégâts par intervalle dans une fenêtre de portée, jamais à travers un obstacle), arrêt ; le son de boucle s'arrête au relâchement, au rangement et à la mort | `start`, `loop` (boucle), `contact` (boucle ou coups), `stop` ; alimentation : voir §1 |
+| W10 pied-de-biche | le vrai `RFCrowbar` de la base (réemploi) : touche la cible devant, s'arrête au pilier (aucun dégât derrière), rate dans le vide sans bouffée ni son d'impact ; repères §4 | déjà dans le jeu : `rf/crowbar/swing`, `…/flesh`, `…/metal`, `…/wood` ; raté = aucun son d'impact |
+
+Les réglages de ces armes au banc servent la revue ; ils ne sont pas un équilibrage. Le banc garde aussi un pied-de-biche
+générique (`RFBenchCrowbar`, images d'essai) : il éprouve la mécanique de mêlée du constructeur, pas l'arme du jeu.
+
+## 9. Corrections communes du master (relevées sur W03/W04 V01, à porter sur W05, W09 et toute arme suivante)
+
+1. **Recul lisible** : une vraie pose ou un `offset` par image de tir (le Rapid bouge de 3 à 9 px, le MR73 de 1 à 2 px
+   sur 1536 : le banc ajoute un recul d'essai, `bench/arsenal/presentation/W03_W04_V01.json`).
+2. **Un geste de main pour chaque changement d'état** : aucun objet qui apparaît ou disparaît seul (MR73 : extraction
+   sans poussée de la tige). FAMAS : chargeur retiré et engagé par la main de soutien derrière la poignée, levier
+   d'armement sous la poignée de transport ; Scorpion : doigt sur la gâchette au départ et relâché à l'arrêt.
+3. **État visible = état du jeu** : tiré ou intact (`chambers_fired` pour le MR73), chargeur engagé ou non, scie en
+   marche (lame et moteur qui bougent) ou arrêtée.
+4. **Sortie de main entre deux gestes**, jamais de main flottante ; objets tenus entièrement dans le cadre ou sortis
+   franchement (MR73 chambre 4, étape 1 : seule la pointe de la cartouche dépasse).
+5. **Manche noire jusqu'au bord** en 16:9, 21:9 et 4:3 ; même prise et même manche que FAL/Browning.
+6. **Axe de l'arme** : la bouche vise le centre de l'écran comme le FAL ; le master FAMAS de travail pointe nettement
+   vers le haut à gauche, à vérifier dans le cadre du banc avant de décliner les poses.
+7. **Sons** : un événement par geste, aligné sur son image ; boucles (scie) avec départ, boucle sans clic de raccord,
+   arrêt ; rien n'est déclaré écouté sans écoute.
