@@ -1,0 +1,12 @@
+{
+  "schema": "rf2-bench-presentation/1",
+  "note": "Couche de presentation du banc appliquee sur W03/W04 V01 sans modifier la livraison : recul par le code (A_WeaponOffset, convention du FAL : contrat v1 2, v2 2) et noms courts pour le panneau d'arme. Proposition d'Opus du 29/09, reglable avec Astra ; ce n'est ni un asset ni un verdict. Mesure sur V01 : les images FIRE/RECOIL/RECOVERY deplacent le centre de l'arme de 3 a 9 px (Rapid) et de 1 a 2 px (MR73) sur 1536, et le fichier d'animation ne donne aucun decalage : le tir ne se lit presque pas. Reference FAL : (1,35) (2,39) (1,35) (0,32).",
+  "W03": {
+    "tag": "W03 Rapid 12/70 (essai)",
+    "offsets": {"fire": {"0": [3, 46], "1": [4, 42], "2": [1, 35]}, "pump": {"0": [0, 32]}}
+  },
+  "W04": {
+    "tag": "W04 MR73 (essai)",
+    "offsets": {"fire": {"0": [1, 42], "1": [2, 44], "2": [1, 37], "3": [0, 32]}}
+  }
+}

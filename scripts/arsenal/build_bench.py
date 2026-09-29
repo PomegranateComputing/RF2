@@ -132,6 +132,85 @@ def load_weapon(weapon, deliveries, files):
     return anim
 
 
+def apply_presentation(anim, layer, path):
+    """Recoil offsets (by sequence and frame index) and a short HUD name, for frames the animation leaves without."""
+    anim['_presentation'] = None
+    if not layer:
+        return
+    applied = []
+    for seq, frames in (layer.get('offsets') or {}).items():
+        for idx, off in frames.items():
+            f = anim['sequences'][seq][int(idx)]
+            if 'offset' not in f:
+                f['offset'] = off
+                applied.append(f'{seq}[{idx}]={off}')
+    if layer.get('tag'):
+        anim['tag'] = layer['tag']
+    anim['_presentation'] = dict(file=path, offsets=applied, tag=layer.get('tag'))
+
+
+def load_voices(deliveries, files):
+    """Viktor's two lines: from a delivery JSON with a "voices" key, else placeholder cues. Durations come from the
+    files. {"voices": {"manurhin": {"take": wav, "phrase": wav, "sneer": wav, "sneer_at_ms": int, "mode": "take"|"split"},
+    "chasseurs": {"take": wav}}} (paths relative to that JSON or to the delivery)."""
+    import wave
+    found = None
+    for folder in deliveries:
+        for q in sorted(Path(folder).rglob('*.json')):
+            try:
+                d = json.loads(q.read_text(encoding='utf-8'))
+            except (ValueError, UnicodeDecodeError):
+                continue
+            if isinstance(d, dict) and isinstance(d.get('voices'), dict):
+                found = (q, Path(folder), d['voices'])
+                break
+        if found:
+            break
+    rels, mode, sneer_ms = {}, 'take', 0
+    if found:
+        q, folder, v = found
+        man, cha = v.get('manurhin', {}), v.get('chasseurs', {})
+        mode = man.get('mode', 'take')
+        sneer_ms = int(man.get('sneer_at_ms', 0))
+        for logical, src in (('manurhin', man.get('take')), ('manurhin_phrase', man.get('phrase')),
+                             ('manurhin_rire', man.get('sneer')), ('chasseurs', cha.get('take'))):
+            if src:
+                path = resolve(src, q.parent, folder)
+                rels[logical] = f'sounds/bench/voice/{logical}.wav'
+                files[rels[logical]] = path.read_bytes()
+        source = dict(kind='delivery', file=str(q))
+    else:
+        tmp = ROOT / 'build' / 'arsenal' / 'placeholders'
+        rels = placeholders.make_voices(tmp)
+        for rel in rels.values():
+            files[rel] = (tmp / rel).read_bytes()
+        source = dict(kind='placeholder')
+
+    def tics(logical):
+        if logical not in rels:
+            return 0
+        with wave.open(io.BytesIO(files[rels[logical]])) as w:
+            return int(w.getnframes() / w.getframerate() * 35 + 0.999)
+    split = mode == 'split' and 'manurhin_phrase' in rels and 'manurhin_rire' in rels
+    if split and not sneer_ms:
+        sneer_ms = int(tics('manurhin_phrase') / 35 * 1000)
+    man_tics = (max(tics('manurhin_phrase'), int(sneer_ms * 35 / 1000) + tics('manurhin_rire')) if split else tics('manurhin'))
+    return dict(rels=rels, split=split, sneer_tics=int(sneer_ms * 35 / 1000), tics=(man_tics, tics('chasseurs')), source=source)
+
+
+def gen_voices(v):
+    kind = 'PROVISOIRE (reperes, pas des voix)' if v['source']['kind'] == 'placeholder' else 'livraison'
+    code = ['class RFBenchVoiceData play', '{',
+            f"    static int Tics(int line) {{ return line == 0 ? {v['tics'][0]} : {v['tics'][1]}; }}",
+            f"    static bool ManurhinSplit() {{ return {'true' if v['split'] else 'false'}; }}",
+            f"    static int SneerAt() {{ return {v['sneer_tics']}; }}",
+            f'    static clearscope String Source() {{ return "{kind}"; }}', '}', '']
+    snd = ['// Viktor: lines at the first acquisition - ' + kind]
+    for logical, rel in v['rels'].items():
+        snd.append(f'rf/bench/voice/{logical:<16} "{rel}"')
+    return '\n'.join(code), '\n'.join(snd) + '\n'
+
+
 def rig_of(anim):
     """Revolver rig layers: per chamber the images of each cylinder pose (and of the fired case when given), per
     chamber the images of each hand stage. The older single-image chamber_layers are one pose with no hand."""
@@ -234,7 +313,7 @@ def gen_class(anim):
            '        Weapon.BobStyle "InverseSmooth";', '        Weapon.BobRangeX 0.5;', '        Weapon.BobRangeY 0.35;']
     if 'raise' in anim['_sounds']:
         out.append(f'        Weapon.UpSound "{prefix}raise";')
-    out += [f"        Tag {zs_str(anim['name'])};", '        +WEAPON.AMMO_OPTIONAL', '        +WEAPON.NOAUTOFIRE', '    }', '',
+    out += [f"        Tag {zs_str(anim.get('tag') or anim['name'])};", '        +WEAPON.AMMO_OPTIONAL', '        +WEAPON.NOAUTOFIRE', '    }', '',
             f'    override String SoundPrefix() {{ return "{prefix}"; }}']
     if spec is PUMP:
         out += [f"    override int TubeCap() {{ return {int(cap['tube'])}; }}",
@@ -315,7 +394,8 @@ def gen_setup(anims):
             '        RFBench.Log("dotation Browning FAL pied-de-biche ' + ' '.join(a['class'] for a in anims) + '");', '    }', '',
             '    static clearscope String Source()', '    {']
     provisional, delivered = '\\cgPROVISOIRE\\c-', 'livraison'
-    text = '  '.join(f"{a['weapon']} " + (provisional if a['_source']['kind'] == 'placeholder' else delivered) for a in anims)
+    text = '  '.join(f"{a['weapon']} " + (provisional if a['_source']['kind'] == 'placeholder' else delivered)
+                     + (' + recul banc' if a.get('_presentation') and a['_presentation']['offsets'] else '') for a in anims)
     out += [f'        return "{text}";', '    }', '}', '']
     for a in anims:
         out += [f"class {a['ammo']['class']} : Ammo", '{', '    Default', '    {', '        Inventory.Amount 1;',
@@ -341,15 +421,40 @@ map ARSENAL "Banc d'essai - arsenal"
     music = ""
 }
 
+map BANCDEC1 "Banc d'essai - premieres decouvertes"
+{
+    levelnum = 98
+    next = "BANCDEC2"
+    nointermission
+    lightmode = 8
+    music = ""
+}
+
+map BANCDEC2 "Banc d'essai - apres changement de carte"
+{
+    levelnum = 97
+    next = "BANCDEC1"
+    nointermission
+    lightmode = 8
+    music = ""
+}
+
 DoomEdNums
 {
     30950 = RFBenchTarget
+    30951 = RFBenchRapidPickup
+    30952 = RFBenchMR73Pickup
 }
 '''
 LANGUAGE = '''[enu default]
 RF_OBJ_ARSENAL_0 = "Banc d'essai : 4 Rapid, 5 MR73, R recharger. Hors campagne.";
 RF_ARSENAL_DATE = "Banc d'essai - hors campagne";
+RF_OBJ_BANCDEC1_0 = "Banc d'essai : ramasser les armes (repliques de Viktor). Hors campagne.";
+RF_OBJ_BANCDEC2_0 = "Banc d'essai : doublons apres changement de carte. Hors campagne.";
+RF_BENCH_VOIX_MANURHIN = "« Police, Milice, prête à tirer ! » [ricane]";
+RF_BENCH_VOIX_CHASSEURS = "« Y a les bons et les mauvais chasseurs ! »";
 '''
+PICKUP_TEXTURES = ''.join(f'Sprite RFPK{l}0, 96, 64\n{{\n    XScale 4\n    YScale 4\n    Offset 48, 64\n    Patch "graphics/bench/pickup_{l}.png", 0, 0\n}}\n' for l in 'AB')
 TARGET_TEXTURES = 'Sprite RFTGA0, 160, 288\n{\n    XScale 4\n    YScale 4\n    Offset 80, 288\n    Patch "graphics/bench/target.png", 0, 0\n}\n'
 
 LAUNCHER = r'''@echo off
@@ -458,13 +563,18 @@ def main():
     ap.add_argument('--base', help='game pk3 to load under the module (default: frozen build of the current commit)')
     ap.add_argument('--allow-dirty', action='store_true')
     ap.add_argument('--scratch', help='only write the module to this path (development: no dated build, no launcher)')
+    ap.add_argument('--presentation', help='bench presentation layer (JSON): code recoil offsets and short names applied on '
+                    'top of the animation files, without changing the delivery')
     a = ap.parse_args()
 
     files = {}
     anims = [load_weapon(w, a.delivery, files) for w in WEAPONS]
+    presentation = json.loads(Path(a.presentation).read_text(encoding='utf-8')) if a.presentation else {}
+    for anim in anims:
+        apply_presentation(anim, presentation.get(anim['weapon']), a.presentation)
     zs = ['version "4.14"', '#include "zscript/bench/bench_common.zs"', '#include "zscript/bench/bench_weapons.zs"', '']
     weapons_zs = ['// Generated by scripts/arsenal/build_bench.py - do not edit; see bench/arsenal/README.md.', '']
-    textures = ['// Generated by scripts/arsenal/build_bench.py.', TARGET_TEXTURES]
+    textures = ['// Generated by scripts/arsenal/build_bench.py.', TARGET_TEXTURES, PICKUP_TEXTURES]
     sndinfo = ['// Generated by scripts/arsenal/build_bench.py.']
     report = []
     for anim in anims:
@@ -477,8 +587,13 @@ def main():
                            sequences={k: [dict(image=f['image'], tics=f['tics'], event=f.get('event')) for f in v]
                                       for k, v in anim['sequences'].items()},
                            tics={k: sum(f['tics'] for f in v) for k, v in anim['sequences'].items()},
-                           capacity=anim['capacity'], ballistics=anim['ballistics'], provisional=anim.get('provisional', False)))
+                           capacity=anim['capacity'], ballistics=anim['ballistics'], provisional=anim.get('provisional', False),
+                           presentation=anim.get('_presentation')))
     weapons_zs.append(gen_setup(anims))
+    voices = load_voices(a.delivery, files)
+    voice_zs, voice_snd = gen_voices(voices)
+    weapons_zs.append(voice_zs)
+    sndinfo.append(voice_snd)
     tmp = ROOT / 'build' / 'arsenal'
     placeholders.make_target(tmp / 'target.png')
     files['graphics/bench/target.png'] = (tmp / 'target.png').read_bytes()
@@ -488,8 +603,13 @@ def main():
     files['TEXTURES.bench'] = '\n'.join(textures).encode()
     files['SNDINFO.bench'] = '\n'.join(sndinfo).encode()
     files['MAPINFO.bench'] = MAPINFO.encode()
-    files['LANGUAGE.bench'] = LANGUAGE.encode()
+    files['LANGUAGE.bench'] = LANGUAGE.encode('utf-8')
     files['maps/ARSENAL.wad'] = arsenal_map.wad_bytes()
+    for mapname, data in arsenal_map.discovery_wads().items():
+        files[f'maps/{mapname}.wad'] = data
+    for letter, label, colour in (('A', 'W03', (112, 74, 42)), ('B', 'W04', (60, 64, 70))):
+        placeholders.make_pickup(tmp / f'pickup_{letter}.png', label, colour)
+        files[f'graphics/bench/pickup_{letter}.png'] = (tmp / f'pickup_{letter}.png').read_bytes()
 
     base = Path(a.base).resolve() if (a.scratch and a.base) else (None if a.scratch else base_pk3(a))
     clash = collisions(files, base) if base else None

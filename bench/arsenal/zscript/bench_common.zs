@@ -456,6 +456,119 @@ class RFBenchTarget : Actor
     }
 }
 
+// ------------------------------------------------------------------ Viktor's lines at the first acquisition
+// Addendum of 28/09 (08_ADDENDUM_REPLIQUES_VIKTOR.md). Line 0: the Manurhin, "Police, Milice, prete a tirer !" and
+// its sneer; line 1: the hunting shotgun, "Y a les bons et les mauvais chasseurs !". Each is heard once per campaign,
+// at the first effective acquisition of its weapon: a pickup in the world that gives a weapon the player did not
+// have. A duplicate, a refill, a weapon switch, a reload, a technical gift (the bench's own kit) or a loaded save is
+// not a discovery. The state is a token in the player's inventory: it travels between maps, is written in saves,
+// and a new game starts without it. The line is marked heard when it really starts; interrupted, it is not played
+// again. It waits while a priority voice plays; one pending line per weapon. The subtitle goes through the game's
+// centred text (A_Print, drawn by the RF HUD). The full take and the separate phrase + sneer are two ways to play
+// the Manurhin line: RFBenchVoiceData says which, never both.
+class RFViktorLines : Inventory
+{
+    bool heard0, heard1;
+    bool pending0, pending1;
+    int playing, playEnd, sneerAt;
+
+    Default
+    {
+        Inventory.MaxAmount 1;
+        +INVENTORY.UNDROPPABLE
+        +INVENTORY.UNTOSSABLE
+        +INVENTORY.UNCLEARABLE
+    }
+
+    bool Heard(int line) { return line == 0 ? heard0 : heard1; }
+
+    static void Acquired(Actor who, int line, bool hadWeapon, String what)
+    {
+        if (who == null || who.player == null) return;
+        let tok = RFViktorLines(who.FindInventory('RFViktorLines'));
+        if (tok == null) { who.GiveInventory('RFViktorLines', 1); tok = RFViktorLines(who.FindInventory('RFViktorLines')); }
+        if (tok == null) return;
+        String verdict = "decouverte";
+        if (hadWeapon) verdict = "doublon";
+        else if (tok.Heard(line)) verdict = "deja_entendue";
+        else if ((line == 0 && tok.pending0) || (line == 1 && tok.pending1)) verdict = "deja_en_attente";
+        else if (line == 0) tok.pending0 = true;
+        else tok.pending1 = true;
+        RFBench.Log(String.Format("voix ramassage=%s ligne=%d etat=%s", what, line, verdict));
+    }
+
+    override void DoEffect()
+    {
+        Super.DoEffect();
+        if (Owner == null || Owner.player == null) return;
+        int now = Level.maptime;
+        if (playing > 0 && sneerAt > 0 && now >= sneerAt)
+        {
+            Owner.A_StartSound("rf/bench/voice/manurhin_rire", CHAN_BODY, CHANF_DEFAULT, 1.0, ATTN_NONE);
+            RFBench.Log("voix ricanement_separe");
+            sneerAt = 0;
+        }
+        if (playing > 0 && now >= playEnd) { RFBench.Log(String.Format("voix fin ligne=%d", playing - 1)); playing = 0; }
+        if (playing > 0 || (!pending0 && !pending1)) return;
+        let h = RFBenchHandler(EventHandler.Find('RFBenchHandler'));
+        if (h != null && h.priorityUntil > now) return;          // a priority voice holds the line back
+        int line = pending0 ? 0 : 1;
+        if (line == 0) { pending0 = false; heard0 = true; } else { pending1 = false; heard1 = true; }
+        playing = line + 1;
+        playEnd = now + RFBenchVoiceData.Tics(line);
+        String snd = line == 0 ? (RFBenchVoiceData.ManurhinSplit() ? "rf/bench/voice/manurhin_phrase" : "rf/bench/voice/manurhin") : "rf/bench/voice/chasseurs";
+        Owner.A_StartSound(snd, CHAN_VOICE, CHANF_DEFAULT, 1.0, ATTN_NONE);
+        sneerAt = (line == 0 && RFBenchVoiceData.ManurhinSplit()) ? now + RFBenchVoiceData.SneerAt() : 0;
+        Owner.A_Print(StringTable.Localize(line == 0 ? "$RF_BENCH_VOIX_MANURHIN" : "$RF_BENCH_VOIX_CHASSEURS"), RFBenchVoiceData.Tics(line) / 35.0 + 0.5);
+        RFBench.Log(String.Format("voix lecture ligne=%d son=%s duree=%d", line, snd, RFBenchVoiceData.Tics(line)));
+    }
+}
+
+// A weapon lying in the world. Picking it up is the acquisition event: it gives the weapon only if the player does
+// not have it (a duplicate gives nothing here), then tells RFViktorLines.
+class RFBenchPickup : Inventory abstract
+{
+    virtual Class<Weapon> Gives() { return null; }
+    virtual int Line() { return -1; }
+
+    Default
+    {
+        Radius 20;
+        Height 24;
+        Inventory.PickupSound "rf/item/pickup";
+    }
+
+    override bool TryPickup(in out Actor toucher)
+    {
+        if (toucher == null || toucher.player == null) return false;
+        let cls = Gives();
+        bool had = toucher.FindInventory(cls) != null;
+        if (!had)
+        {
+            toucher.GiveInventory(cls, 1);
+            let w = RFBenchWeapon(toucher.FindInventory(cls));
+            if (w != null) { w.Baseline = w.Loaded() + w.Reserve(); toucher.player.PendingWeapon = w; }
+        }
+        RFViktorLines.Acquired(toucher, Line(), had, GetClassName());
+        GoAwayAndDie();
+        return true;
+    }
+}
+
+class RFBenchRapidPickup : RFBenchPickup
+{
+    override Class<Weapon> Gives() { return 'RFBenchRapid'; }
+    override int Line() { return 1; }
+    States { Spawn: RFPK A -1; Stop; }
+}
+
+class RFBenchMR73Pickup : RFBenchPickup
+{
+    override Class<Weapon> Gives() { return 'RFBenchMR73'; }
+    override int Line() { return 0; }
+    States { Spawn: RFPK B -1; Stop; }
+}
+
 // The RF HUD's weapon panel only knows the FAL's magazine: for a bench weapon it would show the reserve alone. The
 // bench (and only the bench: its MAPINFO names this class) writes the weapon's own count there, in the notation of
 // the weapon: "tube+chambre | reserve" for the Rapid, "barillet | reserve" for the MR73.
@@ -486,6 +599,24 @@ class RFBenchStatusBar : RFStatusBar
 class RFBenchHandler : EventHandler
 {
     String lastImpact;
+    int priorityUntil;       // a priority voice plays until this tic (bench test of the voice queue)
+    bool renderLog;          // set by a capture script: one RF_RENDER line per rendered tic, what the picture shows
+    ui int lastRenderTic;
+
+    ui void LogRender()
+    {
+        if (!renderLog || Level.maptime == lastRenderTic) return;
+        lastRenderTic = Level.maptime;
+        let pl = players[consoleplayer];
+        let psp = pl.FindPSprite(PSP_WEAPON);
+        String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String img = (psp != null && psp.Frame >= 0 && psp.Frame < 26) ? letters.Mid(psp.Frame, 1) : "-";
+        let w = RFBenchWeapon(pl.ReadyWeapon);
+        let rv = RFBenchRevolver(pl.ReadyWeapon);
+        Console.PrintfEx(PRINT_HIGH | PRINT_NONOTIFY, "RF_RENDER t=%d arme=%s seq=%s image=%s y=%.0f main=%d ch=%d pose=%d munitions=%s", Level.maptime,
+            pl.ReadyWeapon ? pl.ReadyWeapon.GetClassName() : 'none', w ? w.SeqName : "-", img, psp ? psp.y : 0,
+            rv ? rv.RigStage : 0, rv ? rv.HandChamber : 0, rv ? rv.RigPose : 0, w ? w.AmmoText() : "-");
+    }
 
     override void WorldLoaded(WorldEvent e)
     {
@@ -501,15 +632,35 @@ class RFBenchHandler : EventHandler
         RFBenchSetup.Give(pl);
     }
 
+    // The game tic of the picture, drawn in its top-left corner as 16 cells of 8x8 screen pixels (white = 1, lowest
+    // bit first) between a red start cell and a green end cell: captures and film frames can be read back and put at
+    // the tic they really show (a screenshot can show a state older than the tic it was asked at).
+    static ui void DrawTicCode(int tic)
+    {
+        Screen.Clear(0, 0, 8 * 18 + 4, 12, Color(255, 0, 0, 0));
+        Screen.Clear(2, 2, 10, 10, Color(255, 255, 0, 0));
+        for (int i = 0; i < 16; i++)
+        {
+            Color c = (tic >> i) & 1 ? Color(255, 255, 255, 255) : Color(255, 0, 0, 0);
+            Screen.Clear(2 + 8 * (i + 1), 2, 10 + 8 * (i + 1), 10, c);
+        }
+        Screen.Clear(2 + 8 * 17, 2, 10 + 8 * 17, 10, Color(255, 0, 255, 0));
+    }
+
     override void RenderOverlay(RenderEvent e)
     {
-        if (!(Level.MapName ~== "ARSENAL") || players[consoleplayer].mo == null) return;
+        if (!(Level.MapName ~== "ARSENAL" || Level.MapName.Left(7) ~== "BANCDEC") || players[consoleplayer].mo == null) return;
+        DrawTicCode(Level.maptime);
+        LogRender();
         let pl = players[consoleplayer];
         int vw = 1280, vh = 720;
         Font f = NewSmallFont;
         Array<String> lines;
-        lines.Push("\cfBANC D'ESSAI - ARSENAL\c- (hors campagne)");
+        lines.Push(String.Format("\cfBANC D'ESSAI - ARSENAL\c- (hors campagne)  tic %d", Level.maptime));
         lines.Push(RFBenchSetup.Source());
+        let tok = RFViktorLines(players[consoleplayer].mo.FindInventory('RFViktorLines'));
+        lines.Push(String.Format("repliques : %s  -  Manurhin %s, fusil %s", RFBenchVoiceData.Source(),
+            tok && tok.heard0 ? "entendue" : (tok && tok.pending0 ? "en attente" : "non"), tok && tok.heard1 ? "entendue" : (tok && tok.pending1 ? "en attente" : "non")));
         let w = RFBenchWeapon(pl.ReadyWeapon);
         if (w != null)
         {

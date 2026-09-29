@@ -339,3 +339,44 @@ def make_sounds(anim, out_root):
             rels.append(rel)
         result[event] = rels
     return result
+
+
+# ------------------------------------------------------------------ Viktor's lines (placeholders until Astra's takes)
+def _syllables(rnd, count, length_s, base):
+    """A hummed contour, one burst per syllable: it marks the timing of a line, it is not a voice."""
+    out = [0.0] * int(RATE * length_s)
+    step = length_s / (count + 1)
+    for k in range(count):
+        f0 = base * (1.0 + 0.18 * math.sin(k * 1.7)) * (0.85 if k == count - 1 else 1.0)
+        n = int(RATE * step * 0.8)
+        o = int(RATE * step * (k + 0.5))
+        for i in range(n):
+            env = math.sin(math.pi * i / n) ** 2
+            v = sum(math.sin(2 * math.pi * f0 * h * i / RATE) / h for h in (1, 2, 3))
+            if o + i < len(out):
+                out[o + i] += v * env
+    return out
+
+
+def make_voices(out_root):
+    """Placeholder cues for the two lines (and the Manurhin sneer apart): {logical: rel path}."""
+    rnd = random.Random(zlib.crc32(b'voix'))
+    parts = {'manurhin': _syllables(rnd, 9, 2.6, 150) + [0.0] * int(RATE * 0.15) + _syllables(rnd, 4, 0.7, 110),
+             'manurhin_phrase': _syllables(rnd, 9, 2.6, 150), 'manurhin_rire': _syllables(rnd, 4, 0.7, 110),
+             'chasseurs': _syllables(rnd, 11, 2.9, 140)}
+    out = {}
+    for name, sig in parts.items():
+        rel = f'sounds/bench/voice/{name}.wav'
+        _wav(Path(out_root) / rel, _norm(sig, -14.0))
+        out[name] = rel
+    return out
+
+
+def make_pickup(path, label, colour):
+    """A crate with the weapon's number on it, 96x64 px (24x16 units at scale 4)."""
+    im = Image.new('RGBA', (96, 64), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.rectangle((2, 8, 94, 62), fill=colour + (255,), outline=(20, 20, 20, 255), width=3)
+    d.text((14, 20), label, font=_font(28), fill=(250, 240, 210, 255))
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+    im.save(path)

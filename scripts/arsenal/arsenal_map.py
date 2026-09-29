@@ -44,3 +44,31 @@ if __name__ == '__main__':
     out = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('ARSENAL.wad')
     out.write_bytes(wad_bytes())
     print(out)
+
+
+# Discovery rooms (Viktor's lines): BANCDEC1 holds a Rapid, a second Rapid (duplicate) and an MR73 along a straight
+# walk; BANCDEC2, reached by the normal exit, holds one more of each (duplicates after a map change).
+RAPID_PICKUP, MR73_PICKUP = 30951, 30952
+
+
+def build_discovery(name, second):
+    m = MapBuilder(name)
+    room = Cell(floor=0, ceil=160, ftex='RFF_CONC', ctex='RFP_CEIL', light=190, wall='RFP_PLN')
+    m.box(-64, -128, 640, 128, room)
+    m.thing(-32, 0, 1, angle=0)
+    if not second:
+        m.thing(128, 0, RAPID_PICKUP)
+        m.thing(256, 0, RAPID_PICKUP)
+        m.thing(448, 0, MR73_PICKUP)
+    else:
+        m.thing(128, 0, RAPID_PICKUP)
+        m.thing(256, 0, MR73_PICKUP)
+    return m
+
+
+def discovery_wads():
+    out = {}
+    for name, second in (('BANCDEC1', False), ('BANCDEC2', True)):
+        m = build_discovery(name, second)
+        out[name] = m.wad(m.build())
+    return out
