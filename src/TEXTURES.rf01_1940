@@ -1,22 +1,22 @@
-Texture RFPDADBA, 1024, 1024
+Texture RFPDADBA, 2048, 2048
 {
- XScale 4
- YScale 4
- Patch "patches/rf01_1940/RF2_SA_RFP_DADB.png", 0, 0
+    XScale 8
+    YScale 8
+    Patch "patches/rf01_1940/RF2_SA_RFP_DADB.png", 0, 0
 }
 
-Texture RFPDADGA, 1024, 1024
+Texture RFPDADGA, 2048, 2048
 {
- XScale 4
- YScale 4
- Patch "patches/rf01_1940/RF2_SA_RFP_DADG.png", 0, 0
+    XScale 8
+    YScale 8
+    Patch "patches/rf01_1940/RF2_SA_RFP_DADG.png", 0, 0
 }
 
-Texture RFPDADRA, 1024, 1024
+Texture RFPDADRA, 2048, 2048
 {
- XScale 4
- YScale 4
- Patch "patches/rf01_1940/RF2_SA_RFP_DADR.png", 0, 0
+    XScale 8
+    YScale 8
+    Patch "patches/rf01_1940/RF2_SA_RFP_DADR.png", 0, 0
 }
 
 Texture RFPTILEA, 1024, 1024
@@ -26,11 +26,11 @@ Texture RFPTILEA, 1024, 1024
  Patch "patches/rf01_1940/RF2_SA_RFP_TILE.png", 0, 0
 }
 
-Texture RFPPLNA, 512, 512
+Texture RFPPLNA, 1024, 1024
 {
- XScale 4
- YScale 4
- Patch "patches/rf01_1940/RF2_SA_RFP_PLN.png", 0, 0
+    XScale 8
+    YScale 8
+    Patch "patches/rf01_1940/RF2_SA_RFP_PLN.png", 0, 0
 }
 
 Texture RFPDRKA, 512, 512
@@ -124,11 +124,11 @@ Texture RFMSW1A, 256, 256
  Patch "patches/rf01_1940/RF2_SA_RFM_SW1.png", 0, 0
 }
 
-Flat RFFCERA, 512, 512
+Flat RFFCERA, 1024, 1024
 {
- XScale 4
- YScale 4
- Patch "patches/rf01_1940/RF2_SA_RFF_CER.png", 0, 0
+    XScale 8
+    YScale 8
+    Patch "patches/rf01_1940/RF2_SA_RFF_CER.png", 0, 0
 }
 
 Flat RFFCERDA, 512, 512
@@ -250,11 +250,11 @@ Texture RFTHEADA, 256, 192
  Patch "patches/rf01_1940/RF2_SA_RFT_HEAD.png", 0, 0
 }
 
-Texture RFWTBLSA, 256, 128
+Texture RFWTBLSA, 512, 256
 {
- XScale 4
- YScale 4
- Patch "patches/rf01_1940/RF2_SA_RFW_TBLS.png", 0, 0
+    XScale 8
+    YScale 8
+    Patch "patches/rf01_1940/RF2_SA_RFW_TBLS.png", 0, 0
 }
 
 Texture RFWSHLFA, 256, 256

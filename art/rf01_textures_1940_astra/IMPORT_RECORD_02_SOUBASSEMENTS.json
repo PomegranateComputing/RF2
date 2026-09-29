@@ -1,0 +1,80 @@
+{
+  "batch": "02_SOUBASSEMENTS_MATIERES_20260929",
+  "lot": "incoming\\astra\\RF01_TEXTURES_1940\\02_SOUBASSEMENTS_MATIERES_20260929",
+  "imported": "2026-09-29 15:49",
+  "sums_sha256": "b28372e8952a03c6e673459bc888c857a07c61798a81374d61b125995e1873b1",
+  "manifest_sha256": "d015030df15fa6b2e28ec5e4a692a852a4a5f714fab46fba053d341d7ffdf527",
+  "files": [
+    {
+      "target": "patches/rf01_1940/RF2_SA_RFP_DADB.png",
+      "source": "runtime/patches/rf01_1940/RF2_SA_RFP_DADB.png",
+      "sha256": "09a5861fcf6637be99a0ee9349534393d53be3a250d6e7806a3137501ab9eb99",
+      "replaced_sha256": "f7098536d80b67ecdbe939e58652dee0a9f029ad60825562e161eb62ea4ca61a"
+    },
+    {
+      "target": "patches/rf01_1940/RF2_SA_RFP_DADG.png",
+      "source": "runtime/patches/rf01_1940/RF2_SA_RFP_DADG.png",
+      "sha256": "a73371c5ec03c70c167410896c6820d3e2f3e93d7413e7a0b5db84343e6a721e",
+      "replaced_sha256": "dcce2d66325acdbc8b8c5377b7fc861b33941509cfc4d88e50819919c294097c"
+    },
+    {
+      "target": "patches/rf01_1940/RF2_SA_RFP_DADR.png",
+      "source": "runtime/patches/rf01_1940/RF2_SA_RFP_DADR.png",
+      "sha256": "f9c304ecb7a8bff85155d4db35b24b3d5ed2702e84798af72f22d0b5486259f7",
+      "replaced_sha256": "c22ebeb54f635a3b50ae80b161ebb9c3dcf0257a02bc117f130422ca07834b7d"
+    },
+    {
+      "target": "patches/rf01_1940/RF2_SA_RFP_PLN.png",
+      "source": "runtime/patches/rf01_1940/RF2_SA_RFP_PLN.png",
+      "sha256": "2839434faca7eeef40acdd63a85ee517421e00260794b37f252e4155e57edcb0",
+      "replaced_sha256": "d6f40bdb824e96a53a1d93857015f29516511c682bfd7d5c6b68f71e292b7294"
+    },
+    {
+      "target": "patches/rf01_1940/RF2_SA_RFF_CER.png",
+      "source": "runtime/patches/rf01_1940/RF2_SA_RFF_CER.png",
+      "sha256": "6e86e9e44eff51726a554f5516da7ba3266ddee9bf4889fd896a6c398dba5c80",
+      "replaced_sha256": "484a1813ff3a0bfe5a1678e321513dc0a42e069efbaa2a7b42e8c88476a4fa98"
+    },
+    {
+      "target": "patches/rf01_1940/RF2_SA_RFW_TBLS.png",
+      "source": "runtime/patches/rf01_1940/RF2_SA_RFW_TBLS.png",
+      "sha256": "aea7d9c195a7803653180ed02d6a6d2ece4c3d176de23759d8c6689e71776533",
+      "replaced_sha256": "f9a7e584e83febfb1e4f028edd22cc2759ad0ae4e7e96cf8cbeafee33deacb2b"
+    }
+  ],
+  "textures": {
+    "file": "src/TEXTURES.rf01_1940",
+    "before_sha256": "e9858e8d5a4804a725d8eb888a4dea90e58bded02fe5f308f266baf585675d59",
+    "after_sha256": "411c40806880fe5cc7e98ffc93f3b2d338ade344ce07dd66201480c35b8f90cd",
+    "change": "six blocs de source/TEXTURES.six_replacements.txt : pixels doubles, XScale/YScale 8, taille monde identique"
+  },
+  "withheld": {
+    "files": [
+      {
+        "target": "graphics/decals/RFDSTN1.png",
+        "source": "runtime/graphics/decals/RFDSTN1.png",
+        "sha256": "1ee6904a888460f70760493661976538e53bfb7923d5b0af706144286ff6899b",
+        "replaced_sha256": "ffed428a80a549ca1607ca822e4600bcf76b420d9854615684ce52670ee6a5ff"
+      },
+      {
+        "target": "graphics/decals/RFDSTN2.png",
+        "source": "runtime/graphics/decals/RFDSTN2.png",
+        "sha256": "02d9b06d52a49b77b36b00861d00246d276f60557390228acca5ea08e9a96189",
+        "replaced_sha256": "d29be1284f0bf3bfb0d2914a59f34ee7c104ec5c36607cd3cb1db0d3a63460b0"
+      },
+      {
+        "target": "graphics/decals/RFDSTN3.png",
+        "source": "runtime/graphics/decals/RFDSTN3.png",
+        "sha256": "41b8a64145828505a094540e6a3c6f2267ec5a312d5cc9daff58891d0c978d75",
+        "replaced_sha256": "bb9f2337b7d7f9fdfab1d734e551162179abc551a9d727d0c274fec82165a407"
+      },
+      {
+        "target": "graphics/decals/RFDSTN4.png",
+        "source": "runtime/graphics/decals/RFDSTN4.png",
+        "sha256": "aa61601fdf06a4c3936ef52d9946ff7b54b9ffbbc79823ecea92b0184e4eef83",
+        "replaced_sha256": "cf39e697c25aa6ee53cadaaa7b39919849eb5f990c9ff5aa6f64ba96c9a06d9e"
+      }
+    ],
+    "reason": "Decals recus et controles (empreintes conformes), non integres dans cette candidate : vus dans le moteur (17 decals de RF01, cadrages face au mur marque), humidite et frottement presque invisibles, crasse lue comme une projection de points, coulure tres fine ; les decals actuels restent en place en attendant une correction d'Astra (retour Opus du 29/09)."
+  }
+}
