@@ -16,14 +16,28 @@ class RFBenchWeapon : Weapon abstract
 {
     String SeqName;        // sequence being played, for the bench HUD
     int Shots;             // rounds actually fired
+    int Commits;           // rounds actually put in (tube or cylinder)
     int Baseline;          // rounds owned when the bench gave the weapon (loaded + reserve)
     bool Reloading;
     bool FireQueued;       // fire pressed during a reload: fire once the weapon is back
 
     virtual String SoundPrefix() { return ""; }
     virtual clearscope String Counter() { return ""; }
+    virtual clearscope String AmmoText() { return ""; }     // weapon panel of the bench HUD: "4+1 | 20", "6 | 12"
+    virtual clearscope String AmmoLabel() { return ""; }    // what the numbers are: "tube+ch. | reserve"
     virtual clearscope int Loaded() { return 0; }
     virtual int Capacity() { return 0; }
+
+    // Contract rule for every commit (a round into the tube or the cylinder, a shot): nothing new is engaged once the
+    // owner is dead or another weapon has been asked for; a round engaged before the request finishes, and the weapon
+    // is put away at its next ready point. Empty string: the commit may happen.
+    String CommitBlock()
+    {
+        if (Owner == null || Owner.health <= 0) return "mort";
+        let p = Owner.player;
+        if (p != null && p.PendingWeapon != null && p.PendingWeapon != WP_NOCHANGE && p.PendingWeapon != self) return "changement_demande";
+        return "";
+    }
 
     clearscope int Reserve() const
     {
@@ -51,7 +65,7 @@ class RFBenchWeapon : Weapon abstract
         if (Reloading) Log("recharge_interrompue changement_d_arme");
         Reloading = false;
         FireQueued = false;
-        if (Owner != null) { Owner.A_StopSound(CHAN_ITEM); Owner.A_ClearOverlays(101, 106); }
+        if (Owner != null) { Owner.A_StopSound(CHAN_ITEM); Owner.A_ClearOverlays(101, 107); }
     }
 
     action void A_BenchSeq(String name)
@@ -114,7 +128,7 @@ class RFBenchPump : RFBenchWeapon abstract
     bool Chambered;
     bool Spent;
 
-    virtual int TubeCap() { return 5; }
+    virtual int TubeCap() { return 4; }
     virtual bool CarriesChamber() { return true; }
     override int Capacity() { return TubeCap() + (CarriesChamber() ? 1 : 0); }
     override int Loaded() { return Tube + (Chambered ? 1 : 0); }
@@ -122,6 +136,8 @@ class RFBenchPump : RFBenchWeapon abstract
     {
         return String.Format("tube %d + chambre %d | reserve %d", Tube, Chambered ? 1 : 0, Reserve());
     }
+    override String AmmoText() { return String.Format("%d+%d | %d", Tube, Chambered ? 1 : 0, Reserve()); }
+    override String AmmoLabel() { return "tube+ch. | reserve"; }
 
     override void BeginPlay()
     {
@@ -144,6 +160,7 @@ class RFBenchPump : RFBenchWeapon abstract
     action void A_PumpShot(int pellets, int damage, double spreadH, double spreadV)
     {
         if (!invoker.Chambered) { invoker.Log("ERREUR tir_sans_cartouche"); return; }
+        if (invoker.Owner == null || invoker.Owner.health <= 0) { invoker.Log("shot_annule mort"); return; }
         invoker.Chambered = false;
         invoker.Spent = true;
         invoker.Shots++;
@@ -167,8 +184,9 @@ class RFBenchPump : RFBenchWeapon abstract
 
     action State A_PumpAfterPump()
     {
-        if (invoker.FireQueued && invoker.Chambered) { invoker.FireQueued = false; return ResolveState("Fire"); }
+        bool fire = invoker.FireQueued && invoker.Chambered && invoker.CommitBlock() == "";
         invoker.FireQueued = false;
+        if (fire) return ResolveState("Fire");
         return ResolveState("Ready");
     }
 
@@ -183,10 +201,13 @@ class RFBenchPump : RFBenchWeapon abstract
 
     action void A_PumpShellIn()
     {
+        String block = invoker.CommitBlock();
+        if (block != "") { invoker.Log("shell_in_annule " .. block); return; }
         invoker.Mech("shell_in");
         if (invoker.Tube < invoker.TubeCap() && invoker.Reserve() > 0 && invoker.Owner.TakeInventory(invoker.AmmoType1, 1, true))
         {
             invoker.Tube++;
+            invoker.Commits++;
             invoker.Log("shell_in");
         }
         else invoker.Log("shell_in sans_cartouche");
@@ -194,6 +215,7 @@ class RFBenchPump : RFBenchWeapon abstract
 
     action State A_PumpShellNext()
     {
+        if (invoker.CommitBlock() != "") return ResolveState("ReloadEndSeq");
         if (invoker.FireQueued && (invoker.Chambered || invoker.Tube > 0)) return ResolveState("ReloadEndSeq");
         if (invoker.Tube < invoker.TubeCap() && invoker.Reserve() > 0) return ResolveState("ReloadShellSeq");
         return ResolveState("ReloadEndSeq");
@@ -203,19 +225,26 @@ class RFBenchPump : RFBenchWeapon abstract
     {
         invoker.Reloading = false;
         invoker.Log("recharge_fin");
-        if (!invoker.Chambered && invoker.Tube > 0) return ResolveState("PumpSeq");
-        if (invoker.FireQueued) { invoker.FireQueued = false; return ResolveState("Fire"); }
+        bool free = invoker.CommitBlock() == "";
+        if (!invoker.Chambered && invoker.Tube > 0 && free) return ResolveState("PumpSeq");
+        if (invoker.FireQueued && free) { invoker.FireQueued = false; return ResolveState("Fire"); }
+        invoker.FireQueued = false;
         return ResolveState("Ready");
     }
 }
 
 // Double-action revolver, six chambers. Partial reload rule (a): opening the cylinder ejects everything, the intact
-// rounds go back to the reserve, the fired cases fall; then rounds go in one at a time up to six. The chamber layers
-// (one image per chamber, drawn over the open cylinder) follow the number actually loaded.
+// rounds go back to the reserve, the fired cases fall; then rounds go in one at a time up to six.
+// Rig layers (the animation file's rig_layers, one pose per cylinder position, one stage per hand position): layers
+// 101-106 show the heads of the chambers holding something (fired cases first, chambers 1..Cases, then intact rounds,
+// with a fired image when the file gives one), layer 107 the inserting hand on the chamber being filled. They follow
+// the counts at every frame of the reload, and are removed when the cylinder closes, the weapon is put away, or its
+// owner dies. A save keeps them with the weapon's own state.
 class RFBenchRevolver : RFBenchWeapon abstract
 {
     int Rounds;
     int Cases;
+    int RigPose, RigStage, HandChamber;
 
     virtual int Cylinder() { return 6; }
     override int Capacity() { return Cylinder(); }
@@ -223,14 +252,69 @@ class RFBenchRevolver : RFBenchWeapon abstract
     override String Counter()
     {
         String cyl = "";
-        for (int i = 0; i < 6; i++) cyl = cyl .. (i < Rounds ? "o" : (i < Rounds + Cases ? "x" : "."));
+        for (int i = 1; i <= 6; i++) cyl = cyl .. (i <= Cases ? "x" : (i <= Cases + Rounds ? "o" : "."));
         return String.Format("barillet %s (%d) | reserve %d", cyl, Rounds, Reserve());
     }
+    override String AmmoText() { return String.Format("%d | %d", Rounds, Reserve()); }
+    override String AmmoLabel() { return "barillet | reserve"; }
+
+    // Generated per weapon: the state of a rig layer (kind 0 round, 1 fired case, 2 hand; chamber i; pose or stage j).
+    virtual State RigState(int kind, int i, int j) { return null; }
 
     override void BeginPlay()
     {
         Super.BeginPlay();
         Rounds = Cylinder();
+    }
+
+    void SetLayer(int layer, State want)
+    {
+        if (Owner == null || Owner.player == null) return;
+        let psp = Owner.player.FindPSprite(layer);
+        if (want == null) { if (psp != null) psp.SetState(null); return; }
+        if (psp == null || psp.CurState != want) Owner.player.SetPSprite(layer, want);
+    }
+
+    void ShowRig(int pose, int stage)
+    {
+        if (Owner == null || Owner.health <= 0) { pose = 0; stage = 0; }
+        for (int i = 1; i <= 6; i++)
+        {
+            State want = null;
+            if (pose > 0 && i <= Cases + Rounds)
+            {
+                if (i <= Cases) want = RigState(1, i, pose);
+                if (want == null) want = RigState(0, i, pose);
+            }
+            SetLayer(100 + i, want);
+        }
+        if (stage > 0 && (RigStage == 0 || stage < RigStage)) HandChamber = clamp(Rounds + 1, 1, 6);
+        SetLayer(107, stage > 0 ? RigState(2, HandChamber, stage) : null);
+        RigPose = pose;
+        RigStage = stage;
+    }
+
+    action void A_RevRig(int pose, int stage)
+    {
+        invoker.ShowRig(pose, stage);
+    }
+
+    override void DoEffect()
+    {
+        Super.DoEffect();
+        if ((RigPose > 0 || RigStage > 0) && (Owner == null || Owner.health <= 0 || Owner.player == null || Owner.player.ReadyWeapon != self))
+        {
+            bool dead = Owner != null && Owner.health <= 0;
+            ShowRig(0, 0);
+            Log(dead ? "calques_retires mort" : "calques_retires rangement");
+        }
+    }
+
+    override void OnDeselect(bool fromPowerup, bool onToss)
+    {
+        Super.OnDeselect(fromPowerup, onToss);
+        RigPose = 0;
+        RigStage = 0;
     }
 
     action State A_RevFire()
@@ -242,6 +326,7 @@ class RFBenchRevolver : RFBenchWeapon abstract
     action void A_RevShot(int pellets, int damage, double spreadH, double spreadV)
     {
         if (invoker.Rounds <= 0) { invoker.Log("ERREUR tir_sans_cartouche"); return; }
+        if (invoker.Owner == null || invoker.Owner.health <= 0) { invoker.Log("shot_annule mort"); return; }
         invoker.Rounds--;
         invoker.Cases++;
         invoker.Shots++;
@@ -277,10 +362,13 @@ class RFBenchRevolver : RFBenchWeapon abstract
 
     action void A_RevRoundIn()
     {
+        String block = invoker.CommitBlock();
+        if (block != "") { invoker.Log("round_in_annule " .. block); return; }
         invoker.Mech("round_in");
         if (invoker.Rounds < invoker.Cylinder() && invoker.Reserve() > 0 && invoker.Owner.TakeInventory(invoker.AmmoType1, 1, true))
         {
             invoker.Rounds++;
+            invoker.Commits++;
             invoker.Log("round_in");
         }
         else invoker.Log("round_in sans_cartouche");
@@ -288,6 +376,7 @@ class RFBenchRevolver : RFBenchWeapon abstract
 
     action State A_RevRoundNext()
     {
+        if (invoker.CommitBlock() != "") return ResolveState("ReloadCloseSeq");
         if (invoker.FireQueued && invoker.Rounds > 0) return ResolveState("ReloadCloseSeq");
         if (invoker.Rounds < invoker.Cylinder() && invoker.Reserve() > 0) return ResolveState("ReloadRoundSeq");
         return ResolveState("ReloadCloseSeq");
@@ -303,20 +392,11 @@ class RFBenchRevolver : RFBenchWeapon abstract
     {
         invoker.Reloading = false;
         invoker.Log("recharge_fin");
-        if (invoker.FireQueued) { invoker.FireQueued = false; return ResolveState("Fire"); }
+        invoker.ShowRig(0, 0);
+        bool fire = invoker.FireQueued && invoker.CommitBlock() == "";
+        invoker.FireQueued = false;
+        if (fire) return ResolveState("Fire");
         return ResolveState("Ready");
-    }
-
-    // The six chamber layers exist while the cylinder is shown open; each shows its round when loaded.
-    action void A_RevChambers(bool open)
-    {
-        if (!open) { A_ClearOverlays(101, 106); return; }
-        A_Overlay(101, "Chamber1", true);
-        A_Overlay(102, "Chamber2", true);
-        A_Overlay(103, "Chamber3", true);
-        A_Overlay(104, "Chamber4", true);
-        A_Overlay(105, "Chamber5", true);
-        A_Overlay(106, "Chamber6", true);
     }
 }
 
@@ -373,6 +453,33 @@ class RFBenchTarget : Actor
     Spawn:
         RFTG A -1;
         Stop;
+    }
+}
+
+// The RF HUD's weapon panel only knows the FAL's magazine: for a bench weapon it would show the reserve alone. The
+// bench (and only the bench: its MAPINFO names this class) writes the weapon's own count there, in the notation of
+// the weapon: "tube+chambre | reserve" for the Rapid, "barillet | reserve" for the MR73.
+class RFBenchStatusBar : RFStatusBar
+{
+    override void Draw(int state, double ticFrac)
+    {
+        Super.Draw(state, ticFrac);
+        if (state != HUD_StatusBar && state != HUD_Fullscreen) return;
+        if (CPlayer == null || CPlayer.mo == null) return;
+        let w = RFBenchWeapon(CPlayer.ReadyWeapon);
+        if (w == null) return;
+        // Same scale as RFStatusBar.Draw (a 640x360 layout, rf_hud_scale on top).
+        let setting = CVar.GetCVar('rf_hud_scale', CPlayer);
+        double s = setting != null ? clamp(setting.GetFloat(), 0.75, 1.5) : 1.0;
+        BeginHUD(1.0, false, 640, 360);
+        double fit = min(Screen.GetWidth() / 640.0, Screen.GetHeight() / 360.0);
+        Vector2 engineScale = GetHUDScale();
+        s *= fit / max(engineScale.Y, 1.0);
+        int right = DI_SCREEN_RIGHT_BOTTOM;
+        double wd = 150;
+        Fill(0xff0c0a0b, (-10 - wd + 2) * s, -33 * s, (wd - 4) * s, 22 * s, right);
+        DrawString(labelFont, w.AmmoLabel(), ((-10 - wd + 6) * s, -24 * s), right | DI_ITEM_LEFT_TOP, Font.CR_DARKGRAY, 1.0, -1, 0, (s * 0.62, s * 0.62));
+        DrawString(numberFont, w.AmmoText(), (-16 * s, -32 * s), right | DI_ITEM_RIGHT_TOP | DI_TEXT_ALIGN_RIGHT, Font.CR_WHITE, 1.0, -1, 0, (s, s));
     }
 }
 

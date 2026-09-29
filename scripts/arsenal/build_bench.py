@@ -63,7 +63,8 @@ def zs_str(s):
 # ------------------------------------------------------------------ sources
 def find_delivery(weapon, folders):
     for folder in folders:
-        for p in sorted(Path(folder).rglob('*.json')):
+        top = sorted(Path(folder).glob('*.json'))              # the delivery's own files before its evidence copies
+        for p in top + [q for q in sorted(Path(folder).rglob('*.json')) if q not in top]:
             try:
                 d = json.loads(p.read_text(encoding='utf-8'))
             except (ValueError, UnicodeDecodeError):
@@ -94,26 +95,63 @@ def load_weapon(weapon, deliveries, files):
         source = dict(kind='placeholder', animation=f'bench/arsenal/placeholder/{WEAPONS[weapon]}')
     else:
         anim = json.loads(anim_path.read_text(encoding='utf-8'))
-        images, sounds = {}, {}
+        images, sounds, provenance = {}, {}, {}
+        # The module stores each file at the destination the delivery's manifest gives it (target_relpath), the path
+        # a later import will use; a delivery without manifest keeps its own relative paths.
+        targets = {}
+        manifest = delivery / 'manifest.json'
+        if manifest.is_file():
+            for f in json.loads(manifest.read_text(encoding='utf-8')).get('files') or []:
+                if isinstance(f, dict) and f.get('file') and f.get('target_relpath'):
+                    targets[f['file']] = f['target_relpath']
         prefix = anim.get('file_prefix', '')
-        names = {f['image'] for fr in anim['sequences'].values() for f in fr} | {anim['flash']['image']} | set(anim.get('chamber_layers', []))
-        for image in names:
+        rig = rig_of(anim)
+        names = ({f['image'] for fr in anim['sequences'].values() for f in fr} | {anim['flash']['image']}
+                 | {img for group in rig.values() if group for poses in group for img in poses})
+        for image in sorted(names):
             rel = anim.get('files', {}).get(image, prefix + image + '.png')
-            files[rel] = resolve(rel, anim_path.parent, delivery).read_bytes()
-            images[image] = rel
+            src = resolve(rel, anim_path.parent, delivery)
+            target = targets.get(rel, rel)
+            files[target] = src.read_bytes()
+            images[image] = target
+            provenance[target] = dict(file=rel, sha256=sha256(files[target]))
         folder = 'sounds/bench/' + ('rapid' if anim['kind'] == 'pump' else 'mr73')
         for event, variants in anim.get('sounds', {}).items():
             rels = []
             for v in variants:
-                src = resolve(v if v.lower().endswith('.wav') else v + '.wav', anim_path.parent, delivery)
-                rel = f'{folder}/{src.name}'
-                files[rel] = src.read_bytes()
-                rels.append(rel)
+                rel = v if v.lower().endswith('.wav') else v + '.wav'
+                src = resolve(rel, anim_path.parent, delivery)
+                target = targets.get(rel, f'{folder}/{src.name}')
+                files[target] = src.read_bytes()
+                rels.append(target)
+                provenance[target] = dict(file=rel, sha256=sha256(files[target]))
             sounds[event] = rels
         source = dict(kind='delivery', animation=str(anim_path), delivery=str(delivery),
-                      animation_sha256=sha256(anim_path.read_bytes()))
+                      animation_sha256=sha256(anim_path.read_bytes()), manifest_targets=bool(targets), files=provenance)
     anim['_images'], anim['_sounds'], anim['_source'] = images, sounds, source
     return anim
+
+
+def rig_of(anim):
+    """Revolver rig layers: per chamber the images of each cylinder pose (and of the fired case when given), per
+    chamber the images of each hand stage. The older single-image chamber_layers are one pose with no hand."""
+    layers = anim.get('rig_layers') or {}
+    chambers = layers.get('chambers') or [[c] for c in anim.get('chamber_layers', [])]
+    return dict(chambers=chambers, fired=layers.get('chambers_fired'), hands=layers.get('hands'))
+
+
+def rig_sprites(anim):
+    """(state label, sprite, letter, image, rig code) of every rig layer image; code = kind*100 + chamber*10 + j."""
+    rig, out = rig_of(anim), []
+    for i, poses in enumerate(rig['chambers'], 1):
+        for j, img in enumerate(poses, 1):
+            out.append((f'Chamber{i}Pose{j}', f'RMC{i}', LETTERS[j - 1], img, 0 * 100 + i * 10 + j))
+        for j, img in enumerate((rig['fired'] or [[]] * 6)[i - 1], 1):
+            out.append((f'Chamber{i}Pose{j}Fired', f'RMC{i}', LETTERS[len(poses) + j - 1], img, 1 * 100 + i * 10 + j))
+    for i, stages in enumerate(rig['hands'] or [], 1):
+        for j, img in enumerate(stages, 1):
+            out.append((f'Hand{i}Stage{j}', f'RMH{i}', LETTERS[j - 1], img, 2 * 100 + i * 10 + j))
+    return out
 
 
 # ------------------------------------------------------------------ generation
@@ -134,8 +172,18 @@ def check(anim, spec):
     shots = sum(1 for fr in anim['sequences'].values() for f in fr if f.get('event') == 'shot')
     if shots != 1:
         problems.append(f'{shots} evenements shot au total, 1 attendu (le tir est un seul evenement)')
-    if spec is REVOLVER and len(anim.get('chamber_layers', [])) != 6:
-        problems.append('six couches de chambre attendues (chamber_layers)')
+    if spec is REVOLVER:
+        rig = rig_of(anim)
+        poses = [int(f.get('chamber_pose') or (1 if f.get('chambers') else 0)) for fr in anim['sequences'].values() for f in fr]
+        stages = [int(f.get('hand_stage') or 0) for fr in anim['sequences'].values() for f in fr]
+        if len(rig['chambers']) != 6 or not all(rig['chambers']):
+            problems.append('six chambres attendues (rig_layers.chambers ou chamber_layers)')
+        elif max(poses) > min(len(p) for p in rig['chambers']):
+            problems.append(f'chamber_pose {max(poses)} sans image pour chaque chambre')
+        if rig['fired'] and (len(rig['fired']) != 6 or any(len(f) != len(c) for f, c in zip(rig['fired'], rig['chambers']))):
+            problems.append('chambers_fired : une image par chambre et par pose attendue')
+        if max(stages) > 0 and (not rig['hands'] or len(rig['hands']) != 6 or max(stages) > min(len(h) for h in rig['hands'])):
+            problems.append(f'hand_stage {max(stages)} sans image de main pour chaque chambre (rig_layers.hands)')
     if problems:
         raise SystemExit(f"{anim['weapon']} : animation refusee par le banc :\n  " + '\n  '.join(problems))
 
@@ -146,7 +194,6 @@ def letters_for(anim):
         for f in anim['sequences'].get(seq, []):
             if f['image'] not in order:
                 order.append(f['image'])
-    order += [c for c in anim.get('chamber_layers', []) if c not in order]
     if len(order) > len(LETTERS):
         raise SystemExit(f"{anim['weapon']} : {len(order)} images, le banc en gere {len(LETTERS)} par sprite")
     return {img: LETTERS[i] for i, img in enumerate(order)}
@@ -165,7 +212,8 @@ def frame_line(anim, spec, seq, i, f, letter, prefix_sound):
         parts.append(code.format(pellets=b['pellets'], damage=b['damage'], sh=b['spread'][0], sv=b['spread'][1]) if code
                      else f'A_BenchEvent("{ev}")')
     if seq in spec['reload'] and spec is REVOLVER:
-        parts.append(f"A_RevChambers({'true' if f.get('chambers') else 'false'})")
+        pose = int(f.get('chamber_pose') or (1 if f.get('chambers') else 0))
+        parts.append(f"A_RevRig({pose}, {int(f.get('hand_stage') or 0)})")
     if f.get('ready_point'):
         parts.append('A_WeaponReady(WRF_NOFIRE | WRF_NOBOB)')
     bright = ' Bright' if ev == 'shot' else ''
@@ -192,7 +240,10 @@ def gen_class(anim):
         out += [f"    override int TubeCap() {{ return {int(cap['tube'])}; }}",
                 f"    override bool CarriesChamber() {{ return {'true' if cap.get('chamber', 1) else 'false'}; }}"]
     else:
-        out += [f"    override int Cylinder() {{ return {int(cap.get('cylinder', 6))}; }}"]
+        out += [f"    override int Cylinder() {{ return {int(cap.get('cylinder', 6))}; }}", '',
+                '    override State RigState(int kind, int i, int j)', '    {', '        switch (kind * 100 + i * 10 + j)', '        {']
+        out += [f'        case {code}: return FindState("{label}");' for label, _, _, _, code in rig_sprites(anim)]
+        out += ['        }', '        return null;', '    }']
     out += ['', '    States', '    {',
             '    Ready:', f'        {spr} {ready} 1 A_BenchReady();', '        Loop;',
             '    Deselect:', f'        {spr} {ready} 1 A_Lower(12);', '        Loop;',
@@ -216,9 +267,8 @@ def gen_class(anim):
         if not tail.startswith('Goto'):
             out.append('        Goto Ready;')
     if spec is REVOLVER:
-        for n, layer in enumerate(anim['chamber_layers'], 1):
-            out += [f'    Chamber{n}:', f'        {spr} {L[layer]} 1 A_JumpIf(invoker.Rounds < {n}, "Chamber{n}Off");', '        Loop;',
-                    f'    Chamber{n}Off:', f'        TNT1 A 1 A_JumpIf(invoker.Rounds >= {n}, "Chamber{n}");', '        Loop;']
+        for label, sprite, letter, _, _ in rig_sprites(anim):      # rig layers (101-107), set by RFBenchRevolver.ShowRig
+            out += [f'    {label}:', f'        {sprite} {letter} -1;', '        Stop;']
     out += ['    Flash:', f"        {anim['flash_sprite']} A {anim['flash']['tics']} Bright A_Light2;", '        TNT1 A 0 A_Light0;',
             '        Stop;', '    Spawn:', '        TNT1 A -1;', '        Stop;', '    }', '}', '']
     return '\n'.join(out), L
@@ -237,6 +287,9 @@ def gen_textures(anim, L, files):
     for image, letter in L.items():
         out += sprite(f"{anim['sprite']}{letter}0", anim['_images'][image])
     out += sprite(f"{anim['flash_sprite']}A0", anim['_images'][anim['flash']['image']])
+    if anim['kind'] == 'revolver':
+        for _, spr, letter, image, _ in rig_sprites(anim):
+            out += sprite(f'{spr}{letter}0', anim['_images'][image])
     return '\n'.join(out) + '\n'
 
 
@@ -276,6 +329,7 @@ MAPINFO = '''// RF2 arsenal test bench: the firing range, outside the campaign (
 gameinfo
 {
     AddEventHandlers = "RFBenchHandler"
+    StatusBarClass = "RFBenchStatusBar"
 }
 
 map ARSENAL "Banc d'essai - arsenal"
@@ -361,6 +415,43 @@ def base_pk3(a):
     return target
 
 
+def collisions(files, base):
+    """Sprite names of the module already used by the base game, the engine's own files or the IWAD, and module files
+    that would shadow a file of the base (same path). The module must add, never replace."""
+    import re, struct
+    ours = sorted({m.group(1).upper() for m in re.finditer(r'^Sprite\s+"?([A-Za-z0-9\[\]\\]{4})', files['TEXTURES.bench'].decode(), re.M)})
+    used = {}
+
+    def note(name, where):
+        used.setdefault(name[:4].upper(), set()).add(where)
+    archives = [base] + sorted(ENGINE.parent.glob('*.pk3'))
+    base_names = set()
+    for arc in archives:
+        with zipfile.ZipFile(arc) as z:
+            for n in z.namelist():
+                if arc == base:
+                    base_names.add(n.lower())
+                if n.lower().startswith('sprites/'):
+                    note(Path(n).name, arc.name)
+                if Path(n).name.lower().startswith('textures'):
+                    for m in re.finditer(r'^\s*Sprite\s+"?(\w{4})', z.read(n).decode('utf-8', 'replace'), re.M | re.I):
+                        note(m.group(1), f'{arc.name}:{n}')
+    wad = IWAD.read_bytes()
+    count, off = struct.unpack_from('<ii', wad, 4)
+    inside = False
+    for k in range(count):
+        name = struct.unpack_from('<8s', wad, off + 16 * k + 8)[0].rstrip(b'\0').decode('ascii', 'replace')
+        if name in ('S_START', 'SS_START'):
+            inside = True
+        elif name in ('S_END', 'SS_END'):
+            inside = False
+        elif inside:
+            note(name, IWAD.name)
+    sprite_hits = {p: sorted(used[p]) for p in ours if p in used}
+    file_hits = sorted(n for n in files if n.lower() in base_names)
+    return dict(sprites=ours, sprite_collisions=sprite_hits, file_collisions=file_hits)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--delivery', action='append', default=[], help="Astra delivery folder (repeatable)")
@@ -400,13 +491,16 @@ def main():
     files['LANGUAGE.bench'] = LANGUAGE.encode()
     files['maps/ARSENAL.wad'] = arsenal_map.wad_bytes()
 
+    base = Path(a.base).resolve() if (a.scratch and a.base) else (None if a.scratch else base_pk3(a))
+    clash = collisions(files, base) if base else None
+    if clash and (clash['sprite_collisions'] or clash['file_collisions']):
+        raise SystemExit('collisions avec la base, le moteur ou l\'IWAD : ' + json.dumps(clash, ensure_ascii=False))
     if a.scratch:
         with zipfile.ZipFile(a.scratch, 'w', zipfile.ZIP_DEFLATED) as z:
             for name in sorted(files):
                 z.writestr(name, files[name])
-        print('module (developpement) :', a.scratch)
+        print('module (developpement) :', a.scratch, '; collisions :', 'non controlees (sans --base)' if clash is None else 'aucune')
         return 0
-    base = base_pk3(a)
     stamp = time.strftime('%Y%m%d_%H%M')
     folder = OUT / f'RF2_ARSENAL_ESSAI_{stamp}'
     folder.mkdir(parents=True, exist_ok=False)
@@ -422,7 +516,7 @@ def main():
                 module=rel(module), module_sha256=sha256(module.read_bytes()), files=len(files),
                 base=rel(base) if base.is_relative_to(ROOT) else str(base), base_sha256=sha256(base.read_bytes()),
                 base_src_tree=None if a.base else git('rev-parse', 'HEAD:src'),
-                engine=str(ENGINE), iwad=str(IWAD), weapons=report,
+                engine=str(ENGINE), iwad=str(IWAD), collisions=clash, weapons=report,
                 status='BANC D\'ESSAI - hors campagne ; aucune approbation du proprietaire',
                 launcher='JOUER_RF2_ARSENAL_ESSAI.cmd (le plus recent) / ' + folder.name + '\\JOUER.cmd (ce build) ; '
                          'user\\uzdoom_arsenal_essai.ini, user\\savegames_arsenal_essai, user\\logs_arsenal_essai')

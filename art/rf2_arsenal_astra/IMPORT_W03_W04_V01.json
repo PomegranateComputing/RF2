@@ -1,0 +1,551 @@
+{
+  "lot": "W03_W04_V01",
+  "checked": "2026-09-29 14:18",
+  "folder": "C:\\PROJECTS\\RF2_UZDOOM\\incoming\\astra\\RF2_ARSENAL\\W03_W04_V01",
+  "origin": "C:/PROJECTS/RF2_UZDOOM_ASTRA_ARSENAL_20260928/incoming/astra/RF2_ARSENAL/W03_W04_V01",
+  "sums_sha256": "8307839bf8209698eff21f0158cc3a3b5ed939a9c5a00174ac9699db364d181a",
+  "files_listed": 3665,
+  "files_mismatched": [],
+  "unlisted": [],
+  "same_sums_as_origin": true,
+  "result": "conforme",
+  "bench_reads": [
+    {
+      "file": "animation.mr73.json",
+      "sha256": "4b7b67e5480c865f48a9f0bf8a0252c4cf691f17cec6767903640c994dd5799e"
+    },
+    {
+      "file": "animation.rapid.json",
+      "sha256": "f84fe01d7b63f816024a3639c235faf0b15f753dc576f7322aa04ba6f72c3f4d"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_1_01.png",
+      "sha256": "f27ef8f3af65f824e17869971edf1c31ac7ac7ab1c478b04171c2569d45a3de1"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_1_POSE_1_01.png",
+      "sha256": "868ce8037da7ccfc11349111d2dcbe787d5be70a77927dd5eea3903746aacf5a"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_1_POSE_2_01.png",
+      "sha256": "f0cf0aa963d4c3bf27414ff8624c511dbdba2ea61d45b67a1140c57161d42b9e"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_1_POSE_3_01.png",
+      "sha256": "f27ef8f3af65f824e17869971edf1c31ac7ac7ab1c478b04171c2569d45a3de1"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_2_01.png",
+      "sha256": "066997a259d1ef55b97b4a245b0da7ce5187d7654f2f40c7a290e7740683734f"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_2_POSE_1_01.png",
+      "sha256": "c710f67429bed1b4fd5160b3bf94421f4bf3d116a6ace425390e209536f13c5f"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_2_POSE_2_01.png",
+      "sha256": "64f0a51d5320cfcb3f1e85069e4ca21535508e6dd2eae1538e5fed9fe4348dc2"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_2_POSE_3_01.png",
+      "sha256": "066997a259d1ef55b97b4a245b0da7ce5187d7654f2f40c7a290e7740683734f"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_3_01.png",
+      "sha256": "341d2ec4273c56a64becb75b588c2662a2c9312690c60e4735c397c2be54b45e"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_3_POSE_1_01.png",
+      "sha256": "3075f95395b236a5e5642621e6241eeed670edba1d181c0712f700befcd3a83c"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_3_POSE_2_01.png",
+      "sha256": "294972da62b06087d1e84972e35602dc2b7ae6c5ee9eafc4666a7e7a96d2267c"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_3_POSE_3_01.png",
+      "sha256": "341d2ec4273c56a64becb75b588c2662a2c9312690c60e4735c397c2be54b45e"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_4_01.png",
+      "sha256": "4cb03d2a0dedf30b518099561a111811da76ca6ae58c9ff43a7270eac9c4f447"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_4_POSE_1_01.png",
+      "sha256": "3396a36baf4a4cf5f43bc014a84fa874b3742d23ddd44aa2ddc1b09e3e5db28e"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_4_POSE_2_01.png",
+      "sha256": "9b9ee11286b28bcb44963fe82bbab6ca0ea2a636c7bf758e35033e9071f260ca"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_4_POSE_3_01.png",
+      "sha256": "4cb03d2a0dedf30b518099561a111811da76ca6ae58c9ff43a7270eac9c4f447"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_5_01.png",
+      "sha256": "c13bee3bcd0027588b5fda81d650e216a5177cbc4de702b980efecf5a1a12748"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_5_POSE_1_01.png",
+      "sha256": "b941590bdb03cf14654ed9f63063aaf7e03052a883770531af446f71dda23d7f"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_5_POSE_2_01.png",
+      "sha256": "e321a0d574c4e23f6a518f0dceec6bab49a124ceade13b3e2db6d47bd282c98d"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_5_POSE_3_01.png",
+      "sha256": "c13bee3bcd0027588b5fda81d650e216a5177cbc4de702b980efecf5a1a12748"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_6_01.png",
+      "sha256": "fc195207cfe71a64337587d9fc3a234ef7dba900a585ebe7bcb055cb78aeb020"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_6_POSE_1_01.png",
+      "sha256": "9f64b4dcbdde6b8aa106e5b6b3790c12fd09e02dd59e6e191965b09b68e5b6a9"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_6_POSE_2_01.png",
+      "sha256": "8d96f2de6235a15be5f347c397f57dea4a77ec2960d055279818aec5dbcfa0e0"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CHAMBER_6_POSE_3_01.png",
+      "sha256": "fc195207cfe71a64337587d9fc3a234ef7dba900a585ebe7bcb055cb78aeb020"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CYLINDER_CLOSED_01.png",
+      "sha256": "aaadb36c1f8b5ec5cf131481f19b70795d93fa7ce88246ead5a69b14c52cc655"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CYLINDER_CLOSE_1_01.png",
+      "sha256": "fc97d26951203b24a431e4a54306156d47d61bd1f756119d4e9074cf2da208b2"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CYLINDER_CLOSE_2_01.png",
+      "sha256": "c6f51c63495b97fa0a8add82bd081842c73098e6d8897fc60534fe10628f39c5"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CYLINDER_OPEN_01.png",
+      "sha256": "02e264570df68244ae0eeb613f595f18f1b3b4470aec45cc8a8f9b4e42708fd4"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CYLINDER_OPEN_1_01.png",
+      "sha256": "11d7c136f2c9d0134e9941b141954bd321dd327a28f300456c1478d07731deb5"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_CYLINDER_OPEN_2_01.png",
+      "sha256": "fc97d26951203b24a431e4a54306156d47d61bd1f756119d4e9074cf2da208b2"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_DRY_01.png",
+      "sha256": "e04bc252a7ea1970d40f1cc87274ed9776281e672616affe9aee6b17cd43dd65"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_EJECT_01.png",
+      "sha256": "7ffce7971e316989067eed3061d2be657f0656aadb6dd83f6dd81daa98dbb9ff"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_FIRE_01.png",
+      "sha256": "134777b3aa40ed9b1b61acceb38525a7264fede2a9cb13890d5d7fa36ad65c62"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_FLASH_01.png",
+      "sha256": "0f5e6fee5f9920c010f2e3af6deec52b9cf4d7758f26b828eb1d257202aee167"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_1_STAGE_1_01.png",
+      "sha256": "7262669a31641f84fec531541849bbd791352c10ca83043b2c1fc66a6f05c1b1"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_1_STAGE_2_01.png",
+      "sha256": "1c8fc1088e288673a7326a6f0c57e003ba70396ec98c38ec0edd32780ba0d06a"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_1_STAGE_3_01.png",
+      "sha256": "663bc1334c2627b57c9095956790d8d1d176b4537357c4c580fbd9c49a3c1c4e"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_1_STAGE_4_01.png",
+      "sha256": "a4317ab18dace4c17a0fe7a4e145800f841fdf6b4a44bab91adf9adce12c2a77"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_1_STAGE_5_01.png",
+      "sha256": "2e4407df7cb9691963f7a77b857ef8adddb5edb528a2b59867029548f26ca8f4"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_1_STAGE_6_01.png",
+      "sha256": "d191079b88e92b966f62e81c73a351e8d00b86d6087f21593a199c5e14281149"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_1_STAGE_7_01.png",
+      "sha256": "c710f67429bed1b4fd5160b3bf94421f4bf3d116a6ace425390e209536f13c5f"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_2_STAGE_1_01.png",
+      "sha256": "ab2206c1fe3771de9fead12cc7ea043703b9a68be4535179620703636cd46d68"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_2_STAGE_2_01.png",
+      "sha256": "2d7dab48f16d5f63da7a78caa6e1e5c8b13aeb880582909b11f062922580b55e"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_2_STAGE_3_01.png",
+      "sha256": "8b010539749d00b7856d2bedda7c66829e65906d28573383ecf5c4c91858993e"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_2_STAGE_4_01.png",
+      "sha256": "6d849024cf9fc8aaa6b6b5e646c6a4a7334eba4d8dc7709781aab2adc7e5a85b"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_2_STAGE_5_01.png",
+      "sha256": "dddfd4e7f316466a5f1a65eed8bb6f4b0d6d5ea35c27ba028dcaf4d8bc5af21e"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_2_STAGE_6_01.png",
+      "sha256": "2f657a8cb0816fbf2cdf5f9eeee1ca9e6262efa9c515a0138b4c73c4565dfd19"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_2_STAGE_7_01.png",
+      "sha256": "c710f67429bed1b4fd5160b3bf94421f4bf3d116a6ace425390e209536f13c5f"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_3_STAGE_1_01.png",
+      "sha256": "f8053bbcaa112627e272599b1ee2c6a5ad67f595535110110f871101605f8b69"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_3_STAGE_2_01.png",
+      "sha256": "f5287e1dcc3053858e989b456cf1febe74ad18fc5827fc06fd1e78b34644a2d2"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_3_STAGE_3_01.png",
+      "sha256": "553386345da3f79c16238f057dc8916cb88adb61793f9cb6d1ac7ede2b8f6055"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_3_STAGE_4_01.png",
+      "sha256": "8694b2744e76bff7528d11a692838f9117c511d6f4107b6ab85126ce0a889d5a"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_3_STAGE_5_01.png",
+      "sha256": "1fb2e9432a967e12d6283e004f888a2b0e49895449b43dd08a1972d92ac6637b"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_3_STAGE_6_01.png",
+      "sha256": "d72db15a092e433f9cc92263ba2be768bf33fcb4bb802d4db919419f164163dd"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_3_STAGE_7_01.png",
+      "sha256": "c710f67429bed1b4fd5160b3bf94421f4bf3d116a6ace425390e209536f13c5f"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_4_STAGE_1_01.png",
+      "sha256": "1bb10ea2a398e177dbc236383b43aa1df4b362e5ff9f0670ba576cebef9d7f80"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_4_STAGE_2_01.png",
+      "sha256": "e0d2f4b74017c25a69f8c363799056d5f212fd5972618795528bb642e364708a"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_4_STAGE_3_01.png",
+      "sha256": "96c2e86e9ce4f3a16ad88f4b14d75b28e0f759299c65aefae6919b8006f151ce"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_4_STAGE_4_01.png",
+      "sha256": "af0398b2730720366ac21efd4adaf4830247629d3baf024f0cf60bb1729d2c26"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_4_STAGE_5_01.png",
+      "sha256": "76ec265033084c62bdf7269e2d147133b6c668b16079b2b6aeb58d78012305de"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_4_STAGE_6_01.png",
+      "sha256": "6be51503aa6c98d6865f2c894f349284ce4eef6b8b30a25a737d168903eae161"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_4_STAGE_7_01.png",
+      "sha256": "c710f67429bed1b4fd5160b3bf94421f4bf3d116a6ace425390e209536f13c5f"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_5_STAGE_1_01.png",
+      "sha256": "62c019563d1f70d3a54f7454921fe55d877669c1f08409ea6eeef52a4d03924e"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_5_STAGE_2_01.png",
+      "sha256": "4af50c2637948533c891d31c81a48fbd5ee9e8459da931083a712f9527afd507"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_5_STAGE_3_01.png",
+      "sha256": "1bb7d9355d3cf5bb944d7c41fbaa5c11504f60a7f3941cced6de65e7b630febc"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_5_STAGE_4_01.png",
+      "sha256": "627ced9b1b12050f78ed443a21d7f6584f309bb0b965afb9b9a9fc335618d3d8"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_5_STAGE_5_01.png",
+      "sha256": "8d0d63711cc3e210c7085b8215bb16aa1bb28d72429770464d3acc0cfac478c7"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_5_STAGE_6_01.png",
+      "sha256": "827735e11c2fd04bad773f8603f95237a52857ca1dd89858a12b65671ca16402"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_5_STAGE_7_01.png",
+      "sha256": "c710f67429bed1b4fd5160b3bf94421f4bf3d116a6ace425390e209536f13c5f"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_6_STAGE_1_01.png",
+      "sha256": "85a0fc576675c81c43b4290bc3985e9fd1b985d5b5e55e0da306d6e4f274cda4"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_6_STAGE_2_01.png",
+      "sha256": "c2d90a66e52ab33d2ead929f3169d5bdc4d37c095eb37db6b45a9e31bdea4c6b"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_6_STAGE_3_01.png",
+      "sha256": "b625fce3ce5ad8ab5a22591161ebbac2880bb5ca3befec82590ef952a093f5cf"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_6_STAGE_4_01.png",
+      "sha256": "2fece295d2a2b06c5cd43e5a622d43b58d4c6f4e7c528b7c6a91b3505a1063a0"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_6_STAGE_5_01.png",
+      "sha256": "e257803df74099ddfdc99908be262f1a0486b2edf02459c1b3bb8e43b5e419ca"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_6_STAGE_6_01.png",
+      "sha256": "1463462c61c1fd0b089fd4310e1ef58ec06616fb8f61f3afe227118af461c5ac"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_6_STAGE_7_01.png",
+      "sha256": "c710f67429bed1b4fd5160b3bf94421f4bf3d116a6ace425390e209536f13c5f"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_CLEAR_01.png",
+      "sha256": "fbe19d1f30939b156c7b7ba6f733c12e572df194d74625beef355b729befe68d"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_RELEASE_1_01.png",
+      "sha256": "37852d1f91a71d01106ef72938fc8144e40080d643c30e2ad088a7dd71a6d680"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_RELEASE_2_01.png",
+      "sha256": "de93681dacef4d53ff34b410a1263c999dd4470f75bddf79234eaced8ae0fcbf"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_RETURN_1_01.png",
+      "sha256": "de93681dacef4d53ff34b410a1263c999dd4470f75bddf79234eaced8ae0fcbf"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_HAND_RETURN_2_01.png",
+      "sha256": "37852d1f91a71d01106ef72938fc8144e40080d643c30e2ad088a7dd71a6d680"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_INSERT_BASE_01.png",
+      "sha256": "3be3ec4443e5c86182cc00b98c61289af5e39c365e4787cd6733b698f3e3c982"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_READY_01.png",
+      "sha256": "b5906ee5f16412a5b63cca9f97f5a8f7505a73764233d5c42706759536948c8a"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_RECOIL_01.png",
+      "sha256": "6ca179ece1e407327cbe61b0a69341f4b8231b4879588be33d7215b1a5d5023a"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_RECOVERY_01.png",
+      "sha256": "2884b3dcebaa152aa8d796ffd485e7d514289795274249f4cfa52cd20bf7d0c3"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_RELOAD_END_01.png",
+      "sha256": "b5906ee5f16412a5b63cca9f97f5a8f7505a73764233d5c42706759536948c8a"
+    },
+    {
+      "file": "exports/graphics/weapons/mr73/RF2_MR73_SETTLE_01.png",
+      "sha256": "a7f022deff261979c145106c18181729dadbb9c2bf12cc165a75aab4afd4f44d"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_DRY_PRESS_01.png",
+      "sha256": "c6bf17ef50ad60c421b464a6c37a68d0d86abddb9ffd192d413e20d6381adcb4"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_FIRE_01.png",
+      "sha256": "61ae2bb49bba2cc43b2894e07cadd843b9b92e8553c38ac588f79f18b2faf397"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_FLASH_01.png",
+      "sha256": "594305514bff0712129b379cb0f73accdf70771fbd6afc02783d4d1c3a9441f3"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_HAND_CLEAR_01.png",
+      "sha256": "66e49d4899f80b3998feecbb04b076e4ec0d9378e122831c04828a53e4955e38"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_HAND_RELEASE_1_01.png",
+      "sha256": "cfe92a8f78af34c4ac4eb2e71de1113c0fa96c5a5e02e85022d7dd804bf62d8d"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_HAND_RELEASE_2_01.png",
+      "sha256": "eb9fe22c51f5f2fab118175d8c2d30796205d8aef9c316f479e91081fa47f7f1"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_HAND_RETURN_1_01.png",
+      "sha256": "eb9fe22c51f5f2fab118175d8c2d30796205d8aef9c316f479e91081fa47f7f1"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_HAND_RETURN_2_01.png",
+      "sha256": "cfe92a8f78af34c4ac4eb2e71de1113c0fa96c5a5e02e85022d7dd804bf62d8d"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_INSERT_APPROACH_HIGH_01.png",
+      "sha256": "8c9efe1dbfd3d02cb04afd812f252574a7f4b76bd3e1348859062587ee11d56d"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_INSERT_APPROACH_LOW_01.png",
+      "sha256": "80d76c99d498067e74d2a7e1e41a2686358f30865203fa5ed28f8884ae2e5192"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_INSERT_COMMIT_01.png",
+      "sha256": "0927bc00d786e5a0d1af4e3dc2731e5bcd2499a37fe61048cc273692a12095db"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_INSERT_CONTACT_01.png",
+      "sha256": "cfae2304aae284daab9f0480b0c34b86592f9657952548efad98d259fb4145dd"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_INSERT_HAND_CLEAR_01.png",
+      "sha256": "66e49d4899f80b3998feecbb04b076e4ec0d9378e122831c04828a53e4955e38"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_INSERT_PRESS_01.png",
+      "sha256": "7cad8c0f5c4d753308fcc265316c0a48b54c2bfbea4c2e6eff34b911d0fc0cb5"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_INSERT_WITHDRAW_01.png",
+      "sha256": "725b70eecab95794a57e386ea7ceef202d986a49e4174ca1e51c4acae012dc73"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_PUMP_BACK_01.png",
+      "sha256": "3c5c6443c12ad384f0de6ed9d8076cb6f1ff2ead984446dc89b30ff05c671e97"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_PUMP_BACK_MID_01.png",
+      "sha256": "da8122fcc8390fe0c13201c82304b210604363deb7e06a5d1e462c3ad5031bfa"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_PUMP_BACK_START_01.png",
+      "sha256": "23739d132f85e30db7cbfc3a52e81bb38417589af2290c2c11ce7962baa70641"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_PUMP_FORWARD_END_01.png",
+      "sha256": "bc9d15fe348f3e988105dcab28579b9f5d00f2c866cd28da654a9f727fa433b3"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_PUMP_FORWARD_MID_01.png",
+      "sha256": "75a2aa8118d40db02d1a7bda7e1c43b83f8467b7819a86b02481100c80963a15"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_READY_01.png",
+      "sha256": "bc9d15fe348f3e988105dcab28579b9f5d00f2c866cd28da654a9f727fa433b3"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_RECOIL_01.png",
+      "sha256": "f8400d1594cf2806309df1a12340763291e864bf498e50cd3504d3b2dd41f032"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_RECOVERY_01.png",
+      "sha256": "1e75f0eb6e6bc44bb875f17cb90221ad8ffb2467495f910677b1965fed43e828"
+    },
+    {
+      "file": "exports/graphics/weapons/rapid/RF2_RAPID_RELOAD_END_01.png",
+      "sha256": "bc9d15fe348f3e988105dcab28579b9f5d00f2c866cd28da654a9f727fa433b3"
+    },
+    {
+      "file": "exports/sounds/mr73/cloth.wav",
+      "sha256": "0defec03f1af12df752c7b9f0acc0cf8d3b1bb664727aa3de69760e0c4f195c4"
+    },
+    {
+      "file": "exports/sounds/mr73/cyl_close.wav",
+      "sha256": "18246873a2b32e4aae63e388079e34c0cef1c51f05340beca5621b8b72f59868"
+    },
+    {
+      "file": "exports/sounds/mr73/cyl_open.wav",
+      "sha256": "25899d4e875c77c685443241dc86541ff1dc809f39155c4ea2024567b479597e"
+    },
+    {
+      "file": "exports/sounds/mr73/dry.wav",
+      "sha256": "5ad5cf1c838cde6d655c308295a4008f90b014deac0856b439367d89c3244a4d"
+    },
+    {
+      "file": "exports/sounds/mr73/eject.wav",
+      "sha256": "e78c57babf5f8a0d4d84ff3143279d2c9c7de2511a598014b9089632d5678942"
+    },
+    {
+      "file": "exports/sounds/mr73/raise.wav",
+      "sha256": "4f4972b7d673456b09bb513e437ba05489d308b1151b7c07ff546e135551da0a"
+    },
+    {
+      "file": "exports/sounds/mr73/round_in_01.wav",
+      "sha256": "f868aabfe8ba52f3219e7223819b753016acd5368b27fd346e86f88dd6183a27"
+    },
+    {
+      "file": "exports/sounds/mr73/round_in_02.wav",
+      "sha256": "4aea174a077e55d652da20163ded7a41424d11b9d47e1fa00a8b9e7a39b032fd"
+    },
+    {
+      "file": "exports/sounds/mr73/shot_01.wav",
+      "sha256": "3f26beee6925687719adc39acee0ae288fc4dc880d736b81d89c139e49734990"
+    },
+    {
+      "file": "exports/sounds/mr73/shot_02.wav",
+      "sha256": "bf4b225bee40fa8d0b298dfe3df132002876d1338576752d90946d9f125a475f"
+    },
+    {
+      "file": "exports/sounds/mr73/shot_03.wav",
+      "sha256": "a85e4485ffe601a50bab596a5a0d2cd69248e9b8b6e56b17a2c87aa5b5bf9470"
+    },
+    {
+      "file": "exports/sounds/rapid/cloth.wav",
+      "sha256": "0defec03f1af12df752c7b9f0acc0cf8d3b1bb664727aa3de69760e0c4f195c4"
+    },
+    {
+      "file": "exports/sounds/rapid/dry.wav",
+      "sha256": "1d38eb3f37af4a4fd4217370fec036c81f268c756b48602ecc6c6c81aa95ac87"
+    },
+    {
+      "file": "exports/sounds/rapid/pump_back.wav",
+      "sha256": "70a1346c395f7657527c77e66569cf60667a29f7af3d55a6d9dc600445310640"
+    },
+    {
+      "file": "exports/sounds/rapid/pump_fwd.wav",
+      "sha256": "a6edd98055785e8b6ed4d8462232ce24d0cb75196d79474744941f262982fc49"
+    },
+    {
+      "file": "exports/sounds/rapid/raise.wav",
+      "sha256": "4f4972b7d673456b09bb513e437ba05489d308b1151b7c07ff546e135551da0a"
+    },
+    {
+      "file": "exports/sounds/rapid/shell_in_01.wav",
+      "sha256": "66b81cc20a79a249311a99848c26886012ea876212afd977c4ed58d6fbf98001"
+    },
+    {
+      "file": "exports/sounds/rapid/shell_in_02.wav",
+      "sha256": "db37ddbb1ce684e4366557ecb8f025aa7f906bc260c2122871d39aa31471aa52"
+    },
+    {
+      "file": "exports/sounds/rapid/shot_01.wav",
+      "sha256": "9875dc4e45b0d691d0e63f0b8be4bf01fbdaaded88d40e17cd1a554fc7964cee"
+    },
+    {
+      "file": "exports/sounds/rapid/shot_02.wav",
+      "sha256": "0fc9d3117d3deaf8139f2cdd31161957daee4350d9c9c23e63ae7195b3215ca5"
+    },
+    {
+      "file": "exports/sounds/rapid/shot_03.wav",
+      "sha256": "155a203916c3ea96167f327d28587117249184d466e2ff9718ac3e98ce813cae"
+    }
+  ],
+  "bench_reads_unlisted": []
+}
