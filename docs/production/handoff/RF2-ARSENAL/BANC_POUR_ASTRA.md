@@ -1,26 +1,23 @@
 # RF2-ARSENAL — le banc d'essai, pour Astra
 
-Complète le contrat (`CONTRAT.md`, §3 et §7). Le banc existe : branche `bench/rf2-arsenal` du dépôt
-`C:\PROJECTS\RF2_UZDOOM` (commit `937a40d`), dossiers `bench/arsenal/` et `scripts/arsenal/`. Tant que ta livraison
-n'est pas là, il tourne sur des dessins et des bips provisoires.
+Complète le contrat (`CONTRAT.md` v2, §3, §8 et §9). Le banc : branche `bench/rf2-arsenal` du dépôt
+`C:\PROJECTS\RF2_UZDOOM`, dossiers `bench/arsenal/` et `scripts/arsenal/`. Il lit ta livraison W03/W04 V01 telle
+quelle ; les armes que tu n'as pas encore livrées y tournent sur des dessins et des bips provisoires.
 
 ## Ce que le banc attend de ta livraison
 
-Par arme, un **fichier d'animation JSON** (`"schema": "rf2-bench-animation/1"`, `"weapon": "W03"` ou `"W04"`) dans
-ton dossier de lot, avec les chemins d'images et de sons relatifs à ce fichier ou au dossier. Modèles complets :
-`bench/arsenal/placeholder/W03_rapid.json` et `W04_mr73.json` ; tableau des clés : `bench/arsenal/README.md`.
+Par arme, un **fichier d'animation JSON** (`"schema": "rf2-bench-animation/1"`) dans ton dossier de lot, comme
+`animation.rapid.json` et `animation.mr73.json` de V01. Format complet et tableau des `kind` (`pump`, `revolver`,
+`magazine`, `saw`, `melee`) : `bench/arsenal/README.md` ; modèles : `bench/arsenal/placeholder/*.json`.
 
 - Une entrée par image affichée : `image`, `tics` (entier ≥ 1), au besoin `event`, `offset` [x, y] (recul ; repos
-  0,32), `ready_point` (changement d'arme permis), `chambers` (MR73 : couches visibles).
-- Séquences Rapid : `ready`, `fire` (un seul `shot`), `pump` (`pump_back` puis `pump_fwd`), `dry`, `reload_start`,
-  `reload_shell` (un `shell_in` : +1 au tube à cette image), `reload_end`.
-- Séquences MR73 : `ready`, `fire` (un seul `shot`), `dry`, `reload_open`, `reload_eject` (un `eject`),
-  `reload_round` (un `round_in` : +1 à cette image), `reload_close` ; `chamber_layers` : six images, une cartouche
-  chacune, même toile que la pose barillet ouvert, qui est la même dans toutes les images marquées `chambers`.
-- `capacity` : Rapid `tube` et `chamber` (**ta valeur sourcée remplace le 5 + 1 provisoire**) ; MR73 `cylinder` 6.
+  0,32), `ready_point` (changement d'arme permis), et pour le revolver `chamber_pose`, `hand_stage`.
+- `files` : image → chemin dans ta livraison ; le manifeste donne le `target_relpath` où le banc range chaque fichier.
 - `sounds` : `événement → [fichiers WAV 16 bits 48 kHz mono]` ; plusieurs fichiers = tirage aléatoire.
+- Répliques : un JSON avec une clé `voices` (format dans le README).
 
-Le script refuse une animation à laquelle manque un événement nécessaire, et le dit.
+Le constructeur refuse une animation à laquelle manque un événement nécessaire, ou dont un nom de sprite ou un chemin
+entre en collision avec la base, le moteur ou l'IWAD, et il dit pourquoi.
 
 ## Vérifier toi-même dans le moteur
 
@@ -31,8 +28,10 @@ git checkout bench/rf2-arsenal -- bench/arsenal scripts/arsenal     (ajoute ces 
 python scripts/arsenal/build_bench.py --delivery incoming/astra/RF2_ARSENAL/<lot> ^
     --base C:\PROJECTS\RF2_UZDOOM\dist\arsenal\base\RF2_BASE_src_23773520f797.pk3 --scratch <dossier>\essai.pk3
 python scripts/arsenal/bench_probe.py --base <même base> --module <dossier>\essai.pk3
+python scripts/arsenal/next_probe.py  --base <même base> --module <dossier>\essai.pk3
 python scripts/arsenal/bench_shots.py --base <même base> --module <dossier>\essai.pk3 --out <dossier>\captures
 ```
 
-La sonde vérifie compteurs et transitions (PASS/FAIL) ; les captures montrent 17 instants en 16:9, 21:9 et 4:3.
-Aucun script ne juge le rendu ni le son : dis ce que tu as regardé et écouté, et avec quoi.
+Les sondes vérifient compteurs, transitions, contacts et sons de boucle (PASS/FAIL). Les captures portent le tic de
+jeu qu'elles montrent (bande en haut à gauche, `scripts/arsenal/ticcode.py`) : classe-les par ce tic, pas par
+l'ordre des fichiers. Aucun script ne juge le rendu ni le son : dis ce que tu as regardé et écouté, et avec quoi.

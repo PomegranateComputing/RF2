@@ -1,0 +1,114 @@
+{
+  "lot": "W05_W09_W10_V01",
+  "checked": "2026-09-29 16:14",
+  "claim": "W10 : tranche existante reemployee sans retouche (POUR_OPUS.md d'Astra)",
+  "base": "dist/arsenal/base/RF2_BASE_src_23773520f797.pk3 (sha256 a03fad5f...), meme contenu que src au commit 85fc6a1 (COMBAT-02)",
+  "files": [
+    {
+      "path": "graphics/weapons/crowbar/RF2_CROWBAR_FOLLOW.png",
+      "sha256": "e640bbb473f11284cdd94499e381e501feb714124c56be41e1980d78205d4d41",
+      "base_sha256": "e640bbb473f11284cdd94499e381e501feb714124c56be41e1980d78205d4d41",
+      "identical": true
+    },
+    {
+      "path": "graphics/weapons/crowbar/RF2_CROWBAR_READY.png",
+      "sha256": "d5b28ef7a2f63cbf77fbab741bba3add473388e519dfbb1cbdd491e9a2c72f08",
+      "base_sha256": "d5b28ef7a2f63cbf77fbab741bba3add473388e519dfbb1cbdd491e9a2c72f08",
+      "identical": true
+    },
+    {
+      "path": "graphics/weapons/crowbar/RF2_CROWBAR_RECOVERY.png",
+      "sha256": "d4c238d65255d76366f53f893905506b1c4f25459a7ec41f7b5fd60ce5fea854",
+      "base_sha256": "d4c238d65255d76366f53f893905506b1c4f25459a7ec41f7b5fd60ce5fea854",
+      "identical": true
+    },
+    {
+      "path": "graphics/weapons/crowbar/RF2_CROWBAR_STRIKE.png",
+      "sha256": "470af2d49ab6ef7da5312979881e7f5ac7e67c496879efb5e75dab00b533dfdb",
+      "base_sha256": "470af2d49ab6ef7da5312979881e7f5ac7e67c496879efb5e75dab00b533dfdb",
+      "identical": true
+    },
+    {
+      "path": "graphics/weapons/crowbar/RF2_CROWBAR_WINDUP.png",
+      "sha256": "ac3624f6551574cd59f190abae85d5b41ef172e340d6f90c2525e158a2f00a99",
+      "base_sha256": "ac3624f6551574cd59f190abae85d5b41ef172e340d6f90c2525e158a2f00a99",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/hit_flesh_01.wav",
+      "sha256": "f70ea319fb5b3c5553d72f69974c83682667c791cbed7219fe156390b16c0233",
+      "base_sha256": "f70ea319fb5b3c5553d72f69974c83682667c791cbed7219fe156390b16c0233",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/hit_flesh_02.wav",
+      "sha256": "5d44f68158af3d8e6038f9cd510dbb411e0b078d99e1c14dc508597978731094",
+      "base_sha256": "5d44f68158af3d8e6038f9cd510dbb411e0b078d99e1c14dc508597978731094",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/hit_flesh_03.wav",
+      "sha256": "e80968c017cbeedf9a93ffa68a9265de8ecd421109c8e17eb4841342d8eb8b3d",
+      "base_sha256": "e80968c017cbeedf9a93ffa68a9265de8ecd421109c8e17eb4841342d8eb8b3d",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/hit_metal_01.wav",
+      "sha256": "dcc8367fb5b51c5e8b80cf1707c20bc7290e6a9228a9f9855d3b5026ba572784",
+      "base_sha256": "dcc8367fb5b51c5e8b80cf1707c20bc7290e6a9228a9f9855d3b5026ba572784",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/hit_metal_02.wav",
+      "sha256": "32232a2bea0689ed6f247d3bf5bb0257ede770cce3db5d1a33579e5b583f8256",
+      "base_sha256": "32232a2bea0689ed6f247d3bf5bb0257ede770cce3db5d1a33579e5b583f8256",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/hit_metal_03.wav",
+      "sha256": "94d4718e2606ff9690626f8080ac265f390630b9a92babf27a4399df4f310d96",
+      "base_sha256": "94d4718e2606ff9690626f8080ac265f390630b9a92babf27a4399df4f310d96",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/hit_wood_01.wav",
+      "sha256": "55bab15d6013b86d367acca73d86a06d29022daef8d5f8045947267928f1fd1d",
+      "base_sha256": "55bab15d6013b86d367acca73d86a06d29022daef8d5f8045947267928f1fd1d",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/hit_wood_02.wav",
+      "sha256": "50e179f7943b30c4728226902118a308b21df46fe4cb44fa17aec9f61705e0f3",
+      "base_sha256": "50e179f7943b30c4728226902118a308b21df46fe4cb44fa17aec9f61705e0f3",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/hit_wood_03.wav",
+      "sha256": "801353117b18b0f6a6878496d1705e2bb51aac80ee88410a4f5ec15af25d6e8b",
+      "base_sha256": "801353117b18b0f6a6878496d1705e2bb51aac80ee88410a4f5ec15af25d6e8b",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/swing_01.wav",
+      "sha256": "3130f54a32e49d07baf55ad90d1e9583a82e56532b865f75493e30e4cdc70cf0",
+      "base_sha256": "3130f54a32e49d07baf55ad90d1e9583a82e56532b865f75493e30e4cdc70cf0",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/swing_02.wav",
+      "sha256": "1e80a181653f60ba732869c779939c1e7599e8425758796a394f7271e2973db9",
+      "base_sha256": "1e80a181653f60ba732869c779939c1e7599e8425758796a394f7271e2973db9",
+      "identical": true
+    },
+    {
+      "path": "sounds/crowbar/swing_03.wav",
+      "sha256": "0bddf1ae1877f46a4cf6b8618240e55faf46b979c0d5792c1138c5ba5f82cb3f",
+      "base_sha256": "0bddf1ae1877f46a4cf6b8618240e55faf46b979c0d5792c1138c5ba5f82cb3f",
+      "identical": true
+    }
+  ],
+  "all_identical": true,
+  "bench": "rien a importer : le banc donne deja RFCrowbar de la base ; scripts/arsenal/next_probe.py l eprouve (reperes 5/8/22 de W10_MARKERS.json)",
+  "W05_W09": "masters de travail et references seulement : rien a consommer par le banc a ce stade",
+  "unlisted_note": "305 fichiers non listes dans SHA256SUMS.txt (evidence/W10/private_session 183, source/tool_env 120, __pycache__ 2) : non lus par le banc"
+}

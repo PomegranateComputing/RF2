@@ -6,6 +6,9 @@ transmission, marquée remplacée). Mandats : `C:\PROJECTS\RF2_SUITE_V01_2026092
 `RF2_SUITE_ASTRA.md`, `08_ADDENDUM_REPLIQUES_VIKTOR.md`). Rien ici ne vaut verdict du propriétaire ; aucune arme
 n'entre dans la campagne dans ce lot.
 
+Mise à jour du 29/09, 16 h (même version, complétée, rien de retiré) : lot W05_W09_W10_V01 reçu (§0, §1), durées
+et repères W10 (§4), règle 8 (§5), tableau §8 mis à jour, corrections communes du master (§9).
+
 ## 0. Espaces et versions
 
 | | |
@@ -15,6 +18,7 @@ n'entre dans la campagne dans ce lot.
 | Banc | branche `bench/rf2-arsenal` du dépôt `C:\PROJECTS\RF2_UZDOOM` ; construction `scripts/arsenal/build_bench.py` ; lanceur `JOUER_RF2_ARSENAL_ESSAI.cmd` |
 | Base du banc | `dist/arsenal/base/RF2_BASE_src_23773520f797.pk3`, sha256 `a03fad5f…` (jeu construit depuis `src/`, Browning et FAL identiques au build accepté) |
 | Lot consommé | W03/W04 V01 (sha256 de `SHA256SUMS.txt` : voir la fiche d'import) ; V02 seulement pour un changement d'asset |
+| Lot reçu | W05_W09_W10_V01 (fiches `IMPORT_W05_W09_W10_V01.json` et `…_W10_REEMPLOI.json`) : W10 = les 5 poses et 12 sons de la base, identiques octet pour octet, rien à importer ; W05/W09 = masters de travail, rien que le banc puisse charger |
 
 ## 1. Décisions fixées
 
@@ -25,6 +29,8 @@ n'entre dans la campagne dans ce lot.
 | Recharge partielle W04 | règle **(a)** : l'extraction retire tout ; cartouches intactes rendues à la réserve ; étuis perdus ; puis une à une | propriétaire (`LIRE_D_ABORD.md`), V01 |
 | Répliques | Manurhin « Police, Milice, prête à tirer ! » + ricanement ; fusil « Y a les bons et les mauvais chasseurs ! » ; une fois par campagne, à la première acquisition effective | propriétaire, `08_ADDENDUM_REPLIQUES_VIKTOR.md` |
 | Suite | W05 FAMAS (F1 si rien d'autre n'est fixé), W09 Scorpion (scie alternative Black & Decker, pas circulaire), W10 pied-de-biche ; puis W06 M2 .50, W07 RPG, W08 lance-flammes | `RF2_SUITE_ASTRA.md` ; dossier maître §arsenal |
+| W10 | le pied-de-biche du jeu (`RFCrowbar`, COMBAT-02) réemployé tel quel : poses, sons, code et réglages inchangés | Astra, `W10_REUSE_RECORD.json` ; identité vérifiée par Opus |
+| Alimentation W09 | proposition d'Astra : câble vers une alimentation portée fictionnelle, aucun modèle à batterie inventé. **À décider par le propriétaire** (ressource limitée ou non, arrêt à vide). En attendant, le banc fait tourner la scie sans ressource | Astra, `POUR_OPUS.md` du lot W05_W09_W10_V01 |
 | Campagne | aucune activation ; placement, équilibrage, munitions de campagne : étape ultérieure | mandats |
 
 ## 2. Présentation
@@ -53,6 +59,7 @@ Tel que décrit dans `bench/arsenal/README.md`, avec l'extension V01 désormais 
 |---|---|
 | Rapid | tir 9 ; pompe 11 (`pump_back` à +4, `pump_fwd` à +7) ; recharge : entrée 6, une cartouche 12 (engagement à +6 de chaque cycle), sortie 6 ; premier engagement 12 tics après la demande de recharge |
 | MR73 | tir 14 ; recharge complète 85 (ouverture 10, extraction 4, six introductions de 10 avec engagement à la 5e étape de main, fermeture 11) ; premier engagement 19 tics après la demande |
+| Pied-de-biche | coup 22 depuis l'entrée en Fire (au tic de l'appui) : armé 5, course 3 (balayage au tic 5), impact 2 (**un** coup au tic 8), poursuite 4, retour 8 (changement d'arme permis, pas de second coup) ; prêt au tic 22. Mesuré au banc sur `RFCrowbar` : 5 / 8 / 22 |
 
 ## 5. Règles de jeu du banc (les mêmes dans l'image, le code et le HUD)
 
@@ -69,6 +76,7 @@ Tel que décrit dans `bench/arsenal/README.md`, avec l'extension V01 désormais 
    recharge reprend et finit.
 7. HUD d'essai, panneau d'arme : `4+1 | 24` (tube + chambre | réserve), `6 | 18` (barillet | réserve) ; panneau de
    diagnostic complémentaire.
+8. Dégâts, dispersion, portées et cadences du banc : provisoires, pour la revue ; aucun n'est un équilibrage.
 
 ## 6. Preuves
 
@@ -92,7 +100,25 @@ par la file de dialogue avec le sous-titre ; la prise complète et ses élément
 | | Mécanique au banc | Événements attendus (en plus de `raise`, `cloth`) |
 |---|---|---|
 | W05 FAMAS | chargeur (comme le FAL), sélecteur de tir à décider avec la bible (coup par coup / rafale), cadence propre | `shot` (un par cartouche), `dry`, `mag_out`, `mag_in`, `seat` (engagement du chargeur), `bolt` si la culasse est manœuvrée |
-| W09 Scorpion | outil de contact continu : départ, marche à vide en boucle, contact (dégâts par intervalle dans une fenêtre de portée, jamais à travers un obstacle), arrêt ; le son de boucle s'arrête au relâchement, au rangement et à la mort | `start`, `loop` (boucle), `contact` (boucle ou coups), `stop` ; convention d'alimentation fictionnelle à documenter |
-| W10 pied-de-biche | mêlée : armé, frappe, fenêtre de contact, touche ou raté, récupération ; matériaux d'impact déjà gérés (chair, métal, bois) | `swing`, `hit_flesh`, `hit_metal`, `hit_wood`, `miss` |
+| W09 Scorpion | outil de contact continu : départ, marche à vide en boucle, contact (dégâts par intervalle dans une fenêtre de portée, jamais à travers un obstacle), arrêt ; le son de boucle s'arrête au relâchement, au rangement et à la mort | `start`, `loop` (boucle), `contact` (boucle ou coups), `stop` ; alimentation : voir §1 |
+| W10 pied-de-biche | le vrai `RFCrowbar` de la base (réemploi) : touche la cible devant, s'arrête au pilier (aucun dégât derrière), rate dans le vide sans bouffée ni son d'impact ; repères §4 | déjà dans le jeu : `rf/crowbar/swing`, `…/flesh`, `…/metal`, `…/wood` ; raté = aucun son d'impact |
 
-Les réglages de ces armes au banc servent la revue ; ils ne sont pas un équilibrage.
+Les réglages de ces armes au banc servent la revue ; ils ne sont pas un équilibrage. Le banc garde aussi un pied-de-biche
+générique (`RFBenchCrowbar`, images d'essai) : il éprouve la mécanique de mêlée du constructeur, pas l'arme du jeu.
+
+## 9. Corrections communes du master (relevées sur W03/W04 V01, à porter sur W05, W09 et toute arme suivante)
+
+1. **Recul lisible** : une vraie pose ou un `offset` par image de tir (le Rapid bouge de 3 à 9 px, le MR73 de 1 à 2 px
+   sur 1536 : le banc ajoute un recul d'essai, `bench/arsenal/presentation/W03_W04_V01.json`).
+2. **Un geste de main pour chaque changement d'état** : aucun objet qui apparaît ou disparaît seul (MR73 : extraction
+   sans poussée de la tige). FAMAS : chargeur retiré et engagé par la main de soutien derrière la poignée, levier
+   d'armement sous la poignée de transport ; Scorpion : doigt sur la gâchette au départ et relâché à l'arrêt.
+3. **État visible = état du jeu** : tiré ou intact (`chambers_fired` pour le MR73), chargeur engagé ou non, scie en
+   marche (lame et moteur qui bougent) ou arrêtée.
+4. **Sortie de main entre deux gestes**, jamais de main flottante ; objets tenus entièrement dans le cadre ou sortis
+   franchement (MR73 chambre 4, étape 1 : seule la pointe de la cartouche dépasse).
+5. **Manche noire jusqu'au bord** en 16:9, 21:9 et 4:3 ; même prise et même manche que FAL/Browning.
+6. **Axe de l'arme** : la bouche vise le centre de l'écran comme le FAL ; le master FAMAS de travail pointe nettement
+   vers le haut à gauche, à vérifier dans le cadre du banc avant de décliner les poses.
+7. **Sons** : un événement par geste, aligné sur son image ; boucles (scie) avec départ, boucle sans clic de raccord,
+   arrêt ; rien n'est déclaré écouté sans écoute.

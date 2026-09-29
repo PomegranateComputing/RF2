@@ -8,7 +8,10 @@ on release; a partial reload keeps the rounds; a switch asked before the seating
 Scorpion: in front of the open target, held 40 tics: contacts and damage; in front of the pillar with a target
 just behind it: no damage to that target; the loop sound (weapon channel) is off after release, after stowing and
 after death. Crowbar: a blow in front of the open target hits, in front of the pillar hits the obstacle only, towards
-the empty lane misses. Rounds conserved everywhere. Counters and logs only: no judgement of look or sound.
+the empty lane misses; first with the bench's generic melee (RFBenchCrowbar), then with the real RFCrowbar of the base
+(W10 V01 reuses its files byte for byte): same three blows, puffs counted by an event handler, and the contract
+markers measured from the entry into Fire (swing sound at tic 5, one impact at tic 8, ready at tic 22).
+Rounds conserved everywhere. Counters and logs only: no judgement of look or sound.
 """
 import argparse, json, re, subprocess, sys, time, zipfile
 from pathlib import Path
@@ -20,6 +23,39 @@ class RFNextProbe : RFPlayer
 {
     int t, step, wait, presses, base0, hold, t0;
     bool dead;
+    // real crowbar: tics of the entry into Fire, of the swing sound's start, of the return to Ready; puffs before the blow
+    int fireT, swingT, readyT, puff0;
+    bool tracking, wasPlaying;
+
+    RFNextPuffCount Puffs() { return RFNextPuffCount(EventHandler.Find('RFNextPuffCount')); }
+    void Blow(String tag)
+    {
+        Say(tag);
+        fireT = swingT = readyT = -1;
+        puff0 = Puffs().count;
+        wasPlaying = IsActorPlayingSound(CHAN_WEAPON);
+        tracking = true;
+    }
+    // Seen before the weapon's update of this tic: a state or a sound seen now began during the previous tic.
+    void Observe()
+    {
+        if (!tracking || player.ReadyWeapon == null) return;
+        let w = player.ReadyWeapon;
+        let psp = player.FindPSprite(PSP_WEAPON);
+        bool playing = IsActorPlayingSound(CHAN_WEAPON);
+        if (psp != null && fireT < 0 && psp.CurState != null && psp.CurState.InStateSequence(w.FindState("Fire"))) fireT = Level.maptime - 1;
+        if (fireT >= 0 && swingT < 0 && playing && !wasPlaying) swingT = Level.maptime - 1;
+        if (fireT >= 0 && readyT < 0 && psp != null && psp.CurState == w.FindState("Ready")) readyT = Level.maptime - 1;
+        wasPlaying = playing;
+    }
+    void Marks(String tag)
+    {
+        let h = Puffs();
+        int n = h.count - puff0;
+        Say(String.Format("%s_mesure entree=%d balayage=%d impact=%d pret=%d bouffees=%d", tag, fireT,
+                          swingT < 0 ? -1 : swingT - fireT, n > 0 ? h.lastTic - fireT : -1, readyT < 0 ? -1 : readyT - fireT, n));
+        tracking = false;
+    }
 
     bool IdleW(Weapon w)
     {
@@ -84,7 +120,14 @@ class RFNextProbe : RFPlayer
         case 33: step++; wait = 2; return BT_ATTACK;
         case 34: if (!Idle('RFBenchCrowbar')) return 0; Place((-8, 128), 0); wait = 4; Say("W10_vers_le_couloir"); step++; return 0;
         case 35: step++; wait = 2; return BT_ATTACK;
-        case 36: if (!Idle('RFBenchCrowbar')) return 0; Say("W10_fin"); Take('RFBenchScorpion'); Place((-40, 300), 90); step++; return 0;
+        case 36: if (!Idle('RFBenchCrowbar')) return 0; Say("W10_fin"); Take('RFCrowbar'); Place((-40, 490), 90); step = 40; return 0;
+        // ---- the real crowbar of the base (RFCrowbar), unmodified: same three blows
+        case 40: if (!Idle('RFCrowbar')) return 0; Blow("W10R_devant_cible"); step++; return BT_ATTACK;
+        case 41: if (!Idle('RFCrowbar') || fireT < 0) return 0; Marks("W10R_devant_cible"); Place((-120, 490), 90); wait = 4; step++; return 0;
+        case 42: if (!Idle('RFCrowbar')) return 0; Blow("W10R_devant_pilier"); step++; return BT_ATTACK;
+        case 43: if (!Idle('RFCrowbar') || fireT < 0) return 0; Marks("W10R_devant_pilier"); Place((-8, 128), 0); wait = 4; step++; return 0;
+        case 44: if (!Idle('RFCrowbar')) return 0; Blow("W10R_vers_le_couloir"); step++; return BT_ATTACK;
+        case 45: if (!Idle('RFCrowbar') || fireT < 0) return 0; Marks("W10R_vers_le_couloir"); Take('RFBenchScorpion'); Place((-40, 300), 90); step = 37; return 0;
         // ---- saw running at death
         case 37: if (!Idle('RFBenchScorpion')) return 0; hold = 0; step++; return 0;
         case 38:
@@ -104,12 +147,22 @@ class RFNextProbe : RFPlayer
             if (!dead) player.cheats |= CF_GODMODE;
             player.cmd.buttons = 0; player.cmd.forwardmove = 0; player.cmd.sidemove = 0;
             Vel.XY = (0, 0);
+            Observe();
             int b = 0;
             if (wait > 0) wait--;
             else if (step < 999) b = Advance();
             player.cmd.buttons = b;
         }
         Super.PlayerThink();
+    }
+}
+
+class RFNextPuffCount : EventHandler
+{
+    int count, lastTic;
+    override void WorldThingSpawned(WorldEvent e)
+    {
+        if (e.Thing != null && e.Thing is "RFCrowbarPuff") { count++; lastTic = Level.maptime; }
     }
 }
 '''
@@ -174,6 +227,24 @@ def evaluate(lines):
     if len(hits) != 1 or len(walls) != 1 or len(misses) != 1 or behind:
         fails.append(f'pied-de-biche : touche {len(hits)}, obstacle {len(walls)}, rate {len(misses)}, derriere le pilier {len(behind)}')
     notes.append(f'pied-de-biche : touche {len(hits)}, obstacle {len(walls)}, rate {len(misses)}, cible derriere le pilier {len(behind)} impact')
+    # the real RFCrowbar: markers of W10_MARKERS.json (Astra, W05_W09_W10_V01) counted from the entry into Fire
+    real_open = [l for l in bench if 'impact cible=71u' in l and 'arme=RFCrowbar ' in l]
+    real_behind = [l for l in bench if 'impact cible=70u' in l and 'arme=RFCrowbar ' in l]
+    marks = {tag: get(f'W10R_{tag}_mesure') for tag in ('devant_cible', 'devant_pilier', 'vers_le_couloir')}
+    if not all(marks.values()):
+        fails.append(f'pied-de-biche reel : etapes absentes {[k for k, v in marks.items() if not v]}')
+    else:
+        want_puffs = {'devant_cible': '1', 'devant_pilier': '1', 'vers_le_couloir': '0'}
+        for tag, m in marks.items():
+            want_hit = '8' if want_puffs[tag] == '1' else '-1'
+            if (m['balayage'], m['impact'], m['pret'], m['bouffees']) != ('5', want_hit, '22', want_puffs[tag]):
+                fails.append(f"pied-de-biche reel {tag} : balayage {m['balayage']} (5), impact {m['impact']} ({want_hit}), "
+                             f"pret {m['pret']} (22), bouffees {m['bouffees']} ({want_puffs[tag]})")
+        if len(real_open) != 1 or real_behind:
+            fails.append(f'pied-de-biche reel : cible devant {len(real_open)} impact (1), cible derriere le pilier {len(real_behind)} (0)')
+        notes.append('pied-de-biche reel (RFCrowbar de la base) : ' + ' ; '.join(
+            f"{tag} balayage {m['balayage']} impact {m['impact']} pret {m['pret']} bouffees {m['bouffees']}" for tag, m in marks.items())
+            + f' ; cible devant {len(real_open)} impact, cible derriere le pilier {len(real_behind)}')
     return fails, notes, probe
 
 
@@ -187,7 +258,7 @@ def main():
     probe.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(probe, 'w') as z:
         z.writestr('ZSCRIPT.nprobe', PROBE)
-        z.writestr('MAPINFO.nprobe', 'gameinfo\n{\n    PlayerClasses = "RFNextProbe"\n}\n')
+        z.writestr('MAPINFO.nprobe', 'gameinfo\n{\n    PlayerClasses = "RFNextProbe"\n    AddEventHandlers = "RFNextPuffCount"\n}\n')
     subprocess.run([sys.executable, str(ROOT / 'scripts' / 'devrun.py'), '--pk3', a.base, '--map', 'ARSENAL', '--name', 'next_probe',
                     '--seconds', '200', '--marker', 'RF_DEV_UI_DONE', '--', '-file', a.module, str(probe)], cwd=ROOT, capture_output=True, text=True)
     lines = (ROOT / 'build' / 'dev' / 'logs' / 'next_probe.txt').read_text(encoding='utf-8', errors='replace').splitlines()
