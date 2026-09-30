@@ -209,7 +209,7 @@ action.
   importés sur la ligne (`scripts/import_astra_lot.py`, fiches `handoff/SUITE-20260930/`), revue dans le moteur en
   cours ; armes sur le banc (worktree `RF2_UZDOOM_BENCH_20260930`). RF07 : rien construit avant la réponse du
   propriétaire sur la présence hostile au Jerma.
-- 30/09, 19 h — lots d'Astra regardés dans le moteur (planches avant/après, `…_1821\preuvesevue_imports\`) :
+- 30/09, 19 h — lots d'Astra regardés dans le moteur (planches avant/après, `…_1821\preuves\revue_imports\`) :
   infirmier V03, tranche Luna 01 et RF01 V03 pris, sauf le décal d'humidité (invisible dans ses quatre vues ; V04
   demandée). Candidate **`RF2_CUMUL_20260930_1821`** (`6c85e747…`, commit `6134a94`) : les cinq cartes A/B et la chaîne
   PASS ; lanceurs courants repointés et contrôlés depuis `C:\`. Demande JERMA-V01 (environnement de RF07) déposée ;
