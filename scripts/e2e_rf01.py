@@ -56,7 +56,7 @@ def run_a(speed, seconds):
     return dict(run='A', ok=ok, status=status, **m)
 
 
-def run_b(speed, seconds, save_at):
+def run_b(speed, seconds, save_at, no_death=False):
     SAVES.mkdir(parents=True, exist_ok=True)
     before = {p: p.stat().st_mtime for p in SAVES.glob('*.zds')}
     # B1: new game, autosave after waypoint `save_at`, then quit (process terminated after the write).
@@ -70,13 +70,19 @@ def run_b(speed, seconds, save_at):
     if not m1['saves'] or save is None:
         return dict(run='B', ok=False, reason='no save written', b1=dict(status=status1, **m1))
     # B2: relaunch, load, pacifist first life -> death -> use -> reload -> autopilot to the exit.
+    # no_death (maps without any enemy, RF06): relaunch, load, autopilot to the exit; nobody can kill the player there,
+    # so the death/resume part does not apply (the assertion of every other map is unchanged).
+    extra = ['+rf_dev_start_wp', str(save_at + 1)] + ([] if no_death else ['+rf_dev_pacifist', '1'])
     status2, text2, _ = devrun.run(PK3, 'e2e_B2', None, autopilot=True, seconds=seconds, speed=speed, loadgame=save,
-                                   extra=['+rf_dev_start_wp', str(save_at + 1), '+rf_dev_pacifist', '1'],
-                                   marker=rf're:^(RF_DEV_UNLOADED map={MAP} time=\d+ next=\S+|{FAIL})')
+                                   extra=extra, marker=rf're:^(RF_DEV_UNLOADED map={MAP} time=\d+ next=\S+|{FAIL})')
     m2 = markers(text2)
     loaded_from_save = [l for l in m2['loaded'] if 'save=1' in l]
-    ok = (exited(m2) and len(m2['deaths']) >= 1 and len(m2['resumes']) >= 1 and len(loaded_from_save) >= 2
-          and not m2['failures'] and not m1['script_errors'] and not m2['script_errors'])
+    if no_death:
+        ok = (exited(m2) and len(loaded_from_save) >= 1 and not m2['failures'] and not m1['script_errors']
+              and not m2['script_errors'])
+    else:
+        ok = (exited(m2) and len(m2['deaths']) >= 1 and len(m2['resumes']) >= 1 and len(loaded_from_save) >= 2
+              and not m2['failures'] and not m1['script_errors'] and not m2['script_errors'])
     return dict(run='B', ok=ok, save=str(save), save_at=save_at,
                 b1=dict(status=status1, **m1), b2=dict(status=status2, loaded_from_save=len(loaded_from_save), **m2))
 
@@ -89,6 +95,7 @@ def main():
     ap.add_argument('--only', choices=('A', 'B'))
     ap.add_argument('--pk3', help='a frozen candidate build instead of dist/RF2_DEV.pk3')
     ap.add_argument('--map', default='RF01')
+    ap.add_argument('--no-death', action='store_true', help='run B on a map without enemies: save, load, exit (no death)')
     a = ap.parse_args()
     global PK3, MAP
     MAP = a.map.upper()
@@ -98,7 +105,7 @@ def main():
     if a.only in (None, 'A'):
         results.append(run_a(a.speed, a.seconds))
     if a.only in (None, 'B'):
-        results.append(run_b(a.speed, a.seconds, a.save_at))
+        results.append(run_b(a.speed, a.seconds, a.save_at, a.no_death))
     out = devrun.DEV / 'e2e'
     out.mkdir(parents=True, exist_ok=True)
     stamp = time.strftime('%Y%m%d_%H%M%S')
