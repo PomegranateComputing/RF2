@@ -199,3 +199,13 @@ action.
   (Luna Park, l. 451–731) ; chaîne RF02 → RF04 → RF05 → RF06. Aucun son écouté ; aucune candidate approuvée. Prochaine
   action : livraisons d'Astra (Rapid V02, infirmier, Luna Park) ; RF07 « Jerma - Façade maritime » (l. 733 et
   suivantes) : fiche et demandes.
+- 30/09, soir — chaîne des chapitres réparée : dans les candidates 1801 et 1708, « Nouvelle partie » laissait Viktor
+  figé au départ de RF02 (drapeaux du texte de fin portés au chapitre suivant ; corrigé au commit `413457e`).
+  Candidate **`RF2_CUMUL_20260930_1724`** (`f8497716…`, commit `10367c1`) : RF01, RF02, RF04, RF05, RF06 A/B PASS,
+  chaîne RF01 → RF06 dans une seule partie avec un chargement au début de RF05 PASS, inventaire suivi carte par carte ;
+  lanceurs courants `JOUER_RF2_CUMUL*.cmd` repointés après ces passes (`export_candidate.py --hold` puis
+  `--promote`), contrôlés depuis `C:\` (`-norun`). Rapport `docs/RF2_CUMUL_20260930_1724.md`. Livraison d'Astra du
+  30/09 (six lots, `incoming/astra/RF2_SUITE_20260930/`) reçue, sommes conformes ; ORDY V03, RF01 V03 et Luna tranche 01
+  importés sur la ligne (`scripts/import_astra_lot.py`, fiches `handoff/SUITE-20260930/`), revue dans le moteur en
+  cours ; armes sur le banc (worktree `RF2_UZDOOM_BENCH_20260930`). RF07 : rien construit avant la réponse du
+  propriétaire sur la présence hostile au Jerma.

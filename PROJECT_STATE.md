@@ -39,7 +39,8 @@ the accepted RF01 build waits for the owner's review.
 - `JOUER_RF2_ART_REVIEW.cmd` - accepted RF01 build (reference, never re-pointed)
 - `JOUER_RF2_<LOT>.cmd` - each new candidate (`scripts/export_candidate.py`)
 - `JOUER_RF2_CUMUL.cmd` - the cumulative candidate (every campaign correction kept); `JOUER_RF2_CUMUL_RF0x.cmd`
-  direct review starts
+  direct review starts. Current: `RF2_CUMUL_20260930_1724` (chapter chain repaired; `docs/RF2_CUMUL_20260930_1724.md`).
+  Re-pointed only after the new build passes its runs (`export_candidate.py --hold`, then `--promote`)
 - `JOUER_RF2_ARSENAL_ESSAI.cmd` - the weapon test bench, separate from the game
 - `JOUER_RF2_DEV.cmd` - rebuilds from `src/` and runs (development)
 
