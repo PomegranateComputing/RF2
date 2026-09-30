@@ -11,13 +11,29 @@ This is not a level generator: every box, door and thing is placed explicitly by
 """
 from dataclasses import dataclass, replace
 from collections import deque
-import struct, json, math
+import struct, json, math, re
 
 UNIT = 16
 DIRS = {'N': (0, 1), 'E': (1, 0), 'S': (0, -1), 'W': (-1, 0)}
 OPP = {'N': 'S', 'S': 'N', 'E': 'W', 'W': 'E'}
 PLAYER_HEIGHT = 56
 STEP = 24
+
+
+def texture_scales(path):
+    """{name: YScale} of the textures and flats of a TEXTURES lump. A sign on a decor line needs the scale of the file
+    actually shipped (Opus's stand-ins are 4 pixels per unit, some of Astra's replacements 8)."""
+    scales, name = {}, None
+    for line in open(path, encoding='utf-8'):
+        head = re.match(r'\s*(?:Texture|WallTexture|Flat)\s+"?(\w+)"?\s*,', line)
+        if head:
+            name = head.group(1).upper()
+            scales[name] = 1.0
+            continue
+        ys = re.match(r'\s*YScale\s+([\d.]+)', line)
+        if ys and name:
+            scales[name] = float(ys.group(1))
+    return {k: (int(v) if v == int(v) else v) for k, v in scales.items()}
 
 
 @dataclass(frozen=True)

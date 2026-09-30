@@ -36,7 +36,20 @@ GREEN = (46, 70, 52)
 GREY_BOARD = (136, 134, 128)
 
 
+# Files delivered by Astra (LUNA-V01, tranche 01, 30/09), imported into src/patches/rf04 under the same names: this
+# script no longer draws them and only writes their definition, at the scale of the delivered file (pixels per unit).
+DELIVERED = {'RF4_POIN': 8, 'RF4_CLE5': 8, 'RF4_CLE4': 8, 'RF4_NIAG': 8, 'RF4_C617': 8, 'RF4_C618': 8}
+
+
+def delivered(kind, name):
+    img = Image.open(PATCH / f'{name}.png')
+    DEFS.append((kind, name, img.size[0], img.size[1], DELIVERED[name]))
+    return img
+
+
 def save(kind, name, arr, ppu=PPU):
+    if name in DELIVERED:
+        return delivered(kind, name)
     img = arr if isinstance(arr, Image.Image) else to_img(np.clip(arr, 0, 1))
     PATCH.mkdir(parents=True, exist_ok=True)
     img.save(PATCH / f'{name}.png', optimize=True)
@@ -46,6 +59,9 @@ def save(kind, name, arr, ppu=PPU):
 
 def masked(name, rgba, ppu=PPU):
     """RGBA patch drawn on a decor line or a masked middle (glass, signs, grilles)."""
+    if name in DELIVERED:
+        delivered('Texture', name)
+        return
     PATCH.mkdir(parents=True, exist_ok=True)
     rgba.save(PATCH / f'{name}.png', optimize=True)
     DEFS.append(('Texture', name, rgba.size[0], rgba.size[1], ppu))

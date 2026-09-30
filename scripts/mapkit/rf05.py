@@ -28,7 +28,7 @@ import sys
 from pathlib import Path
 from dataclasses import replace
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from udmf import MapBuilder, Cell, UNIT  # noqa: E402
+from udmf import MapBuilder, Cell, UNIT, texture_scales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -93,10 +93,13 @@ def lamp(x, y, z, r=255, g=206, b=150, radius=200, tid=0, dormant=False):
             tid=tid, dormant=dormant)
 
 
+SCALES = texture_scales(Path(__file__).resolve().parents[2] / 'src' / 'TEXTURES.rf04')
+
+
 def sign(x0, y0, x1, y1, tex, zbottom, off=1, **flags):
     L = math.hypot(x1 - x0, y1 - y0)
     nx, ny = (y1 - y0) / L * off, -(x1 - x0) / L * off
-    m.decor_line(x0 + nx, y0 + ny, x1 + nx, y1 + ny, tex, zbottom, yscale=4, texwidth=L, **flags)
+    m.decor_line(x0 + nx, y0 + ny, x1 + nx, y1 + ny, tex, zbottom, yscale=SCALES.get(tex, 4), texwidth=L, **flags)
     return m.decor[-1]
 
 

@@ -18,7 +18,14 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'src' / 'sounds' / 'luna'
 
 
+# Delivered by Astra (LUNA-V01, tranche 01, S04-02 to S04-09, 30/09) and imported under the same names: not rewritten.
+DELIVERED = {'motor_loop.wav', 'clock.wav', 'keys.wav', 'turnstile.wav', 'jukebox_key.wav', 'knocks.wav', 'lock.wav',
+             'rail.wav'}
+
+
 def write_wav(name, data, peak=0.85):
+    if name in DELIVERED:
+        return
     data = np.asarray(data, dtype=np.float64)
     data = data / (np.max(np.abs(data)) or 1.0) * peak
     OUT.mkdir(parents=True, exist_ok=True)
