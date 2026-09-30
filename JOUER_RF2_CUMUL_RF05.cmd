@@ -19,6 +19,6 @@ set "CFG=%ROOT%user\uzdoom_cumul.ini"
 if not exist "%ROOT%user" mkdir "%ROOT%user"
 if not exist "%CFG%" if exist "%ROOT%user\uzdoom.ini" copy /y "%ROOT%user\uzdoom.ini" "%CFG%" >nul
 if not exist "%ROOT%user\savegames_cumul" mkdir "%ROOT%user\savegames_cumul"
-echo RF2 candidate CUMUL : dist\candidates\RF2_CUMUL_20260930_1708\RF2_CUMUL.pk3
-"%ENGINE%" -iwad "%IWAD%" -file "%PK3%" -config "%CFG%" -savedir "%ROOT%user\savegames_cumul" %*
+echo RF2 candidate CUMUL : dist\candidates\RF2_CUMUL_20260930_1708\RF2_CUMUL.pk3 - depart direct RF05
+"%ENGINE%" -iwad "%IWAD%" -file "%PK3%" -config "%CFG%" -savedir "%ROOT%user\savegames_cumul" -skill 2 +map RF05 %*
 exit /b %errorlevel%
