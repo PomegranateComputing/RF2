@@ -1,0 +1,248 @@
+{
+ "batch": "RF01_TEXTURES_1940",
+ "batch_path": "C:\\PROJECTS\\RF2_UZDOOM_ASTRA_RF01_TEXTURES_1940_20260928\\incoming\\astra\\RF01_TEXTURES_1940",
+ "imported": "2026-09-28 17:26",
+ "manifest_sha256": "ec3098e903347a2a9e1a515de5b938c17940ca35013b17f5df78a5461f9a5b76",
+ "files": [
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFP_DADB.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFP_DADB.png",
+   "base_sha256": null,
+   "new_sha256": "f7098536d80b67ecdbe939e58652dee0a9f029ad60825562e161eb62ea4ca61a"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFP_DADG.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFP_DADG.png",
+   "base_sha256": null,
+   "new_sha256": "dcce2d66325acdbc8b8c5377b7fc861b33941509cfc4d88e50819919c294097c"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFP_DADR.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFP_DADR.png",
+   "base_sha256": null,
+   "new_sha256": "c22ebeb54f635a3b50ae80b161ebb9c3dcf0257a02bc117f130422ca07834b7d"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFP_TILE.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFP_TILE.png",
+   "base_sha256": null,
+   "new_sha256": "4e5fdea8290977e57737cf77c3e2bc668d4d439a2c3159bd278c3e08033286a7"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFP_PLN.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFP_PLN.png",
+   "base_sha256": null,
+   "new_sha256": "d6f40bdb824e96a53a1d93857015f29516511c682bfd7d5c6b68f71e292b7294"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFP_DRK.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFP_DRK.png",
+   "base_sha256": null,
+   "new_sha256": "ef03c3fa99c3f5c53737c1e83419475737ee0192c12fee2b52f71c8e8acd9896"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFS_LIME.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFS_LIME.png",
+   "base_sha256": null,
+   "new_sha256": "7e3bce4f9acccb4c6100de356a25569a968c3d77312690608e5383e407e10899"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFS_BASE.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFS_BASE.png",
+   "base_sha256": null,
+   "new_sha256": "2202c954bb8816f3201ff5ed6ab4126edaadc6262c38c547a259d76ddde7a1eb"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFS_REND.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFS_REND.png",
+   "base_sha256": null,
+   "new_sha256": "62b4eb239b843bda880adcb47dd138bdf6b7126f4adb4f1bc89ae9d5316e5ded"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFW_PANL.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFW_PANL.png",
+   "base_sha256": null,
+   "new_sha256": "29022ebb9b84b9a2637e2be653de232a5a9da812a32bea011b584970e013062f"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFM_PANL.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFM_PANL.png",
+   "base_sha256": null,
+   "new_sha256": "81ee576bc2ef942985fb21bab63f247d7c2c2a2ce60422c7dbabb6ba1fdbd32a"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFD_DBL.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFD_DBL.png",
+   "base_sha256": null,
+   "new_sha256": "3911d72097c52ff1eca389c5b225ea77c439d37a6111ba7fe858f94b360c0fa2"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFD_SGL.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFD_SGL.png",
+   "base_sha256": null,
+   "new_sha256": "4620e7c1beab92bad90adc664030a7e617e421188e9062b7145edfb215593af8"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFM_DOOR.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFM_DOOR.png",
+   "base_sha256": null,
+   "new_sha256": "7432ae6be9fd029fc0eac5e2a7ee478822a7d518219f9c963fff57e88b566139"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFM_GRIL.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFM_GRIL.png",
+   "base_sha256": null,
+   "new_sha256": "c930b0b21f57c0f3c0974c9eb421f8a691b31c4fcf22f628bdd3839e62b25879"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFG_WIN.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFG_WIN.png",
+   "base_sha256": null,
+   "new_sha256": "6f1ed79e2d58b99cd0fe2a57d956df204f5b6716537b1dc8ee1691f0ed6f18a3"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFM_SW0.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFM_SW0.png",
+   "base_sha256": null,
+   "new_sha256": "d9a50d02d1b4aa3e7285138210cd1aaef3655717c19743365dae6148bf093487"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFM_SW1.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFM_SW1.png",
+   "base_sha256": null,
+   "new_sha256": "66610241e9cc18434b9747ef1dbe9e2df9eee7c34a786bcf8c8e7eb7fe3c12ef"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFF_CER.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFF_CER.png",
+   "base_sha256": null,
+   "new_sha256": "484a1813ff3a0bfe5a1678e321513dc0a42e069efbaa2a7b42e8c88476a4fa98"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFF_CERD.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFF_CERD.png",
+   "base_sha256": null,
+   "new_sha256": "c73fa4efa1dccd129557028490438bfe1cb24740c970f8746996f39e10e97d05"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFF_CHK.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFF_CHK.png",
+   "base_sha256": null,
+   "new_sha256": "75d886f851b3479ffdb7f93294ecf78e4a0e138baf1eed82e38687ba005bf4dd"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFF_WOOD.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFF_WOOD.png",
+   "base_sha256": null,
+   "new_sha256": "ad38a2bce275b5382c0eb71b169c8a16a0497bfdbf4e560c8c50a958a6c3dc97"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFF_LINO.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFF_LINO.png",
+   "base_sha256": null,
+   "new_sha256": "2345ef094fb77d8f5de08b2ca6040cd4b8cc73e306090cc2155841d481a332e5"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFF_GRAV.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFF_GRAV.png",
+   "base_sha256": null,
+   "new_sha256": "bc9e3a7691b2effb57efefc667f4a1fc2d9ed9fc363017e8be50d78d64013902"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFF_SLAB.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFF_SLAB.png",
+   "base_sha256": null,
+   "new_sha256": "47ff26aadb9ba0e7b085b765aa12ff385415dd9b812d636000422cb738931037"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFF_CONC.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFF_CONC.png",
+   "base_sha256": null,
+   "new_sha256": "ece4efe3f49be0950132346a49edcf3e96bbe38ab81add6a108783e92d5b9622"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFP_CEIL.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFP_CEIL.png",
+   "base_sha256": null,
+   "new_sha256": "a75e0e8b948bf7796ce5b56d68e50b29a361f476aaee5209a7d076e96d906486"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFP_CEID.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFP_CEID.png",
+   "base_sha256": null,
+   "new_sha256": "8a62c66234b40ce349feec29ad8db9c69bf4329f361eeb9cea406aa6f33c56f8"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFW_TOP.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFW_TOP.png",
+   "base_sha256": null,
+   "new_sha256": "bf93cedbf14437cd6778481d3c6f567d078764f3eb58bc5ddb98316f215b26dc"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFT_BED.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFT_BED.png",
+   "base_sha256": null,
+   "new_sha256": "151b131c5b3e0ed03a7ebe19177354b80c9a1f19e0b37c69e3272569a40e2599"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFM_TOP.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFM_TOP.png",
+   "base_sha256": null,
+   "new_sha256": "381fd376b40dac0c00f6e3b28d82347cd36a271963094d4885982eb25f210802"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFS_FACD.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFS_FACD.png",
+   "base_sha256": null,
+   "new_sha256": "16ffa3ec78d5f6c123f31c47556d9f14b54028171a184bfb46a6dce6858c3d05"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFS_HOSP.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFS_HOSP.png",
+   "base_sha256": null,
+   "new_sha256": "38c6a9ab1d359085a3b7c76b1dc0d3b68777f793b550232a547c87799cae288b"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFF_PAVE.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFF_PAVE.png",
+   "base_sha256": null,
+   "new_sha256": "a7bb4d4019327ac3f9bba5b6dce2c32a0ca29a23d975d81cabab207f4fcea6d9"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFT_BEDS.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFT_BEDS.png",
+   "base_sha256": null,
+   "new_sha256": "022170b4608f2fe673550c62ef05546bba8100ffde55abf5a5d546554e5fa2b1"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFT_HEAD.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFT_HEAD.png",
+   "base_sha256": null,
+   "new_sha256": "68ee090eebbf338497e8f0cf24febceb484149a3d70f6c139350e59904804119"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFW_TBLS.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFW_TBLS.png",
+   "base_sha256": null,
+   "new_sha256": "f9a7e584e83febfb1e4f028edd22cc2759ad0ae4e7e96cf8cbeafee33deacb2b"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFW_SHLF.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFW_SHLF.png",
+   "base_sha256": null,
+   "new_sha256": "f688366f0a52393bdd258776ec9882e85599782841736cfc86eb17550c096e9b"
+  },
+  {
+   "target": "patches/rf01_1940/RF2_SA_RFM_VATS.png",
+   "source": "runtime/patches/rf01_1940/RF2_SA_RFM_VATS.png",
+   "base_sha256": null,
+   "new_sha256": "ba4d6f9b788584f8c253800749da84fc22ff5ac2769b735cb266a7d273de83e9"
+  },
+  {
+   "target": "models/rf01_1940/RF2_SA_ATLAS.png",
+   "source": "runtime/models/rf01_1940/RF2_SA_ATLAS.png",
+   "base_sha256": null,
+   "new_sha256": "3d436e4a29daff76405421520459ae62448bcfc2403e02232aeeeadd837ef769"
+  }
+ ]
+}

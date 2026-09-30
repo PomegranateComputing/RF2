@@ -701,8 +701,20 @@ for i, (x, y, use, wait, weapon, ang) in enumerate(route):
 
 
 # --------------------------------------------------------------------------- build
+def remap_1940(text):
+    """RF01-TEXTURES-1940 (28/09): the 1940 materials of Codex Astra, under their own names, for RF01 alone
+    (rf01_textures_1940.csv next to this file: Astra's OLD_TO_NEW.csv). Every texture name of the TEXTMAP is
+    swapped after the build, the cell defaults of the kit included; RF02 and the other maps keep the old images.
+    The plaques (RFSIGN*), the stained glass and the sky are not in the table."""
+    import csv, re
+    with open(Path(__file__).with_name('rf01_textures_1940.csv'), encoding='utf-8-sig', newline='') as f:
+        table = {row['old']: row['new'] for row in csv.DictReader(f)}
+    return re.sub(r'(texture(?:top|middle|bottom|floor|ceiling)\s*=\s*")([^"]+)(")',
+                  lambda mm: mm.group(1) + table.get(mm.group(2), mm.group(2)) + mm.group(3), text)
+
+
 def main():
-    text = m.build()
+    text = remap_1940(m.build())
     (ROOT / 'src' / 'maps' / 'RF01.wad').write_bytes(m.wad(text))
     (ROOT / 'build').mkdir(exist_ok=True)
     (ROOT / 'build' / 'RF01_TEXTMAP.txt').write_text(text, encoding='utf-8')

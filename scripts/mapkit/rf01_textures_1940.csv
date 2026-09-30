@@ -1,0 +1,40 @@
+﻿old,new,file,pixels,scale,world_module,repeat,shared_with,RF01_uses
+RFP_DADB,RFPDADBA,patches/rf01_1940/RF2_SA_RFP_DADB.png,1024x1024,"[4.0, 4.0]","[256.0, 256.0]",X only,,183
+RFP_DADG,RFPDADGA,patches/rf01_1940/RF2_SA_RFP_DADG.png,1024x1024,"[4.0, 4.0]","[256.0, 256.0]",X only,,130
+RFP_DADR,RFPDADRA,patches/rf01_1940/RF2_SA_RFP_DADR.png,1024x1024,"[4.0, 4.0]","[256.0, 256.0]",X only,,47
+RFP_TILE,RFPTILEA,patches/rf01_1940/RF2_SA_RFP_TILE.png,1024x1024,"[4.0, 4.0]","[256.0, 256.0]",X only,,77
+RFP_PLN,RFPPLNA,patches/rf01_1940/RF2_SA_RFP_PLN.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,,81
+RFP_DRK,RFPDRKA,patches/rf01_1940/RF2_SA_RFP_DRK.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,RF02,75
+RFS_LIME,RFSLIMEA,patches/rf01_1940/RF2_SA_RFS_LIME.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,,87
+RFS_BASE,RFSBASEA,patches/rf01_1940/RF2_SA_RFS_BASE.png,512x256,"[4.0, 4.0]","[128.0, 64.0]",X only,RF02,50
+RFS_REND,RFSRENDA,patches/rf01_1940/RF2_SA_RFS_REND.png,512x1024,"[4.0, 4.0]","[128.0, 256.0]",X only,,136
+RFW_PANL,RFWPANLA,patches/rf01_1940/RF2_SA_RFW_PANL.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",X only,RF02,24
+RFM_PANL,RFMPANLA,patches/rf01_1940/RF2_SA_RFM_PANL.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,RF02,5
+RFD_DBL,RFDDBLA,patches/rf01_1940/RF2_SA_RFD_DBL.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",none / existing mapping,,6
+RFD_SGL,RFDSGLA,patches/rf01_1940/RF2_SA_RFD_SGL.png,256x512,"[4.0, 4.0]","[64.0, 128.0]",none / existing mapping,RF02,30
+RFM_DOOR,RFMDOORA,patches/rf01_1940/RF2_SA_RFM_DOOR.png,256x512,"[4.0, 4.0]","[64.0, 128.0]",none / existing mapping,,6
+RFM_GRIL,RFMGRILA,patches/rf01_1940/RF2_SA_RFM_GRIL.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",none / existing mapping,RF02,6
+RFG_WIN,RFGWINA,patches/rf01_1940/RF2_SA_RFG_WIN.png,256x256,"[4.0, 4.0]","[64.0, 64.0]",none / existing mapping,,110
+RFM_SW0,RFMSW0A,patches/rf01_1940/RF2_SA_RFM_SW0.png,256x256,"[4.0, 4.0]","[64.0, 64.0]",none / existing mapping,,2
+RFM_SW1,RFMSW1A,patches/rf01_1940/RF2_SA_RFM_SW1.png,256x256,"[4.0, 4.0]","[64.0, 64.0]",none / existing mapping,,2
+RFF_CER,RFFCERA,patches/rf01_1940/RF2_SA_RFF_CER.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,RF02,24
+RFF_CERD,RFFCERDA,patches/rf01_1940/RF2_SA_RFF_CERD.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,,1
+RFF_CHK,RFFCHKA,patches/rf01_1940/RF2_SA_RFF_CHK.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,,23
+RFF_WOOD,RFFWOODA,patches/rf01_1940/RF2_SA_RFF_WOOD.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,RF02,40
+RFF_LINO,RFFLINOA,patches/rf01_1940/RF2_SA_RFF_LINO.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,,16
+RFF_GRAV,RFFGRAVA,patches/rf01_1940/RF2_SA_RFF_GRAV.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,RF02,8
+RFF_SLAB,RFFSLABA,patches/rf01_1940/RF2_SA_RFF_SLAB.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,RF02,26
+RFF_CONC,RFFCONCA,patches/rf01_1940/RF2_SA_RFF_CONC.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,,19
+RFP_CEIL,RFPCEILA,patches/rf01_1940/RF2_SA_RFP_CEIL.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,,119
+RFP_CEID,RFPCEIDA,patches/rf01_1940/RF2_SA_RFP_CEID.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,RF02,60
+RFW_TOP,RFWTOPA,patches/rf01_1940/RF2_SA_RFW_TOP.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,RF02,19
+RFT_BED,RFTBEDA,patches/rf01_1940/RF2_SA_RFT_BED.png,256x256,"[4.0, 4.0]","[64.0, 64.0]",XY,,10
+RFM_TOP,RFMTOPA,patches/rf01_1940/RF2_SA_RFM_TOP.png,256x256,"[4.0, 4.0]","[64.0, 64.0]",XY,RF02,16
+RFS_FACD,RFSFACDA,patches/rf01_1940/RF2_SA_RFS_FACD.png,512x896,"[2.0, 2.0]","[256.0, 448.0]",X only,,7
+RFS_HOSP,RFSHOSPA,patches/rf01_1940/RF2_SA_RFS_HOSP.png,512x640,"[2.0, 2.0]","[256.0, 320.0]",X only,RF02,6
+RFF_PAVE,RFFPAVEA,patches/rf01_1940/RF2_SA_RFF_PAVE.png,512x512,"[4.0, 4.0]","[128.0, 128.0]",XY,,1
+RFT_BEDS,RFTBEDSA,patches/rf01_1940/RF2_SA_RFT_BEDS.png,256x128,"[4.0, 4.0]","[64.0, 32.0]",X only,,19
+RFT_HEAD,RFTHEADA,patches/rf01_1940/RF2_SA_RFT_HEAD.png,256x192,"[4.0, 4.0]","[64.0, 48.0]",none / existing mapping,,33
+RFW_TBLS,RFWTBLSA,patches/rf01_1940/RF2_SA_RFW_TBLS.png,256x128,"[4.0, 4.0]","[64.0, 32.0]",X only,RF02,37
+RFW_SHLF,RFWSHLFA,patches/rf01_1940/RF2_SA_RFW_SHLF.png,256x256,"[4.0, 4.0]","[64.0, 64.0]",none / existing mapping,,15
+RFM_VATS,RFMVATSA,patches/rf01_1940/RF2_SA_RFM_VATS.png,256x192,"[4.0, 4.0]","[64.0, 48.0]",X only,,16
