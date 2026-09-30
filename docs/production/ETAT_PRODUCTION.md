@@ -214,3 +214,7 @@ action.
   demandée). Candidate **`RF2_CUMUL_20260930_1821`** (`6c85e747…`, commit `6134a94`) : les cinq cartes A/B et la chaîne
   PASS ; lanceurs courants repointés et contrôlés depuis `C:\`. Demande JERMA-V01 (environnement de RF07) déposée ;
   retour détaillé à Astra `handoff/SUITE-20260930/RETOUR_OPUS.md`. Armes : banc en cours (worktree dédié).
+- 30/09, 19 h 15 — banc **`RF2_ARSENAL_ESSAI_20260930_1901`** (`48159170…`, branche `bench/rf2-arsenal` `a08e4b7`,
+  worktree `C:\PROJECTS\RF2_UZDOOM_BENCH_20260930`) : W03/W04 V02 sans recul par le code, FAMAS V01, Scorpion V01 avec
+  ses poses d'effort raccordées (cadence des touches inchangée). Sondes PASS, captures par tic, film au son du moteur
+  (non écouté). `JOUER_RF2_ARSENAL_ESSAI.cmd` repointé, contrôlé depuis `C:\`. Aucune arme du banc en campagne.
