@@ -1,0 +1,177 @@
+{
+  "batch": "LUNA_V01_TRANCHE01",
+  "lot": "incoming/astra/RF2_SUITE_20260930/LUNA_V01_TRANCHE01",
+  "manifest_sha256": "af41d758898474ba06cc04a24602bbd7dbaeed00ab073ccac1449b14eb51c6b4",
+  "status": "OWNER_REVIEW_REQUIRED",
+  "imported": "2026-09-30 17:25",
+  "by": "Opus (integration)",
+  "head_before": "10367c12559fe2a3d68880452639496b5c8860dd",
+  "base_drift_reason": null,
+  "counts": {
+    "nouveau": 2,
+    "remplace_sans_base": 14
+  },
+  "files": [
+    {
+      "target": "src/graphics/items/RF4CART0.png",
+      "delivered": "runtime/graphics/items/RF4CART0.png",
+      "sha256": "d56e1c3ca3b7d0b7c87fbdde669733af2843edb1bff1d4f278013acda3ebb2aa",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": "item",
+      "id": null
+    },
+    {
+      "target": "src/graphics/items/RF4CART1.png",
+      "delivered": "runtime/graphics/items/RF4CART1.png",
+      "sha256": "ab28bee8698bf24e89268da5a5cb6d8fa0c36b208010f5ad56013b8351b102e9",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": "item",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_POIN.png",
+      "delivered": "runtime/patches/rf04/RF4_POIN.png",
+      "sha256": "e5ed079dbaea991618c90c5ba9ae49794cafa1afd085cb8919e17d4cc471e37f",
+      "before": "0e7bfaaa25be30a10177b983cfeaa9946b1d06706b596010f1a8492800c34207",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_CLE5.png",
+      "delivered": "runtime/patches/rf04/RF4_CLE5.png",
+      "sha256": "52f5bac26438736e71e23c6b4b42c53ad0b518cf91ce3f79752baa6cb28fc3ce",
+      "before": "26df89c29da24065f78f7ed3d03bf2be80fcf865a0eb6cce9f7adcde6cdeaa74",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_CLE4.png",
+      "delivered": "runtime/patches/rf04/RF4_CLE4.png",
+      "sha256": "62934e98e82107df9ad2350749c9c1ec19f3931c1553745c3df8a5552618545c",
+      "before": "b45164c162e3b1fd752e49b4900c2787dc328432dad43b7e8fa4b6a93bf982c8",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_C617.png",
+      "delivered": "runtime/patches/rf04/RF4_C617.png",
+      "sha256": "aad86bf0318bffcc6a4aa2b42bfa0caed827669dec9614f01d024334413036f8",
+      "before": "e7cac872dc4992d25d36619fddf968a982848916d8d08c7b2fbea415b475f635",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_C618.png",
+      "delivered": "runtime/patches/rf04/RF4_C618.png",
+      "sha256": "7e83fefb5a7fec7b9310783250c4c9cb7964d538d60b8a30065a38bbb65bb963",
+      "before": "d3e262647f8d5594f14010d6c43389078503dcff134e305d457ae72c0a8fb409",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_NIAG.png",
+      "delivered": "runtime/patches/rf04/RF4_NIAG.png",
+      "sha256": "2c924d679631ca2f992fa69f38885ccf20376457e78741aae80ea855fe1744ee",
+      "before": "fc6ef95a74004f87fd5fa5e8f9018eabcffd2866fb993de5d8e51c6011e83ca0",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "texture",
+      "id": null
+    },
+    {
+      "target": "src/sounds/luna/motor_loop.wav",
+      "delivered": "runtime/sounds/luna/motor_loop.wav",
+      "sha256": "494900829a8cf65debc17ade73f8a62f98f6d99219f25090e47e7ab506c58f53",
+      "before": "90790beb574c99674837caf36a1a9f99c6e269f551cdeda5c2a1ebf632ca7dea",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "audio",
+      "id": null
+    },
+    {
+      "target": "src/sounds/luna/clock.wav",
+      "delivered": "runtime/sounds/luna/clock.wav",
+      "sha256": "f3d0b3ab20ee4afc6af99acc9d9594ca4c897d292c5d8f3d4a1068dd1ea7b4af",
+      "before": "7d7eb27a0416d93d4739e70df58cd8a66b251cc46a55e9febdb52f12c9699411",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "audio",
+      "id": null
+    },
+    {
+      "target": "src/sounds/luna/keys.wav",
+      "delivered": "runtime/sounds/luna/keys.wav",
+      "sha256": "121d4d562a3a179399f42782e9dd555abd59a6298ecc1c04aa36dc127b332727",
+      "before": "e2935683440e740c56042b5fb4fd7ded123b823045b50325dd2e47111627747c",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "audio",
+      "id": null
+    },
+    {
+      "target": "src/sounds/luna/turnstile.wav",
+      "delivered": "runtime/sounds/luna/turnstile.wav",
+      "sha256": "61b24b5531553917127c9bd5812a1a425fc9474be2eb597661d6e98b317855b9",
+      "before": "3e9811ff1248cf36d47615d1aca0ff5d9c95fda54e89bd6120c30af322f580aa",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "audio",
+      "id": null
+    },
+    {
+      "target": "src/sounds/luna/jukebox_key.wav",
+      "delivered": "runtime/sounds/luna/jukebox_key.wav",
+      "sha256": "3c5a50cd73a14184ccf31fee9d5b28b63683b96b9e0344e5f0aee67b3ea1a6fb",
+      "before": "abd308f011b0b8855211644b592558becb2d8444d8f8cdc2498e78b67787938c",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "audio",
+      "id": null
+    },
+    {
+      "target": "src/sounds/luna/knocks.wav",
+      "delivered": "runtime/sounds/luna/knocks.wav",
+      "sha256": "b56e1425c0b299d13d5781feb1b0a5212c45d7a04e9eb35d815509cdc51d3402",
+      "before": "e1dc56abdc3b1033ba6cd850e733beeb238a354fe53c757c60980546be973cf3",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "audio",
+      "id": null
+    },
+    {
+      "target": "src/sounds/luna/lock.wav",
+      "delivered": "runtime/sounds/luna/lock.wav",
+      "sha256": "574e357d2c53654ddc3a819da81ff6fff7d00262dc380db069c2d29cd09afc19",
+      "before": "c3f1eceee3c1940246872efd5ee416bbab7dfbfdc6a1adfa151e84e2a19201b8",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "audio",
+      "id": null
+    },
+    {
+      "target": "src/sounds/luna/rail.wav",
+      "delivered": "runtime/sounds/luna/rail.wav",
+      "sha256": "a4fb25ad36f8100b35831d88a1129e7d707a31c4d75ffd282a1edfec9d2d9cd6",
+      "before": "47155d4ab0666225b7f4a806560402dafa0179df644dbe8101478c3a857c6cc8",
+      "base_sha256": null,
+      "state": "remplace_sans_base",
+      "kind": "audio",
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

@@ -404,7 +404,7 @@ sign(336, 2048, 496, 2048, 'RF4_DANS', 152, off=1)                              
 m.box(240, 2048, 496, 2080, HALL, ceil=128, ftex='RFF_SLAB')
 for (x0, x1) in ((240, 288), (336, 384), (432, 496)):
     block(x0, 2048, x1, 2080, 40, 'RFM_TOP', 'RF4_TOUR', m.cells[(x0 // UNIT, 2048 // UNIT)])
-sign(256, 2048, 288, 2048, 'RF4_C617', 14, off=1, user_scene=L_COUNTER)                             # the counter, on its post
+sign(256, 2048, 288, 2048, 'RF4_C617', 0, off=1, user_scene=L_COUNTER)                              # the counter plate: the post's whole face (32 x 40)
 m.decor_line(290, 2064, 334, 2064, 'RF2_RAMB', 0, blocking=True, yscale=4, user_scene=L_TURNSTILE)  # the bar that turns
 m.decor_line(386, 2064, 430, 2064, 'RF2_RAMB', 0, blocking=True, yscale=4)                           # barred for good
 m.thing(312, 2036, T_TURN, angle=90, args=(L_TURNSTILE,), z=24)

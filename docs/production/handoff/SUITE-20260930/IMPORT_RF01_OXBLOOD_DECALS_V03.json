@@ -1,0 +1,69 @@
+{
+  "batch": "RF01_OXBLOOD_DECALS_V03",
+  "lot": "incoming/astra/RF2_SUITE_20260930/RF01_OXBLOOD_DECALS_V03",
+  "manifest_sha256": "422ff7a36fe9bd37dd09dfa1644cb5852e6bbbfd30b232f970b641f04d191cf5",
+  "status": "OWNER_REVIEW_REQUIRED",
+  "imported": "2026-09-30 17:25",
+  "by": "Opus (integration)",
+  "head_before": "10367c12559fe2a3d68880452639496b5c8860dd",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 4,
+    "retenu_apres_revue_moteur": 1
+  },
+  "files": [
+    {
+      "target": "src/patches/rf01_1940/RF2_SA_RFP_DADR.png",
+      "delivered": "runtime/patches/rf01_1940/RF2_SA_RFP_DADR.png",
+      "sha256": "ad3cbeb79379837fd196145e48ea88cc948958f70414827c33fe5320852217f5",
+      "before": "f9c304ecb7a8bff85155d4db35b24b3d5ed2702e84798af72f22d0b5486259f7",
+      "base_sha256": "f9c304ecb7a8bff85155d4db35b24b3d5ed2702e84798af72f22d0b5486259f7",
+      "state": "remplace_base_conforme",
+      "kind": "rf01_material_patch",
+      "id": null
+    },
+    {
+      "target": "src/graphics/decals/RFDSTN1.png",
+      "delivered": "runtime/graphics/decals/RFDSTN1.png",
+      "sha256": "acc549f4c745bfe92b10528cfe7ea0fd021d66bdc4b12795bd8ff3db97b1e345",
+      "before": "ffed428a80a549ca1607ca822e4600bcf76b420d9854615684ce52670ee6a5ff",
+      "base_sha256": "ffed428a80a549ca1607ca822e4600bcf76b420d9854615684ce52670ee6a5ff",
+      "state": "retenu_apres_revue_moteur",
+      "kind": "rf01_shade_decal",
+      "id": null,
+      "withheld": "Revue moteur du 30/09 (17 vues de decals, avant 1724 / apres) : le masque d'humidite V03 ne se voit dans aucune des quatre vues ou il est pose (01, 03, 04, 06) ; alpha total 39 % de celui du fichier en jeu, centre plus bas. Le fichier precedent reste en place en attendant une V04.",
+      "in_tree_sha256": "ffed428a80a549ca1607ca822e4600bcf76b420d9854615684ce52670ee6a5ff"
+    },
+    {
+      "target": "src/graphics/decals/RFDSTN2.png",
+      "delivered": "runtime/graphics/decals/RFDSTN2.png",
+      "sha256": "dc058a0038bf88afa3aa80e7be2a37ca0b08d7b0eed696a7e6f816c0783affd7",
+      "before": "d29be1284f0bf3bfb0d2914a59f34ee7c104ec5c36607cd3cb1db0d3a63460b0",
+      "base_sha256": "d29be1284f0bf3bfb0d2914a59f34ee7c104ec5c36607cd3cb1db0d3a63460b0",
+      "state": "remplace_base_conforme",
+      "kind": "rf01_shade_decal",
+      "id": null
+    },
+    {
+      "target": "src/graphics/decals/RFDSTN3.png",
+      "delivered": "runtime/graphics/decals/RFDSTN3.png",
+      "sha256": "ba45a88ce63a30e382ce3ed3277f1f8e19ffcc66a20c2ffe1c1cc2b237c0f985",
+      "before": "bb9f2337b7d7f9fdfab1d734e551162179abc551a9d727d0c274fec82165a407",
+      "base_sha256": "bb9f2337b7d7f9fdfab1d734e551162179abc551a9d727d0c274fec82165a407",
+      "state": "remplace_base_conforme",
+      "kind": "rf01_shade_decal",
+      "id": null
+    },
+    {
+      "target": "src/graphics/decals/RFDSTN4.png",
+      "delivered": "runtime/graphics/decals/RFDSTN4.png",
+      "sha256": "21a2d791704c084a594503927b50b36c97f269fc7d8d8911dfd4ed207a482eb6",
+      "before": "cf39e697c25aa6ee53cadaaa7b39919849eb5f990c9ff5aa6f64ba96c9a06d9e",
+      "base_sha256": "cf39e697c25aa6ee53cadaaa7b39919849eb5f990c9ff5aa6f64ba96c9a06d9e",
+      "state": "remplace_base_conforme",
+      "kind": "rf01_shade_decal",
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

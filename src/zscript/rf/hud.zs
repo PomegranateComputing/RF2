@@ -262,6 +262,20 @@ class RFStatusBar : BaseStatusBar
         if (CPlayer.mo.FindInventory('RFPasseKey') != null)
         {
             DrawString(labelFont, StringTable.Localize("$RF_KEY_PASSE"), (92 * s, ky), left | DI_ITEM_LEFT_TOP, Font.CR_TAN, 1.0, -1, 0, (s * 0.7, s * 0.7));
+            ky -= 10 * s;
+        }
+        if (CPlayer.mo.FindInventory('RFSousStationKey') != null)
+        {
+            DrawString(labelFont, StringTable.Localize("$RF_KEY_SOUSSTATION"), (92 * s, ky), left | DI_ITEM_LEFT_TOP, Font.CR_TAN, 1.0, -1, 0, (s * 0.7, s * 0.7));
+            ky -= 10 * s;
+        }
+        // The time card of the Luna Park (RF04), right of the health box: blank, then punched 06:06 (Astra, M04-02).
+        let card = CPlayer.mo.FindInventory('RFTimeCardPunched');
+        if (card == null) card = CPlayer.mo.FindInventory('RFTimeCard');
+        if (card != null && card.Icon.IsValid() && Level.MapName ~== "RF04")
+        {
+            double cs = 48 * s / 512;
+            DrawTexture(card.Icon, (166 * s, -10 * s), left | DI_ITEM_LEFT_BOTTOM, 1.0, (-1, -1), (cs, cs));
         }
 
         // Weapon and ammunition (bottom right).

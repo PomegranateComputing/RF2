@@ -1,0 +1,1077 @@
+{
+  "batch": "ORDY_V03",
+  "lot": "incoming/astra/RF2_SUITE_20260930/ORDY_V03",
+  "manifest_sha256": "8f1b02843ef35596ad3f1e5340fd518df4825293570e86bf97003cf981b3a60f",
+  "status": "OWNER_REVIEW_REQUIRED",
+  "imported": "2026-09-30 17:25",
+  "by": "Opus (integration)",
+  "head_before": "10367c12559fe2a3d68880452639496b5c8860dd",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 105,
+    "deja_importe": 1
+  },
+  "files": [
+    {
+      "target": "src/models/rf2_art_01/orderly.obj",
+      "delivered": "runtime/models/rf2_art_01/orderly.obj",
+      "sha256": "baffe4d865505d97d1065318e15e95691821c5fade7b2959f6790574507c3aa9",
+      "before": "345102b7b87184ceab4a9afae4ab066ee828d6158c58d6a89a4011e6140d1d9f",
+      "base_sha256": "345102b7b87184ceab4a9afae4ab066ee828d6158c58d6a89a4011e6140d1d9f",
+      "state": "remplace_base_conforme",
+      "kind": "corpse_model",
+      "id": null
+    },
+    {
+      "target": "src/models/rf2_art_01/orderly_skin.png",
+      "delivered": "runtime/models/rf2_art_01/orderly_skin.png",
+      "sha256": "5c7c3687a2e9a111e471088082da4511cb307a2ff921c8e9f98905af3a237d00",
+      "before": "5c7c3687a2e9a111e471088082da4511cb307a2ff921c8e9f98905af3a237d00",
+      "base_sha256": "5c7c3687a2e9a111e471088082da4511cb307a2ff921c8e9f98905af3a237d00",
+      "state": "deja_importe",
+      "kind": "corpse_skin",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYA1.png",
+      "delivered": "runtime/sprites/enemies/ORDYA1.png",
+      "sha256": "f20b558525a84f2d1d210525230f002b707558a038463fcf20b7dce3d46c12d5",
+      "before": "84a197864673975db62f3c21366cb7cc4d2d409b4f6299645de71f1e3bcedf21",
+      "base_sha256": "84a197864673975db62f3c21366cb7cc4d2d409b4f6299645de71f1e3bcedf21",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYA2.png",
+      "delivered": "runtime/sprites/enemies/ORDYA2.png",
+      "sha256": "444a549219f09272d5019d964bc188a63ffd5e64d2cc546d7baec4d8dfaf9f8e",
+      "before": "3c5d6b93b1bc1e3bc661720f44bbae00bface72f1ad489519ee9f8c5a3204bff",
+      "base_sha256": "3c5d6b93b1bc1e3bc661720f44bbae00bface72f1ad489519ee9f8c5a3204bff",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYA3.png",
+      "delivered": "runtime/sprites/enemies/ORDYA3.png",
+      "sha256": "a9fdd4aceee229069aa3c801771c8c686e17e6ae2342620bac11c504c61c95ae",
+      "before": "c649c20031d7713fd8d7e7ab56902bc7c27f71ccee23fe59736b50dd87a0eec3",
+      "base_sha256": "c649c20031d7713fd8d7e7ab56902bc7c27f71ccee23fe59736b50dd87a0eec3",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYA4.png",
+      "delivered": "runtime/sprites/enemies/ORDYA4.png",
+      "sha256": "7b7f4d47b79d2efd7192e1038265ea9bc68a4768f921bdb6919df654ab9a89d8",
+      "before": "abb58fa01dea9a81995c6805a99e3762d630c3a3be01bdc6031686c5c66a0252",
+      "base_sha256": "abb58fa01dea9a81995c6805a99e3762d630c3a3be01bdc6031686c5c66a0252",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYA5.png",
+      "delivered": "runtime/sprites/enemies/ORDYA5.png",
+      "sha256": "17db346e6833fc0f5d29e5ee6cca427ed380f5957a95e5a525217226176b41e4",
+      "before": "21147ae69f9a373f60ed7c4565ce03717d0d7fcc72c19802df2b7a1100522e26",
+      "base_sha256": "21147ae69f9a373f60ed7c4565ce03717d0d7fcc72c19802df2b7a1100522e26",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYA6.png",
+      "delivered": "runtime/sprites/enemies/ORDYA6.png",
+      "sha256": "681937baf9a0366a9433973aa038e84af0ae0ad23cf088a0d5f916b48f9c16de",
+      "before": "db06a4dc67eab75fd5b774771eb5509a5c6f600140fa17fc258edc1efa3dce4e",
+      "base_sha256": "db06a4dc67eab75fd5b774771eb5509a5c6f600140fa17fc258edc1efa3dce4e",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYA7.png",
+      "delivered": "runtime/sprites/enemies/ORDYA7.png",
+      "sha256": "ff4248553afb68724dd5b93357277cddcd0037af498f4087120da61a33a6152e",
+      "before": "63acad559c5050452b437c80e453ef48750434b1c38f3ed45c0e6bc210660897",
+      "base_sha256": "63acad559c5050452b437c80e453ef48750434b1c38f3ed45c0e6bc210660897",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYA8.png",
+      "delivered": "runtime/sprites/enemies/ORDYA8.png",
+      "sha256": "60130ce77778f2a976f71a5e4ccc8e42f2ed350b0cb8eb48ec16882e900af79b",
+      "before": "485f8879767d46c5f7974aa2dd5246621cf1254488159eb4f76e057f9f26dce6",
+      "base_sha256": "485f8879767d46c5f7974aa2dd5246621cf1254488159eb4f76e057f9f26dce6",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYB1.png",
+      "delivered": "runtime/sprites/enemies/ORDYB1.png",
+      "sha256": "9bea4f4c8bc367b12a303efac7a6bbe2fca8c4d719d296d0759e032cf0ab9871",
+      "before": "2d04b648612b5e42f47e3809c84adc5a1fc7972ba85dca2a428fb98a1fcbaf62",
+      "base_sha256": "2d04b648612b5e42f47e3809c84adc5a1fc7972ba85dca2a428fb98a1fcbaf62",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYB2.png",
+      "delivered": "runtime/sprites/enemies/ORDYB2.png",
+      "sha256": "c50395299606cb04e9f499f9f287c0abef9646b51f32f6014ce581c61ed4d7d0",
+      "before": "8a5fb06fb44379acd2834336c1e52911c94dac8d64b55b711650eebcffa07ee3",
+      "base_sha256": "8a5fb06fb44379acd2834336c1e52911c94dac8d64b55b711650eebcffa07ee3",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYB3.png",
+      "delivered": "runtime/sprites/enemies/ORDYB3.png",
+      "sha256": "dd7d9b51cae9da5810c54d183ff3be52e3ae411e27ee7a678d47e0908fcb8ee8",
+      "before": "fae891b5131e751d8ac3c75e3cad7a6a828d3c09e7e9d2a7b8a573acdb933c82",
+      "base_sha256": "fae891b5131e751d8ac3c75e3cad7a6a828d3c09e7e9d2a7b8a573acdb933c82",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYB4.png",
+      "delivered": "runtime/sprites/enemies/ORDYB4.png",
+      "sha256": "603805d9d689f981e31ab5c28429fa726e436d533e63853ad5f6333e49179805",
+      "before": "1d73a87dea5d8386d067653a84a5c8591aced89e6dc3830f231248af9c44c7ba",
+      "base_sha256": "1d73a87dea5d8386d067653a84a5c8591aced89e6dc3830f231248af9c44c7ba",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYB5.png",
+      "delivered": "runtime/sprites/enemies/ORDYB5.png",
+      "sha256": "7faf9d1d7b41336d716d8e7991f36b5f23164c81afa45f0f80a8c0a155a5c373",
+      "before": "ca38ec8c264c836529c89e50168304c67f15efa56d7b9fcd96a348760921edde",
+      "base_sha256": "ca38ec8c264c836529c89e50168304c67f15efa56d7b9fcd96a348760921edde",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYB6.png",
+      "delivered": "runtime/sprites/enemies/ORDYB6.png",
+      "sha256": "0d1fb77afea56472330d301fb945a83ca1d272f20dfe9d4628804f07dbd18cfd",
+      "before": "bdc4e9220797097d0ae77b48e471273792da6910bc93b6e1d85c16f38b76deb7",
+      "base_sha256": "bdc4e9220797097d0ae77b48e471273792da6910bc93b6e1d85c16f38b76deb7",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYB7.png",
+      "delivered": "runtime/sprites/enemies/ORDYB7.png",
+      "sha256": "a2bf3b89d9463ed181f97df2262e33757005f7f8a68e6d95d17d4391fd021d59",
+      "before": "21b4b8eeb4164b5c7cf4b3445997c92a60637faca5983d15bae41f539992d6dc",
+      "base_sha256": "21b4b8eeb4164b5c7cf4b3445997c92a60637faca5983d15bae41f539992d6dc",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYB8.png",
+      "delivered": "runtime/sprites/enemies/ORDYB8.png",
+      "sha256": "03f13bc57597bc5c7e810461ba669f3ad86ad69c892e813ed2c17405db7b0473",
+      "before": "2cb875a911a271274424f04064b078227cd4d762217ba91ed790e7224df20a02",
+      "base_sha256": "2cb875a911a271274424f04064b078227cd4d762217ba91ed790e7224df20a02",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYC1.png",
+      "delivered": "runtime/sprites/enemies/ORDYC1.png",
+      "sha256": "8eb80913f357dae9e510fcb2cd51abfaeb0da9115796a839f1ce5b8502b6edc7",
+      "before": "0e93baa82d27027ec1710affd69ebc5a91de6ef7744745eaa151a12ae11063a4",
+      "base_sha256": "0e93baa82d27027ec1710affd69ebc5a91de6ef7744745eaa151a12ae11063a4",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYC2.png",
+      "delivered": "runtime/sprites/enemies/ORDYC2.png",
+      "sha256": "10848bbecc3fe282dd3c43ab951133d7c348a30f29cbf0c04359527b816f8f89",
+      "before": "597d34dfe0d72e807b8a1cf902d9fe45b6f911b865a4f1d7d3dfa02c50c1cacc",
+      "base_sha256": "597d34dfe0d72e807b8a1cf902d9fe45b6f911b865a4f1d7d3dfa02c50c1cacc",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYC3.png",
+      "delivered": "runtime/sprites/enemies/ORDYC3.png",
+      "sha256": "abe494c79253aeed18c58091164161109cce5ee319022fe2a812ac8c659dbfd0",
+      "before": "7d14c089c08d0eb23638e185f01a2ef2e7e87142a3b0e23b58f2427c2ec284c2",
+      "base_sha256": "7d14c089c08d0eb23638e185f01a2ef2e7e87142a3b0e23b58f2427c2ec284c2",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYC4.png",
+      "delivered": "runtime/sprites/enemies/ORDYC4.png",
+      "sha256": "f9f30d6578f0c77ce232851f42615b7fbe211a027ca7aa9fea901aafd4b5539c",
+      "before": "d67ed9b339aa427401143fe76065892fd16e213928e613c949f53666dcc9f6ff",
+      "base_sha256": "d67ed9b339aa427401143fe76065892fd16e213928e613c949f53666dcc9f6ff",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYC5.png",
+      "delivered": "runtime/sprites/enemies/ORDYC5.png",
+      "sha256": "7212ffc62b3403b4384f19973da8293e160386ac4ea6b4c4ae1502ab7a4a92af",
+      "before": "5f702dbd2ff3a73139c468cb01f4ec7b5eec3f7fbda4d6a48a0320d8660a4080",
+      "base_sha256": "5f702dbd2ff3a73139c468cb01f4ec7b5eec3f7fbda4d6a48a0320d8660a4080",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYC6.png",
+      "delivered": "runtime/sprites/enemies/ORDYC6.png",
+      "sha256": "0077089f3d3f860163ba71ca4dc6c273006ccdbc2ec65071d45374077a668e5e",
+      "before": "5afc7b477fe13e1c03185f945a1696f71c21b7abaa967d2f586c4b28d482d5c6",
+      "base_sha256": "5afc7b477fe13e1c03185f945a1696f71c21b7abaa967d2f586c4b28d482d5c6",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYC7.png",
+      "delivered": "runtime/sprites/enemies/ORDYC7.png",
+      "sha256": "b00553e26aee4800f978b29110f816c81ac4a19ec89485cabfe815e837977401",
+      "before": "be6d228782e17d6ff48e02bfa72f4bdbc1a661e01977804fa3cc924b132b2ab0",
+      "base_sha256": "be6d228782e17d6ff48e02bfa72f4bdbc1a661e01977804fa3cc924b132b2ab0",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYC8.png",
+      "delivered": "runtime/sprites/enemies/ORDYC8.png",
+      "sha256": "4307f1f694864795ae826e302a76263fbfea6986e8e27a0c461bcf547ff424b3",
+      "before": "44c510cd7e9fcdaa727f6ce896d276bc521bf48774da89a420bc19b42fea9049",
+      "base_sha256": "44c510cd7e9fcdaa727f6ce896d276bc521bf48774da89a420bc19b42fea9049",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYD1.png",
+      "delivered": "runtime/sprites/enemies/ORDYD1.png",
+      "sha256": "da1b4277ed789651b922fa8a52e9a361c931b4a32a9964d22e20f3effd8d2225",
+      "before": "1fd9f95ff310cbb5361d192a55762a41961b568df444fec161d3c9a58c13e1d1",
+      "base_sha256": "1fd9f95ff310cbb5361d192a55762a41961b568df444fec161d3c9a58c13e1d1",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYD2.png",
+      "delivered": "runtime/sprites/enemies/ORDYD2.png",
+      "sha256": "273abeebe91fc856da1ccc67ddda5e4627fcded36caf5eee93814b5f499f17ca",
+      "before": "2175e9dd12770d44dbad83fde7c52647bd68f7480422bfb24e3337e0e6839dea",
+      "base_sha256": "2175e9dd12770d44dbad83fde7c52647bd68f7480422bfb24e3337e0e6839dea",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYD3.png",
+      "delivered": "runtime/sprites/enemies/ORDYD3.png",
+      "sha256": "f17a98db7127e54dc1b5d8346d3abe526ece99a6378ae974295463c9f9fa92f9",
+      "before": "a8fa0e2292133aa9ba89b579630b689fd0988c6f27a62ef801efce43de75d403",
+      "base_sha256": "a8fa0e2292133aa9ba89b579630b689fd0988c6f27a62ef801efce43de75d403",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYD4.png",
+      "delivered": "runtime/sprites/enemies/ORDYD4.png",
+      "sha256": "2dca5f5dd79e5ff7a8f404e6afa0caf0eb9c01a8e70c5792f632b87085bdb148",
+      "before": "4cbe76b9421d7a97c34ee5a50961518d69957d8f48ccd586cb021a0ce519aa4a",
+      "base_sha256": "4cbe76b9421d7a97c34ee5a50961518d69957d8f48ccd586cb021a0ce519aa4a",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYD5.png",
+      "delivered": "runtime/sprites/enemies/ORDYD5.png",
+      "sha256": "fa8e2efb669c072b3b4c59b2be210230860d60e74bf93c4e53237648f8362f8a",
+      "before": "15c04479235493ac0ff46652823ce799c8e9dfc9e3de61e37a3a90ad88b7bb8b",
+      "base_sha256": "15c04479235493ac0ff46652823ce799c8e9dfc9e3de61e37a3a90ad88b7bb8b",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYD6.png",
+      "delivered": "runtime/sprites/enemies/ORDYD6.png",
+      "sha256": "b3c3b03b0a81574ec97bdef47a5926c96de5ef44be060ed942a41cf09508edc4",
+      "before": "f58b75c17765b2ae8c8dffb04bfa9291a6526266bfe258bc69c392e2f01d4d85",
+      "base_sha256": "f58b75c17765b2ae8c8dffb04bfa9291a6526266bfe258bc69c392e2f01d4d85",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYD7.png",
+      "delivered": "runtime/sprites/enemies/ORDYD7.png",
+      "sha256": "d4913624e382848ef3d103f0f482064d39a2b8939f93ee764b1263639e0f2939",
+      "before": "fea8a99a52c441422c9c14768867c94940b0052941ae46a2e53b908c02b011d3",
+      "base_sha256": "fea8a99a52c441422c9c14768867c94940b0052941ae46a2e53b908c02b011d3",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYD8.png",
+      "delivered": "runtime/sprites/enemies/ORDYD8.png",
+      "sha256": "8a8fa82ab8ffc1356337998f5c3982af780d2004643a2d7e8ca2e6e1e0d937ed",
+      "before": "6da4b6269880b1b52a0736878e4189c37aa1cd5e54c55bc5df2d933d8eaec05d",
+      "base_sha256": "6da4b6269880b1b52a0736878e4189c37aa1cd5e54c55bc5df2d933d8eaec05d",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE1.png",
+      "delivered": "runtime/sprites/enemies/ORDYE1.png",
+      "sha256": "4c70953caa44ed7639a8b347444d37a5178babeb88a65d7b3e9d7ad6c84dedfb",
+      "before": "df9d72703dccb16a304a0e0cd7ef244c0d1584dfd6d705048c1e4872e70b7256",
+      "base_sha256": "df9d72703dccb16a304a0e0cd7ef244c0d1584dfd6d705048c1e4872e70b7256",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE2.png",
+      "delivered": "runtime/sprites/enemies/ORDYE2.png",
+      "sha256": "5196dd8fb086a31aad6ade3fd625306d4af0e4235f9b6b6d9204f747be87642c",
+      "before": "b39aa55ce7bdcb87f0666efae3b47df49662a3d5a3aed4041af9d16ab23271d0",
+      "base_sha256": "b39aa55ce7bdcb87f0666efae3b47df49662a3d5a3aed4041af9d16ab23271d0",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE3.png",
+      "delivered": "runtime/sprites/enemies/ORDYE3.png",
+      "sha256": "463b44d1308ac1194c6e80d3a18a1d901a104497b3572139bd44256239e8ac2c",
+      "before": "d50a5c9acbcd05a73f60107f0f1f57b524db96f2435a7fbd98a8759013a513a1",
+      "base_sha256": "d50a5c9acbcd05a73f60107f0f1f57b524db96f2435a7fbd98a8759013a513a1",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE4.png",
+      "delivered": "runtime/sprites/enemies/ORDYE4.png",
+      "sha256": "b8cc9ab4d92eb9f7e698c7d755eafcd341fa5c80a32eafab67ac50bec14d2fd5",
+      "before": "d5dc3c19ecf8c6afe12210033dd6767ca0fc5fdb61f0f6b7a2ba14e5012f7637",
+      "base_sha256": "d5dc3c19ecf8c6afe12210033dd6767ca0fc5fdb61f0f6b7a2ba14e5012f7637",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE5.png",
+      "delivered": "runtime/sprites/enemies/ORDYE5.png",
+      "sha256": "e32372a54b55e9bbfadad2a8e8772e8e6c2c01756acc67aa36d25585f881c940",
+      "before": "0ed0f93b60c2f11ac58bdcb574f25e15793ee93b9c59358e0fddd02b3b50ed71",
+      "base_sha256": "0ed0f93b60c2f11ac58bdcb574f25e15793ee93b9c59358e0fddd02b3b50ed71",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE6.png",
+      "delivered": "runtime/sprites/enemies/ORDYE6.png",
+      "sha256": "0aceae3cd5cf2b80fe65103d8d95c9f477a9461f48b4188df2e4695e22f50d49",
+      "before": "3788762fff28a1f5aaf4eef32ff17723e738384daa186537fd47280e4009e43d",
+      "base_sha256": "3788762fff28a1f5aaf4eef32ff17723e738384daa186537fd47280e4009e43d",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE7.png",
+      "delivered": "runtime/sprites/enemies/ORDYE7.png",
+      "sha256": "b44b03c5f453483b2542109d0edf3af9d994fa28c18f6941c3168cc39b32ff7d",
+      "before": "685e5cf1d32bcfb004f9289185a549eb94ffb181c18f0861bfff1589450c6adf",
+      "base_sha256": "685e5cf1d32bcfb004f9289185a549eb94ffb181c18f0861bfff1589450c6adf",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE8.png",
+      "delivered": "runtime/sprites/enemies/ORDYE8.png",
+      "sha256": "944f3ad397001f325be085e1f095d3682d72a2a90611a424bfbea2928ea3ee24",
+      "before": "ade2da3902ae4fdeb1fe425c6a13b8973e004336705d6391287a340afd341962",
+      "base_sha256": "ade2da3902ae4fdeb1fe425c6a13b8973e004336705d6391287a340afd341962",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYF1.png",
+      "delivered": "runtime/sprites/enemies/ORDYF1.png",
+      "sha256": "3513a1cce78c4978cd3e5af35dd951dd250e49e13df0cbd7f9cb43997e402f14",
+      "before": "b113b1912bb77731ae974197eb5f8afbb7049e39bbb24828dc9655add7c8bc52",
+      "base_sha256": "b113b1912bb77731ae974197eb5f8afbb7049e39bbb24828dc9655add7c8bc52",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYF2.png",
+      "delivered": "runtime/sprites/enemies/ORDYF2.png",
+      "sha256": "7dce0670431dce6314c1a7dbf8a61dc31aaa809204249fd353b5e9c325088372",
+      "before": "5e2acb34c27eb418bc65f80053027d8b209c1cd92312037a580d610ae849319a",
+      "base_sha256": "5e2acb34c27eb418bc65f80053027d8b209c1cd92312037a580d610ae849319a",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYF3.png",
+      "delivered": "runtime/sprites/enemies/ORDYF3.png",
+      "sha256": "0ec8d668c946c555457dedac27b9f54911a50d65947131ac90d51bfbfd3199db",
+      "before": "aa9607b88893f044c8e7074dd43ffa4488c0bd45cce3be7dbf52afed454879bb",
+      "base_sha256": "aa9607b88893f044c8e7074dd43ffa4488c0bd45cce3be7dbf52afed454879bb",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYF4.png",
+      "delivered": "runtime/sprites/enemies/ORDYF4.png",
+      "sha256": "0d7fd76c29476b17b871f50aa0a0f534d1ad03fb9a99d99337cc3c0da048be82",
+      "before": "2706f63ec9f222db665641b7f7fc22b31efc7e5a62372ceacb1f852c97ddb47a",
+      "base_sha256": "2706f63ec9f222db665641b7f7fc22b31efc7e5a62372ceacb1f852c97ddb47a",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYF5.png",
+      "delivered": "runtime/sprites/enemies/ORDYF5.png",
+      "sha256": "d049ad27398bc90ba6e99ed606b3a411b67bc05f311d2e0a48af27cdd0d423d4",
+      "before": "730db9babac486c19aed16257afe274df7a6dcd08c1318ad3663adf350ee10b0",
+      "base_sha256": "730db9babac486c19aed16257afe274df7a6dcd08c1318ad3663adf350ee10b0",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYF6.png",
+      "delivered": "runtime/sprites/enemies/ORDYF6.png",
+      "sha256": "bd0f4f4009f82b538a352a34e2e7425e0f1e0c167afddd157018b622499109f7",
+      "before": "e00d4b2919a3a4b9b396b1eeef390bd3f60ccfc689de2333b4920dd992df9323",
+      "base_sha256": "e00d4b2919a3a4b9b396b1eeef390bd3f60ccfc689de2333b4920dd992df9323",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYF7.png",
+      "delivered": "runtime/sprites/enemies/ORDYF7.png",
+      "sha256": "061eec551de18ed08f6d318e2ec007594754a15205c4c888b3cf6160fae8e471",
+      "before": "d78757d356fb6340f1932b443198174a350a1af0303feef19dbc8796b402b356",
+      "base_sha256": "d78757d356fb6340f1932b443198174a350a1af0303feef19dbc8796b402b356",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYF8.png",
+      "delivered": "runtime/sprites/enemies/ORDYF8.png",
+      "sha256": "6be090b8ac73b59cb52ab3811c78f92b63cc56cb77999fac3448c463a58b8df3",
+      "before": "8fd6801662530e68e534618f3b865aed594a303244cec77b106364200680a471",
+      "base_sha256": "8fd6801662530e68e534618f3b865aed594a303244cec77b106364200680a471",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYG1.png",
+      "delivered": "runtime/sprites/enemies/ORDYG1.png",
+      "sha256": "3f092c484b5c3ec12dbe91badffa694e6c6c8cab47b4b8f17ed00b066c002c2c",
+      "before": "3a88fdcb9f02ad07eba7aa86a620daf68f5456bce3dafe73bee8dc58a6b88cf6",
+      "base_sha256": "3a88fdcb9f02ad07eba7aa86a620daf68f5456bce3dafe73bee8dc58a6b88cf6",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYG2.png",
+      "delivered": "runtime/sprites/enemies/ORDYG2.png",
+      "sha256": "f21dd288cd9dc0735e48ad0a8acfcdd59685dec3ff51fe7cd352d169f7508b12",
+      "before": "56388ba0711c22a76951e750b06ab0523945b4438b2ddb417504a4cc1e727d36",
+      "base_sha256": "56388ba0711c22a76951e750b06ab0523945b4438b2ddb417504a4cc1e727d36",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYG3.png",
+      "delivered": "runtime/sprites/enemies/ORDYG3.png",
+      "sha256": "b21efc980f9836f0cf89acb944ad81f2760447e5e5222819e1804862fb4ced8b",
+      "before": "512da9f93abdfb61f6e1cbab2c5fc5be0ddff68a334df490ffcffa96b2ffb7ed",
+      "base_sha256": "512da9f93abdfb61f6e1cbab2c5fc5be0ddff68a334df490ffcffa96b2ffb7ed",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYG4.png",
+      "delivered": "runtime/sprites/enemies/ORDYG4.png",
+      "sha256": "328e9741d6910f7dce966103a49cc1c22fd9118acfc66b4d9754c9dbd072ec69",
+      "before": "b007fb64c2f6f5132b579daf300fd155b9086b5bb2c5bb2f31a7d4e2e6afb97a",
+      "base_sha256": "b007fb64c2f6f5132b579daf300fd155b9086b5bb2c5bb2f31a7d4e2e6afb97a",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYG5.png",
+      "delivered": "runtime/sprites/enemies/ORDYG5.png",
+      "sha256": "37cc149d4dc2b2342bebff90662e71607cd3ddf8d63e324aded07b9351347969",
+      "before": "3ba9a81bef2e685292e716ef2798aba97e3d10b9cabfc1e5de678a8750147613",
+      "base_sha256": "3ba9a81bef2e685292e716ef2798aba97e3d10b9cabfc1e5de678a8750147613",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYG6.png",
+      "delivered": "runtime/sprites/enemies/ORDYG6.png",
+      "sha256": "1a97b6054d3cbf15719964766c26efd6349334c128f8a5253504e9f71fba39c6",
+      "before": "89e8033b174052605d41b375e865dac9456984d7ace3cf16c7e964f46ec6ff83",
+      "base_sha256": "89e8033b174052605d41b375e865dac9456984d7ace3cf16c7e964f46ec6ff83",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYG7.png",
+      "delivered": "runtime/sprites/enemies/ORDYG7.png",
+      "sha256": "1082f8cd7cbccd9850b90fbc8c038e1c7acfcb17de274b86dc27a873e3889b76",
+      "before": "dd5f2f363b1df2f615cc6d41e86b7c725b80dc6e079b05b460e30b1088b11d7d",
+      "base_sha256": "dd5f2f363b1df2f615cc6d41e86b7c725b80dc6e079b05b460e30b1088b11d7d",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYG8.png",
+      "delivered": "runtime/sprites/enemies/ORDYG8.png",
+      "sha256": "4ffdbc89baa03b4ff33fcacd691ebb018f6ee515bf4810ea7a02038be93f29ed",
+      "before": "be27b1b181d03d71e33bd2d9b1e8f24cdbe3ecb8b7cada2c21a5dd9308048019",
+      "base_sha256": "be27b1b181d03d71e33bd2d9b1e8f24cdbe3ecb8b7cada2c21a5dd9308048019",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYH1.png",
+      "delivered": "runtime/sprites/enemies/ORDYH1.png",
+      "sha256": "99601e9f6cdb95f8c7eb1b573cb1aa12259dc42da1c438723bdf05aed712f16e",
+      "before": "a6753d77dab32aa0733e313e84e0f2160891102cbc3ee0100de4fb20aeae3e6d",
+      "base_sha256": "a6753d77dab32aa0733e313e84e0f2160891102cbc3ee0100de4fb20aeae3e6d",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYH2.png",
+      "delivered": "runtime/sprites/enemies/ORDYH2.png",
+      "sha256": "b6302d44ef3f95a1c24c00c83092d3334ba7b97f3d3525b661bf9ae0b37447cf",
+      "before": "a234ab95c052ba111d347d76449868c7f466cdbb7d8cb516a83ba5558fcc149d",
+      "base_sha256": "a234ab95c052ba111d347d76449868c7f466cdbb7d8cb516a83ba5558fcc149d",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYH3.png",
+      "delivered": "runtime/sprites/enemies/ORDYH3.png",
+      "sha256": "62942f9d1fac63750360c3f19cf28b0a8fc9a00d6f5c276ef4527b95e529f47b",
+      "before": "86ca92dd204f7bf30f9bd52e3edcd6fa8f999393ae2949edcbad1eac5fc0ce5c",
+      "base_sha256": "86ca92dd204f7bf30f9bd52e3edcd6fa8f999393ae2949edcbad1eac5fc0ce5c",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYH4.png",
+      "delivered": "runtime/sprites/enemies/ORDYH4.png",
+      "sha256": "24e4171faebebeab4417633469484f7c9e1e272c6cd93efecb337119f5a0d37c",
+      "before": "621a36fcb2ee1f545955e72d5280773a0ac365bbd05b1c69e03463d041de1c1d",
+      "base_sha256": "621a36fcb2ee1f545955e72d5280773a0ac365bbd05b1c69e03463d041de1c1d",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYH5.png",
+      "delivered": "runtime/sprites/enemies/ORDYH5.png",
+      "sha256": "7dc1585d5bcc1361b06abe192e6794be30ac4d34221b9cfbd89829e0272bc1d8",
+      "before": "0bb7f903c0b99c5eeec6b75b7b2e3e17bb9dab8ea10a60f22501ae07e7505a3e",
+      "base_sha256": "0bb7f903c0b99c5eeec6b75b7b2e3e17bb9dab8ea10a60f22501ae07e7505a3e",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYH6.png",
+      "delivered": "runtime/sprites/enemies/ORDYH6.png",
+      "sha256": "2f720e0fb3adf884332c9f4f0700295c368d29fb866bd3b3f457a8906a5087d6",
+      "before": "7640d3b2bdc965beb24ee4800de361b12b62c84d0a312a9e567c496eb2436fcf",
+      "base_sha256": "7640d3b2bdc965beb24ee4800de361b12b62c84d0a312a9e567c496eb2436fcf",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYH7.png",
+      "delivered": "runtime/sprites/enemies/ORDYH7.png",
+      "sha256": "9e301e162c4bab62971e0e260b672cc1105503343012a6896bde5881994cabf6",
+      "before": "234c23c152f3e6a85bcc5a7cf4db2d3561753e8d8522752a879833aace3254c8",
+      "base_sha256": "234c23c152f3e6a85bcc5a7cf4db2d3561753e8d8522752a879833aace3254c8",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYH8.png",
+      "delivered": "runtime/sprites/enemies/ORDYH8.png",
+      "sha256": "868c0e8654f3b0d5111aabe69d49de81f95095f092fd002f5f463e694535c1e7",
+      "before": "1ebf047a5429dbdc71211282723a5ca254d7bfa233311b30787f74c5d405fcea",
+      "base_sha256": "1ebf047a5429dbdc71211282723a5ca254d7bfa233311b30787f74c5d405fcea",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYI1.png",
+      "delivered": "runtime/sprites/enemies/ORDYI1.png",
+      "sha256": "a944f150b8a60652058e69c9b206c5ae55f0a315cb9da4e5bab9f5722dc64467",
+      "before": "45bfadbab0f252e1e6f0090dc579cd3668e93267fe0cd5513cf93ec1aa4bed15",
+      "base_sha256": "45bfadbab0f252e1e6f0090dc579cd3668e93267fe0cd5513cf93ec1aa4bed15",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYI2.png",
+      "delivered": "runtime/sprites/enemies/ORDYI2.png",
+      "sha256": "c52fb610640d1032cbea278daef8285e9d24dbba0ced8d4ab39d216c272d4cf1",
+      "before": "406ab39e38cd4a8f9f9f6fa58201f6613af60617e5a33e52375ceef5abcba5c5",
+      "base_sha256": "406ab39e38cd4a8f9f9f6fa58201f6613af60617e5a33e52375ceef5abcba5c5",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYI3.png",
+      "delivered": "runtime/sprites/enemies/ORDYI3.png",
+      "sha256": "1188d10e28fef82008807265a719376fde8ff7e32ee11cb2632ed36f7bb7a240",
+      "before": "6a7d1a092500cb5b2dd3885489932adbcaac9d70d69a700a962f33f973b39700",
+      "base_sha256": "6a7d1a092500cb5b2dd3885489932adbcaac9d70d69a700a962f33f973b39700",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYI4.png",
+      "delivered": "runtime/sprites/enemies/ORDYI4.png",
+      "sha256": "8a3f16ec724a4402bff82a0b2490baad2c501bb5a89c72df6b645c195ead0254",
+      "before": "2a63fa3aae819060a0b3ac3301e289283f2548f40c3ccc1ecaf05577fd60f1f3",
+      "base_sha256": "2a63fa3aae819060a0b3ac3301e289283f2548f40c3ccc1ecaf05577fd60f1f3",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYI5.png",
+      "delivered": "runtime/sprites/enemies/ORDYI5.png",
+      "sha256": "82fbe683fa19b32f9edbf5ebf463215a74a99354c987eeed0618c00e3e68b891",
+      "before": "93ff8332229095e3bdef4b96705a449a87e823e3158d607651c1d83fad94b75d",
+      "base_sha256": "93ff8332229095e3bdef4b96705a449a87e823e3158d607651c1d83fad94b75d",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYI6.png",
+      "delivered": "runtime/sprites/enemies/ORDYI6.png",
+      "sha256": "352a55e1865927e3fe5dc9776712b4d4a41207e0a23f252413c371639201f338",
+      "before": "55f8b34b83c149053530f8c0c5a79605802a989d33fe16fb36674cfb43936573",
+      "base_sha256": "55f8b34b83c149053530f8c0c5a79605802a989d33fe16fb36674cfb43936573",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYI7.png",
+      "delivered": "runtime/sprites/enemies/ORDYI7.png",
+      "sha256": "05c2c13e7d762686f138ff02db193cb06ef8aa8cae807d8314fb12f0521880f2",
+      "before": "496507c261086dde4a71097ba42e2d355a23cefcd98d910b0dc38e236ae6d9de",
+      "base_sha256": "496507c261086dde4a71097ba42e2d355a23cefcd98d910b0dc38e236ae6d9de",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYI8.png",
+      "delivered": "runtime/sprites/enemies/ORDYI8.png",
+      "sha256": "257ec21a21de120752c53cdc4f41d0691175961fb59e8b91f26b1b247348f8e5",
+      "before": "d7a2fad218be4f8861bb01a738d09c4d06eeb05808e79a234c224f314aedb108",
+      "base_sha256": "d7a2fad218be4f8861bb01a738d09c4d06eeb05808e79a234c224f314aedb108",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYJ1.png",
+      "delivered": "runtime/sprites/enemies/ORDYJ1.png",
+      "sha256": "ca7c507da75d7ba22135c249d0226babb899e0705f839e66605300e28ba74c5d",
+      "before": "58e29e4c50b59011ab084ae353cf6f001dbd6b85efbe1d158e6fef1ec41e9bcb",
+      "base_sha256": "58e29e4c50b59011ab084ae353cf6f001dbd6b85efbe1d158e6fef1ec41e9bcb",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYJ2.png",
+      "delivered": "runtime/sprites/enemies/ORDYJ2.png",
+      "sha256": "a27c2259535df5454ed100350e442a41ebba0c67323e4a989291351534da7e1d",
+      "before": "6dbc6bc74e5fe2350c09759abc2a615d0efbd057aa0b6ccfe69f64d5064be009",
+      "base_sha256": "6dbc6bc74e5fe2350c09759abc2a615d0efbd057aa0b6ccfe69f64d5064be009",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYJ3.png",
+      "delivered": "runtime/sprites/enemies/ORDYJ3.png",
+      "sha256": "89fd3f802e208a9a12d22b1824a59178b05a37230f77febeb3874f694a22564c",
+      "before": "d422c9941ec8093cce45965eee620e19dc9c3f773141dd23773ffcc849fe1a68",
+      "base_sha256": "d422c9941ec8093cce45965eee620e19dc9c3f773141dd23773ffcc849fe1a68",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYJ4.png",
+      "delivered": "runtime/sprites/enemies/ORDYJ4.png",
+      "sha256": "f0940f6314df88958583716c64f4fb98cf5398146e098f1fcffc156025361f7f",
+      "before": "91d09e250df981fb8f742e4b9aef148963c4f1a194a96ec4ca1072d89167a751",
+      "base_sha256": "91d09e250df981fb8f742e4b9aef148963c4f1a194a96ec4ca1072d89167a751",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYJ5.png",
+      "delivered": "runtime/sprites/enemies/ORDYJ5.png",
+      "sha256": "07e5996ae1be8dc5def6123b01ddf6c0a240bd2ad6184dd3a1ccd2446cf1772a",
+      "before": "0f5d5c8d3f97fc79b47e011295d35e705d5fdcd02f625f919382ba4e9712f892",
+      "base_sha256": "0f5d5c8d3f97fc79b47e011295d35e705d5fdcd02f625f919382ba4e9712f892",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYJ6.png",
+      "delivered": "runtime/sprites/enemies/ORDYJ6.png",
+      "sha256": "882a22ea54a5e88250262ab84dc1e585d6e74fa3f8b1df70e6222166ec88602f",
+      "before": "2fef25b7ba36b956ae28a3b3b4f09b82f7b75e16790ba3389f34b2d3450cf793",
+      "base_sha256": "2fef25b7ba36b956ae28a3b3b4f09b82f7b75e16790ba3389f34b2d3450cf793",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYJ7.png",
+      "delivered": "runtime/sprites/enemies/ORDYJ7.png",
+      "sha256": "e21a5d1d116c549c0918bc40747e72830c344d2283c2668f56356c40e705b1f2",
+      "before": "366f1762e7b3ab4d581fa55a1f0ffe7385e9e90f06a067432c3958e9dbb88843",
+      "base_sha256": "366f1762e7b3ab4d581fa55a1f0ffe7385e9e90f06a067432c3958e9dbb88843",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYJ8.png",
+      "delivered": "runtime/sprites/enemies/ORDYJ8.png",
+      "sha256": "05b91c67621b5a22f457934629816082f9d0e832388ad5bcb83396bbb5e94b54",
+      "before": "426c6319d9e934dd9ff4ef9fbc974d2029ea09f2986d50b281a95007cefab54a",
+      "base_sha256": "426c6319d9e934dd9ff4ef9fbc974d2029ea09f2986d50b281a95007cefab54a",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYK1.png",
+      "delivered": "runtime/sprites/enemies/ORDYK1.png",
+      "sha256": "b423400cb59c40baeb6802d960820308823aff8bfe96da9179cb48ff6d988e72",
+      "before": "0aa5454f2b665d294060e3df45a69d77b47ce827f3c6759329fdfedb970399b3",
+      "base_sha256": "0aa5454f2b665d294060e3df45a69d77b47ce827f3c6759329fdfedb970399b3",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYK2.png",
+      "delivered": "runtime/sprites/enemies/ORDYK2.png",
+      "sha256": "664c0846acd91aa93985798ee20387e9084bfe3a2981c999429753845572959b",
+      "before": "af58956da6552fc27fd6980a698149d055a8b4eb58ed03275791a2185faace46",
+      "base_sha256": "af58956da6552fc27fd6980a698149d055a8b4eb58ed03275791a2185faace46",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYK3.png",
+      "delivered": "runtime/sprites/enemies/ORDYK3.png",
+      "sha256": "d9ac1a55508e67d1bf6c04697ed93d36b4d1ad3762a9c2c643400d1db5e4effc",
+      "before": "9775e1917fc7fc9e6a7dd0d76ef3f5efa686070cd0430d992d228b5241fdf2ad",
+      "base_sha256": "9775e1917fc7fc9e6a7dd0d76ef3f5efa686070cd0430d992d228b5241fdf2ad",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYK4.png",
+      "delivered": "runtime/sprites/enemies/ORDYK4.png",
+      "sha256": "aad07954e64a2b8748f82fad26c62d9999fa4c45bc06e79752164e657429c08b",
+      "before": "f7ca8fa92892917c57388247931fa67aa48ecb6c23a02a059c4cb6b28ef7c15a",
+      "base_sha256": "f7ca8fa92892917c57388247931fa67aa48ecb6c23a02a059c4cb6b28ef7c15a",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYK5.png",
+      "delivered": "runtime/sprites/enemies/ORDYK5.png",
+      "sha256": "93280eaae069aadf888d9da82be0a8f5d14f5676eed122f615b8c880b55b6ce2",
+      "before": "14a909b82a6b39483709cdacb78cf935bfecbf03c4334e4761493c3b551c56ec",
+      "base_sha256": "14a909b82a6b39483709cdacb78cf935bfecbf03c4334e4761493c3b551c56ec",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYK6.png",
+      "delivered": "runtime/sprites/enemies/ORDYK6.png",
+      "sha256": "ad4b9819dffca3d2ae34cc247bbee394eaa59c0a4ce5dd62758ad70bec5c2cf4",
+      "before": "aedd28a33e908e592b94d59457371aa40eb517dbac5f8809e6c98d66534f691a",
+      "base_sha256": "aedd28a33e908e592b94d59457371aa40eb517dbac5f8809e6c98d66534f691a",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYK7.png",
+      "delivered": "runtime/sprites/enemies/ORDYK7.png",
+      "sha256": "2b6648535e4ab80e8e8a9429fe5f1834b7bd152c6d62ace435cccbae4d047713",
+      "before": "18dfd8c894676e92a554bc9ebb7f8e30dc60c9263038e6b8381eab37a8eda0f1",
+      "base_sha256": "18dfd8c894676e92a554bc9ebb7f8e30dc60c9263038e6b8381eab37a8eda0f1",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYK8.png",
+      "delivered": "runtime/sprites/enemies/ORDYK8.png",
+      "sha256": "4fc0ee8374fd3a7da67bed5b46ed99332eeda7acddefa5eb23e2ec117d5db90e",
+      "before": "e2f8b79255cde5e2aa12284a426dd72360890f06d71fea5f04e5f700d6373938",
+      "base_sha256": "e2f8b79255cde5e2aa12284a426dd72360890f06d71fea5f04e5f700d6373938",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYL1.png",
+      "delivered": "runtime/sprites/enemies/ORDYL1.png",
+      "sha256": "c35a0228a8da1478c4874b82fb04cf8e8a817a71b3a90c71a5ab8b0253c019eb",
+      "before": "3333688bc2977cdebd173c0abb124b61323515876f786e8271ab619aa07bd7ec",
+      "base_sha256": "3333688bc2977cdebd173c0abb124b61323515876f786e8271ab619aa07bd7ec",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYL2.png",
+      "delivered": "runtime/sprites/enemies/ORDYL2.png",
+      "sha256": "39048e012df342dffa821274530a31046b31b2280cc4797e4bea6dde6daac3a4",
+      "before": "ad8ec0a32a94236eb8fac9a88a175d4bd89a3f78d62754588bd18cb6a1344076",
+      "base_sha256": "ad8ec0a32a94236eb8fac9a88a175d4bd89a3f78d62754588bd18cb6a1344076",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYL3.png",
+      "delivered": "runtime/sprites/enemies/ORDYL3.png",
+      "sha256": "2f4a730d804716d66309bc60c32eef29981f30d485e73742625abd5a726de148",
+      "before": "6c47b5f8798d991e1bc17569260e712a1f023212ff0ed9bee997a6b9484d1e4c",
+      "base_sha256": "6c47b5f8798d991e1bc17569260e712a1f023212ff0ed9bee997a6b9484d1e4c",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYL4.png",
+      "delivered": "runtime/sprites/enemies/ORDYL4.png",
+      "sha256": "b6789aaf3127317e5df72e065ed06dbce86893ac48bee8d11b5eb23b6bce12f4",
+      "before": "573c4c2f4e824ff4264fa6a0d6eebb9c920177f2db7ea8b22a81fbdf96694e8f",
+      "base_sha256": "573c4c2f4e824ff4264fa6a0d6eebb9c920177f2db7ea8b22a81fbdf96694e8f",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYL5.png",
+      "delivered": "runtime/sprites/enemies/ORDYL5.png",
+      "sha256": "fecd8f568614e88734ce866fd43238535b3bcb207da15b35bbe2ca7190be003b",
+      "before": "a34c55a0924a2669964180049d5c8594c3470600c1e38eba44aeee30bae12b5c",
+      "base_sha256": "a34c55a0924a2669964180049d5c8594c3470600c1e38eba44aeee30bae12b5c",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYL6.png",
+      "delivered": "runtime/sprites/enemies/ORDYL6.png",
+      "sha256": "2c485648d8a82a48e3044b64eeb89d41a60a3e09b902a88f4b5e0569ef00756c",
+      "before": "2d8c1ce78f02409169330be49ce8e5a54e6b515e01a96d0cc37deaa544faeaec",
+      "base_sha256": "2d8c1ce78f02409169330be49ce8e5a54e6b515e01a96d0cc37deaa544faeaec",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYL7.png",
+      "delivered": "runtime/sprites/enemies/ORDYL7.png",
+      "sha256": "3ac0aa9e6b76136b0393bbeb261a6aff0a5dab40010fdc15658ad41778833916",
+      "before": "ad0cf176744e09f98b0c079b3b23e20520fcc4b27be3b2793eddeee281e441f3",
+      "base_sha256": "ad0cf176744e09f98b0c079b3b23e20520fcc4b27be3b2793eddeee281e441f3",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYL8.png",
+      "delivered": "runtime/sprites/enemies/ORDYL8.png",
+      "sha256": "c0702eab055d2a725d38d18b784214aba99ba7df8e2213c6b20de6af0554e253",
+      "before": "5505dfdf5c651ccede9eddfb1f4d2ab852f995ae42b724dbc7a95b96ff78ed45",
+      "base_sha256": "5505dfdf5c651ccede9eddfb1f4d2ab852f995ae42b724dbc7a95b96ff78ed45",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYM1.png",
+      "delivered": "runtime/sprites/enemies/ORDYM1.png",
+      "sha256": "cb09ea90e7f02f349fc5bdc6cb9831a54fcd5b239076d18bace5c4c8ad6e694f",
+      "before": "bb09258cdf11aa4126ff219e1299f9eb159f7b24f0ff0047ca9e2b9fe453edb4",
+      "base_sha256": "bb09258cdf11aa4126ff219e1299f9eb159f7b24f0ff0047ca9e2b9fe453edb4",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYM2.png",
+      "delivered": "runtime/sprites/enemies/ORDYM2.png",
+      "sha256": "a45c380d7dd25929870880608a9c6cc02dcba8823185373cbe176f805f59cb34",
+      "before": "f74486001487e41c9e85975ad6d5b5b3360782a9c81597847492c9c186f9929c",
+      "base_sha256": "f74486001487e41c9e85975ad6d5b5b3360782a9c81597847492c9c186f9929c",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYM3.png",
+      "delivered": "runtime/sprites/enemies/ORDYM3.png",
+      "sha256": "024ddbb03e2c4665e40c718f2350e51dcfa835b73bfd456a21ed98f30a9a391d",
+      "before": "f896ad203b96c86e9dff4873ed995b8d2cb449128e1210801f1d69eefba127f0",
+      "base_sha256": "f896ad203b96c86e9dff4873ed995b8d2cb449128e1210801f1d69eefba127f0",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYM4.png",
+      "delivered": "runtime/sprites/enemies/ORDYM4.png",
+      "sha256": "d5106ad972b283b9d9893dcf44d43f82ec66a67a9cec3338ef952005e84300fd",
+      "before": "80698fe485abf84aa71bca9f7ab5102219d963d4ff14aecd6028dc6911705445",
+      "base_sha256": "80698fe485abf84aa71bca9f7ab5102219d963d4ff14aecd6028dc6911705445",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYM5.png",
+      "delivered": "runtime/sprites/enemies/ORDYM5.png",
+      "sha256": "a3455387eac499c230358af2d975bce9ce459e686586711ee2d530472c8b3128",
+      "before": "e59229559da06a4dbf8431f5ebcf147fe7de60f09a30c507a274d1c2c024db83",
+      "base_sha256": "e59229559da06a4dbf8431f5ebcf147fe7de60f09a30c507a274d1c2c024db83",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYM6.png",
+      "delivered": "runtime/sprites/enemies/ORDYM6.png",
+      "sha256": "11c82da7cc5a32b175cb302a9d65bae5d64ccb06174a5befc2feb527852bf3f1",
+      "before": "8d0e9d1040c99cd8f454f31e8e1c938051262a49a4610cd060c2cf79f443270f",
+      "base_sha256": "8d0e9d1040c99cd8f454f31e8e1c938051262a49a4610cd060c2cf79f443270f",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYM7.png",
+      "delivered": "runtime/sprites/enemies/ORDYM7.png",
+      "sha256": "8cdaa798aa9ad57c0581b41dfe926080ecac6c2a5585cfa8c354431fa4f7d747",
+      "before": "6c4ef643d401b55af0ce22e09bfd0dfc57fdedd2036d45f4117a8c24d349bee2",
+      "base_sha256": "6c4ef643d401b55af0ce22e09bfd0dfc57fdedd2036d45f4117a8c24d349bee2",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYM8.png",
+      "delivered": "runtime/sprites/enemies/ORDYM8.png",
+      "sha256": "4de84371214102b9d1468588d53aa25dbd0f79512ba3914ccc5c222fffedb9ca",
+      "before": "1694061c31d9ee9ac914b96fbba1481af358eb73de0fd93575f9a14e2343f572",
+      "base_sha256": "1694061c31d9ee9ac914b96fbba1481af358eb73de0fd93575f9a14e2343f572",
+      "state": "remplace_base_conforme",
+      "kind": "enemy_sprite",
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

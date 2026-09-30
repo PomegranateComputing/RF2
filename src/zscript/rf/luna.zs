@@ -9,6 +9,7 @@ class RFTimeCard : Inventory
     Default
     {
         Inventory.MaxAmount 1;
+        Inventory.Icon "RF4CART0";
         Tag "$RF_ITEM_CARD";
         +INVENTORY.UNDROPPABLE
     }
@@ -19,6 +20,7 @@ class RFTimeCardPunched : Inventory
     Default
     {
         Inventory.MaxAmount 1;
+        Inventory.Icon "RF4CART1";
         Tag "$RF_ITEM_CARD_0606";
         +INVENTORY.UNDROPPABLE
     }

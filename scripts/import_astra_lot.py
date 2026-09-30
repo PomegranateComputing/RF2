@@ -42,6 +42,11 @@ def main():
         if '..' in Path(e['target_relpath']).parts or Path(e['target_relpath']).is_absolute():
             refused.append((e['target_relpath'], 'destination hors de src/'))
             continue
+        # Maps, code and the definition lumps at the root of src/ (TEXTURES, MAPINFO...) are Opus's: a lot proposes
+        # them as text (TEXTURES.proposition.txt, patch/), never as a file to copy.
+        if e['target_relpath'].startswith(('maps/', 'zscript/')) or '/' not in e['target_relpath']:
+            refused.append((e['target_relpath'], 'carte, code ou definition : a reprendre a la main'))
+            continue
         got = sha256(src_file) if src_file.is_file() else None
         if got is None or (e.get('sha256') and got != e['sha256']):
             refused.append((e['file'], f'fichier livre absent ou different du manifeste ({got})'))
