@@ -5,7 +5,7 @@ gameinfo
 {
     PlayerClasses = "RFPlayer"
     StatusBarClass = "RFStatusBar"
-    AddEventHandlers = "RFDirector", "RFParis", "RFDevHandler"
+    AddEventHandlers = "RFDirector", "RFParis", "RFLuna", "RFMachines", "RFCorridor", "RFDevHandler"
     TitlePage = "TITLEPIC"
     TitleMusic = "RFAMB01"
     TitleTime = 3600
@@ -105,6 +105,24 @@ DoomEdNums
     30654 = RFTrack
     30655 = RFTrackHalf
     30656 = RFCrowbar
+    30660 = RFLunaClock
+    30661 = RFLunaKeyHook
+    30662 = RFLunaRail
+    30663 = RFLunaShoe
+    30664 = RFLunaTurnstile
+    30665 = RFLunaMirror
+    30666 = RFLunaJukebox
+    30667 = RFFigureGuard
+    30670 = RFSubDials
+    30671 = RFSubNode
+    30672 = RFSubLever
+    30673 = RFSubMotor
+    30674 = RFSubFuses
+    30675 = RFSubDrawer
+    30676 = RFSubToolbox
+    30677 = RFSubFuseBox
+    30678 = RFCoasterTrain
+    30679 = RFJukeboxPlaying
     30901 = RFTourPoint
     30902 = RFDevWaypoint
 }
@@ -141,12 +159,13 @@ map RF01 "Sainte-Anne - Les portes ouvertes"
     lightmode = 8
 }
 
-// RF02 (RF2-MAP-02): the walk of the novel from the boulevard Arago to the Porte Maillot. RF03 is still a V1
-// blockout: the chapter ends on the title screen until RF03 is produced (the blockout stays reachable by +map).
+// RF02 (RF2-MAP-02): the walk of the novel from the boulevard Arago to the Porte Maillot. It leads to the Luna Park,
+// RF04 (owner's decision of 27/09: the third narrative level keeps the technical ID RF04; RF03, Batignolles, stays a V1
+// blockout for its later place in the novel, reachable by +map).
 map RF02 "Paris - Rue de service"
 {
     levelnum = 2
-    next = "EndTitle"
+    next = "RF04"
     music = "RFAMB01"
     cluster = 1
     nointermission
@@ -154,9 +173,39 @@ map RF02 "Paris - Rue de service"
     sky1 = "RFSKY2", 0
 }
 map RF03 "Batignolles - Refus de reception" { levelnum = 3 next = "RF04" }
-map RF04 "Luna Park - Personnel technique" { levelnum = 4 next = "RF05" }
-map RF05 "Les machines continuent" { levelnum = 5 next = "RF06" }
-map RF06 "La sortie du personnel" { levelnum = 6 next = "RF07" }
+// RF04 (RF2 campaign, 30/09): the Luna Park, first passage (scripts/mapkit/rf04.py).
+map RF04 "Luna Park - Personnel technique"
+{
+    levelnum = 4
+    next = "RF05"
+    music = "RFAMB01"
+    cluster = 1
+    nointermission
+    lightmode = 8
+    sky1 = "RFSKY2", 0
+}
+// RF05 (RF2 campaign, 30/09): under the Luna Park, then the park lit again (scripts/mapkit/rf05.py).
+map RF05 "Les machines continuent"
+{
+    levelnum = 5
+    next = "RF06"
+    music = "RFAMB01"
+    cluster = 1
+    nointermission
+    lightmode = 8
+    sky1 = "RFSKY2", 0
+}
+// RF06 (RF2 campaign, 30/09): the corridor ERREUR Ø (scripts/mapkit/rf06.py), no combat. Ends on the title screen until
+// RF07, the Jerma, is produced.
+map RF06 "La sortie du personnel"
+{
+    levelnum = 6
+    next = "EndTitle"
+    music = "RFAMB01"
+    cluster = 1
+    nointermission
+    lightmode = 8
+}
 map RF07 "Jerma - Facade maritime" { levelnum = 7 next = "RF08" }
 map RF08 "Aile des chambres" { levelnum = 8 next = "RF09" }
 map RF09 "La piscine vide" { levelnum = 9 next = "RF10" }

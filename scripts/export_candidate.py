@@ -72,8 +72,9 @@ def main():
     ap.add_argument('--lot', required=True, help='lot id, e.g. UI-01, MAP-02, ART-02')
     ap.add_argument('--label', default='')
     ap.add_argument('--allow-dirty', action='store_true', help='export even with uncommitted changes (recorded)')
-    ap.add_argument('--direct', metavar='MAP', help='also write launchers that start this chapter directly '
-                    '(difficulty Service, the starting kit of the chapter), besides the ones that open the title')
+    ap.add_argument('--direct', metavar='MAP', action='append', default=[],
+                    help='also write launchers that start this chapter directly (difficulty Service, the starting kit of '
+                    'the chapter), besides the ones that open the title; repeatable (--direct RF02 --direct RF04)')
     a = ap.parse_args()
     if not re.fullmatch(r'[A-Z0-9][A-Z0-9_-]{1,24}', a.lot):
         print('lot: capitals, digits, dashes and underscores only')
@@ -106,8 +107,7 @@ def main():
         path.write_bytes(LAUNCHER.format(root_expr=root_expr, **common).replace('\n', '\r\n').encode('ascii'))
     write_cmd(ROOT / f'JOUER_RF2_{a.lot}.cmd', '%~dp0')
     write_cmd(folder / 'JOUER.cmd', '%~dp0..\\..\\..\\')
-    if a.direct:
-        m = a.direct.upper()
+    for m in [d.upper() for d in a.direct]:
         common.update(direct=f'-skill 2 +map {m} ', direct_note=f' - depart direct {m}')
         write_cmd(ROOT / f'JOUER_RF2_{a.lot}_{m}.cmd', '%~dp0')
         write_cmd(folder / f'JOUER_{m}.cmd', '%~dp0..\\..\\..\\')

@@ -204,3 +204,27 @@ $random rf/crowbar/wood      { rf/crowbar/wood1 rf/crowbar/wood2 rf/crowbar/wood
 rf/crowbar/wood1             "sounds/crowbar/hit_wood_01.wav"
 rf/crowbar/wood2             "sounds/crowbar/hit_wood_02.wav"
 rf/crowbar/wood3             "sounds/crowbar/hit_wood_03.wav"
+
+// RF04/RF05 - the Luna Park (scripts/mapkit/sounds_rf04.py): PROVISIONAL synthesis by Opus, never heard by a person;
+// Astra's S04-xx files (request LUNA-V01) replace them under the same names.
+rf/luna/park               "sounds/luna/park_loop.wav"
+rf/luna/motor              "sounds/luna/motor_loop.wav"
+rf/luna/clock              "sounds/luna/clock.wav"
+rf/luna/keys               "sounds/luna/keys.wav"
+rf/luna/turnstile          "sounds/luna/turnstile.wav"
+rf/luna/jukeboxkey         "sounds/luna/jukebox_key.wav"
+rf/luna/knocks             "sounds/luna/knocks.wav"
+rf/luna/lock               "sounds/luna/lock.wav"
+rf/luna/rail               "sounds/luna/rail.wav"
+rf/luna/tarp               "sounds/luna/tarp.wav"
+rf/luna/motorstop          "sounds/luna/motor_stop.wav"
+rf/luna/motorstart         "sounds/luna/motor_start.wav"
+rf/luna/waves              "sounds/luna/waves_loop.wav"
+rf/luna/bulbs              "sounds/luna/bulbs.wav"
+rf/luna/brake              "sounds/luna/brake.wav"
+rf/luna/fans               "sounds/luna/fans_loop.wav"
+rf/luna/vent               "sounds/luna/vent_loop.wav"
+rf/luna/rumble             "sounds/luna/rumble.wav"
+$volume rf/luna/park 0.5
+$volume rf/luna/motor 0.9
+$volume rf/luna/knocks 1.0

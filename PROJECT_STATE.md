@@ -17,9 +17,12 @@ Astra produces assets in its own worktree. Music later. Sans Destination stopped
 
 ## Campaign
 
-RF01 produced from `scripts/mapkit/rf01.py`. RF02 produced from `scripts/mapkit/rf02.py` (candidate RF2-MAP-02,
-owner review required; human figures pending from Astra). RF03-RF23: V1 blockouts until each is produced.
-Canon fidelity matrix: `docs/production/CANON_FIDELITE.md`.
+RF01 produced from `scripts/mapkit/rf01.py`. RF02 produced from `scripts/mapkit/rf02.py`. RF04, RF05, RF06 (the Luna
+Park, novel l. 451-731) produced on 30/09 from `rf04.py`, `rf05.py`, `rf06.py` with provisional resources
+(`docs/RF2_LUNA_PARK.md`). Chain: RF01 -> RF02 -> RF04 -> RF05 -> RF06 -> title screen until RF07 (Jerma). RF03
+(Batignolles) stays a V1 blockout for its later place in the novel (owner's decision of 27/09). RF07-RF23: V1
+blockouts until each is produced. Canon fidelity matrix: `docs/production/CANON_FIDELITE.md`. Everything newer than
+the accepted RF01 build waits for the owner's review.
 
 ## Gates (RF01)
 
@@ -35,6 +38,9 @@ Canon fidelity matrix: `docs/production/CANON_FIDELITE.md`.
 
 - `JOUER_RF2_ART_REVIEW.cmd` - accepted RF01 build (reference, never re-pointed)
 - `JOUER_RF2_<LOT>.cmd` - each new candidate (`scripts/export_candidate.py`)
+- `JOUER_RF2_CUMUL.cmd` - the cumulative candidate (every campaign correction kept); `JOUER_RF2_CUMUL_RF0x.cmd`
+  direct review starts
+- `JOUER_RF2_ARSENAL_ESSAI.cmd` - the weapon test bench, separate from the game
 - `JOUER_RF2_DEV.cmd` - rebuilds from `src/` and runs (development)
 
 Update this file briefly after each consolidated gate. Do not turn it into a diary.

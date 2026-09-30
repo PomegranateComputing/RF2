@@ -43,3 +43,21 @@ Lock 4 Doom
     RemoteMessage "$RF_LOCK_GALERIE"
     Mapcolor 160 40 40
 }
+
+// RF04: the door of the substation, behind the roller coaster (l. 551), opens with its key from the hut (l. 497).
+Lock 6 Doom
+{
+    RFSousStationKey
+    Message "$RF_LOCK_SOUSSTATION"
+    RemoteMessage "$RF_LOCK_SOUSSTATION"
+    Mapcolor 176 110 60
+}
+
+// RF04: the side door of the dance hall opens from inside the hall only (the shortcut opened by progression).
+Lock 7 Doom
+{
+    RFNoKey
+    Message "$RF_LOCK_FROMINSIDE"
+    RemoteMessage "$RF_LOCK_FROMINSIDE"
+    Mapcolor 160 40 40
+}

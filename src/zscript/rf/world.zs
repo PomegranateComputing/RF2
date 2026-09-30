@@ -4,7 +4,9 @@
 class RFLamp : PointLightAttenuated {}
 class RFLampFlicker : PointLightFlickerAttenuated {}
 
-// Looping ambience. args[0]: 0 hum, 1 wind, 2 drip, 3 room, 4 open street, 5 wireless sets (TSF shop).
+// Looping ambience. args[0]: 0 hum, 1 wind, 2 drip, 3 room, 4 open street, 5 wireless sets (TSF shop),
+// 6 the closed Luna Park, 7 the motor under the park (heard far: it is followed across the park, l. 529),
+// 9 waves, 10 the ventilation of a hotel (RF06).
 // args[1]: volume percent (default 60).
 class RFAmbientLoop : Actor
 {
@@ -26,8 +28,12 @@ class RFAmbientLoop : Actor
         else if (args[0] == 3) s = "rf/amb/room";
         else if (args[0] == 4) s = "rf/paris/street";
         else if (args[0] == 5) s = "rf/paris/tsf";
+        else if (args[0] == 6) s = "rf/luna/park";
+        else if (args[0] == 7) s = "rf/luna/motor";
+        else if (args[0] == 9) s = "rf/luna/waves";
+        else if (args[0] == 10) s = "rf/luna/vent";
         double volume = args[1] > 0 ? args[1] / 100.0 : 0.6;
-        A_StartSound(s, CHAN_BODY, CHANF_LOOP, volume, ATTN_STATIC);
+        A_StartSound(s, CHAN_BODY, CHANF_LOOP, volume, args[0] == 7 ? 0.45 : ATTN_STATIC);
     }
 
     States

@@ -38,8 +38,9 @@ Ordre courant du projet = ordre MAPINFO RF01–RF23 (titres V1 = repères histor
 |---|---|---|---|
 | Sainte-Anne, 14 juin 1940, 6 h 20 | 3–85 | RF01 (accepté) | |
 | Traversée de Paris : Arago, Santé, tramway, Denfert, Port-Royal, Cochin, Montparnasse, TSF rue de Rennes, librairie, pont, barrage de l'Assemblée, Champs-Élysées, porte Maillot | 87–457 | RF02 « Rue de service » (titre justifié l. 415–417) | en production |
-| Luna Park, premier passage : guérite, pointage 06:06, clés, décors, salle de danse, sous-station (NODE 0, levier MARCHE/ATTENTE/ARRÊT) | 451–689 | RF04 « Personnel technique », RF05 « Les machines continuent » | **avant** Batignolles dans le roman. Mandat du 27/09 soir : troisième niveau narratif = Luna Park, ID technique existant RF04 ; RF03 (Batignolles) conservé, placé plus tard |
-| Couloir ERREUR Ø vers le Jerma | 691–731 | transition | |
+| Luna Park, premier passage : chemin de service, guérite, pointage 06:06, clés, Brooklyn Bridge, Niagara, salle de danse | 451–551 | **RF04 « Personnel technique » (produite le 30/09)** | **avant** Batignolles dans le roman. Mandat du 27/09 soir : troisième niveau narratif = Luna Park, ID technique existant RF04 ; RF03 (Batignolles) conservé, placé plus tard. Mandat du 29/09 : son « RF03 » = cette carte (identifiants conservés, `maps/RF04_FICHE.md`) |
+| Sous-station (NODE 0, levier MARCHE/ATTENTE/ARRÊT), la jeune femme, la réparation, le parc rallumé, la salle de danse, la porte de service | 551–707 | **RF05 « Les machines continuent » (produite le 30/09)** | `maps/RF05_FICHE.md` ; la réparation répartie dans des annexes = adaptation déclarée |
+| Couloir ERREUR Ø vers le Jerma | 709–731 | RF06 « La sortie du personnel » (à produire) | la porte de service de la salle de danse = sortie du personnel ; voix et lampe du couloir non hostiles |
 | Jerma Palace, décembre 2022 : terrasse, chambre au matelas, escalier de service, cuisines et chambres froides, quai, piscine (escarpin), bureau ENGINEERING (disquette) | 733–1097 | RF07–RF12 | |
 | Malte, nuit des générations ; page StepRoom « M. & L. » | 1099–1451 | chapitre Jerma (local vidéo RF12 ?) | |
 | Hiver 2022-2023, ville non nommée : magasin et dépôt de Milan Kovac (lecture de l'Amiga) | 1453–2741 | aucun titre V1 (RF20 « Amiga de Milan » vient d'un autre passage) | à décider |
@@ -133,3 +134,8 @@ admissions. À faire après décision, en commit isolé, avec comparaison du WAD
 - 27/09 : matrice créée après lecture intégrale ; CAN-001 à CAN-004 : présence exigée, rien d'intégré.
 - 27/09 soir : RF02 construit ; CAN-002 (reflet de l'Amiga) et CAN-006 (trois occurrences) intégrés dans RF02 avec des
   images provisoires d'Opus ; CAN-001, CAN-003, CAN-004 relèvent de cartes non produites.
+- 30/09 : RF04 et RF05 produites (l. 451–707). Éléments : CAN-005 pointage 06:06 (objet porté `RFTimeCardPunched`), CAN-006 ERREUR Ø
+  sur la vitre de la guérite et sous la paume de la jeune femme, CAN-008 sous-station, levier et NODE 0 (actions de jeu),
+  CAN-003 en écho (chaussure d'enfant du Niagara, l. 523), CAN-004 : le couple du miroir de la salle de danse (texte seul,
+  visages hors champ, jamais identifié). La jeune femme et le gardien : textes et traces, figures demandées à Astra (F04-01,
+  F05-01). Aucune de ces figures n'est une cible.
