@@ -363,7 +363,7 @@ sign(1280, 256, 1152, 256, 'RF2_COCP', 212)
 m.thing(1216, 284, T_FIG_COCHIN, angle=90)                          # F02-06 in front of the gateway, the envelope held
 m.box(1024, -32, 1408, 240, YARD)
 block(1056, 64, 1184, 112, 96, 'RF2_ZINC', 'RF2_AMBU', YARD)
-block(1232, 128, 1360, 176, 96, 'RF2_ZINC', 'RF2_AMBU', YARD)
+block(1280, 128, 1408, 176, 96, 'RF2_ZINC', 'RF2_AMBU', YARD)   # 30/09: 48 u east; the brancardier (80 wide) was boxed in
 m.thing(1176, 226, T_CROWBAR, angle=20)                            # just inside the gateway, beside the nurse's line: seen from the boulevard
 m.thing(1300, 40, T_TROLLEY, angle=100)                            # a man on a stretcher (figure requested)
 m.thing(1060, 200, T_BENCH, angle=0)
@@ -378,7 +378,7 @@ m.thing(1400, 420, T_AMB, args=(4, 40))
 spot(1100, 20, BRA, 301, 45)
 spot(1300, 90, ORD, 301, 135)
 spot(1380, 60, ORD, 301, 135)
-spot(1120, 30, POR, 302, 60)
+spot(1340, 20, POR, 302, 90)             # 30/09: no longer inside the brancardier's box
 spot(1330, -10, ORD, 301, 90, skill='hard')
 wake(1352, 256, 1352, 576, 301, 2)
 wake(1224, 256, 1224, 576, 302)

@@ -6,8 +6,41 @@
 // also wakes it. A cued enemy goes straight for the player who triggered it.
 class RFEnemy : Actor
 {
-    Default { BloodType "RFArtBlood"; }
+    // DONTGIB: a door closing on a body leaves it as it lies (the engine's generic crush would turn it into the
+    // Freedoom gibs sprite).
+    Default { BloodType "RFArtBlood"; +DONTGIB; }
     bool awaitingCue;
+
+    // A blow needs a clear way to its target, not only a line of sight: sight passes through a window or over a
+    // railing (their lines block movement only), so an orderly could hit through the glass of a window whose
+    // sill is low. Any line that blocks walking between the two, one-sided or blocking, stops the blow.
+    bool ClearMeleePath(Actor victim)
+    {
+        if (victim == null) return false;
+        Vector2 a = Pos.XY, b = victim.Pos.XY;
+        let it = BlockLinesIterator.Create(self, Distance2D(victim) + radius + 8);
+        while (it.Next())
+        {
+            Line l = it.CurLine;
+            if (l.backsector != null && !(l.flags & (Line.ML_BLOCKING | Line.ML_BLOCKMONSTERS | Line.ML_BLOCKEVERYTHING)))
+                continue;
+            Vector2 r = b - a, q = l.v2.p - l.v1.p;
+            double den = r.X * q.Y - r.Y * q.X;
+            if (abs(den) < 1e-9) continue;
+            Vector2 w = l.v1.p - a;
+            double u = (w.X * q.Y - w.Y * q.X) / den, v = (w.X * r.Y - w.Y * r.X) / den;
+            if (u > 0 && u < 1 && v >= 0 && v <= 1) return false;
+        }
+        return true;
+    }
+
+    // The fall starts: the body is placed by the floor under its centre from now on (a wide box put it on the
+    // highest step it covered, then it dropped at the last frame when RFBody.Settle shrank it).
+    void BeginDeath()
+    {
+        Vel.X = Vel.Y = 0;
+        A_SetSize(4, -1);
+    }
 
     override void PostBeginPlay()
     {
@@ -95,7 +128,7 @@ class RFOrderly : RFEnemy
     {
         Health 60;
         Radius 18;
-        Height 60;
+        Height 54;                  // the figure stands 52.5 high (audit 30/09); 60 gave hits above the head
         Mass 110;
         Speed 9;
         PainChance 130;
@@ -124,7 +157,7 @@ class RFOrderly : RFEnemy
         if (target == null || target.health <= 0) return;
         Vector2 difference = target.Pos.XY - Pos.XY;
         double along = difference.X * cos(strikeAngle) + difference.Y * sin(strikeAngle);
-        if (along > difference.Length() * 0.65 && CheckMeleeRange() && CheckSight(target))
+        if (along > difference.Length() * 0.65 && CheckMeleeRange() && CheckSight(target) && ClearMeleePath(target))
             A_CustomMeleeAttack(random(8, 14), "rf/orderly/attack", "", "Melee");
     }
 
@@ -149,7 +182,7 @@ class RFOrderly : RFEnemy
         ORDY I 4 A_Pain;
         Goto See;
     Death:
-        ORDY J 6 { Vel.X = Vel.Y = 0; A_Scream(); }
+        ORDY J 6 { BeginDeath(); A_Scream(); }
         ORDY K 7 A_NoBlocking;
         ORDY L 8 A_StartSound("rf/world/body_fall", CHAN_BODY, 0, 0.65);
         ORDY M -1 { RFBody.Settle(self, -30.5, 33.3, -19.4, 23.2); }
@@ -188,13 +221,13 @@ class RFBrancardier : RFEnemy
     {
         Health 170;
         Radius 40;
-        Height 64;
+        Height 56;                  // the figure stands 52-54 high
         Mass 700;
         Speed 5;
         PainChance 40;
         MeleeRange 64;
         MinMissileChance 80;
-        MaxTargetRange 640;
+        MaxTargetRange 450;         // a charge covers 385 units and hits within 68 of its end: begun farther, it never lands
         Monster;
         +FLOORCLIP
         Scale 0.18;
@@ -234,7 +267,7 @@ class RFBrancardier : RFEnemy
         double along = difference.X * cos(chargeAngle) + difference.Y * sin(chargeAngle);
         double across = abs(-difference.X * sin(chargeAngle) + difference.Y * cos(chargeAngle));
         return along >= 0 && along <= radius + target.radius + 12
-            && across <= radius + target.radius - 8 && CheckMeleeRange();
+            && across <= radius + target.radius - 8 && CheckMeleeRange() && ClearMeleePath(target);
     }
 
     void ChargeStep()
@@ -294,7 +327,7 @@ class RFBrancardier : RFEnemy
         BRCD I 8 { BeginRecovery(); A_Pain(); }
         Goto See;
     Death:
-        BRCD J 7 { BeginRecovery(); A_Scream(); }
+        BRCD J 7 { BeginRecovery(); BeginDeath(); A_Scream(); }
         BRCD K 8 A_NoBlocking;
         BRCD L 10 A_StartSound("rf/world/body_fall", CHAN_BODY, 0, 0.8);
         BRCD M -1 { RFBody.Settle(self, -49.1, 33.3, -47.3, 13.7); }
@@ -340,7 +373,7 @@ class RFPorteRegistre : RFEnemy
     {
         Health 110;
         Radius 22;
-        Height 70;
+        Height 60;                  // the figure stands 58 high; the bundle still leaves at 48
         Mass 150;
         Speed 4;
         PainChance 90;
@@ -426,7 +459,7 @@ class RFPorteRegistre : RFEnemy
         PREG H 5 A_Pain;
         Goto See;
     Death:
-        PREG I 7 A_Scream;
+        PREG I 7 { BeginDeath(); A_Scream(); }
         PREG J 7 { A_NoBlocking(); A_StartSound("rf/world/body_fall", CHAN_BODY, 0, 0.65); }
         PREG K -1 { RFBody.Settle(self, -31.3, 37.9, -19.2, 23.6); }
         Stop;

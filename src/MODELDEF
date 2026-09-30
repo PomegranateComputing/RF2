@@ -73,12 +73,14 @@ Model RFPropLamp
 }
 
 // RF2-ART-01: only terminal death frames use a grounded static model.
+// 30/09: Scale 5 5 5 (was 5 5 6). CorrectPixelStretch already gives the model the proportions of the sprites
+// (drawn at 1/1.2 and stretched by 1.2); the extra 6 made each body 1.19 times taller than the sprite it replaces.
 Model RFOrderly
 {
     Path "models/rf2_art_01"
     Model 0 "orderly.obj"
     Skin 0 "orderly_skin.png"
-    Scale 5 5 6
+    Scale 5 5 5
     CorrectPixelStretch
     IgnoreTranslation
     USEACTORPITCH
@@ -90,7 +92,7 @@ Model RFOrderlyCorpse
     Path "models/rf2_art_01"
     Model 0 "orderly.obj"
     Skin 0 "orderly_skin.png"
-    Scale 5 5 6
+    Scale 5 5 5
     CorrectPixelStretch
     IgnoreTranslation
     USEACTORPITCH
@@ -103,7 +105,7 @@ Model RFBrancardier
     Path "models/rf2_art_01"
     Model 0 "brancardier.obj"
     Skin 0 "brancardier_skin.png"
-    Scale 5 5 6
+    Scale 5 5 5
     CorrectPixelStretch
     IgnoreTranslation
     USEACTORPITCH
@@ -115,7 +117,7 @@ Model RFPorteRegistre
     Path "models/rf2_art_01"
     Model 0 "porte_registre.obj"
     Skin 0 "porte_registre_skin.png"
-    Scale 5 5 6
+    Scale 5 5 5
     CorrectPixelStretch
     IgnoreTranslation
     USEACTORPITCH
