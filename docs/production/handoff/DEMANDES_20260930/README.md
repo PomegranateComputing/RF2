@@ -13,6 +13,7 @@ verdict du propriétaire.
 | P2 | FAMAS et scie Scorpion : ce que le banc consomme, conventions, corrections communes | `W05_W09_ETATS.md` |
 | P2 | Luna Park (RF04, RF05) : figures, objets, textures, sons, avec noms et tailles | `RF04_RF05_LUNA_PARK.md` |
 | P3 | RF01 : sang-de-bœuf plus sombre, quatre décals à refaire | `RF01_FINITIONS.md` |
+| P3 | Jerma (RF07), environnement seulement, ajoutée le 30/09 au soir : la carte attend la décision du propriétaire | `RF07_JERMA.md` |
 
 Pour chaque livraison : un dossier par lot dans ton espace, manifeste avec `target_relpath`, `SHA256SUMS.txt` sans
 session privée ni bibliothèque ni cache non listés. Je fais l'import contrôlé, je regarde dans le moteur (vitesse
