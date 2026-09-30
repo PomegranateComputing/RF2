@@ -66,11 +66,11 @@ MAGAZINE = dict(kind='magazine', base='RFBenchMagazine', shots=True,
                 tails={'fire': '0 A_MagAfterShot()', 'dry': 'Goto Ready', 'reload': '0 A_MagAfterReload()',
                        'reload_empty': '0 A_MagAfterReload()', 'mode': 'Goto Ready'})
 SAW = dict(kind='saw', base='RFBenchSaw', shots=False,
-           labels={'start': 'StartSeq', 'run': 'RunSeq', 'stop': 'StopSeq'}, reload=(),
-           need={'start': {'start': 1}, 'run': {}, 'stop': {'stop': 1}},
+           labels={'start': 'StartSeq', 'run': 'RunSeq', 'stop': 'StopSeq', 'contact': 'ContactSeq'}, reload=(),
+           need={'start': {'start': 1}, 'run': {}, 'stop': {'stop': 1}}, optional={'contact': {}},
            events={'start': 'A_SawStart()', 'stop': 'A_SawStop()'},
-           entry=None, fire_goto='StartSeq', frame_state={'run': 'A_SawRun()'},
-           tails={'start': 'Goto RunSeq', 'run': 'Goto RunSeq', 'stop': 'Goto Ready'})
+           entry=None, fire_goto='StartSeq', frame_state={'run': 'A_SawRun()', 'contact': 'A_SawEffort()'},
+           tails={'start': 'Goto RunSeq', 'run': 'Goto RunSeq', 'stop': 'Goto Ready', 'contact': 'Goto RunSeq'})
 MELEE = dict(kind='melee', base='RFBenchMelee', shots=False,
              labels={'swing': 'SwingSeq'}, reload=(),
              need={'swing': {'strike': 1}},
@@ -375,7 +375,8 @@ def gen_class(anim):
     elif spec is SAW:
         out += [f"    override int Range() {{ return {int(contact.get('range', 56))}; }}",
                 f"    override int ContactDamage() {{ return {int(contact.get('damage', 6))}; }}",
-                f"    override int ContactEvery() {{ return {int(contact.get('every', 4))}; }}"]
+                f"    override int ContactEvery() {{ return {int(contact.get('every', 4))}; }}",
+                f"    override bool EffortPoses() {{ return {'true' if anim['sequences'].get('contact') else 'false'}; }}"]
     elif spec is MELEE:
         out += [f"    override int Range() {{ return {int(contact.get('range', 64))}; }}",
                 f"    override int StrikeDamage() {{ return {int(contact.get('damage', 50))}; }}"]

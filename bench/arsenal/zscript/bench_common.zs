@@ -502,12 +502,13 @@ class RFBenchMagazine : RFBenchWeapon abstract
 // Power supply: a fictional convention still to be fixed with Astra (no ammunition on the bench).
 class RFBenchSaw : RFBenchWeapon abstract
 {
-    bool Running;
+    bool Running, EffortEntered;
     int RunTics, Hits, WallHits;
 
     virtual int Range() { return 56; }
     virtual int ContactDamage() { return 6; }
     virtual int ContactEvery() { return 4; }
+    virtual bool EffortPoses() { return false; }     // sequences.contact delivered (W09 V01): shown after a real hit
     override String Counter() { return String.Format("scie %s | touches %d | contre obstacle %d", Running ? "en marche" : "arretee", Hits, WallHits); }
     override String AmmoText() { return Running ? "en marche" : "arret"; }
     override String AmmoLabel() { return "scie"; }
@@ -528,12 +529,33 @@ class RFBenchSaw : RFBenchWeapon abstract
         invoker.Log("scie_depart");
     }
 
-    action State A_SawRun()
+    // Release, death and put-away end the run on any frame, the effort poses included.
+    action State A_SawCheck()
     {
         if (!invoker.Running) return ResolveState("StopSeq");
         String block = invoker.CommitBlock();
         if (block != "") { invoker.StopLoop(block == "mort" ? "mort" : "rangement"); return ResolveState("StopSeq"); }
         if (player == null || !(player.cmd.buttons & BT_ATTACK)) { invoker.StopLoop("relachee"); return ResolveState("StopSeq"); }
+        return null;
+    }
+
+    // An effort pose (ContactSeq, played only after a hit the trace really made): the same checks, the frame counts
+    // like a run frame and never traces or damages, so the damage rate is the one of the run (every ContactEvery frames).
+    action State A_SawEffort()
+    {
+        State leave = A_SawCheck();
+        if (leave != null) return leave;
+        // The first effort frame starts in the very tic of the hit (the run frame jumped here): that tic is already
+        // counted, so this frame does not count again (otherwise hits would come every 6 tics instead of 8).
+        if (invoker.EffortEntered) invoker.EffortEntered = false;
+        else invoker.RunTics++;
+        return null;
+    }
+
+    action State A_SawRun()
+    {
+        State leave = A_SawCheck();
+        if (leave != null) return leave;
         invoker.RunTics++;
         if (invoker.RunTics % invoker.ContactEvery() != 0) return null;
         FLineTraceData d;
@@ -544,6 +566,11 @@ class RFBenchSaw : RFBenchWeapon abstract
             invoker.Hits++;
             A_StartSound(invoker.SoundPrefix() .. "contact", CHAN_ITEM, CHANF_NOSTOP);
             invoker.Log(String.Format("scie_contact cible=%s distance=%.0f", d.HitActor.GetClassName(), d.Distance));
+            if (invoker.EffortPoses())
+            {
+                invoker.EffortEntered = true;
+                return ResolveState("ContactSeq");
+            }
         }
         else if (d.HitType == TRACE_HitWall || d.HitType == TRACE_HitFloor || d.HitType == TRACE_HitCeiling)
         {

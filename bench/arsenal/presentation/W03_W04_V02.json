@@ -1,0 +1,10 @@
+{
+  "schema": "rf2-bench-presentation/1",
+  "note": "Couche de presentation du banc pour W03/W04 V02 (Astra, 30/09) : noms courts du panneau d'arme seulement. V02 porte ses propres poses de recul et des offsets [0,32] explicites ; le recul par le code de la couche V01 n'est plus ajoute (demande d'Astra, POUR_OPUS du 30/09).",
+  "W03": {
+    "tag": "W03 Rapid 12/70 (essai)"
+  },
+  "W04": {
+    "tag": "W04 MR73 (essai)"
+  }
+}
