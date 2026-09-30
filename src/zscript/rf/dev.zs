@@ -5,6 +5,7 @@ class RFDevHandler : StaticEventHandler
     bool tour;
     bool autopilot;
     bool logging;          // RF_DEV_* console markers (never in normal play)
+    bool inventoryLogged;  // RF_DEV_INV written for the current map or save (reset by WorldLoaded)
     Actor apFoe;
     // End-to-end run B: autosave after waypoint rf_dev_save_at; after loading a save, resume at
     // waypoint rf_dev_start_wp; rf_dev_pacifist lets the first life end in death, then the
@@ -94,6 +95,7 @@ class RFDevHandler : StaticEventHandler
 
     override void WorldLoaded(WorldEvent e)
     {
+        inventoryLogged = false;
         ticks = 0;
         tourIndex = 0; tourPhase = 0; tourTimer = 0;
         apIndex = 0; apTimer = 0; apStuckTimer = 0; apUseCooldown = 0; apTotal = 0; apDone = false; apBestDist = 1e9;
@@ -177,6 +179,19 @@ class RFDevHandler : StaticEventHandler
             apIndex + 1, deaths);
     }
 
+    // What the player carries (chapter chain: the inventory and HUD state must survive the change of map).
+    void LogInventory(String when)
+    {
+        if (!playeringame[consoleplayer] || players[consoleplayer].mo == null) return;
+        let p = players[consoleplayer].mo;
+        String items = "";
+        for (Inventory i = p.Inv; i != null; i = i.Inv)
+            items = items .. String.Format(" %s:%d", i.GetClassName(), i.Amount);
+        let w = players[consoleplayer].ReadyWeapon;
+        Console.Printf("RF_DEV_INV when=%s map=%s health=%d armor=%d weapon=%s cheats=%d%s", when, Level.MapName,
+            p.health, p.CountInv('BasicArmor'), w ? w.GetClassName() : 'none', players[consoleplayer].cheats, items);
+    }
+
     int NearestWaypoint(int fallback)
     {
         let p = players[consoleplayer].mo;
@@ -199,6 +214,7 @@ class RFDevHandler : StaticEventHandler
     {
         // next= is empty when the level is torn down to load a savegame (death/resume, load menu).
         if (logging) Console.Printf("RF_DEV_UNLOADED map=%s time=%d next=%s", Level.MapName, Level.Time, e.NextMap);
+        if (logging && e.NextMap != "") LogInventory("exit");
         // Bodies at rest when the level ends (they lay there since their death): height above the
         // floor under them, tilt, and whether they block.
         if (logging && e.NextMap != "")
@@ -248,6 +264,12 @@ class RFDevHandler : StaticEventHandler
     override void WorldTick()
     {
         ticks++;
+        // First tic of the map or of a loaded save: every handler's WorldLoaded has run (the ending's hold released).
+        if (logging && !inventoryLogged)
+        {
+            inventoryLogged = true;
+            LogInventory("load");
+        }
         if (tour) TourTick();
         if (filmEvery > 0) FilmTick();
         if (msgShots) MessageTick();

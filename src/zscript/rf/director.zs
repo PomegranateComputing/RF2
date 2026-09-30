@@ -19,6 +19,7 @@ class RFDirector : EventHandler
         outro = false;
         exiting = false;
         outroTics = 0;
+        ReleaseOutroHold();
         if (!e.IsSaveGame)
         {
             objective = "";
@@ -165,9 +166,22 @@ class RFDirector : EventHandler
         outroTics = 0;
         if (who != null && who.player != null)
         {
+            // The player travels to the next chapter with its cheat flags: the token remembers which of them the
+            // ending added, so that the next map (or a save made during the ending) gives the player back.
+            let hold = RFOutroHold(who.GiveInventoryType('RFOutroHold'));
+            if (hold != null) hold.added = (CF_TOTALLYFROZEN | CF_GODMODE) & ~who.player.cheats;
             who.player.cheats |= CF_TOTALLYFROZEN | CF_GODMODE;
             who.Vel = (0, 0, 0);
         }
+    }
+
+    void ReleaseOutroHold()
+    {
+        if (!playeringame[0] || players[0].mo == null) return;
+        let hold = RFOutroHold(players[0].mo.FindInventory('RFOutroHold'));
+        if (hold == null) return;
+        players[0].cheats &= ~hold.added;
+        hold.Destroy();
     }
 
     override void WorldTick()
@@ -237,5 +251,19 @@ class RFDirector : EventHandler
             promptThing = note;
             break;
         }
+    }
+}
+
+// Carried by the player from the ending of a chapter into the next one (see RFDirector.StartOutro).
+class RFOutroHold : Inventory
+{
+    int added;
+
+    Default
+    {
+        Inventory.MaxAmount 1;
+        +INVENTORY.UNDROPPABLE
+        +INVENTORY.UNTOSSABLE
+        +INVENTORY.UNCLEARABLE
     }
 }

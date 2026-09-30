@@ -13,7 +13,11 @@ Each lot has its own configuration and saves (user/uzdoom_<lot>.ini, a copy of u
 launch; user/savegames_<lot>): the owner's configuration and the accepted review saves are never touched.
 The launchers start on the title screen; extra arguments pass through (for example: +map RF02).
 
-Usage: python scripts/export_candidate.py --lot UI-01 --label "texte" [--allow-dirty]
+Usage: python scripts/export_candidate.py --lot UI-01 --label "texte" [--allow-dirty] [--direct RF02] [--hold]
+       python scripts/export_candidate.py --promote dist/candidates/RF2_<LOT>_<date>_<time>
+
+--hold leaves the current launchers (JOUER_RF2_<LOT>*.cmd) on the build they point to; once the new build has passed
+its runs, --promote points them at it (the launchers of the candidate folder are written at export either way).
 """
 import unicodedata
 import argparse, hashlib, json, re, shutil, subprocess, sys, time
@@ -69,14 +73,18 @@ def git(*args):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('--lot', required=True, help='lot id, e.g. UI-01, MAP-02, ART-02')
+    ap.add_argument('--lot', help='lot id, e.g. UI-01, MAP-02, ART-02 (required for an export)')
     ap.add_argument('--label', default='')
     ap.add_argument('--allow-dirty', action='store_true', help='export even with uncommitted changes (recorded)')
     ap.add_argument('--direct', metavar='MAP', action='append', default=[],
                     help='also write launchers that start this chapter directly (difficulty Service, the starting kit of '
                     'the chapter), besides the ones that open the title; repeatable (--direct RF02 --direct RF04)')
+    ap.add_argument('--hold', action='store_true', help='leave the current launchers of the lot alone (see --promote)')
+    ap.add_argument('--promote', metavar='FOLDER', help='point the current launchers of a lot at this exported candidate')
     a = ap.parse_args()
-    if not re.fullmatch(r'[A-Z0-9][A-Z0-9_-]{1,24}', a.lot):
+    if a.promote:
+        return promote(Path(a.promote).resolve())
+    if not a.lot or not re.fullmatch(r'[A-Z0-9][A-Z0-9_-]{1,24}', a.lot):
         print('lot: capitals, digits, dashes and underscores only')
         return 2
     dirty = git('status', '--porcelain', '--untracked-files=no') != ''
@@ -99,19 +107,49 @@ def main():
                 launcher=f'JOUER_RF2_{a.lot}.cmd (newest of the lot) / {folder.name}\\JOUER.cmd (this build); '
                          f'config user\\uzdoom_{slug}.ini, saves user\\savegames_{slug}')
     (folder / 'BUILD_INFO.json').write_text(json.dumps(info, indent=2, ensure_ascii=False), encoding='utf-8')
-    label_ascii = unicodedata.normalize('NFKD', a.label).encode('ascii', 'ignore').decode('ascii')   # cmd comments: plain ASCII
-    common = dict(lot=a.lot, label_ascii=label_ascii, pk3_rel=pk3_rel, sha=info['sha256'], slug=slug, direct='', direct_note='')
+    write_launchers(folder, info, [d.upper() for d in a.direct], current=not a.hold)
+    print(json.dumps(info, indent=2, ensure_ascii=False))
+    if a.hold:
+        print(f'Lanceurs courants inchanges ; apres validation : '
+              f'python scripts/export_candidate.py --promote dist/candidates/{folder.name}')
+    return 0
+
+
+def write_launchers(folder, info, direct, current):
+    """The launchers of the candidate folder, and the current ones of the lot at the root when `current`."""
+    lot = info['lot']
+    slug = lot.lower().replace('-', '')
+    label_ascii = unicodedata.normalize('NFKD', info['label']).encode('ascii', 'ignore').decode('ascii')   # cmd comments: plain ASCII
+    common = dict(lot=lot, label_ascii=label_ascii, pk3_rel=info['pk3'], sha=info['sha256'], slug=slug, direct='', direct_note='')
     # write_bytes: on Windows write_text turned the CRLF into CR CR LF (launchers of 27-28/09; cmd.exe drops the
     # extra CR, they are left as delivered)
     def write_cmd(path, root_expr):
         path.write_bytes(LAUNCHER.format(root_expr=root_expr, **common).replace('\n', '\r\n').encode('ascii'))
-    write_cmd(ROOT / f'JOUER_RF2_{a.lot}.cmd', '%~dp0')
+    if current:
+        write_cmd(ROOT / f'JOUER_RF2_{lot}.cmd', '%~dp0')
     write_cmd(folder / 'JOUER.cmd', '%~dp0..\\..\\..\\')
-    for m in [d.upper() for d in a.direct]:
+    for m in direct:
         common.update(direct=f'-skill 2 +map {m} ', direct_note=f' - depart direct {m}')
-        write_cmd(ROOT / f'JOUER_RF2_{a.lot}_{m}.cmd', '%~dp0')
+        if current:
+            write_cmd(ROOT / f'JOUER_RF2_{lot}_{m}.cmd', '%~dp0')
         write_cmd(folder / f'JOUER_{m}.cmd', '%~dp0..\\..\\..\\')
-    print(json.dumps(info, indent=2, ensure_ascii=False))
+
+
+def promote(folder):
+    """Point the current launchers of the lot at an exported candidate, once it has passed its runs."""
+    info_path = folder / 'BUILD_INFO.json'
+    if not info_path.is_file():
+        print(f'Pas de BUILD_INFO.json dans {folder}')
+        return 1
+    info = json.loads(info_path.read_text(encoding='utf-8'))
+    pk3 = ROOT / info['pk3']
+    if not pk3.is_file() or sha256(pk3) != info['sha256']:
+        print(f'Build absent ou modifie : {pk3}')
+        return 1
+    direct = sorted(p.stem[len('JOUER_'):] for p in folder.glob('JOUER_*.cmd'))
+    # The folder launchers come out identical (same template, same build); the root ones now point here.
+    write_launchers(folder, info, direct, current=True)
+    print(f"Lanceurs courants JOUER_RF2_{info['lot']}*.cmd -> {info['pk3']} ({info['sha256']}) ; departs directs : {direct}")
     return 0
 
 
