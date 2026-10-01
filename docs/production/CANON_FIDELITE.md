@@ -40,8 +40,8 @@ Ordre courant du projet = ordre MAPINFO RF01–RF23 (titres V1 = repères histor
 | Traversée de Paris : Arago, Santé, tramway, Denfert, Port-Royal, Cochin, Montparnasse, TSF rue de Rennes, librairie, pont, barrage de l'Assemblée, Champs-Élysées, porte Maillot | 87–457 | RF02 « Rue de service » (titre justifié l. 415–417) | en production |
 | Luna Park, premier passage : chemin de service, guérite, pointage 06:06, clés, Brooklyn Bridge, Niagara, salle de danse | 451–551 | **RF04 « Personnel technique » (produite le 30/09)** | **avant** Batignolles dans le roman. Mandat du 27/09 soir : troisième niveau narratif = Luna Park, ID technique existant RF04 ; RF03 (Batignolles) conservé, placé plus tard. Mandat du 29/09 : son « RF03 » = cette carte (identifiants conservés, `maps/RF04_FICHE.md`) |
 | Sous-station (NODE 0, levier MARCHE/ATTENTE/ARRÊT), la jeune femme, la réparation, le parc rallumé, la salle de danse, la porte de service | 551–707 | **RF05 « Les machines continuent » (produite le 30/09)** | `maps/RF05_FICHE.md` ; la réparation répartie dans des annexes = adaptation déclarée |
-| Couloir ERREUR Ø vers le Jerma | 709–731 | **RF06 « La sortie du personnel » (produite le 30/09, sans combat)** | la porte de service de la salle de danse = sortie du personnel ; voix et lampe du couloir non hostiles |
-| Jerma Palace, décembre 2022 : terrasse, chambre au matelas, escalier de service, cuisines et chambres froides, quai, piscine (escarpin), bureau ENGINEERING (disquette) | 733–1097 | RF07–RF12 | |
+| Couloir ERREUR Ø vers le Jerma | 709–731 | **RF06 « La sortie du personnel » (produite le 30/09, recomposée le 01/10, sans combat)** | la porte de service de la salle de danse = sortie du personnel ; voix et lampe du couloir non hostiles ; la chambre 404 entrouverte et le passage vers « l'autre aile » sont des explorations d'adaptation sans texte ajouté |
+| Jerma Palace, décembre 2022 : terrasse, chambre au matelas, escalier de service, cuisines et chambres froides, quai, piscine (escarpin), bureau ENGINEERING (disquette) | 733–1097 | **RF07 « Jerma - Façade maritime » (produite le 01/10, l. 733–765, sans combat)** ; RF08–RF12 découpées (`maps/RF07_RF12_DECOUPAGE.md`) | chapitre sans combat (décision du 01/10) ; Elvis guide, jamais une cible |
 | Malte, nuit des générations ; page StepRoom « M. & L. » | 1099–1451 | chapitre Jerma (local vidéo RF12 ?) | |
 | Hiver 2022-2023, ville non nommée : magasin et dépôt de Milan Kovac (lecture de l'Amiga) | 1453–2741 | aucun titre V1 (RF20 « Amiga de Milan » vient d'un autre passage) | à décider |
 | Faisceau des Batignolles 1940 : wagons de viande refusés, manifeste « FLOW CONSULTANT » | 2743–2991 | RF03 « Batignolles - Refus de réception » | **après** Luna Park et Jerma dans le roman |
@@ -139,3 +139,10 @@ admissions. À faire après décision, en commit isolé, avec comparaison du WAD
   CAN-003 en écho (chaussure d'enfant du Niagara, l. 523), CAN-004 : le couple du miroir de la salle de danse (texte seul,
   visages hors champ, jamais identifié). La jeune femme et le gardien : textes et traces, figures demandées à Astra (F04-01,
   F05-01). Aucune de ces figures n'est une cible.
+- 01/10 : RF04 recomposé autour de l'esplanade, du bassin du Water Chute et du grand huit (reconstruction déclarée, pas
+  un relevé, `maps/RF04_RELEVE_PLAN.md`) ; ordre du texte, mécanismes et scènes inchangés. Les trois tenues des miroirs
+  de la salle de danse (l. 533–539) montrées pendant la scène du badge (reflets R4V2/R4V3 de Codex), le reflet de RF02 à
+  56 u (R2F8 V02). RF05 recomposé sur le même parc ; RF06 recomposé (six moments, deux explorations sans texte ajouté).
+  RF07 produite (l. 733–765) : terrasse, chambre éventrée et ERREUR Ø récent, Elvis (CAN-017), montre 14:58 +2 (CAN-018),
+  bouteille d'eau, escalier de service, sommier soulevé à deux ; textes cités du roman. Boss : le surveillant-chef, une
+  **adaptation déclarée**, seulement sur un banc distinct (`bench/boss/`), dans aucune carte.

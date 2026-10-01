@@ -1,0 +1,15 @@
+[
+ ["E01_escalier_marches_seches_puis_humides", 1568, 2460, 0, 90, 22],
+ ["E02_palier_ampoule_grillagee", 1568, 2640, 0, 90, 0],
+ ["E03_sous_station_la_voute", 1568, 2716, 0, 90, -12],
+ ["E04_tableaux_de_marbre_cadrans", 1400, 2940, 0, 90, -4],
+ ["E05_moteur_et_roue", 1720, 2840, 0, 180, 6],
+ ["E06_atelier", 1870, 2830, 0, 0, 0],
+ ["E07_galerie_eau_noire", 768, 2880, 0, 90, 12],
+ ["E08_puits_jour_gris", 1216, 2816, 0, 90, -60],
+ ["E09_magasin_vieilles_enseignes", 992, 3240, 0, 90, 0],
+ ["E10_transformateurs_et_pompes", 1620, 3080, 0, 225, 0],
+ ["E11_ruelle_du_parc", 1568, 2296, 0, 180, -4],
+ ["E12_salle_de_danse", 700, 1990, 0, 90, 0],
+ ["E13_couloir_de_service", 1040, 2184, 0, 0, 0]
+]

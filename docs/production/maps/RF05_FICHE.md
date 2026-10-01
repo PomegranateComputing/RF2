@@ -42,3 +42,13 @@ La jeune femme sans valise, pieds nus (F05-01) ; les danseurs et le couple dans 
 courroie (modèle, animation), levier trois positions, coffret NODE 0 (fermé / ouvert, diodes vertes / rouges),
 tableaux de marbre et cadrans, train de trois voitures ; sons : battement, arrêt, redémarrage, courroie renforcée,
 diodes, ventilateurs, frein automatique, ampoules. Détails : demande RF04-RF05 dans l'espace actif d'Astra.
+
+## Recomposition du 01/10
+
+Retour du propriétaire (build 1821) : RF05 doit être lugubre, sale et beaucoup plus riche. La surface est le parc
+commun à RF04 (`scripts/mapkit/luna_park.py`) : on remonte par la porte de la sous-station dans la ruelle derrière la
+piste, le train vide gravit la rampe de levage au-dessus de la ruelle et son frein claque, on entre dans la salle de
+danse par sa porte latérale, on sort par la porte de service au fond, derrière l'estrade (loge de l'orchestre, couloir
+de service : les vagues). Le sous-sol, au nord du parc, garde l'ordre du texte et ses machines ; autour : voûte à
+piliers (nef plus haute que les bas-côtés), chemins de câbles, flaques d'huile, une galerie sous l'eau noire, un puits
+d'air au jour gris, un magasin de vieilles enseignes, la salle des transformateurs et des pompes du Niagara.

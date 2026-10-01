@@ -30,22 +30,19 @@ suivantes est proposé en fin de fiche.
 | Le téléphone : une application jamais installée, jerma_error_zero_0001.png, compteur 17, 66, 117, 404 (837) ; le reflet qui finit le geste une seconde plus tard (841–845) | scènes |
 | Les anciennes cuisines : carreaux jaunis, chambres froides ouvertes, l'une habitée par un fauteuil de plage, un masque de plongée, des bouchons triés par couleur (849) | l'espace de sortie |
 
-## Question à trancher avant la construction
+## Décision et construction (01/10)
 
-Le texte du Jerma ne contient **aucune présence hostile** : exploration urbaine avec Elvis, portage du matelas. Le
-personnel de Sainte-Anne n'a pas de raison d'être à Malte en 2022. Trois voies, à décider par le propriétaire :
+Choix retenu le 01/10 sur délégation du propriétaire : **le chapitre du Jerma est sans combat**, aucun boss ; Elvis
+n'est jamais une cible. RF07 est construite (`scripts/mapkit/rf07.py`, `src/zscript/rf/jerma.zs`) sur l. 733–765 :
+arrivée sur la terrasse face à la mer (horizon), Elvis près de la baie cassée (« Enfin. Tu faisais quoi ? »), Viktor se
+retourne (la chambre éventrée, ERREUR Ø récent), l'échange, la montre (22.12.2022 14:58, +2 qui clignote à l'écran), la
+bouteille d'eau, l'objectif (« une chambre derrière les cuisines »), Elvis qui guide à travers l'hôtel aux graffitis
+superposés, l'escalier de verre pilé et de cendres, le sommier soulevé à deux, « C'est là. » : fin du chapitre jusqu'à
+RF08. Ressources provisoires d'Opus (`materials_rf07.py`), à remplacer par Codex.
 
-1. **Chapitre sans combat** (comme RF06) : la tension vient de l'hôtel, du matelas, des présences qui se retirent aux
-   portes (l. 799). Long, calme ; RF07–RF12 seraient une suite de cartes d'exploration.
-2. **Une manifestation compatible avec l'adaptation** : les « personnes qui se retirent juste avant leur passage »
-   (l. 799) deviennent, dans certaines ailes seulement, une présence hostile non humaine identifiée comme fiction
-   d'adaptation (à dessiner, ni patients ni personnel médical). Elvis n'est jamais touché.
-3. **Le personnel de Sainte-Anne continue sa procédure** à travers le couloir impossible (continuité de RF01–RF05).
+## Découpage des cartes suivantes
 
-Proposition d'Opus : 1 pour RF07 (arrivée, rencontre avec Elvis, la chambre au matelas), et l'option retenue par le
-propriétaire pour les ailes suivantes. Rien n'est construit tant que ce point n'est pas tranché.
-
-## Découpage proposé des cartes suivantes (à confirmer)
+Voir `RF07_RF12_DECOUPAGE.md` (01/10, relu sur l. 733–1097). Ancienne proposition, gardée :
 
 RF08 « Aile des chambres » : le portage dans les couloirs, le carton, NE PAS OUVRIR POUR VÉRIFIER (l. 797–847) ;
 RF09 « La piscine vide » : le quai, la piscine, l'escarpin (CAN-003, l. 849–935) ; RF10 « L'envers du palace » : le

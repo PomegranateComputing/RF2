@@ -111,6 +111,7 @@ def main():
     ap.add_argument('--width', type=int, default=1280)
     ap.add_argument('--height', type=int, default=720)
     ap.add_argument('--seconds', type=float, default=240)
+    ap.add_argument('--pk3', default=str(PK3), help='the build to film (default: the development build)')
     ap.add_argument('--no-autopilot', action='store_true', help='film a scripted development scene instead of the waypoint run')
     ap.add_argument('extra', nargs='*')
     a = ap.parse_args()
@@ -120,13 +121,13 @@ def main():
     out.mkdir(parents=True)
     raw_wav = out / 'capture_float.wav'
     extra = ['+rf_dev_film', str(a.every), '+rf_dev_film_start', str(a.start), '+rf_dev_film_end', str(a.end)] + a.extra
-    status, text, shots = devrun.run(PK3, f'film_{a.name}', a.map, autopilot=not a.no_autopilot, seconds=a.seconds,
+    status, text, shots = devrun.run(Path(a.pk3), f'film_{a.name}', a.map, autopilot=not a.no_autopilot, seconds=a.seconds,
                                      width=a.width, height=a.height, extra=extra, marker='RF_DEV_FILM_DONE',
                                      audio_wav=raw_wav)
     frames = [(int(t), float(ms)) for t, ms in re.findall(r'RF_DEV_FILM t=(\d+) ms=([\d.]+)', text)]
     shot_ms = [float(ms) for _, ms in re.findall(r'RF_DEV_SHOT t=(\d+) ms=([\d.]+)', text)]
     pngs = sorted(shots.glob('*.png'))
-    report = dict(name=a.name, status=status, frames_requested=len(frames), frames_written=len(pngs), shots=len(shot_ms))
+    report = dict(name=a.name, pk3=a.pk3, status=status, frames_requested=len(frames), frames_written=len(pngs), shots=len(shot_ms))
     if len(pngs) != len(frames):
         report['warning'] = 'frame count differs from requests: timing of some frames is approximate'
     audio, sr = read_wav(raw_wav)
