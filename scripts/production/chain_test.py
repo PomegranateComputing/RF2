@@ -11,7 +11,7 @@ inventory carried (RF_DEV_INV). Writes a JSON report.
 
 Usage: python scripts/production/chain_test.py <build.pk3> <out.json> [--seconds 2400]
 """
-import argparse, json, re, sys, time, zipfile
+import argparse, json, re, shutil, sys, time, zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -61,7 +61,10 @@ def main():
     if not rf05:
         report.update(ok=False, reason='no RF05 autosave written in leg 1')
     else:
-        save = max(rf05)[1]
+        # Kept under its own name at once: autosaves rotate, and another run between the two legs (any map that
+        # autosaves on this savedir) would overwrite the slot before leg 2 loads it (01/10: a boss bench run did).
+        save = SAVES / f'chain_rf05_{time.strftime("%Y%m%d_%H%M%S")}.zds'
+        shutil.copy2(max(rf05)[1], save)
         s2, text2, _ = devrun.run(pk3, 'chain_leg2', None, autopilot=True, seconds=a.seconds / 2, speed=4, loadgame=save,
                                   marker=rf're:^(RF_DEV_UNLOADED map={a.last} time=\d+ next=\S+|{FAIL})')
         leg2 = summary(text2)
