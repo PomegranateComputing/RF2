@@ -1,0 +1,97 @@
+{
+  "batch": "ORDY_E_V04",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/ORDY_E_V04",
+  "manifest_sha256": "bdc0904ebfd3bf34a5dba88861a5b59591cb2710ac535ab0525ea63ee0d897d8",
+  "status": "candidate_for_opus_engine_review",
+  "imported": "2026-10-01 13:16",
+  "by": "Opus (integration)",
+  "head_before": "ba36832c0c6e4bc03b304f13ad2c3ad6c737941d",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 8
+  },
+  "files": [
+    {
+      "target": "src/sprites/enemies/ORDYE1.png",
+      "delivered": "runtime/sprites/enemies/ORDYE1.png",
+      "sha256": "4c11b2583292276fc1692bcd0c490c4b5bf347eca71fdb4d858bd6f12eb91768",
+      "before": "4c70953caa44ed7639a8b347444d37a5178babeb88a65d7b3e9d7ad6c84dedfb",
+      "base_sha256": "4c70953caa44ed7639a8b347444d37a5178babeb88a65d7b3e9d7ad6c84dedfb",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE2.png",
+      "delivered": "runtime/sprites/enemies/ORDYE2.png",
+      "sha256": "e66fbed67e499df3da8473f89e413ed81d2c2561e9cb5205fac25c636a59f38a",
+      "before": "5196dd8fb086a31aad6ade3fd625306d4af0e4235f9b6b6d9204f747be87642c",
+      "base_sha256": "5196dd8fb086a31aad6ade3fd625306d4af0e4235f9b6b6d9204f747be87642c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE3.png",
+      "delivered": "runtime/sprites/enemies/ORDYE3.png",
+      "sha256": "4b9d8c7ce2c969f76489fb8b0a15f683d5f8234cf65167ccddc95a635ac7ef1a",
+      "before": "463b44d1308ac1194c6e80d3a18a1d901a104497b3572139bd44256239e8ac2c",
+      "base_sha256": "463b44d1308ac1194c6e80d3a18a1d901a104497b3572139bd44256239e8ac2c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE4.png",
+      "delivered": "runtime/sprites/enemies/ORDYE4.png",
+      "sha256": "6e98b766efb66d946d27cdae50633d4be573ae2508f9c321032c75e64011d352",
+      "before": "b8cc9ab4d92eb9f7e698c7d755eafcd341fa5c80a32eafab67ac50bec14d2fd5",
+      "base_sha256": "b8cc9ab4d92eb9f7e698c7d755eafcd341fa5c80a32eafab67ac50bec14d2fd5",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE5.png",
+      "delivered": "runtime/sprites/enemies/ORDYE5.png",
+      "sha256": "72138f625ef194a5124c6d5d1c3f6fe8c4fbfb6070f93cb53f1ac8a9140ff0c6",
+      "before": "e32372a54b55e9bbfadad2a8e8772e8e6c2c01756acc67aa36d25585f881c940",
+      "base_sha256": "e32372a54b55e9bbfadad2a8e8772e8e6c2c01756acc67aa36d25585f881c940",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE6.png",
+      "delivered": "runtime/sprites/enemies/ORDYE6.png",
+      "sha256": "e765ba60a541d0096e5b9a1effd949bbd6633253622e5ed817952cad87a72c06",
+      "before": "0aceae3cd5cf2b80fe65103d8d95c9f477a9461f48b4188df2e4695e22f50d49",
+      "base_sha256": "0aceae3cd5cf2b80fe65103d8d95c9f477a9461f48b4188df2e4695e22f50d49",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE7.png",
+      "delivered": "runtime/sprites/enemies/ORDYE7.png",
+      "sha256": "77c69fbb57fd53c8b515e2fb96e34b42fb80e9bf9bb66f96ebf271b0560d0ac7",
+      "before": "b44b03c5f453483b2542109d0edf3af9d994fa28c18f6941c3168cc39b32ff7d",
+      "base_sha256": "b44b03c5f453483b2542109d0edf3af9d994fa28c18f6941c3168cc39b32ff7d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/ORDYE8.png",
+      "delivered": "runtime/sprites/enemies/ORDYE8.png",
+      "sha256": "844803a63a44e3ad3b9a202834237867582d9320da09dcd99af4389847830a5d",
+      "before": "944f3ad397001f325be085e1f095d3682d72a2a90611a424bfbea2928ea3ee24",
+      "base_sha256": "944f3ad397001f325be085e1f095d3682d72a2a90611a424bfbea2928ea3ee24",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "sha256sums_line_endings": "CRLF (contract: LF) - reported to Codex",
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate. Record written after the copy (the tool stopped on a lot path outside the repository; fixed)."
+}

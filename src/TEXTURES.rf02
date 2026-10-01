@@ -204,10 +204,10 @@ Texture RF2_MORD, 256, 512
     YScale 4
     Patch "patches/rf02/RF2_MORD.png", 0, 0
 }
-Texture RF2_PHVI, 256, 256
+Texture RF2_PHVI, 512, 320
 {
-    XScale 4
-    YScale 4
+    XScale 8
+    YScale 8
     Patch "patches/rf02/RF2_PHVI.png", 0, 0
 }
 Texture RF2_TRAM, 512, 512

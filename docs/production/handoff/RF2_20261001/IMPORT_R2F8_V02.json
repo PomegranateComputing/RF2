@@ -1,0 +1,97 @@
+{
+  "batch": "R2F8_V02",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/R2F8_V02",
+  "manifest_sha256": "b6bafd53d1d89489de79c6051ccf3da175b71c14651ac8a44e1b01442de6428c",
+  "status": "candidate_for_opus_engine_review",
+  "imported": "2026-10-01 13:16",
+  "by": "Opus (integration)",
+  "head_before": "ba36832c0c6e4bc03b304f13ad2c3ad6c737941d",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 8
+  },
+  "files": [
+    {
+      "target": "src/sprites/rf02_figures/R2F8A1.png",
+      "delivered": "runtime/sprites/rf02_figures/R2F8A1.png",
+      "sha256": "60b7023957bd00299b62901d4731e92397dca4743cb32ae25145847cdd0c82d5",
+      "before": "123bf89e34673869c18870286b30b1c047fd77c70732991ba54ee3418a4c809c",
+      "base_sha256": "123bf89e34673869c18870286b30b1c047fd77c70732991ba54ee3418a4c809c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf02_figures/R2F8A2.png",
+      "delivered": "runtime/sprites/rf02_figures/R2F8A2.png",
+      "sha256": "7c345e6dad72ebd5ca9ce4211ed32b8b3aa200621fb98449e5fe99f6bf5a0922",
+      "before": "338d3da87fc94bf3b4992f524dec7a2d191dc0638c7fdb67a6f260b50db537f8",
+      "base_sha256": "338d3da87fc94bf3b4992f524dec7a2d191dc0638c7fdb67a6f260b50db537f8",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf02_figures/R2F8A3.png",
+      "delivered": "runtime/sprites/rf02_figures/R2F8A3.png",
+      "sha256": "71c0d57ea33b084496360edb1b89e4f1a2474418b2645faa8faedd8d64f0f778",
+      "before": "1d468c847b3d2ea5e0f4f85640668f9d6f7825970a4457118078d7d54693329f",
+      "base_sha256": "1d468c847b3d2ea5e0f4f85640668f9d6f7825970a4457118078d7d54693329f",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf02_figures/R2F8A4.png",
+      "delivered": "runtime/sprites/rf02_figures/R2F8A4.png",
+      "sha256": "75f8b16a4306a97398f6fd34868a3bf6eb63ebb88b063d5369f431d0aec666b0",
+      "before": "4eb9178aa78abca0dbc9943658243a0c7a1eb8f14a2be80c40427f4e945f8a51",
+      "base_sha256": "4eb9178aa78abca0dbc9943658243a0c7a1eb8f14a2be80c40427f4e945f8a51",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf02_figures/R2F8A5.png",
+      "delivered": "runtime/sprites/rf02_figures/R2F8A5.png",
+      "sha256": "c86b4a55e98d4fa170d1c7c45a218df3691c9f933f32dbe2a79e2ca51f146d8c",
+      "before": "7a84a6e885ee75ce7e1942272be9555d60e0f758ad766222b2e7b4f37d1f77a0",
+      "base_sha256": "7a84a6e885ee75ce7e1942272be9555d60e0f758ad766222b2e7b4f37d1f77a0",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf02_figures/R2F8A6.png",
+      "delivered": "runtime/sprites/rf02_figures/R2F8A6.png",
+      "sha256": "d62df97787a7fcf2f47617ec3257b3ffb0bb73e2f4c0bab7ea443255891b72a4",
+      "before": "ab15190b13b7ac9385d9b403acd87d75d720084f350ed3b4554db070ea56c3dd",
+      "base_sha256": "ab15190b13b7ac9385d9b403acd87d75d720084f350ed3b4554db070ea56c3dd",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf02_figures/R2F8A7.png",
+      "delivered": "runtime/sprites/rf02_figures/R2F8A7.png",
+      "sha256": "6f27f50174e3b4874126baff72aacfe40d01b4a8ac22783d93236eb408081fbe",
+      "before": "dc4943654a77c1b74b62237a31556db5127312468b987fa52325850f89058d89",
+      "base_sha256": "dc4943654a77c1b74b62237a31556db5127312468b987fa52325850f89058d89",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf02_figures/R2F8A8.png",
+      "delivered": "runtime/sprites/rf02_figures/R2F8A8.png",
+      "sha256": "7c121207f212f304ab4834df2c41c1f6892d7677e0c517bd937c2ffde1412e86",
+      "before": "7fba72ed216a66193e96975d9dc3a193d2d43abc9ecec368ddc2c687412544a1",
+      "base_sha256": "7fba72ed216a66193e96975d9dc3a193d2d43abc9ecec368ddc2c687412544a1",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "sha256sums_line_endings": "CRLF (contract: LF) - reported to Codex",
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate. Record written after the copy (the tool stopped on a lot path outside the repository; fixed)."
+}

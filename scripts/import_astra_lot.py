@@ -86,7 +86,8 @@ def main():
             shutil.copyfile(lot / r['delivered'], dest)
         assert sha256(dest) == r['sha256'], dest
     head = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True).stdout.strip()
-    record = dict(batch=manifest.get('batch_id', lot.name), lot=str(lot.relative_to(ROOT)).replace('\\', '/'),
+    record = dict(batch=manifest.get('batch_id', lot.name),
+                  lot=(lot.relative_to(ROOT) if lot.is_relative_to(ROOT) else lot).as_posix(),   # Codex's lots are outside
                   manifest_sha256=sha256(lot / 'manifest.json'), status=manifest.get('status'),
                   imported=time.strftime('%Y-%m-%d %H:%M'), by='Opus (integration)', head_before=head,
                   base_drift_reason=a.accept_base_drift, counts=counts, files=rows,

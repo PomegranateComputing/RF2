@@ -1,0 +1,57 @@
+{
+  "batch": "LOT_CORRECTIONS_01",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/LOT_CORRECTIONS_01",
+  "manifest_sha256": "6f965d576fa84e28bbc6d1032e8ce42ab78a0311d8c3ccac70e5ef4aa6962011",
+  "status": "candidate_for_opus_engine_review",
+  "imported": "2026-10-01 13:16",
+  "by": "Opus (integration)",
+  "head_before": "ba36832c0c6e4bc03b304f13ad2c3ad6c737941d",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 4
+  },
+  "files": [
+    {
+      "target": "src/graphics/decals/RFDSTN1.png",
+      "delivered": "runtime/graphics/decals/RFDSTN1.png",
+      "sha256": "cd3d135741beffc4a40beb24f9cdf2579d84b399277aeb5c0185a8f9a3bff1aa",
+      "before": "ffed428a80a549ca1607ca822e4600bcf76b420d9854615684ce52670ee6a5ff",
+      "base_sha256": "ffed428a80a549ca1607ca822e4600bcf76b420d9854615684ce52670ee6a5ff",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_NIAG.png",
+      "delivered": "runtime/patches/rf04/RF4_NIAG.png",
+      "sha256": "16fba31e36e31a3c9e43b146f16e5a59e54029387c67d0a5742142a0e5bee9a7",
+      "before": "2c924d679631ca2f992fa69f38885ccf20376457e78741aae80ea855fe1744ee",
+      "base_sha256": "2c924d679631ca2f992fa69f38885ccf20376457e78741aae80ea855fe1744ee",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_CLE5.png",
+      "delivered": "runtime/patches/rf04/RF4_CLE5.png",
+      "sha256": "fe320c79cd03987be5520fda3429afa3aea2e5b665820b9176d71e31ecce63a8",
+      "before": "52f5bac26438736e71e23c6b4b42c53ad0b518cf91ce3f79752baa6cb28fc3ce",
+      "base_sha256": "52f5bac26438736e71e23c6b4b42c53ad0b518cf91ce3f79752baa6cb28fc3ce",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_CLE4.png",
+      "delivered": "runtime/patches/rf04/RF4_CLE4.png",
+      "sha256": "bb57daff91e0514638b256ca21e2926a03a98a579d72473283fac4fa8d9d5744",
+      "before": "62934e98e82107df9ad2350749c9c1ec19f3931c1553745c3df8a5552618545c",
+      "base_sha256": "62934e98e82107df9ad2350749c9c1ec19f3931c1553745c3df8a5552618545c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "sha256sums_line_endings": "CRLF (contract: LF) - reported to Codex",
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate. Record written after the copy (the tool stopped on a lot path outside the repository; fixed)."
+}

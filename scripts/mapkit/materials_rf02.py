@@ -1096,7 +1096,8 @@ def main():
     morris('RF2_MORR', 'luna')
     morris('RF2_MORJ', 'jerma')
     morris('RF2_MORD', 'dentifrice')
-    apothecary_window('RF2_PHVI', 412)
+    # RF2_PHVI: replaced by Codex's RF02_PHARMACIE_01 (01/10, 512 x 320 at 8 px/u, TEXTURES.rf02 edited): not redrawn
+    # apothecary_window('RF2_PHVI', 412)
     # vehicles, furniture sides
     tram_side('RF2_TRAM', 420)
     save('Texture', 'RF2_TROF', floor_grime(stone_blocks(64 * PPU, 64 * PPU, 421, 16, 64, (60, 64, 60), (40, 42, 40)), 0.2, 0.2))

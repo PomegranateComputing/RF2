@@ -1,0 +1,177 @@
+{
+  "batch": "R4V2_R4V3_V01",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/R4V2_R4V3_V01",
+  "manifest_sha256": "ba25c1b82874d0b9bfc51cd9b75a40dade77985f41e3b8eee067df673237b289",
+  "status": "candidate_for_opus_engine_review",
+  "imported": "2026-10-01 13:16",
+  "by": "Opus (integration)",
+  "head_before": "ba36832c0c6e4bc03b304f13ad2c3ad6c737941d",
+  "base_drift_reason": null,
+  "counts": {
+    "nouveau": 16
+  },
+  "files": [
+    {
+      "target": "src/sprites/rf04/R4V2A1.png",
+      "delivered": "runtime/sprites/rf04/R4V2A1.png",
+      "sha256": "168f95df2dcfa82549530410b71fc39d345877c9080d9f754fc70340bac65dd3",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V2A2.png",
+      "delivered": "runtime/sprites/rf04/R4V2A2.png",
+      "sha256": "33d05f91255ba3c0702887f22abd0b67ddfe0e95ba1902a016029008b843ab3e",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V2A3.png",
+      "delivered": "runtime/sprites/rf04/R4V2A3.png",
+      "sha256": "ae6e806791278205a98e015fff2e58de57f9bd22460ea7500d7e8d76a200ff08",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V2A4.png",
+      "delivered": "runtime/sprites/rf04/R4V2A4.png",
+      "sha256": "7e272bbc3620085f4f487952338070b36244ebd6408e63af6f59b1d597623658",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V2A5.png",
+      "delivered": "runtime/sprites/rf04/R4V2A5.png",
+      "sha256": "e434b496dd24bb28c925ebb255b78607a13a675b80825167e4dba516715fe2fa",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V2A6.png",
+      "delivered": "runtime/sprites/rf04/R4V2A6.png",
+      "sha256": "42ca6345fb4cb8348309422e47dd24b6f24a0cee8aada50393326fbfa2520477",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V2A7.png",
+      "delivered": "runtime/sprites/rf04/R4V2A7.png",
+      "sha256": "cc3ec822760596d10f31e53fd7a3ffc7d63f6625e4b1826fb318757f14733386",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V2A8.png",
+      "delivered": "runtime/sprites/rf04/R4V2A8.png",
+      "sha256": "2e409c4fc7e7691da6a6579525d3bf40573e54958f6a15db31c715fd378b4c84",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V3A1.png",
+      "delivered": "runtime/sprites/rf04/R4V3A1.png",
+      "sha256": "57d0baaea1423415cf323a119117b54bc210187afa29957b3ec78738b6972db6",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V3A2.png",
+      "delivered": "runtime/sprites/rf04/R4V3A2.png",
+      "sha256": "d4e9e3792a416c1bce38570cfbf2cc673e6b69c0eeb0955eaedbd7257bb910f9",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V3A3.png",
+      "delivered": "runtime/sprites/rf04/R4V3A3.png",
+      "sha256": "b18a7f671b4c7cd383f76013c0a78ce486f5e547ac1116f8fb0463929bb9048f",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V3A4.png",
+      "delivered": "runtime/sprites/rf04/R4V3A4.png",
+      "sha256": "b84fa4d54f0dc13419aef84557a2eb0d3e2bcfb43799cf6d4250c6d3cc0c5532",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V3A5.png",
+      "delivered": "runtime/sprites/rf04/R4V3A5.png",
+      "sha256": "a15fb34854ad8c780c50b75175d236a142cee2a45efdda006904f5bc2b73ee7b",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V3A6.png",
+      "delivered": "runtime/sprites/rf04/R4V3A6.png",
+      "sha256": "637826fe5e92126527eea1249acdf40cc6ab4e1cc49201e2256851bc0e5537ba",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V3A7.png",
+      "delivered": "runtime/sprites/rf04/R4V3A7.png",
+      "sha256": "3471f89418e2635e6422a09ed24dada838a8ce0982c00021005d81bc94434d45",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/rf04/R4V3A8.png",
+      "delivered": "runtime/sprites/rf04/R4V3A8.png",
+      "sha256": "b1e23f3b52bfb40d1330e03410ef2659edcb3cf736e91eb1173ff66284fed1d6",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "sha256sums_line_endings": "CRLF (contract: LF) - reported to Codex",
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate. Record written after the copy (the tool stopped on a lot path outside the repository; fixed)."
+}

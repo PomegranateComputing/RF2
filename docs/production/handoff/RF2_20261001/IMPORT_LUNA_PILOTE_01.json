@@ -1,0 +1,77 @@
+{
+  "batch": "LUNA_PILOTE_01",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/LUNA_PILOTE_01",
+  "manifest_sha256": "4b5f070b5a4aca9de2a4a9676f5fc389922b428cadb9382c3e84c58642e47082",
+  "status": "candidate_for_opus_layout_and_engine_review",
+  "imported": "2026-10-01 13:16",
+  "by": "Opus (integration)",
+  "head_before": "ba36832c0c6e4bc03b304f13ad2c3ad6c737941d",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 6
+  },
+  "files": [
+    {
+      "target": "src/patches/rf04/RF4_BROO.png",
+      "delivered": "runtime/patches/rf04/RF4_BROO.png",
+      "sha256": "6d88a32bf3efd06af77b23613f7da7480978784e55b7531b71b0aa81116ee39f",
+      "before": "75f6e4e7b6834481d52505952e1f6027b8806cfbca31098e6128d7c59f1f1b85",
+      "base_sha256": "75f6e4e7b6834481d52505952e1f6027b8806cfbca31098e6128d7c59f1f1b85",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_BASS.png",
+      "delivered": "runtime/patches/rf04/RF4_BASS.png",
+      "sha256": "3ff54d66fade56b835d333aeb302bb9d44809b1a3f78377e81c4f89473d983d6",
+      "before": "57627bc2a4451f5ca95c44255290dd778c2a378b6adaa45bed20cdd1d0ec5c49",
+      "base_sha256": "57627bc2a4451f5ca95c44255290dd778c2a378b6adaa45bed20cdd1d0ec5c49",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_ROCH.png",
+      "delivered": "runtime/patches/rf04/RF4_ROCH.png",
+      "sha256": "070b1b6b86a68833e322c262b55786e83dc02f3f2855b1f3242791de5112772a",
+      "before": "97ea779cc53555e08c0bb398ce03d0aa9f239ea5fb1cf06630975d10bec55de9",
+      "base_sha256": "97ea779cc53555e08c0bb398ce03d0aa9f239ea5fb1cf06630975d10bec55de9",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_BOIS.png",
+      "delivered": "runtime/patches/rf04/RF4_BOIS.png",
+      "sha256": "688ebd711470f190ed33b51c09d77dfd248c4f24177da06174a319acab5e8e6d",
+      "before": "71eff955dc5a800255cf4edf55bea8939609cd62e705e0ac8b0267ff2040c902",
+      "base_sha256": "71eff955dc5a800255cf4edf55bea8939609cd62e705e0ac8b0267ff2040c902",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_MARQ.png",
+      "delivered": "runtime/patches/rf04/RF4_MARQ.png",
+      "sha256": "5e7e1ac6420f56352adc89642a9f0b3876f7f34883935e567b63095c45a4b46a",
+      "before": "d4fd6d710ce38246ff816246dcc3da42ca049903e6873790420e59efc5a12ffb",
+      "base_sha256": "d4fd6d710ce38246ff816246dcc3da42ca049903e6873790420e59efc5a12ffb",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_DALH.png",
+      "delivered": "runtime/patches/rf04/RF4_DALH.png",
+      "sha256": "899299f288f8bca4ebde4aafa28d681db8cc71a16324df22c7858eef6712e86d",
+      "before": "f5099645dbaac2e520742844144315f8cb187a7108cfdf2ffb6fce8efa131031",
+      "base_sha256": "f5099645dbaac2e520742844144315f8cb187a7108cfdf2ffb6fce8efa131031",
+      "state": "remplace_base_conforme",
+      "kind": "Flat",
+      "id": null
+    }
+  ],
+  "sha256sums_line_endings": "CRLF (contract: LF) - reported to Codex",
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate. Record written after the copy (the tool stopped on a lot path outside the repository; fixed)."
+}

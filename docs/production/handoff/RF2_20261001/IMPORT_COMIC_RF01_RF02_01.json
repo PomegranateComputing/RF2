@@ -1,0 +1,27 @@
+{
+  "batch": "COMIC_RF01_RF02_01",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/COMIC_RF01_RF02_01",
+  "manifest_sha256": "577f588f072374c3b64b48f4f30db2f84e1ce5803b7b11b632dd15954dccadf3",
+  "status": "candidate_for_opus_runtime_review",
+  "imported": "2026-10-01 13:16",
+  "by": "Opus (integration)",
+  "head_before": "ba36832c0c6e4bc03b304f13ad2c3ad6c737941d",
+  "base_drift_reason": null,
+  "counts": {
+    "nouveau": 1
+  },
+  "files": [
+    {
+      "target": "src/graphics/comics/RF01_RF02.png",
+      "delivered": "runtime/graphics/comics/RF01_RF02.png",
+      "sha256": "1c9626b7ce2b79eab91fe55d59c587adbb1bc5cb6c7a8c940f658b6ebc06eeba",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "sha256sums_line_endings": "CRLF (contract: LF) - reported to Codex",
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate. Record written after the copy (the tool stopped on a lot path outside the repository; fixed)."
+}
