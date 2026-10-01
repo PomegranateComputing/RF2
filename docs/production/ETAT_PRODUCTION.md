@@ -43,6 +43,7 @@ tag. Chaque candidate reçoit son build et son lanceur (`scripts/export_candidat
 |---|---|
 | Maps, acteurs, scripts, audio en jeu, UI runtime, builds, rapports | Opus 5.5 (unique intégrateur de `C:\PROJECTS\RF2_UZDOOM`) |
 | Sources et exports artistiques des lots attribués | Astra. Espace actif depuis le 29/09 (confirmé) : `C:\PROJECTS\RF2_UZDOOM\incoming\astra\`, où Astra écrit seule ; ses livraisons figées restent où elles ont été remises. Anciens worktrees (`RF2_UZDOOM_ASTRA_20260927`, `…_ARSENAL_20260928`, `…_RF01_TEXTURES_1940_20260928`) conservés, plus utilisés pour les remises |
+| Sources et exports artistiques depuis le 01/10 | Codex, dans `C:\PROJECTS\RF2_UZDOOM_CODEX_ART_20261001\` (lots avec `manifest.json`, `SHA256SUMS.txt` en LF, `POUR_OPUS.md`) ; Codex n'écrit ni dans `src/`, ni dans les générateurs, ni dans `user/`, ni dans `incoming/astra/` ; contrat `docs/production/handoff/RF2_20261001/CONTRAT_CODEX.md` ; import fichier par fichier avec contrôle d'empreinte de base (`scripts/import_astra_lot.py`, relevés `handoff/RF2_20261001/IMPORT_*.json`). Les lots d'Astra restent conservés |
 | Acceptation artistique | Propriétaire |
 | Fable | Tâche bornée attribuée explicitement, puis relais |
 
@@ -87,6 +88,26 @@ narratif : Luna Park (ID technique RF04), sans écraser le blockout RF03 (Batign
 | ENNEMIS (code) | Opus | `prod/rf2-campaign` | `enemies.zs`, `MODELDEF`, `rf02.py` | corrections du code relevées par l'audit du 30/09 | hauteurs de collision, coups à travers les fenêtres refusés, corps réduit dès la chute, modèles de mort à l'échelle des sprites, cadavres non broyés, charge du brancardier ; RF02 : ambulance déplacée (le brancardier de Cochin était enfermé) ; `gl_spriteclip` du propriétaire mesuré sans effet au sol plat ; demande ENN-V01 à Astra (l'infirmier d'abord) |
 | CUMUL | Opus | `prod/rf2-campaign` (`3d04084`) + `candidate/rf01-textures-1940` (`fadb3d8`) → branche `candidate/rf2-cumul` | aucun fichier propre : fusion, `RF01.wad` régénéré | un build avec toutes les améliorations (demande du propriétaire, 29/09) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_CUMUL.cmd` / `JOUER_RF2_CUMUL_RF02.cmd`, build `RF2_CUMUL_20260929_1801` (`5115307c…`, commit `70e3ccd`), `docs/RF2_CUMUL.md` ; ligne de production + matières RF01 1940 (1606) ; sans les armes du banc (pas d'activation en campagne) ; prod et les candidates précédentes inchangées |
 
+### Mandat du 01/10 (`C:\PROJECTS\RF2_MANDATS_OPUS_CODEX_20261001\RF2_MANDATS_20261001\01_OPUS_INTEGRATION_CARTES_20261001.md`)
+
+RF01 et RF02 jugés bons par le propriétaire ; RF04 doit ressembler au Luna Park parisien, RF05 lugubre et plus riche,
+RF06 plus complexe ; RF06 et le chapitre du Jerma **sans combat** (décidé le 01/10) ; Opus intègre, Codex produit
+l'art. Rien n'est déclaré accepté ; aucun son n'est écouté par les agents (capture et mesure seulement).
+
+| Lot | Contenu | Statut |
+|---|---|---|
+| RF02 corrections | reflet de Viktor par R2F8 V02 à 56 u (vitrine de la pharmacie, couche PHVI au-dessus), défauts de placement de l'audit (`handoff/RF2_20261001/AUDIT_RF02.md`, 48 vues cibles) ; hauteur de ciel des renfoncements et portails vérifiée depuis la rue (aucun mur visible au-dessus des toits) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED |
+| RF04 recomposé | parc partagé `scripts/mapkit/luna_park.py` : esplanade, bassin du Water Chute et tour, grand huit (tréteaux, rampe de levage, quai), Brooklyn Bridge, salle de danse, ruelle et sous-station ; séquence du texte inchangée ; trois tenues dans les miroirs (R4V2/R4V3) ; **reconstruction déclarée, pas un relevé** (`maps/RF04_RELEVE_PLAN.md`) ; fiche `maps/RF04_FICHE.md` | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED |
+| RF05 recomposé | même parc ; sous-sol au nord (voûte, galeries noyées, puits d'air, magasin d'enseignes, transformateurs et pompes), train vide sur la rampe, salle de danse, porte de service ; `maps/RF05_FICHE.md` | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED |
+| RF06 recomposé | six moments, deux explorations latérales sans texte ajouté, sans combat ; ampoules des premières pièces réparées (01/10) ; `maps/RF06_FICHE.md` | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED |
+| RF07 « Jerma - Façade maritime » | l. 733–765, sans combat, Elvis guide (jamais une cible), montre 14:58 +2, bouteille d'eau, sommier soulevé à deux ; ressources provisoires d'Opus ; `maps/RF07_FICHE.md` ; RF08–RF12 découpées (`maps/RF07_RF12_DECOUPAGE.md`) | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED |
+| Planches BD | cinq transitions (RF01→RF02, RF02→RF04, RF04→RF05, RF05→RF06, RF06→RF07), pages de Codex sans texte, légende composée par le jeu dans la bande noire ; lire / passer / tir / sauvegarde pendant la page / chargement, formats 16:9, 21:9, 4:3 | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED |
+| Lots Codex du 01/10 | 18 lots livrés, tous importés (relevés `IMPORT_*.json`) ; `BRCD_V02` encore en cours chez Codex (sans manifeste à l'heure de la candidate) ; avant/après dans le moteur ; retour `handoff/RF2_20261001/RETOURS_CODEX/` | candidats ; jugement du propriétaire |
+| Son des armes | routage réel et film de référence au son du moteur pour Codex (`handoff/RF2_20261001/ROUTAGE_SON_ARMES.md`) ; `AUDIO_TIMING_01` : 8 sons de campagne (Browning, FAL, pied-de-biche) à tête silencieuse raccourcie, mesurés (attaque à 4 ms, crête et son identiques), **non écoutés** ; les 16 sons des armes du banc restent hors campagne | candidats |
+| Arsenal | un contrat par arme (`handoff/RF2-ARSENAL/CONTRATS_PAR_ARME_20261001.md`) ; Rapid 4+1, barillet six chambres du MR73 et cadence réparée de la Scorpion inchangés ; M2HB, RPG, lance-flammes, taser : décisions du propriétaire listées | contrats écrits |
+| Ennemis | infirmier image E (ORDY E V04) intégrée ; familles suivantes demandées à Codex : brancardier complet, porte-registre (`handoff/RF2_20261001/ENNEMIS_FAMILLES_20261001.md`) | en production chez Codex |
+| Boss (banc séparé) | le surveillant-chef, **adaptation déclarée**, dans aucune carte : entrée, trois attaques annoncées, phase 2, sifflet et renfort, douleur, mort, victoire et reprise ; `bench/boss/FICHE_BOSS_SURVEILLANT.md`, `bench/boss/test_boss_bench.py` PASS | prototype complet sur banc |
+
 ## 6. Matrice de couverture réelle
 
 Statuts : `INVENTORIED`, `IN_PRODUCTION`, `INTEGRATED`, `RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED`, `OWNER_ACCEPTED`.
@@ -98,10 +119,11 @@ Un statut vaut pour un périmètre et une version.
 |---|---|---|---|---|
 | RF01 | Sainte-Anne - Les portes ouvertes | OWNER_ACCEPTED (carte, armes, bras, sons) ; ennemis : retouche en cours | build 20260926_1451 | accepté 27/09 hors ennemis |
 | RF02 | Paris - Rue de service | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED (carte produite, 15 scènes du texte, 7 vagues) ; figures humaines manquantes | `RF2_MAP-02_20260927_1543`, traversées A et B PASS, film | — |
-| RF04 | Luna Park - Personnel technique | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED (produite le 30/09, ressources provisoires) | candidate cumulée du 30/09 | — |
-| RF05 | Les machines continuent | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED (produite le 30/09, ressources provisoires) | idem | — |
-| RF06 | La sortie du personnel | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED (produite le 30/09, sans combat, à confirmer) | idem | — |
-| RF03, RF07–RF23 | voir `agent/specs/MAPS_V1_INVENTORY.md` | INVENTORIED (blockouts V1, ennemis Freedoom) ; RF03 (Batignolles) gardé pour sa place du roman ; RF06 finit sur l'écran titre tant que RF07 n'est pas produit | — | — |
+| RF04 | Luna Park - Personnel technique | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED (recomposée le 01/10 sur le parc partagé ; surfaces pilotes de Codex) | candidate cumulée du 01/10 | — |
+| RF05 | Les machines continuent | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED (recomposée le 01/10 ; machines et voûte de Codex) | idem | — |
+| RF06 | La sortie du personnel | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED (recomposée le 01/10, sans combat, décidé) | idem | — |
+| RF07 | Jerma - Façade maritime | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED (produite le 01/10, sans combat, ressources provisoires d'Opus) ; finit sur l'écran de fin tant que RF08 n'est pas produit | idem | — |
+| RF03, RF08–RF23 | voir `agent/specs/MAPS_V1_INVENTORY.md` | INVENTORIED (blockouts V1, ennemis Freedoom) ; RF03 (Batignolles) gardé pour sa place du roman ; RF08–RF12 découpées (`maps/RF07_RF12_DECOUPAGE.md`) | — | — |
 
 ### Arsenal (liste du dossier maître, `legacy/import/RF2_DOSSIER_MAITRE.md` §10)
 
