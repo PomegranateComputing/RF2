@@ -10,6 +10,12 @@ Usage: python scripts/production/view_check_pk3.py views.json out.pk3 [wait_tics
 hide: monsters and shootable characters are made invisible (not removed) before the first view, so that none of
 them stands between a camera and what it checks; say so wherever the views are shown.
 give: inventory given to the player before the first view (a carried object shown by the HUD).
+alt=Class:dx:dy,...: mirror-only figures (RFViktorMirrorAlt subclasses) shown beside the player, shifted by dx, dy, as
+the dance hall's mirror scene shows them (RF04), so that a view of the mirrors can be taken without playing it.
+tex=SCENE:TEXTURE,...: the middle texture of the lines of a scene (UDMF user_scene) set as the scene sets it (the
+second state of a sign, RF04's key board after the key is taken).
+code=STATEMENTS: ZScript run once before the first view in the probe player's PlayerThink (a HUD state to show, e.g.
+RF07's watch: let j = RFJerma(EventHandler.Find('RFJerma')); if (j) j.watchTic = Level.maptime;).
 Each view prints RF_VIEWCHECK index=... label=... t=<tic> before its screenshot; a tic strip in the top-left corner of
 every picture shows the tic it was drawn at (scripts/production/ticcode.py reads it back): a picture that does not show
 the tic of its view is a stale frame.
@@ -20,10 +26,21 @@ views = json.load(open(sys.argv[1], encoding='utf-8'))
 out = sys.argv[2]
 rest = sys.argv[3:]
 give = [c for a in rest if a.startswith('give=') for c in a[5:].split(',') if c]
-rest = [a for a in rest if not a.startswith('give=')]
+alts = [c.split(':') for a in rest if a.startswith('alt=') for c in a[4:].split(',') if c]
+texs = [c.split(':') for a in rest if a.startswith('tex=') for c in a[4:].split(',') if c]
+codes = [a[5:] for a in rest if a.startswith('code=')]
+rest = [a for a in rest if not a.startswith(('give=', 'alt=', 'tex=', 'code='))]
 wait = int(rest[0]) if len(rest) > 0 else 180          # after the level title card
 hide = 'true' if len(rest) > 1 and rest[1] == 'hide' else 'false'
 gives = ''.join('                GiveInventory("%s", 1);\n' % c for c in give)
+gives += ''.join('                { let f = RFViktorMirrorAlt(Spawn("%s", Pos)); if (f != null) f.shift = (%s, %s); }\n'
+                 % (c, float(dx), float(dy)) for (c, dx, dy) in alts)
+for (sc, tx) in texs:
+    gives += ('                { int n = 0; TextureID id = TexMan.CheckForTexture("%s", TexMan.Type_Any);' % tx +
+              ' for (int i = 0; i < Level.Lines.Size(); i++) if (Level.Lines[i].GetUDMFInt("user_scene") == %d)' % int(sc) +
+              ' { n++; for (int s = 0; s < 2; s++) if (Level.Lines[i].sidedef[s] != null) Level.Lines[i].sidedef[s].SetTexture(Side.mid, id); }' +
+              ' Console.Printf("RF_VIEWCHECK_TEX scene=%d texture=%s valid=%%d lines=%%d", id.IsValid(), n); }\n' % (int(sc), tx))
+gives += ''.join('                { ' + c + ' }' + chr(10) for c in codes)
 labels = ', '.join('"%s"' % v[0].replace('"', "'") for v in views)
 cols = [', '.join(str(float(v[i])) for v in views) for i in range(1, 6)]
 doors = ', '.join(str(int(v[6]) if len(v) > 6 else 0) for v in views)
@@ -108,4 +125,5 @@ class RFTicStrip : EventHandler
 with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
     z.writestr('ZSCRIPT.viewcheck', zs)
     z.writestr('MAPINFO', 'gameinfo\n{\n    PlayerClasses = "RFViewCheckPlayer"\n    AddEventHandlers = "RFTicStrip"\n}\n')
-print('view check pk3', out, len(views), 'views', 'hide' if hide == 'true' else '', ('give ' + ','.join(give)) if give else '')
+print('view check pk3', out, len(views), 'views', 'hide' if hide == 'true' else '', ('give ' + ','.join(give)) if give else '',
+      ('alt ' + ','.join(a[0] for a in alts)) if alts else '')

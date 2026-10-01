@@ -28,6 +28,9 @@ def main():
     ap.add_argument('out')
     ap.add_argument('--hide', action='store_true', help='monsters made invisible during the views')
     ap.add_argument('--give', default='', help='inventory given before the first view (comma separated)')
+    ap.add_argument('--alt', default='', help='mirror-only figures beside the player: Class:dx:dy,... (view_check_pk3)')
+    ap.add_argument('--tex', default='', help='scene lines textured as their scene sets them: SCENE:TEXTURE,...')
+    ap.add_argument('--code', default='', help='ZScript statements run once before the first view (view_check_pk3)')
     ap.add_argument('--size', default='1920x1080')
     ap.add_argument('--wait', type=int, default=180, help='tics before the first view (title card)')
     ap.add_argument('--name', default=None, help='run name (logs, shots); default from the output folder')
@@ -43,6 +46,12 @@ def main():
         cmd.append('hide')
     if a.give:
         cmd.append('give=' + a.give)
+    if a.alt:
+        cmd.append('alt=' + a.alt)
+    if a.tex:
+        cmd.append('tex=' + a.tex)
+    if a.code:
+        cmd.append('code=' + a.code)
     subprocess.run(cmd, check=True, capture_output=True)
     w, h = (int(x) for x in a.size.split('x'))
     status, text, shots = devrun.run(pk3, name, a.map.upper(), seconds=60 + 3 * len(views), width=w, height=h,
@@ -62,7 +71,7 @@ def main():
         rows.append(dict(index=i, label=label, tic=t, kept=p is not None, file=dst.name if p else None))
     missing = [v[0] for v in views if v[0] not in {r['label'] for r in rows}]
     report = dict(build=str(pk3), build_sha256=hashlib.sha256(pk3.read_bytes()).hexdigest(), map=a.map.upper(),
-                  views=a.views, hide=a.hide, give=a.give, size=a.size, status=status, rows=rows, not_reached=missing)
+                  views=a.views, hide=a.hide, give=a.give, alt=a.alt, tex=a.tex, code=a.code, size=a.size, status=status, rows=rows, not_reached=missing)
     (out / 'vues.json').write_text(json.dumps(report, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')
     kept = sum(r['kept'] for r in rows)
     print(f'{a.map.upper()}: {kept}/{len(views)} vues gardees -> {out}' + (f' ; non atteintes : {missing}' if missing else ''))
