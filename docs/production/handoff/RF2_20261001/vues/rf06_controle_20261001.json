@@ -1,0 +1,11 @@
+[
+ ["C01_porte_de_service_fermee", 48, 40, 0, 270, 0],
+ ["C02_couloir_des_chambres", 48, 100, 0, 90, 0],
+ ["C03_chambre_404", 104, 632, 0, 0, 0],
+ ["C04_salle_des_peaux", 48, 1104, 0, 90, -6],
+ ["C05_la_descente", 48, 1310, 0, 90, 10],
+ ["C06_carrefour_l_autre_aile", 40, 2224, 0, 180, 0],
+ ["C07_la_cage_d_escalier", -392, 2224, 0, 180, 35],
+ ["C08_premier_virage", 160, 2224, 0, 0, 0],
+ ["C09_vers_le_jour", 784, 1900, 0, 270, 0]
+]

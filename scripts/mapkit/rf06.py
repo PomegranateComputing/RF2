@@ -115,10 +115,10 @@ m.thing(48, 900, T_AMB, args=(10, 70))                                 # the ven
 # side exploration A: door 404 ajar (piece 4, east wall), an empty room
 y404 = 64 + 4 * PIECE
 m.box(W, y404 + 32, W + 16, y404 + 80, COR, floor=pieces[4][4], ceil=pieces[4][4] + 80, light=34)   # the doorway
-m.box(W + 16, y404 - 16, W + 160, y404 + 128, ROOM, floor=pieces[4][4], ceil=pieces[4][4] + 104)
+m.box(W + 16, y404 - 16, W + 160, y404 + 128, ROOM, floor=pieces[4][4], ceil=pieces[4][4] + 104, light=44)
 m.raise_block(W + 80, y404 + 48, W + 144, y404 + 112, 16, 'RFF_WOOD', 'RF4_ATEL')                 # the iron bedstead
 sign(W, y404 + 80, W, y404 + 32, 'RF6_N404', pieces[4][4] + 62)                                   # 404, crossed out, by its door
-m.thing(W + 88, y404 + 24, T_FLICKER, args=(150, 140, 120, 90, 40), z=80)
+m.thing(W + 88, y404 + 56, T_FLICKER, args=(150, 140, 120, 136, 104), z=88, angle=24)            # the bulb over the bed
 
 # ---------------------------------------------------------------- 3. the hall of skins (graffiti under lifting paint)
 hall_y0, hall_y1 = 64 + 8 * PIECE, 64 + 8 * PIECE + 192

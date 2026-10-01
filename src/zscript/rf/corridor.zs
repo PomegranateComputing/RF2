@@ -18,6 +18,7 @@ class RFCorridor : EventHandler
     Array<int> pieceOf;          // sector index -> piece (-1 elsewhere); rebuilt on every load
     int pieces;                  // the pieces of the map's corridor (counted from the sector tags)
     int litPiece;                // the piece whose lamps are on around it (-1 none yet)
+    bool synced;                 // the lamps set to litPiece since the map (or the save) was loaded
     bool voicesDone, rumbleDone, erreurDone, paintDone;
     int seqTic;                  // voices sequence
     Actor beam;
@@ -47,6 +48,7 @@ class RFCorridor : EventHandler
             }
         }
         if (!e.IsSaveGame) litPiece = -1;
+        synced = false;
     }
 
     void SetLamp(int piece, bool on)
@@ -56,15 +58,16 @@ class RFCorridor : EventHandler
         while ((a = it.Next()) != null) { if (on) a.Activate(null); else a.Deactivate(null); }
     }
 
-    // The lamps of the pieces from one behind to three ahead are on; the others are out.
-    void Light(int piece)
+    // The lamps of the pieces from one behind to three ahead are on; the others are out. all: set every lamp, not
+    // only those that change.
+    void Light(int piece, bool all = false)
     {
-        if (piece == litPiece) return;
+        if (piece == litPiece && !all) return;
         for (int i = 0; i < pieces; i++)
         {
             bool on = i >= piece && i <= piece + 3;
             bool was = litPiece >= 0 && i >= litPiece && i <= litPiece + 3;
-            if (on != was) SetLamp(i, on);
+            if (all || on != was) SetLamp(i, on);
         }
         litPiece = piece;
     }
@@ -74,10 +77,17 @@ class RFCorridor : EventHandler
         if (!active || !playeringame[0]) return;
         Actor pl = players[0].mo;
         if (pl == null) return;
+        // A lamp attaches its light in its first tic (DynamicLight.PostBeginPlay): one switched on before that stays
+        // dark, so the first lighting waits for tic 2, and sets every lamp (after a load as well).
+        if (Level.maptime < 2) return;
         int sec = pl.CurSector.Index();
         int piece = sec >= 0 && sec < pieceOf.Size() ? pieceOf[sec] : -1;
-        if (piece >= 0) Light(piece);
-        else if (litPiece < 0) Light(0);
+        if (!synced)
+        {
+            synced = true;
+            Light(piece >= 0 ? piece : max(litPiece, 0), true);
+        }
+        else if (piece >= 0) Light(piece);
         TickVoices(pl);
         if (beam != null && --beamTics > 0) beam.SetOrigin(beam.Pos + (0, -4, 0), true);
         else if (beam != null) { beam.Deactivate(null); beam = null; }

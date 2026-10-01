@@ -26,9 +26,17 @@ Façade maritime » (l. 733 et suivantes).
 | La pente s'accentue, l'air se réchauffe ; des voix : « Tu l'as vu où ? » « Dans l'autre aile. » « Il n'y a pas d'autre aile. » ; un rire ; un faisceau de lampe balaie le mur (719–727) | voix et faisceau **non hostiles** (les explorateurs du Jerma, RF07) |
 | Le couloir tourne deux fois ; la seconde courbe n'est pas assez large pour la longueur parcourue ; une ouverture découpe le jour (729) | géométrie qui ne referme pas : impossible à parcourir en sens inverse |
 
-## Question ouverte
+## Décision et recomposition (01/10)
 
-Le texte ne contient ni poursuite ni combat dans ce couloir. Deux voies, à trancher avant construction complète :
-(a) une carte courte de respiration, sans combat (le couloir seul, quelques minutes) ; (b) le personnel de Sainte-Anne
-suit Viktor dans le couloir jusqu'à la bascule vers 2022, où il disparaît. Proposition d'Opus : (a), la tension venant
-du son, de la lumière et de la géométrie, conforme au texte.
+Choix retenu le 01/10 sur délégation du propriétaire : **sans combat** (voie a). Mandat : au moins cinq moments
+spatiaux et deux explorations latérales. La carte (`scripts/mapkit/rf06.py`) suit le texte : la porte de service
+refermée et les vagues ; le couloir des chambres aux numéros pochés puis barrés (117, 404, 017) ; une salle où la
+peinture se soulève sur les graffitis ; la descente, plus raide et plus chaude ; le carrefour des voix et le faisceau
+de lampe ; les deux virages et le jour. ERREUR Ø cinq fois, à 640–960 u d'intervalle, jamais le même. Explorations
+latérales (adaptation, aucun texte ajouté) : la chambre 404 entrouverte, vide, un lit de fer sans matelas ; au
+carrefour, un passage vers « l'autre aile » qui s'arrête à une rambarde au-dessus d'une cage d'escalier sans fond visible.
+
+Lumière (01/10, après les vues de la candidate 1502) : les ampoules des quatre premières pièces restaient éteintes
+(allumées au tic 0, avant que le moteur attache leur lumière au premier tic de la lampe) ; le premier allumage attend
+le tic 2 et règle toutes les lampes, au chargement aussi (`corridor.zs`). Chambre 404 : ampoule au-dessus du lit,
+plus forte, salle à 44.
