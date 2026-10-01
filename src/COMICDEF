@@ -1,0 +1,39 @@
+# Transition pages between chapters (src/zscript/rf/comics.zs). One scene per transition:
+#   scene <ID> <FROM MAP> <TO MAP> <page image, 1920 x 1080, art without text>
+#   panel <x> <y> <w> <h>                       (pixels of the page, in reading order)
+#   caption <after panel> <$LANGUAGE key> <x> <y> <w> <h>   (cream box drawn by the game; the text is composed by the game)
+# A scene plays only when its page image is in the build; otherwise the chapter ends on its exit text as before.
+# Layout below: the common four-panel layout of the contract (large place, two details, the opening) until Codex's
+# planche.json gives the real panels of each page. RF06 -> RF07 waits for RF07.
+
+scene RF01_RF02 RF01 RF02 graphics/comics/RF01_RF02.png
+panel 24 24 1180 640
+panel 1228 24 668 310
+panel 1228 354 668 310
+panel 24 688 1872 368
+caption 1 $RF_COMIC_RF01_RF02_1 48 48 560 0
+caption 4 $RF_COMIC_RF01_RF02_2 1300 712 560 0
+
+scene RF02_RF04 RF02 RF04 graphics/comics/RF02_RF04.png
+panel 24 24 1180 640
+panel 1228 24 668 310
+panel 1228 354 668 310
+panel 24 688 1872 368
+caption 1 $RF_COMIC_RF02_RF04_1 48 48 560 0
+caption 4 $RF_COMIC_RF02_RF04_2 1300 712 560 0
+
+scene RF04_RF05 RF04 RF05 graphics/comics/RF04_RF05.png
+panel 24 24 1180 640
+panel 1228 24 668 310
+panel 1228 354 668 310
+panel 24 688 1872 368
+caption 1 $RF_COMIC_RF04_RF05_1 48 48 560 0
+caption 4 $RF_COMIC_RF04_RF05_2 1300 712 560 0
+
+scene RF05_RF06 RF05 RF06 graphics/comics/RF05_RF06.png
+panel 24 24 1180 640
+panel 1228 24 668 310
+panel 1228 354 668 310
+panel 24 688 1872 368
+caption 1 $RF_COMIC_RF05_RF06_1 48 48 560 0
+caption 4 $RF_COMIC_RF05_RF06_2 1300 712 560 0

@@ -108,6 +108,46 @@ class RFStatusBar : BaseStatusBar
         }
     }
 
+    // The ending's page (comics.zs): the whole page kept at 16:9 inside the screen (bands in 4:3 and 21:9), the panels
+    // not yet reached in the dark, the captions of the panels reached on cream boxes in their zones, the keys in a
+    // small line under the page. Sizes follow the page, with a floor so that a caption stays readable.
+    void DrawComic(RFDirector d, double ticFrac)
+    {
+        int sw = Screen.GetWidth(), sh = Screen.GetHeight();
+        Screen.Clear(0, 0, sw, sh, Color(255, 0, 0, 0));
+        double pw = min(sw, sh * 16.0 / 9.0), ph = pw * 9.0 / 16.0;
+        double hint = sh - ph > sh * 0.05 ? 0 : ph * 0.035;       // room for the keys line when there is no band
+        ph -= hint;
+        pw = ph * 16.0 / 9.0;
+        double px = (sw - pw) / 2, py = (sh - ph - hint) / 2;
+        double k = pw / 1920.0;
+        double fade = clamp((d.comicTics + ticFrac) / 25.0, 0.0, 1.0);
+        Screen.DrawTexture(d.comicTex, false, px, py, DTA_DestWidthF, pw, DTA_DestHeightF, ph, DTA_Alpha, fade);
+        let c = d.comic;
+        for (int i = d.comicStep; i < c.PanelCount(); i++)
+            Screen.Dim(0, 0.88, int(px + c.panels[i * 4] * k), int(py + c.panels[i * 4 + 1] * k),
+                       int(c.panels[i * 4 + 2] * k + 1), int(c.panels[i * 4 + 3] * k + 1));
+        Font f = labelFont.mFont;
+        double fs = max(ph * 0.034, 18.0) / f.GetHeight();
+        for (int i = 0; i < c.captions.Size(); i++)
+        {
+            if (c.after[i] > d.comicStep) continue;
+            double zx = px + c.zones[i * 4] * k, zy = py + c.zones[i * 4 + 1] * k, zw = c.zones[i * 4 + 2] * k;
+            BrokenLines lines = f.BreakLines(StringTable.Localize(c.captions[i]), int((zw - 16) / fs));
+            double lh = f.GetHeight() * fs * 1.2;
+            double bh = lines.Count() * lh + 12;
+            Screen.Dim(Color(255, 232, 222, 196), 0.94 * fade, int(zx), int(zy), int(zw), int(bh));
+            Screen.Dim(0, 0.9 * fade, int(zx), int(zy), int(zw), 2);
+            for (int j = 0; j < lines.Count(); j++)
+                Screen.DrawText(f, Font.CR_BLACK, zx + 8, zy + 6 + j * lh, lines.StringAt(j), DTA_ScaleX, fs, DTA_ScaleY, fs, DTA_Alpha, fade);
+        }
+        String keys = String.Format("%s     %s", KeyPrompt("+use", "$RF_COMIC_NEXT"), StringTable.Localize("$RF_COMIC_PASS"));
+        double ks = max(sh * 0.024, 15.0) / f.GetHeight();
+        double ky = hint > 0 ? py + ph + hint * 0.15 : py + ph + (sh - ph) / 4 - f.GetHeight() * ks / 2;
+        Screen.DrawText(f, Font.CR_GREY, px + pw - f.StringWidth(keys) * ks - 8, ky, keys,
+                        DTA_ScaleX, ks, DTA_ScaleY, ks, DTA_Alpha, 0.8 * fade);
+    }
+
     // Pickup lines (PRINT_LOW) and other notify lines. RF_DEV_ markers stay in the console and
     // the log, never on the player's screen.
     override bool ProcessNotify(EPrintLevel printlevel, String outline)
@@ -333,7 +373,8 @@ class RFStatusBar : BaseStatusBar
 
         if (director != null && director.outro)
         {
-            DrawOutro(director.outroTics + ticFrac, s);
+            if (director.comic != null) DrawComic(director, ticFrac);
+            else DrawOutro(director.outroTics + ticFrac, s);
             return;
         }
         // Waking up: the first second of a new level fades in from black (titleTics runs 175 -> 0).

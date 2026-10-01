@@ -261,7 +261,7 @@ RF_ITEM_ENVELOPE = "Enveloppe de Cochin, non ouverte";
 
 // RF06 - La sortie du personnel (novel l. 709-731; docs/production/maps/RF06_FICHE.md)
 RF_RF06_DATE = "Sous le Luna Park, ou ailleurs";
-RF_RF06_EXIT = "Il sortit.\n\nLe soleil frappait une terrasse couverte de gravats. La mer occupait tout l'horizon,\ndure, métallique, travaillée par le vent.";
+RF_RF06_EXIT = "Il sortit.\n\nLe soleil frappait une terrasse couverte de gravats. La mer occupait tout l'horizon,\ndure, métallique, travaillée par le vent.\n\nFin provisoire : le chapitre du Jerma est en préparation.";
 RF_OBJ_RF06_0 = "Suivre le couloir.";
 RF_RF06_ERREUR = "ERREUR Ø revient tous les vingt ou trente mètres. Parfois en noir, parfois en rouge, parfois gravé dans le béton.\nViktor ne compte pas. Compter transforme les répétitions en système.";
 RF_RF06_PAINT = "Des couches de peinture se soulèvent comme des peaux brûlées. Dessous, des graffitis, des signatures, des dates.\nAnglais, français, maltais, italien, alphabet cyrillique. Des pays entiers ont laissé une initiale.";
@@ -325,3 +325,16 @@ MNU_DELETESG = "Effacer cette sauvegarde :";
 TXT_YES = "Oui";
 TXT_NO = "Non";
 NEWSAVE = "Nouvelle sauvegarde";
+// Transition pages between chapters (comics.zs, COMICDEF): keys and captions (proposals of 01/10, not quotations)
+RF_COMIC_NEXT = "suivant";
+RF_COMIC_PASS = "maintenir pour passer";
+RF_COMIC_RF01_RF02_1 = "Sainte-Anne avait ouvert ses portes.";
+RF_COMIC_RF01_RF02_2 = "Le service, lui, continuait.";
+RF_COMIC_RF02_RF04_1 = "À la porte Maillot, la grille était fermée.";
+RF_COMIC_RF02_RF04_2 = "La porte du personnel attendait.";
+RF_COMIC_RF04_RF05_1 = "Sous le parc, un moteur battait encore.";
+RF_COMIC_RF04_RF05_2 = "Viktor avait la clef de la sous-station.";
+RF_COMIC_RF05_RF06_1 = "Les machines avaient repris leur service.";
+RF_COMIC_RF05_RF06_2 = "Au fond de la salle de danse, la porte donnait sur un bruit de vagues.";
+RF_COMIC_RF06_RF07_1 = "Le couloir se termina dans la lumière.";
+RF_COMIC_RF06_RF07_2 = "Devant Viktor : le Jerma, la mer, des gravats.";

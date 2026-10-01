@@ -30,6 +30,10 @@ class RFPlayer : PlayerPawn
         else if (dev != null && dev.weaponShots) dev.DriveWeaponShots(self);
         else if (dev != null && (dev.aimShots || dev.soundProbe)) dev.DriveProbe(self);
         else if (dev != null && dev.portraitMode > 0) dev.DrivePortrait(self);
+        // The keys as the player (or a test driving the player) pressed them this tic, before the engine's freeze
+        // filters them: the ending's page and the arrival in the next chapter read them (RFDirector).
+        let director = RFDirector(EventHandler.Find('RFDirector'));
+        if (director != null && player != null && player.mo == self) director.inputButtons = player.cmd.buttons;
         Super.PlayerThink();
         Footsteps();
     }

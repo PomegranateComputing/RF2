@@ -12,6 +12,16 @@ class RFDirector : EventHandler
     int outroTics;
     int notesRead;
     Actor promptThing;     // the note or scene object the prompt designates (chapters after RF01: see WorldTick)
+    // The ending's page (comics.zs): the scene of "this map -> next map" when its image is in the build.
+    RFComicScene comic;
+    TextureID comicTex;
+    int comicStep;         // panels revealed, 1..PanelCount
+    int comicTics;         // tics since the page started
+    int useHeld;           // tics the use key is held on the page (one second passes the page)
+    int lastButtons;
+    int inputButtons;      // the player's keys of the last tic, written by RFPlayer.PlayerThink
+    bool arrivalHold;      // arriving from the previous chapter: held until every button is released
+    int arrivalTics, releasedTics;
 
     override void WorldLoaded(WorldEvent e)
     {
@@ -19,7 +29,11 @@ class RFDirector : EventHandler
         outro = false;
         exiting = false;
         outroTics = 0;
-        ReleaseOutroHold();
+        comic = null;
+        // A save made during an ending (exit text or page) or during the arrival hold reloads as it was saved: the
+        // director's state and the player's flags come back from the save (verified 01/10: the page resumes at the
+        // panel reached, then the next chapter; the arrival hold ends when the keys are up). A new map: the hold.
+        if (!e.IsSaveGame) BeginArrivalHold();
         if (!e.IsSaveGame)
         {
             objective = "";
@@ -173,6 +187,77 @@ class RFDirector : EventHandler
             who.player.cheats |= CF_TOTALLYFROZEN | CF_GODMODE;
             who.Vel = (0, 0, 0);
         }
+        comic = RFComicScene.Find(Level.MapName, Level.NextMap);
+        if (comic != null)
+        {
+            comicTex = TexMan.CheckForTexture(comic.page, TexMan.Type_Any);
+            if (!comicTex.IsValid() || comic.PanelCount() == 0) comic = null;
+        }
+        comicStep = 1;
+        comicTics = 0;
+        useHeld = 0;
+        lastButtons = inputButtons;
+        if (DevLog())
+            Console.Printf("RF_DEV_ENDING map=%s next=%s page=%s t=%d", Level.MapName, Level.NextMap, comic != null ? comic.id : "-", Level.maptime);
+    }
+
+    static bool DevLog()
+    {
+        return CVar.GetCVar('rf_dev_log').GetBool() || CVar.GetCVar('rf_dev_autopilot').GetBool();
+    }
+
+    // The page of the ending: Use or Fire shows the next panel, then closes the page; Use held one second, or Jump,
+    // passes it. Edges only: a key already down when the page starts does nothing until it is released and pressed.
+    void TickComic()
+    {
+        comicTics++;
+        if (exiting || !playeringame[0]) return;
+        int b = inputButtons;
+        bool pressUse = (b & BT_USE) && !(lastButtons & BT_USE);
+        bool pressFire = (b & BT_ATTACK) && !(lastButtons & BT_ATTACK);
+        bool pressJump = (b & BT_JUMP) && !(lastButtons & BT_JUMP);
+        lastButtons = b;
+        if (comicTics < 25) return;                       // the page fades in
+        useHeld = (b & BT_USE) ? useHeld + 1 : 0;
+        bool autoStep = CVar.GetCVar('rf_dev_autopilot').GetBool() && comicTics % 70 == 0;
+        if (useHeld >= 35 || pressJump) { FinishComic("passee"); return; }
+        if (pressUse || pressFire || autoStep)
+        {
+            if (comicStep < comic.PanelCount())
+            {
+                comicStep++;
+                if (DevLog()) Console.Printf("RF_DEV_COMIC step=%d/%d t=%d", comicStep, comic.PanelCount(), Level.maptime);
+            }
+            else FinishComic(autoStep ? "lue_pilote" : "lue");
+        }
+    }
+
+    void FinishComic(String how)
+    {
+        exiting = true;
+        if (DevLog()) Console.Printf("RF_DEV_COMIC end=%s scene=%s t=%d", how, comic.id, Level.maptime);
+        Level.ExitLevel(0, false);
+    }
+
+    // Arriving from the previous chapter (the token of its ending is here): the player stays held until no button
+    // is down for two tics (four seconds at most), so that the press that closed the page never fires or uses.
+    void BeginArrivalHold()
+    {
+        arrivalHold = playeringame[0] && players[0].mo != null && players[0].mo.FindInventory('RFOutroHold') != null;
+        arrivalTics = 0;
+        releasedTics = 0;
+        if (!arrivalHold) ReleaseOutroHold();
+    }
+
+    void TickArrival()
+    {
+        arrivalTics++;
+        int b = inputButtons;
+        releasedTics = (b & (BT_ATTACK | BT_ALTATTACK | BT_USE | BT_JUMP)) ? 0 : releasedTics + 1;
+        if (releasedTics < 2 && arrivalTics <= 35 * 4) return;
+        arrivalHold = false;
+        ReleaseOutroHold();
+        if (DevLog()) Console.Printf("RF_DEV_ARRIVAL map=%s released t=%d cheats=%d", Level.MapName, Level.maptime, players[0].cheats);
     }
 
     void ReleaseOutroHold()
@@ -186,10 +271,12 @@ class RFDirector : EventHandler
 
     override void WorldTick()
     {
+        if (arrivalHold && playeringame[0]) TickArrival();
         if (outro)
         {
             outroTics++;
             usePrompt = 0;
+            if (comic != null) { TickComic(); return; }
             bool skip = outroTics > 35 * 3 && playeringame[0] && (players[0].cmd.buttons & (BT_USE | BT_ATTACK));
             if (!exiting && (outroTics >= 35 * 11 || skip))
             {
