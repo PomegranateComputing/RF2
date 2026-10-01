@@ -3,7 +3,7 @@ r"""The controls of the mandate of 01/10 on a frozen candidate (sequential: the 
 
   chain RF01 -> RF07 from a new game with a load in the middle; RF01, RF02, RF04, RF05, RF06, RF07 runs A (traverse)
   and B (save, quit, reload, death where the map has enemies, resume, exit); the comic page RF01_RF02 (read, pass, fire,
-  save during the page, load) and its formats 16:9, 21:9, 4:3; control views (RF02 reflection before/after, RF02 target
+  save during the page, load), and the five pages read to the next chapter in 16:9, 21:9, 4:3; control views (RF02 reflection before/after, RF02 target
   views and sky-height spots, RF04 pilot zone, RF04 mirrors with the three outfits, RF05, RF06, RF07 with the watch); the
   orderly's walk in RF04; native sound film. The launchers from C:\ are checked after export (export_candidate.py).
 
@@ -20,22 +20,27 @@ OLD = ROOT / 'dist' / 'candidates' / 'RF2_CUMUL_20260930_1821' / 'RF2_CUMUL.pk3'
 sys.path.insert(0, str(ROOT / 'scripts'))
 import devrun  # noqa: E402
 
-COMICS = [('read', (1920, 1080)), ('pass', (1920, 1080)), ('fire', (1920, 1080)), ('save', (1920, 1080)),
-          ('load', (1920, 1080)), ('shots_16x9', (1920, 1080)), ('shots_21x9', (2560, 1080)), ('shots_4x3', (1440, 1080))]
+SIZES = {'16x9': (1920, 1080), '21x9': (2560, 1080), '4x3': (1440, 1080)}
+# (scene, probe mode, size): the flow of the first page with every input; each other page read to the next chapter and
+# shot in the three formats
+COMICS = [('RF01_RF02', m, '16x9') for m in ('read', 'pass', 'fire', 'save', 'load')] + \
+         [(s, 'shots', f) for s in ('RF01_RF02', 'RF02_RF04', 'RF04_RF05', 'RF05_RF06', 'RF06_RF07') for f in SIZES]
 
 
-def comic(pk3, out, tag, size):
-    """The page RF01_RF02 with the probe of comic_flow_probe.py (mode = tag before '_'); 'load' loads the save of 'save'."""
-    mode = tag.split('_')[0]
-    c = out / 'planche_RF01_RF02'
+def comic(pk3, out, scene, mode, fmt):
+    """A page with the probe of comic_flow_probe.py; 'load' loads the save of 'save'. Returns the record."""
+    first, nxt = scene.split('_')
+    tag = f'{mode}_{fmt}' if mode == 'shots' else mode
+    c = out / f'planche_{scene}'
     c.mkdir(exist_ok=True)
-    probe = Path(os.environ.get('TEMP', '.')) / f'comic_{tag}.pk3'
-    subprocess.run([PY, 'scripts/production/comic_flow_probe.py', str(probe), mode, 'RF01_RF02', 'none'], cwd=ROOT,
+    probe = Path(os.environ.get('TEMP', '.')) / f'comic_{scene}_{tag}.pk3'
+    subprocess.run([PY, 'scripts/production/comic_flow_probe.py', str(probe), mode, scene, 'none'], cwd=ROOT,
                    check=True, capture_output=True)
     loadgame = None
     if mode == 'load':
         loadgame = sorted(glob.glob(str(ROOT / 'build/dev/saves/auto*.zds')), key=os.path.getmtime)[-1]
-    status, text, shots = devrun.run(pk3, f'comic_{tag}', 'RF01', seconds=150, width=size[0], height=size[1],
+    w, h = SIZES[fmt]
+    status, text, shots = devrun.run(pk3, f'comic_{scene}_{tag}', first, seconds=150, width=w, height=h,
                                      marker='RF_DEV_UI_DONE', loadgame=loadgame, extra=['-file', str(probe)])
     lines = [l for l in text.splitlines() if l.startswith(('RF_COMICPROBE', 'RF_DEV_COMIC', 'RF_DEV_ARRIVAL',
                                                            'RF_DEV_ENDING', 'RF_DEV_LOADED'))]
@@ -43,8 +48,8 @@ def comic(pk3, out, tag, size):
     for i, p in enumerate(sorted(shots.glob('*.png'))):
         shutil.copy2(p, c / f'{tag}_{i:02d}.png')
     arrivals = [l for l in lines if l.startswith('RF_DEV_ARRIVAL')]
-    return dict(status=status, rf02_reached=any('map=RF02' in l for l in lines), arrival=arrivals[-1] if arrivals else None,
-                shots=len(list(shots.glob('*.png'))))
+    return dict(status=status, next_reached=any(f'map={nxt}' in l for l in lines), page=any(f'comic={scene}' in l for l in lines),
+                arrival=arrivals[-1] if arrivals else None, shots=len(list(shots.glob('*.png'))))
 
 
 def main():
@@ -94,11 +99,12 @@ def main():
                         seconds=round(time.time() - t0), last=last, at=time.strftime('%Y-%m-%d %H:%M'))
         print(f'[{tag}] rc={r.returncode} {round(time.time() - t0)}s :: {last[-1] if last else ""}', flush=True)
         rec_path.write_text(json.dumps(rec, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')
-    for (tag, size) in COMICS:
-        if only and 'planche_' + tag not in only and 'planche' not in only:
+    for (scene, mode, fmt) in COMICS:
+        tag = f'planche_{scene}_{mode}' + (f'_{fmt}' if mode == 'shots' else '')
+        if only and tag not in only and 'planche' not in only:
             continue
-        rec['planche_' + tag] = r = comic(pk3, out, tag, size)
-        print(f'[planche_{tag}] {r["status"]} RF02={r["rf02_reached"]} {r["arrival"] or ""}', flush=True)
+        rec[tag] = r = comic(pk3, out, scene, mode, fmt)
+        print(f'[{tag}] {r["status"]} page={r["page"]} suite={r["next_reached"]} {r["arrival"] or ""}', flush=True)
         rec_path.write_text(json.dumps(rec, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')
 
 

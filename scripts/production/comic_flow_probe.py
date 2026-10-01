@@ -114,7 +114,7 @@ def test_page(caps):
     return b.getvalue()
 
 
-SCENES = {'RF01_RF02': 'RF01', 'RF02_RF04': 'RF02', 'RF04_RF05': 'RF04', 'RF05_RF06': 'RF05'}
+SCENES = {'RF01_RF02': 'RF01', 'RF02_RF04': 'RF02', 'RF04_RF05': 'RF04', 'RF05_RF06': 'RF05', 'RF06_RF07': 'RF06'}
 with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
     z.writestr('ZSCRIPT.comicprobe', PROBE.replace('%(mode)s', mode).replace('%(from)s', SCENES[scene]).replace('%%', '%'))
     z.writestr('MAPINFO', 'gameinfo\n{\n    PlayerClasses = "RFComicProbe"\n}\n')

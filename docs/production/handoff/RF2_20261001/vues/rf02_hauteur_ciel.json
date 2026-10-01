@@ -2,7 +2,9 @@
  ["S1_pharmacie_renfoncement", 1472.0, 440.0, 0, 90, -28.0],
  ["S2_grille_de_Cochin", 1216.0, 120.0, 0, 90, -28.0],
  ["S3_porte_de_la_Sante", 3200.0, 220.0, 0, 90, -28.0],
- ["S4_grille_et_renfoncements_x1008", 900.0, 900.0, 0, 0, -22.0],
+ ["S4_renfoncement_x1008_depuis_la_rue", 1100.0, 712.0, 0, 180, -20.0],
+ ["S4b_renfoncement_x1008_sud", 1100.0, 1416.0, 0, 180, -20.0],
+ ["S4c_fenetres_x1344", 1250.0, 1128.0, 0, 0, -20.0],
  ["S5_palissade_porte_Maillot", -2072.0, 3080.0, 0, 90, -24.0],
  ["S6_vue_large_pharmacie", 1472.0, 360.0, 0, 70, -12.0]
 ]
