@@ -1,0 +1,259 @@
+{
+  "batch": "AUDIO_TIMING_01",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/AUDIO_TIMING_01",
+  "manifest_sha256": "dc617171f0fef33c054df73c69b2bc8bdf6c19a134a57596341f5f6df0e3947d",
+  "status": "candidate_for_opus_engine_and_listening_review",
+  "imported": "2026-10-01 15:47",
+  "by": "Opus (integration)",
+  "head_before": "bc4266e304fe3e4ade7c9427a76d52da1ba088fb",
+  "base_drift_reason": null,
+  "counts": {
+    "nouveau": 16,
+    "remplace_base_conforme": 8,
+    "retire_de_src_banc": 16
+  },
+  "files": [
+    {
+      "target": "src/sounds/bench/w10/raise.wav",
+      "delivered": "runtime/sounds/bench/w10/raise.wav",
+      "sha256": "dae92ab2397f90a7e6f932bab6b5a13bd9c553eea6f9d52d9c498965125f9bba",
+      "before": null,
+      "base_sha256": "3f2d78db3f88ae412ad12b7c51136fee0b9e36fec54f46f8ae44515939b9ed6d",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/browning/slide.wav",
+      "delivered": "runtime/sounds/browning/slide.wav",
+      "sha256": "f6ce018d60001633ed622c68c9fea6236c88eed983ddb68974949f07508224dc",
+      "before": "6396ad6d59a9c9642db1306a67b13b96c128ebb09ff8e65bfdafaca9e50a5a75",
+      "base_sha256": "6396ad6d59a9c9642db1306a67b13b96c128ebb09ff8e65bfdafaca9e50a5a75",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/crowbar/swing_01.wav",
+      "delivered": "runtime/sounds/crowbar/swing_01.wav",
+      "sha256": "f7b4e2de1508d71083e2823fbc9c1120f2beb4170114b5dded5cb5cc313bd68f",
+      "before": "3130f54a32e49d07baf55ad90d1e9583a82e56532b865f75493e30e4cdc70cf0",
+      "base_sha256": "3130f54a32e49d07baf55ad90d1e9583a82e56532b865f75493e30e4cdc70cf0",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/crowbar/swing_02.wav",
+      "delivered": "runtime/sounds/crowbar/swing_02.wav",
+      "sha256": "5ca70807e728745af338f35408a983868b2a01c2436e9ae8f195e78ee714c25f",
+      "before": "1e80a181653f60ba732869c779939c1e7599e8425758796a394f7271e2973db9",
+      "base_sha256": "1e80a181653f60ba732869c779939c1e7599e8425758796a394f7271e2973db9",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/crowbar/swing_03.wav",
+      "delivered": "runtime/sounds/crowbar/swing_03.wav",
+      "sha256": "268b2f232508eda5d9c3ceca1f457579377ee3905f121358268ec7af874b1bfc",
+      "before": "0bddf1ae1877f46a4cf6b8618240e55faf46b979c0d5792c1138c5ba5f82cb3f",
+      "base_sha256": "0bddf1ae1877f46a4cf6b8618240e55faf46b979c0d5792c1138c5ba5f82cb3f",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/fal/cloth.wav",
+      "delivered": "runtime/sounds/fal/cloth.wav",
+      "sha256": "968a0e5d43d2edbb24ef88971466a3a5f0dd65d6e214372149b56529967c8455",
+      "before": "e538df82b4acc65c36821a0dea7cf406e7a2052aa7eb84fd6a03f05cc7334783",
+      "base_sha256": "e538df82b4acc65c36821a0dea7cf406e7a2052aa7eb84fd6a03f05cc7334783",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/fal/latch.wav",
+      "delivered": "runtime/sounds/fal/latch.wav",
+      "sha256": "f0b4db7330d5856a08cf99697006b16f08ebbcf7b9e5a744bff909fb08ab5127",
+      "before": "128b3a8036a903f24b4779a5b8de9f2c239e1add7a0fca697ef6b01d87b0d957",
+      "base_sha256": "128b3a8036a903f24b4779a5b8de9f2c239e1add7a0fca697ef6b01d87b0d957",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/fal/mag_in.wav",
+      "delivered": "runtime/sounds/fal/mag_in.wav",
+      "sha256": "8c3d6ec06f284d1a6b17c6e0c919cfb7e253be70e0445d822c44871b94163274",
+      "before": "94d6cfe07642372a5b271bb6e35f2c561a43e807be74cacc5e02b7d17e5be19a",
+      "base_sha256": "94d6cfe07642372a5b271bb6e35f2c561a43e807be74cacc5e02b7d17e5be19a",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/fal/seat.wav",
+      "delivered": "runtime/sounds/fal/seat.wav",
+      "sha256": "71d64e3a555520dcb9bf3436d87e2847f25be024892d13deb88fc8668d6f7552",
+      "before": "d23b0120a32e4c3b4fb16c4c5bf5185d083ec78f29333d8f343da0b0cc943cf3",
+      "base_sha256": "d23b0120a32e4c3b4fb16c4c5bf5185d083ec78f29333d8f343da0b0cc943cf3",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/famas/bolt.wav",
+      "delivered": "runtime/sounds/famas/bolt.wav",
+      "sha256": "46f4318b22e52dff63781ec65aaf1fac2ebd4b0c07ac43ef946980d403113eb2",
+      "before": null,
+      "base_sha256": "2ecc4b5f7d57a133da8d7f852144001eedb8b81a4aa989fd70a0704cbd623285",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/famas/cloth.wav",
+      "delivered": "runtime/sounds/famas/cloth.wav",
+      "sha256": "bf3a6a8a1fbcac3d5c40d3302da4f222e2185d3da1bd220aaa185fdc29de8636",
+      "before": null,
+      "base_sha256": "ac99d9b294562e4a63167ff4da933a84710a442e56449039210e189c60709504",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/famas/mag_in.wav",
+      "delivered": "runtime/sounds/famas/mag_in.wav",
+      "sha256": "e54b3efd63af21ec84de0733e3d48e67fafb6eeb23ef2c1941d5e3864fb7611a",
+      "before": null,
+      "base_sha256": "e86c36078f5ee25fba5389cf0c8d391ae6015c8f0791140ee9245b1420908d93",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/famas/raise.wav",
+      "delivered": "runtime/sounds/famas/raise.wav",
+      "sha256": "8af8edc8face7302e311fdf766be9019f0b84e8330c603ebdd46af4455ef88d8",
+      "before": null,
+      "base_sha256": "2abd7fcdef1290bac3228c6cbc98531685c622197ffd91249bbc4cfe897f1e7e",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/famas/seat.wav",
+      "delivered": "runtime/sounds/famas/seat.wav",
+      "sha256": "da3953e541adabb86f914a1465889279548dd8f708969768add0390416db5026",
+      "before": null,
+      "base_sha256": "9a01d0cf9c0c02f487d8f2c4324f469fcb2676053a390ea2aed5362480159a79",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/mr73/cloth.wav",
+      "delivered": "runtime/sounds/mr73/cloth.wav",
+      "sha256": "b5926987efe31c0f789f2f73a53ab164aa53b83020069819d34e5851747c141b",
+      "before": null,
+      "base_sha256": "0defec03f1af12df752c7b9f0acc0cf8d3b1bb664727aa3de69760e0c4f195c4",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/mr73/cyl_open.wav",
+      "delivered": "runtime/sounds/mr73/cyl_open.wav",
+      "sha256": "9b7046452a62fc8b0256b8538d151a65224159b8ff84bc7e7e4ef35c41f5f4bc",
+      "before": null,
+      "base_sha256": "25899d4e875c77c685443241dc86541ff1dc809f39155c4ea2024567b479597e",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/mr73/eject.wav",
+      "delivered": "runtime/sounds/mr73/eject.wav",
+      "sha256": "a3c0f252916b726d91717b365eb2cdc6c9998de742237cd31fb7342c2d3ca369",
+      "before": null,
+      "base_sha256": "e78c57babf5f8a0d4d84ff3143279d2c9c7de2511a598014b9089632d5678942",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/rapid/cloth.wav",
+      "delivered": "runtime/sounds/rapid/cloth.wav",
+      "sha256": "b5926987efe31c0f789f2f73a53ab164aa53b83020069819d34e5851747c141b",
+      "before": null,
+      "base_sha256": "0defec03f1af12df752c7b9f0acc0cf8d3b1bb664727aa3de69760e0c4f195c4",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/rapid/pump_back.wav",
+      "delivered": "runtime/sounds/rapid/pump_back.wav",
+      "sha256": "d176a75e57494859836e10748874aa7c6df16d6f1fa20756d43dcc72e65a88c6",
+      "before": null,
+      "base_sha256": "70a1346c395f7657527c77e66569cf60667a29f7af3d55a6d9dc600445310640",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/rapid/pump_fwd.wav",
+      "delivered": "runtime/sounds/rapid/pump_fwd.wav",
+      "sha256": "6327526bf17e7f8d4705c405b83c73a62367e24fb2d40998a7510be15e51bc00",
+      "before": null,
+      "base_sha256": "a6edd98055785e8b6ed4d8462232ce24d0cb75196d79474744941f262982fc49",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/rapid/shell_in_01.wav",
+      "delivered": "runtime/sounds/rapid/shell_in_01.wav",
+      "sha256": "a22acd7c8dd0f11ca54ad410434733f0d59a630bacbc511354ab35d616986aba",
+      "before": null,
+      "base_sha256": "66b81cc20a79a249311a99848c26886012ea876212afd977c4ed58d6fbf98001",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/rapid/shell_in_02.wav",
+      "delivered": "runtime/sounds/rapid/shell_in_02.wav",
+      "sha256": "3a4acd3bd09851621b46d3b7a088d4138a4235c49f0aed2e9afa91df8ba82988",
+      "before": null,
+      "base_sha256": "db37ddbb1ce684e4366557ecb8f025aa7f906bc260c2122871d39aa31471aa52",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/scorpion/cloth.wav",
+      "delivered": "runtime/sounds/scorpion/cloth.wav",
+      "sha256": "a0b92d4224744fec5e720520b441da51ca6b516fe2becfed10bcf65824f82d6d",
+      "before": null,
+      "base_sha256": "54328c789253d32c8d88570d4ea97789f773601b8e444ebf7782335314c6a6bd",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sounds/scorpion/raise.wav",
+      "delivered": "runtime/sounds/scorpion/raise.wav",
+      "sha256": "825283de44daa3d89ed4e394666064c843d4275992e66d4b4a27860ff3da09c0",
+      "before": null,
+      "base_sha256": "4fa1d6f6a8ec723e8c515c8f7cf737045fb4e87d975cc85ba20ea34a3c37defb",
+      "state": "retire_de_src_banc",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate.",
+  "note_opus": "01/10 15:50 : les 16 fichiers 'nouveau' sont des sons d'armes du banc (Rapid, MR73, FAMAS, Scorpion, W10 d'essai) : aucune arme du banc en campagne, ils sont retires de src/ et restent dans le lot de Codex pour le prochain build du banc. Les 8 remplacements (Browning, FAL, pied-de-biche) restent dans src/ : sons de la campagne, candidats, non ecoutes."
+}

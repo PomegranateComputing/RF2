@@ -40,7 +40,13 @@ GREY_BOARD = (136, 134, 128)
 # script no longer draws them and only writes their definition, at the scale of the delivered file (pixels per unit).
 DELIVERED = {'RF4_POIN': 8, 'RF4_CLE5': 8, 'RF4_CLE4': 8, 'RF4_NIAG': 8, 'RF4_C617': 8, 'RF4_C618': 8,
              # Codex, 01/10: LUNA_PILOTE_01 (and LOT_CORRECTIONS_01 for NIAG, CLE5, CLE4 above, same definitions)
-             'RF4_BROO': 4, 'RF4_BASS': 4, 'RF4_ROCH': 4, 'RF4_BOIS': 4, 'RF4_MARQ': 4, 'RF4_DALH': 4}
+             'RF4_BROO': 4, 'RF4_BASS': 4, 'RF4_ROCH': 4, 'RF4_BOIS': 4, 'RF4_MARQ': 4, 'RF4_DALH': 4,
+             # Codex, 01/10 afternoon: LUNA_PILOTE_02 (BROOKLYN_ARCH_V02 for BROO above), RF4_FACADES_V02,
+             # RF05_RF06_MATERIALS_01 (VOUT, MARB), RF05_MACHINES_01
+             'RF4_BRBK': 4, 'RF4_CABL': 4, 'RF4_BASF': 4, 'RF4_BALU': 4, 'RF4_ROCF': 4, 'RF4_TREI': 4, 'RF4_POTE': 4,
+             'RF4_CHUT': 4, 'RF4_CHUS': 4, 'RF4_TOWR': 4, 'RF4_PORT': 4, 'RF4_MAST': 4, 'RF4_HERB': 4, 'RF4_VOIE': 4,
+             'RF4_FAC1': 2, 'RF4_FAC2': 2, 'RF4_FAC3': 2, 'RF5_VOUT': 4, 'RF5_MARB': 4, 'RF5_MOTR': 4, 'RF5_ROU0': 4,
+             'RF5_ROU1': 4, 'RF5_ROUS': 4, 'RF5_NOD0': 4, 'RF5_NOD1': 4, 'RF5_NOD2': 4}
 # Sprites imported over the provisional drawings: never redrawn.
 DELIVERED_SPRITES = set()
 # --only NAME[,NAME]: draw only these (new stand-ins); every other definition is read from the file in place.
@@ -460,9 +466,18 @@ def basin_floor(h, w, seed):
 
 
 def black_puddle(h, w, seed):
-    """A black puddle at the bottom of the basin (l. 523)."""
-    arr = solid(h, w, (14, 14, 16)) * (0.8 + 0.4 * fbm(h, w, seed, 1.6)[..., None])
-    return arr + (fbm(h, w, seed + 1, 0.6)[..., None] > 0.93) * 0.18
+    """A black puddle at the bottom of the basin (l. 523): black water with the grey sky lying on it in oily streaks and
+    a few rings (01/10: flat black, it read as a hole in the floor)."""
+    arr = solid(h, w, (20, 21, 24)) * (0.8 + 0.4 * fbm(h, w, seed, 1.6)[..., None])
+    sheen = np.clip((fbm(h, w, seed + 2, 1.1) - 0.45) * 2.4, 0, 1)[..., None]
+    arr = arr + sheen * np.array([0.20, 0.21, 0.24])                       # the sky in the water
+    oil = np.clip(np.sin(fbm(h, w, seed + 3, 2.0) * 40) * 0.5 + 0.5, 0, 1)[..., None] * sheen
+    arr = arr + oil * np.array([0.05, 0.035, 0.07])                         # a film of oil
+    yy, xx = np.mgrid[0:h, 0:w]
+    for (cx, cy, r) in ((0.3, 0.4, 0.12), (0.7, 0.65, 0.08)):              # rings where something drips
+        d = np.hypot(xx / w - cx, yy / h - cy)
+        arr = arr + (np.exp(-((d - r) / 0.006) ** 2) * 0.06)[..., None]
+    return arr + (fbm(h, w, seed + 1, 0.6)[..., None] > 0.93) * 0.12
 
 
 def canvas(h, w, seed):
@@ -646,15 +661,25 @@ def draw_guard():
 
 
 def draw_shoe():
-    """A child's shoe: white leather, side buckle, sole almost new (l. 525). Flat sprite seen from above."""
-    img = sprite_rgba(48, 28)
-    d = ImageDraw.Draw(img)
-    d.ellipse([4, 6, 44, 24], fill=(40, 36, 32, 255))                           # sole
-    d.ellipse([6, 7, 42, 22], fill=(232, 228, 216, 255))                         # upper
-    d.ellipse([10, 10, 22, 19], fill=(60, 56, 50, 255))                          # opening
-    d.rectangle([26, 8, 30, 21], fill=(214, 208, 196, 255))                      # strap
-    d.rectangle([27, 7, 31, 11], fill=(180, 170, 120, 255))                      # buckle
-    save_sprite(img, 'R4SHA0', yoff_extra=-12)
+    """A child's shoe: white leather, side buckle, sole almost new (l. 525). The actor is a FLATSPRITE lying in the
+    puddle: the shoe lies on its side, so seen from above it shows its profile; drawn at 4x and reduced (01/10: the
+    sole-down view read as an egg). Centred on the actor."""
+    K = 4
+    big = Image.new('RGBA', (48 * K, 28 * K), (0, 0, 0, 0))
+    d = ImageDraw.Draw(big)
+    s = lambda pts: [(x * K, y * K) for (x, y) in pts]
+    d.polygon(s([(6, 21), (40, 21), (44, 19), (44, 23), (40, 25), (8, 25), (5, 23)]), fill=(70, 62, 54, 255))   # sole
+    d.polygon(s([(6, 21), (7, 14), (12, 10), (20, 9), (24, 12), (30, 12), (38, 14), (43, 17), (44, 20), (6, 21)]),
+              fill=(226, 222, 210, 255))                                                                     # the upper
+    d.polygon(s([(12, 11), (20, 10), (23, 13), (14, 14)]), fill=(58, 54, 48, 255))                         # the opening
+    d.line(s([(16, 13), (24, 19)]), fill=(196, 190, 176, 255), width=3 * K // 2)                           # the side strap
+    d.rectangle(s([(23, 17), (26, 20)]), outline=(150, 138, 96, 255), width=K)                             # its buckle
+    d.line(s([(30, 13), (42, 17)]), fill=(200, 194, 180, 255), width=K // 2)                               # toe seam
+    d.line(s([(6, 20), (44, 20)]), fill=(120, 110, 96, 255), width=K // 2)                                 # the welt
+    for (x, y) in ((9, 17), (35, 15), (40, 18)):                                                           # mud from the basin
+        d.ellipse(s([(x - 1.5, y - 1), (x + 1.5, y + 1)]), fill=(96, 90, 70, 200))
+    img = big.resize((48, 28), Image.LANCZOS)
+    save_sprite(img, 'R4SHA0', yoff_extra=-14)
 
 
 def draw_jukebox():
@@ -729,9 +754,10 @@ def dials(name, state):
     """The dials (l. 561, 683): GRAND HUIT, CHAMBRE DES GLACES, SALLE DE DANSE, POMPES, ECLAIRAGE EXTERIEUR, JERMA.
     state 0: before (GRAND HUIT too high, CHAMBRE DES GLACES at zero, JERMA at zero); 1: after (the lines up, the
     JERMA needle stopped on a value that is not on the scale)."""
+    # 01/10: masked, the dials and their enamel plates screwed onto the marble of the switchboard (Codex RF5_MARB) instead
+    # of a pale board of their own that read as a sticker over it.
     W, H = 96 * PPU, 48 * PPU
-    arr = solid(H, W, (196, 194, 188)) * (0.92 + 0.1 * fbm(H, W, 570, 2.2)[..., None])
-    img = to_img(np.clip(arr, 0, 1))
+    img = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     labels = ['GRAND HUIT', 'CHAMBRE DES GLACES', 'SALLE DE DANSE', 'POMPES', 'ÉCLAIRAGE EXTÉRIEUR', 'JERMA']
     before = [0.92, 0.0, 0.1, 0.05, 0.08, 0.0]
@@ -740,15 +766,19 @@ def dials(name, state):
     for i, lab in enumerate(labels):
         cx, cy = (9 + (i % 3) * 30) * PPU, (13 + (i // 3) * 23) * PPU
         r = 8 * PPU
-        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(236, 232, 218), outline=(40, 38, 34), width=PPU)
+        d.ellipse([cx - r - PPU, cy - r - PPU, cx + r + PPU, cy + r + PPU], fill=(122, 98, 60, 255),
+                  outline=(60, 48, 30, 255), width=max(1, PPU // 2))                                 # brass bezel
+        d.rectangle([cx - 14 * PPU, cy + r + PPU // 2, cx + 14 * PPU, cy + r + 4 * PPU + PPU // 2], fill=(222, 216, 196, 255),
+                    outline=(70, 64, 54, 255), width=max(1, PPU // 2))                              # enamel plate
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(236, 232, 218, 255), outline=(40, 38, 34, 255), width=PPU)
         for k in range(11):
             a = math.radians(-135 + k * 27)
             d.line([(cx + 0.8 * r * math.sin(a), cy - 0.8 * r * math.cos(a)), (cx + r * math.sin(a), cy - r * math.cos(a))], fill=(40, 38, 34), width=1)
         v = (after if state else before)[i]
         a = math.radians(-135 + 270 * min(v, 1.2))
         d.line([(cx, cy), (cx + 0.85 * r * math.sin(a), cy - 0.85 * r * math.cos(a))], fill=(150, 20, 16), width=max(1, PPU // 2))
-        text_center(d, (cx - 14 * PPU, cy + r + PPU, cx + 14 * PPU, cy + r + 4 * PPU), lab, f, (30, 28, 24))
-    save('Texture', name, np.asarray(img).astype(float) / 255.0)
+        text_center(d, (cx - 14 * PPU, cy + r + PPU, cx + 14 * PPU, cy + r + 4 * PPU), lab, f, (30, 28, 24, 255))
+    masked(name, img)
 
 
 def node_box(name, state):

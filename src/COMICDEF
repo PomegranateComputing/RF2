@@ -15,34 +15,34 @@ panel 797 411 448 543
 panel 1245 411 675 543
 caption 4 $RF_COMIC_RF01_RF02_1 120 960 1680 65 band
 
+# Codex COMIC_RF02_RF04_01 (01/10), planche.json: four panels, one caption after the fourth, in the black band
 scene RF02_RF04 RF02 RF04 graphics/comics/RF02_RF04.png
-panel 24 24 1180 640
-panel 1228 24 668 310
-panel 1228 354 668 310
-panel 24 688 1872 368
-caption 1 $RF_COMIC_RF02_RF04_1 48 48 560 0
-caption 4 $RF_COMIC_RF02_RF04_2 1300 712 560 0
+panel 0 0 852 954
+panel 852 0 1068 428
+panel 852 428 598 526
+panel 1450 428 470 526
+caption 4 $RF_COMIC_RF02_RF04_1 105 960 1710 65 band
 
+# Codex COMIC_RF04_RF05_01 (01/10), planche.json: four panels, one caption after the fourth, in the black band
 scene RF04_RF05 RF04 RF05 graphics/comics/RF04_RF05.png
-panel 24 24 1180 640
-panel 1228 24 668 310
-panel 1228 354 668 310
-panel 24 688 1872 368
-caption 1 $RF_COMIC_RF04_RF05_1 48 48 560 0
-caption 4 $RF_COMIC_RF04_RF05_2 1300 712 560 0
+panel 0 0 852 954
+panel 852 0 1068 363
+panel 852 363 538 591
+panel 1390 363 530 591
+caption 4 $RF_COMIC_RF04_RF05_1 105 960 1710 65 band
 
+# Codex COMIC_RF05_RF06_01 (01/10), planche.json: four panels, one caption after the fourth, in the black band
 scene RF05_RF06 RF05 RF06 graphics/comics/RF05_RF06.png
-panel 24 24 1180 640
-panel 1228 24 668 310
-panel 1228 354 668 310
-panel 24 688 1872 368
-caption 1 $RF_COMIC_RF05_RF06_1 48 48 560 0
-caption 4 $RF_COMIC_RF05_RF06_2 1300 712 560 0
+panel 0 0 813 954
+panel 813 0 1107 443
+panel 813 443 598 511
+panel 1411 443 509 511
+caption 4 $RF_COMIC_RF05_RF06_1 105 955 1710 120 band
 
+# Codex COMIC_RF06_RF07_01 (01/10), planche.json: four panels, one caption after the fourth, in the black band (preparatory page: active since RF07 is playable, 01/10)
 scene RF06_RF07 RF06 RF07 graphics/comics/RF06_RF07.png
-panel 24 24 1180 640
-panel 1228 24 668 310
-panel 1228 354 668 310
-panel 24 688 1872 368
-caption 1 $RF_COMIC_RF06_RF07_1 48 48 560 0
-caption 4 $RF_COMIC_RF06_RF07_2 1300 712 560 0
+panel 0 0 813 954
+panel 813 0 1107 443
+panel 813 443 487 511
+panel 1300 443 620 511
+caption 4 $RF_COMIC_RF06_RF07_1 105 960 1710 65 band

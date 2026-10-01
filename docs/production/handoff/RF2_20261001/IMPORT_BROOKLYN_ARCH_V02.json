@@ -1,0 +1,26 @@
+{
+  "batch": "BROOKLYN_ARCH_V02",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/BROOKLYN_ARCH_V02",
+  "manifest_sha256": "fa48eb43af8ebbae635914b5a32ba8db294a69879d569217525c30e19c0b920c",
+  "status": "candidate_after_opus_engine_feedback",
+  "imported": "2026-10-01 15:47",
+  "by": "Opus (integration)",
+  "head_before": "bc4266e304fe3e4ade7c9427a76d52da1ba088fb",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 1
+  },
+  "files": [
+    {
+      "target": "src/patches/rf04/RF4_BROO.png",
+      "delivered": "runtime/patches/rf04/RF4_BROO.png",
+      "sha256": "d591a927f93aad32f151635dc5463afab73f79ac8895b9df86e62ade6270db07",
+      "before": "6d88a32bf3efd06af77b23613f7da7480978784e55b7531b71b0aa81116ee39f",
+      "base_sha256": "6d88a32bf3efd06af77b23613f7da7480978784e55b7531b71b0aa81116ee39f",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

@@ -1,0 +1,86 @@
+{
+  "batch": "RF05_MACHINES_01",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/RF05_MACHINES_01",
+  "manifest_sha256": "b15d3dd705aa0c45a363340f4e23f81a96abf0705aaf8015883c6e6511361023",
+  "status": "candidate_for_opus_engine_review",
+  "imported": "2026-10-01 15:47",
+  "by": "Opus (integration)",
+  "head_before": "bc4266e304fe3e4ade7c9427a76d52da1ba088fb",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 7
+  },
+  "files": [
+    {
+      "target": "src/patches/rf04/RF5_MOTR.png",
+      "delivered": "runtime/patches/rf04/RF5_MOTR.png",
+      "sha256": "6d9e80593678ac1f28f94e5d7201a2caa8f35fdc0b682c2a9995c5444142223a",
+      "before": "110f57bf4f4a294b3c6e679bd0e4eec145509c8d8c13156f41e10413b22671b8",
+      "base_sha256": "110f57bf4f4a294b3c6e679bd0e4eec145509c8d8c13156f41e10413b22671b8",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF5_ROU0.png",
+      "delivered": "runtime/patches/rf04/RF5_ROU0.png",
+      "sha256": "139296ec9d585da5683e181fc1ed1b841678ed95bcc957fb091e655b19999001",
+      "before": "d2b9475eebdcc8decb6227b852d79f977c1244a1094a725d2db085d69e31ed25",
+      "base_sha256": "d2b9475eebdcc8decb6227b852d79f977c1244a1094a725d2db085d69e31ed25",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF5_ROU1.png",
+      "delivered": "runtime/patches/rf04/RF5_ROU1.png",
+      "sha256": "53933940e6d7bcd98f8a93c799623af755361052fa2984627faad8286f84952b",
+      "before": "a1d39a6f4b0f3fb575553795199540adb14bea918515bbb66ec29e47737174a1",
+      "base_sha256": "a1d39a6f4b0f3fb575553795199540adb14bea918515bbb66ec29e47737174a1",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF5_ROUS.png",
+      "delivered": "runtime/patches/rf04/RF5_ROUS.png",
+      "sha256": "139296ec9d585da5683e181fc1ed1b841678ed95bcc957fb091e655b19999001",
+      "before": "d2b9475eebdcc8decb6227b852d79f977c1244a1094a725d2db085d69e31ed25",
+      "base_sha256": "d2b9475eebdcc8decb6227b852d79f977c1244a1094a725d2db085d69e31ed25",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF5_NOD0.png",
+      "delivered": "runtime/patches/rf04/RF5_NOD0.png",
+      "sha256": "d9aebb8c36457494ea19e634671304afd892255ff0c50f8526bc4bf9443983e5",
+      "before": "0c716bdd2c5f985879c1871da1dd932aa5e980ab92e5eb563ac4c279e5bdca63",
+      "base_sha256": "0c716bdd2c5f985879c1871da1dd932aa5e980ab92e5eb563ac4c279e5bdca63",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF5_NOD1.png",
+      "delivered": "runtime/patches/rf04/RF5_NOD1.png",
+      "sha256": "3a8542f3ac8f9b8230cf4b67f952e7a2f728589697bd0bfe4a784682de186afd",
+      "before": "f1d6f70c220a9f640434a514675f3760dd12b3b63b5080251135fec541db6c19",
+      "base_sha256": "f1d6f70c220a9f640434a514675f3760dd12b3b63b5080251135fec541db6c19",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF5_NOD2.png",
+      "delivered": "runtime/patches/rf04/RF5_NOD2.png",
+      "sha256": "94eabd67fa535c65b4fe9cf0343c40faf3b83a7bde7d961f26092f5f659ac5c3",
+      "before": "2639c4345d0a79bbba62e8339081b53184fb35e68135475291dd06b4eb2f4046",
+      "base_sha256": "2639c4345d0a79bbba62e8339081b53184fb35e68135475291dd06b4eb2f4046",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

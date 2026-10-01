@@ -185,7 +185,7 @@ map RF04 "Luna Park - Personnel technique"
     cluster = 1
     nointermission
     lightmode = 8
-    sky1 = "RFSKY2", 0
+    sky1 = "RF4SKY", 0
 }
 // RF05 (RF2 campaign, 30/09): under the Luna Park, then the park lit again (scripts/mapkit/rf05.py).
 map RF05 "Les machines continuent"
@@ -196,7 +196,7 @@ map RF05 "Les machines continuent"
     cluster = 1
     nointermission
     lightmode = 8
-    sky1 = "RFSKY2", 0
+    sky1 = "RF4SKY", 0
 }
 // RF06 (RF2 campaign, 30/09; recomposed 01/10): the corridor ERREUR Ø (scripts/mapkit/rf06.py), no combat.
 map RF06 "La sortie du personnel"

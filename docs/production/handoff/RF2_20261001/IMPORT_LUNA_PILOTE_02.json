@@ -1,0 +1,167 @@
+{
+  "batch": "LUNA_PILOTE_02",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/LUNA_PILOTE_02",
+  "manifest_sha256": "c09aa1e46ec109b64364c46631ea13e0355104c5f6ca22a1a728875aefdf1f01",
+  "status": "candidate_for_opus_layout_and_engine_review",
+  "imported": "2026-10-01 15:47",
+  "by": "Opus (integration)",
+  "head_before": "bc4266e304fe3e4ade7c9427a76d52da1ba088fb",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 14,
+    "nouveau": 1
+  },
+  "files": [
+    {
+      "target": "src/patches/rf04/RF4_BRBK.png",
+      "delivered": "runtime/patches/rf04/RF4_BRBK.png",
+      "sha256": "563b1f72beebe334e18e7c24619ae02a30aed2e672f9234ab947eb8687368257",
+      "before": "bba86852577c1fd0d811823b0d4180fadf314b8b85346b827aa2ac84a89e9ffe",
+      "base_sha256": "bba86852577c1fd0d811823b0d4180fadf314b8b85346b827aa2ac84a89e9ffe",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_CABL.png",
+      "delivered": "runtime/patches/rf04/RF4_CABL.png",
+      "sha256": "d3a4bed3bccf36f110131e6f9ddd5f4ab0ce1be7387829985dfe58a4a799823f",
+      "before": "5a4cfeb13565fc94be85680de7c965b7532bef382a6e05f9fc20475f7d025c6a",
+      "base_sha256": "5a4cfeb13565fc94be85680de7c965b7532bef382a6e05f9fc20475f7d025c6a",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_BASF.png",
+      "delivered": "runtime/patches/rf04/RF4_BASF.png",
+      "sha256": "b1a2543bdd03c62c983bbaee93bc5adb97f50e44ae8676e71a860d90afe1c28c",
+      "before": "c824508edabc3187d3d6c27bedab5d447074e03f50a5ed4733cbf2852fc33132",
+      "base_sha256": "c824508edabc3187d3d6c27bedab5d447074e03f50a5ed4733cbf2852fc33132",
+      "state": "remplace_base_conforme",
+      "kind": "Flat",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_BALU.png",
+      "delivered": "runtime/patches/rf04/RF4_BALU.png",
+      "sha256": "dd92772737ae48b8c660f1ab78842819e2e76f56c007f3d31f31ac957dd1baec",
+      "before": "2eb6ded1ec4b7ae3a5afb49ac27c0fe210e4ed1986d14d529401bf50ab8c2d74",
+      "base_sha256": "2eb6ded1ec4b7ae3a5afb49ac27c0fe210e4ed1986d14d529401bf50ab8c2d74",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_ROCF.png",
+      "delivered": "runtime/patches/rf04/RF4_ROCF.png",
+      "sha256": "23ef8adaf8229f2835fa27b113e6ee141d6d4248e6f7676edf8b14f78f0c8e77",
+      "before": "2dcd96a8587667d3e04872caf4602411522083616bfe647078f84aeb989a09a5",
+      "base_sha256": "2dcd96a8587667d3e04872caf4602411522083616bfe647078f84aeb989a09a5",
+      "state": "remplace_base_conforme",
+      "kind": "Flat",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_TREI.png",
+      "delivered": "runtime/patches/rf04/RF4_TREI.png",
+      "sha256": "9b34ea9beba8f463c9eb8fbda6f161eeab3b062c13de9d45d57af09cdb28bbca",
+      "before": "370b83c2a1cb7bd5fee40345a92a0c1e0546dc99b179fc8574e95b0fe0d911d1",
+      "base_sha256": "370b83c2a1cb7bd5fee40345a92a0c1e0546dc99b179fc8574e95b0fe0d911d1",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_POTE.png",
+      "delivered": "runtime/patches/rf04/RF4_POTE.png",
+      "sha256": "8f9943e79bf69bf68ba34504bf8f5d5821971c3f5aa61105b180f721ee1a0ddd",
+      "before": "2de92d0b9e0c647016dcc92725b4f3c5fc21e4c030e4ebef0abdf53860ef055e",
+      "base_sha256": "2de92d0b9e0c647016dcc92725b4f3c5fc21e4c030e4ebef0abdf53860ef055e",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_CHUT.png",
+      "delivered": "runtime/patches/rf04/RF4_CHUT.png",
+      "sha256": "7cd6dc471233517f847f20a57c33ee0c3531fdf4682a325c958e296a4b0230db",
+      "before": "22ab5e7f5cc0162e85b260f1218a9dcb2f0862f5a525251fd0aa961dde197a30",
+      "base_sha256": "22ab5e7f5cc0162e85b260f1218a9dcb2f0862f5a525251fd0aa961dde197a30",
+      "state": "remplace_base_conforme",
+      "kind": "Flat",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_CHUS.png",
+      "delivered": "runtime/patches/rf04/RF4_CHUS.png",
+      "sha256": "5ec284e256e907a617e6fbf8fc62bb6917b311ffcae90d67aab4f1e1b63beea5",
+      "before": "2f952503e1841fb2076fbda4fc9ff4adb4770d7eb089aece7236b9756d07a481",
+      "base_sha256": "2f952503e1841fb2076fbda4fc9ff4adb4770d7eb089aece7236b9756d07a481",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_TOWR.png",
+      "delivered": "runtime/patches/rf04/RF4_TOWR.png",
+      "sha256": "7e673bd16d0d99dded99bf8295ff479bcc436c22859527f0dcfa5432b592716d",
+      "before": "b3e4ed4f40d3b7dc1b61354d874b59b0ca4353995d0ed6555b9c3619c8ccf9e0",
+      "base_sha256": "b3e4ed4f40d3b7dc1b61354d874b59b0ca4353995d0ed6555b9c3619c8ccf9e0",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_PORT.png",
+      "delivered": "runtime/patches/rf04/RF4_PORT.png",
+      "sha256": "f9c628f78970180acafb021b485d2cd487b5263faa02f5d3d8e0913a82b2f3b8",
+      "before": "f4c8b6be5e5be12903d86aaa5615ec79adc409369f25f14a5e4727800acea3af",
+      "base_sha256": "f4c8b6be5e5be12903d86aaa5615ec79adc409369f25f14a5e4727800acea3af",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_MAST.png",
+      "delivered": "runtime/patches/rf04/RF4_MAST.png",
+      "sha256": "9be9bf13a1f9e52d5de84a0699d380d6d9da84acd34244c49fe26af200b35e0d",
+      "before": "09c7901cefa705aec924dba02c5a231663f50cadf7a98af6b6d61ce9b345480d",
+      "base_sha256": "09c7901cefa705aec924dba02c5a231663f50cadf7a98af6b6d61ce9b345480d",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_HERB.png",
+      "delivered": "runtime/patches/rf04/RF4_HERB.png",
+      "sha256": "0d049624de0834ed3190f35abbd721f2d8238ae9da7b14eba36b50270302f84e",
+      "before": "94aca8dce25304e4ad29a0ad63f765ab2949a95fa5a5e5db638d77025731b56a",
+      "base_sha256": "94aca8dce25304e4ad29a0ad63f765ab2949a95fa5a5e5db638d77025731b56a",
+      "state": "remplace_base_conforme",
+      "kind": "Flat",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_VOIE.png",
+      "delivered": "runtime/patches/rf04/RF4_VOIE.png",
+      "sha256": "6ac16db1b7b781120ed7dd0e6f57ac6a0059d4748e7bddd20658227e029c2c89",
+      "before": "a686e75aea198696058aeee7bc07fe3fe8e02b5eab27d626547f9156ebbb76b1",
+      "base_sha256": "a686e75aea198696058aeee7bc07fe3fe8e02b5eab27d626547f9156ebbb76b1",
+      "state": "remplace_base_conforme",
+      "kind": "Flat",
+      "id": null
+    },
+    {
+      "target": "src/textures/RF4SKY.png",
+      "delivered": "runtime/textures/RF4SKY.png",
+      "sha256": "1864ca7e909bc96810009b884be1abcb68c8e22ff9bbc583977807b192612409",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": "sky_panorama",
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

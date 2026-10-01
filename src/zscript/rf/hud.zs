@@ -135,10 +135,17 @@ class RFStatusBar : BaseStatusBar
             double zx = px + c.zones[i * 4] * k, zy = py + c.zones[i * 4 + 1] * k, zw = c.zones[i * 4 + 2] * k;
             if (c.styles[i] == 1)
             {
-                // On the page's black band: cream text, centred in the zone, sized on the zone's height.
+                // On the page's black band: cream text, centred in the zone, the same size on every page (that of a
+                // 65-pixel band); a taller zone only makes room for more lines.
                 double zh = c.zones[i * 4 + 3] * k;
-                double bs = max(zh * 0.55, 18.0) / f.GetHeight();
+                double bs = max(min(zh, 65 * k) * 0.55, 18.0) / f.GetHeight();
                 BrokenLines band = f.BreakLines(StringTable.Localize(c.captions[i]), int(zw / bs));
+                // a longer caption: smaller lines until they fit in the zone's height (never under the floor)
+                while (band.Count() * f.GetHeight() * bs * 1.15 > zh && f.GetHeight() * bs * 0.9 >= 18.0)
+                {
+                    bs *= 0.9;
+                    band = f.BreakLines(StringTable.Localize(c.captions[i]), int(zw / bs));
+                }
                 double blh = f.GetHeight() * bs * 1.15;
                 double by = zy + (zh - band.Count() * blh) / 2;
                 for (int j = 0; j < band.Count(); j++)

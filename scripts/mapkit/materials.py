@@ -11,7 +11,7 @@ Output (runtime):  src/patches/rf01/*.png, src/flats-less definitions in src/TEX
 Usage: python scripts/mapkit/materials.py
 """
 from pathlib import Path
-import struct, zlib, math
+import struct, sys, zlib, math
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
@@ -989,4 +989,8 @@ def main():
 
 
 if __name__ == '__main__':
+    # RF01 materials were replaced by imports since 27/09 (Astra's Sainte-Anne 1940 surfaces, Codex's RFDSTN1 decal of
+    # 01/10): a full run would overwrite them with the procedural stand-ins. Redraw one function at a time instead.
+    if '--force-all' not in sys.argv:
+        sys.exit('materials.py: run complet refuse (fichiers RF01 importes depuis) ; voir le commentaire de fin de fichier')
     main()

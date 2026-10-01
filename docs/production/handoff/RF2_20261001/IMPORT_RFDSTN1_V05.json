@@ -1,0 +1,26 @@
+{
+  "batch": "RFDSTN1_V05",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/RFDSTN1_V05",
+  "manifest_sha256": "4aa2be598aad249c724d54f1c98ea9e198433087376c762e477035d357dc04d0",
+  "status": "candidate_after_opus_engine_feedback",
+  "imported": "2026-10-01 15:47",
+  "by": "Opus (integration)",
+  "head_before": "bc4266e304fe3e4ade7c9427a76d52da1ba088fb",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 1
+  },
+  "files": [
+    {
+      "target": "src/graphics/decals/RFDSTN1.png",
+      "delivered": "runtime/graphics/decals/RFDSTN1.png",
+      "sha256": "b06f51eb843c6bb07e7aaad666dcbe48096f45d35ecb1ab239cca72ed525399f",
+      "before": "cd3d135741beffc4a40beb24f9cdf2579d84b399277aeb5c0185a8f9a3bff1aa",
+      "base_sha256": "cd3d135741beffc4a40beb24f9cdf2579d84b399277aeb5c0185a8f9a3bff1aa",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

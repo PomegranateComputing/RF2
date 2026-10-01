@@ -1,0 +1,26 @@
+{
+  "batch": "COMIC_RF04_RF05_01",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/COMIC_RF04_RF05_01",
+  "manifest_sha256": "aa10d40fc0a7034c5af551eb5236d1f16a1169972fd7d698e9fa4f4fec541c7f",
+  "status": "candidate_for_opus_runtime_review",
+  "imported": "2026-10-01 15:47",
+  "by": "Opus (integration)",
+  "head_before": "bc4266e304fe3e4ade7c9427a76d52da1ba088fb",
+  "base_drift_reason": null,
+  "counts": {
+    "nouveau": 1
+  },
+  "files": [
+    {
+      "target": "src/graphics/comics/RF04_RF05.png",
+      "delivered": "runtime/graphics/comics/RF04_RF05.png",
+      "sha256": "8ebc789386cdf83c0689e854dbbfd42b79f80a314adae29e0a10b0ece8c5465b",
+      "before": null,
+      "base_sha256": null,
+      "state": "nouveau",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

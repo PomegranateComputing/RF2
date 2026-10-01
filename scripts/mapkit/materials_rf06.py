@@ -22,9 +22,16 @@ ROOT = Path(__file__).resolve().parents[2]
 PATCH = ROOT / 'src' / 'patches' / 'rf06'
 PPU = 4
 DEFS = []
+# Files imported over the stand-ins (Codex RF05_RF06_MATERIALS_01, 01/10): never redrawn, their definition is read from
+# the file in place.
+DELIVERED = {'RF6_BETN', 'RF6_BETS', 'RF6_PEAU', 'RF6_PEA2'}
 
 
 def save(kind, name, arr, ppu=PPU):
+    if name in DELIVERED:
+        img = Image.open(PATCH / f'{name}.png')
+        DEFS.append((kind, name, img.size[0], img.size[1], ppu))
+        return
     img = arr if isinstance(arr, Image.Image) else to_img(np.clip(arr, 0, 1))
     PATCH.mkdir(parents=True, exist_ok=True)
     img.save(PATCH / f'{name}.png', optimize=True)

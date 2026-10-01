@@ -1,0 +1,46 @@
+{
+  "batch": "RF4_FACADES_V02",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/RF4_FACADES_V02",
+  "manifest_sha256": "26819f7c9ab5a3fd1e020c5595147274177d92313bd3f8d1483712f2de545fb1",
+  "status": "candidate_after_opus_pilot_feedback",
+  "imported": "2026-10-01 15:47",
+  "by": "Opus (integration)",
+  "head_before": "bc4266e304fe3e4ade7c9427a76d52da1ba088fb",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 3
+  },
+  "files": [
+    {
+      "target": "src/patches/rf04/RF4_FAC1.png",
+      "delivered": "runtime/patches/rf04/RF4_FAC1.png",
+      "sha256": "b0dd64801170dcab0af09880306dcdff271e0fc4a88671c0b6b9f07c35514337",
+      "before": "109617223527e369ef0e25a7f4bc0f5aee0fd5d31aafe50e7fa24115e73dfdc3",
+      "base_sha256": "109617223527e369ef0e25a7f4bc0f5aee0fd5d31aafe50e7fa24115e73dfdc3",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_FAC2.png",
+      "delivered": "runtime/patches/rf04/RF4_FAC2.png",
+      "sha256": "19c8ae7551079aada9880017d285a4c667679526f00b08df232c1a05d57c0ceb",
+      "before": "a735873e38f352529e4e35ca0f4e2f68b8ee4a567272f7347604b37eafb7c9c9",
+      "base_sha256": "a735873e38f352529e4e35ca0f4e2f68b8ee4a567272f7347604b37eafb7c9c9",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF4_FAC3.png",
+      "delivered": "runtime/patches/rf04/RF4_FAC3.png",
+      "sha256": "ec328b274cd5771e28b8eb42870ce2eacf0e4c63d67b33ee15028cd6b14a6cd3",
+      "before": "2dace5ac8cfae48781888a7dd5ed471c53012c252cd968b8a82a803336b8e1c7",
+      "base_sha256": "2dace5ac8cfae48781888a7dd5ed471c53012c252cd968b8a82a803336b8e1c7",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}
