@@ -3,7 +3,8 @@
 that followed the player into the next chapter (candidates 1801 and 1708, fixed in 413457e) and of the endings.
 
 Leg 1: new game at RF01, autopilot through RF01 -> RF02 -> RF04 -> start of RF05 (stopped on RF05's first scene,
-its start autosave written by then). Leg 2: a new engine loads that autosave, autopilot RF05 -> RF06 -> exit.
+its start autosave written by then). Leg 2: a new engine loads that autosave, autopilot RF05 -> RF06 -> RF07 -> exit
+(RF07, the Jerma, since 01/10; --last RF06 for a build that ends there).
 Each chapter change must show: the ending (RF_DEV_ENDING, with its page when the build has one, read by the
 autopilot), the next map loaded, the arrival hold released with no frozen flag (RF_DEV_ARRIVAL ... cheats=0), the
 inventory carried (RF_DEV_INV). Writes a JSON report.
@@ -20,7 +21,7 @@ import devrun  # noqa: E402
 FAIL = r'RF_DEV_AUTOPILOT_(STUCK|TIMEOUT|DEAD)\b'
 SAVES = devrun.DEV / 'saves'
 CHAIN1 = ['RF01', 'RF02', 'RF04']
-CHAIN2 = ['RF05', 'RF06']
+CHAIN2 = ['RF05', 'RF06', 'RF07']
 
 
 def lines(text, prefix):
@@ -42,6 +43,7 @@ def main():
     ap.add_argument('pk3')
     ap.add_argument('out')
     ap.add_argument('--seconds', type=float, default=2400)
+    ap.add_argument('--last', default='RF07', help='the last chapter of the build (RF06 before 01/10)')
     a = ap.parse_args()
     pk3 = Path(a.pk3).resolve()
     t0 = time.time()
@@ -61,16 +63,17 @@ def main():
     else:
         save = max(rf05)[1]
         s2, text2, _ = devrun.run(pk3, 'chain_leg2', None, autopilot=True, seconds=a.seconds / 2, speed=4, loadgame=save,
-                                  marker=rf're:^(RF_DEV_UNLOADED map=RF06 time=\d+ next=\S+|{FAIL})')
+                                  marker=rf're:^(RF_DEV_UNLOADED map={a.last} time=\d+ next=\S+|{FAIL})')
         leg2 = summary(text2)
         maps1 = [re.search(r'map=(\w+)', l).group(1) for l in leg1['exits']]
         maps2 = [re.search(r'map=(\w+)', l).group(1) for l in leg2['exits']]
         released = {re.search(r'map=(\w+)', l).group(1): ('cheats=0' in l) for l in leg1['arrivals'] + leg2['arrivals']}
-        expected_arrivals = ['RF02', 'RF04', 'RF05', 'RF06']
-        not_released = [m for m in expected_arrivals if not released.get(m)]    # RF06 is reached after the load
+        chain2 = CHAIN2[:CHAIN2.index(a.last) + 1]
+        expected_arrivals = ['RF02', 'RF04', 'RF05'] + chain2[1:]
+        not_released = [m for m in expected_arrivals if not released.get(m)]    # RF06, RF07 are reached after the load
         report.update(save=str(save), leg2=dict(status=s2, **leg2), maps_exited=maps1 + maps2,
                       arrivals_released=released, not_released=not_released)
-        report['ok'] = (maps1 == CHAIN1 and maps2 == CHAIN2 and not not_released and not leg1['failures']
+        report['ok'] = (maps1 == CHAIN1 and maps2 == chain2 and not not_released and not leg1['failures']
                         and not leg2['failures'] and not leg1['script_errors'] and not leg2['script_errors']
                         and any('save=1' in l and 'map=RF05' in l for l in leg2['loaded']))
     Path(a.out).write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding='utf-8')

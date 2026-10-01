@@ -5,7 +5,7 @@
 class RFCorridor : EventHandler
 {
     const PIECE_TAG = 600;       // corridor piece i: sector tag and lamp tid 600 + i
-    const PIECES = 23;
+    const MAX_PIECES = 80;
     const C_VOICES = 1;
     const C_BEAM = 2;
     const C_RUMBLE = 3;
@@ -16,6 +16,7 @@ class RFCorridor : EventHandler
 
     bool active;
     Array<int> pieceOf;          // sector index -> piece (-1 elsewhere); rebuilt on every load
+    int pieces;                  // the pieces of the map's corridor (counted from the sector tags)
     int litPiece;                // the piece whose lamps are on around it (-1 none yet)
     bool voicesDone, rumbleDone, erreurDone, paintDone;
     int seqTic;                  // voices sequence
@@ -28,11 +29,22 @@ class RFCorridor : EventHandler
         if (!active) return;
         pieceOf.Clear();
         for (int s = 0; s < Level.Sectors.Size(); s++) pieceOf.Push(-1);
-        for (int i = 0; i < PIECES; i++)
+        // A piece is marked by the UDMF sector field user_piece (piece + 1), which leaves the tags to the slabs of
+        // the corridor (its pipes); maps of 30/09 marked them by the tag 600 + piece.
+        pieces = 0;
+        for (int s = 0; s < Level.Sectors.Size(); s++)
         {
-            let it = Level.CreateSectorTagIterator(PIECE_TAG + i);
-            int sec;
-            while ((sec = it.Next()) >= 0) pieceOf[sec] = i;
+            int p = Level.Sectors[s].GetUDMFInt('user_piece') - 1;
+            if (p >= 0) { pieceOf[s] = p; pieces = max(pieces, p + 1); }
+        }
+        if (pieces == 0)
+        {
+            for (int i = 0; i < MAX_PIECES; i++)
+            {
+                let it = Level.CreateSectorTagIterator(PIECE_TAG + i);
+                int sec;
+                while ((sec = it.Next()) >= 0) { pieceOf[sec] = i; pieces = i + 1; }
+            }
         }
         if (!e.IsSaveGame) litPiece = -1;
     }
@@ -48,7 +60,7 @@ class RFCorridor : EventHandler
     void Light(int piece)
     {
         if (piece == litPiece) return;
-        for (int i = 0; i < PIECES; i++)
+        for (int i = 0; i < pieces; i++)
         {
             bool on = i >= piece && i <= piece + 3;
             bool was = litPiece >= 0 && i >= litPiece && i <= litPiece + 3;

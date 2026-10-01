@@ -5,7 +5,7 @@ gameinfo
 {
     PlayerClasses = "RFPlayer"
     StatusBarClass = "RFStatusBar"
-    AddEventHandlers = "RFDirector", "RFParis", "RFLuna", "RFMachines", "RFCorridor", "RFDevHandler"
+    AddEventHandlers = "RFDirector", "RFParis", "RFLuna", "RFMachines", "RFCorridor", "RFJerma", "RFDevHandler"
     TitlePage = "TITLEPIC"
     TitleMusic = "RFAMB01"
     TitleTime = 3600
@@ -123,6 +123,9 @@ DoomEdNums
     30677 = RFSubFuseBox
     30678 = RFCoasterTrain
     30679 = RFJukeboxPlaying
+    30700 = RFElvis
+    30701 = RFElvisPoint
+    30702 = RFJermaBed
     30901 = RFTourPoint
     30902 = RFDevWaypoint
 }
@@ -195,18 +198,28 @@ map RF05 "Les machines continuent"
     lightmode = 8
     sky1 = "RFSKY2", 0
 }
-// RF06 (RF2 campaign, 30/09): the corridor ERREUR Ø (scripts/mapkit/rf06.py), no combat. Ends on the title screen until
-// RF07, the Jerma, is produced.
+// RF06 (RF2 campaign, 30/09; recomposed 01/10): the corridor ERREUR Ø (scripts/mapkit/rf06.py), no combat.
 map RF06 "La sortie du personnel"
 {
     levelnum = 6
-    next = "EndTitle"
+    next = "RF07"
     music = "RFAMB01"
     cluster = 1
     nointermission
     lightmode = 8
 }
-map RF07 "Jerma - Facade maritime" { levelnum = 7 next = "RF08" }
+// RF07 (01/10): the Jerma Palace, Malta, 22 December 2022 (scripts/mapkit/rf07.py), no combat. Ends on the title
+// screen until RF08 is produced (the V1 blockouts RF08-RF23 stay reachable by +map).
+map RF07 "Jerma - Facade maritime"
+{
+    levelnum = 7
+    next = "EndTitle"
+    music = "RFAMB01"
+    cluster = 1
+    nointermission
+    lightmode = 8
+    sky1 = "RFSKY2", 0
+}
 map RF08 "Aile des chambres" { levelnum = 8 next = "RF09" }
 map RF09 "La piscine vide" { levelnum = 9 next = "RF10" }
 map RF10 "L'envers du palace" { levelnum = 10 next = "RF11" }
