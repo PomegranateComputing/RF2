@@ -1,0 +1,8 @@
+[enu default]
+// RF2 boss bench (outside the campaign). Bench texts, not the novel's.
+RF_BOSS_SURVEILLANT = "LE SURVEILLANT-CHEF";
+RF_OBIT_BOSS = "%o a été rayé du registre.";
+RF_BOSS_VICTORY = "VICTOIRE - reprise dans quelques secondes (Utiliser pour reprendre tout de suite)";
+RF_BOSS_A1 = "annonce : tampon";
+RF_BOSS_A2 = "annonce : registres";
+RF_BOSS_A3 = "annonce : sifflet";

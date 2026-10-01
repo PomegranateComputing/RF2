@@ -1,0 +1,21 @@
+// RF2 boss bench (outside the campaign): loaded over a frozen game build by bench/boss/build_boss_bench.py.
+gameinfo
+{
+    AddEventHandlers = "RFBossBench"
+}
+
+DoomEdNums
+{
+    30800 = RFBossSurveillant
+    30801 = RFBossSpot
+}
+
+map BOSS01 "Banc - Le surveillant-chef"
+{
+    levelnum = 90
+    next = "BOSS01"
+    music = "RFAMB01"
+    cluster = 90
+    nointermission
+    lightmode = 8
+}

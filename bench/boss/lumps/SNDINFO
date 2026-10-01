@@ -1,0 +1,11 @@
+// RF2 boss bench: PROVISIONAL sounds (bench/boss/materials_boss.py) until Codex's.
+rf/boss/stamp          "sounds/boss/stamp.wav"
+rf/boss/ink            "sounds/boss/ink.wav"
+rf/boss/ledger_open    "sounds/boss/ledger_open.wav"
+rf/boss/throw          "sounds/boss/throw.wav"
+rf/boss/ledger_hit     "sounds/boss/ledger_hit.wav"
+rf/boss/whistle        "sounds/boss/whistle.wav"
+rf/boss/whistle_short  "sounds/boss/whistle_short.wav"
+rf/boss/pain           "sounds/boss/pain.wav"
+rf/boss/death          "sounds/boss/death.wav"
+rf/boss/step           "sounds/boss/step.wav"
