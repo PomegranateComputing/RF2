@@ -66,7 +66,11 @@ class RFViktorMirror : RFFigure      // F02-08: Viktor, seen only in mirrors; fo
 {
     Default
     {
-        Height 68;
+        // The R2F8 images of 28/09 stand 378 px (68 u at 0.18) for a player of 56 u (measure of 01/10,
+        // docs/production/handoff/RF2_20261001/mesures/reflet_rf02.md): scaled to 56 u until Codex's R2F8 at 311 px
+        // (56 u at 0.18) replaces them; then back to the figures' 0.18.
+        Scale 0.148;
+        Height 56;
         +ONLYVISIBLEINMIRRORS
     }
     States { Spawn: R2F8 A -1; Stop; }

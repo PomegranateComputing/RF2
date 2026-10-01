@@ -259,6 +259,12 @@ class RFParis : EventHandler
     Actor seqUser;
     Actor morris;
     int morrisTics;
+    // F02-02, l. 91: the woman pushes the pram of registers west along the boulevard when Viktor comes near
+    Actor pram, pramWoman, pramNote;
+    int pramStage;          // 0 waiting, 1 walking, 2 stopped for good
+    double pramWalked;
+    Vector2 womanOffset, noteOffset;
+    double noteZ;
 
     override void WorldLoaded(WorldEvent e)
     {
@@ -438,8 +444,50 @@ class RFParis : EventHandler
 
         TickTsfWindow(pl);
         TickMirror(pl);
+        TickPram(pl);
         TickVoices(pl);
         TickSequence(pl);
+    }
+
+    // The pram (F02-02, l. 91): when Viktor comes within PRAM_NEAR, the woman pushes it west, at a walk, for
+    // PRAM_WAY units, then stops. The pram moves with collision (it waits if something stands in its way); the woman
+    // keeps her hands on the handle and the registers ride on top of it.
+    const PRAM_NEAR = 520;
+    const PRAM_WAY = 300;
+    const PRAM_SPEED = 0.9;
+
+    void TickPram(Actor pl)
+    {
+        if (pramStage == 2) return;
+        if (pram == null)
+        {
+            pram = RFPram(ThinkerIterator.Create('RFPram').Next());
+            pramWoman = RFFigurePram(ThinkerIterator.Create('RFFigurePram').Next());
+            if (pram == null || pramWoman == null) { pramStage = 2; return; }
+            womanOffset = pramWoman.Pos.XY - pram.Pos.XY;
+            let notes = ThinkerIterator.Create('RFNote');
+            Actor n;
+            while ((n = Actor(notes.Next())) != null)
+                if (n.Distance2D(pram) < 24) { pramNote = n; noteOffset = n.Pos.XY - pram.Pos.XY; noteZ = n.Pos.Z - pram.Pos.Z; }
+        }
+        if (pramStage == 0)
+        {
+            if (pl.health <= 0 || pl.Distance2D(pramWoman) > PRAM_NEAR) return;
+            pramStage = 1;
+            pramWoman.SetStateLabel("Walk");
+        }
+        Vector2 step = (cos(pram.angle), sin(pram.angle)) * PRAM_SPEED;
+        if (pram.TryMove(pram.Pos.XY + step, 0))
+        {
+            pramWalked += PRAM_SPEED;
+            pramWoman.SetOrigin((pram.Pos.XY + womanOffset, pramWoman.Pos.Z), true);
+            if (pramNote != null) pramNote.SetOrigin((pram.Pos.XY + noteOffset, pram.Pos.Z + noteZ), true);
+        }
+        if (pramWalked >= PRAM_WAY)
+        {
+            pramStage = 2;
+            pramWoman.SetStateLabel("Spawn");
+        }
     }
 
     // The TSF window: from the street the sets change shape in the reflection; the image goes when he comes

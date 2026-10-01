@@ -229,7 +229,7 @@ m.thing(3478, 30, T_FIG_FORMS, angle=180)                           # F02-01 fee
 # the pram full of registers
 m.thing(3016, 288, T_PRAM, angle=180)                               # pointing west, the handle toward the woman
 m.thing(3006, 288, T_NOTE, angle=90, args=(20, 1, 3), z=35)        # the registers of the model, read with the use key
-m.thing(3054, 288, T_FIG_PRAM, angle=180)                           # F02-02 her hands on the handle (still: no walk yet)
+m.thing(3054, 288, T_FIG_PRAM, angle=180)                           # F02-02 her hands on the handle; walks the pram west (RFParis.TickPram)
 litter([(3620, 150, 20), (3500, 210, 130), (3300, 110, 250), (3150, 180, 75), (2950, 90, 300), (2700, 230, 190),
         (3420, 280, 40), (3200, 30, 160)])
 m.thing(3200, 160, T_AMB, args=(4, 45))
@@ -441,7 +441,7 @@ lamp(950, 1416, 100, 220, 200, 170, 150)
 m.box(1344, 1520, 1360, 1568, pave(D_RD, 'RFW_PANL'), ceil=112, ctex='RFP_CEID', upper='RF2_FACU')
 m.face(1344, 1520, 1360, 1568, 'E', texture='RFD_SGL')
 sign(1344, 1600, 1344, 1488, 'RF2_FLIB', 120)
-block(1296, 1504, 1328, 1584, 44, 'RFW_TOP', 'RF2_LIVR', m.cells[(1296 // UNIT, 1504 // UNIT)])
+block(1296, 1504, 1328, 1584, 32, 'RFW_TOP', 'RF2_LIVR', m.cells[(1296 // UNIT, 1504 // UNIT)])   # about a metre of books (01/10: was 44)
 m.thing(1300, 1544, T_ATLAS, angle=180, args=(S_ATLAS,))
 m.thing(1300, 1620, T_MAG)
 # E4: orderlies down the street from the river, out of the grocery; the brancardier last (hard)

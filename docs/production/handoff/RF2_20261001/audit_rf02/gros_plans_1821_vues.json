@@ -1,0 +1,450 @@
+[
+ {
+  "index": 1,
+  "cls": "RFFormsBucket",
+  "x": 3456,
+  "y": 36,
+  "tic": 220,
+  "file": "01_RFFormsBucket_3456_36.png"
+ },
+ {
+  "index": 2,
+  "cls": "RFFigureForms",
+  "x": 3478,
+  "y": 30,
+  "tic": 235,
+  "file": "02_RFFigureForms_3478_30.png"
+ },
+ {
+  "index": 3,
+  "cls": "RFPram",
+  "x": 3016,
+  "y": 288,
+  "tic": 250,
+  "file": "03_RFPram_3016_288.png"
+ },
+ {
+  "index": 4,
+  "cls": "RFNote",
+  "x": 3006,
+  "y": 288,
+  "tic": 265,
+  "file": "04_RFNote_3006_288.png"
+ },
+ {
+  "index": 5,
+  "cls": "RFFigurePram",
+  "x": 3054,
+  "y": 288,
+  "tic": 280,
+  "file": "05_RFFigurePram_3054_288.png"
+ },
+ {
+  "index": 6,
+  "cls": "RFPistolAmmo",
+  "x": 3600,
+  "y": 60,
+  "tic": 295,
+  "file": "06_RFPistolAmmo_3600_60.png"
+ },
+ {
+  "index": 7,
+  "cls": "RFFigureSanteA",
+  "x": 3170,
+  "y": 298,
+  "tic": 310,
+  "file": "07_RFFigureSanteA_3170_298.png"
+ },
+ {
+  "index": 8,
+  "cls": "RFFigureSanteB",
+  "x": 3200,
+  "y": 302,
+  "tic": 325,
+  "file": "08_RFFigureSanteB_3200_302.png"
+ },
+ {
+  "index": 9,
+  "cls": "RFFigureSanteC",
+  "x": 3230,
+  "y": 298,
+  "tic": 340,
+  "file": "09_RFFigureSanteC_3230_298.png"
+ },
+ {
+  "index": 10,
+  "cls": "RFFigureSanteD",
+  "x": 3212,
+  "y": 282,
+  "tic": 355,
+  "file": "10_RFFigureSanteD_3212_282.png"
+ },
+ {
+  "index": 11,
+  "cls": "RFFieldDressing",
+  "x": 2600,
+  "y": 290,
+  "tic": 370,
+  "file": "11_RFFieldDressing_2600_290.png"
+ },
+ {
+  "index": 12,
+  "cls": "RFMattressProp",
+  "x": 2400,
+  "y": -80,
+  "tic": 385,
+  "file": "12_RFMattressProp_2400_-80.png"
+ },
+ {
+  "index": 13,
+  "cls": "RFMattressProp",
+  "x": 2440,
+  "y": 460,
+  "tic": 400,
+  "file": "13_RFMattressProp_2440_460.png"
+ },
+ {
+  "index": 14,
+  "cls": "RFMattressProp",
+  "x": 1900,
+  "y": 460,
+  "tic": 415,
+  "file": "14_RFMattressProp_1900_460.png"
+ },
+ {
+  "index": 15,
+  "cls": "RFMattressProp",
+  "x": 2300,
+  "y": 420,
+  "tic": 430,
+  "file": "15_RFMattressProp_2300_420.png"
+ },
+ {
+  "index": 16,
+  "cls": "RFMattressProp",
+  "x": 2400,
+  "y": 424,
+  "tic": 445,
+  "file": "16_RFMattressProp_2400_424.png"
+ },
+ {
+  "index": 17,
+  "cls": "RFTram",
+  "x": 2192,
+  "y": 232,
+  "tic": 460,
+  "file": "17_RFTram_2192_232.png"
+ },
+ {
+  "index": 18,
+  "cls": "RFTrack",
+  "x": 1984,
+  "y": 232,
+  "tic": 475,
+  "file": "18_RFTrack_1984_232.png"
+ },
+ {
+  "index": 19,
+  "cls": "RFTrack",
+  "x": 2240,
+  "y": 232,
+  "tic": 490,
+  "file": "19_RFTrack_2240_232.png"
+ },
+ {
+  "index": 20,
+  "cls": "RFTrackHalf",
+  "x": 2432,
+  "y": 232,
+  "tic": 505,
+  "file": "20_RFTrackHalf_2432_232.png"
+ },
+ {
+  "index": 21,
+  "cls": "RFSacoche",
+  "x": 2072,
+  "y": 268,
+  "tic": 520,
+  "file": "21_RFSacoche_2072_268.png"
+ },
+ {
+  "index": 22,
+  "cls": "RFFigureTram",
+  "x": 2108,
+  "y": 264,
+  "tic": 535,
+  "file": "22_RFFigureTram_2108_264.png"
+ },
+ {
+  "index": 23,
+  "cls": "RFRifleAmmo",
+  "x": 2440,
+  "y": -100,
+  "tic": 550,
+  "file": "23_RFRifleAmmo_2440_-100.png"
+ },
+ {
+  "index": 24,
+  "cls": "RFPistolAmmo",
+  "x": 1900,
+  "y": -80,
+  "tic": 565,
+  "file": "24_RFPistolAmmo_1900_-80.png"
+ },
+ {
+  "index": 25,
+  "cls": "RFFieldDressing",
+  "x": 2140,
+  "y": 740,
+  "tic": 580,
+  "file": "25_RFFieldDressing_2140_740.png"
+ },
+ {
+  "index": 26,
+  "cls": "RFFigureCochin",
+  "x": 1216,
+  "y": 284,
+  "tic": 595,
+  "file": "26_RFFigureCochin_1216_284.png"
+ },
+ {
+  "index": 27,
+  "cls": "RFCrowbar",
+  "x": 1176,
+  "y": 226,
+  "tic": 610,
+  "file": "27_RFCrowbar_1176_226.png"
+ },
+ {
+  "index": 28,
+  "cls": "RFPropTrolley",
+  "x": 1300,
+  "y": 40,
+  "tic": 625,
+  "file": "28_RFPropTrolley_1300_40.png"
+ },
+ {
+  "index": 29,
+  "cls": "RFPropBench",
+  "x": 1060,
+  "y": 200,
+  "tic": 640,
+  "file": "29_RFPropBench_1060_200.png"
+ },
+ {
+  "index": 30,
+  "cls": "RFRifleAmmo",
+  "x": 1200,
+  "y": 20,
+  "tic": 655,
+  "file": "30_RFRifleAmmo_1200_20.png"
+ },
+ {
+  "index": 31,
+  "cls": "RFFieldDressing",
+  "x": 1380,
+  "y": -10,
+  "tic": 670,
+  "file": "31_RFFieldDressing_1380_-10.png"
+ },
+ {
+  "index": 32,
+  "cls": "RFNote",
+  "x": 1040,
+  "y": 840,
+  "tic": 685,
+  "file": "32_RFNote_1040_840.png"
+ },
+ {
+  "index": 33,
+  "cls": "RFPropChair",
+  "x": 1316,
+  "y": 660,
+  "tic": 700,
+  "file": "33_RFPropChair_1316_660.png"
+ },
+ {
+  "index": 34,
+  "cls": "RFPropChair",
+  "x": 1320,
+  "y": 690,
+  "tic": 715,
+  "file": "34_RFPropChair_1320_690.png"
+ },
+ {
+  "index": 35,
+  "cls": "RFPropChair",
+  "x": 1300,
+  "y": 720,
+  "tic": 730,
+  "file": "35_RFPropChair_1300_720.png"
+ },
+ {
+  "index": 36,
+  "cls": "RFPropChair",
+  "x": 1318,
+  "y": 750,
+  "tic": 745,
+  "file": "36_RFPropChair_1318_750.png"
+ },
+ {
+  "index": 37,
+  "cls": "RFNote",
+  "x": 1060,
+  "y": 980,
+  "tic": 760,
+  "file": "37_RFNote_1060_980.png"
+ },
+ {
+  "index": 38,
+  "cls": "RFRadioSet",
+  "x": 1472,
+  "y": 1100,
+  "tic": 775,
+  "file": "38_RFRadioSet_1472_1100.png"
+ },
+ {
+  "index": 39,
+  "cls": "RFFigureTSF",
+  "x": 1472,
+  "y": 1056,
+  "tic": 790,
+  "file": "39_RFFigureTSF_1472_1056.png"
+ },
+ {
+  "index": 40,
+  "cls": "RFPistolAmmo",
+  "x": 1520,
+  "y": 1180,
+  "tic": 805,
+  "file": "40_RFPistolAmmo_1520_1180.png"
+ },
+ {
+  "index": 41,
+  "cls": "RFPropCabinet",
+  "x": 1392,
+  "y": 1060,
+  "tic": 820,
+  "file": "41_RFPropCabinet_1392_1060.png"
+ },
+ {
+  "index": 42,
+  "cls": "RFAtlas",
+  "x": 1300,
+  "y": 1544,
+  "tic": 835,
+  "file": "42_RFAtlas_1300_1544.png"
+ },
+ {
+  "index": 43,
+  "cls": "RFRifleAmmo",
+  "x": 1300,
+  "y": 1620,
+  "tic": 850,
+  "file": "43_RFRifleAmmo_1300_1620.png"
+ },
+ {
+  "index": 44,
+  "cls": "RFNote",
+  "x": 1184,
+  "y": 2100,
+  "tic": 865,
+  "file": "44_RFNote_1184_2100.png"
+ },
+ {
+  "index": 45,
+  "cls": "RFFieldPhone",
+  "x": 1128,
+  "y": 2692,
+  "tic": 880,
+  "file": "45_RFFieldPhone_1128_2692.png"
+ },
+ {
+  "index": 46,
+  "cls": "RFFigureValise",
+  "x": 1296,
+  "y": 2680,
+  "tic": 895,
+  "file": "46_RFFigureValise_1296_2680.png"
+ },
+ {
+  "index": 47,
+  "cls": "RFRifleAmmo",
+  "x": 1300,
+  "y": 2780,
+  "tic": 910,
+  "file": "47_RFRifleAmmo_1300_2780.png"
+ },
+ {
+  "index": 48,
+  "cls": "RFRifleAmmo",
+  "x": 1080,
+  "y": 2770,
+  "tic": 925,
+  "file": "48_RFRifleAmmo_1080_2770.png"
+ },
+ {
+  "index": 49,
+  "cls": "RFFieldDressing",
+  "x": 1450,
+  "y": 2600,
+  "tic": 940,
+  "file": "49_RFFieldDressing_1450_2600.png"
+ },
+ {
+  "index": 50,
+  "cls": "RFFountain",
+  "x": 328,
+  "y": 2760,
+  "tic": 955,
+  "file": "50_RFFountain_328_2760.png"
+ },
+ {
+  "index": 51,
+  "cls": "RFMorrisColumn",
+  "x": -352,
+  "y": 2896,
+  "tic": 970,
+  "file": "51_RFMorrisColumn_-352_2896.png"
+ },
+ {
+  "index": 52,
+  "cls": "RFPistolAmmo",
+  "x": -640,
+  "y": 2900,
+  "tic": 985,
+  "file": "52_RFPistolAmmo_-640_2900.png"
+ },
+ {
+  "index": 53,
+  "cls": "RFFieldDressing",
+  "x": -1500,
+  "y": 2700,
+  "tic": 1000,
+  "file": "53_RFFieldDressing_-1500_2700.png"
+ },
+ {
+  "index": 54,
+  "cls": "RFRifleAmmo",
+  "x": -1100,
+  "y": 2860,
+  "tic": 1015,
+  "file": "54_RFRifleAmmo_-1100_2860.png"
+ },
+ {
+  "index": 55,
+  "cls": "RFRifleAmmo",
+  "x": -1760,
+  "y": 3000,
+  "tic": 1030,
+  "file": "55_RFRifleAmmo_-1760_3000.png"
+ },
+ {
+  "index": 56,
+  "cls": "RFFieldDressing",
+  "x": -2350,
+  "y": 2500,
+  "tic": 1045,
+  "file": "56_RFFieldDressing_-2350_2500.png"
+ }
+]

@@ -464,8 +464,14 @@ def sandbags(name, seed, wunits=64, hunits=48):
     save('Texture', name, np.clip(img, 0, 1))
 
 
-def book_barricade(name, seed, wunits=128, hunits=64):
-    """Books piled flat as a barricade in front of the bookshop; four titles from the novel on the spines."""
+BOOK_PPU = 16          # books are seen from close by and carry titles: 16 px per unit
+
+
+def book_barricade(name, seed, wunits=64, hunits=32):
+    """Books piled flat as a barricade in front of the bookshop; four titles from the novel on the spines.
+    Real sizes (audit of 01/10: the first version had spines of 40-90 u, up to 2.8 m): spines 8-18 u long (25-55 cm,
+    an atlas the longest), 1.5-3 u thick, drawn at BOOK_PPU."""
+    PPU = BOOK_PPU
     W, H = wunits * PPU, hunits * PPU
     rng = np.random.default_rng(seed)
     pil = Image.new('RGB', (W, H), (40, 34, 28))
@@ -474,10 +480,10 @@ def book_barricade(name, seed, wunits=128, hunits=64):
     y = H
     k = 0
     while y > 0:
-        th = int(rng.integers(5, 10)) * PPU
-        x = int(rng.integers(-20, 8)) * PPU
+        th = int(rng.integers(24, 48))                     # 1.5 to 3 u at 16 px/u
+        x = int(rng.integers(-12, 4)) * PPU
         while x < W:
-            tw = int(rng.integers(40, 90)) * PPU
+            tw = int(rng.integers(8, 19)) * PPU
             col = [(110, 34, 30), (38, 56, 88), (60, 76, 50), (150, 128, 90), (84, 60, 40), (30, 30, 34)][int(rng.integers(0, 6))]
             d.rectangle([x, y - th, x + tw, y - 1], fill=col, outline=tuple(int(c * 0.6) for c in col))
             d.line([(x + 2, y - th + 2), (x + tw - 2, y - th + 2)], fill=tuple(min(255, int(c * 1.3)) for c in col))
@@ -491,7 +497,7 @@ def book_barricade(name, seed, wunits=128, hunits=64):
             x += tw + int(rng.integers(0, 3)) * PPU
         y -= th
     arr = np.asarray(pil).astype(float) / 255.0
-    save('Texture', name, floor_grime(arr, 0.3, 0.15))
+    save('Texture', name, floor_grime(arr, 0.3, 0.15), ppu=BOOK_PPU)
 
 
 def radio_shelf(name, seed, wunits=128, hunits=64):
@@ -1142,4 +1148,9 @@ def main():
 
 
 if __name__ == '__main__':
+    # Since 27/09 several RF02 files were replaced by imports (Astra's HD facades, signs) and TEXTURES.rf02 was edited
+    # by hand for them: a full run would overwrite them with the procedural stand-ins. Regenerate one texture at a time
+    # (python -c "import materials_rf02 as m; m.book_barricade('RF2_LIVR', 426)") and edit its TEXTURES entry.
+    if '--force-all' not in sys.argv:
+        sys.exit('materials_rf02.py: run complet refuse (fichiers importes depuis) ; voir le commentaire de fin de fichier')
     main()

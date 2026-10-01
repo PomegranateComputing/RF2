@@ -1,0 +1,23 @@
+RF_TRAMSHOT z=50 hit=3 dist=56 y=176
+RF_TRAMSHOT z=70 hit=3 dist=56 y=176
+RF_TRAMSHOT z=90 hit=3 dist=56 y=176
+RF_TRAMSHOT z=110 hit=3 dist=56 y=176
+RF_PRAMWATCH start
+RF_PRAMWATCH t=35 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=70 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=105 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=140 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=175 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=210 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=245 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=280 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=315 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=350 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=385 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=420 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=455 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=490 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=525 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=560 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=595 pram=3016,288 woman=3054,288 wframe=0
+RF_PRAMWATCH t=630 pram=3016,288 woman=3054,288 wframe=0

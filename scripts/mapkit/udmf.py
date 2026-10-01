@@ -571,7 +571,10 @@ class MapBuilder:
                         sides.append(dict(sector=sec, texturemiddle=side))
                         d = dict(v1=base + e, v2=base + (e + 1) % 4, sidefront=len(sides) - 1, blocking=True)
                         if e == 0:
-                            d.update(special=160, arg0=tag, arg1=1, arg2=1, arg3=alpha)
+                            # An invisible slab (alpha 0) is the collision of a model the player sees: it blocks
+                            # bodies but lets shots through (type 1 + 32, shootability inverted), or a tram window
+                            # or an open frame would stop bullets on nothing (RF02 audit, 01/10).
+                            d.update(special=160, arg0=tag, arg1=33 if alpha == 0 else 1, arg2=1, arg3=alpha)
                         out_lines.append(d)
                     k += 1
         text = f'// {self.name} - Red Flags 2 production map. Authored with scripts/mapkit (cell grid {UNIT}).\n'

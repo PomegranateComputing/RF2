@@ -246,10 +246,10 @@ Texture RF2_SABL, 256, 192
     YScale 4
     Patch "patches/rf02/RF2_SABL.png", 0, 0
 }
-Texture RF2_LIVR, 512, 256
+Texture RF2_LIVR, 1024, 512
 {
-    XScale 4
-    YScale 4
+    XScale 16
+    YScale 16
     Patch "patches/rf02/RF2_LIVR.png", 0, 0
 }
 Texture RF2_TSFS, 1774, 887
