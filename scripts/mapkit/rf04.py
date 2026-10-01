@@ -1,27 +1,21 @@
 #!/usr/bin/env python3
 """RF04 - Luna Park, personnel technique. Production map source (authored, not generated).
 
-The first passage of the Luna Park in the novel (l. 451-551; docs/production/maps/RF04_FICHE.md), in its order:
+Recomposed on 01/10/2026 around the park itself (owner's review: the first version did not give the Luna Park's
+identity): the esplanade, the long basin of the water chute, the rocks and the roller coaster against the sky, the
+attractions' facades. The park is a declared reconstruction shared with RF05 (scripts/mapkit/luna_park.py,
+docs/production/maps/RF04_RELEVE_PLAN.md). The novel's order (l. 451-551) is kept:
 
-  A  Chemin de service (start, south-east): inside the service door of RF02's exit, the path overgrown with grass
-     along the hoarding, narrow rails across it (the warm rail), sheds; the workshop behind a loose board (secret).
-  B  The guard's hut and the staff barrier: "Tu es en retard.", the card in the clock (06:06), the hook of keys
-     (SOUS-STATION); the barrier lifts; looked back at, the hut is empty and ERREUR Ø is on the glass.
-  C  The main alley: facades that still promise worlds; the Palais des Singes (l. 455), the decor of BROOKLYN BRIDGE
-     (l. 523) with the technical corridor full of cables behind it; a hangar (loot, optional).
-  D  The Niagara: the empty basin, the line of dry algae at shoulder height, LES CHUTES DU NIAGARA, the child's shoe
-     in a black puddle (l. 523-527).
-  E  The roller coaster: posts and braces under the track, the loading platform (a view over the basin and the
-     alley), a length of track to walk.
-  F  The dance hall: the gutted marquee, the turnstiles (617 -> 618), warped parquet, pitted mirrors (the reflections,
-     the badge), the silent juke-box and the motor's three knocks (l. 531-549).
-  G  The lane behind the roller-coaster track, grass between the slabs, the substation door (l. 551): exit.
+  the staff door and the service path (the warm rail) -> the guard's hut (06:06, the key SOUS-STATION, the barrier;
+  looked back at, the hut is empty and ERREUR Ø is on the glass) -> the first view of the park -> BROOKLYN BRIDGE and
+  the technical corridor behind it -> the Niagara (the basin, the line of algae, the child's shoe) -> the trestles and
+  the loading platform -> the marquee and the turnstiles (617 -> 618) -> the dance hall (the reflections, the silent
+  juke-box, the motor's three knocks) -> the lane behind the track -> the substation door (exit to RF05).
 
-Enemies continue the accepted adaptation: the staff of Sainte-Anne come in behind Viktor ("Celui ou ils entrent.",
-"Toujours les memes.", l. 489-493). The guard, the park's people and every figure of the text are never targets.
-Resources are Opus's PROVISIONAL stand-ins under the names of Astra's request LUNA-V01.
+Enemies continue the accepted adaptation: the staff of Sainte-Anne come in behind Viktor ("Toujours les memes",
+l. 493). The guard, the park's people and every figure of the text are never targets. Resources: Astra's tranche 01,
+Codex's lots as they come, Opus's provisional stand-ins under the names of ZONE_PILOTE_RF04.md.
 
-Units: 1 cell = 16. Sky at 256 (the facades of the park are 256 high). North = +y.
 Usage: python scripts/mapkit/rf04.py   (writes src/maps/RF04.wad, build/RF04_plan.png, build/RF04_TEXTMAP.txt)
 """
 import math
@@ -30,30 +24,9 @@ from pathlib import Path
 from dataclasses import replace
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from udmf import MapBuilder, Cell, UNIT, texture_scales  # noqa: E402
+import luna_park as lp  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-
-# --------------------------------------------------------------------------- materials
-SKY = 256
-ENV_PARK, ENV_ROOM, ENV_CORR, ENV_HALL = (32, 0), (30, 8), (13, 0), (30, 3)
-
-PARK = Cell(floor=0, ceil=SKY, ftex='RFF_GRAV', ctex='F_SKY1', light=160, wall='RF4_FAC1', color=0xE2DED4,
-            env=ENV_PARK, lower='RF4_BASC')
-PATH = replace(PARK, ftex='RF4_HERB', wall='RF4_HANG', light=152)
-RAILS = replace(PATH, ftex='RF4_DECA')
-FORE = replace(PARK, ftex='RFF_GRAV', wall='RF4_HANG', light=156)
-ALLEY = replace(PARK, ftex='RFF_GRAV', wall='RF4_FAC2', light=162)
-RIM = replace(PARK, ftex='RFF_SLAB', wall='RF4_FAC3', lower='RF4_BASS', light=158)
-BASIN = replace(PARK, floor=-96, ftex='RF4_BASF', wall='RF4_BASS', lower='RF4_BASS', light=150, env=(30, 1))
-PUDDLE = replace(BASIN, ftex='RF4_FLAQ')
-POSTS = replace(PARK, ftex='RF4_HERB', wall='RF4_ATEL', light=146)
-LANE = replace(PARK, ftex='RF4_DALH', wall='RF4_HANG', light=144)
-PLAZA = replace(PARK, ftex='RFF_GRAV', wall='RF4_FAC3', light=158)
-CORR = Cell(floor=0, ceil=104, ftex='RFF_WOOD', ctex='RFP_CEID', light=92, wall='RF4_CABL', color=0xEADCC4, env=ENV_CORR)
-HANGAR = Cell(floor=0, ceil=176, ftex='RFF_GRAV', ctex='RFP_CEID', light=104, wall='RF4_HANG', color=0xEAE0CC, env=ENV_ROOM)
-ATELIER = Cell(floor=0, ceil=120, ftex='RFF_WOOD', ctex='RFP_CEID', light=88, wall='RF4_ATEL', color=0xEAD8C0, env=ENV_ROOM)
-HALL = Cell(floor=0, ceil=192, ftex='RF4_PARQ', ctex='RFP_CEID', light=122, wall='RFP_PLN', color=0xF0E2C8, env=ENV_HALL)
-VEST = Cell(floor=0, ceil=112, ftex='RFF_CONC', ctex='RFP_CEID', light=72, wall='RF4_BASC', color=0xE0D8C8, env=ENV_ROOM)
 
 LAMP_GAIN = 0.55
 DAY_GAIN = 0.45
@@ -74,7 +47,7 @@ L_HUT, L_CLOCK, L_KEYS, L_BARRIER, L_GLASS, L_RAIL, L_BROOKLYN, L_NIAGARA = 1, 2
 L_SHOE, L_MOTOR, L_TURNSTILE, L_COUNTER, L_MIRROR, L_JUKEBOX, L_HALL, L_GLASSLOOK = 9, 10, 11, 12, 13, 14, 15, 16
 SIGNAL_TID = 999
 BARRIER_WAVE, JUKEBOX_WAVE = 100, 500
-LOCK_SUBSTATION, LOCK_FROM_INSIDE = 6, 7
+LOCK_SUBSTATION, LOCK_FROM_INSIDE, LOCK_SERVICE = 6, 7, 8
 
 m = MapBuilder('RF04')
 
@@ -96,11 +69,6 @@ def door(x0, y0, x1, y1, tag, tex, base, frame_side, lintel=112, track='RFP_DRK'
 
 def block(x0, y0, x1, y1, height, top, side, base=None):
     m.raise_block(x0, y0, x1, y1, height, top, side, base)
-
-
-def roofline(x0, y0, x1, y1, top, side, base):
-    """A wall lower than the sky: a strip whose floor and ceiling are its top (the side texture is its riser)."""
-    m.box(x0, y0, x1, y1, base, floor=top, ceil=top, ftex='RF2_ZINC', lower=side, wall=side)
 
 
 def lamp(x, y, z, r=255, g=206, b=150, radius=200):
@@ -173,365 +141,272 @@ def litter(points):
         m.thing(x, y, T_LITTER, angle=a)
 
 
-def posts(x0, y0, x1, y1, step, base):
-    """Roller-coaster posts: 16 x 16 solid timbers on a grid, the braces between them are decor lines."""
-    xs = list(range(x0, x1 + 1, step))
-    ys = list(range(y0, y1 + 1, step))
-    for x in xs:
-        for y in ys:
-            m.carve(x, y, x + 16, y + 16)
-    return xs, ys
+# ============================================================================ THE PARK (shared with RF05)
+A = lp.build_park(m, sign)
+SVC_X0, SVC_X1 = lp.SVC_X0, lp.SVC_X1
+PATH = lp.PATH
 
-
-# ============================================================================ A. CHEMIN DE SERVICE
-m.box(768, 0, 896, 1056, PATH)
-m.box(768, 384, 896, 448, RAILS)                                    # the narrow rails across the path (l. 463)
-roofline(896, 0, 912, 1232, 176, 'RF2_PALI', PATH)                   # the hoarding, lower than the sky
-m.face(800, 0, 864, 16, 'S', texture='RFD_SGL')                      # the service door Viktor came through (RF02)
-m.thing(832, 72, T_START, angle=90)
-m.thing(848, 40, T_SIGNAL, tid=SIGNAL_TID)
-m.thing(832, 416, T_RAIL, args=(L_RAIL,))                            # the rail, warm, a light vibration
-m.face(768, 384, 784, 448, 'W', texture='RFD_DBL')                  # the rails run under a shed door, shut
-# the workshop, behind a loose board (secret; its key ATELIER stays on the hook)
-m.box(640, 576, 752, 752, ATELIER, special=1024)
-m.door(752, 624, 768, 672, 41, 'RF4_HANG', 'RF4_HANG', replace(PATH, ctex='RFP_CEID'), speed=24)   # doors under the sky get a
-# ceiling of their own: a door sector with the sky's ceiling is not drawn when shut (the sky shows through)
-block(656, 592, 736, 624, 32, 'RFW_TOP', 'RF4_ATEL', ATELIER)       # workbench
-m.thing(700, 700, T_MAG)
-m.thing(672, 720, T_9MM)
-m.thing(720, 660, T_DRESS)
-lamp(696, 664, 96, 230, 200, 160, 120)
-m.thing(832, 640, T_AMB, args=(AMB_PARK, 50))
-litter([(820, 180, 30), (860, 300, 140), (800, 560, 250), (850, 820, 70), (810, 960, 200)])
-daylight(832, 300, 220)
-daylight(832, 800, 220)
-m.thing(860, 700, T_9MM)
-checkpoint(768, 200, 896, 200)
-m.label(780, 100, 'A CHEMIN DE SERVICE')
+# ============================================================================ A. THE SERVICE PATH
+m.thing(*A['start'], T_START, angle=90)
+m.thing(1840, 40, T_SIGNAL, tid=SIGNAL_TID)
+m.thing(*A['rail'], T_RAIL, args=(L_RAIL,))                          # the rail, warm, a light vibration (l. 463)
+# the workshop behind a loose board (secret; its key ATELIER stays on the hook)
+m.door(1696, 640, 1712, 688, 41, 'RF4_CABL', 'RF4_CABL', lp.CORR, speed=24)   # a loose board in the corridor's east wall
+block(1712, 736, 1760, 768, 32, 'RFW_TOP', 'RF4_ATEL', lp.ATELIER)    # workbench
+m.thing(1744, 664, T_MAG)
+m.thing(1732, 700, T_9MM)
+m.thing(1728, 680, T_DRESS)
+lamp(*A['atelier'], 96, 230, 200, 160, 120)
+m.thing(1856, 640, T_AMB, args=(AMB_PARK, 50))
+litter([(1840, 180, 30), (1880, 300, 140), (1820, 560, 250), (1870, 820, 70), (1830, 960, 200), (1860, 1380, 110)])
+for y in (300, 800, 1400):
+    daylight(1856, y, 220)
+m.thing(1880, 860, T_9MM)
+checkpoint(SVC_X0, 200, SVC_X1, 200)
+m.label(1800, 100, 'A CHEMIN DE SERVICE')
 
 # ============================================================================ B. THE HUT AND THE STAFF BARRIER
-m.box(640, 1056, 896, 1216, FORE)
-# the hut: walls, roof and window are solid 3D floors under the open sky (l. 467): 80 x 96, in the north-east
-HX0, HY0, HX1, HY1 = 816, 1120, 896, 1216
-m.box(HX0, HY0, HX1, HY1, FORE, ftex='RFF_WOOD')
-for (x0, y0, x1, y1) in ((HX0, HY1 - 16, HX1, HY1), (HX0, HY0, HX0 + 16, HY1)):                 # north and west walls
-    m.slab(x0, y0, x1, y1, 0, 104, 'RF4_GUER')
-m.slab(HX0 + 16, HY0, HX0 + 16 + 16, HY0 + 16, 0, 104, 'RF4_GUER')                                # beside the window
-m.slab(HX1 - 16, HY0, HX1, HY0 + 16, 0, 104, 'RF4_GUER')
-m.slab(HX0 + 32, HY0, HX1 - 16, HY0 + 16, 0, 40, 'RF4_GUER')                                      # sill
-m.slab(HX0 + 32, HY0, HX1 - 16, HY0 + 16, 80, 104, 'RF4_GUER')                                    # lintel
-m.slab(HX0 + 16, HY0 + 16, HX1, HY1 - 16, 104, 116, 'RF4_GUER', top='RF2_ZINC', bottom='RFP_CEID')  # the roof
-m.slab(HX0, HY0, HX0 + 16, HY0 + 16, 104, 116, 'RF4_GUER', top='RF2_ZINC')
-# the glass (L_GLASS: ERREUR Ø appears on it) between sill and lintel; the clock and the hook
-sign(HX0 + 32, HY0, HX1 - 16, HY0, 'RF4_VIT0', 40, off=-8, blocking=True, user_scene=L_GLASS)
-sign(HX0 + 36, HY1 - 16, HX1 - 20, HY1 - 16, 'RF4_POIN', 36, off=1)                               # clock on the inner north wall
-sign(HX0, HY0 + 72, HX0, HY0 + 24, 'RF4_CLE5', 40, off=1, user_scene=L_KEYS)                       # hook on the outer west wall
-m.thing(HX0 + 56, HY0 + 44, T_GUARD, angle=270)                                                   # seated, the register on his knees
-m.thing(HX0 + 56, HY0 - 18, T_CLOCK, angle=90, args=(L_CLOCK,), z=40)                              # at the window: the card
-m.thing(HX0 - 16, HY0 + 48, T_KEYHOOK, angle=0, args=(L_KEYS,), z=40)                              # at the hook
-m.thing(HX0 + 40, HY0 + 16, T_SPOT, args=(L_GLASSLOOK,), z=60)                                      # the glass, looked back at
-lamp(HX0 + 56, HY0 + 60, 90, 255, 214, 160, 90)
-scene(768, 1016, 896, 1016, L_HUT)                                                                # "Tu es en retard."
-objective(768, 1000, 896, 1000, 1)
-# the staff barrier: a railing across the way west, lifted by the scene when the key is taken
-m.box(320, 1056, 640, 1152, PATH)
-sign(632, 1056, 632, 1152, 'RF2_RAMB', 0, off=0, blocking=True, user_scene=L_BARRIER)
-roofline(320, 1040, 640, 1056, 176, 'RF2_PALI', PATH)                                              # the south hoarding
-m.thing(760, 1100, T_AMB, args=(AMB_PARK, 40))
-m.thing(700, 1180, T_DRESS)
-daylight(720, 1120, 220)
-# E1: they come in by the service door behind him ("Celui ou ils entrent", l. 489)
-spot(832, 96, ORD, BARRIER_WAVE, 90)
-spot(816, 140, ORD, BARRIER_WAVE, 90)
-spot(856, 150, ORD, BARRIER_WAVE, 90, skill='hard')
-checkpoint(600, 1056, 600, 1152)
-m.label(660, 1180, 'B GUERITE')
+HX0, HY0, HX1, HY1 = lp.HUT
+m.box(HX0, HY0, HX1, HY1, lp.FORE, ftex='RFF_WOOD')
+m.slab(HX0, HY0, HX0 + 16, HY1, 0, 104, 'RF4_GUER')                                               # west wall
+m.slab(HX0 + 16, HY1 - 16, HX1, HY1, 0, 104, 'RF4_GUER')                                          # north wall
+m.slab(HX0 + 16, HY0, HX1, HY0 + 16, 0, 104, 'RF4_GUER')                                          # south wall
+m.slab(HX1 - 16, HY0 + 16, HX1, HY0 + 64, 0, 104, 'RF4_GUER')                                     # east wall: the clock's part
+m.slab(HX1 - 16, HY1 - 32, HX1, HY1 - 16, 0, 104, 'RF4_GUER')                                     # beside the window
+m.slab(HX1 - 16, HY0 + 64, HX1, HY1 - 32, 0, 40, 'RF4_GUER')                                      # sill
+m.slab(HX1 - 16, HY0 + 64, HX1, HY1 - 32, 80, 104, 'RF4_GUER')                                    # lintel
+m.slab(HX0, HY0, HX1, HY1, 104, 116, 'RF4_GUER', top='RF2_ZINC', bottom='RFP_CEID')              # the roof
+sign(HX1, HY0 + 64, HX1, HY1 - 32, 'RF4_VIT0', 40, off=-8, blocking=True, user_scene=L_GLASS)     # the glass (ERREUR Ø)
+sign(HX1, HY0 + 24, HX1, HY0 + 48, 'RF4_POIN', 36, off=1)                                         # the clock (24 u), facing the path
+sign(HX0 + 72, HY1, HX0 + 24, HY1, 'RF4_CLE5', 40, off=1, user_scene=L_KEYS)                      # the hook, on the north face
+m.thing(HX0 + 48, HY0 + 80, T_GUARD, angle=0)                                                     # seated, the register on his knees
+m.thing(HX1 + 10, HY0 + 36, T_CLOCK, angle=180, args=(L_CLOCK,), z=40)                             # at the clock: the card
+m.thing(HX0 + 48, HY1 + 12, T_KEYHOOK, angle=270, args=(L_KEYS,), z=40)                            # at the hook
+m.thing(HX1 + 4, HY0 + 80, T_SPOT, args=(L_GLASSLOOK,), z=60)                                       # the glass, looked back at
+lamp(HX0 + 48, HY0 + 72, 90, 255, 214, 160, 90)
+scene(SVC_X0, 904, SVC_X1, 904, L_HUT)                                                            # "Tu es en retard."
+objective(SVC_X0, 888, SVC_X1, 888, 1)
+# the staff barrier: a railing across the path north of the hut, lifted by the scene when the key is taken
+sign(SVC_X0, lp.BARRIER_Y, SVC_X1, lp.BARRIER_Y, 'RF2_RAMB', 0, off=0, blocking=True, user_scene=L_BARRIER)
+m.thing(1856, 1150, T_AMB, args=(AMB_PARK, 40))
+m.thing(1700, 1180, T_DRESS)
+daylight(1728, 1100, 220)
+# E1: they come in by the staff door behind him ("Celui ou ils entrent", l. 489)
+spot(1856, 96, ORD, BARRIER_WAVE, 90)
+spot(1832, 140, ORD, BARRIER_WAVE, 90)
+spot(1880, 150, ORD, BARRIER_WAVE, 90, skill='hard')
+checkpoint(SVC_X0, 1240, SVC_X1, 1240)
+m.label(1680, 980, 'B GUERITE')
 
-# ============================================================================ C. THE MAIN ALLEY
-m.box(64, 896, 320, 1920, ALLEY)
-roofline(64, 880, 320, 896, 176, 'RF2_PALI', ALLEY)                                                # the entrance gate, from inside
-roofline(128, 880, 256, 896, 176, 'RFM_GRIL', ALLEY)                                               # its padlocked gate
-# west: the Palais des Singes (closed), then the decor of BROOKLYN BRIDGE; the gap of a missing board between them
-m.modify(64, 896, 80, 1168, wall='RF4_FAC1')
-sign(64, 1000, 64, 1112, 'RF4_SING', 120, off=1)
-m.modify(64, 1168, 80, 1472, wall='RF4_BROO')
-m.modify(64, 1472, 80, 1920, wall='RF4_FAC2')
-# east: facades of shut attractions, the hangar's front and its doorway
-m.modify(304, 896, 320, 1920, wall='RF4_FAC3')
-for (x, y, a) in ((110, 980, 20), (280, 1130, 160), (140, 1300, 270), (250, 1540, 45), (100, 1700, 200), (290, 1820, 320)):
-    m.thing(x, y, T_LITTER, angle=a)
-sign(320, 1072, 320, 1024, 'RF4_AFF1', 80, off=1)                                                  # torn posters (l. 455)
-sign(64, 1592, 64, 1640, 'RF4_AFF2', 80, off=1)
-sign(64, 1712, 64, 1760, 'RF4_AFF3', 80, off=1)
-sign(320, 1848, 320, 1800, 'RF4_AFF4', 80, off=1)
-for y in (1100, 1500, 1800):
-    daylight(192, y, 220)
-m.thing(192, 1200, T_AMB, args=(AMB_PARK, 45))
-m.thing(200, 1650, T_9MM)
-m.thing(120, 1850, T_MAG)
-scene(64, 1336, 320, 1336, L_MOTOR)                                                                # the motor beats under the park
-m.label(80, 930, 'C ALLEE')
-
-# the technical corridor behind the decor (l. 523): in through the gap of a missing board
-m.box(32, 1168, 64, 1232, CORR, ceil=104)
-m.box(-48, 1184, 32, 1504, CORR)
-m.box(-128, 1440, -48, 1504, CORR)
-block(-48, 1296, -16, 1328, 24, 'RFW_TOP', 'RF4_ATEL', CORR)
-block(0, 1392, 32, 1424, 32, 'RFW_TOP', 'RF4_ATEL', CORR)
-lamp(-8, 1260, 90, 255, 200, 140, 110)
-m.thing(-8, 1350, T_FLICKER, args=(255, 196, 130, 120, 60), z=90)
-m.thing(-8, 1450, T_AMB, args=(AMB_ROOM, 50))
-# secret: a niche behind the Palais des Singes, through a loose board in the corridor's south wall
-m.box(-48, 1072, 32, 1168, ATELIER, special=1024, light=76)
-m.door(-32, 1168, 16, 1184, 42, 'RF4_CABL', 'RF4_CABL', CORR, speed=24)
-m.thing(-8, 1110, T_MAG)
-m.thing(-32, 1090, T_DRESS)
-m.thing(16, 1090, T_9MM)
-scene(32, 1208, 64, 1208, L_BROOKLYN)
-objective(40, 1168, 40, 1232, 4)
-# E2: two orderlies and a porte-registre at the far end of the corridor
-spot(-104, 1472, ORD, 200, 0)
-spot(-168, 1456, ORD, 200, 0)
-spot(-168, 1520, POR, 200, 0)
-spot(-176, 1400, ORD, 200, 0, skill='hard')
-wake(-48, 1256, 32, 1256, 200)
-m.label(-40, 1200, 'COULOIR TECHNIQUE')
-
-# the hangar (optional: stored decor, cable drums, boats of the water chute)
-m.box(336, 1152, 704, 1856, HANGAR)
-door(304, 1440, 336, 1504, 30, 'RFD_DBL', HANGAR, 'W', lintel=128, track='RF4_HANG', kind='open')
-m.box(576, 1856, 640, 1888, HANGAR, ceil=128)                                                       # back doorway to the plaza
-for (x0, y0, x1, y1, h) in ((400, 1216, 496, 1312, 48), (560, 1216, 656, 1280, 64), (400, 1600, 432, 1760, 40),
-                            (560, 1520, 688, 1584, 56), (480, 1696, 544, 1760, 32)):
-    block(x0, y0, x1, y1, h, 'RFW_TOP', 'RF4_HANG', HANGAR)
-for (x, y) in ((440, 1420), (620, 1680)):
-    lamp(x, y, 150, 230, 210, 170, 220)
-m.thing(520, 1400, T_AMB, args=(AMB_ROOM, 55))
-m.thing(640, 1400, T_MAG)
-m.thing(460, 1480, T_DRESS)
-spot(640, 1300, ORD, 250, 180, skill='hard')
-spot(620, 1780, ORD, 250, 180, skill='hard')
-wake(360, 1440, 360, 1504, 250)
-m.label(400, 1180, 'HANGAR')
+# ============================================================================ C. THE FIRST VIEW, BROOKLYN BRIDGE AND ITS CORRIDOR
+scene(1544, lp.TURN_Y0, 1544, lp.TURN_Y1, L_MOTOR)                                                # the motor beats under the park
+objective(1528, lp.TURN_Y0, 1528, lp.TURN_Y1, 4)                                                  # the first view: the bridge
+scene(1576, 672, 1576, 736, L_BROOKLYN)
+litter([(1400, 1500, 30), (1300, 1250, 160), (1450, 900, 270), (1250, 600, 45), (1400, 300, 200), (600, 500, 320),
+        (500, 900, 120), (1250, 1700, 60), (900, 1700, 250), (700, 300, 10)])
+for (x, y) in ((1300, 1500), (1300, 500), (640, 900), (640, 1700), (1000, 2100)):
+    daylight(x, y, 300, 600)
+for (x, y) in ((1200, 1200), (700, 700)):
+    m.thing(x, y, T_AMB, args=(AMB_PARK, 45))
+m.thing(1420, 1300, T_9MM)
+m.thing(1350, 760, T_MAG)
+# inside the corridor: crates, drums of cable, a flickering bulb; a niche behind a loose board (secret)
+block(1600, 560, 1632, 592, 24, 'RFW_TOP', 'RF4_ATEL', lp.CORR)
+block(1664, 448, 1696, 480, 32, 'RFW_TOP', 'RF4_ATEL', lp.CORR)
+lamp(1648, 600, 90, 255, 200, 140, 110)
+m.thing(1648, 400, T_FLICKER, args=(255, 196, 130, 120, 60), z=90)
+m.thing(1648, 500, T_AMB, args=(AMB_ROOM, 50))
+m.box(1712, 352, 1776, 448, lp.ATELIER, special=1024, light=76)
+m.door(1696, 384, 1712, 416, 42, 'RF4_CABL', 'RF4_CABL', lp.CORR, speed=24)
+m.thing(1744, 370, T_MAG)
+m.thing(1744, 430, T_DRESS)
+# E2: two orderlies and a porte-registre come in by the far end of the corridor, round its corner
+spot(1568, 288, ORD, 200, 0)
+spot(1500, 296, ORD, 200, 0)
+spot(1460, 240, POR, 200, 0)
+spot(1500, 200, ORD, 200, 0, skill='hard')
+wake(lp.CORR_X0, 648, lp.CORR_X1, 648, 200)
+objective(1528, 256, 1528, 320, 5)                                                                # out of the corridor: the basin
+m.label(1600, 760, 'C COULOIR TECHNIQUE')
 
 # ============================================================================ D. THE NIAGARA
-m.box(-768, 1088, -128, 1728, RIM)
-m.box(-704, 1152, -192, 1600, BASIN)
-for k, z in enumerate((-24, -48, -72)):                                                             # south-east stair
-    m.box(-256, 1152 + 16 * k, -192, 1168 + 16 * k, BASIN, floor=z)
-for k, z in enumerate((-24, -48, -72)):                                                             # the cascade stair, north
-    m.box(-480, 1584 - 16 * k, -416, 1600 - 16 * k, BASIN, floor=z)
-m.box(-352, 1216, -288, 1264, PUDDLE)                                                               # the black puddle
-m.box(-368, 1232, -352, 1248, PUDDLE)
-m.box(-336, 1264, -304, 1280, PUDDLE)
-m.box(-288, 1232, -272, 1248, PUDDLE)
-block(-640, 1648, -512, 1712, 96, 'RFF_SLAB', 'RF4_ROCH', RIM)                                     # the fake rocks of the cascade
-block(-384, 1648, -256, 1712, 96, 'RFF_SLAB', 'RF4_ROCH', RIM)
-block(-512, 1680, -384, 1712, 128, 'RFF_SLAB', 'RF4_ROCH', RIM)
-sign(-512, 1680, -384, 1680, 'RF4_NIAG', 88, off=1)                                                # LES CHUTES DU NIAGARA
-m.thing(-320, 1240, T_SHOE, args=(L_SHOE,))
-# the railing round the basin (a drop of 96): open at the two stairs
-for (x0, y0, x1, y1) in ((-704, 1150, -256, 1150), (-190, 1152, -190, 1600), (-706, 1152, -706, 1600),
-                         (-704, 1602, -480, 1602), (-416, 1602, -192, 1602)):
-    m.decor_line(x0, y0, x1, y1, 'RF2_RAMB', 0, blocking=True, yscale=4)
-m.thing(-448, 1400, T_AMB, args=(AMB_WIND, 45))
-m.thing(-448, 1200, T_AMB, args=(AMB_DRIP, 40))
-daylight(-448, 1380, 220, 600)
-m.thing(-720, 1120, T_9MM)
-m.thing(-160, 1700, T_MAG)
-m.thing(-680, 1500, T_DRESS)
-scene(-120, 1440, -120, 1504, L_NIAGARA)
-objective(-136, 1440, -136, 1504, 5)
-# E3: orderlies down the stairs from the rim, the brancardier by the cascade stair
-spot(-640, 1760, ORD, 300, 270)
-spot(-320, 1760, ORD, 300, 270)
-spot(-448, 1776, BRA, 300, 270)
-spot(-600, 1768, ORD, 300, 270)
-spot(-560, 1760, POR, 300, 270, skill='hard')
-wake(-152, 1440, -152, 1504, 300)
-checkpoint(-168, 1440, -168, 1504)
-m.label(-760, 1100, 'D NIAGARA')
+bx0, by0, bx1, by1 = lp.BAS
+m.thing(*A['shoe'], T_SHOE, args=(L_SHOE,))
+scene(896, 376, 1024, 376, L_NIAGARA)
+m.thing(960, 900, T_AMB, args=(AMB_WIND, 45))
+m.thing(960, 1300, T_AMB, args=(AMB_DRIP, 40))
+daylight(960, 900, 200, 600)
+m.thing(800, 600, T_DRESS)
+m.thing(1120, 1200, T_9MM)
+m.thing(800, 1320, T_MAG)
+# E3: at the shoe they come down into the basin by the rocks of the cascade (out of sight from the bottom: the esplanade
+# north-west of the basin, on lines that lead to the rocks)
+spot(640, 1800, ORD, 300, 300)
+spot(700, 1840, ORD, 300, 300)
+spot(660, 1760, BRA, 300, 300)
+spot(720, 1790, ORD, 300, 300, skill='normal+')
+spot(600, 1840, POR, 300, 300, skill='hard')
+wake(lp.BAS[0], 1224, lp.BAS[2], 1224, 300)
+checkpoint(896, 440, 1024, 440)
+m.label(bx0, by0 - 40, 'D NIAGARA')
 
-# ============================================================================ E. THE ROLLER COASTER
-m.box(-768, 1728, 48, 2304, POSTS)
-# the track overhead (not walkable): two lanes and the west turn; the posts are solid columns under it
-m.slab(-752, 1792, -128, 1824, 144, 160, 'RF4_ATEL', top='RF4_VOIE', bottom='RF4_ATEL')
-m.slab(-752, 2176, -128, 2208, 144, 160, 'RF4_ATEL', top='RF4_VOIE', bottom='RF4_ATEL')
-m.slab(-752, 1824, -720, 2176, 144, 160, 'RF4_ATEL', top='RF4_VOIE', bottom='RF4_ATEL')
-for x in range(-752, -127, 96):
-    for y in (1792, 2176):
-        m.slab(x, y, x + 16, y + 16, 0, 144, 'RF4_ATEL')
-for y in range(1888, 2177, 96):
-    m.slab(-752, y, -736, y + 16, 0, 144, 'RF4_ATEL')
-for x in range(-752, -224, 96):                                                                      # braces between the posts
-    for y in (1800, 2184):
-        m.decor_line(x + 17, y, x + 95, y, 'RF4_BOIS', 0, yscale=4, texwidth=78)
-# the loading platform, a roof of canvas, steps from the alley; the station track walkable to the west
-m.box(-128, 1824, 80, 1952, POSTS, floor=48, ftex='RFF_WOOD', lower='RF4_ATEL')
-for k, z in enumerate((32, 16)):
-    m.box(80 + 16 * k, 1856, 96 + 16 * k, 1920, ALLEY, floor=z, ftex='RFF_WOOD', lower='RF4_ATEL')
-m.slab(-128, 1824, 80, 1952, 136, 144, 'RF4_MARQ', top='RF4_MARF', bottom='RF4_MARF')
-m.slab(-640, 1872, -128, 1904, 32, 48, 'RF4_ATEL', top='RF4_VOIE', bottom='RF4_ATEL')                # the station track, walkable
-for k, z in enumerate((32, 16)):                                                                    # steps up from the north field
-    m.box(-64, 1952 + 16 * k, 0, 1968 + 16 * k, POSTS, floor=z, ftex='RFF_WOOD', lower='RF4_ATEL')
-m.thing(-40, 1900, T_BENCH, angle=0)
-m.thing(-600, 2000, T_AMB, args=(AMB_WIND, 40))
-daylight(-400, 2000, 220, 600)
-m.thing(-200, 2250, T_9MM)
-m.thing(-680, 2260, T_MAG)
-m.thing(40, 1840, T_DRESS)
-objective(-768, 1736, -128, 1736, 6)
-# a see-through fence closes the lane behind the posts (the door of the substation is seen, not reached)
-m.decor_line(-768, 2296, 48, 2296, 'RFM_GRIL', 0, blocking=True, yscale=4)
-# E4: orderlies among the posts, a porte-registre on the station track
-spot(-600, 2240, ORD, 400, 270)
-spot(-360, 2250, ORD, 400, 270)
-spot(-420, 2100, ORD, 400, 0)
-spot(-500, 2100, POR, 400, 270)                                   # on the ground: from the walkway (1888) the autopilot could not reach it
-spot(-200, 2100, BRA, 400, 180, skill='hard')
-wake(-768, 1752, -128, 1752, 400)
-m.label(-760, 1740, 'E MONTAGNES RUSSES')
+# ============================================================================ E. THE TRESTLES AND THE LOADING PLATFORM
+objective(lp.BAS[0], 1480, 896, 1480, 6)                                                         # out of the basin: the station
+m.thing(*A['quai'], T_BENCH, angle=180)
+m.thing(350, 700, T_AMB, args=(AMB_WIND, 40))
+daylight(352, 800, 260, 600)
+m.thing(340, 1000, T_9MM)
+m.thing(520, 1560, T_DRESS)
+m.thing(460, 1250, T_MAG)
+# E4: as he climbs out, more come round the chute's tower from the north of the park
+spot(1080, 2040, ORD, 400, 225)
+spot(1250, 2070, ORD, 400, 225)
+spot(1200, 2060, POR, 400, 225)
+spot(1290, 2170, ORD, 400, 225, skill='normal+')
+spot(1300, 2100, BRA, 400, 225, skill='hard')
+wake(lp.BAS[0], 1496, 896, 1496, 400)
+m.label(300, 230, 'E MONTAGNES RUSSES')
 
-# ============================================================================ F. THE DANCE HALL
-m.box(64, 1920, 624, 2048, PLAZA)
-m.box(336, 1888, 640, 1920, PLAZA)
-# the gutted marquee: a canopy of canvas with holes, over the turnstiles
-m.slab(176, 1968, 560, 2048, 136, 144, 'RF4_MARQ', top='RF4_MARF', bottom='RF4_MARF')
-m.box(336, 1984, 400, 2032, PLAZA)                                                                    # holes torn in the canvas
-m.box(464, 1968, 560, 2000, PLAZA)
-sign(336, 2048, 496, 2048, 'RF4_DANS', 152, off=1)                                                 # SALLE DE DANSE, faded
-# the entrance and its turnstiles (l. 531): two gaps, the first with the counter
-m.box(240, 2048, 496, 2080, HALL, ceil=128, ftex='RFF_SLAB')
-for (x0, x1) in ((240, 288), (336, 384), (432, 496)):
-    block(x0, 2048, x1, 2080, 40, 'RFM_TOP', 'RF4_TOUR', m.cells[(x0 // UNIT, 2048 // UNIT)])
-sign(256, 2048, 288, 2048, 'RF4_C617', 0, off=1, user_scene=L_COUNTER)                              # the counter plate: the post's whole face (32 x 40)
-m.decor_line(290, 2064, 334, 2064, 'RF2_RAMB', 0, blocking=True, yscale=4, user_scene=L_TURNSTILE)  # the bar that turns
-m.decor_line(386, 2064, 430, 2064, 'RF2_RAMB', 0, blocking=True, yscale=4)                           # barred for good
-m.thing(312, 2036, T_TURN, angle=90, args=(L_TURNSTILE,), z=24)
-# the hall: warped parquet, pitted mirrors on both long walls, columns, the stage and the juke-box
-m.box(128, 2080, 624, 2432, HALL)
-for x in (256, 480):
-    for y in (2176, 2320):
-        m.carve(x, y, x + 32, y + 32)
-        m.modify(x - 16, y - 16, x + 48, y + 48, wall='RF4_COLN')
-for (x, y0, y1) in ((128, 2112, 2176), (128, 2208, 2288)):                                          # mirrors, west wall
-    m.face(x, y0, x + 16, y1, 'W', texture='RFP_PLN', special=182)
-    sign(x, y0, x, y1, 'RF4_PIQU', 0, off=2)
-for (x, y0, y1) in ((624, 2112, 2208), (624, 2240, 2336)):                                           # mirrors, east wall
-    m.face(x - 16, y0, x, y1, 'E', texture='RFP_PLN', special=182)
-    sign(x, y1, x, y0, 'RF4_PIQU', 0, off=2)
-m.thing(160, 2160, T_MIRROR, angle=180, args=(L_MIRROR,), z=0)
-m.thing(200, 2200, T_VIKTOR_MIRROR)                                                                  # his reflection (F02-08)
-block(352, 2384, 624, 2432, 24, 'RF4_PARQ', 'RFW_PANL', HALL)                                       # the orchestra stage
-m.thing(160, 2400, T_JUKEBOX, angle=0, args=(L_JUKEBOX,))
-# secret: the orchestra's box behind the stage (a curtain panel)
-m.box(448, 2448, 624, 2512, ATELIER, special=1024, floor=24, light=80)
-m.door(512, 2432, 560, 2448, 43, 'RFW_PANL', 'RFW_PANL', replace(HALL, floor=24), speed=24)
-m.thing(480, 2480, T_MAG)
-m.thing(590, 2480, T_DRESS)
-for (x, y) in ((200, 2150), (560, 2150), (200, 2350), (560, 2350)):
+# ============================================================================ F. THE MARQUEE, THE TURNSTILES, THE DANCE HALL
+hx0, hy0, hx1, hy1 = lp.HALLB
+ix0, iy0, ix1, iy1 = lp.HALL_IN
+for (x0, x1) in ((576, 624), (672, 720), (768, 832)):                                               # three turnstile posts
+    block(x0, hy0, x1, iy0, 40, 'RFM_TOP', 'RF4_TOUR', m.cells[(x0 // UNIT, hy0 // UNIT)])
+sign(592, hy0, 624, hy0, 'RF4_C617', 0, off=1, user_scene=L_COUNTER)                                 # the counter, the post's face
+m.decor_line(626, 1936, 670, 1936, 'RF2_RAMB', 0, blocking=True, yscale=4, user_scene=L_TURNSTILE)   # the bar that turns
+m.decor_line(722, 1936, 766, 1936, 'RF2_RAMB', 0, blocking=True, yscale=4)                          # barred for good
+m.thing(648, 1904, T_TURN, angle=90, args=(L_TURNSTILE,), z=24)
+# the room: warped parquet, pitted mirrors on both long walls, columns, the stage and the juke-box
+for (x, y) in ((592, 2032), (800, 2032), (592, 2112), (800, 2112)):
+    m.carve(x, y, x + 32, y + 32)
+    m.modify(x - 16, y - 16, x + 48, y + 48, wall='RF4_COLN')
+for (y0, y1) in ((2000, 2032), (2048, 2080), (2096, 2128)):     # mirrors, west wall: three narrow panels 48 apart, the
+    m.face(ix0, y0, ix0 + 16, y1, 'W', texture='RFP_PLN', special=182)   # three outfits of the scene (luna.zs)
+    m.carve(ix0 - 16, y0, ix0, y1)                       # a mirror (Line_Mirror) must be a one-sided wall: void behind
+    sign(ix0, y0, ix0, y1, 'RF4_PIQU', 0, off=2)
+for (y0, y1) in ((1984, 2064), (2096, 2144)):                                                        # mirrors, east wall
+    m.face(ix1 - 16, y0, ix1, y1, 'E', texture='RFP_PLN', special=182)
+    m.carve(ix1, y0, ix1 + 16, y1)
+    sign(ix1, y1, ix1, y0, 'RF4_PIQU', 0, off=2)
+m.thing(ix0 + 32, 2064, T_MIRROR, angle=180, args=(L_MIRROR,), z=0)                                  # the mirror of the badge
+m.thing(704, 2080, T_VIKTOR_MIRROR)                                                                   # his reflection
+block(672, 2160, ix1, iy1, 24, 'RF4_PARQ', 'RFW_PANL', lp.HALL)                                      # the orchestra stage
+m.thing(648, 2188, T_JUKEBOX, angle=270, args=(L_JUKEBOX,))                                          # by the stage
+# secret: the orchestra's box in the east wing, by a curtain panel at the stage's end
+ox0, oy0, ox1, oy1 = A['orchestra']
+m.door(ix1, 2160, ox0, 2208, 43, 'RFW_PANL', 'RFW_PANL', replace(lp.HALL, floor=24), speed=24)
+vx0, vy0, vx1, vy1 = lp.SERVICE_DOOR                                                              # the service door: shut
+m.door(vx0, vy0, vx1, vy1, 46, 'RFD_SGL', 'RF4_ATEL', replace(lp.ATELIER, floor=24), lock=LOCK_SERVICE)
+m.thing(950, 2184, T_MAG)
+m.thing(985, 2160, T_DRESS)
+for (x, y) in ((560, 2000), (850, 2000), (560, 2160), (850, 2120)):
     lamp(x, y, 150, 255, 226, 180, 150)
-m.thing(376, 2250, T_FLICKER, args=(210, 214, 220, 180, 40), z=170)                                  # morning light by fragments
-m.thing(376, 2250, T_AMB, args=(AMB_ROOM, 50))
-m.thing(560, 2300, T_9MM)
-m.thing(160, 2280, T_MAG)
-objective(64, 1928, 624, 1928, 7)
-checkpoint(64, 1944, 624, 1944)
-scene(240, 2072, 496, 2072, L_HALL)
-# E5: after the three knocks, they come through the marquee and from behind the stage
-spot(400, 1960, ORD, JUKEBOX_WAVE, 90)
-spot(160, 1970, ORD, JUKEBOX_WAVE, 90)
-spot(560, 1960, POR, JUKEBOX_WAVE, 90)
-spot(600, 2400, ORD, JUKEBOX_WAVE, 180, skill='normal+')
-spot(300, 1900, ORD, JUKEBOX_WAVE, 90, skill='hard')
-spot(560, 1992, ORD, JUKEBOX_WAVE, 90, skill='hard')         # a brancardier could not pass the turnstiles (80 wide)
-m.label(140, 2100, 'F SALLE DE DANSE')
+m.thing(704, 2080, T_FLICKER, args=(210, 214, 220, 180, 40), z=170)                                   # morning light by fragments
+m.thing(704, 2080, T_AMB, args=(AMB_ROOM, 50))
+m.thing(870, 2040, T_9MM)
+m.thing(540, 2100, T_MAG)
+objective(576, 1832, 832, 1832, 7)
+checkpoint(576, 1816, 832, 1816)
+scene(576, 1960, 832, 1960, L_HALL)
+# E5: after the three knocks, they come through the marquee (out of sight of the juke-box: both sides of the vestibule)
+spot(520, 1880, ORD, JUKEBOX_WAVE, 0)
+spot(900, 1880, ORD, JUKEBOX_WAVE, 180)
+spot(880, 1830, POR, JUKEBOX_WAVE, 135)
+spot(540, 1830, ORD, JUKEBOX_WAVE, 45, skill='normal+')
+spot(940, 1840, ORD, JUKEBOX_WAVE, 180, skill='hard')
+spot(480, 1840, ORD, JUKEBOX_WAVE, 0, skill='hard')          # a brancardier could not pass the turnstiles (80 wide)
+m.label(hx0, hy0 - 24, 'F SALLE DE DANSE')
 # the side door to the lane behind the track: opened from the hall only (the shortcut is opened by progression)
-door(96, 2304, 128, 2368, 44, 'RFD_SGL', HALL, 'E', lintel=112, track='RFP_PLN', lock=LOCK_FROM_INSIDE, lockside='W')
+sx0, sy0, sx1, sy1 = lp.SIDE_DOOR                                                                 # its frame is the park's
+m.door(sx0, sy0, sx1, sy0 + 16, 44, 'RFD_SGL', 'RFP_PLN', lp.HALL, lock=LOCK_FROM_INSIDE, lockside='N')
 
 # ============================================================================ G. THE LANE AND THE SUBSTATION DOOR
-m.box(-896, 2304, 96, 2400, LANE)
-door(-864, 2400, -800, 2432, 45, 'RF4_PSST', replace(LANE, ctex='RFP_CEID'), 'N', lintel=104, track='RF4_BASC', lock=LOCK_SUBSTATION)
-m.box(-880, 2432, -784, 2528, VEST)
-m.thing(-832, 2480, T_AMB, args=(AMB_MOTOR, 100))                                                   # the motor, below
-lamp(-832, 2480, 80, 255, 210, 120, 90)
-m.thing(-832, 2300, T_AMB, args=(AMB_MOTOR, 90))
-m.trigger(-878, 2488, -786, 2488, 130, (SIGNAL_TID,), fields={'user_outro': 1})
-m.exit_cells = {(x // UNIT, 2496 // UNIT) for x in range(-880, -784, 16)}
-objective(56, 2304, 56, 2400, 10)
-checkpoint(40, 2304, 40, 2400)
-litter([(-600, 2350, 40), (-300, 2330, 170), (-100, 2370, 300)])
-daylight(-400, 2352, 220, 600)
-m.thing(-700, 2360, T_9MM)
-m.thing(-860, 2390, T_DRESS)
-# E6: the last lock before the door, from both ends of the lane
-m.box(-640, 2400, -528, 2496, LANE, ceil=120, ctex='RFP_CEID', light=110)                            # lean-to sheds on the lane
-m.box(-320, 2400, -224, 2464, LANE, ceil=120, ctex='RFP_CEID', light=110)
-spot(-584, 2448, BRA, 600, 270, skill='normal+')
-spot(-600, 2424, ORD, 600, 270)
-spot(-272, 2440, ORD, 600, 270)
-spot(-252, 2424, POR, 600, 270)
-spot(-560, 2476, ORD, 600, 270, skill='hard')
-wake(24, 2304, 24, 2400, 600)
-m.label(-880, 2310, 'G SOUS-STATION')
+lx0, ly0, lx1, ly1 = lp.LANE_BOX
+dx0, dy0, dx1, dy1 = lp.SUB_DOOR
+m.door(dx0, dy0 + 16, dx1, dy1, 45, 'RF4_PSST', 'RF4_BASC', lp.VEST, lock=LOCK_SUBSTATION)        # its frame is the park's
+m.box(dx0 - 16, dy1, dx1 + 16, dy1 + 64, lp.VEST)
+lp.walls(m, dx0 - 16, dy1, dx1 + 16, dy1 + 64, 'RF4_BASC')
+m.thing((dx0 + dx1) // 2, dy1 + 32, T_AMB, args=(AMB_MOTOR, 100))                                  # the motor, below
+lamp((dx0 + dx1) // 2, dy1 + 32, 80, 255, 210, 120, 90)
+m.thing(1500, 2290, T_AMB, args=(AMB_MOTOR, 90))
+m.trigger(dx0 - 14, dy1 + 40, dx1 + 14, dy1 + 40, 130, (SIGNAL_TID,), fields={'user_outro': 1})
+m.exit_cells = {(x // UNIT, (dy1 + 48) // UNIT) for x in range(dx0 - 16, dx1 + 16, 16)}
+objective(512, 2264, 608, 2264, 10)                                                               # out of the side door
+checkpoint(600, ly0, 600, ly1)
+litter([(700, 2300, 40), (1100, 2260, 170), (1450, 2310, 300)])
+daylight(1000, 2288, 220, 600)
+m.thing(1180, 2300, T_9MM)
+m.thing(1600, 2260, T_DRESS)
+# E6: the last lock before the door, out of the sheds dug into the rocks (hidden from the lane's west end)
+(s1, s2, s3) = lp.SHEDS
+spot(s1[0] + 48, ly1 + 16, BRA, 600, 180, skill='normal+')       # its 80 width fits the shed's mouth and the lane
+spot(s2[0] + 24, ly1 + 32, ORD, 600, 180)
+spot(s2[0] + 72, ly1 + 32, POR, 600, 180)
+spot(s3[0] + 22, ly1 + 32, ORD, 600, 180)
+spot(s3[0] + 60, ly1 + 32, ORD, 600, 180, skill='hard')
+wake(616, ly0, 616, ly1, 600)
+m.label(lx0 + 16, ly1 - 24, 'G SOUS-STATION')
 
 # --------------------------------------------------------------------------- autopilot route (dev)
 route = [
     # (x, y, use, wait, weapon, angle): the normal path, ordinary commands; scenes used on the way
-    (832, 120, 0, 0, 1, 90),
-    (832, 416, 1, 60, 0, 270),               # the warm rail (faced from where it stops)
-    (832, 700, 0, 0, 0, 0),
-    (832, 1040, 0, 400, 0, 90),              # the hut: "Tu es en retard." ... "Si tu veux."
-    (872, 1092, 1, 420, 0, 90),              # the card: 06:06; "Celui ou ils entrent."
-    (776, 1168, 1, 360, 0, 0),               # the key of the substation; the barrier lifts
-    (700, 1104, 0, 0, 0, 0),
-    (600, 1104, 0, 60, 0, 0),                # E1 behind him
-    (560, 1100, 1, 60, 0, 6),                # he turns round: the hut is empty, ERREUR Ø
-    (400, 1104, 0, 0, 0, 0),
-    (192, 1104, 0, 0, 0, 0),
-    (192, 1200, 0, 0, 0, 0),
-    (48, 1200, 0, 0, 0, 0),                  # the gap in the decor
-    (-8, 1240, 0, 60, 0, 0),                 # E2
-    (-8, 1276, 0, 0, 0, 0),
-    (-8, 1470, 0, 0, 0, 0),
-    (-150, 1472, 0, 60, 0, 0),               # E3 (the rim)
-    (-160, 1624, 0, 0, 0, 0),                # north along the east rim
-    (-448, 1624, 0, 0, 0, 0),                # the rim under the rocks of the cascade
-    (-448, 1560, 0, 0, 0, 0),                # down the cascade stair into the basin
-    (-448, 1400, 0, 0, 0, 0),
-    (-296, 1240, 0, 0, 0, 0),
-    (-296, 1240, 1, 330, 0, 180),            # the shoe in the puddle
-    (-224, 1220, 0, 0, 0, 0),
-    (-224, 1140, 0, 0, 0, 0),                # up the south-east stair
-    (-160, 1120, 0, 0, 0, 0),
-    (-160, 1624, 0, 0, 0, 0),                # the east rim, north
-    (-200, 1690, 0, 0, 0, 0),                # the passage between the rocks and the rim
-    (-200, 1760, 0, 60, 0, 0),               # E4 among the posts
-    (-400, 1848, 0, 0, 0, 0),
-    (-688, 1848, 0, 0, 0, 0),                # round the west end of the station track
-    (-688, 2000, 0, 0, 0, 0),
-    (-300, 2040, 0, 0, 0, 0),
-    (-32, 2040, 0, 0, 0, 0),
-    (-32, 1990, 0, 0, 0, 0),                 # up the steps onto the platform
-    (40, 1890, 0, 0, 0, 0),
-    (120, 1890, 0, 0, 0, 0),                 # down into the alley
-    (192, 1990, 0, 60, 0, 0),
-    (312, 2010, 1, 120, 0, 90),              # the turnstile: 618
-    (312, 2110, 0, 0, 0, 0),
-    (200, 2160, 0, 0, 0, 0),
-    (176, 2160, 1, 360, 0, 180),             # the mirror of the badge
-    (180, 2350, 0, 0, 0, 0),
-    (180, 2370, 1, 60, 0, 90),               # the juke-box: the tarpaulin
-    (180, 2370, 1, 240, 0, 90),              # the key: nothing; three knocks (E5)
-    (300, 2250, 0, 200, 0, 0),
-    (160, 2336, 0, 0, 0, 0),
-    (140, 2336, 1, 60, 0, 180),              # the side door, from inside
-    (60, 2336, 0, 0, 0, 0),
-    (8, 2340, 0, 0, 0, 0),
-    (-400, 2352, 0, 60, 0, 0),               # E6
-    (-832, 2352, 0, 0, 0, 0),
-    (-832, 2380, 1, 60, 0, 90),              # the door of the substation (the key)
-    (-832, 2500, 0, 0, 0, 0),                # exit
+    (1856, 120, 0, 0, 1, 90),
+    (1856, 380, 1, 60, 0, 90),               # the warm rail
+    (1856, 700, 0, 0, 0, 0),
+    (1856, 920, 0, 400, 0, 90),              # the hut: "Tu es en retard." ... "Si tu veux."
+    (1800, HY0 + 36, 1, 420, 0, 180),        # the card at the clock: 06:06; "Celui ou ils entrent."
+    (1800, 1180, 0, 0, 0, 0),
+    (HX0 + 48, 1180, 1, 360, 0, 270),        # the key of the substation; the barrier lifts
+    (1800, 1180, 0, 0, 0, 0),
+    (1856, 1250, 0, 60, 0, 0),               # E1 behind him
+    (1856, 1420, 1, 60, 0, 255),             # he turns round: the hut is empty, ERREUR Ø
+    (1856, 1632, 0, 0, 0, 0),
+    (1600, 1632, 0, 0, 0, 0),
+    (1480, 1632, 0, 0, 0, 0),                # the first view of the park
+    (1480, 1100, 0, 0, 0, 0),
+    (1480, 704, 0, 0, 0, 0),                 # facing BROOKLYN BRIDGE
+    (1568, 704, 0, 0, 0, 0),                 # in under the bridge
+    (1648, 704, 0, 0, 0, 0),
+    (1648, 630, 0, 60, 0, 0),                # E2
+    (1648, 300, 0, 0, 0, 0),
+    (1568, 288, 0, 0, 0, 0),
+    (1480, 288, 0, 0, 0, 0),
+    (960, 300, 0, 0, 0, 0),                  # the basin's south stair
+    (960, 470, 0, 0, 0, 0),                  # down into the basin
+    (960, 900, 0, 0, 0, 0),
+    (960, 1210, 0, 0, 0, 0),
+    (968, 1240, 0, 0, 0, 0),                 # E3 cued
+    (976, 1250, 1, 330, 0, 90),              # the shoe in the puddle
+    (960, 1250, 0, 200, 0, 0),               # E3 down the rocks
+    (832, 1300, 0, 0, 0, 0),
+    (832, 1430, 0, 0, 0, 0),                 # up the rocks of the cascade
+    (832, 1520, 0, 60, 0, 0),                # E4
+    (664, 1500, 0, 0, 0, 0),
+    (650, 1376, 0, 0, 0, 0),
+    (500, 1376, 0, 0, 0, 0),                 # up onto the loading platform
+    (500, 1580, 0, 0, 0, 0),
+    (496, 1680, 0, 0, 0, 0),                 # down its north steps
+    (704, 1760, 0, 0, 0, 0),
+    (648, 1850, 0, 0, 0, 0),
+    (648, 1880, 1, 120, 0, 90),              # the turnstile: 618
+    (648, 1990, 0, 0, 0, 0),
+    (560, 2000, 0, 0, 0, 0),
+    (560, 2064, 1, 360, 0, 180),             # the mirror of the badge: three panels, three outfits
+    (560, 2090, 0, 0, 0, 0),
+    (648, 2090, 0, 0, 0, 0),
+    (648, 2150, 1, 60, 0, 90),               # the juke-box: the tarpaulin
+    (648, 2150, 1, 240, 0, 90),              # the key: nothing; three knocks (E5)
+    (720, 2000, 0, 200, 0, 0),
+    (680, 2090, 0, 0, 0, 0),
+    (560, 2090, 0, 0, 0, 0),
+    (560, 2150, 0, 0, 0, 0),
+    (560, 2184, 1, 60, 0, 90),               # the side door, from inside
+    (560, 2290, 0, 0, 0, 0),
+    (680, 2290, 0, 60, 0, 0),                # E6
+    (1300, 2288, 0, 0, 0, 0),
+    (1568, 2300, 0, 0, 0, 0),
+    (1568, 2316, 1, 60, 0, 90),              # the door of the substation (the key)
+    (1568, dy1 + 48, 0, 0, 0, 0),            # exit
 ]
 for i, (x, y, use, wait, weapon, ang) in enumerate(route):
     m.thing(x, y, T_WP, angle=ang, args=(i + 1, use, wait, weapon))

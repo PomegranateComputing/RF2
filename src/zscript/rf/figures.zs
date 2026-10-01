@@ -66,10 +66,8 @@ class RFViktorMirror : RFFigure      // F02-08: Viktor, seen only in mirrors; fo
 {
     Default
     {
-        // The R2F8 images of 28/09 stand 378 px (68 u at 0.18) for a player of 56 u (measure of 01/10,
-        // docs/production/handoff/RF2_20261001/mesures/reflet_rf02.md): scaled to 56 u until Codex's R2F8 at 311 px
-        // (56 u at 0.18) replaces them; then back to the figures' 0.18.
-        Scale 0.148;
+        // Codex's R2F8 V02 (01/10): 311 px from head to soles, 56 u at the figures' 0.18 (the images of 28/09 stood
+        // 378 px and were scaled 0.148 meanwhile; docs/production/handoff/RF2_20261001/mesures/reflet_rf02.md).
         Height 56;
         +ONLYVISIBLEINMIRRORS
     }
@@ -85,3 +83,24 @@ class RFViktorMirror : RFFigure      // F02-08: Viktor, seen only in mirrors; fo
         bInvisible = pmo.health <= 0;
     }
 }
+
+// RF04, the dance hall's mirrors (l. 533-539): "Dans un reflet, il porte sa tenue noire. Dans un autre, une blouse grise
+// d'ouvrier. Dans un troisième, une chemise claire [...] un badge plastique à la ceinture." During the mirror scene
+// (RFLuna) the other outfits stand beside him, shifted along the mirror wall: a figure shifted by s along a mirror is
+// seen in the glass at s/2 from his own image, so each outfit shows in its own panel. Mirrors only; the scene removes
+// them ("Le badge disparaît"). Codex's R4V2 / R4V3 V01, same face and height as R2F8 V02.
+class RFViktorMirrorAlt : RFViktorMirror
+{
+    Vector2 shift;
+
+    override void Tick()
+    {
+        Super.Tick();
+        let pmo = players[consoleplayer].mo;
+        if (pmo == null) return;
+        SetOrigin((pmo.Pos.XY + shift, pmo.Pos.Z), true);
+    }
+}
+
+class RFViktorMirrorGrey : RFViktorMirrorAlt { States { Spawn: R4V2 A -1; Stop; } }    // the worker's grey smock
+class RFViktorMirrorShirt : RFViktorMirrorAlt { States { Spawn: R4V3 A -1; Stop; } }   // the light shirt, the badge

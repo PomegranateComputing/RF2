@@ -17,13 +17,14 @@ class RFComicScene
     Array<String> captions; // LANGUAGE key (with its dollar sign) or plain text
     Array<int> zones;       // x, y, w, h per caption, page pixels
     Array<int> after;       // the panel (1-based) after which each caption appears
+    Array<int> styles;      // 0 a cream box over the art, 1 cream text centred on the page's black band
 
     int PanelCount() { return panels.Size() / 4; }
 
     // The scene of the transition from -> to, or null. COMICDEF lines (# starts a comment):
     //   scene <ID> <FROM> <TO> <page image path>
     //   panel <x> <y> <w> <h>
-    //   caption <after panel> <LANGUAGE key> <x> <y> <w> <h>
+    //   caption <after panel> <LANGUAGE key> <x> <y> <w> <h> [band]
     static RFComicScene Find(String from, String to)
     {
         int lump = Wads.FindLump("COMICDEF", 0, Wads.AnyNamespace);
@@ -58,6 +59,7 @@ class RFComicScene
                 cur.after.Push(w[1].ToInt());
                 cur.captions.Push(w[2]);
                 for (int k = 3; k <= 6; k++) cur.zones.Push(w[k].ToInt());
+                cur.styles.Push(w.Size() >= 8 && w[7] ~== "band" ? 1 : 0);
             }
         }
         return cur;

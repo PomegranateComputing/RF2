@@ -332,6 +332,11 @@ class MapBuilder:
         if faceb and 'texture' in faceb:
             bs['texturemiddle'] = faceb['texture']
             ls['clipmidtex'] = True
+        # texture offsets on a two-sided edge (a riser continued across an opening), each side its own
+        for (f, s) in ((face, fs), (faceb, bs)):
+            for k in ('offsetx', 'offsety'):
+                if f and k in f:
+                    s[k] = f[k]
         # a use special and scene fields on a two-sided edge (a raised block's side, a window), from either side
         for f in (face, faceb):
             if not f:

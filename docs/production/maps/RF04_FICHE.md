@@ -28,12 +28,12 @@ renumérotation : les identifiants déjà utilisés restent. Lignes = `body.txt`
 | Crochet de clefs, étiquettes de cuivre ATELIER, PISTE, SOUS-STATION, CHAMBRE FROIDE, JERMA ; « Pas celle-là. » « Parce que c'est celle que tu prends. » (495–505) | le tableau des clefs : Viktor prend SOUS-STATION (clef, verrou 6) | canon |
 | « Les moteurs tournent ? » « Un seul. » « Tu l'entendras. » (507–513) | le son du moteur, sous le parc, guide la suite | canon |
 | Il se retourne : guérite vide, registre ouvert sur une page blanche, ERREUR Ø tracé au doigt gras sur la vitre (515–517) | après la barrière, quand Viktor se retourne : la figure a disparu, la vitre porte ERREUR Ø | canon |
-| Les éléments meurent selon leur matériau ; charpentes, voies, plateformes, façades qui promettent des mondes (521) | allée principale, façades et charpentes, auvents, verre cassé propre sous les auvents | canon |
+| Les éléments meurent selon leur matériau ; charpentes, voies, plateformes, façades qui promettent des mondes (521) | l'esplanade : façades des attractions, charpente des montagnes russes contre le ciel, rampe et tour du Water Chute, mât de la tour aérienne, revers des portes LUNA PARK | canon (disposition reconstruite, voir plus bas) |
 | Décor de pont suspendu BROOKLYN BRIDGE, lettres rouges sur fond gris ; derrière, un couloir technique encombré de câbles (523) | la façade ; le couloir technique praticable derrière elle | canon |
 | Bassin vide, ligne d'algues sèches à hauteur d'épaule, pancarte LES CHUTES DU NIAGARA ; au fond, une chaussure d'enfant dans une flaque noire (523–527) | le bassin en creux, la ligne d'algues, la pancarte ; la chaussure (cuir blanc, boucle latérale) à regarder : texte des l. 525–527 | canon (écho CAN-003) |
 | Le moteur bat sous le parc : deux pulsations, une pause, une troisième plus longue ; il suit l'air le plus chaud (529) | le battement, spatialisé vers la sous-station ; aucune carte à l'écran | canon |
 | Marquise éventrée, tourniquets, compteur mécanique 617 → 618 (531) | pousser la barre : le compteur passe à 618, le passage s'ouvre | canon |
-| Salle de danse : parquet gondolé, miroirs piqués, lumière par fragments ; reflets : tenue noire, blouse grise d'ouvrier, chemise claire au badge VIKTOR ARDENT / DATABASE ADMINISTRATOR (533–539) | la salle et ses miroirs ; le reflet de Viktor ; face à un miroir, le texte du badge | canon ; tenues alternatives demandées à Astra |
+| Salle de danse : parquet gondolé, miroirs piqués, lumière par fragments ; reflets : tenue noire, blouse grise d'ouvrier, chemise claire au badge VIKTOR ARDENT / DATABASE ADMINISTRATOR (533–539) | la salle et ses miroirs ; au miroir du badge, trois panneaux : sa tenue noire dans le sien, la blouse grise dans le voisin, puis la chemise au badge dans le troisième, le temps du texte | canon ; reflets R2F8 V02, R4V2/R4V3 V01 de Codex (01/10) |
 | Juke-box muet sous une bâche ; THE SKY IS EMPTY ; il appuie : rien ; le moteur répond par trois coups (541–549) | retirer la bâche, lire l'étiquette, appuyer : rien ; trois coups sous le parc | canon |
 | La porte de la sous-station derrière la piste des montagnes russes (551) | porte verrouillée (clef SOUS-STATION) : sortie | canon |
 
@@ -44,35 +44,49 @@ renumérotation : les identifiants déjà utilisés restent. Lignes = `body.txt`
   femme (RF05), ni aucune figure du texte n'est une cible. Pas de troupe allemande.
 - **Barrière du personnel** près de la guérite : s'ouvre quand la carte est pointée (le pointage devient le geste qui
   fait entrer ; titre V1 « Personnel technique »).
-- **Secrets** : un atelier ouvert par derrière (clef ATELIER non prise : l'accès se fait par une planche décrochée),
-  la cabine de la caisse du Niagara, la loge de l'orchestre de la salle de danse. Soins et munitions modestes.
-- **Parcours** : chemin de service → barrière → allée principale (vues croisées vers la piste des montagnes russes
-  et le bassin) → couloir technique derrière Brooklyn Bridge → bassin du Niagara (descente, remontée par la cascade de
-  décor) → quai d'embarquement des montagnes russes (en hauteur, vue sur le bassin et l'allée) → marquise, tourniquets,
-  salle de danse → porte latérale de la salle (raccourci vers l'allée, ouvert de l'intérieur) → passage herbeux
-  derrière la piste → porte de la sous-station.
+- **Secrets** : un atelier derrière le chemin de service (clef ATELIER non prise : une planche décrochée), une niche
+  derrière une planche du couloir technique, la loge de l'orchestre dans l'aile est de la salle de danse (un panneau
+  de rideau au bout de l'estrade). Soins et munitions modestes.
+- **Parcours (recomposé le 01/10)** : porte du personnel (sud-est) → chemin de service le long de la palissade, rail
+  tiède → guérite au bout du chemin (pointeuse sur sa face est, clefs sur sa face nord), barrière → passage vers
+  l'ouest → **première vue** sur le parc depuis l'angle nord-est de l'esplanade → façade BROOKLYN BRIDGE, entrée sous
+  le décor → couloir technique → sortie au sud-est → escalier sud du bassin → fond du bassin, chaussure au pied de la
+  cascade → remontée par les rochers de la cascade → quai d'embarquement (marches est, vue sur le bassin) → marches
+  nord → marquise, tourniquets → salle de danse → porte latérale (ouverte de l'intérieur) → passage derrière la piste,
+  au pied des rochers du nord → porte de la sous-station.
 
 ## Rencontres (arsenal campagne : Browning, FAL, pied-de-biche)
 
 | | Où | Qui | Lecture |
 |---|---|---|---|
-| E1 | chemin de service, après la barrière | 2 infirmiers par la porte de service (3 en difficile) | ils entrent derrière lui ; pression dans le dos |
-| E2 | couloir technique de Brooklyn Bridge | 2 infirmiers + un porte-registre au fond | espace étroit, câbles, pied-de-biche utile |
-| E3 | bassin du Niagara | infirmiers par les escaliers du bord, brancardier par la rampe de la cascade | arène en creux ; ils ont la hauteur |
-| E4 | sous la charpente des montagnes russes et sur le quai | infirmiers entre les poteaux, porte-registre sur le quai | lignes de tir coupées par les poteaux |
-| E5 | salle de danse, après les trois coups | vague par la marquise | miroirs, colonnes, parquet |
-| E6 | passage herbeux devant la sous-station | par les deux bouts (un de plus en difficile) | dernier verrou avant la porte |
+| E1 | chemin de service, après la barrière | 2 infirmiers par la porte du personnel (3 en difficile) | ils entrent derrière lui ; pression dans le dos |
+| E2 | couloir technique de Brooklyn Bridge | 2 infirmiers + un porte-registre par le bout du couloir (un de plus en difficile) | espace étroit, câbles, pied-de-biche utile |
+| E3 | bassin du Niagara, à la chaussure | 2 infirmiers, le brancardier et un porte-registre (difficile) descendent par les rochers de la cascade | arène en creux : la tranchée en long, la charge du brancardier |
+| E4 | à la sortie du bassin | infirmiers et porte-registre contournant la tour de la rampe (brancardier en difficile) | esplanade ouverte, rochers, quai en hauteur |
+| E5 | salle de danse, après les trois coups | vague par la marquise et les tourniquets | miroirs, colonnes, parquet |
+| E6 | passage derrière la piste | depuis les trois remises creusées dans les rochers (brancardier en normal et difficile) | dernier verrou avant la porte |
 
 Difficultés : `facile`, `normal`, `difficile` (skills du MAPINFO). Munitions et pansements dosés pour un départ direct
 (kit de chapitre du directeur) et pour l'arrivée depuis RF02.
 
 ## Ressources
 
-Provisoires d'Opus (procédurales, marquées) jusqu'aux livraisons d'Astra : `docs/production/handoff/RF04-LUNA/`
-et la demande déposée dans l'espace actif d'Astra. Figures demandées : le gardien (F04-01) ; reflets de Viktor en
-blouse grise et en chemise au badge (F04-02, F04-03). Objets : pointeuse et tableau des clefs, juke-box, chaussure
+Astra (tranche 01 du 30/09 : pointeuse, clefs, compteurs, Niagara), Codex (01/10 : `LUNA_PILOTE_01` façade Brooklyn,
+paroi du bassin, rochers, charpente, marquise, dalles ; `LOT_CORRECTIONS_01` Niagara et clefs ; reflets R4V2/R4V3),
+provisoires d'Opus pour le reste sous les noms de `docs/production/handoff/RF2_20261001/ZONE_PILOTE_RF04.md`
+(balustrade, rampe, tour, poteaux, revers des portes, mât, dessus des rochers, revers du décor). Figure demandée :
+le gardien (F04-01). Objets : pointeuse et tableau des clefs, juke-box, chaussure
 d'enfant, tourniquet à compteur, façades Brooklyn Bridge et Niagara, charpente des montagnes russes, affiches.
 Sons : battement du moteur, pointeuse, clefs, tourniquet, trois coups, touche du juke-box, serrure dure.
+
+## Recomposition du 01/10
+
+Retour du propriétaire (build 1821) : le parc n'avait pas l'identité du Luna Park. Le plan est recomposé autour de
+l'esplanade, du long bassin du Water Chute et de la charpente des montagnes russes contre le ciel
+(`RF04_RELEVE_PLAN.md`) ; **c'est une reconstruction à l'échelle du jeu, pas un relevé** (aucun plan coté n'est
+établi). Géométrie commune à RF04 et RF05 : `scripts/mapkit/luna_park.py` ; scènes, rencontres, secrets et parcours
+du pilote : `scripts/mapkit/rf04.py`. Ciel à 512 ; rochers à l'ouest et au nord, revers des portes au sud, avenue
+au-delà de la palissade à l'est. Vues de contrôle : `docs/production/handoff/RF2_20261001/vues/rf04_pilote.json`.
 
 ## Ce que la carte ne montre pas
 

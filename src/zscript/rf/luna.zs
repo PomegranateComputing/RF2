@@ -139,6 +139,7 @@ class RFLuna : EventHandler
     Actor guard;
     Actor lastUsed;
     int lastUsedTic;
+    Actor mirrorSpot, greyImage, shirtImage;   // the mirror of the badge; the two other outfits during its scene
 
     override void WorldLoaded(WorldEvent e)
     {
@@ -169,6 +170,16 @@ class RFLuna : EventHandler
     static void Objective(int code)
     {
         RFParis.Objective(code);
+    }
+
+    // One of the other outfits beside him in the mirror wall: shifted along the wall (the mirror spot faces the glass),
+    // it shows in the glass half that distance from his own image, in the next panel (rf04.py: panels 48 apart).
+    Actor MirrorOutfit(class<Actor> kind, double side, Actor user)
+    {
+        double a = (mirrorSpot != null ? mirrorSpot.angle : user.angle) + side;
+        let img = RFViktorMirrorAlt(Actor.Spawn(kind, user.Pos));
+        if (img != null) img.shift = Actor.AngleToVector(a, 96);
+        return img;
     }
 
     void StartSequence(int scene, Actor user)
@@ -264,6 +275,7 @@ class RFLuna : EventHandler
         case L_MIRROR:
             if (mirrorDone) break;
             mirrorDone = true;
+            mirrorSpot = t;
             StartSequence(L_MIRROR, user);
             break;
         case L_JUKEBOX:
@@ -423,10 +435,16 @@ class RFLuna : EventHandler
             else if (t == 150) Say(u, "RF_RF04_SHOE_2", 6.0);
             else if (t == 330) { Say(u, "RF_RF04_SHOE_3", 3.0); seqScene = 0; }
             break;
-        case L_MIRROR:         // l. 533-539
-            if (t == 0) Say(u, "RF_RF04_MIRROR_1", 5.0);
-            else if (t == 160) Say(u, "RF_RF04_MIRROR_2", 5.0);
-            else if (t == 320) { Say(u, "RF_RF04_MIRROR_3", 4.0); seqScene = 0; }
+        case L_MIRROR:         // l. 533-539: black in his own panel, the grey smock in the next, then the shirt and badge
+            if (t == 0) { Say(u, "RF_RF04_MIRROR_1", 5.0); greyImage = MirrorOutfit('RFViktorMirrorGrey', 90, u); }
+            else if (t == 160) { Say(u, "RF_RF04_MIRROR_2", 5.0); shirtImage = MirrorOutfit('RFViktorMirrorShirt', -90, u); }
+            else if (t == 320)
+            {
+                Say(u, "RF_RF04_MIRROR_3", 4.0);
+                if (greyImage != null) greyImage.Destroy();
+                if (shirtImage != null) shirtImage.Destroy();
+                seqScene = 0;
+            }
             break;
         case L_JUKEBOX:        // l. 547-549: he presses; nothing; the motor answers by three knocks
             if (t == 0)

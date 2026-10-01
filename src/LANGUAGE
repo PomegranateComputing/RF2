@@ -144,8 +144,8 @@ RF_OBJ_RF04_1 = "Pointer à la guérite.";
 RF_OBJ_RF04_2 = "Prendre la clef de la sous-station.";
 RF_OBJ_RF04_3 = "Suivre le battement du moteur.";
 RF_OBJ_RF04_4 = "Passer derrière le décor du pont.";
-RF_OBJ_RF04_5 = "Contourner le bassin du Niagara.";
-RF_OBJ_RF04_6 = "Passer sous les montagnes russes.";
+RF_OBJ_RF04_5 = "Descendre dans le bassin du Niagara.";
+RF_OBJ_RF04_6 = "Monter au quai des montagnes russes.";
 RF_OBJ_RF04_7 = "Passer les tourniquets de la salle de danse.";
 RF_OBJ_RF04_8 = "Traverser la salle de danse.";
 RF_OBJ_RF04_9 = "Sortir par la porte latérale, derrière la piste.";
@@ -188,6 +188,7 @@ RF_KEY_SOUSSTATION = "Clef de la sous-station";
 RF_PICKUP_SOUSSTATION = "Clef de la sous-station.";
 RF_LOCK_SOUSSTATION = "Fermée. Il faut la clef de la sous-station.";
 RF_LOCK_FROMINSIDE = "La porte s'ouvre de l'autre côté.";
+RF_LOCK_SERVICE = "La porte de service est fermée.";
 
 // RF05 - Les machines continuent (novel l. 551-707; docs/production/maps/RF05_FICHE.md)
 RF_RF05_DATE = "Luna Park, sous le parc - vendredi 14 juin 1940";
@@ -261,8 +262,29 @@ RF_ITEM_ENVELOPE = "Enveloppe de Cochin, non ouverte";
 
 // RF06 - La sortie du personnel (novel l. 709-731; docs/production/maps/RF06_FICHE.md)
 RF_RF06_DATE = "Sous le Luna Park, ou ailleurs";
-RF_RF06_EXIT = "Il sortit.\n\nLe soleil frappait une terrasse couverte de gravats. La mer occupait tout l'horizon,\ndure, métallique, travaillée par le vent.\n\nFin provisoire : le chapitre du Jerma est en préparation.";
+RF_RF06_EXIT = "Il sortit.\n\nLe soleil frappait une terrasse couverte de gravats. La mer occupait tout l'horizon,\ndure, métallique, travaillée par le vent.";
 RF_OBJ_RF06_0 = "Suivre le couloir.";
+// RF07 - Jerma, façade maritime (novel l. 733-765; docs/production/maps/RF07_FICHE.md). No combat (01/10).
+RF_RF07_DATE = "Jerma Palace, Marsaskala - 22 décembre 2022";
+RF_RF07_EXIT = "La chambre était pleine de fumée froide.\nPas assez pour aveugler, juste assez pour déposer un goût amer sur la langue.\n\nFin provisoire : la suite du Jerma, l'aile des chambres, est en préparation.";
+RF_OBJ_RF07_0 = "Rejoindre l'homme près de la baie cassée.";
+RF_OBJ_RF07_1 = "Se retourner.";
+RF_OBJ_RF07_2 = "Suivre Elvis jusqu'à la chambre derrière les cuisines.";
+RF_OBJ_RF07_3 = "Soulever le sommier avec Elvis.";
+RF_OBJ_RF07_4 = "Entrer.";
+RF_ITEM_WATER = "Bouteille d'eau en plastique";
+RF_RF07_ARRIVE = "« Enfin, dit Elvis. Tu faisais quoi ? »";
+RF_RF07_BEHIND = "Derrière lui, il n'y avait plus de couloir. Seulement une chambre éventrée, moquette humide, sommier renversé.\nSur la cloison, à hauteur d'épaule : ERREUR Ø. Le noir semblait récent.";
+RF_RF07_WORK_1 = "« Je travaillais. »";
+RF_RF07_WORK_2 = "Elvis regarda ses vêtements. « Avec ça, tu vas crever de chaud. »";
+RF_RF07_WATCH = "Sa montre fonctionnait. L'écran affichait 22 décembre 2022, 14:58.\nÀ côté de l'heure, un petit +2 clignotait sans explication.";
+RF_RF07_WATER = "Elvis lui tendit une bouteille d'eau en plastique.";
+RF_RF07_ROOM = "« On a trouvé une chambre derrière les cuisines. Quelqu'un y a foutu le feu. »";
+RF_RF07_HALLS = "Le Jerma Palace n'avait pas l'air abandonné ; il avait l'air retiré du monde pour défaut de paiement.\nPartout, les graffitis se recouvraient sans se supprimer.";
+RF_RF07_STAIR = "Ils descendirent un escalier de service. Les marches étaient couvertes de verre pilé et de cendres.";
+RF_RF07_BED_1 = "Sur le palier, un sommier rouillé obstruait la porte.";
+RF_RF07_BED_2 = "Elvis le souleva d'un côté ; Viktor prit l'autre. Le métal laissa une ligne noire sur leurs paumes.";
+RF_RF07_HERE = "« C'est là. »";
 RF_RF06_ERREUR = "ERREUR Ø revient tous les vingt ou trente mètres. Parfois en noir, parfois en rouge, parfois gravé dans le béton.\nViktor ne compte pas. Compter transforme les répétitions en système.";
 RF_RF06_PAINT = "Des couches de peinture se soulèvent comme des peaux brûlées. Dessous, des graffitis, des signatures, des dates.\nAnglais, français, maltais, italien, alphabet cyrillique. Des pays entiers ont laissé une initiale.";
 RF_RF06_RUMBLE = "Derrière lui, le train des montagnes russes passe une nouvelle fois.\nLe grondement se prolonge sous le couloir et devient celui d'une ventilation hôtelière.";
@@ -328,8 +350,7 @@ NEWSAVE = "Nouvelle sauvegarde";
 // Transition pages between chapters (comics.zs, COMICDEF): keys and captions (proposals of 01/10, not quotations)
 RF_COMIC_NEXT = "suivant";
 RF_COMIC_PASS = "maintenir pour passer";
-RF_COMIC_RF01_RF02_1 = "Sainte-Anne avait ouvert ses portes.";
-RF_COMIC_RF01_RF02_2 = "Le service, lui, continuait.";
+RF_COMIC_RF01_RF02_1 = "Sainte-Anne avait ouvert ses portes. Le service, lui, continuait.";
 RF_COMIC_RF02_RF04_1 = "À la porte Maillot, la grille était fermée.";
 RF_COMIC_RF02_RF04_2 = "La porte du personnel attendait.";
 RF_COMIC_RF04_RF05_1 = "Sous le parc, un moteur battait encore.";

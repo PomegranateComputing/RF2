@@ -49,10 +49,10 @@ Texture RF4_CLE4, 384, 256
     YScale 8
     Patch "patches/rf04/RF4_CLE4.png", 0, 0
 }
-Texture RF4_BROO, 512, 512
+Texture RF4_BROO, 1024, 768
 {
-    XScale 2
-    YScale 2
+    XScale 4
+    YScale 4
     Patch "patches/rf04/RF4_BROO.png", 0, 0
 }
 Texture RF4_CABL, 512, 384
@@ -96,6 +96,12 @@ Texture RF4_BOIS, 256, 512
     XScale 4
     YScale 4
     Patch "patches/rf04/RF4_BOIS.png", 0, 0
+}
+Texture RF4_TREI, 256, 896
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf04/RF4_TREI.png", 0, 0
 }
 Texture RF4_C617, 256, 320
 {
@@ -234,6 +240,60 @@ Flat RF4_VOIE, 256, 256
     XScale 4
     YScale 4
     Patch "patches/rf04/RF4_VOIE.png", 0, 0
+}
+Texture RF4_BALU, 256, 128
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf04/RF4_BALU.png", 0, 0
+}
+Flat RF4_CHUT, 256, 256
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf04/RF4_CHUT.png", 0, 0
+}
+Texture RF4_CHUS, 512, 256
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf04/RF4_CHUS.png", 0, 0
+}
+Texture RF4_TOWR, 512, 1024
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf04/RF4_TOWR.png", 0, 0
+}
+Texture RF4_POTE, 64, 512
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf04/RF4_POTE.png", 0, 0
+}
+Texture RF4_PORT, 1024, 1024
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf04/RF4_PORT.png", 0, 0
+}
+Texture RF4_MAST, 64, 2048
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf04/RF4_MAST.png", 0, 0
+}
+Flat RF4_ROCF, 256, 256
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf04/RF4_ROCF.png", 0, 0
+}
+Texture RF4_BRBK, 1024, 768
+{
+    XScale 4
+    YScale 4
+    Patch "patches/rf04/RF4_BRBK.png", 0, 0
 }
 Texture RF5_MARB, 512, 512
 {

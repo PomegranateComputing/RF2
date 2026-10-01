@@ -61,3 +61,12 @@ Lock 7 Doom
     RemoteMessage "$RF_LOCK_FROMINSIDE"
     Mapcolor 160 40 40
 }
+
+// RF04: the dance hall's service door, at the back behind the stage, is shut this morning; RF05 goes out by it.
+Lock 8 Doom
+{
+    RFNoKey
+    Message "$RF_LOCK_SERVICE"
+    RemoteMessage "$RF_LOCK_SERVICE"
+    Mapcolor 160 40 40
+}

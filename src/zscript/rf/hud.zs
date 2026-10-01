@@ -133,6 +133,20 @@ class RFStatusBar : BaseStatusBar
         {
             if (c.after[i] > d.comicStep) continue;
             double zx = px + c.zones[i * 4] * k, zy = py + c.zones[i * 4 + 1] * k, zw = c.zones[i * 4 + 2] * k;
+            if (c.styles[i] == 1)
+            {
+                // On the page's black band: cream text, centred in the zone, sized on the zone's height.
+                double zh = c.zones[i * 4 + 3] * k;
+                double bs = max(zh * 0.55, 18.0) / f.GetHeight();
+                BrokenLines band = f.BreakLines(StringTable.Localize(c.captions[i]), int(zw / bs));
+                double blh = f.GetHeight() * bs * 1.15;
+                double by = zy + (zh - band.Count() * blh) / 2;
+                for (int j = 0; j < band.Count(); j++)
+                    Screen.DrawText(f, Font.CR_WHITE, zx + (zw - f.StringWidth(band.StringAt(j)) * bs) / 2, by + j * blh,
+                                    band.StringAt(j), DTA_ScaleX, bs, DTA_ScaleY, bs, DTA_Alpha, fade,
+                                    DTA_Color, Color(255, 232, 222, 196));
+                continue;
+            }
             BrokenLines lines = f.BreakLines(StringTable.Localize(c.captions[i]), int((zw - 16) / fs));
             double lh = f.GetHeight() * fs * 1.2;
             double bh = lines.Count() * lh + 12;

@@ -353,7 +353,8 @@ use_decor(1440, 592, 1504, 592, 'RF2_ERPH', 50, S_SHUTTER)
 # the side window: a mirror behind the jars and the tonic card (l. 157)
 m.box(1536, 576, 1600, 592, pave(C_RD, 'RF2_SHOP'), floor=32, ceil=112, ctex='RFP_CEID', upper='RF2_FACU', lower='RF2_SHOP')
 m.face(1536, 576, 1600, 592, 'N', texture='RF2_SHOP', special=182)
-sign(1536, 592, 1600, 592, 'RF2_PHVI', 40, off=6)   # the jars stand in front of the mirror
+sign(1536, 592, 1600, 592, 'RF2_PHVI', 72, off=6)   # the jars stand in front of the mirror, in its upper half (Codex's
+# panel of 01/10 is 40 u of jars from shelf to shelf: under it the glass shows his head and shoulders, 32-56 u)
 m.thing(1568, 548, T_SPOT, angle=90, args=(S_MIRROR,))
 m.thing(1720, 400, T_SPOT, angle=180, args=(S_MATTRESS,))
 sign(1344, 576, 1424, 576, 'RF2_PL03', 164)                        # BOULEVARD DE PORT-ROYAL: on the corner, as high as its neighbour

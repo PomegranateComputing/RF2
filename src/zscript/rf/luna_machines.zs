@@ -33,11 +33,14 @@ class RFJukeboxPlaying : Actor
     States { Spawn: R4JB B -1 Bright; Stop; }
 }
 
-// The roller-coaster train, three cars, nobody on board (l. 693). PROVISIONAL billboard until Astra's M05-09. Runs
-// along the north lane of the track once the park has started again; the automatic brake claps at each pass.
+// The roller-coaster train, three cars, nobody on board (l. 693). PROVISIONAL billboard until its model. Once the
+// park has started again it runs along its track: args[0] units in the direction of its angle, rising args[1] units
+// on the way (the lift hill), then goes out of sight behind the crest and comes round again; the automatic brake
+// claps at each pass.
 class RFCoasterTrain : Actor
 {
-    double x0, x1;
+    Vector3 p0;
+    double travelled;
     bool running;
     int pause;
     bool braked;
@@ -57,9 +60,14 @@ class RFCoasterTrain : Actor
     override void PostBeginPlay()
     {
         Super.PostBeginPlay();
-        x0 = Pos.X;
-        x1 = Pos.X - args[0];
+        p0 = Pos;
         bInvisible = true;
+    }
+
+    Vector3 At(double d)
+    {
+        double k = args[0] > 0 ? d / args[0] : 0;
+        return (p0.XY + AngleToVector(angle, d), p0.Z + args[1] * k);
     }
 
     override void Activate(Actor activator)
@@ -74,16 +82,17 @@ class RFCoasterTrain : Actor
         if (!running || isFrozen()) return;
         if (pause > 0)
         {
-            if (--pause == 0) { SetOrigin((x0, Pos.Y, Pos.Z), false); bInvisible = false; braked = false; }
+            if (--pause == 0) { travelled = 0; SetOrigin(p0, false); bInvisible = false; braked = false; }
             return;
         }
-        SetOrigin(Pos + (-2.4, 0, 0), true);
-        if (!braked && Pos.X < (x0 + x1) / 2)
+        travelled += 2.4;
+        SetOrigin(At(travelled), true);
+        if (!braked && travelled > args[0] / 2)
         {
             braked = true;
             A_StartSound("rf/luna/brake", CHAN_BODY, 0, 0.9);
         }
-        if (Pos.X <= x1)                     // it goes behind the turn and comes round again
+        if (travelled >= args[0])            // it goes behind the crest and comes round again
         {
             bInvisible = true;
             pause = 35 * 3;

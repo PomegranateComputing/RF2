@@ -16,6 +16,7 @@ furniture or open-sky terraces), actors embedded in walls/doors/furniture, and D
 without a plain wall behind them.
 """
 import importlib.util, math, sys
+from dataclasses import replace
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -101,15 +102,26 @@ def cue_segment(m, pts, tid):
     return None
 
 
+def roofed(c):
+    """A cell as seen from inside: a slab hanging from its ceiling (a lintel, a porch roof) is its ceiling."""
+    hang = [s for s in c.slabs if s[1] >= c.ceil and s[0] > c.floor]
+    if hang:
+        s = min(hang)
+        return replace(c, ceil=s[0], ctex=s[4], slabs=())
+    return c
+
+
 def leaks(m):
     sectors, sector_of = m._sectors()
     found = {}
-    for p, c in m.cells.items():
+    for p, c0 in m.cells.items():
+        c = roofed(c0)
         for d, (dx, dy) in DIRS.items():
             q = (p[0] + dx, p[1] + dy)
             cq = m.cells.get(q)
             if cq is None or sector_of[p] >= sector_of[q] or c.role != 'floor' or cq.role != 'floor':
                 continue
+            cq = roofed(cq)
             if abs(c.floor - cq.floor) <= STEP or min(c.ceil, cq.ceil) - max(c.floor, cq.floor) < 56:
                 continue
             if c.wall == cq.wall and c.ctex == cq.ctex:
@@ -119,6 +131,31 @@ def leaks(m):
             found.setdefault((sector_of[p], sector_of[q]), []).append(p)
     return [(min(x for x, _ in ps) * UNIT, min(y for _, y in ps) * UNIT, max(x for x, _ in ps) * UNIT + UNIT,
              max(y for _, y in ps) * UNIT + UNIT, len(ps)) for ps in found.values()]
+
+
+def sky_uppers(m):
+    """A roofed cell (a doorway, a porch, a shed) beside an open-sky cell: the engine draws the roofed cell's upper
+    wall from its ceiling up to the sky cell's ceiling (the sky height), a tall strip standing above the roofs. Build
+    such openings capped at the height of the mass around them, with a sky ceiling and a slab for the lintel."""
+    out = {}
+    skyh = max((c.ceil for c in m.cells.values() if c.ctex == 'F_SKY1'), default=0)
+    for p, c in m.cells.items():
+        if c.ctex != 'F_SKY1' or c.ceil <= c.floor:      # open sky only (a roofline mass is closed)
+            continue
+        if c.ceil < skyh:
+            continue   # a sky lower than the map's (a shaft, an opening capped at its mass): its walls stop there
+        for (dx, dy) in DIRS.values():
+            q = (p[0] + dx, p[1] + dy)
+            b = m.cells.get(q)
+            if b is None or b.ctex == 'F_SKY1' or b.ceil >= c.ceil:
+                continue
+            if (b.ceil <= b.floor and b.role != 'door') or b.ceil < c.floor:
+                continue
+            if any(z1 >= c.ceil for (z0, z1, *_) in c.slabs):
+                continue   # an opening capped at the mass's height: its lintel slab hides the upper wall
+            out.setdefault((b.ctex, b.ceil), []).append(q)
+    return [(min(x for x, _ in qs) * UNIT, min(y for _, y in qs) * UNIT, max(x for x, _ in qs) * UNIT + UNIT,
+             max(y for _, y in qs) * UNIT + UNIT, len(qs)) for qs in out.values()]
 
 
 def embedded(m):
@@ -157,7 +194,8 @@ def door_problems(m):
             ends = [(x0 - 1, y) for y in range(y0, y1 + 1)] + [(x1 + 1, y) for y in range(y0, y1 + 1)]
         else:
             ends = [(x, y0 - 1) for x in range(x0, x1 + 1)] + [(x, y1 + 1) for x in range(x0, x1 + 1)]
-        open_ends = [e for e in ends if e in m.cells and m.cells[e].role != 'door']
+        open_ends = [e for e in ends if e in m.cells and m.cells[e].role != 'door'
+                     and m.cells[e].ceil > m.cells[e].floor]     # a closed cell (a roofline mass) is wall
         if open_ends:
             out.append(f'DOOR END       tag {tag} at x {x0 * UNIT}..{(x1 + 1) * UNIT} y {y0 * UNIT}..{(y1 + 1) * UNIT}: '
                        f'leaf ends touch floor ({len(open_ends)} cells) - it protrudes out of the wall')
@@ -226,6 +264,10 @@ def analyze(m, spawn_view=False):
         problems.append(f'WALL LEAK      x {x0}..{x1} y {y0}..{y1} ({n} cells): see-through ledge between two rooms')
     problems += door_problems(m)
     problems += decal_problems(m)
+    if spawn_view:   # the maps authored with open sky (RF02 on); RF01 is a roofed hospital
+        for (x0, y0, x1, y1, n) in sky_uppers(m):
+            problems.append(f'SKY UPPER      x {x0}..{x1} y {y0}..{y1} ({n} cells): a roofed cell under the open sky '
+                            '(its upper wall is drawn up to the sky height)')
     return problems
 
 

@@ -38,18 +38,24 @@ GREY_BOARD = (136, 134, 128)
 
 # Files delivered by Astra (LUNA-V01, tranche 01, 30/09), imported into src/patches/rf04 under the same names: this
 # script no longer draws them and only writes their definition, at the scale of the delivered file (pixels per unit).
-DELIVERED = {'RF4_POIN': 8, 'RF4_CLE5': 8, 'RF4_CLE4': 8, 'RF4_NIAG': 8, 'RF4_C617': 8, 'RF4_C618': 8}
+DELIVERED = {'RF4_POIN': 8, 'RF4_CLE5': 8, 'RF4_CLE4': 8, 'RF4_NIAG': 8, 'RF4_C617': 8, 'RF4_C618': 8,
+             # Codex, 01/10: LUNA_PILOTE_01 (and LOT_CORRECTIONS_01 for NIAG, CLE5, CLE4 above, same definitions)
+             'RF4_BROO': 4, 'RF4_BASS': 4, 'RF4_ROCH': 4, 'RF4_BOIS': 4, 'RF4_MARQ': 4, 'RF4_DALH': 4}
+# Sprites imported over the provisional drawings: never redrawn.
+DELIVERED_SPRITES = set()
+# --only NAME[,NAME]: draw only these (new stand-ins); every other definition is read from the file in place.
+ONLY = set()
 
 
-def delivered(kind, name):
+def delivered(kind, name, ppu=None):
     img = Image.open(PATCH / f'{name}.png')
-    DEFS.append((kind, name, img.size[0], img.size[1], DELIVERED[name]))
+    DEFS.append((kind, name, img.size[0], img.size[1], DELIVERED.get(name, ppu)))
     return img
 
 
 def save(kind, name, arr, ppu=PPU):
-    if name in DELIVERED:
-        return delivered(kind, name)
+    if name in DELIVERED or (ONLY and name not in ONLY):
+        return delivered(kind, name, ppu)
     img = arr if isinstance(arr, Image.Image) else to_img(np.clip(arr, 0, 1))
     PATCH.mkdir(parents=True, exist_ok=True)
     img.save(PATCH / f'{name}.png', optimize=True)
@@ -59,8 +65,8 @@ def save(kind, name, arr, ppu=PPU):
 
 def masked(name, rgba, ppu=PPU):
     """RGBA patch drawn on a decor line or a masked middle (glass, signs, grilles)."""
-    if name in DELIVERED:
-        delivered('Texture', name)
+    if name in DELIVERED or (ONLY and name not in ONLY):
+        delivered('Texture', name, ppu)
         return
     PATCH.mkdir(parents=True, exist_ok=True)
     rgba.save(PATCH / f'{name}.png', optimize=True)
@@ -275,9 +281,9 @@ def fake_rock(name, seed):
     save('Texture', name, floor_grime(arr, 0.3, 0.3))
 
 
-def trestle(name, seed):
-    """Roller-coaster timber: posts and crossed braces, black with damp at the feet (l. 551)."""
-    W, H = 64 * PPU, 128 * PPU
+def trestle(name, seed, hunits=128):
+    """Roller-coaster timber: posts and crossed braces, black with damp at the feet (l. 551). Masked: the lattice."""
+    W, H = 64 * PPU, hunits * PPU
     img = to_img(np.clip(solid(H, W, (20, 18, 16)), 0, 1))
     wood = weather(boards(H, W, seed, 16, (104, 86, 62)), seed + 1, 0.25)
     wimg = to_img(np.clip(wood, 0, 1))
@@ -285,10 +291,10 @@ def trestle(name, seed):
     d = ImageDraw.Draw(m)
     for x in (4 * PPU, W - 4 * PPU):
         d.rectangle([x - 4 * PPU, 0, x + 4 * PPU, H], fill=255)
-    for y0 in (8, 72):
+    for y0 in range(8, hunits, 64):
         d.line([(4 * PPU, y0 * PPU), (W - 4 * PPU, (y0 + 56) * PPU)], fill=255, width=4 * PPU)
         d.line([(W - 4 * PPU, y0 * PPU), (4 * PPU, (y0 + 56) * PPU)], fill=255, width=4 * PPU)
-    d.rectangle([0, 60 * PPU, W, 66 * PPU], fill=255)
+        d.rectangle([0, (y0 + 52) * PPU, W, (y0 + 58) * PPU], fill=255)
     img = Image.composite(wimg, img, m)
     rgba = np.asarray(img.convert('RGBA')).copy()
     rgba[..., 3] = np.asarray(m)
@@ -466,12 +472,155 @@ def canvas(h, w, seed):
     return np.where(stripe, arr * np.array([1.05, 0.62, 0.55]), arr)
 
 
+# ----------------------------------------------------------------------------- the park recomposed (01/10)
+# PROVISIONAL stand-ins under the names of docs/production/handoff/RF2_20261001/ZONE_PILOTE_RF04.md, for Codex to replace.
+def balustrade(name, seed):
+    """The basin's balustrade (masked, 64 x 32): moulded cement, a coping and a plinth, balusters with the basin seen
+    between them; the paint gone grey-green."""
+    W, H = 64 * PPU, 32 * PPU
+    arr = plaster(H, W, seed, (168, 164, 150), rough=0.2, stains=0.35)
+    arr = floor_grime(weather(arr, seed + 1, 0.3), 0.35, 0.2)
+    img = to_img(np.clip(arr, 0, 1)).convert('RGBA')
+    m = Image.new('L', (W, H), 0)
+    d = ImageDraw.Draw(m)
+    d.rectangle([0, 0, W, 4 * PPU], fill=255)                          # coping
+    d.rectangle([0, H - 4 * PPU, W, H], fill=255)                      # plinth
+    for k in range(8):                                                 # eight balusters, 8 u apart: a turned shape
+        cx = (k * 8 + 4) * PPU
+        d.ellipse([cx - 2 * PPU, 7 * PPU, cx + 2 * PPU, 13 * PPU], fill=255)
+        d.rectangle([cx - PPU, 4 * PPU, cx + PPU, H - 4 * PPU], fill=255)
+        d.ellipse([cx - 3 * PPU, 14 * PPU, cx + 3 * PPU, 25 * PPU], fill=255)
+    if seed % 2 == 0:
+        d.rectangle([5 * 8 * PPU + PPU, 6 * PPU, 6 * 8 * PPU + 2 * PPU, H - 5 * PPU], fill=0)   # one baluster broken
+    rgba = np.asarray(img).copy()
+    rgba[..., 3] = np.asarray(m)
+    masked(name, Image.fromarray(rgba))
+
+
+def chute_top(h, w, seed):
+    """The chute's ramp seen from above: planks across, a central gutter, rusted straps (flat, along y)."""
+    arr = planks(h, w, seed, 8, (112, 96, 74))
+    arr = arr * (0.85 + 0.25 * fbm(h, w, seed + 1, 2.0)[..., None])
+    img = to_img(np.clip(arr, 0, 1))
+    d = ImageDraw.Draw(img)
+    d.rectangle([24 * PPU, 0, 40 * PPU, h], fill=(70, 66, 58))          # the gutter
+    for x in (24 * PPU, 40 * PPU):
+        d.line([(x, 0), (x, h)], fill=(120, 74, 46), width=PPU)
+    for y in range(0, h, 32 * PPU):
+        d.rectangle([0, y, w, y + 2 * PPU], fill=(104, 64, 40))         # iron straps
+    return floor_grime(np.asarray(img).astype(float) / 255.0, 0.25, 0.3)
+
+
+def chute_side(name, seed):
+    """The ramp's flanks (128 x 64): boards along the slope, a rusted iron edge, the trestle seen below."""
+    W, H = 128 * PPU, 64 * PPU
+    arr = boards(H, W, seed, 10, (104, 88, 68), vertical=False)
+    arr = peel(arr, seed + 1, (200, 196, 182), 0.45)
+    yy = np.arange(H)[:, None, None]
+    arr = np.where(yy < 3 * PPU, solid(H, W, (98, 60, 40)), arr)
+    save('Texture', name, floor_grime(weather(arr, seed + 2, 0.3), 0.3, 0.3))
+
+
+def tower(name, seed):
+    """The chute's tower (128 x 256): a frame of white-painted timber, landings, the service stair in zigzag."""
+    W, H = 128 * PPU, 256 * PPU
+    back = boards(H, W, seed, 12, (84, 74, 60)) * 0.55
+    img = to_img(np.clip(back, 0, 1))
+    d = ImageDraw.Draw(img)
+    white = (196, 192, 178)
+    for x in (4, 64, 124):
+        d.rectangle([(x - 3) * PPU, 0, (x + 3) * PPU, H], fill=white)
+    for y in range(0, 256, 64):
+        d.rectangle([0, y * PPU, W, (y + 5) * PPU], fill=white)
+        d.line([(4 * PPU, y * PPU), (64 * PPU, (y + 64) * PPU)], fill=white, width=3 * PPU)
+        d.line([(124 * PPU, y * PPU), (64 * PPU, (y + 64) * PPU)], fill=white, width=3 * PPU)
+    for k in range(8):                                                  # the stair
+        y = (k * 32 + 4) * PPU
+        x0, x1 = (12, 56) if k % 2 == 0 else (72, 116)
+        d.line([(x0 * PPU, y + 28 * PPU), (x1 * PPU, y)], fill=(150, 140, 120), width=2 * PPU)
+    arr = peel(np.asarray(img).astype(float) / 255.0, seed + 1, (116, 104, 86), 0.25)
+    save('Texture', name, floor_grime(weather(arr, seed + 2, 0.3), 0.4, 0.3))
+
+
+def post(name, seed):
+    """A post of the roller coaster (16 x 128): white paint flaking off grey wood, damp at the foot."""
+    W, H = 16 * PPU, 128 * PPU
+    arr = boards(H, W, seed, 8, (112, 100, 84))
+    arr = peel(arr, seed + 1, (206, 202, 188), 0.62)
+    save('Texture', name, floor_grime(weather(arr, seed + 2, 0.3), 0.45, 0.25))
+
+
+def gates_back(name, seed):
+    """The LUNA PARK gates and the arcaded pavilion seen from inside (256 x 256): rendered masonry, two pillars with
+    their domes against the sky, an arch with its grille shut, iron braces of the decor."""
+    W, H = 256 * PPU, 256 * PPU
+    arr = plaster(H, W, seed, (176, 168, 150), rough=0.22, stains=0.35)
+    img = to_img(np.clip(floor_grime(weather(arr, seed + 1, 0.3), 0.4, 0.3), 0, 1))
+    d = ImageDraw.Draw(img)
+    for cx in (40, 216):                                                # the pillars, from behind
+        d.rectangle([(cx - 20) * PPU, 40 * PPU, (cx + 20) * PPU, H], fill=(150, 142, 126))
+        d.ellipse([(cx - 22) * PPU, 4 * PPU, (cx + 22) * PPU, 56 * PPU], fill=(110, 112, 104))
+    d.rectangle([60 * PPU, 120 * PPU, 196 * PPU, H], fill=(36, 34, 32))   # the arch, the grille shut
+    d.ellipse([60 * PPU, 52 * PPU, 196 * PPU, 188 * PPU], fill=(36, 34, 32))
+    for x in range(64, 196, 8):
+        d.line([(x * PPU, 56 * PPU), (x * PPU, H)], fill=(78, 74, 68), width=PPU)
+    for y in (150, 200):
+        d.line([(60 * PPU, y * PPU), (196 * PPU, y * PPU)], fill=(78, 74, 68), width=PPU)
+    save('Texture', name, np.asarray(img).astype(float) / 255.0)
+
+
+def mast(name, seed):
+    """The aerial tower's mast (16 x 512): a rusted iron lattice, its rivets, a cable hanging."""
+    W, H = 16 * PPU, 512 * PPU
+    arr = solid(H, W, (40, 34, 30)) * (0.8 + 0.4 * fbm(H, W, seed, 1.6)[..., None])
+    img = to_img(np.clip(arr, 0, 1))
+    d = ImageDraw.Draw(img)
+    rust = (118, 70, 46)
+    for x in (PPU, W - 2 * PPU):
+        d.rectangle([x, 0, x + PPU, H], fill=rust)
+    for y in range(0, H, 16 * PPU):
+        d.line([(0, y), (W, y + 16 * PPU)], fill=rust, width=PPU)
+        d.line([(W, y), (0, y + 16 * PPU)], fill=rust, width=PPU)
+    save('Texture', name, np.asarray(img).astype(float) / 255.0)
+
+
+def rock_top(h, w, seed):
+    """The tops of the staff rocks: cement on lath, cracked, grass and soot in the hollows (flat)."""
+    n1 = fbm(h, w, seed, 2.6)[..., None]
+    arr = solid(h, w, (118, 108, 92)) * (0.65 + 0.6 * n1)
+    grass = (fbm(h, w, seed + 1, 1.8) > 0.68)[..., None]
+    arr = np.where(grass, solid(h, w, (74, 86, 50)) * (0.8 + 0.3 * n1), arr)
+    return floor_grime(arr, 0.2, 0.3)
+
+
+def brooklyn_back(name, seed):
+    """The back of the BROOKLYN BRIDGE decor (256 x 192), seen from the technical corridor: the timber frame, braces,
+    canvas nailed on the other side, bundles of cable."""
+    W, H = 256 * PPU, 192 * PPU
+    canvas_back = solid(H, W, (150, 136, 108)) * (0.75 + 0.35 * fbm(H, W, seed, 1.8)[..., None])
+    img = to_img(np.clip(canvas_back, 0, 1))
+    d = ImageDraw.Draw(img)
+    wood = (96, 80, 60)
+    for x in range(0, 257, 64):
+        d.rectangle([(x - 3) * PPU, 0, (x + 3) * PPU, H], fill=wood)
+    for y in (0, 96, 186):
+        d.rectangle([0, y * PPU, W, (y + 6) * PPU], fill=wood)
+    for x in range(0, 256, 64):
+        d.line([(x * PPU, 96 * PPU), ((x + 64) * PPU, 186 * PPU)], fill=wood, width=4 * PPU)
+    for k, y in enumerate((40, 52, 60, 140)):                            # cables in bundles, sagging
+        pts = [(x * PPU, (y + 6 * math.sin(x / 40.0 + k)) * PPU) for x in range(0, 257, 8)]
+        d.line(pts, fill=(22, 20, 18), width=2 * PPU)
+    save('Texture', name, floor_grime(weather(np.asarray(img).astype(float) / 255.0, seed + 1, 0.3), 0.3, 0.2))
+
+
 # ----------------------------------------------------------------------------- sprites (provisional)
 def sprite_rgba(w, h):
     return Image.new('RGBA', (w, h), (0, 0, 0, 0))
 
 
 def save_sprite(img, name, yoff_extra=0, folder=SPRITES):
+    if name in DELIVERED_SPRITES or (ONLY and name not in ONLY):
+        return
     folder.mkdir(parents=True, exist_ok=True)
     png_with_grab(img, img.size[0] // 2, img.size[1] + yoff_extra, folder / f'{name}.png')
 
@@ -782,7 +931,8 @@ def main():
     sign_board('RF4_SING', 'PALAIS DES SINGES', 128, 24, (90, 40, 30), (232, 214, 170), 529)
     sign_board('RF4_DANS', 'SALLE DE DANSE', 128, 24, (40, 40, 44), (220, 190, 120), 530)
     fake_rock('RF4_ROCH', 531)
-    trestle('RF4_BOIS', 551)
+    trestle('RF4_BOIS', 551)                 # Codex's (opaque panel, LUNA_PILOTE_01): kept, not redrawn
+    trestle('RF4_TREI', 551, 224)            # the lattice between the posts, masked (01/10, for Codex to replace)
     turnstile_counter('RF4_C617', 617)
     turnstile_counter('RF4_C618', 618)
     turnstile_side('RF4_TOUR')
@@ -805,6 +955,16 @@ def main():
     save('Flat', 'RF4_FLAQ', black_puddle(64 * PPU, 64 * PPU, 565))
     save('Flat', 'RF4_MARF', canvas(64 * PPU, 64 * PPU, 566))
     save('Flat', 'RF4_VOIE', narrow_rails(64 * PPU, 64 * PPU, 567))
+    # the park recomposed (01/10)
+    balustrade('RF4_BALU', 570)
+    save('Flat', 'RF4_CHUT', chute_top(64 * PPU, 64 * PPU, 571))
+    chute_side('RF4_CHUS', 572)
+    tower('RF4_TOWR', 573)
+    post('RF4_POTE', 574)
+    gates_back('RF4_PORT', 575)
+    mast('RF4_MAST', 576)
+    save('Flat', 'RF4_ROCF', rock_top(64 * PPU, 64 * PPU, 577))
+    brooklyn_back('RF4_BRBK', 578)
     # sprites
     draw_guard()
     draw_shoe()
@@ -841,4 +1001,11 @@ def main():
 
 
 if __name__ == '__main__':
+    # Imported files are listed in DELIVERED (never redrawn). Since 01/10 a run should name what it draws:
+    #   python scripts/mapkit/materials_rf04.py --only RF4_BALU,RF4_CHUT
+    # every other definition is then read from the file in place; a full run needs --force-all.
+    if '--only' in sys.argv:
+        ONLY.update(sys.argv[sys.argv.index('--only') + 1].split(','))
+    elif '--force-all' not in sys.argv:
+        sys.exit('materials_rf04.py: nommer les images a dessiner (--only NOM,...) ou --force-all')
     main()

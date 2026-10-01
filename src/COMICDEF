@@ -1,18 +1,19 @@
 # Transition pages between chapters (src/zscript/rf/comics.zs). One scene per transition:
 #   scene <ID> <FROM MAP> <TO MAP> <page image, 1920 x 1080, art without text>
 #   panel <x> <y> <w> <h>                       (pixels of the page, in reading order)
-#   caption <after panel> <$LANGUAGE key> <x> <y> <w> <h>   (cream box drawn by the game; the text is composed by the game)
+#   caption <after panel> <$LANGUAGE key> <x> <y> <w> <h> [band]
+#     (the text is composed by the game: on a cream box over the art, or with "band" in cream on the page's black band)
 # A scene plays only when its page image is in the build; otherwise the chapter ends on its exit text as before.
-# Layout below: the common four-panel layout of the contract (large place, two details, the opening) until Codex's
-# planche.json gives the real panels of each page. RF06 -> RF07 waits for RF07.
+# Pages delivered take the panels and zones of their planche.json; the others keep the common four-panel layout of
+# the contract (large place, two details, the opening) until their page comes.
 
+# Codex COMIC_RF01_RF02_01 (01/10), planche.json: four panels, one caption after the fourth, in the black band
 scene RF01_RF02 RF01 RF02 graphics/comics/RF01_RF02.png
-panel 24 24 1180 640
-panel 1228 24 668 310
-panel 1228 354 668 310
-panel 24 688 1872 368
-caption 1 $RF_COMIC_RF01_RF02_1 48 48 560 0
-caption 4 $RF_COMIC_RF01_RF02_2 1300 712 560 0
+panel 0 0 797 954
+panel 797 0 1123 411
+panel 797 411 448 543
+panel 1245 411 675 543
+caption 4 $RF_COMIC_RF01_RF02_1 120 960 1680 65 band
 
 scene RF02_RF04 RF02 RF04 graphics/comics/RF02_RF04.png
 panel 24 24 1180 640
@@ -37,3 +38,11 @@ panel 1228 354 668 310
 panel 24 688 1872 368
 caption 1 $RF_COMIC_RF05_RF06_1 48 48 560 0
 caption 4 $RF_COMIC_RF05_RF06_2 1300 712 560 0
+
+scene RF06_RF07 RF06 RF07 graphics/comics/RF06_RF07.png
+panel 24 24 1180 640
+panel 1228 24 668 310
+panel 1228 354 668 310
+panel 24 688 1872 368
+caption 1 $RF_COMIC_RF06_RF07_1 48 48 560 0
+caption 4 $RF_COMIC_RF06_RF07_2 1300 712 560 0
