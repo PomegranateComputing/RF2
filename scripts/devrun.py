@@ -75,6 +75,17 @@ def run(pk3, name, map_name=None, norun=False, tour=False, autopilot=False, seco
         args += ['+i_timescale', str(speed)]
     if extra:
         args += extra
+    # One engine at a time on this machine, whichever agent runs it (scripts/engine_lock.py).
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import engine_lock
+    lock = engine_lock.acquire(os.environ.get('RF2_AGENT', 'opus'), f'devrun {name}', quiet=quiet)
+    try:
+        return _run_locked(args, name, log, shots, seconds, marker, quiet, audio_wav)
+    finally:
+        engine_lock.release(lock)
+
+
+def _run_locked(args, name, log, shots, seconds, marker, quiet, audio_wav):
     start = time.time()
     hidden = os.environ.get('RF_DEV_HIDDEN') == '1'   # shared machine: run on an invisible desktop
     sound_env = {}
