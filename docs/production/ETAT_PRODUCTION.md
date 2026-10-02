@@ -106,6 +106,7 @@ l'art. Rien n'est déclaré accepté ; aucun son n'est écouté par les agents (
 | Son des armes | routage réel et film de référence au son du moteur pour Codex (`handoff/RF2_20261001/ROUTAGE_SON_ARMES.md`) ; `AUDIO_TIMING_01` : 8 sons de campagne (Browning, FAL, pied-de-biche) à tête silencieuse raccourcie, mesurés (attaque à 4 ms, crête et son identiques), **non écoutés** ; les 16 sons des armes du banc restent hors campagne | candidats |
 | Arsenal | un contrat par arme (`handoff/RF2-ARSENAL/CONTRATS_PAR_ARME_20261001.md`) ; Rapid 4+1, barillet six chambres du MR73 et cadence réparée de la Scorpion inchangés ; M2HB, RPG, lance-flammes, taser : décisions du propriétaire listées | contrats écrits |
 | Ennemis | infirmier image E (ORDY E V04) intégrée ; familles suivantes demandées à Codex : brancardier complet, porte-registre (`handoff/RF2_20261001/ENNEMIS_FAMILLES_20261001.md`) | en production chez Codex |
+| Portes (consigne du 02/10) | portes, grilles, rideaux, panneaux et façades peintes des 23 cartes : dormants et linteaux fixes, images recomposées à la taille des ouvertures (`scripts/mapkit/doors.py`, `doorfit.py`, `facades.py`), blockouts corrigés sans toucher à leur géométrie ; relevé 451 surfaces en défaut → 0 ; 86 portes vues fermées, en course, ouvertes ; `docs/RF2_PORTES_20261002.md`, `docs/production/portes/` | RUNTIME_VERIFIED_OWNER_REVIEW_REQUIRED — `JOUER_RF2_PORTES.cmd`, build `RF2_PORTES_20261002_1018` |
 | Boss (banc séparé) | le surveillant-chef, **adaptation déclarée**, dans aucune carte : entrée, trois attaques annoncées, phase 2, sifflet et renfort, douleur, mort, victoire et reprise ; `bench/boss/FICHE_BOSS_SURVEILLANT.md`, `bench/boss/test_boss_bench.py` PASS | prototype complet sur banc |
 
 ## 6. Matrice de couverture réelle
@@ -254,3 +255,14 @@ action.
   de corps, chaussure, cadrans, sols de RF06 — importés sur la ligne le 02/10), puis candidate suivante ; RF08
   « Aile des chambres » (`maps/RF07_RF12_DECOUPAGE.md`) ; décisions du propriétaire sur l'arsenal (M2HB, RPG,
   lance-flammes, taser, alimentation de la scie).
+- 02/10 — lots de Codex du 01/10 au soir revus dans le moteur et gardés (retour `handoff/RF2_20261001/RETOURS_CODEX/
+  RETOUR_OPUS_LOTS_20261002.md` : libellés des cadrans illisibles) ; la roue du moteur de RF05 tourne. Consigne
+  supplémentaire du propriétaire : **passe sur les portes** de toutes les cartes. Relevé outillé des 23 cartes
+  (`scripts/production/door_audit.py`), corrections (kit : dormants, linteaux, images ajustées ; blockouts : textures,
+  décalages et ancrages seulement ; façades de Paris et du Luna Park), vues avant / après et portes en mouvement.
+  Build de revue **`RF2_PORTES_20261002_1018`** (`469418f2…`, commit `61e59cb`), lanceurs `JOUER_RF2_PORTES*.cmd` ;
+  `JOUER_RF2_CUMUL*.cmd` restent sur 1605 (l'« avant »). Rapport `docs/RF2_PORTES_20261002.md`. Un commit
+  `1da3e4c` (« WIP snapshot … for the GitHub publication ») a été posé sur la branche par une autre session pendant ce
+  travail : il contient un état intermédiaire de la passe, repris et terminé par `8a4b463`.
+  Prochaine action : verdict du propriétaire sur les portes (puis cumul suivant sur cette base) ; RF08 ; pour Codex :
+  fins de façade et trumeaux dessinés, libellés des cadrans.

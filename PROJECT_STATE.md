@@ -45,6 +45,8 @@ Everything newer than the accepted RF01 build waits for the owner's review.
   direct review starts (RF02, RF04, RF05, RF06, RF07). Current: `RF2_CUMUL_20261001_1605` (`docs/RF2_CUMUL_20261001_1605.md`);
   the earlier candidates (1502 of 01/10, 1821 of 30/09, ...) stay with their dated launchers.
   Re-pointed only after the new build passes its runs (`export_candidate.py --hold`, then `--promote`)
+- `JOUER_RF2_PORTES.cmd` (and `_RF01` ... `_RF08`) - the door pass of 02/10 on every map, for review against the
+  cumulative candidate (`docs/RF2_PORTES_20261002.md`); the next cumulative candidate is built on it
 - `JOUER_RF2_ARSENAL_ESSAI.cmd` - the weapon test bench, separate from the game
 - `JOUER_RF2_BOSS_ESSAI.cmd` - the boss bench (the surveillant-chef, a declared adaptation), separate from the game
 - `JOUER_RF2_DEV.cmd` - rebuilds from `src/` and runs (development)
