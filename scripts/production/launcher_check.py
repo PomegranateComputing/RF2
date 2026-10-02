@@ -7,7 +7,7 @@ are untouched (hashes before / after; a lot's own configuration may only change 
 Usage: python scripts/production/launcher_check.py <out.json> <launcher.cmd> [...]
 One engine at a time: each run holds the engine lock.
 """
-import hashlib, json, subprocess, sys, time
+import hashlib, json, re, subprocess, sys, time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -37,12 +37,21 @@ def main():
         pk3_line = next((x for x in text.splitlines() if x.lower().startswith('rem') and '.pk3' in x), '')
         with engine_lock.hold('opus', f'lanceur {l.name} -norun'):
             t0 = time.time()
-            r = subprocess.run(['cmd', '/c', f'cd /d C:\\ && "{l}" -norun -stdout'], capture_output=True, text=True,
+            r = subprocess.run(['cmd', '/c', str(l), '-norun', '-stdout'], cwd='C:\\', capture_output=True, text=True,
                                errors='replace', timeout=300)
         log = r.stdout + r.stderr
+        if 'adding' not in log.lower():          # a bench launcher sends the engine's output to its own log file
+            fresh = [f for f in (ROOT / 'user').glob('logs_*/*.log') if f.stat().st_mtime >= t0 - 1]
+            if fresh:
+                log += max(fresh, key=lambda f: f.stat().st_mtime).read_text(encoding='utf-8', errors='replace')
         loaded = [x.strip() for x in log.splitlines() if '.pk3' in x.lower() and ('adding' in x.lower() or 'w_' in x.lower() or 'file' in x.lower())]
         errors = [x for x in log.splitlines() if 'Script error' in x or 'error' in x.lower() and ('zscript' in x.lower() or 'fatal' in x.lower())]
-        results.append(dict(launcher=str(l.relative_to(ROOT)), code=r.returncode, ok=r.returncode == 1337 and not errors,
+        m = re.search(r'(dist\\[\w\\.-]+\.pk3)', pk3_line)
+        declared_rel = m.group(1).replace('\\', '/') if m else None
+        # None: the launcher names no build in a rem line (the accepted review launcher reads LATEST.txt): see 'loaded'
+        right_build = None if not declared_rel else any(declared_rel.lower() in x.replace('\\', '/').lower() for x in loaded)
+        results.append(dict(launcher=str(l.relative_to(ROOT)), code=r.returncode, right_build=right_build,
+                            ok=r.returncode == 1337 and not errors and right_build is not False,
                             seconds=round(time.time() - t0, 1), declared=pk3_line, loaded=loaded[-3:], errors=errors[:5]))
         print(l.name, r.returncode, 'OK' if results[-1]['ok'] else 'FAIL', loaded[-1:] if loaded else '', flush=True)
     after = tree_hash(watched)

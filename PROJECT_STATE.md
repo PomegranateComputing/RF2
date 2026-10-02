@@ -17,12 +17,15 @@ Astra produces assets in its own worktree. Music later. Sans Destination stopped
 
 ## Campaign
 
-RF01 produced from `scripts/mapkit/rf01.py`. RF02 produced from `scripts/mapkit/rf02.py`. RF04, RF05, RF06 (the Luna
-Park, novel l. 451-731) produced on 30/09 from `rf04.py`, `rf05.py`, `rf06.py` with provisional resources
-(`docs/RF2_LUNA_PARK.md`). Chain: RF01 -> RF02 -> RF04 -> RF05 -> RF06 -> title screen until RF07 (Jerma). RF03
-(Batignolles) stays a V1 blockout for its later place in the novel (owner's decision of 27/09). RF07-RF23: V1
-blockouts until each is produced. Canon fidelity matrix: `docs/production/CANON_FIDELITE.md`. Everything newer than
-the accepted RF01 build waits for the owner's review.
+RF01 produced from `scripts/mapkit/rf01.py`. RF02 produced from `scripts/mapkit/rf02.py`. RF04, RF05 (the Luna Park,
+novel l. 451-707) recomposed on 01/10 on one shared park (`scripts/mapkit/luna_park.py`, a declared reconstruction, not
+a survey); RF06 (the corridor, l. 709-731) recomposed, without combat; RF07 (Jerma, l. 733-765) produced on 01/10,
+without combat (owner's mandate of 01/10). Chain: RF01 -> RF02 -> RF04 -> RF05 -> RF06 -> RF07 -> end screen, a comic
+page (Codex) between each two chapters. RF03 (Batignolles) stays a V1 blockout for its later place in the novel
+(owner's decision of 27/09); RF08-RF12 are broken down (`docs/production/maps/RF07_RF12_DECOUPAGE.md`); RF08-RF23: V1
+blockouts until each is produced. Art: Astra's lots (to 30/09), Codex's lots (from 01/10,
+`C:\PROJECTS\RF2_UZDOOM_CODEX_ART_20261001\`). Canon fidelity matrix: `docs/production/CANON_FIDELITE.md`.
+Everything newer than the accepted RF01 build waits for the owner's review.
 
 ## Gates (RF01)
 
@@ -39,10 +42,11 @@ the accepted RF01 build waits for the owner's review.
 - `JOUER_RF2_ART_REVIEW.cmd` - accepted RF01 build (reference, never re-pointed)
 - `JOUER_RF2_<LOT>.cmd` - each new candidate (`scripts/export_candidate.py`)
 - `JOUER_RF2_CUMUL.cmd` - the cumulative candidate (every campaign correction kept); `JOUER_RF2_CUMUL_RF0x.cmd`
-  direct review starts. Current: `RF2_CUMUL_20260930_1821` (Astra's 30/09 campaign lots on top of 1724; `docs/RF2_CUMUL_20260930_1821.md`);
-  1724 (chapter chain repaired, without those lots) stays with its dated launchers.
+  direct review starts (RF02, RF04, RF05, RF06, RF07). Current: `RF2_CUMUL_20261001_1605` (`docs/RF2_CUMUL_20261001_1605.md`);
+  the earlier candidates (1502 of 01/10, 1821 of 30/09, ...) stay with their dated launchers.
   Re-pointed only after the new build passes its runs (`export_candidate.py --hold`, then `--promote`)
 - `JOUER_RF2_ARSENAL_ESSAI.cmd` - the weapon test bench, separate from the game
+- `JOUER_RF2_BOSS_ESSAI.cmd` - the boss bench (the surveillant-chef, a declared adaptation), separate from the game
 - `JOUER_RF2_DEV.cmd` - rebuilds from `src/` and runs (development)
 
 Update this file briefly after each consolidated gate. Do not turn it into a diary.

@@ -240,3 +240,17 @@ action.
   worktree `C:\PROJECTS\RF2_UZDOOM_BENCH_20260930`) : W03/W04 V02 sans recul par le code, FAMAS V01, Scorpion V01 avec
   ses poses d'effort raccordées (cadence des touches inchangée). Sondes PASS, captures par tic, film au son du moteur
   (non écouté). `JOUER_RF2_ARSENAL_ESSAI.cmd` repointé, contrôlé depuis `C:\`. Aucune arme du banc en campagne.
+- 01/10 et 02/10 matin — mandat du 01/10 (voir §5). Codex produit l'art dans son espace ; 18 lots importés avec contrôle
+  d'empreinte de base et revus dans le moteur. RF04 et RF05 recomposés sur un parc commun, RF06 recomposé, RF07 produite
+  (Jerma, sans combat), cinq planches entre les chapitres, banc du boss. Candidate **`RF2_CUMUL_20261001_1605`**
+  (`0efa3726…`, commit `91da410`) : RF01, RF02, RF04, RF05, RF06, RF07 A/B PASS, chaîne RF01 → RF07 dans une seule
+  partie PASS (rejouée seule le 02/10 : la première passe avait été faussée par un test lancé entre ses deux jambes),
+  planches en trois formats, vues, films ; lanceurs courants `JOUER_RF2_CUMUL*.cmd` (dont `…_RF07.cmd`) repointés le
+  02/10 et contrôlés depuis `C:\` ; `JOUER_RF2_BOSS_ESSAI.cmd` (banc du boss sur la base 1605) ;
+  `JOUER_RF2_ARSENAL_ESSAI.cmd` sur `RF2_ARSENAL_ESSAI_20261001_1607` (module 1901 + sons recadrés de Codex, sonde
+  PASS). Rapport `docs/RF2_CUMUL_20261001_1605.md`. Aucun son écouté ; aucune candidate approuvée. La candidate 1502 du
+  01/10 (sans les lots de l'après-midi, RF06 mal éclairé) reste avec ses lanceurs datés, non promue.
+  Prochaine action : revue dans le moteur des lots du 01/10 au soir (brancardier V02, porte-registre V02 et son modèle
+  de corps, chaussure, cadrans, sols de RF06 — importés sur la ligne le 02/10), puis candidate suivante ; RF08
+  « Aile des chambres » (`maps/RF07_RF12_DECOUPAGE.md`) ; décisions du propriétaire sur l'arsenal (M2HB, RPG,
+  lance-flammes, taser, alimentation de la scie).
