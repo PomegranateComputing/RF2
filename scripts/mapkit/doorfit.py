@@ -301,3 +301,41 @@ def fit_static(verts, sectors, sides, lines, room_wall, alias=None, skip_sectors
         report.append(dict(face=f"({a['x']:g},{a['y']:g})-({b['x']:g},{b['y']:g})", tex=tex, width=W, head=head, wall_height=H, image=new,
                            action='ajustee'))
     return report
+
+
+def fit_facades(verts, sectors, sides, lines, alias=None, report=None):
+    """Walls dressed with a painted front (facades.py): the front fitted to the wall, so that no door or shutter of
+    its ground floor is cut by the wall's end (one-sided walls, and the faces of masses lower than the sky)."""
+    import facades
+    alias = alias or {}
+    report = report if report is not None else []
+    for l in lines:
+        a, b = verts[l['v1']], verts[l['v2']]
+        W = math.hypot(float(b['x']) - float(a['x']), float(b['y']) - float(a['y']))
+        for key, okey in (('sidefront', 'sideback'), ('sideback', 'sidefront')):
+            if l.get(key) is None:
+                continue
+            sd = sides[l[key]]
+            if sd.get('offsetx') or sd.get('offsety'):
+                continue                               # a face placed by hand (the front around the Brooklyn passage)
+            f = sectors[sd['sector']]
+            if l.get(okey) is None:
+                part, H = 'texturemiddle', f['heightceiling'] - f['heightfloor']
+            else:
+                o = sectors[sides[l[okey]]['sector']]
+                part, H = 'texturebottom', min(o['heightfloor'], f['heightceiling']) - f['heightfloor']
+            name = sd.get(part, '-')
+            tex = alias.get(name, name).upper()
+            if H <= 0 or not facades.is_facade(tex):
+                continue
+            if tex in facades.HAUSSMANN and part == 'texturebottom' and H <= facades.TILE_H - facades.band_height():
+                continue                               # only the upper floors show above the wall in front of it
+            new = doors.fit_facade(tex, W, H)
+            if new == tex:
+                continue
+            sd2 = dict(sd)
+            sd2[part] = new
+            sides[l[key]] = sd2
+            report.append(dict(face=f"({a['x']:g},{a['y']:g})-({b['x']:g},{b['y']:g})", tex=tex, width=W, wall_height=H, image=new,
+                               action='facade ajustee'))
+    return report

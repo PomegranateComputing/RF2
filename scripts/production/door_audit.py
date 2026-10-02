@@ -17,6 +17,21 @@ import argparse, json, math, re, struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+import sys
+sys.path.insert(0, str(ROOT / 'scripts' / 'mapkit'))
+import facades  # noqa: E402
+
+_VARIANTS = None
+
+
+def variant_kind(tex):
+    """'door', 'facade' or 'luna' for a fitted image of the registry (doors.py), None for any other texture."""
+    global _VARIANTS
+    if _VARIANTS is None:
+        f = ROOT / 'scripts' / 'mapkit' / 'door_variants.json'
+        _VARIANTS = json.loads(f.read_text(encoding='utf-8')) if f.exists() else {}
+    v = _VARIANTS.get(tex)
+    return v.get('kind', 'door') if v else None
 IWAD = Path(r'C:\PROJECTS\TOOLS\Freedoom-0.13.0\freedoom2.wad')
 
 # line specials that move a sector like a door, a shutter, a lift (arg0 = tag, 0 = the line's back sector)
@@ -224,6 +239,12 @@ class Map:
                         kind = 'mechanism'
                     elif osec is None and sec in self.mech and part == 'mid':
                         kind = 'track'
+                    elif facades.is_facade(tex) or variant_kind(tex.upper()) in ('facade', 'luna'):
+                        # a painted front: its ground floor carries doors and shutters (one-sided walls and the faces of
+                        # lower masses; a strip between two skies or above an opening is not a ground floor)
+                        if part == 'top' or (osec is not None and part == 'mid'):
+                            continue
+                        kind = 'facade'
                     elif DOORLIKE.match(tex.upper()):
                         kind = 'static'
                     if not kind:
@@ -242,6 +263,8 @@ class Map:
                 grew = True
                 while grew:
                     grew = False
+                    if run[0]['kind'] == 'facade':
+                        break                            # each line starts the front again: measured line by line
                     for it in list(remaining):
                         if self._joins(run[-1], it):
                             run.append(it); remaining.remove(it); grew = True
@@ -289,6 +312,7 @@ class Map:
         if it['side'] == 'sideback':
             pass                                         # _dir already walks the side with its sector on the right
         rec['mid'] = [round((x0 + x1) / 2, 1), round((y0 + y1) / 2, 1)]
+        rec['end'] = [x1, y1]                            # the right end of the surface, as its viewer sees it
         rec['normal'] = [round(nx, 3), round(ny, 3)]
         defects = []
         if tw is None:
@@ -298,6 +322,22 @@ class Map:
             rec['tex_world'] = [round(ew, 1), round(eh, 1)]
             rx, ry = W / ew, H / eh
             rec['repeat'] = [round(rx, 2), round(ry, 2)]
+            if it['kind'] == 'facade':
+                spec = facades.spec_for(it['tex'], W, H) if facades.is_facade(it['tex']) else None
+                if facades.is_facade(it['tex']) and sd.get('offsetx'):
+                    spec = None                          # placed by hand around an opening
+                if it['tex'] in facades.HAUSSMANN and it['part'] == 'bottom' and H <= facades.TILE_H - facades.band_height():
+                    spec = None
+                if spec:
+                    if spec['kind'] == 'facade':
+                        defects.append('rez-de-chaussee coupe en bout de mur : ' + ', '.join(
+                            ('rideau' if b - a > 60 else 'porte') + f' a {a:g}-{b:g} u' for a, b in (facades.OPENINGS[i] for i in spec['masked'])))
+                    elif spec.get('mode') == 'pier':
+                        defects.append(f'fragment de facade (portes) sur un retour de mur de {W:g} u')
+                    else:
+                        defects.append(f'travee de facade coupee ({W:g} x {H:g} u pour une travee de 128 x 256)')
+                rec['defects'] = defects
+                return rec
             object_like = bool(DOORLIKE.match(it['tex']))
             repeating = bool(REPEATING.match(it['tex']))
             if it['kind'] == 'mechanism' and not object_like:
@@ -320,6 +360,8 @@ class Map:
                     defects.append(f'decalage horizontal {first:g}')
             if it['kind'] == 'track' and DOORLIKE.match(it['tex']) and not repeating:
                 defects.append('image de porte sur un montant')
+            if it['kind'] == 'track' and not rec['dontpegbottom']:
+                defects.append('montant ancre au plafond mobile : il monte avec la porte')
         rec['defects'] = defects
         return rec
 

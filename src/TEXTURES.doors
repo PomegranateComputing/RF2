@@ -13,11 +13,33 @@ Texture RD008D49, 256, 416
     YScale 4
     Patch "patches/doors/RD008D49.png", 0, 0
 }
+Texture RD02492B, 1152, 896
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/rf01_1940/RF2_SA_RFS_FACD.png", 0, 0
+    Patch "patches/rf01_1940/RF2_SA_RFS_FACD.png", 512, 0
+    Patch "patches/rf01_1940/RF2_SA_RFS_FACD.png", 1024, 0
+    Patch "patches/doors/F_RFSFACDA_0.png", 1034, 680
+}
+Texture RD098715, 296, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC1_0.png", 19, 1259
+}
 Texture RD11D510, 192, 352
 {
     XScale 4
     YScale 4
     Patch "patches/doors/RD11D510.png", 0, 0
+}
+Texture RD138497, 448, 320
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD138497.png", 0, 0
 }
 Texture RD1405A1, 384, 448
 {
@@ -25,11 +47,31 @@ Texture RD1405A1, 384, 448
     YScale 4
     Patch "patches/doors/RD1405A1.png", 0, 0
 }
+Texture RD14D62C, 64, 896
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/rf01_1940/RF2_SA_RFS_FACD.png", 0, 0
+    Patch "patches/doors/F_RFSFACDA_0.png", 10, 680
+}
+Texture RD16008B, 96, 512
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD16008B.png", 0, 0
+}
 Texture RD1AD047, 448, 672
 {
     XScale 4
     YScale 4
     Patch "patches/doors/RD1AD047.png", 0, 0
+}
+Texture RD1AF916, 118, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC1_0.png", 19, 1259
 }
 Texture RD1DDE15, 640, 672
 {
@@ -37,11 +79,37 @@ Texture RD1DDE15, 640, 672
     YScale 4
     Patch "patches/doors/RD1DDE15.png", 0, 0
 }
+Texture RD2315A1, 237, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC1_0.png", 19, 1259
+}
 Texture RD245ADD, 192, 416
 {
     XScale 4
     YScale 4
     Patch "patches/doors/RD245ADD.png", 0, 0
+}
+Texture RD281656, 652, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC3_2.png", 491, 1259
+}
+Texture RD2905D8, 64, 288
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD2905D8.png", 0, 0
+}
+Texture RD2970BB, 32, 176
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD2970BB.png", 0, 0
 }
 Texture RD2979B6, 64, 192
 {
@@ -49,11 +117,55 @@ Texture RD2979B6, 64, 192
     YScale 1
     Patch "patches/doors/RD2979B6.png", 0, 0
 }
+Texture RD2AB96D, 192, 512
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD2AB96D.png", 0, 0
+}
+Texture RD2AC03A, 178, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC1_0.png", 19, 1259
+}
+Texture RD2BED11, 768, 384
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD2BED11.png", 0, 0
+}
+Texture RD2FBFE2, 59, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC3_0.png", 19, 1259
+}
 Texture RD35F910, 192, 384
 {
     XScale 4
     YScale 4
     Patch "patches/doors/RD35F910.png", 0, 0
+}
+Texture RD3AA621, 2014, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/rf02/RF2_FAC1.png", 948, 0
+    Patch "patches/rf02/RF2_FAC1.png", 1896, 0
+    Patch "patches/doors/F_RF2_FAC1_0.png", 1915, 1259
+}
+Texture RD3C8D9C, 2607, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/rf02/RF2_FAC1.png", 948, 0
+    Patch "patches/rf02/RF2_FAC1.png", 1896, 0
+    Patch "patches/doors/F_RF2_FAC1_2.png", 2387, 1259
 }
 Texture RD3E5137, 256, 640
 {
@@ -61,11 +173,53 @@ Texture RD3E5137, 256, 640
     YScale 4
     Patch "patches/doors/RD3E5137.png", 0, 0
 }
+Texture RD438BBA, 1185, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC2.png", 0, 0
+    Patch "patches/rf02/RF2_FAC2.png", 948, 0
+    Patch "patches/doors/F_RF2_FAC2_0.png", 967, 1259
+}
+Texture RD475687, 64, 160
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD475687.png", 0, 0
+}
+Texture RD49D138, 1185, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/rf02/RF2_FAC1.png", 948, 0
+    Patch "patches/doors/F_RF2_FAC1_0.png", 967, 1259
+}
+Texture RD4AD09F, 533, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC1_2.png", 491, 1259
+}
 Texture RD4BA84C, 256, 448
 {
     XScale 4
     YScale 4
     Patch "patches/doors/RD4BA84C.png", 0, 0
+}
+Texture RD4BF9B2, 768, 384
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD4BF9B2.png", 0, 0
+}
+Texture RD55EFB2, 59, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC1_0.png", 19, 1259
 }
 Texture RD5A8D44, 256, 512
 {
@@ -100,6 +254,19 @@ Texture RD6E9F46, 192, 384
         FlipX
     }
 }
+Texture RD74F1CA, 512, 384
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD74F1CA.png", 0, 0
+}
+Texture RD796A6D, 711, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC3_2.png", 491, 1259
+}
 Texture RD7B3D82, 256, 448
 {
     XScale 4
@@ -108,6 +275,19 @@ Texture RD7B3D82, 256, 448
     {
         FlipX
     }
+}
+Texture RD7B92DD, 118, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC2.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC2_0.png", 19, 1259
+}
+Texture RD7D3A00, 64, 256
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD7D3A00.png", 0, 0
 }
 Texture RD8040AF, 192, 192
 {
@@ -136,6 +316,19 @@ Texture RD94CC3A, 384, 640
     YScale 4
     Patch "patches/doors/RD94CC3A.png", 0, 0
 }
+Texture RD964007, 640, 512
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RD964007.png", 0, 0
+}
+Texture RD966688, 889, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC1_3.png", 835, 1259
+}
 Texture RD970EBF, 256, 448
 {
     XScale 4
@@ -151,6 +344,20 @@ Texture RD9AD7A7, 192, 416
     YScale 4
     Patch "patches/doors/RD9AD7A7.png", 0, 0
 }
+Texture RDA16A38, 32, 32
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDA16A38.png", 0, 0
+}
+Texture RDA5ECB8, 1363, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC2.png", 0, 0
+    Patch "patches/rf02/RF2_FAC2.png", 948, 0
+    Patch "patches/doors/F_RF2_FAC2_1.png", 1315, 1259
+}
 Texture RDAACB69, 256, 384
 {
     XScale 4
@@ -160,11 +367,70 @@ Texture RDAACB69, 256, 384
         FlipX
     }
 }
+Texture RDAFB53F, 32, 192
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDAFB53F.png", 0, 0
+}
+Texture RDB2EC46, 2133, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/rf02/RF2_FAC3.png", 948, 0
+    Patch "patches/rf02/RF2_FAC3.png", 1896, 0
+    Patch "patches/doors/F_RF2_FAC3_0.png", 1915, 1259
+}
+Texture RDBB23BF, 1185, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/rf02/RF2_FAC3.png", 948, 0
+    Patch "patches/doors/F_RF2_FAC3_0.png", 967, 1259
+}
+Texture RDBEB3B1, 1126, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/rf02/RF2_FAC3.png", 948, 0
+    Patch "patches/doors/F_RF2_FAC3_0.png", 967, 1259
+}
 Texture RDC57BBB, 256, 352
 {
     XScale 4
     YScale 4
     Patch "patches/doors/RDC57BBB.png", 0, 0
+}
+Texture RDC71223, 1007, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/rf02/RF2_FAC3.png", 948, 0
+    Patch "patches/doors/F_RF2_FAC3_0.png", 967, 1259
+}
+Texture RDC7EDD0, 237, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC3_0.png", 19, 1259
+}
+Texture RDCA1A4B, 32, 384
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDCA1A4B.png", 0, 0
+}
+Texture RDD06AF6, 118, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC3_0.png", 19, 1259
 }
 Texture RDD0EC2F, 384, 512
 {
@@ -172,11 +438,43 @@ Texture RDD0EC2F, 384, 512
     YScale 4
     Patch "patches/doors/RDD0EC2F.png", 0, 0
 }
+Texture RDD2A8F0, 711, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC1.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC1_2.png", 491, 1259
+}
+Texture RDD6E850, 32, 512
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDD6E850.png", 0, 0
+}
+Texture RDDA1B36, 59, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC2.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC2_0.png", 19, 1259
+}
 Texture RDDA2D66, 256, 448
 {
     XScale 4
     YScale 4
     Patch "patches/doors/RDDA2D66.png", 0, 0
+}
+Texture RDDAD07C, 128, 320
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDDAD07C.png", 0, 0
+}
+Texture RDDC0FF9, 608, 320
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDDC0FF9.png", 0, 0
 }
 Texture RDDC12FF, 192, 416
 {
@@ -184,11 +482,63 @@ Texture RDDC12FF, 192, 416
     YScale 4
     Patch "patches/doors/RDDC12FF.png", 0, 0
 }
+Texture RDE3BB50, 32, 256
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDE3BB50.png", 0, 0
+}
 Texture RDE771F3, 512, 448
 {
     XScale 4
     YScale 4
     Patch "patches/doors/RDE771F3.png", 0, 0
+}
+Texture RDEA0607, 352, 512
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDEA0607.png", 0, 0
+}
+Texture RDEFA201, 237, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC2.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC2_0.png", 19, 1259
+}
+Texture RDF19AD8, 64, 320
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDF19AD8.png", 0, 0
+}
+Texture RDF1F8B2, 32, 384
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDF1F8B2.png", 0, 0
+}
+Texture RDF2760D, 1659, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/rf02/RF2_FAC3.png", 948, 0
+    Patch "patches/doors/F_RF2_FAC3_2.png", 1439, 1259
+}
+Texture RDF31BB9, 256, 384
+{
+    XScale 2.0
+    YScale 2.0
+    Patch "patches/doors/RDF31BB9.png", 0, 0
+}
+Texture RDF8B3E1, 178, 1659
+{
+    XScale 3.703125
+    YScale 3.703125
+    Patch "patches/rf02/RF2_FAC3.png", 0, 0
+    Patch "patches/doors/F_RF2_FAC3_0.png", 19, 1259
 }
 Texture RDFB80DC, 64, 672
 {

@@ -23,6 +23,9 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageFilter
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import facades  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = Path(__file__).with_name('door_variants.json')
 PATCHES = ROOT / 'src' / 'patches' / 'doors'
@@ -78,6 +81,12 @@ def fit(tex, W, H, mirrored=False, wall=None, total=None):
     spec = dict(source=tex, w=W, h=H, mirrored=mirrored)
     if wall and total and total > H:
         spec.update(wall=wall.upper(), total=int(round(total)))
+    return register(spec)
+
+
+def register(spec):
+    """The stable name of a variant (a hash of its specification), listed in the registry."""
+    global _registry
     key = json.dumps(spec, sort_keys=True)
     name = 'RD' + hashlib.sha1(key.encode()).hexdigest()[:6].upper()
     if _registry is None:
@@ -86,6 +95,12 @@ def fit(tex, W, H, mirrored=False, wall=None, total=None):
         _registry[name] = spec
         REGISTRY.write_text(json.dumps(dict(sorted(_registry.items())), indent=1) + '\n', encoding='utf-8')
     return name
+
+
+def fit_facade(tex, W, H):
+    """Name of the facade texture for a wall W x H: the texture itself when nothing is cut (see facades.py)."""
+    spec = facades.spec_for(tex, W, H)
+    return register(spec) if spec else tex.upper()
 
 
 # ----------------------------------------------------------------------------------------------- recomposition
@@ -278,6 +293,23 @@ def main():
         lines.append(f'Texture {tex}, {w * ppu}, {h * ppu}\n{{\n    XScale {ppu}\n    YScale {ppu}\n'
                      f'    Patch "{src}", {-x}, {-y}\n}}')
     for name, spec in sorted(reg.items()):
+        kind = spec.get('kind', 'door')
+        if kind == 'facade':
+            text, files, how = facades.haussmann_def(name, spec)
+            for fname, img in files.items():
+                img.save(PATCHES / fname, optimize=True)
+                wanted.add(fname)
+            lines.append(text)
+            report[name] = dict(spec, how=how)
+            continue
+        if kind == 'luna':
+            img, ppu, how = facades.luna_image(spec)
+            img.save(PATCHES / f'{name}.png', optimize=True)
+            wanted.add(f'{name}.png')
+            lines.append(f'Texture {name}, {img.size[0]}, {img.size[1]}\n{{\n    XScale {ppu!r}\n    YScale {ppu!r}\n'
+                         f'    Patch "patches/doors/{name}.png", 0, 0\n}}')
+            report[name] = dict(spec, how=how)
+            continue
         ppu = CATALOG[spec['source']][3]
         base = dict(spec, mirrored=False)
         base_name = 'RD' + hashlib.sha1(json.dumps(base, sort_keys=True).encode()).hexdigest()[:6].upper()

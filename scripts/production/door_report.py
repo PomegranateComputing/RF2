@@ -33,7 +33,9 @@ def main():
     def match(b):
         best, bd = None, 25.0
         for a in by_map.get(b['map'], []):
-            if a['kind'] != b['kind'] and not (b['kind'] == 'mechanism' and a['kind'] == 'mechanism'):
+            if a['kind'] != b['kind']:
+                continue
+            if b['kind'] == 'track' and a['sector'] != b['sector'] and b['map'] not in ('RF01', 'RF02', 'RF04', 'RF05', 'RF06'):
                 continue
             if 'mid' not in a or 'mid' not in b:
                 continue
@@ -48,8 +50,9 @@ def main():
         v = variants.get(tex)
         if not v:
             return f'image {tex} a sa taille'
-        s = f"image {v['source']} recomposee a {v['w']} x {v['h']} u ({v['how']})"
-        return s
+        if v.get('kind') in ('facade', 'luna'):
+            return f"facade {v['source']} ajustee au mur de {v['w']} u : {v['how']}"
+        return f"image {v['source']} recomposee a {v['w']} x {v['h']} u ({v['how']})"
 
     rows = []
     for b in before:
@@ -60,6 +63,8 @@ def main():
             elem = f"porte, secteur {b['sector']}, face vue du secteur {b['seen_from']} (ligne {b['lines'][0]})"
         elif b['kind'] == 'track':
             elem = f"montant de la porte secteur {b['sector']} (ligne {b['lines'][0]})"
+        elif b['kind'] == 'facade':
+            elem = f"facade, mur ligne {b['lines'][0]} (secteur {b['seen_from']}), fin du mur en ({b['end'][0]:g}, {b['end'][1]:g})"
         else:
             elem = f"face {b['part']} ligne {b['lines'][0]}, secteur {b['seen_from']}"
         defect = f"{b['tex']} sur {b['W']:g} x {b['H']:g} u : " + ' ; '.join(b['defects'])
@@ -79,6 +84,8 @@ def main():
                 sol += ' ; vue fermee, en course, ouverte, en fermeture' if mv['moved'] else ' ; mouvement non capture'
         elif a['kind'] == 'track':
             sol = f"montant en {a['tex']}, ancre au sol (fixe pendant le mouvement)"
+        elif a['kind'] == 'facade':
+            sol = what(a['tex']) if a['tex'] != b['tex'] else 'inchangee'
         else:
             sol = what(a['tex'])
             if a.get('defects'):

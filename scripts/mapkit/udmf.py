@@ -595,6 +595,7 @@ class MapBuilder:
                                                    alias=self.door_alias)
             doorfit.fit_static(verts, sector_dicts, sides, out_lines, wall_of, alias=self.door_alias,
                                skip_sectors=set(door_sectors), report=self.door_report)
+            doorfit.fit_facades(verts, sector_dicts, sides, out_lines, alias=self.door_alias, report=self.door_report)
         text = f'// {self.name} - Red Flags 2 production map. Authored with scripts/mapkit (cell grid {UNIT}).\n'
         text += 'namespace = "zdoom";\n\n'
         things = self.things + self.sound_zones()

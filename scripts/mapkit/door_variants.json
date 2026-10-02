@@ -5,11 +5,34 @@
   "h": 104,
   "mirrored": false
  },
+ "RD02492B": {
+  "kind": "facade",
+  "source": "RFSFACDA",
+  "w": 576,
+  "masked": [
+   0
+  ]
+ },
+ "RD098715": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 80,
+  "masked": [
+   0
+  ]
+ },
  "RD11D510": {
   "source": "RFD_SGL",
   "w": 48,
   "h": 88,
   "mirrored": false
+ },
+ "RD138497": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 224,
+  "h": 160,
+  "mode": "bays"
  },
  "RD1405A1": {
   "source": "RFDDBLA",
@@ -17,11 +40,34 @@
   "h": 112,
   "mirrored": false
  },
+ "RD14D62C": {
+  "kind": "facade",
+  "source": "RFSFACDA",
+  "w": 32,
+  "masked": [
+   0
+  ]
+ },
+ "RD16008B": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 48,
+  "h": 256,
+  "mode": "pier"
+ },
  "RD1AD047": {
   "source": "RFM_GRIL",
   "w": 112,
   "h": 168,
   "mirrored": false
+ },
+ "RD1AF916": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 32,
+  "masked": [
+   0
+  ]
  },
  "RD1DDE15": {
   "source": "RFM_GRIL",
@@ -29,11 +75,41 @@
   "h": 168,
   "mirrored": false
  },
+ "RD2315A1": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 64,
+  "masked": [
+   0
+  ]
+ },
  "RD245ADD": {
   "source": "RF2_RIDO",
   "w": 48,
   "h": 104,
   "mirrored": false
+ },
+ "RD281656": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 176,
+  "masked": [
+   2
+  ]
+ },
+ "RD2905D8": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 32,
+  "h": 144,
+  "mode": "pier"
+ },
+ "RD2970BB": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 16,
+  "h": 88,
+  "mode": "pier"
  },
  "RD2979B6": {
   "source": "RFEXIT",
@@ -43,11 +119,57 @@
   "wall": "RFPOM",
   "total": 192
  },
+ "RD2AB96D": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 96,
+  "h": 256,
+  "mode": "bays"
+ },
+ "RD2AC03A": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 48,
+  "masked": [
+   0
+  ]
+ },
+ "RD2BED11": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 384,
+  "h": 192,
+  "mode": "bays"
+ },
+ "RD2FBFE2": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 16,
+  "masked": [
+   0
+  ]
+ },
  "RD35F910": {
   "source": "RFD_OAKS",
   "w": 48,
   "h": 96,
   "mirrored": false
+ },
+ "RD3AA621": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 544,
+  "masked": [
+   0
+  ]
+ },
+ "RD3C8D9C": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 704,
+  "masked": [
+   2
+  ]
  },
  "RD3E5137": {
   "source": "RFMGRILA",
@@ -55,11 +177,57 @@
   "h": 160,
   "mirrored": false
  },
+ "RD438BBA": {
+  "kind": "facade",
+  "source": "RF2_FAC2",
+  "w": 320,
+  "masked": [
+   0
+  ]
+ },
+ "RD475687": {
+  "kind": "luna",
+  "source": "RF4_FAC1",
+  "w": 32,
+  "h": 80,
+  "mode": "pier"
+ },
+ "RD49D138": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 320,
+  "masked": [
+   0
+  ]
+ },
+ "RD4AD09F": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 144,
+  "masked": [
+   2
+  ]
+ },
  "RD4BA84C": {
   "source": "RFDSGLA",
   "w": 64,
   "h": 112,
   "mirrored": false
+ },
+ "RD4BF9B2": {
+  "kind": "luna",
+  "source": "RF4_FAC3",
+  "w": 384,
+  "h": 192,
+  "mode": "bays"
+ },
+ "RD55EFB2": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 16,
+  "masked": [
+   0
+  ]
  },
  "RD5A8D44": {
   "source": "RFD_OAKS",
@@ -85,11 +253,41 @@
   "h": 96,
   "mirrored": true
  },
+ "RD74F1CA": {
+  "kind": "luna",
+  "source": "RF4_FAC1",
+  "w": 256,
+  "h": 192,
+  "mode": "bays"
+ },
+ "RD796A6D": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 192,
+  "masked": [
+   2
+  ]
+ },
  "RD7B3D82": {
   "source": "RFD_SGL",
   "w": 64,
   "h": 112,
   "mirrored": true
+ },
+ "RD7B92DD": {
+  "kind": "facade",
+  "source": "RF2_FAC2",
+  "w": 32,
+  "masked": [
+   0
+  ]
+ },
+ "RD7D3A00": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 32,
+  "h": 128,
+  "mode": "pier"
  },
  "RD8040AF": {
   "source": "RFDOORB",
@@ -115,6 +313,21 @@
   "h": 160,
   "mirrored": false
  },
+ "RD964007": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 320,
+  "h": 256,
+  "mode": "bays"
+ },
+ "RD966688": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 240,
+  "masked": [
+   3
+  ]
+ },
  "RD970EBF": {
   "source": "RFDSGLA",
   "w": 64,
@@ -127,11 +340,57 @@
   "h": 104,
   "mirrored": false
  },
+ "RDA16A38": {
+  "kind": "luna",
+  "source": "RF4_FAC1",
+  "w": 16,
+  "h": 16,
+  "mode": "pier"
+ },
+ "RDA5ECB8": {
+  "kind": "facade",
+  "source": "RF2_FAC2",
+  "w": 368,
+  "masked": [
+   1
+  ]
+ },
  "RDAACB69": {
   "source": "RF4_PSST",
   "w": 64,
   "h": 96,
   "mirrored": true
+ },
+ "RDAFB53F": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 16,
+  "h": 96,
+  "mode": "pier"
+ },
+ "RDB2EC46": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 576,
+  "masked": [
+   0
+  ]
+ },
+ "RDBB23BF": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 320,
+  "masked": [
+   0
+  ]
+ },
+ "RDBEB3B1": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 304,
+  "masked": [
+   0
+  ]
  },
  "RDC57BBB": {
   "source": "RFD_SGL",
@@ -139,11 +398,65 @@
   "h": 88,
   "mirrored": false
  },
+ "RDC71223": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 272,
+  "masked": [
+   0
+  ]
+ },
+ "RDC7EDD0": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 64,
+  "masked": [
+   0
+  ]
+ },
+ "RDCA1A4B": {
+  "kind": "luna",
+  "source": "RF4_FAC3",
+  "w": 16,
+  "h": 192,
+  "mode": "pier"
+ },
+ "RDD06AF6": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 32,
+  "masked": [
+   0
+  ]
+ },
  "RDD0EC2F": {
   "source": "RFDDBLA",
   "w": 96,
   "h": 128,
   "mirrored": false
+ },
+ "RDD2A8F0": {
+  "kind": "facade",
+  "source": "RF2_FAC1",
+  "w": 192,
+  "masked": [
+   2
+  ]
+ },
+ "RDD6E850": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 16,
+  "h": 256,
+  "mode": "pier"
+ },
+ "RDDA1B36": {
+  "kind": "facade",
+  "source": "RF2_FAC2",
+  "w": 16,
+  "masked": [
+   0
+  ]
  },
  "RDDA2D66": {
   "source": "RFD_SGL",
@@ -151,17 +464,90 @@
   "h": 112,
   "mirrored": false
  },
+ "RDDAD07C": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 64,
+  "h": 160,
+  "mode": "bays"
+ },
+ "RDDC0FF9": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 304,
+  "h": 160,
+  "mode": "bays"
+ },
  "RDDC12FF": {
   "source": "RFDSGLA",
   "w": 48,
   "h": 104,
   "mirrored": false
  },
+ "RDE3BB50": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 16,
+  "h": 128,
+  "mode": "pier"
+ },
  "RDE771F3": {
   "source": "RFD_DBL",
   "w": 128,
   "h": 112,
   "mirrored": false
+ },
+ "RDEA0607": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 176,
+  "h": 256,
+  "mode": "bays"
+ },
+ "RDEFA201": {
+  "kind": "facade",
+  "source": "RF2_FAC2",
+  "w": 64,
+  "masked": [
+   0
+  ]
+ },
+ "RDF19AD8": {
+  "kind": "luna",
+  "source": "RF4_FAC2",
+  "w": 32,
+  "h": 160,
+  "mode": "pier"
+ },
+ "RDF1F8B2": {
+  "kind": "luna",
+  "source": "RF4_FAC1",
+  "w": 16,
+  "h": 192,
+  "mode": "pier"
+ },
+ "RDF2760D": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 448,
+  "masked": [
+   2
+  ]
+ },
+ "RDF31BB9": {
+  "kind": "luna",
+  "source": "RF4_FAC1",
+  "w": 128,
+  "h": 192,
+  "mode": "bays"
+ },
+ "RDF8B3E1": {
+  "kind": "facade",
+  "source": "RF2_FAC3",
+  "w": 48,
+  "masked": [
+   0
+  ]
  },
  "RDFB80DC": {
   "source": "RFM_GRIL",

@@ -44,6 +44,11 @@ def camera(m, rec, turn):
     surface in sight. Returns ([x, y, z above floor, angle, pitch], distance) or (None, 0)."""
     mx, my = rec['mid']
     nx, ny = rec['normal']
+    if rec['kind'] == 'facade':
+        # a painted front is judged where it ends: the ground floor at the right end of the wall
+        back = min(70.0, rec['W'] / 2)
+        mx, my = rec['end'][0] + ny * back, rec['end'][1] - nx * back
+        rec = dict(rec, W=min(rec['W'], 200.0), H=min(rec['H'], 140.0))
     a = math.radians(turn)
     dx, dy = nx * math.cos(a) - ny * math.sin(a), nx * math.sin(a) + ny * math.cos(a)
     want = min(max(rec['W'] * 1.1, rec['H'] * 1.25, 150.0), 420.0)
@@ -74,11 +79,13 @@ def main():
     ap.add_argument('--wads', default=str(ROOT / 'src' / 'maps'))
     ap.add_argument('--maps', default='')
     ap.add_argument('--only-defects', action='store_true')
+    ap.add_argument('--kinds', default='mechanism,static', help='kinds of surfaces to view (mechanism, static, facade)')
     ap.add_argument('--open', action='store_true')
     ap.add_argument('--dry', action='store_true', help='write the view lists only')
     a = ap.parse_args()
     recs = json.loads(Path(a.audit).read_text(encoding='utf-8'))
     names = {n.strip().upper() for n in a.maps.split(',') if n.strip()}
+    kinds = set(a.kinds.split(','))
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     db = door_audit.texture_db()
@@ -88,9 +95,9 @@ def main():
             continue
         wad = Path(a.wads) / f'{mp}.wad'
         m = door_audit.Map(mp, dict(door_audit.lumps(wad))['TEXTMAP'].decode('utf-8', 'replace'), db, {})
-        views = []
+        views, opened = [], []       # a door opened for its view stays open: the open views come last
         for r in recs:
-            if r['map'] != mp or r['kind'] in ('track', 'polyobject') or r['H'] <= 0:
+            if r['map'] != mp or r['kind'] not in kinds or r['H'] <= 0:
                 continue
             if a.only_defects and not r['defects']:
                 continue
@@ -98,7 +105,7 @@ def main():
             tag = 0
             if a.open and r['kind'] == 'mechanism':
                 tag = m.SE[r['sector']].get('id', 0)
-            for turn, suffix in ((0, 'face'), (40, 'biais')):
+            for turn, suffix in (((0, 'face'),) if r['kind'] == 'facade' else ((0, 'face'), (40, 'biais'))):
                 cam, d = camera(m, r, turn)
                 if cam is None:
                     continue
@@ -106,8 +113,9 @@ def main():
                 views.append([label] + cam)
                 index[f'{mp}/{label}'] = dict(r, camera=cam, distance=d)
                 if tag and suffix == 'face':
-                    views.append([f'{base}_ouverte'] + cam + [tag])
+                    opened.append([f'{base}_ouverte'] + cam + [tag])
                     index[f'{mp}/{base}_ouverte'] = dict(r, camera=cam, distance=d, opened_tag=tag)
+        views += opened
         if not views:
             continue
         vdir = out / mp

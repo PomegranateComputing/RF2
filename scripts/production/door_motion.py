@@ -129,6 +129,10 @@ def main():
                 continue
             doors_[r['sector']] = dict(label=f"porte_s{r['sector']}_tag{tag}_{r['tex']}_{r['W']:g}x{r['H']:g}", cam=cam, tag=tag,
                                        travel=max(8, int(r['H']) - 4), rec=r)
+        for r in recs:                                  # the leaf stops under its lowest neighbour: the shortest face
+            if r['map'] == mp and r['kind'] == 'mechanism' and r['sector'] in doors_:
+                d = doors_[r['sector']]
+                d['travel'] = min(d['travel'], max(8, int(r['H']) - 4))
         if not doors_:
             continue
         todo = list(doors_.values())
