@@ -46,14 +46,24 @@ Un montant de porte montre le matériau du mur ou du métal uni, jamais une imag
   pilastre, 16 à 32 u de large sur 448 u), répétable en hauteur d'étage, pour remplacer cette pièce.
 - **Foraines** (`RF4_FAC1`–`3`, une travée de 128 × 256 u) : posées par travées entières ; sur un mur plus bas (160,
   192 u), toute la composition est réduite à la hauteur du mur ; le reste du mur est un trumeau fait du poteau d'angle
-  répété. **Demandes** : un trumeau forain (16 à 64 u de large, 256 u de haut, répétable en largeur) par façade ; des
-  façades basses dessinées pour 192 u et 160 u de haut si tu préfères cela à la réduction.
+  répété. Depuis le 02/10, huit trumeaux dessinés par la session de revue remplacent ce poteau répété aux huit
+  tailles en jeu (16 × 128, 16 × 192 ×2, 16 × 256, 32 × 128, 32 × 144, 32 × 160, 48 × 256 u ; fichiers
+  `patches/doors/RD….png`, 2 px/u, listés dans `scripts/mapkit/door_delivered.json` : le générateur ne les redessine
+  plus). **Demande** : des façades basses dessinées pour 192 u et 160 u de haut si tu préfères cela à la réduction ;
+  un trumeau livré pour une autre taille porte le nom que je te donne pour cette taille.
+
+## Flaques
+
+`sprites/rf04/R4PDA0`, `R4PDB0`, `R4PDC0` (384 × 384 px, 96 × 96 u, RGBA, vues de dessus, posées à plat sur le sol et
+étirées par le jeu à la taille voulue) : provisoires, de mon fait, depuis le 02/10 (l'ancienne flaque était faite de
+carrés de sol de 16 u, son bord était un escalier). La flaque du bassin porte la chaussure d'enfant ; les autres sont
+l'huile et les suintements sous les machines de RF05.
 
 ## RF05 : états que le code affiche (lot A02)
 
 | Élément | Fichiers | Changement d'état |
 |---|---|---|
-| Cadrans | `RF5_CAD0` (avant), `RF5_CAD1` (après MARCHE), 96 × 48 u, masqués, posés sur `RF5_MARB` | à la remise en marche ; **libellés actuellement illisibles** |
+| Cadrans | `RF5_CAD0` (avant), `RF5_CAD1` (après MARCHE), 96 × 48 u, masqués, posés sur `RF5_MARB` | à la remise en marche ; depuis le 02/10 : version V03 de la session de revue, plaques ivoire et libellés lisibles (à préserver, reprendre sur défaut précis) |
 | Coffret NODE 0 | `RF5_NOD0` fermé, `NOD1` ouvert diodes vertes, `NOD2` diodes rouges, 48 × 64 u | scène |
 | Levier | `RF5_LEVM` (MARCHE), `RF5_LEVA` (ARRÊT), 32 × 48 u, provisoires | usage |
 | Fusibles | `RF5_FUS0` (JERMA vide), `RF5_FUS1` (porcelaine en place), 48 × 32 u, provisoires | scène |

@@ -15,7 +15,9 @@ choisies pour le jeu.
 | `RF04_coupe_C_grand_huit.png` | le long des tréteaux : voie, quai (+96), rampe de levage |
 | `RF04_coupe_D_salle.png` | la salle de danse et son aile |
 | `RF05_coupe_E_escalier_sous_station.png`, `RF05_coupe_F_sous_sol.png` | la descente depuis la ruelle ; galeries, sous-station, atelier |
+| `RF05_coupe_G_galerie_des_departs.png`, `H_baie`, `I_atelier`, `J_caniveau` | les deux boucles de maintenance ajoutées le 02/10 : l'escalier et la galerie des départs (+96), sa baie sur la roue, sa redescente dans l'atelier ; le caniveau entre les deux galeries |
 | `RF06_plan.png` | le couloir : chambres, salle des peaux, descente, carrefour et « autre aile », deux virages, le jour |
+| `RF06_coupe_K_chambre_des_vannes.png`, `L_passerelles`, `M_boucle` | les volumes ajoutés le 02/10 : la chambre des vannes (passerelles et fosse), la boucle d'inspection de la salle des peaux |
 | `RF04_RF05_DIMENSIONS.md` | emprise, sol et hauteur libre de chaque zone |
 
 32 u = 1 m. Le nord est en haut. L'origine (0, 0) est l'angle sud-ouest du parc.
@@ -42,6 +44,33 @@ quai, mât, rampe et tour, marquise, salle, ruelle, guérite, crête ouest, port
 `dist\candidates\RF2_CUMUL_20261001_1605\preuves\vues_RF04_pilote\`, `vues_RF05\`, `vues_RF06\` ; état après la passe des
 portes : `dist\candidates\RF2_PORTES_20261002_1018\preuves\portes\`. Les cadrages sont listés avec leurs coordonnées dans
 `docs\production\handoff\RF2_20261001\vues\*.json` : je peux reprendre exactement les mêmes sur une nouvelle version.
+
+## Volumes ajoutés le 02/10 (adaptations déclarées : le roman donne les lieux, pas leur plan)
+
+Tous sont habillés de matières existantes ; ce sont eux qui attendent en priorité des coupes et des modules d'Astra.
+
+| Carte | Volume | Dimensions | Fonction | Ce qu'il faudrait dessiner |
+|---|---|---|---|---|
+| RF05 | Voûte de la sous-station (proposition de la session de revue) | berceau de 512 u de portée, clef à +192 u au-dessus du sol, trois nervures | remplace le plafond en gradins | intrados de brique, nervures, clefs |
+| RF05 | Galerie des départs | escalier de 8 marches (16 × 12 u) depuis les transformateurs, galerie à +96 u (48 à 64 u de large, 80 u sous plafond), baie de 64 × 64 u dans le mur est de la nef, escalier de 8 marches vers l'atelier | boucle électrique : contrechamp haut du moteur et de la roue, retour par l'établi | garde-corps de fer simple (aujourd'hui la rambarde parisienne `RF2_RAMB`, à remplacer), isolateurs et départs de câbles, limon et marches de bois |
+| RF05 | Caniveau de la conduite des pompes | 64 × 320 u, trois marches de 8 u vers 24 u d'eau, 88 u sous plafond | boucle hydraulique courte entre la galerie ouest et la galerie nord | conduite et colliers (aujourd'hui un volume carré), suintements, ligne d'eau |
+| RF05 | Chemin de câbles de la nef (session de revue) | tablette à +104 u sur consoles le long du mur est | réseau lisible depuis les tableaux | consoles, câbles |
+| RF04/RF05 | Cadres de la coulisse de Brooklyn (session de revue) | trois portiques de bois, 80 u de passage, 88 u de haut | charpente de l'envers du décor | assemblages, fixations |
+| RF06 | Retrait de service | 96 × 96 u, 120 u sous plafond, collecteur de 32 × 64 × 72 u | premier élargissement, côté parc | collecteur, vannes, raccords |
+| RF06 | Boucle d'inspection (session de revue) | deux volées de 4 marches de 16 u, galerie basse à −48 u | second niveau sur la peinture soulevée | regard, enduit en coupe |
+| RF06 | Second seuil | passage réduit à 64 u, linteau à 76 u, sur 32 u | autre épaisseur d'enduit | chambranle d'enduit épais |
+| RF06 | Chambre des vannes | passerelle haute (80 × 176 u), six marches de 8 u, passerelle basse (80 × 144 u), fosse de 96 × 384 u à 96 u sous la passerelle basse (144 u sous la haute), deux colonnes montantes, collecteur | retrait technique : la conduite quitte le couloir, descend, remonte, revient | garde-corps, colonnes, collecteur, échelons, eau au fond |
+| RF06 | Nervures du premier virage | quatre nervures de 16 u sur le mur sud | relief que balaie le faisceau | nervure et son pied |
+| RF06 | Fente du dernier tronçon | 32 × 32 u à 36 u du sol, dans le mur est | relation impossible : on y voit la cage d'escalier de « l'autre aile », qui se trouve 1 200 u à l'ouest | encadrement de la fente ; la cage elle-même (marches, garde-corps, ampoule) |
+
+La conduite blanche est maintenant continue : elle longe le couloir des chambres, a un piquage dans le retrait de
+service, quitte la descente pour la chambre des vannes, revient plus bas, passe au-dessus du joueur aux deux virages et
+descend jusqu'au jour. C'est le repère d'échelle demandé par le dossier ; son dessin (colliers, raccords, peinture
+blanche écaillée) revient à Astra.
+
+**Limite du moteur relevée le 02/10** : un portail de ligne ne s'affiche que sans décalage de hauteur (les variantes
+alignées sur le sol ou le plafond restent noires dans UZDoom 5.0.1). La fente montre donc un lieu situé à la même
+altitude qu'elle ; une vue sur la chambre 404, 190 u plus haut, n'est pas possible par ce moyen.
 
 ## Points à arrêter ensemble avant les grandes façades
 
