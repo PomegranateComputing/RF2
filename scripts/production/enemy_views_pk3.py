@@ -8,6 +8,7 @@ Standard sheet (same order on every build, so that two builds compare view by vi
   the four walk frames (See) at 256, face then profile;
   the first frames of the attack (Melee, or Missile) and the pain frame at 128, face;
   the corpse after its fall (Death played to its end) at 128, face then profile.
+  the back at 256, standing and on the first walk frame (added 02/10, last).
 The figure is frozen on its frame (no action runs after the first); the other monsters of the map are made invisible
 and the player cannot be targeted. Each view prints RF_ENEMYVIEW index=.. label=.. t=.. before its screenshot, and a
 tic strip in the top-left corner shows the tic the picture was drawn at (read it with ticcode.py).
@@ -28,6 +29,8 @@ for i in range(4):
 views += [(f'attaque{i + 1}_128_face', 'Attack', i, 128, 180) for i in range(3)]
 views += [('douleur_128_face', 'Pain', 0, 128, 180), ('corps_128_face', 'Death', 0, 128, 180),
           ('corps_128_profil', 'Death', 0, 128, 90)]
+# added 02/10 at the end (the earlier views keep their numbers): the back, standing and on the first walk frame
+views += [('debout_256_dos', 'Spawn', 0, 256, 0), ('marche1_256_dos', 'See', 0, 256, 0)]
 arr = lambda i, q: ', '.join((f'"{v[i]}"' if q else str(float(v[i])) if isinstance(v[i], float) else str(v[i])) for v in views)
 zs = '''version "4.14"
 class RFEnemyViewPlayer : RFPlayer

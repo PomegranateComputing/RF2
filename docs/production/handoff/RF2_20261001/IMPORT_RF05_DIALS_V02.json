@@ -1,0 +1,36 @@
+{
+  "batch": "RF05_DIALS_V02",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/RF05_DIALS_V02",
+  "manifest_sha256": "c92bb343ad093f6adc12db51fd0f3ffbea87a65c2e68634347423d824d1fa8bd",
+  "status": "candidate_after_opus_masked_panel_feedback",
+  "imported": "2026-10-02 07:14",
+  "by": "Opus (integration)",
+  "head_before": "a7a45ea45f329c0a0fc0bfa1472d9b94f196b254",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 2
+  },
+  "files": [
+    {
+      "target": "src/patches/rf04/RF5_CAD0.png",
+      "delivered": "runtime/patches/rf04/RF5_CAD0.png",
+      "sha256": "d0309d1e8f0ffe95117950727c2100dff7399af759247c29b1cbe9f1cee76cf6",
+      "before": "9c861d3b151168edcb97004028558678f5463f5feb1411c43b6e3475a3bad1ed",
+      "base_sha256": "9c861d3b151168edcb97004028558678f5463f5feb1411c43b6e3475a3bad1ed",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf04/RF5_CAD1.png",
+      "delivered": "runtime/patches/rf04/RF5_CAD1.png",
+      "sha256": "86840f6268ad2f334b0d649872fd71fb0ac0cd7ee0d04a8de9cb28d4360cbf1f",
+      "before": "db836aeaf3c60f5644fdcd87a6dce6b74a6edf1d2baa46b5e1dec480e6490696",
+      "base_sha256": "db836aeaf3c60f5644fdcd87a6dce6b74a6edf1d2baa46b5e1dec480e6490696",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

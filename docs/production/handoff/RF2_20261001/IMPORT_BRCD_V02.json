@@ -1,0 +1,1216 @@
+{
+  "batch": "BRCD_V02",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/BRCD_V02",
+  "manifest_sha256": "12e747d6fb5382d187e1054f971aabc99b1eb2359e0903e759eb58d8345741f6",
+  "status": "candidate_for_opus_engine_review",
+  "imported": "2026-10-02 07:14",
+  "by": "Opus (integration)",
+  "head_before": "a7a45ea45f329c0a0fc0bfa1472d9b94f196b254",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 120
+  },
+  "files": [
+    {
+      "target": "src/sprites/enemies/BRCDA1.png",
+      "delivered": "runtime/sprites/enemies/BRCDA1.png",
+      "sha256": "8bfed534b08b0ec4ebf5150203d5831e5c6ef64ae67c1eb4ce749c80842f70f2",
+      "before": "b7aeb8174e3623eca6380611bb89dbf3b80571997d132076f4ba6f4ba2d2b7eb",
+      "base_sha256": "b7aeb8174e3623eca6380611bb89dbf3b80571997d132076f4ba6f4ba2d2b7eb",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDA2.png",
+      "delivered": "runtime/sprites/enemies/BRCDA2.png",
+      "sha256": "e53904e6ffff73917ea08a69a9639ba663c19e11b966626c7c354071f8bca53a",
+      "before": "e5ce6261a657af3cb87a62f8c9f9c64de8d980e9d0660768fe46c25b4864e510",
+      "base_sha256": "e5ce6261a657af3cb87a62f8c9f9c64de8d980e9d0660768fe46c25b4864e510",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDA3.png",
+      "delivered": "runtime/sprites/enemies/BRCDA3.png",
+      "sha256": "e4dc224f164c9817c43008be38da07a19bec3acbbd4f4c746a542224af00d7c1",
+      "before": "29b70257cbe96971ffc85de26b75379450dada1a47476a70f9b9aaccdb8ae178",
+      "base_sha256": "29b70257cbe96971ffc85de26b75379450dada1a47476a70f9b9aaccdb8ae178",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDA4.png",
+      "delivered": "runtime/sprites/enemies/BRCDA4.png",
+      "sha256": "685ba9c87db23c7682e99d976bd114cb0c154059a8ca059e1f765be28144b4f4",
+      "before": "bb6687738ac52ca55287c0dd6879b7d310f7a5b10c72dfcf5ca90a9289fbf7b6",
+      "base_sha256": "bb6687738ac52ca55287c0dd6879b7d310f7a5b10c72dfcf5ca90a9289fbf7b6",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDA5.png",
+      "delivered": "runtime/sprites/enemies/BRCDA5.png",
+      "sha256": "0ac2bd036f4b0e10388456d35396df2058dbca8591c41596f40a9258b2d998a7",
+      "before": "567fde604608f9c19e7eb6b073903e39411b0727b3291d133a6a008c013cae9e",
+      "base_sha256": "567fde604608f9c19e7eb6b073903e39411b0727b3291d133a6a008c013cae9e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDA6.png",
+      "delivered": "runtime/sprites/enemies/BRCDA6.png",
+      "sha256": "70fa0fe521acda7ef7b520350c7e6b3736a67be7b1aea334e7e1b68ef51cc777",
+      "before": "6bf8cbcb7a354e2ca94fb2ea0f47c243e29ecde8b4cbdcd3cf9c678727d9f938",
+      "base_sha256": "6bf8cbcb7a354e2ca94fb2ea0f47c243e29ecde8b4cbdcd3cf9c678727d9f938",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDA7.png",
+      "delivered": "runtime/sprites/enemies/BRCDA7.png",
+      "sha256": "224b13d7edf764a4f38805efda94226189591363ebce62815493d90ddcc618f2",
+      "before": "052fce4f356acf01c6bdd4965883f9f91b5934bebcb182c3358e4e3647f219cb",
+      "base_sha256": "052fce4f356acf01c6bdd4965883f9f91b5934bebcb182c3358e4e3647f219cb",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDA8.png",
+      "delivered": "runtime/sprites/enemies/BRCDA8.png",
+      "sha256": "80a2c7e213d670ead38aff31d1f76e758df99191acbd17c037048861951685f5",
+      "before": "46a2299e57821717e71b566ee123d7768a887d08818d85d537a6f890a1f574b6",
+      "base_sha256": "46a2299e57821717e71b566ee123d7768a887d08818d85d537a6f890a1f574b6",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDB1.png",
+      "delivered": "runtime/sprites/enemies/BRCDB1.png",
+      "sha256": "87381d627bbfc3cea87290823359c4dfa31ab539983d4cfd95519d22261e595e",
+      "before": "f1c4c3f0bfe6c1ffff6cb16ec686b6fca5df7899159558bd89253d7c5a20b9c5",
+      "base_sha256": "f1c4c3f0bfe6c1ffff6cb16ec686b6fca5df7899159558bd89253d7c5a20b9c5",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDB2.png",
+      "delivered": "runtime/sprites/enemies/BRCDB2.png",
+      "sha256": "6f5da1b33067d834497f4a322116e82c3eaea8a4d7b6cf79651a6c0ebee59f08",
+      "before": "c92ce72287303c678b8a08ef40a59ab44776222b33630c2785b0f8ec71c1b7a0",
+      "base_sha256": "c92ce72287303c678b8a08ef40a59ab44776222b33630c2785b0f8ec71c1b7a0",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDB3.png",
+      "delivered": "runtime/sprites/enemies/BRCDB3.png",
+      "sha256": "01601478b2fe7845fb0d30e3969f3971726fc45da1eff4151f868aea526695d6",
+      "before": "0e857ccb7b6fc52c3bca08a8894d2d5386aaab407c2031756142db64eb347db8",
+      "base_sha256": "0e857ccb7b6fc52c3bca08a8894d2d5386aaab407c2031756142db64eb347db8",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDB4.png",
+      "delivered": "runtime/sprites/enemies/BRCDB4.png",
+      "sha256": "b0bd8f530a78982fd160bc5d63d42a96d7156ada2ce7983d97369778ee33eb11",
+      "before": "aaca9bfd4a317fd3dc61ce2408ac581805fe7cc910d8e798a78af4b1652c7e78",
+      "base_sha256": "aaca9bfd4a317fd3dc61ce2408ac581805fe7cc910d8e798a78af4b1652c7e78",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDB5.png",
+      "delivered": "runtime/sprites/enemies/BRCDB5.png",
+      "sha256": "84cb1c72eb768866193fabdcca224bf7872e69016e638096d85e64b329b1c0fa",
+      "before": "10b29b3ee0a0d8e6d9d7376fa097259fd5b215b9e240407ab973c0f933c837a8",
+      "base_sha256": "10b29b3ee0a0d8e6d9d7376fa097259fd5b215b9e240407ab973c0f933c837a8",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDB6.png",
+      "delivered": "runtime/sprites/enemies/BRCDB6.png",
+      "sha256": "aa654e3778db4fba69f5017aec298c60633ad5ee9c3b2824458abf52387e852a",
+      "before": "b61d8511474a8251432e65f50e5b2433426450bae60d5f73552b7365d760d5de",
+      "base_sha256": "b61d8511474a8251432e65f50e5b2433426450bae60d5f73552b7365d760d5de",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDB7.png",
+      "delivered": "runtime/sprites/enemies/BRCDB7.png",
+      "sha256": "ec670097ddab15cc108205efdc76a11b0f440c3a418a00878919581c3f3a8682",
+      "before": "843f24414910bbe407068ad6ce38b7cc7c4a13eccaccb42e7742bcbf2aed60d4",
+      "base_sha256": "843f24414910bbe407068ad6ce38b7cc7c4a13eccaccb42e7742bcbf2aed60d4",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDB8.png",
+      "delivered": "runtime/sprites/enemies/BRCDB8.png",
+      "sha256": "bd51ee1caabfb01d9ff2fb5ab9e946f6cd324ad1da284934383bcb664078e082",
+      "before": "18165d7f375958f8647391c0f115b14c26f80f2c9c1eb483d5d8aebdb85938f7",
+      "base_sha256": "18165d7f375958f8647391c0f115b14c26f80f2c9c1eb483d5d8aebdb85938f7",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDC1.png",
+      "delivered": "runtime/sprites/enemies/BRCDC1.png",
+      "sha256": "6e3d3b63f78c04d21c3c8dd4553495f15e294afe37425aa43357febe988b9033",
+      "before": "ca1525f43c13c86d5aabdd41ef2a6ac859e9d23495c3936b3f04718b5e5db955",
+      "base_sha256": "ca1525f43c13c86d5aabdd41ef2a6ac859e9d23495c3936b3f04718b5e5db955",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDC2.png",
+      "delivered": "runtime/sprites/enemies/BRCDC2.png",
+      "sha256": "83aa1e0dce4f638ffbf7f01b2d4722dca0564122585f510a2acb0bfce5edf3fa",
+      "before": "cc57967490fd968552becdd482b693ed8eb37a7a3780609046b13758d69a9251",
+      "base_sha256": "cc57967490fd968552becdd482b693ed8eb37a7a3780609046b13758d69a9251",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDC3.png",
+      "delivered": "runtime/sprites/enemies/BRCDC3.png",
+      "sha256": "c4159b6b2a1f3a805749d199c5ab830cf710737782ad6837b3149ee410e0cc6f",
+      "before": "bda5558822a6bbcdb340ca103eabbfb2dd8f687ebe9fe1d556f4fdeddf1969f9",
+      "base_sha256": "bda5558822a6bbcdb340ca103eabbfb2dd8f687ebe9fe1d556f4fdeddf1969f9",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDC4.png",
+      "delivered": "runtime/sprites/enemies/BRCDC4.png",
+      "sha256": "b6e71bf675934be75f37796284f433df7ac053ea2a0bd5f05ecf0c952800f27b",
+      "before": "19bf47fe6d4905968069fe057ee764e41ac542da83058ed66472a5cd01dc777a",
+      "base_sha256": "19bf47fe6d4905968069fe057ee764e41ac542da83058ed66472a5cd01dc777a",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDC5.png",
+      "delivered": "runtime/sprites/enemies/BRCDC5.png",
+      "sha256": "1cda1712e6b9f1af26c0cd2699baebf39a2fb7935f56c68e69aaf7dac9c08bcb",
+      "before": "31867a26f43808af8f097a84bedbe57f0d0163ac644bde8e5d8a9247486defcd",
+      "base_sha256": "31867a26f43808af8f097a84bedbe57f0d0163ac644bde8e5d8a9247486defcd",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDC6.png",
+      "delivered": "runtime/sprites/enemies/BRCDC6.png",
+      "sha256": "a8ba123c20310aa6c82963821a64f5c04fb1b869ec1f91c86d0b57a1f4d2ef41",
+      "before": "b7c4b38cbe0e8839cfa9ec2c3ec9fe79ea88deb6076cfbe42f9ba6b47fe81737",
+      "base_sha256": "b7c4b38cbe0e8839cfa9ec2c3ec9fe79ea88deb6076cfbe42f9ba6b47fe81737",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDC7.png",
+      "delivered": "runtime/sprites/enemies/BRCDC7.png",
+      "sha256": "4e2bd09e9eecfb4d38cc683f82fde1bd54badcc0386c06c5534ff42043565619",
+      "before": "26062e0a16ae208d244b2181054cfb5e425c944d538d25f198b488c9605eb18e",
+      "base_sha256": "26062e0a16ae208d244b2181054cfb5e425c944d538d25f198b488c9605eb18e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDC8.png",
+      "delivered": "runtime/sprites/enemies/BRCDC8.png",
+      "sha256": "241ac8202193a4d4bc0f5b6f21d86671a10f24cc3c95d768c9e01113f86710f5",
+      "before": "a0f49ead31cef4d8bd310736309172c15ff2984dc9c14bc7e712004a96e6130c",
+      "base_sha256": "a0f49ead31cef4d8bd310736309172c15ff2984dc9c14bc7e712004a96e6130c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDD1.png",
+      "delivered": "runtime/sprites/enemies/BRCDD1.png",
+      "sha256": "3a43c49bc833e441bdd6d0d41e67944bc79cce8740ba25d06b3bdde519e86282",
+      "before": "0824cbfaa7e4c3c330136b9779b7eaf4aa9ce0ebcf598e076961e4f09adf8dee",
+      "base_sha256": "0824cbfaa7e4c3c330136b9779b7eaf4aa9ce0ebcf598e076961e4f09adf8dee",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDD2.png",
+      "delivered": "runtime/sprites/enemies/BRCDD2.png",
+      "sha256": "5371d5ffb18598853e05f84a3298883562faf3b2b6e3dbba004a70d2b1332b2e",
+      "before": "567f49df227176b52ec8e84184a75556ebcd0b80fbedfa67d2f66ee303ccc331",
+      "base_sha256": "567f49df227176b52ec8e84184a75556ebcd0b80fbedfa67d2f66ee303ccc331",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDD3.png",
+      "delivered": "runtime/sprites/enemies/BRCDD3.png",
+      "sha256": "597d8d125e27525d6f62500507ac864515b739ffc508d853caac32941cd5a6a9",
+      "before": "d66d0fae6f450b8d4f931203cb6b41a72414818cfa093c598ef41953385d2b97",
+      "base_sha256": "d66d0fae6f450b8d4f931203cb6b41a72414818cfa093c598ef41953385d2b97",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDD4.png",
+      "delivered": "runtime/sprites/enemies/BRCDD4.png",
+      "sha256": "f91d0f598c8c02544b53837efa9c77f1fc2bd46595a09601b62ab97da56a401d",
+      "before": "b820596e48099cb2d4688eef9b249bbf4e597e478dbb1edcf9f41ab69d324939",
+      "base_sha256": "b820596e48099cb2d4688eef9b249bbf4e597e478dbb1edcf9f41ab69d324939",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDD5.png",
+      "delivered": "runtime/sprites/enemies/BRCDD5.png",
+      "sha256": "b7e6c4f73fd5bf20e0ce5b9b79da23d472e11a69c6a2c6571720be4cedd44e97",
+      "before": "8f03fef706317ca291567eeac10724584453bb28d715554a6ae61516425e09d7",
+      "base_sha256": "8f03fef706317ca291567eeac10724584453bb28d715554a6ae61516425e09d7",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDD6.png",
+      "delivered": "runtime/sprites/enemies/BRCDD6.png",
+      "sha256": "0d123c06cbf5b8859837f064c2ae97f9734e9f1951df18370365b53cf53acdd4",
+      "before": "7b5d565b268e0aa94e8999be269b22cd9f1bf1ecd5f03fbb18d34775f0685c3e",
+      "base_sha256": "7b5d565b268e0aa94e8999be269b22cd9f1bf1ecd5f03fbb18d34775f0685c3e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDD7.png",
+      "delivered": "runtime/sprites/enemies/BRCDD7.png",
+      "sha256": "92b01a7513a7996c08edc874ff8e17d066c9b1384e94e83b9f10bfa73ae43da0",
+      "before": "78221a300913bc182143fefa3e5570c4a7825bb507da9b1ca5a70a1b3a332ce1",
+      "base_sha256": "78221a300913bc182143fefa3e5570c4a7825bb507da9b1ca5a70a1b3a332ce1",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDD8.png",
+      "delivered": "runtime/sprites/enemies/BRCDD8.png",
+      "sha256": "112a2ccf4e0d58f32d2bf29a822481fc0937be0a1dc2b92b791fedf457290302",
+      "before": "b26e0fe2d7cebb22894e03064e8123c4c1bbc10bfd93a2e4de6eb1cb213c7b0e",
+      "base_sha256": "b26e0fe2d7cebb22894e03064e8123c4c1bbc10bfd93a2e4de6eb1cb213c7b0e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDE1.png",
+      "delivered": "runtime/sprites/enemies/BRCDE1.png",
+      "sha256": "90977c369cf0aa01bbbb9abb314e760c18569f38c0855b5ff7a36a40b09bef3d",
+      "before": "2cbc8f2069e2b41b8bf048171a3363bfadf981a97b4345cb71a4e040a3048a97",
+      "base_sha256": "2cbc8f2069e2b41b8bf048171a3363bfadf981a97b4345cb71a4e040a3048a97",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDE2.png",
+      "delivered": "runtime/sprites/enemies/BRCDE2.png",
+      "sha256": "365a5dad554718e2cf78437bb9e33e5b6790ed25d0ae3cbdb36d7e9e3955d9c1",
+      "before": "cc40b8f49921b83f23e3301747d401f3c58c6d6b5276aeddf3938b517497e4ec",
+      "base_sha256": "cc40b8f49921b83f23e3301747d401f3c58c6d6b5276aeddf3938b517497e4ec",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDE3.png",
+      "delivered": "runtime/sprites/enemies/BRCDE3.png",
+      "sha256": "7f98605ea0084fd8ac097b12f29043e0d2eac52c06ed9a1ec3dcccfd86b9097a",
+      "before": "c2d0194d9ea160eda0260fb045b1fbdc93a6bab7360b31ef7db01e4c6e05a25f",
+      "base_sha256": "c2d0194d9ea160eda0260fb045b1fbdc93a6bab7360b31ef7db01e4c6e05a25f",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDE4.png",
+      "delivered": "runtime/sprites/enemies/BRCDE4.png",
+      "sha256": "1bae824d6e83b90103bfc383bc6fecfd9da72a2c562630c7d2a350e7de5fe778",
+      "before": "c018ac9f8634e30b40598c93add9049f4087abf645e5ce2ca356ef114616388b",
+      "base_sha256": "c018ac9f8634e30b40598c93add9049f4087abf645e5ce2ca356ef114616388b",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDE5.png",
+      "delivered": "runtime/sprites/enemies/BRCDE5.png",
+      "sha256": "b05fc50b4506b96a04eea2f4e0e04520bc9d237ad80e6c19d8f8ea014d1bd853",
+      "before": "2b63e3893fc1ca5f307b26902101e12b29906d1f7bd461eff30f20916c9e915a",
+      "base_sha256": "2b63e3893fc1ca5f307b26902101e12b29906d1f7bd461eff30f20916c9e915a",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDE6.png",
+      "delivered": "runtime/sprites/enemies/BRCDE6.png",
+      "sha256": "2fc456ae41b9a1deb67fe9435fd4a490b66e88ef46f301d20eb3b21d2a9ffa2b",
+      "before": "dd800e97bfb76e930bb09244e85adb7faa23439949b9cebd7776a83c115f4d43",
+      "base_sha256": "dd800e97bfb76e930bb09244e85adb7faa23439949b9cebd7776a83c115f4d43",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDE7.png",
+      "delivered": "runtime/sprites/enemies/BRCDE7.png",
+      "sha256": "5d18d06639daedb516e2b3a52dbf484d85f514164a66a61f16d1901d93076272",
+      "before": "913bd9ac36183349b051b3cb6b0a0c1e952d45b876444e1fa588fea03f942e7c",
+      "base_sha256": "913bd9ac36183349b051b3cb6b0a0c1e952d45b876444e1fa588fea03f942e7c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDE8.png",
+      "delivered": "runtime/sprites/enemies/BRCDE8.png",
+      "sha256": "4b85dd93382abeab636ce889b4d5e620a5255ec105d6afc510eb6ae2c572b530",
+      "before": "092d3ffcf7901ceae1a483c5445267d650a05c952d5a4ef1334e72acde74f1a5",
+      "base_sha256": "092d3ffcf7901ceae1a483c5445267d650a05c952d5a4ef1334e72acde74f1a5",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDF1.png",
+      "delivered": "runtime/sprites/enemies/BRCDF1.png",
+      "sha256": "c82d0d900e316e909d45e3ada83a0468f8890c392736092c65e272c157ae07be",
+      "before": "c3bd0a685ea7c4325d4c856edf85a83a1d351d77e4088e16cfabc1f32cb5d7f5",
+      "base_sha256": "c3bd0a685ea7c4325d4c856edf85a83a1d351d77e4088e16cfabc1f32cb5d7f5",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDF2.png",
+      "delivered": "runtime/sprites/enemies/BRCDF2.png",
+      "sha256": "1df999c20741862d33174207d8c4f246d32637f613759cb00a2fe4563307cb81",
+      "before": "eb2c075bb3998739177f27f0bef3d1514b568d3bff15cfeff9bcd79fad73f926",
+      "base_sha256": "eb2c075bb3998739177f27f0bef3d1514b568d3bff15cfeff9bcd79fad73f926",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDF3.png",
+      "delivered": "runtime/sprites/enemies/BRCDF3.png",
+      "sha256": "b9af6bdc87642a22986610e0b2528d5ca9f096eeecc75685bac5e4a624e3cfd5",
+      "before": "128ea7a9c9064ec739588f059db719d4c203bfad7cc64583bfaf60b672388f1e",
+      "base_sha256": "128ea7a9c9064ec739588f059db719d4c203bfad7cc64583bfaf60b672388f1e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDF4.png",
+      "delivered": "runtime/sprites/enemies/BRCDF4.png",
+      "sha256": "d82dfe921c23ffa9830f6a2250873aed2b4185b3dbd919324d448a5b78b9288c",
+      "before": "e3c8ad3c5ade86bc8c58e51c1d2bbde794b6b827d7196851c82d2745e1f1d648",
+      "base_sha256": "e3c8ad3c5ade86bc8c58e51c1d2bbde794b6b827d7196851c82d2745e1f1d648",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDF5.png",
+      "delivered": "runtime/sprites/enemies/BRCDF5.png",
+      "sha256": "6ff36b9e6f903c3a84ec612ee0c13ff80f24be3bc15e97579d6281429e551fbb",
+      "before": "27f89d66ec9163012d6d03ecd5eb321a7b4103f54b196894f09ebf897459d33a",
+      "base_sha256": "27f89d66ec9163012d6d03ecd5eb321a7b4103f54b196894f09ebf897459d33a",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDF6.png",
+      "delivered": "runtime/sprites/enemies/BRCDF6.png",
+      "sha256": "5836da6338727c821fcfb73d6446cb0cae849c5e05fb94423b8d17f37cb3a865",
+      "before": "061c357e0aa4ca9a6e1679af6556315c8eb1c99510d7d0a83545a13c7c4007a1",
+      "base_sha256": "061c357e0aa4ca9a6e1679af6556315c8eb1c99510d7d0a83545a13c7c4007a1",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDF7.png",
+      "delivered": "runtime/sprites/enemies/BRCDF7.png",
+      "sha256": "153867c4c84d344546bfc2412793cffca482ced2bad4e373a13ed0e46f78ad86",
+      "before": "f6f815a98d1275a4eb0507198b388c671c0d7d74e19bdf45c0ff077ed73283a9",
+      "base_sha256": "f6f815a98d1275a4eb0507198b388c671c0d7d74e19bdf45c0ff077ed73283a9",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDF8.png",
+      "delivered": "runtime/sprites/enemies/BRCDF8.png",
+      "sha256": "49b1ccccee61a0a41d7228441182d653d2810aa65d45d0270ced6ef7b3e416ab",
+      "before": "2950e6e786a04475de1060208eff6768866bfe3c2fd68345b503e6ae60c79a13",
+      "base_sha256": "2950e6e786a04475de1060208eff6768866bfe3c2fd68345b503e6ae60c79a13",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDG1.png",
+      "delivered": "runtime/sprites/enemies/BRCDG1.png",
+      "sha256": "aeae9ec23359a34bf12cf82cf318e30e2c03cc06d4beb507afb486f278e50d20",
+      "before": "b19bb3276ea5e9f91f5017e49df891aa38d59fc6195f62c035261ad5fd0ac7d8",
+      "base_sha256": "b19bb3276ea5e9f91f5017e49df891aa38d59fc6195f62c035261ad5fd0ac7d8",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDG2.png",
+      "delivered": "runtime/sprites/enemies/BRCDG2.png",
+      "sha256": "00ed893b24f430253752d993d98e9ed9d962b6b383e6ae579432ab1e89f854d0",
+      "before": "b2cc9edc8813cd5a0c5e0841e30f18ea089e9ae7df345319ff2400c9e65b9018",
+      "base_sha256": "b2cc9edc8813cd5a0c5e0841e30f18ea089e9ae7df345319ff2400c9e65b9018",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDG3.png",
+      "delivered": "runtime/sprites/enemies/BRCDG3.png",
+      "sha256": "557633f6699dc643bf497f99d9b2227465bbbb14150e9ab5af3be796cd1c72a7",
+      "before": "f92cd56423ac754378687ee153557cd8fa0c238cd02cb926cbd6db67c6ed0f68",
+      "base_sha256": "f92cd56423ac754378687ee153557cd8fa0c238cd02cb926cbd6db67c6ed0f68",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDG4.png",
+      "delivered": "runtime/sprites/enemies/BRCDG4.png",
+      "sha256": "906a6d2e65aa06d1b181d13c44b589715852bae1e4ae12d78631cf49600095af",
+      "before": "2ae7be8fa349001310c4d9d0a4b9a801d81237cb807162b8e74c1e5199dd7c85",
+      "base_sha256": "2ae7be8fa349001310c4d9d0a4b9a801d81237cb807162b8e74c1e5199dd7c85",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDG5.png",
+      "delivered": "runtime/sprites/enemies/BRCDG5.png",
+      "sha256": "377f9ef71c881340c9292922c67a16b91feaeb8d635e8c3c765fefe12ac0f143",
+      "before": "771e88befe4082c97b16f013793d3d935de67ac93c5f46d1ca201870bd75e92b",
+      "base_sha256": "771e88befe4082c97b16f013793d3d935de67ac93c5f46d1ca201870bd75e92b",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDG6.png",
+      "delivered": "runtime/sprites/enemies/BRCDG6.png",
+      "sha256": "ea6a867b2f9a549daac4be04fabc1b64322687a2dc0726f210ac7581bc1e84b7",
+      "before": "042f2b77faf528f775a581c176702880c0ec2aaa1dc090bbf9605c6e720a2642",
+      "base_sha256": "042f2b77faf528f775a581c176702880c0ec2aaa1dc090bbf9605c6e720a2642",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDG7.png",
+      "delivered": "runtime/sprites/enemies/BRCDG7.png",
+      "sha256": "2263921518a4199fc9d26c7225f0cd792ed53e2048061fabe9237bd001300659",
+      "before": "dc23f15440be903d6b5af9879956b319b5dc78ed70ac16ec87667e342044f968",
+      "base_sha256": "dc23f15440be903d6b5af9879956b319b5dc78ed70ac16ec87667e342044f968",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDG8.png",
+      "delivered": "runtime/sprites/enemies/BRCDG8.png",
+      "sha256": "c2fde2bae0dd2f8f52402ee08d7ed8c766a43d04f6264847d848218dff8302bd",
+      "before": "c9591fece63a7ae5bbc13dfcf4fd882bd4cc97c2a2c35ca309312382fcd898bd",
+      "base_sha256": "c9591fece63a7ae5bbc13dfcf4fd882bd4cc97c2a2c35ca309312382fcd898bd",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDN1.png",
+      "delivered": "runtime/sprites/enemies/BRCDN1.png",
+      "sha256": "e9276487bc85356d118d6d147740e8f4e7c904929ac5b978bf7e644d692a8654",
+      "before": "1fa64e5532e6fc6876be04a773ead7091f3830655703b8745ad759f836b269e6",
+      "base_sha256": "1fa64e5532e6fc6876be04a773ead7091f3830655703b8745ad759f836b269e6",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDN2.png",
+      "delivered": "runtime/sprites/enemies/BRCDN2.png",
+      "sha256": "904e85fff38488f82058ae670d6f0448c6bf137da111177a8a31a819db8c149c",
+      "before": "484866d7814e09bcdac739213a1420b00f3a3428c9265ef4033e5835f509ac35",
+      "base_sha256": "484866d7814e09bcdac739213a1420b00f3a3428c9265ef4033e5835f509ac35",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDN3.png",
+      "delivered": "runtime/sprites/enemies/BRCDN3.png",
+      "sha256": "c60c721ed24f274c2da1c4299d6e8140e58e6d0b855f1c534700551aa97dddea",
+      "before": "d79e07efd3763afb8e2355f4c9b8917cc4ea3cd56385f3128041dbbc8eeb0aa7",
+      "base_sha256": "d79e07efd3763afb8e2355f4c9b8917cc4ea3cd56385f3128041dbbc8eeb0aa7",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDN4.png",
+      "delivered": "runtime/sprites/enemies/BRCDN4.png",
+      "sha256": "1a544c2c254e0a0d9f33a96406a90440fd8c02e3c172882166d42dd78d452f29",
+      "before": "944109fdc01540bb9546c71bda378896002c0e63307d731ef2fe1d5e36d56ca3",
+      "base_sha256": "944109fdc01540bb9546c71bda378896002c0e63307d731ef2fe1d5e36d56ca3",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDN5.png",
+      "delivered": "runtime/sprites/enemies/BRCDN5.png",
+      "sha256": "80eccaaa752e6d2df3a72ada6f4ea01eebbc821ebbcd6a940f56731048abce93",
+      "before": "0d1aeacb849ef886f62fb6ee3783ef7290e4ac6a722eeddb69debdb478e9c264",
+      "base_sha256": "0d1aeacb849ef886f62fb6ee3783ef7290e4ac6a722eeddb69debdb478e9c264",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDN6.png",
+      "delivered": "runtime/sprites/enemies/BRCDN6.png",
+      "sha256": "a0366923c977d584c31083c40fd05d9da4dc6f9c5f8b5fe86c14f94b367009b1",
+      "before": "4ab7b558e205a9f2b8743436857efa5a65047481acb210654cb8abd5846d7159",
+      "base_sha256": "4ab7b558e205a9f2b8743436857efa5a65047481acb210654cb8abd5846d7159",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDN7.png",
+      "delivered": "runtime/sprites/enemies/BRCDN7.png",
+      "sha256": "3631860aa6252bcba6df290f48e91fa791e67707df2d0349c22cb72a897abc4c",
+      "before": "dfec9ef0db4e7450d335d5ebc03a7532083097694731474ef92906710572df57",
+      "base_sha256": "dfec9ef0db4e7450d335d5ebc03a7532083097694731474ef92906710572df57",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDN8.png",
+      "delivered": "runtime/sprites/enemies/BRCDN8.png",
+      "sha256": "48a4cdb8a2f248561663db8edbd00fc83cf58ee8d30663e9cab0c152d2a9c54e",
+      "before": "da96e7e91bfc6bb03eeee022e25509021c7a0d7c6262d4fdd1a9dbd48a0c5a92",
+      "base_sha256": "da96e7e91bfc6bb03eeee022e25509021c7a0d7c6262d4fdd1a9dbd48a0c5a92",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDO1.png",
+      "delivered": "runtime/sprites/enemies/BRCDO1.png",
+      "sha256": "3b205e493349cb1f94d073b7c508d901141f7d234f75443e77142085ec431a80",
+      "before": "ec228be50316f8a9ea93858bfcb53025410d0c120aa956460713bbf8f579ea80",
+      "base_sha256": "ec228be50316f8a9ea93858bfcb53025410d0c120aa956460713bbf8f579ea80",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDO2.png",
+      "delivered": "runtime/sprites/enemies/BRCDO2.png",
+      "sha256": "747673b28b2385aa7e7c93bb9bf8702b6919bcba01ecc42922a84914d94aaf22",
+      "before": "ec0b0560b1f21a989c80bb76079083a6362c61095ae8a0010db3e11358317f59",
+      "base_sha256": "ec0b0560b1f21a989c80bb76079083a6362c61095ae8a0010db3e11358317f59",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDO3.png",
+      "delivered": "runtime/sprites/enemies/BRCDO3.png",
+      "sha256": "cbcfe7b435292fd5729d3aa8231643ca20e0769a9403b95dc57fe7f030c10d0c",
+      "before": "c28307d392144fd08897d7cfbbd5d252aa0f0863a273d01b79d6c7e0cab7f5e5",
+      "base_sha256": "c28307d392144fd08897d7cfbbd5d252aa0f0863a273d01b79d6c7e0cab7f5e5",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDO4.png",
+      "delivered": "runtime/sprites/enemies/BRCDO4.png",
+      "sha256": "f4fb8eec05d883d0c924000f2e9c4824e3a8248f13f5d23873ef7ba2dd7ead67",
+      "before": "12cdc204d701d869f91d5adfda384dd8f77b4d7265dd30767f19ccd53b714153",
+      "base_sha256": "12cdc204d701d869f91d5adfda384dd8f77b4d7265dd30767f19ccd53b714153",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDO5.png",
+      "delivered": "runtime/sprites/enemies/BRCDO5.png",
+      "sha256": "d740ac8f501c16d7a0a417a34cea6d64b0abed59d224dfa028d129e379103439",
+      "before": "0f158cb54fea95520b4edd7baac3064c30b10bb445957e84f53d11c457c7538d",
+      "base_sha256": "0f158cb54fea95520b4edd7baac3064c30b10bb445957e84f53d11c457c7538d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDO6.png",
+      "delivered": "runtime/sprites/enemies/BRCDO6.png",
+      "sha256": "5aed995cc0384f8d93680999f50e399992f9b3a04e28a4eeec32ff2782159f2d",
+      "before": "68e449435fe111c1c96f0170c80362d2d776aea296afc83c160e2e6c1832bcff",
+      "base_sha256": "68e449435fe111c1c96f0170c80362d2d776aea296afc83c160e2e6c1832bcff",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDO7.png",
+      "delivered": "runtime/sprites/enemies/BRCDO7.png",
+      "sha256": "d13f4218d4b1afa0106f75fbd54aba995e39fa51b083c2891697f39389bff6ab",
+      "before": "267c58a206294c40081f823ccab03d5a34c7fd78051aab33296735d54ef69d24",
+      "base_sha256": "267c58a206294c40081f823ccab03d5a34c7fd78051aab33296735d54ef69d24",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDO8.png",
+      "delivered": "runtime/sprites/enemies/BRCDO8.png",
+      "sha256": "91416f0c006844f760d3088cb81fd8757c23799359c69ad92cfec55fed8a5a4c",
+      "before": "2ba0265963b68c48c278b866d985ef6907f76360abbea0d566e24cc7c7d9c6a7",
+      "base_sha256": "2ba0265963b68c48c278b866d985ef6907f76360abbea0d566e24cc7c7d9c6a7",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDH1.png",
+      "delivered": "runtime/sprites/enemies/BRCDH1.png",
+      "sha256": "33089e1ef83989a8a8c7f1f25d7c0ad693c7a9fff2ab2b319c7c340592603925",
+      "before": "15bca26f56d28955dde5dbaccf2e3c8998871e0f5a228b43d8995933fbbb7ee4",
+      "base_sha256": "15bca26f56d28955dde5dbaccf2e3c8998871e0f5a228b43d8995933fbbb7ee4",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDH2.png",
+      "delivered": "runtime/sprites/enemies/BRCDH2.png",
+      "sha256": "67753271d6456b6bb7af87e575702b022ba63847cac2fe522bbb9385067a1425",
+      "before": "e4c7e2f3068f04d92a84ec290a7ba2de362672a4cc8cda44412cc891dabdfdef",
+      "base_sha256": "e4c7e2f3068f04d92a84ec290a7ba2de362672a4cc8cda44412cc891dabdfdef",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDH3.png",
+      "delivered": "runtime/sprites/enemies/BRCDH3.png",
+      "sha256": "1f062a28da3c9a7f8973b635ee685f1bb00a4cd0f34e92602f9d0243d3772c16",
+      "before": "aff9a0017fd0478b26815ed5169cee9fe8652aa9ace98d277b3ad8eb25b67f58",
+      "base_sha256": "aff9a0017fd0478b26815ed5169cee9fe8652aa9ace98d277b3ad8eb25b67f58",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDH4.png",
+      "delivered": "runtime/sprites/enemies/BRCDH4.png",
+      "sha256": "43174dd7302dfa656888509f4f7cadc54ff7f27fe207f8a578c37c0af258211c",
+      "before": "bbdf1191bed9c48f5d3a703df4b592dd83c2177aad4edcc890a20a38152f8e72",
+      "base_sha256": "bbdf1191bed9c48f5d3a703df4b592dd83c2177aad4edcc890a20a38152f8e72",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDH5.png",
+      "delivered": "runtime/sprites/enemies/BRCDH5.png",
+      "sha256": "6a696f6c84bedb73833306744c7726fc0d8230c7e6e2338d35af1c09ff8457e8",
+      "before": "49f342165f0a4ce96ec791370ea604018650549aa12e452e0d3fd472fa22ff62",
+      "base_sha256": "49f342165f0a4ce96ec791370ea604018650549aa12e452e0d3fd472fa22ff62",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDH6.png",
+      "delivered": "runtime/sprites/enemies/BRCDH6.png",
+      "sha256": "a81b1b3608b240316959618c6d195464eb7053b0e843535575492a3cacda7c88",
+      "before": "5688b740bf217aa1a0c3778e82325470e223846d1e28176f2e193a0245653aae",
+      "base_sha256": "5688b740bf217aa1a0c3778e82325470e223846d1e28176f2e193a0245653aae",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDH7.png",
+      "delivered": "runtime/sprites/enemies/BRCDH7.png",
+      "sha256": "d532b5a05f86752dfcf0ad0f049513b7922879d0470888f28a86116e4e83a6aa",
+      "before": "dafd07b500acdf1eb777a871b761c7a6f1a45f02ba0b3cf3a5424c6e56730269",
+      "base_sha256": "dafd07b500acdf1eb777a871b761c7a6f1a45f02ba0b3cf3a5424c6e56730269",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDH8.png",
+      "delivered": "runtime/sprites/enemies/BRCDH8.png",
+      "sha256": "d9ce15d7630f8a3212f79ffe3e6414c276a367d705bfbbd1ae18d902a0efe6b5",
+      "before": "013cd3cc85aaef193b5b18c652d424c1fb3eef43290b36da6727174f86aa9c42",
+      "base_sha256": "013cd3cc85aaef193b5b18c652d424c1fb3eef43290b36da6727174f86aa9c42",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDI1.png",
+      "delivered": "runtime/sprites/enemies/BRCDI1.png",
+      "sha256": "43f06dceaa08e519a68a413c0170f7f833491338d0817e6d9543412962f1ca50",
+      "before": "aab8d5c0cf1181fb7fc51398e52d020da0d2c6e9d14ca8d3092314aad4d94410",
+      "base_sha256": "aab8d5c0cf1181fb7fc51398e52d020da0d2c6e9d14ca8d3092314aad4d94410",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDI2.png",
+      "delivered": "runtime/sprites/enemies/BRCDI2.png",
+      "sha256": "d01bff1b643e424b6698cfef9bbb1db5f3b96937f05445eb543bdad0614888bc",
+      "before": "821be4a7782d6ddf06465c1ab087499f6fcfe5c193ecb177446aae1eaab45143",
+      "base_sha256": "821be4a7782d6ddf06465c1ab087499f6fcfe5c193ecb177446aae1eaab45143",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDI3.png",
+      "delivered": "runtime/sprites/enemies/BRCDI3.png",
+      "sha256": "c9bc33f2d05f3eb501e4fce51e8714c61c8fbd75e0a264f051bf3d4a40ef4d05",
+      "before": "515ecfe6ba3430583b6f0d9b3cb3496254dd46738fb7763336ccea15162418f5",
+      "base_sha256": "515ecfe6ba3430583b6f0d9b3cb3496254dd46738fb7763336ccea15162418f5",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDI4.png",
+      "delivered": "runtime/sprites/enemies/BRCDI4.png",
+      "sha256": "992d642d81eceae7d3113650d59135d7e32639fc9b38c58a3a69cf7f17ceccc8",
+      "before": "630809dc880dc13fdc3712c2347b394987e0d686828a14d63d9314f268f4c6c0",
+      "base_sha256": "630809dc880dc13fdc3712c2347b394987e0d686828a14d63d9314f268f4c6c0",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDI5.png",
+      "delivered": "runtime/sprites/enemies/BRCDI5.png",
+      "sha256": "224aad698b2d8e926700f85ddce18f228d002b75a86343131e465a394ca75206",
+      "before": "b8e10bfac59ee8eb3cd53547f239e3f8f12f20a396026ed29d08d86a29d2e06d",
+      "base_sha256": "b8e10bfac59ee8eb3cd53547f239e3f8f12f20a396026ed29d08d86a29d2e06d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDI6.png",
+      "delivered": "runtime/sprites/enemies/BRCDI6.png",
+      "sha256": "d8303e7981891344a239ec30280ac3759ff73856221a23862e18226ca2c97e5c",
+      "before": "c7463fcac18f036fbd52adc85e64586440e23c4de3416420b5f449e172cf27fe",
+      "base_sha256": "c7463fcac18f036fbd52adc85e64586440e23c4de3416420b5f449e172cf27fe",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDI7.png",
+      "delivered": "runtime/sprites/enemies/BRCDI7.png",
+      "sha256": "07fed7c6bb509988a73c7c95b0cc5bfe3ebc10434be7d0cc6df0e8c42842685f",
+      "before": "c7b39106c2cdc24d896cff6428d37f8dc693f842749b520fc3dd7cc1592154b0",
+      "base_sha256": "c7b39106c2cdc24d896cff6428d37f8dc693f842749b520fc3dd7cc1592154b0",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDI8.png",
+      "delivered": "runtime/sprites/enemies/BRCDI8.png",
+      "sha256": "b7643a138d7ed33d5bf51fa3d07822dc99517c0f7f43be69d80f4a8aeecdbecb",
+      "before": "e495527d9a6ca4fb1eb9de72b7fc61e4d1d066e3f0545d1918bc15a9eb27fc5d",
+      "base_sha256": "e495527d9a6ca4fb1eb9de72b7fc61e4d1d066e3f0545d1918bc15a9eb27fc5d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDJ1.png",
+      "delivered": "runtime/sprites/enemies/BRCDJ1.png",
+      "sha256": "45224817b5bef46c3031f6fc05964da9658bbcca0f15011022e804f004c66800",
+      "before": "af1cf1cc1c360cbbc7d3217a92ea4dd68102fe9600a9c3140408bd4baed8413c",
+      "base_sha256": "af1cf1cc1c360cbbc7d3217a92ea4dd68102fe9600a9c3140408bd4baed8413c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDJ2.png",
+      "delivered": "runtime/sprites/enemies/BRCDJ2.png",
+      "sha256": "dac6bdf2cbb02e65a7fe14d18b3bd10fef4c0ad7df032582aa2743e39aa1db20",
+      "before": "2bac7e1a67609567a9fe62d50efd4fc3013c2c7838343a6ae6397227549c828e",
+      "base_sha256": "2bac7e1a67609567a9fe62d50efd4fc3013c2c7838343a6ae6397227549c828e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDJ3.png",
+      "delivered": "runtime/sprites/enemies/BRCDJ3.png",
+      "sha256": "a942b9720f085a8345729363d143fdcb32787e8e82b82e7a2adee5f8ae0b1c02",
+      "before": "ff6c8451d2fb78aeb4ac098f5f7fca13f3aa165d575404eb5961f655299c7ead",
+      "base_sha256": "ff6c8451d2fb78aeb4ac098f5f7fca13f3aa165d575404eb5961f655299c7ead",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDJ4.png",
+      "delivered": "runtime/sprites/enemies/BRCDJ4.png",
+      "sha256": "68a0da9b28950aafab1b9bf872947157fbed0640f031cd59e13a9b6500de6e07",
+      "before": "c3b00c2af850747f20517215918753ccb96acb08ecef60f1c5334200badb1940",
+      "base_sha256": "c3b00c2af850747f20517215918753ccb96acb08ecef60f1c5334200badb1940",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDJ5.png",
+      "delivered": "runtime/sprites/enemies/BRCDJ5.png",
+      "sha256": "1685e7852136738a530fe255f7a55d329b9ca18e88fa04fe20ccf2517afaf7fc",
+      "before": "f971b1ec8b5de4e8ef6228e860be4803157d41f8a9ec335e812bd1094bf3b0b8",
+      "base_sha256": "f971b1ec8b5de4e8ef6228e860be4803157d41f8a9ec335e812bd1094bf3b0b8",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDJ6.png",
+      "delivered": "runtime/sprites/enemies/BRCDJ6.png",
+      "sha256": "9c925ddca669e66c236e1e5f6ec9a10b027f9e4f8949287aea3fedc26cc85be7",
+      "before": "4dce31e94f4723ba0b2b04306e11bbf7d9c621a63393413bd04e9389e35745bb",
+      "base_sha256": "4dce31e94f4723ba0b2b04306e11bbf7d9c621a63393413bd04e9389e35745bb",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDJ7.png",
+      "delivered": "runtime/sprites/enemies/BRCDJ7.png",
+      "sha256": "04a760fd0ff5e66ad44ae80412b513cba041277ad207a2dedb7fc91d100742d0",
+      "before": "361f139c86217d2eeaf8f3f20e49338c515ba4fd0c6223dcc93462270ad4271c",
+      "base_sha256": "361f139c86217d2eeaf8f3f20e49338c515ba4fd0c6223dcc93462270ad4271c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDJ8.png",
+      "delivered": "runtime/sprites/enemies/BRCDJ8.png",
+      "sha256": "88b40de9eaa04764064064b7f1a7240be8da4245755f1cb1b2887094e8a624de",
+      "before": "ab3e223960f309ed5889ac81ebe14efc8980522d6254e8786cb6d8b7b96760fd",
+      "base_sha256": "ab3e223960f309ed5889ac81ebe14efc8980522d6254e8786cb6d8b7b96760fd",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDK1.png",
+      "delivered": "runtime/sprites/enemies/BRCDK1.png",
+      "sha256": "7188f9cb8491aae320ae6534886f40d1bc5c4d3ee2ec2fbeae07dd7f0b315a70",
+      "before": "abfc4917d92cf28c68e57020d56b31b423577bcb8ffa98f7783662ce1aa3c0f2",
+      "base_sha256": "abfc4917d92cf28c68e57020d56b31b423577bcb8ffa98f7783662ce1aa3c0f2",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDK2.png",
+      "delivered": "runtime/sprites/enemies/BRCDK2.png",
+      "sha256": "5862fa5457d5d328c369c9f39745bd41de221a921c180971c6cfb7c848b34064",
+      "before": "a9f6bb6a2b5f3abc14e2a4e3ba31a3824d6143aabc7c5a1f0a7897b2fdc54770",
+      "base_sha256": "a9f6bb6a2b5f3abc14e2a4e3ba31a3824d6143aabc7c5a1f0a7897b2fdc54770",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDK3.png",
+      "delivered": "runtime/sprites/enemies/BRCDK3.png",
+      "sha256": "b0b13de01575928f4ebb73397390602eb94005a68bf1ed686060bc949da3dc2f",
+      "before": "c4a119d8643b9c0d8971807fa0b229298234f9ffa9f1d3bfad3171a769850a2c",
+      "base_sha256": "c4a119d8643b9c0d8971807fa0b229298234f9ffa9f1d3bfad3171a769850a2c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDK4.png",
+      "delivered": "runtime/sprites/enemies/BRCDK4.png",
+      "sha256": "50d3eb823611a68b9bbc32b4754dc06155dba5b6aa482b11b834c559c75aa051",
+      "before": "a5058b39e15161f28f2c56e66feadfc6635fe5ef47f50fee40a14726431509dc",
+      "base_sha256": "a5058b39e15161f28f2c56e66feadfc6635fe5ef47f50fee40a14726431509dc",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDK5.png",
+      "delivered": "runtime/sprites/enemies/BRCDK5.png",
+      "sha256": "4631a5f5ecd4cb259e25746fda4b72ea5d51a80d7bf16b0c2e7df9ac6c48b9d9",
+      "before": "f092bb58b938cf5e0a91bafb642cefa3be0cca08d41059798141843b7b151d33",
+      "base_sha256": "f092bb58b938cf5e0a91bafb642cefa3be0cca08d41059798141843b7b151d33",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDK6.png",
+      "delivered": "runtime/sprites/enemies/BRCDK6.png",
+      "sha256": "de3e31fe56b4bef2e42ee33b809d2607daa223e6c1a6e6053e5346fc014102f0",
+      "before": "ec52fa7cf6cd0e6c9b7e2d27e61e5698758a3d3a6cc42058c3ab058853341762",
+      "base_sha256": "ec52fa7cf6cd0e6c9b7e2d27e61e5698758a3d3a6cc42058c3ab058853341762",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDK7.png",
+      "delivered": "runtime/sprites/enemies/BRCDK7.png",
+      "sha256": "ddbe718d3576f985660172f2c151c8a4f58361c548ec387036f235d64dca7aa5",
+      "before": "8df546fea9ede5c7b173e7a0e2d4211d21b0d596b63c7b0a33717a846b1ba306",
+      "base_sha256": "8df546fea9ede5c7b173e7a0e2d4211d21b0d596b63c7b0a33717a846b1ba306",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDK8.png",
+      "delivered": "runtime/sprites/enemies/BRCDK8.png",
+      "sha256": "bec04c7f5143164e73ef0b8994bf5a2af5f044eb0dbe12fe58c4ae732892ef22",
+      "before": "e643b1209bb54f479af2afef931130f4d7cff80eee6abd8bdd4db765667dfa3e",
+      "base_sha256": "e643b1209bb54f479af2afef931130f4d7cff80eee6abd8bdd4db765667dfa3e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDL1.png",
+      "delivered": "runtime/sprites/enemies/BRCDL1.png",
+      "sha256": "4c5c4bd778c0d108cd9b4466c39761f8644dc9e29c488e160ab4bbce027a6ceb",
+      "before": "b3bcf04880c8809cc6da10a446681042bb7bb97e4a965091788bfa88f4d3c765",
+      "base_sha256": "b3bcf04880c8809cc6da10a446681042bb7bb97e4a965091788bfa88f4d3c765",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDL2.png",
+      "delivered": "runtime/sprites/enemies/BRCDL2.png",
+      "sha256": "cea075465e192e3c98fb6061910b6a623ae340963a8a470bf251820cebca6f00",
+      "before": "a39826780ea7fc708c0d01530c3fc7b425ee0c0aecc2e2d2623bbabab4340284",
+      "base_sha256": "a39826780ea7fc708c0d01530c3fc7b425ee0c0aecc2e2d2623bbabab4340284",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDL3.png",
+      "delivered": "runtime/sprites/enemies/BRCDL3.png",
+      "sha256": "8589ac986ccda8ed117b605056d6bbf8d29f77345573d2730e50f5f88ec81631",
+      "before": "6c570f34a79a69a3ae3a398f3abdba8e83a2bd7143568cc8e5d736693b3165c3",
+      "base_sha256": "6c570f34a79a69a3ae3a398f3abdba8e83a2bd7143568cc8e5d736693b3165c3",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDL4.png",
+      "delivered": "runtime/sprites/enemies/BRCDL4.png",
+      "sha256": "dfe75b5c4925e42db0a260b5b14510a2af27ceb0b9145bdeeac73618c756d1ef",
+      "before": "09a180c940076a66e600f633ae8df4b7c7433cf101a035b1facfeb41691cd7c4",
+      "base_sha256": "09a180c940076a66e600f633ae8df4b7c7433cf101a035b1facfeb41691cd7c4",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDL5.png",
+      "delivered": "runtime/sprites/enemies/BRCDL5.png",
+      "sha256": "07889e664bcfaabe4d588c03811a099347e27cd4cae56275ddea3a773a60bdcd",
+      "before": "d435bf121103a0c6ce209f2db9ffa599d57af3d5af0c76a6835ecf8c5f068761",
+      "base_sha256": "d435bf121103a0c6ce209f2db9ffa599d57af3d5af0c76a6835ecf8c5f068761",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDL6.png",
+      "delivered": "runtime/sprites/enemies/BRCDL6.png",
+      "sha256": "e6258fad8eee039e84d3e40faff479f3ed08673bb349c7a1d5361d7fbe473277",
+      "before": "5bf2f50d893472888d5415e3058682446cbc6cb7ceda5f9f49a732a81b21ddb6",
+      "base_sha256": "5bf2f50d893472888d5415e3058682446cbc6cb7ceda5f9f49a732a81b21ddb6",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDL7.png",
+      "delivered": "runtime/sprites/enemies/BRCDL7.png",
+      "sha256": "05642e7c3909058fd020845e0b105b29b4f8612e7faa190bbcdd81e41e28951e",
+      "before": "9dd0c96761c0a9046212b8f69aef6f7d97e4380db64bae281ef2aae225277c99",
+      "base_sha256": "9dd0c96761c0a9046212b8f69aef6f7d97e4380db64bae281ef2aae225277c99",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDL8.png",
+      "delivered": "runtime/sprites/enemies/BRCDL8.png",
+      "sha256": "eda9e4ab5d274d2f37200f30b8125c3ad034413624d113d182bbebab9154746f",
+      "before": "0618b925b40db0a8704001bb443442ea1ff40868945d84bb780599aa75032e0b",
+      "base_sha256": "0618b925b40db0a8704001bb443442ea1ff40868945d84bb780599aa75032e0b",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDM1.png",
+      "delivered": "runtime/sprites/enemies/BRCDM1.png",
+      "sha256": "07ccca08e7e01fed195b7964d073bfdcd900f0ea37b0a37e324a00086c7e5cc0",
+      "before": "03b223bf4216cb4538c14b4e320e713c54105279657e7033429415c507ce0607",
+      "base_sha256": "03b223bf4216cb4538c14b4e320e713c54105279657e7033429415c507ce0607",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDM2.png",
+      "delivered": "runtime/sprites/enemies/BRCDM2.png",
+      "sha256": "e2886e06488b34856c93cb7d1ad366ba3fdc039c890d657d4ef826a8bbe51276",
+      "before": "69b14c1159189e8082d70086af8fd2226335233e24eb78ff8fd3178568140b66",
+      "base_sha256": "69b14c1159189e8082d70086af8fd2226335233e24eb78ff8fd3178568140b66",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDM3.png",
+      "delivered": "runtime/sprites/enemies/BRCDM3.png",
+      "sha256": "104022863cde2cc360deb050d54cbbb23344aa9e2deefc89f97e41c5f302e540",
+      "before": "fac94c605ab3295f62c2470bd7b0cb7d2551c0fc7b59343d13543b42bfd23217",
+      "base_sha256": "fac94c605ab3295f62c2470bd7b0cb7d2551c0fc7b59343d13543b42bfd23217",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDM4.png",
+      "delivered": "runtime/sprites/enemies/BRCDM4.png",
+      "sha256": "500782c2fb4a9eed6661b671e392876d7bc78bf9012cd4d8d3e71142a3dcfc01",
+      "before": "1341572727f5929e92451b575f7fccbb181bd11f1417b40c777beb217250f63d",
+      "base_sha256": "1341572727f5929e92451b575f7fccbb181bd11f1417b40c777beb217250f63d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDM5.png",
+      "delivered": "runtime/sprites/enemies/BRCDM5.png",
+      "sha256": "e079b63a13728828f125d38112f9b917608c789c0ba69941b9818079dc149c60",
+      "before": "71687a8687669a10bb5a44749c908732ac2bf6e8a2afc20440a5156918c8762d",
+      "base_sha256": "71687a8687669a10bb5a44749c908732ac2bf6e8a2afc20440a5156918c8762d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDM6.png",
+      "delivered": "runtime/sprites/enemies/BRCDM6.png",
+      "sha256": "72e572fc95db23145432dba73fef894c313fd53518154603e67636ae6ecd45db",
+      "before": "88f9943e9cb651ff329667d9a47674661453658a0139f30ea67ba6a891206c9e",
+      "base_sha256": "88f9943e9cb651ff329667d9a47674661453658a0139f30ea67ba6a891206c9e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDM7.png",
+      "delivered": "runtime/sprites/enemies/BRCDM7.png",
+      "sha256": "fcc89ea12871b8659d95ba5778940cff8ef510ade60edcc5f3b9bbfbbf60143b",
+      "before": "bc9aeb7368b7075e0eef9fb87189f6140708be4282ff5a6ac6424cb551ddbd3c",
+      "base_sha256": "bc9aeb7368b7075e0eef9fb87189f6140708be4282ff5a6ac6424cb551ddbd3c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/BRCDM8.png",
+      "delivered": "runtime/sprites/enemies/BRCDM8.png",
+      "sha256": "42b91d8cb9c1c0bcf82bbcaccf68c45727a85288ed79c8a5390a2e09cbc87ee9",
+      "before": "cef71e6052822abd4a744fc247e5e030d06fb0df1c2eca3b2f26377306e06376",
+      "base_sha256": "cef71e6052822abd4a744fc247e5e030d06fb0df1c2eca3b2f26377306e06376",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

@@ -714,6 +714,9 @@ def remap_1940(text):
 
 
 def main():
+    import csv
+    with open(Path(__file__).with_name('rf01_textures_1940.csv'), encoding='utf-8-sig', newline='') as f:
+        m.door_alias = {row['old']: row['new'] for row in csv.DictReader(f)}   # doors fitted from the 1940 images
     text = remap_1940(m.build())
     (ROOT / 'src' / 'maps' / 'RF01.wad').write_bytes(m.wad(text))
     (ROOT / 'build').mkdir(exist_ok=True)

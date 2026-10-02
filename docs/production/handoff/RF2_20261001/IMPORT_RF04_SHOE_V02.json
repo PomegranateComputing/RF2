@@ -1,0 +1,26 @@
+{
+  "batch": "RF04_SHOE_V02",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/RF04_SHOE_V02",
+  "manifest_sha256": "d33ba82e7cf51df3a07e0b3caeab913518e726ac8b9664a25a9fcb4c715106c2",
+  "status": "candidate_after_opus_engine_feedback",
+  "imported": "2026-10-02 07:14",
+  "by": "Opus (integration)",
+  "head_before": "a7a45ea45f329c0a0fc0bfa1472d9b94f196b254",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 1
+  },
+  "files": [
+    {
+      "target": "src/sprites/rf04/R4SHA0.png",
+      "delivered": "runtime/sprites/rf04/R4SHA0.png",
+      "sha256": "d54f2147f49a01628457ce7b6edfb2833ffd3f045d673cdf33ab41cc821b2806",
+      "before": "1e6a9f3cb53fcfd781b80020e2eb519dcb69d79db019931f5c49538809151f2e",
+      "base_sha256": "1e6a9f3cb53fcfd781b80020e2eb519dcb69d79db019931f5c49538809151f2e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

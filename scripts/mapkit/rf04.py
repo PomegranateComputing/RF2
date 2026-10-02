@@ -296,7 +296,7 @@ m.thing(648, 2188, T_JUKEBOX, angle=270, args=(L_JUKEBOX,))                     
 ox0, oy0, ox1, oy1 = A['orchestra']
 m.door(ix1, 2160, ox0, 2208, 43, 'RFW_PANL', 'RFW_PANL', replace(lp.HALL, floor=24), speed=24)
 vx0, vy0, vx1, vy1 = lp.SERVICE_DOOR                                                              # the service door: shut
-m.door(vx0, vy0, vx1, vy1, 46, 'RFD_SGL', 'RF4_ATEL', replace(lp.ATELIER, floor=24), lock=LOCK_SERVICE)
+m.door(vx0, vy0, vx1, vy1, 46, 'RFD_OAKS', 'RF4_ATEL', replace(lp.ATELIER, floor=24), lock=LOCK_SERVICE)
 m.thing(950, 2184, T_MAG)
 m.thing(985, 2160, T_DRESS)
 for (x, y) in ((560, 2000), (850, 2000), (560, 2160), (850, 2120)):
@@ -318,7 +318,7 @@ spot(480, 1840, ORD, JUKEBOX_WAVE, 0, skill='hard')          # a brancardier cou
 m.label(hx0, hy0 - 24, 'F SALLE DE DANSE')
 # the side door to the lane behind the track: opened from the hall only (the shortcut is opened by progression)
 sx0, sy0, sx1, sy1 = lp.SIDE_DOOR                                                                 # its frame is the park's
-m.door(sx0, sy0, sx1, sy0 + 16, 44, 'RFD_SGL', 'RFP_PLN', lp.HALL, lock=LOCK_FROM_INSIDE, lockside='N')
+m.door(sx0, sy0, sx1, sy0 + 16, 44, 'RFD_OAKS', 'RFP_PLN', lp.HALL, lock=LOCK_FROM_INSIDE, lockside='N')
 
 # ============================================================================ G. THE LANE AND THE SUBSTATION DOOR
 lx0, ly0, lx1, ly1 = lp.LANE_BOX

@@ -6,3 +6,9 @@ warp flat RF2_EAU1
 // RF01-TEXTURES-1940: the same winch lever in the 1940 materials (Astra, RF01 only); the pair above stays for
 // its other uses.
 switch RFMSW0A on pic RFMSW1A tics 0
+
+// RF05: the wheel of the motor turns while the motor runs (two phases by Codex, RF05_MACHINES_01); stopped, the
+// map shows RF5_ROUS (luna_machines.zs), which is not animated.
+texture RF5_ROU0
+pic RF5_ROU0 tics 3
+pic RF5_ROU1 tics 3

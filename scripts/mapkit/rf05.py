@@ -160,7 +160,7 @@ ix0, iy0, ix1, iy1 = lp.HALL_IN
 ox0, oy0, ox1, oy1 = A['orchestra']
 m.box(ix1, 2160, ox0, 2208, lp.ATELIER, floor=24, ceil=24 + 96)                        # the curtain at the stage's end, open
 vx0, vy0, vx1, vy1 = lp.SERVICE_DOOR
-m.door(vx0, vy0, vx1, vy1, 46, 'RFD_SGL', 'RF4_ATEL', replace(lp.ATELIER, floor=24))   # the service door (l. 703)
+m.door(vx0, vy0, vx1, vy1, 46, 'RFD_OAKS', 'RF4_ATEL', replace(lp.ATELIER, floor=24))   # the service door (l. 703)
 
 # ============================================================================ A. THE STAIR
 m.thing(1568, 2400, T_START, angle=90)

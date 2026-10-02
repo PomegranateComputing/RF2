@@ -1,0 +1,36 @@
+{
+  "batch": "RF06_FLATS_01",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/RF06_FLATS_01",
+  "manifest_sha256": "a265857e879c5d997141b0688cce926a09df88db6bc7f9a8ee306281a19621ff",
+  "status": "candidate_for_opus_engine_review",
+  "imported": "2026-10-02 07:14",
+  "by": "Opus (integration)",
+  "head_before": "a7a45ea45f329c0a0fc0bfa1472d9b94f196b254",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 2
+  },
+  "files": [
+    {
+      "target": "src/patches/rf06/RF6_SOL.png",
+      "delivered": "runtime/patches/rf06/RF6_SOL.png",
+      "sha256": "bc456423d4e19bd40f90c5d14fd65329c8d27ce66fe5d7dc9afd798b307b5000",
+      "before": "444e6ef913cdca6d5b9b8abc1c53f03a63417fc44cb591ffd0b0e8049e704f3b",
+      "base_sha256": "444e6ef913cdca6d5b9b8abc1c53f03a63417fc44cb591ffd0b0e8049e704f3b",
+      "state": "remplace_base_conforme",
+      "kind": "Flat",
+      "id": null
+    },
+    {
+      "target": "src/patches/rf06/RF6_PLAF.png",
+      "delivered": "runtime/patches/rf06/RF6_PLAF.png",
+      "sha256": "08e723801cfab2bec9e02dc9d569659af34751e105ea6797f3897df537015c1e",
+      "before": "4cd118cdbe590754b87d37939641eb78e36ccf83f8d75fd57c85270f1ca80d0c",
+      "base_sha256": "4cd118cdbe590754b87d37939641eb78e36ccf83f8d75fd57c85270f1ca80d0c",
+      "state": "remplace_base_conforme",
+      "kind": "Flat",
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

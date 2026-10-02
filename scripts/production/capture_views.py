@@ -41,35 +41,49 @@ def main():
     views = json.loads(Path(a.views).read_text(encoding='utf-8'))
     name = a.name or ('cv_' + re.sub(r'[^A-Za-z0-9_]+', '_', out.name))[:60]
     probe = Path(tempfile.gettempdir()) / f'{name}_probe.pk3'
-    cmd = [sys.executable, str(HERE / 'view_check_pk3.py'), a.views, str(probe), str(a.wait)]
-    if a.hide:
-        cmd.append('hide')
-    if a.give:
-        cmd.append('give=' + a.give)
-    if a.alt:
-        cmd.append('alt=' + a.alt)
-    if a.tex:
-        cmd.append('tex=' + a.tex)
-    if a.code:
-        cmd.append('code=' + a.code)
-    subprocess.run(cmd, check=True, capture_output=True)
     w, h = (int(x) for x in a.size.split('x'))
-    status, text, shots = devrun.run(pk3, name, a.map.upper(), seconds=60 + 3 * len(views), width=w, height=h,
-                                     marker='RF_DEV_UI_DONE', extra=['-file', str(probe)])
-    logged = [(int(i), l, int(t)) for i, l, t in re.findall(r'RF_VIEWCHECK index=(\d+) label=(\S+) t=(\d+)', text)]
-    by_tic = {}
-    for p in sorted(shots.glob('*.png')):
-        t = ticcode.read(p)
-        if t is not None:
-            by_tic.setdefault(t, p)
-    rows = []
-    for i, label, t in logged:
-        p = by_tic.get(t)
-        dst = out / f'{i:02d}_{label}.png'
-        if p is not None:
-            shutil.copy2(p, dst)
-        rows.append(dict(index=i, label=label, tic=t, kept=p is not None, file=dst.name if p else None))
-    missing = [v[0] for v in views if v[0] not in {r['label'] for r in rows}]
+    number = {v[0]: i + 1 for i, v in enumerate(views)}
+    rows_by_label = {}
+    todo = list(views)
+    # The engine's picture sometimes stops following the game (stale frames: the tic strip shows it); the views whose
+    # picture is stale are asked again, alone, up to three more times.
+    for attempt in range(4):
+        if not todo:
+            break
+        vfile = Path(tempfile.gettempdir()) / f'{name}_views_{attempt}.json'
+        vfile.write_text(json.dumps(todo), encoding='utf-8')
+        cmd = [sys.executable, str(HERE / 'view_check_pk3.py'), str(vfile), str(probe), str(a.wait)]
+        if a.hide:
+            cmd.append('hide')
+        if a.give:
+            cmd.append('give=' + a.give)
+        if a.alt:
+            cmd.append('alt=' + a.alt)
+        if a.tex:
+            cmd.append('tex=' + a.tex)
+        if a.code:
+            cmd.append('code=' + a.code)
+        subprocess.run(cmd, check=True, capture_output=True)
+        status, text, shots = devrun.run(pk3, name, a.map.upper(), seconds=60 + 3 * len(todo), width=w, height=h,
+                                         marker='RF_DEV_UI_DONE', extra=['-file', str(probe)])
+        logged = [(l, int(t)) for _, l, t in re.findall(r'RF_VIEWCHECK index=(\d+) label=(\S+) t=(\d+)', text)]
+        by_tic = {}
+        for p in sorted(shots.glob('*.png')):
+            t = ticcode.read(p)
+            if t is not None:
+                by_tic.setdefault(t, p)
+        for label, t in logged:
+            p = by_tic.get(t)
+            i = number[label]
+            dst = out / f'{i:02d}_{label}.png'
+            if p is not None:
+                shutil.copy2(p, dst)
+            if p is not None or label not in rows_by_label:
+                rows_by_label[label] = dict(index=i, label=label, tic=t, kept=p is not None, file=dst.name if p else None,
+                                            attempt=attempt + 1)
+        todo = [v for v in views if not rows_by_label.get(v[0], {}).get('kept')]
+    rows = sorted(rows_by_label.values(), key=lambda r: r['index'])
+    missing = [v[0] for v in views if v[0] not in rows_by_label]
     report = dict(build=str(pk3), build_sha256=hashlib.sha256(pk3.read_bytes()).hexdigest(), map=a.map.upper(),
                   views=a.views, hide=a.hide, give=a.give, alt=a.alt, tex=a.tex, code=a.code, size=a.size, status=status, rows=rows, not_reached=missing)
     (out / 'vues.json').write_text(json.dumps(report, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')

@@ -139,6 +139,9 @@ def build_park(m, sign):
     a = {}
     # ---- the south: the backs of the public entrance, closed, the full width; the domed pillars of the gates above
     roofline(m, 0, 0, SVC_X0, 128, 256, 'RF4_PORT', PARK, ftex='RF4_ROCF')
+    # its east end, seen from the service path: the stone flank of the building, not half a gate of the facade
+    # (door pass of 02/10)
+    m.modify(SVC_X0 - 16, 0, SVC_X0, 128, lower='RF4_BASC', wall='RF4_BASC')
     for x in (448, 768, 1088, 1408):
         open_top(m, x, 48, x + 64, 112)
         m.slab(x, 48, x + 64, 112, 256, 352, 'RF4_BASC', top='RF4_ROCF', bottom='RF4_BASC')     # the shaft

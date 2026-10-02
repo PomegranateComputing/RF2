@@ -24,7 +24,7 @@ PPU = 4
 DEFS = []
 # Files imported over the stand-ins (Codex RF05_RF06_MATERIALS_01, 01/10): never redrawn, their definition is read from
 # the file in place.
-DELIVERED = {'RF6_BETN', 'RF6_BETS', 'RF6_PEAU', 'RF6_PEA2'}
+DELIVERED = {'RF6_BETN', 'RF6_BETS', 'RF6_PEAU', 'RF6_PEA2', 'RF6_SOL', 'RF6_PLAF'}   # + RF06_FLATS_01
 
 
 def save(kind, name, arr, ppu=PPU):

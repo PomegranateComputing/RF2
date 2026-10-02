@@ -46,9 +46,11 @@ DELIVERED = {'RF4_POIN': 8, 'RF4_CLE5': 8, 'RF4_CLE4': 8, 'RF4_NIAG': 8, 'RF4_C6
              'RF4_BRBK': 4, 'RF4_CABL': 4, 'RF4_BASF': 4, 'RF4_BALU': 4, 'RF4_ROCF': 4, 'RF4_TREI': 4, 'RF4_POTE': 4,
              'RF4_CHUT': 4, 'RF4_CHUS': 4, 'RF4_TOWR': 4, 'RF4_PORT': 4, 'RF4_MAST': 4, 'RF4_HERB': 4, 'RF4_VOIE': 4,
              'RF4_FAC1': 2, 'RF4_FAC2': 2, 'RF4_FAC3': 2, 'RF5_VOUT': 4, 'RF5_MARB': 4, 'RF5_MOTR': 4, 'RF5_ROU0': 4,
-             'RF5_ROU1': 4, 'RF5_ROUS': 4, 'RF5_NOD0': 4, 'RF5_NOD1': 4, 'RF5_NOD2': 4}
+             'RF5_ROU1': 4, 'RF5_ROUS': 4, 'RF5_NOD0': 4, 'RF5_NOD1': 4, 'RF5_NOD2': 4,
+             # Codex, 01/10 evening: RF05_DIALS_V02 (masked dials on the marble)
+             'RF5_CAD0': 4, 'RF5_CAD1': 4}
 # Sprites imported over the provisional drawings: never redrawn.
-DELIVERED_SPRITES = set()
+DELIVERED_SPRITES = {'R4SHA0'}     # Codex RF04_SHOE_V02 (01/10): the child's shoe, flat in the puddle
 # --only NAME[,NAME]: draw only these (new stand-ins); every other definition is read from the file in place.
 ONLY = set()
 

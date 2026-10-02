@@ -1,0 +1,986 @@
+{
+  "batch": "PREG_V02",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/PREG_V02",
+  "manifest_sha256": "726c7ae430cc7f0ea97419e92d0aaba8377fae9c0b0fab4cd02caff0d42821f5",
+  "status": "candidate_for_opus_engine_review",
+  "imported": "2026-10-02 07:14",
+  "by": "Opus (integration)",
+  "head_before": "a7a45ea45f329c0a0fc0bfa1472d9b94f196b254",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 97
+  },
+  "files": [
+    {
+      "target": "src/sprites/enemies/PREGA1.png",
+      "delivered": "runtime/sprites/enemies/PREGA1.png",
+      "sha256": "ca58b09e6348a2be99ecb8b9cfb13ce21965139a52f3e65b18b7b7d1dadf6971",
+      "before": "866c308c1b4df537c6c09d5930b288f3ac2830f629f28f098c23dbc1ee1f00d2",
+      "base_sha256": "866c308c1b4df537c6c09d5930b288f3ac2830f629f28f098c23dbc1ee1f00d2",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGA2.png",
+      "delivered": "runtime/sprites/enemies/PREGA2.png",
+      "sha256": "e09d48a4447fcbe81083800d824e47620c36a8722ae72c903461fda81185f95b",
+      "before": "669db57354d933bb2097a2743c030eaffeb8b8c2b6db9df455a1a91e9ca8be87",
+      "base_sha256": "669db57354d933bb2097a2743c030eaffeb8b8c2b6db9df455a1a91e9ca8be87",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGA3.png",
+      "delivered": "runtime/sprites/enemies/PREGA3.png",
+      "sha256": "d580a9612462ba4da1e96e4880f158eee3b4a38729cf394245eacb8bd5b01a8c",
+      "before": "8d67d4e8713255b3f57844291ce59508efb99cea911e38bc5b997e39b15938f2",
+      "base_sha256": "8d67d4e8713255b3f57844291ce59508efb99cea911e38bc5b997e39b15938f2",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGA4.png",
+      "delivered": "runtime/sprites/enemies/PREGA4.png",
+      "sha256": "daf199ccf7299bebb2921d5f7c45a896fd9c9c475440c5b4741bef0bedc2122a",
+      "before": "47cfaa5cb5dd3b3fedf4e8c231bd2cd3fcd93df23e121c00029da54a63483e17",
+      "base_sha256": "47cfaa5cb5dd3b3fedf4e8c231bd2cd3fcd93df23e121c00029da54a63483e17",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGA5.png",
+      "delivered": "runtime/sprites/enemies/PREGA5.png",
+      "sha256": "505dacf8ca89b35deb330879be0f5568aae78103ffd2a2d6ac06ef356b52711f",
+      "before": "03f587e5dfbbdb7a98083de39a9ffb4a0877d43696743690589a204c0d3c0826",
+      "base_sha256": "03f587e5dfbbdb7a98083de39a9ffb4a0877d43696743690589a204c0d3c0826",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGA6.png",
+      "delivered": "runtime/sprites/enemies/PREGA6.png",
+      "sha256": "df816e5b15e8ac6e70dae6596c9d69d8175962f512d887585cc9cb04e5a1dd99",
+      "before": "7367005b19abc6988ab9c7f603714e2f3d08d706453708596cbd234b5c008008",
+      "base_sha256": "7367005b19abc6988ab9c7f603714e2f3d08d706453708596cbd234b5c008008",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGA7.png",
+      "delivered": "runtime/sprites/enemies/PREGA7.png",
+      "sha256": "d7a13624fc9b043e61f160a09a168584e9f55314c8c92cb9782e5666729d3f51",
+      "before": "010a16bc7c613123a24a2d5bf37893852665f0206acfb01997c8b8def714c017",
+      "base_sha256": "010a16bc7c613123a24a2d5bf37893852665f0206acfb01997c8b8def714c017",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGA8.png",
+      "delivered": "runtime/sprites/enemies/PREGA8.png",
+      "sha256": "bc74db5ed0804f5a6fc624e74ddb04493bf9e8e043738591e2544d6360e2f10a",
+      "before": "66778a09d79a7f3780ef5cedacf4dd682e8a1f9e959736c39ea5de4cb0a5446b",
+      "base_sha256": "66778a09d79a7f3780ef5cedacf4dd682e8a1f9e959736c39ea5de4cb0a5446b",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGB1.png",
+      "delivered": "runtime/sprites/enemies/PREGB1.png",
+      "sha256": "9168592281e6df1d6f14dec007a50d32223adf0a3c9c38c20f61c43b42ab6628",
+      "before": "acaa3cd2abffb00b07b1f567ab454838c18baa6a96e06a26f4fc476fae8c73c9",
+      "base_sha256": "acaa3cd2abffb00b07b1f567ab454838c18baa6a96e06a26f4fc476fae8c73c9",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGB2.png",
+      "delivered": "runtime/sprites/enemies/PREGB2.png",
+      "sha256": "39987ab2ed7067d591de7bec434d5bb25e0b7806659b1b24ef2afe3613aec3ed",
+      "before": "a22896ea1a9bcf843744644bcfecb139df1ddee0e913f34130c8150577fab6e9",
+      "base_sha256": "a22896ea1a9bcf843744644bcfecb139df1ddee0e913f34130c8150577fab6e9",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGB3.png",
+      "delivered": "runtime/sprites/enemies/PREGB3.png",
+      "sha256": "d1d0031a5632f6bd63ed6e69947bb5b5784b7a545939eeeb4606eb897153220b",
+      "before": "4894103aa55aed9a71abe25c44da9e98f5d709325d358ae8f2b348a9746e6bca",
+      "base_sha256": "4894103aa55aed9a71abe25c44da9e98f5d709325d358ae8f2b348a9746e6bca",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGB4.png",
+      "delivered": "runtime/sprites/enemies/PREGB4.png",
+      "sha256": "6724b8df65c7013df8a2df5818f3a25ef3e80643b10bf2f8640a3f6a77b79ade",
+      "before": "187db56a7dfa51b5529d33d5690b804dd952092df4141aedab857ab04b221439",
+      "base_sha256": "187db56a7dfa51b5529d33d5690b804dd952092df4141aedab857ab04b221439",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGB5.png",
+      "delivered": "runtime/sprites/enemies/PREGB5.png",
+      "sha256": "127c8603a45f536aacca66a6096086dc4db1164644248bc9159e51d80b824ea1",
+      "before": "e1f656650b6546b812df7a8632fad7ad0349b365c16f90bb40a72713912de9a5",
+      "base_sha256": "e1f656650b6546b812df7a8632fad7ad0349b365c16f90bb40a72713912de9a5",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGB6.png",
+      "delivered": "runtime/sprites/enemies/PREGB6.png",
+      "sha256": "50c1870be5dbef7c23fad4ee9cc01836aacb3e67176a53f9c2ca91aae6eb7cf1",
+      "before": "b0644f6c5a9363217cb2299404a32d3b465fc83d2b5dbc98d122de8f58cfe4bf",
+      "base_sha256": "b0644f6c5a9363217cb2299404a32d3b465fc83d2b5dbc98d122de8f58cfe4bf",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGB7.png",
+      "delivered": "runtime/sprites/enemies/PREGB7.png",
+      "sha256": "83f58acfb4b2d9013c42a74b198af2cdbc14d0e0f79ddef50461f6e2eea58ab8",
+      "before": "c0fae87ce8b25206cdffac7c0d899a39a3d8b3c5c91886a42da33f6787bc5e5c",
+      "base_sha256": "c0fae87ce8b25206cdffac7c0d899a39a3d8b3c5c91886a42da33f6787bc5e5c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGB8.png",
+      "delivered": "runtime/sprites/enemies/PREGB8.png",
+      "sha256": "55f47fb67412c489713bacd59788c8c156a53380aef74c0c3a7c960455e2142a",
+      "before": "84c177a9dd6a686f0c905d3651450864ab5a1c115b862227ff96656d870f7016",
+      "base_sha256": "84c177a9dd6a686f0c905d3651450864ab5a1c115b862227ff96656d870f7016",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGC1.png",
+      "delivered": "runtime/sprites/enemies/PREGC1.png",
+      "sha256": "f7fb12fbb2552c2730ff2d79efd5b4de1c8566c6f753b437f5a32882aa863134",
+      "before": "051aefc1b040be11f98dfc28f7af3a9eb5bf80f508e0e7c0f69a349a77758d3a",
+      "base_sha256": "051aefc1b040be11f98dfc28f7af3a9eb5bf80f508e0e7c0f69a349a77758d3a",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGC2.png",
+      "delivered": "runtime/sprites/enemies/PREGC2.png",
+      "sha256": "67c3d323c501e01124fc02c39e57c46140202c7fd9be0a1fbc9d2d472ba25e31",
+      "before": "a885e6c7cc696d3182c5e6203360df29a9eab1ff8e994d2aecccef90284a9609",
+      "base_sha256": "a885e6c7cc696d3182c5e6203360df29a9eab1ff8e994d2aecccef90284a9609",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGC3.png",
+      "delivered": "runtime/sprites/enemies/PREGC3.png",
+      "sha256": "09c5e0981739109772b85d3c9b57ffa74cc9c8176f291484abbc1cdef94a4c88",
+      "before": "c17106d93530016aa7e1b71647bc81d4d7ecd025de1a206abc0edd907a8d95f4",
+      "base_sha256": "c17106d93530016aa7e1b71647bc81d4d7ecd025de1a206abc0edd907a8d95f4",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGC4.png",
+      "delivered": "runtime/sprites/enemies/PREGC4.png",
+      "sha256": "b2159ec12aa2dcc4a9aea7c64661edb3425d856224b820b8b79333e28bb40846",
+      "before": "24048a4723813c40768122c08558e4ec8df3ca1143b9fb47ca8134a6626ad260",
+      "base_sha256": "24048a4723813c40768122c08558e4ec8df3ca1143b9fb47ca8134a6626ad260",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGC5.png",
+      "delivered": "runtime/sprites/enemies/PREGC5.png",
+      "sha256": "8178b6e4e98b3e31a76ba6aec17eb322054323c238f6d8c7e6c22e847485f0af",
+      "before": "753d4ff7e9d36d3fae392d29bbbcf397be3f2392cc7507718fc6bc883319cf4a",
+      "base_sha256": "753d4ff7e9d36d3fae392d29bbbcf397be3f2392cc7507718fc6bc883319cf4a",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGC6.png",
+      "delivered": "runtime/sprites/enemies/PREGC6.png",
+      "sha256": "7dd07878279df07acf0b7347bba0fa4d2191626b77a34e5d9f3ab1ad0b74dff9",
+      "before": "49c133ba72bacff52b8a26c1b03ea0d2bbda3e86cce22ce9c3e9eb0f4801205d",
+      "base_sha256": "49c133ba72bacff52b8a26c1b03ea0d2bbda3e86cce22ce9c3e9eb0f4801205d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGC7.png",
+      "delivered": "runtime/sprites/enemies/PREGC7.png",
+      "sha256": "649ecc4685256382f731275f00993139a74f7f4c704474f59e75fe5853842bd1",
+      "before": "1d6b64587caa2f5401d535e663f02b59355f1b415365aae8f0beca29a46e57f3",
+      "base_sha256": "1d6b64587caa2f5401d535e663f02b59355f1b415365aae8f0beca29a46e57f3",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGC8.png",
+      "delivered": "runtime/sprites/enemies/PREGC8.png",
+      "sha256": "d96b70ee33ab1597647273c9dbd59bcfb19a335a6328aea9e90d66f1b0abaa0a",
+      "before": "987be978ee3246bb399aac1c20e1aad00a1ba575b76b0be681cd92cfe10dd445",
+      "base_sha256": "987be978ee3246bb399aac1c20e1aad00a1ba575b76b0be681cd92cfe10dd445",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGD1.png",
+      "delivered": "runtime/sprites/enemies/PREGD1.png",
+      "sha256": "66af4394c623bfc618488c7ebbd2842d73ea0b6d11b0f0928cfae8bbd0fa3ae9",
+      "before": "a83046fc75faed2a66e5027f84ecd788583ed700111ac980839cb7c6d882c17c",
+      "base_sha256": "a83046fc75faed2a66e5027f84ecd788583ed700111ac980839cb7c6d882c17c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGD2.png",
+      "delivered": "runtime/sprites/enemies/PREGD2.png",
+      "sha256": "564e542cb3919cccfc7343ea011ce03cc1bf8d6ddc00572043016c914e76e0a6",
+      "before": "134da090b28ecad04f73387898d73baef8cd9a085371c52430d8709b031be6b5",
+      "base_sha256": "134da090b28ecad04f73387898d73baef8cd9a085371c52430d8709b031be6b5",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGD3.png",
+      "delivered": "runtime/sprites/enemies/PREGD3.png",
+      "sha256": "c826f83a4431757605039f0a651cf6fb83cb549d0a3cedee8061e7e5ae998d63",
+      "before": "e15445ed66409b51f46a0d86a1d3d0d019bed8ba5b850ef23a3a6c48c931d7b2",
+      "base_sha256": "e15445ed66409b51f46a0d86a1d3d0d019bed8ba5b850ef23a3a6c48c931d7b2",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGD4.png",
+      "delivered": "runtime/sprites/enemies/PREGD4.png",
+      "sha256": "e88d167125d6aa4675426e204c8fc43a45b1dc22fa0bbca9ca1b2e3ec797cdb0",
+      "before": "4bc9a84193b6d15964cbd805ce9cd6cc4bd5eb6c6b881407a4fdde5bd33b2cf3",
+      "base_sha256": "4bc9a84193b6d15964cbd805ce9cd6cc4bd5eb6c6b881407a4fdde5bd33b2cf3",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGD5.png",
+      "delivered": "runtime/sprites/enemies/PREGD5.png",
+      "sha256": "cd3dd5fe79a7bf2bef5965d7b2025d12190236af009419e6f88728dec6fd8db4",
+      "before": "80de94becedd92097c684999bf27af880bcb713a9d00351433e7a46b87fdd777",
+      "base_sha256": "80de94becedd92097c684999bf27af880bcb713a9d00351433e7a46b87fdd777",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGD6.png",
+      "delivered": "runtime/sprites/enemies/PREGD6.png",
+      "sha256": "32988f47a15e66bbb5eade452002cc0ae0854b16660fc01e2211fcdc2e290cd2",
+      "before": "7a2b73ddeafe2c9e85a514ab2fa4cbbfe1486bf155968a29d081c923716b2f41",
+      "base_sha256": "7a2b73ddeafe2c9e85a514ab2fa4cbbfe1486bf155968a29d081c923716b2f41",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGD7.png",
+      "delivered": "runtime/sprites/enemies/PREGD7.png",
+      "sha256": "733ad41f0470eda75f4690e7e133eaa456dd3318cea4d34f7e973effb858a4ce",
+      "before": "134beda8515978303c0695a876f8eacc9da882326430789f3014a2f9bb12277e",
+      "base_sha256": "134beda8515978303c0695a876f8eacc9da882326430789f3014a2f9bb12277e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGD8.png",
+      "delivered": "runtime/sprites/enemies/PREGD8.png",
+      "sha256": "18056005928d81f457f8ea310538eef5f79fd7d4546483a9b9db7c463ecc8b92",
+      "before": "f8d23f48d268e0f77b2cf2df7f15dd88111488fdc298c45441f458c49ae132ab",
+      "base_sha256": "f8d23f48d268e0f77b2cf2df7f15dd88111488fdc298c45441f458c49ae132ab",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGE1.png",
+      "delivered": "runtime/sprites/enemies/PREGE1.png",
+      "sha256": "cf186e6e7f8752ccccf1efc3d2da9044bd539c02484dff02df3c9fdcfbbe8530",
+      "before": "4a2b477dfc0d136db88c198dd7335248ac31aa8fdc5e857ec7ded99908d4dc76",
+      "base_sha256": "4a2b477dfc0d136db88c198dd7335248ac31aa8fdc5e857ec7ded99908d4dc76",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGE2.png",
+      "delivered": "runtime/sprites/enemies/PREGE2.png",
+      "sha256": "6f716e57662a0a2c16ecffea37c728546a827f5b43bb99815420c1810fa0362d",
+      "before": "30a811a318b1520446d10c5db2645b4d4ef0ceaaf35b592eee311551137f3f64",
+      "base_sha256": "30a811a318b1520446d10c5db2645b4d4ef0ceaaf35b592eee311551137f3f64",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGE3.png",
+      "delivered": "runtime/sprites/enemies/PREGE3.png",
+      "sha256": "358dc5a20e83ff3dc96cca7c7487ed47f0daa2476372d24b7a1b636aacd09654",
+      "before": "50a18321af18fbed1c943049a44c2239df9279b5e5be1dfe65d805f85c7a80a5",
+      "base_sha256": "50a18321af18fbed1c943049a44c2239df9279b5e5be1dfe65d805f85c7a80a5",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGE4.png",
+      "delivered": "runtime/sprites/enemies/PREGE4.png",
+      "sha256": "6d0e50d5bee639c04b776c1215d85d4066be4f468c8c7921c0fde1adb869b0da",
+      "before": "30893bac95afd536877197bed4adcd887a2e0196cd7a7c318c02d02a74fd2ade",
+      "base_sha256": "30893bac95afd536877197bed4adcd887a2e0196cd7a7c318c02d02a74fd2ade",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGE5.png",
+      "delivered": "runtime/sprites/enemies/PREGE5.png",
+      "sha256": "b9a0ed557eaf792ef52e8c3c9b54b40f4479a731a6824e45a0d2c28e3551e517",
+      "before": "b9f805f0af437d770ee764568510d7d0a9a41ebfa4451720346775bbc29f2802",
+      "base_sha256": "b9f805f0af437d770ee764568510d7d0a9a41ebfa4451720346775bbc29f2802",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGE6.png",
+      "delivered": "runtime/sprites/enemies/PREGE6.png",
+      "sha256": "ecb52147c97c1d20c783a591183070ae0a0b882940b2859507cb968c44e8264a",
+      "before": "59bf2c7c7031546ea37d17b6350e0dec87c13dfb97621f96c6ac14f5e26e862c",
+      "base_sha256": "59bf2c7c7031546ea37d17b6350e0dec87c13dfb97621f96c6ac14f5e26e862c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGE7.png",
+      "delivered": "runtime/sprites/enemies/PREGE7.png",
+      "sha256": "05972c4805af124b798b4dbfbb2c999f0fbc64fa6aecd951d65a8b02cab8185b",
+      "before": "43b48387581fa0d2f96186cc32f48603810433f9cf819217f25f321296d19a64",
+      "base_sha256": "43b48387581fa0d2f96186cc32f48603810433f9cf819217f25f321296d19a64",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGE8.png",
+      "delivered": "runtime/sprites/enemies/PREGE8.png",
+      "sha256": "9ef70a93c8998845e9f1f126ea6ee9ddb31c24c3bee9f4b8d8cd2452fe1e99ca",
+      "before": "191dc11e8ca4802f5c8561e35762df12111660b5ef3606c4d95ff86a6aeb6ff3",
+      "base_sha256": "191dc11e8ca4802f5c8561e35762df12111660b5ef3606c4d95ff86a6aeb6ff3",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGF1.png",
+      "delivered": "runtime/sprites/enemies/PREGF1.png",
+      "sha256": "1fd41a3adb538d2e2e36678127410884aad5c0ca4c1e378828661a49f011a06a",
+      "before": "7acfbba08720c923fa6dbb04d8ff9c579208eec5226139104469cfbeda3621df",
+      "base_sha256": "7acfbba08720c923fa6dbb04d8ff9c579208eec5226139104469cfbeda3621df",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGF2.png",
+      "delivered": "runtime/sprites/enemies/PREGF2.png",
+      "sha256": "5c00ce6bb8a362759015d96bad9d69bf4868ba9f3bb3669aea469845c0ed5f66",
+      "before": "28892386f2dc5f0a941567995b7498547e87c01ca2785d3f3ab26392c1ec888e",
+      "base_sha256": "28892386f2dc5f0a941567995b7498547e87c01ca2785d3f3ab26392c1ec888e",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGF3.png",
+      "delivered": "runtime/sprites/enemies/PREGF3.png",
+      "sha256": "b33df90c9273817b77f7cd453d18f8f93fe282f96ffa3645240d9a6b51495aef",
+      "before": "29ce93eb695787a94d176f305d13f601ae0faeb8bd5a1c66921948cdb11f409c",
+      "base_sha256": "29ce93eb695787a94d176f305d13f601ae0faeb8bd5a1c66921948cdb11f409c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGF4.png",
+      "delivered": "runtime/sprites/enemies/PREGF4.png",
+      "sha256": "260661d9d49327e7c696c9c742fbfbe9230559b33c17870f7e47815e8f06efe1",
+      "before": "c2d3c133a57c5b587d5623f64c81942ee611c3568dc27b161e39be127dd271f5",
+      "base_sha256": "c2d3c133a57c5b587d5623f64c81942ee611c3568dc27b161e39be127dd271f5",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGF5.png",
+      "delivered": "runtime/sprites/enemies/PREGF5.png",
+      "sha256": "2f004064ccc18614db07bedcdfaea9ec5fe111d45d3fed4c10afafc48941a4c5",
+      "before": "c63634884527d06d2006b48ae1c34053730914ccd8e5da689c291956c7213101",
+      "base_sha256": "c63634884527d06d2006b48ae1c34053730914ccd8e5da689c291956c7213101",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGF6.png",
+      "delivered": "runtime/sprites/enemies/PREGF6.png",
+      "sha256": "15f7db0f82f9cc67172a77a8f9e588b85e84405f470a6ea238728b21f8ec528b",
+      "before": "31193b34e5122152e3683ae56f163b15247d4a61b3330e71ce5d00704feefd6c",
+      "base_sha256": "31193b34e5122152e3683ae56f163b15247d4a61b3330e71ce5d00704feefd6c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGF7.png",
+      "delivered": "runtime/sprites/enemies/PREGF7.png",
+      "sha256": "33599e725e50d717da25c452d94c746f68d25d0384f7e3b79555f9cc651bd15d",
+      "before": "5941b24c8a7d959d1210c9537e16e3dde4ec4f854d8f9c5b84b653419a3f2eae",
+      "base_sha256": "5941b24c8a7d959d1210c9537e16e3dde4ec4f854d8f9c5b84b653419a3f2eae",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGF8.png",
+      "delivered": "runtime/sprites/enemies/PREGF8.png",
+      "sha256": "e6572a64e6897c1c651fec83b3c906154ca518b0588f6b8216acfadbc2e920db",
+      "before": "75c75ec2cf5eab08ee83ab6a4af421515177f32cfb3f7e83b17dd2d1a855fc79",
+      "base_sha256": "75c75ec2cf5eab08ee83ab6a4af421515177f32cfb3f7e83b17dd2d1a855fc79",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGG1.png",
+      "delivered": "runtime/sprites/enemies/PREGG1.png",
+      "sha256": "281b8f6a82a42c5c2bc98f8a7b69aeb1e1b61c32f9a6ae75e4bbff19ded23220",
+      "before": "81dc96f15b28b254b91dddb0d53a62d345be3fce31461c80076d58a93b123b1d",
+      "base_sha256": "81dc96f15b28b254b91dddb0d53a62d345be3fce31461c80076d58a93b123b1d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGG2.png",
+      "delivered": "runtime/sprites/enemies/PREGG2.png",
+      "sha256": "f337cfba40510016fd1cd365985b696058794400581b6f463ca4e4dd3605d6b4",
+      "before": "e528b6796858c7bcb18dead780d1f872dd9a7b4c49d3e91eecd89a8a35a7491d",
+      "base_sha256": "e528b6796858c7bcb18dead780d1f872dd9a7b4c49d3e91eecd89a8a35a7491d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGG3.png",
+      "delivered": "runtime/sprites/enemies/PREGG3.png",
+      "sha256": "2fc4fece26b7e0fb413d05b0553847056780b77414a1613af1c2e60f59fffff0",
+      "before": "32e8215e31941086a71328eab39f1426d26170d6f023286b06677a8284af23a0",
+      "base_sha256": "32e8215e31941086a71328eab39f1426d26170d6f023286b06677a8284af23a0",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGG4.png",
+      "delivered": "runtime/sprites/enemies/PREGG4.png",
+      "sha256": "607d3702c33583c8c06fd97a68b70dfbcff692bc7a16079e02afabb8dd43d799",
+      "before": "75007652238cc70f5d2aafa009a141d2a64286da4119dd6446e9709ec570c834",
+      "base_sha256": "75007652238cc70f5d2aafa009a141d2a64286da4119dd6446e9709ec570c834",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGG5.png",
+      "delivered": "runtime/sprites/enemies/PREGG5.png",
+      "sha256": "825ee87f807856f9070030cfd4374044b2836493c013ede7021eaa8787971b11",
+      "before": "8979877f78922db013350c5706d59478adbe0deba79777c973da744494a58a71",
+      "base_sha256": "8979877f78922db013350c5706d59478adbe0deba79777c973da744494a58a71",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGG6.png",
+      "delivered": "runtime/sprites/enemies/PREGG6.png",
+      "sha256": "c3ddce14c1355a6dd9d50fa693e7fc86b2ec5eb172213ce2f93f1c9e615dea4e",
+      "before": "0f2ec8f13dae08d0cb7000054f657c42fd52ebb36c1b9ace4187f5e21752ec94",
+      "base_sha256": "0f2ec8f13dae08d0cb7000054f657c42fd52ebb36c1b9ace4187f5e21752ec94",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGG7.png",
+      "delivered": "runtime/sprites/enemies/PREGG7.png",
+      "sha256": "cbff8e3fa500db5b30bf46c3a4b92a279c39ebe82238fecb7934cefae8794a54",
+      "before": "42e49fb42c4754514798671b100e6538f06d18bf7e72187a37c78f1cbeb644a8",
+      "base_sha256": "42e49fb42c4754514798671b100e6538f06d18bf7e72187a37c78f1cbeb644a8",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGG8.png",
+      "delivered": "runtime/sprites/enemies/PREGG8.png",
+      "sha256": "6bf7a5b6a7c23143cb45fc851982565b317063bc0df159ef3988634a23d76f7a",
+      "before": "2b0365466f574c131fb2174a7bcdc6e79195d8a661abd673d5b02d87e6f52f4f",
+      "base_sha256": "2b0365466f574c131fb2174a7bcdc6e79195d8a661abd673d5b02d87e6f52f4f",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGN1.png",
+      "delivered": "runtime/sprites/enemies/PREGN1.png",
+      "sha256": "044e68943db15335afdfb1e7dfd25f436ce47dcf9af82c49c2bdae5202b825a3",
+      "before": "0b03dcf955f193843d11fa5631c3067efaec4a0198ca5bd293ae9e9cbd1b97fe",
+      "base_sha256": "0b03dcf955f193843d11fa5631c3067efaec4a0198ca5bd293ae9e9cbd1b97fe",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGN2.png",
+      "delivered": "runtime/sprites/enemies/PREGN2.png",
+      "sha256": "55e60c76e356b8b35024ac254141a4cfd889ae22774502909c697a8b624f32b2",
+      "before": "8bf9a439424395611b3f63932db071f996ee7bf0da0a45267c84eadf9bf2ec22",
+      "base_sha256": "8bf9a439424395611b3f63932db071f996ee7bf0da0a45267c84eadf9bf2ec22",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGN3.png",
+      "delivered": "runtime/sprites/enemies/PREGN3.png",
+      "sha256": "dde5403740adef1ea7712d993f805aec95175bc70eb3036a3c98077d9f23e567",
+      "before": "2ae25fb3dd4b3583a92681d485abfbd15a934d9da8e4e739052ea98234bff20d",
+      "base_sha256": "2ae25fb3dd4b3583a92681d485abfbd15a934d9da8e4e739052ea98234bff20d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGN4.png",
+      "delivered": "runtime/sprites/enemies/PREGN4.png",
+      "sha256": "9ea75b411f4c1571aba63b00f395d3f1a6303cada3bb18194754d39a85a0d19b",
+      "before": "81235a9ca9f24e63f93a8919686db197d825b641d622d4569867f56dd1d60572",
+      "base_sha256": "81235a9ca9f24e63f93a8919686db197d825b641d622d4569867f56dd1d60572",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGN5.png",
+      "delivered": "runtime/sprites/enemies/PREGN5.png",
+      "sha256": "a9776c55c28839530f235ebdc9167e0a8b74d42978bdd671895156cd7100f1d8",
+      "before": "dcbb6ed23cb24dba4d2891481c1baea61b55e34bda9091111b2fd564cd550920",
+      "base_sha256": "dcbb6ed23cb24dba4d2891481c1baea61b55e34bda9091111b2fd564cd550920",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGN6.png",
+      "delivered": "runtime/sprites/enemies/PREGN6.png",
+      "sha256": "d8f51571b2339113a0fbc0ad9ffd2aaa899d6b033da38cdaa9dd75db938cc01e",
+      "before": "ecc1a26b22492231d6139c334212c2c97c3d19782fec8f9da9423f978927d61d",
+      "base_sha256": "ecc1a26b22492231d6139c334212c2c97c3d19782fec8f9da9423f978927d61d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGN7.png",
+      "delivered": "runtime/sprites/enemies/PREGN7.png",
+      "sha256": "c00618cee7bc4f833c3541ee0ce36428bd0905f8f74e5c0ba4e73a094df7a97c",
+      "before": "ffdc5c04db5c6ef8edaef9519938c48c2a96483234bdeb060a7e47b4b19e0584",
+      "base_sha256": "ffdc5c04db5c6ef8edaef9519938c48c2a96483234bdeb060a7e47b4b19e0584",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGN8.png",
+      "delivered": "runtime/sprites/enemies/PREGN8.png",
+      "sha256": "5a3994a9fe11fc65e4aecd167a6d12280e41d505ce357c4b9021b5ac76f2877f",
+      "before": "e3b75b68c0c70320fe709d7d20860157a616c0e7d07a5b8b36e37d87c7e162a7",
+      "base_sha256": "e3b75b68c0c70320fe709d7d20860157a616c0e7d07a5b8b36e37d87c7e162a7",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGH1.png",
+      "delivered": "runtime/sprites/enemies/PREGH1.png",
+      "sha256": "f7529f7bea795d42f55672e5c6235e1e289627ce10c88061d8ea62ab21ed3c45",
+      "before": "f199f127fa819e0f99a79cdf7dc5a661212d59e3abf7ae6f5206a2a490f61597",
+      "base_sha256": "f199f127fa819e0f99a79cdf7dc5a661212d59e3abf7ae6f5206a2a490f61597",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGH2.png",
+      "delivered": "runtime/sprites/enemies/PREGH2.png",
+      "sha256": "4bdd188a8761e746b24f258dea8a427053650a122e332b7b8507f010361adfea",
+      "before": "6a233d3fdfdfa7d1c2e285e6762c81e9a3104cbd1159256be680ea192c9a8826",
+      "base_sha256": "6a233d3fdfdfa7d1c2e285e6762c81e9a3104cbd1159256be680ea192c9a8826",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGH3.png",
+      "delivered": "runtime/sprites/enemies/PREGH3.png",
+      "sha256": "d5dbab1a4abe0db6042ea7b8a06ca80483c737f87f1d903afdda8b0c4f18d62c",
+      "before": "96310da4a9cea738758def4c5f08650f125de6c204c9f4640bbf9d495e212fdb",
+      "base_sha256": "96310da4a9cea738758def4c5f08650f125de6c204c9f4640bbf9d495e212fdb",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGH4.png",
+      "delivered": "runtime/sprites/enemies/PREGH4.png",
+      "sha256": "8408be77d25f3ed25e308fb21fd8c3ec5dded26eb66b2685c17be28a778ea376",
+      "before": "8e06786dd8cd7b40f5bcf60e559f8e6e7d55bff1fe5e1b748d4937db3fa82f9c",
+      "base_sha256": "8e06786dd8cd7b40f5bcf60e559f8e6e7d55bff1fe5e1b748d4937db3fa82f9c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGH5.png",
+      "delivered": "runtime/sprites/enemies/PREGH5.png",
+      "sha256": "3e9993fe12f52c4aadfee19d72bfb4c72f06017ff802f1c4f47ce32a9a74f5a4",
+      "before": "77f1b61ff0f985711dd97348744ff5d23d94030cf8f7b8c6fdc7db23f1fc3d30",
+      "base_sha256": "77f1b61ff0f985711dd97348744ff5d23d94030cf8f7b8c6fdc7db23f1fc3d30",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGH6.png",
+      "delivered": "runtime/sprites/enemies/PREGH6.png",
+      "sha256": "4a61921ca2c3a83a706dd4dc90507d782f9ae7dc1e27fff8ee5d28827b87061e",
+      "before": "bc68fda5112d918808e850d96bf984ff7d5cc0156392f297a3d2c5e9897aa710",
+      "base_sha256": "bc68fda5112d918808e850d96bf984ff7d5cc0156392f297a3d2c5e9897aa710",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGH7.png",
+      "delivered": "runtime/sprites/enemies/PREGH7.png",
+      "sha256": "facfa7b8c76ff6ab63f7b760b19dde32839386bcc7f83520606a15ebc068f1d2",
+      "before": "d8b1c88cf50418d88bdb87d9b8e16e688a8b10fb0a4ca05596185199c11bc7ca",
+      "base_sha256": "d8b1c88cf50418d88bdb87d9b8e16e688a8b10fb0a4ca05596185199c11bc7ca",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGH8.png",
+      "delivered": "runtime/sprites/enemies/PREGH8.png",
+      "sha256": "ac98398d6a4b94c5de924cc731995c97b75c3aa89f96fa4aadbcb51f936aef5a",
+      "before": "ad74a61a213f83193f0647c7556499e1fb940f67953318f8743ce44de338f063",
+      "base_sha256": "ad74a61a213f83193f0647c7556499e1fb940f67953318f8743ce44de338f063",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGI1.png",
+      "delivered": "runtime/sprites/enemies/PREGI1.png",
+      "sha256": "e73b5a0d2e760849a414fd1799937aaf357636e421ca32d8c164aaa1739149fd",
+      "before": "9bebfb34dbce96feaf59a55eb302f44ff5ccd9ac1ca939af9845c2bfd659ce40",
+      "base_sha256": "9bebfb34dbce96feaf59a55eb302f44ff5ccd9ac1ca939af9845c2bfd659ce40",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGI2.png",
+      "delivered": "runtime/sprites/enemies/PREGI2.png",
+      "sha256": "cb7b6e1583e3600d699f72f3dd22476b82ae26930e2f5e111e0b1d6abd975d73",
+      "before": "d34ab613c5821bd0da18f4531c9bf903df9a908b173262311b9b4e46d1d1bff9",
+      "base_sha256": "d34ab613c5821bd0da18f4531c9bf903df9a908b173262311b9b4e46d1d1bff9",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGI3.png",
+      "delivered": "runtime/sprites/enemies/PREGI3.png",
+      "sha256": "e64e26df7b50402f058712cfc11c8bbc0826a52a14b4c98db5cbcd3dce73fc98",
+      "before": "576fa60e582431dcd4e132585e1df499a2c0ba92ef1d413cf691a776f8a8c485",
+      "base_sha256": "576fa60e582431dcd4e132585e1df499a2c0ba92ef1d413cf691a776f8a8c485",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGI4.png",
+      "delivered": "runtime/sprites/enemies/PREGI4.png",
+      "sha256": "a1db0c7fd04ab458ac37cc9d6e1890a25e661a70f96089ece3bea9e439c7ab49",
+      "before": "b6767a1661939463121d705c12c2c54fa8fa7095e499a0b322c6f1f82b2950f2",
+      "base_sha256": "b6767a1661939463121d705c12c2c54fa8fa7095e499a0b322c6f1f82b2950f2",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGI5.png",
+      "delivered": "runtime/sprites/enemies/PREGI5.png",
+      "sha256": "d9980df309d4711fcde5e394285ec8f9fdfcb0945cbad44f24e93ee07a4340b3",
+      "before": "07c82bd66ca1f1a4866c56806737f8e4b80c1d945b9f02a86d632a22cbbcaee0",
+      "base_sha256": "07c82bd66ca1f1a4866c56806737f8e4b80c1d945b9f02a86d632a22cbbcaee0",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGI6.png",
+      "delivered": "runtime/sprites/enemies/PREGI6.png",
+      "sha256": "ec6731441bee6aebc0376092143eb98d90128e3e8749ced6b2b74684d596d7cc",
+      "before": "7e4fab89e96baf87db1b91dc46d3ed65f7b9adb8303cba58e49785571c76b1d2",
+      "base_sha256": "7e4fab89e96baf87db1b91dc46d3ed65f7b9adb8303cba58e49785571c76b1d2",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGI7.png",
+      "delivered": "runtime/sprites/enemies/PREGI7.png",
+      "sha256": "18700d3598d0071bece8b81a3031091e0e2f94ac01f54075f20fc0d0153d1758",
+      "before": "bfdf804cd4ef0ba75dcb683f17384539808ab24cff1ef4e8da21ffe968717858",
+      "base_sha256": "bfdf804cd4ef0ba75dcb683f17384539808ab24cff1ef4e8da21ffe968717858",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGI8.png",
+      "delivered": "runtime/sprites/enemies/PREGI8.png",
+      "sha256": "b1c8fd4b5cb69a39968e878053c5ec9a4f12a0df11f2233a1d271a6ad633396b",
+      "before": "774c75ed107539673a88513aba8d892cb857117c25e18a557d25625a5f9e36d0",
+      "base_sha256": "774c75ed107539673a88513aba8d892cb857117c25e18a557d25625a5f9e36d0",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGJ1.png",
+      "delivered": "runtime/sprites/enemies/PREGJ1.png",
+      "sha256": "3a233fb39da225afcca5c32b9d11a789f7edb8ac7f32b3dac8d535c9909ab295",
+      "before": "23748d942943bef0cba48b32362a1fe636f39cf06f884184be83c831f12d347d",
+      "base_sha256": "23748d942943bef0cba48b32362a1fe636f39cf06f884184be83c831f12d347d",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGJ2.png",
+      "delivered": "runtime/sprites/enemies/PREGJ2.png",
+      "sha256": "fc82fe9367dabb195eef7e95d95151fcb9cb5be368a058102e667c6f9cc3e9e1",
+      "before": "ff8219a3aa71776301b83f977487050f7b4b8d28056acf8154a538ad93244b8f",
+      "base_sha256": "ff8219a3aa71776301b83f977487050f7b4b8d28056acf8154a538ad93244b8f",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGJ3.png",
+      "delivered": "runtime/sprites/enemies/PREGJ3.png",
+      "sha256": "e22c0b0d1be23fa06bac7e72b556a5db53ae1b39f09b39b1abd7d1dec736fd1b",
+      "before": "04fb759aeea096b1ab9d903bd777ee9fbdc33baecf27a645d613619daf5a4d1c",
+      "base_sha256": "04fb759aeea096b1ab9d903bd777ee9fbdc33baecf27a645d613619daf5a4d1c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGJ4.png",
+      "delivered": "runtime/sprites/enemies/PREGJ4.png",
+      "sha256": "200ca10b102baa2b5032c3643e9e9e81cb7b01e0821ac29a0511d1823994f410",
+      "before": "8255c36eb0c6fad6bdd6afeefd4f6a442ef07beb51ef03ebb10952585955e703",
+      "base_sha256": "8255c36eb0c6fad6bdd6afeefd4f6a442ef07beb51ef03ebb10952585955e703",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGJ5.png",
+      "delivered": "runtime/sprites/enemies/PREGJ5.png",
+      "sha256": "f09b8f123702caa6b988f20af6f8b596dd21c66af2287eaf2ec3ccb79393d0e9",
+      "before": "15346f7f2a68f7f6da1b4a44c1f1ad072c174b8e309392256a8ac67e21f85745",
+      "base_sha256": "15346f7f2a68f7f6da1b4a44c1f1ad072c174b8e309392256a8ac67e21f85745",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGJ6.png",
+      "delivered": "runtime/sprites/enemies/PREGJ6.png",
+      "sha256": "a06522be7a43ec74e4eff678c43f2f1eccfecd9f72b1f0475347a2e62ceb2621",
+      "before": "b23b297c8ed3b7e7885dd4b1e9f5b5d71f3fc9050a467b73ca7457273ac9bf8c",
+      "base_sha256": "b23b297c8ed3b7e7885dd4b1e9f5b5d71f3fc9050a467b73ca7457273ac9bf8c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGJ7.png",
+      "delivered": "runtime/sprites/enemies/PREGJ7.png",
+      "sha256": "1597b617e5cdc92fd0a5a52edf48b79a5969a27e7fb9e2eff89ab94e04d31cb5",
+      "before": "08fb32bab455066764ee91651915d1a43677758403bc933f717223cf59294301",
+      "base_sha256": "08fb32bab455066764ee91651915d1a43677758403bc933f717223cf59294301",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGJ8.png",
+      "delivered": "runtime/sprites/enemies/PREGJ8.png",
+      "sha256": "8ab18d8d7f19d3a8f0308be43bac9ca18de740452f3bdf90ef816502b76ba43e",
+      "before": "3039ef3cb4fdc5b761d699f5785b44b1c1e8cd600d8f6ca3585edb286902ea97",
+      "base_sha256": "3039ef3cb4fdc5b761d699f5785b44b1c1e8cd600d8f6ca3585edb286902ea97",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGK1.png",
+      "delivered": "runtime/sprites/enemies/PREGK1.png",
+      "sha256": "46b7390f9b500be2d4791fedef2e732282219bf6f6a809e1aa584471f27755b5",
+      "before": "a7063d70aca7c803b9ea6b09e9fc892c5820da654de7d5847eaaa154278ab0ff",
+      "base_sha256": "a7063d70aca7c803b9ea6b09e9fc892c5820da654de7d5847eaaa154278ab0ff",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGK2.png",
+      "delivered": "runtime/sprites/enemies/PREGK2.png",
+      "sha256": "aa33130f05c0f1b410ff598696c51cf3b9d0b2f58d75fee0ae05a0837b9d2343",
+      "before": "cc305c6dafc09a2204e2fc45bb4839067e793973c99d6c50fe0043430e5ab8db",
+      "base_sha256": "cc305c6dafc09a2204e2fc45bb4839067e793973c99d6c50fe0043430e5ab8db",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGK3.png",
+      "delivered": "runtime/sprites/enemies/PREGK3.png",
+      "sha256": "4da29536236d8fc4cea9baff325a8cfa8a259f9653aa7e7a1c4e02e0270292e1",
+      "before": "b5747d2933c13f882145e206d8820f9adaf8434e09394fa4d80f825124f30954",
+      "base_sha256": "b5747d2933c13f882145e206d8820f9adaf8434e09394fa4d80f825124f30954",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGK4.png",
+      "delivered": "runtime/sprites/enemies/PREGK4.png",
+      "sha256": "e861d803bde0762cb8f7e14c473a70ccac34ced4071956bdf9d88ef07fbeef08",
+      "before": "7b3314de4d76cf8a39797ce54e0e2566feb645c6cdf20edc3ad897c304cf4c60",
+      "base_sha256": "7b3314de4d76cf8a39797ce54e0e2566feb645c6cdf20edc3ad897c304cf4c60",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGK5.png",
+      "delivered": "runtime/sprites/enemies/PREGK5.png",
+      "sha256": "f936a6fd359bbfc0a60b78cf0039d0733328ff3defef532784662071747b9b82",
+      "before": "6714ba9eb8b9cde8f5540fbccac3174d5319ad5f941336b0939d86aa2325e444",
+      "base_sha256": "6714ba9eb8b9cde8f5540fbccac3174d5319ad5f941336b0939d86aa2325e444",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGK6.png",
+      "delivered": "runtime/sprites/enemies/PREGK6.png",
+      "sha256": "ed446d30e290232622e66b536e120478d1159f948c052c46382a17bd67a986ac",
+      "before": "1a7005a49d2015d0195daef88b67a10dbe5bc87e26645abba935fa331dca2e6c",
+      "base_sha256": "1a7005a49d2015d0195daef88b67a10dbe5bc87e26645abba935fa331dca2e6c",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGK7.png",
+      "delivered": "runtime/sprites/enemies/PREGK7.png",
+      "sha256": "9e640142ba44f684699b8f93dd65b8b0c41124e56cc115128a77b98c5d1f7919",
+      "before": "cd6c2eccc05e1daee7b4f5cffeb7ab22cb0d34e5ab567ec9a12df60a8968cebc",
+      "base_sha256": "cd6c2eccc05e1daee7b4f5cffeb7ab22cb0d34e5ab567ec9a12df60a8968cebc",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/sprites/enemies/PREGK8.png",
+      "delivered": "runtime/sprites/enemies/PREGK8.png",
+      "sha256": "0a53eacd2a3fe7d9ca999fc8103c1f0045ba2c3e95abdb527136bf99c0b66051",
+      "before": "060b61974e8dfb90005a1aa7d80a332dad34ae622ab44e3166d761618e4b2a43",
+      "base_sha256": "060b61974e8dfb90005a1aa7d80a332dad34ae622ab44e3166d761618e4b2a43",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    },
+    {
+      "target": "src/models/rf2_art_01/porte_registre.obj",
+      "delivered": "runtime/models/rf2_art_01/porte_registre.obj",
+      "sha256": "106046de899731ccdb4033e31cc8b266e26074ccce8a09683b5511031b2e4eb1",
+      "before": "0aa8f3e4f6ef2eb9e42f21270521f4bc9d3257305e67f6c0c9c6e0f1df8f7618",
+      "base_sha256": "0aa8f3e4f6ef2eb9e42f21270521f4bc9d3257305e67f6c0c9c6e0f1df8f7618",
+      "state": "remplace_base_conforme",
+      "kind": null,
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

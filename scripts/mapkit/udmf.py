@@ -11,7 +11,11 @@ This is not a level generator: every box, door and thing is placed explicitly by
 """
 from dataclasses import dataclass, replace
 from collections import deque
-import struct, json, math, re
+import struct, json, math, re, sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import doorfit  # noqa: E402
 
 UNIT = 16
 DIRS = {'N': (0, 1), 'E': (1, 0), 'S': (0, -1), 'W': (-1, 0)}
@@ -83,6 +87,9 @@ class MapBuilder:
         self.notes = []       # free text for the plan legend
         self.start = None
         self.exit_cells = set()
+        self.door_alias = {}      # texture -> texture drawn in its place (a map whose names are swapped after the build)
+        self.door_frames = True   # doors built with a fixed frame and lintel, their image fitted (doorfit.py)
+        self.door_report = []
 
     # ------------------------------------------------------------------ authoring
     @staticmethod
@@ -284,10 +291,9 @@ class MapBuilder:
                 tex = face['texture']
             fs['texturemiddle'] = tex
             ls['blocking'] = True
-            if A.role == 'door':
-                ls['dontpegtop'] = True
-            else:
-                ls['dontpegbottom'] = True
+            # anchored to the floor: a wall stays put, and so does the track a door slides in (pegged to the ceiling
+            # it would ride up with the door: door pass of 02/10)
+            ls['dontpegbottom'] = True
             if face:
                 for k in ('offsetx', 'offsety'):
                     if k in face:
@@ -582,6 +588,13 @@ class MapBuilder:
                             d.update(special=160, arg0=tag, arg1=33 if alpha == 0 else 1, arg2=1, arg3=alpha)
                         out_lines.append(d)
                     k += 1
+        if self.door_frames:
+            door_sectors = {i: (c.wall, c.track) for i, c in enumerate(sectors) if c.role == 'door'}
+            wall_of = lambda s: sectors[s].wall if s < len(sectors) else ''
+            self.door_report = doorfit.frame_doors(verts, sector_dicts, sides, out_lines, door_sectors, wall_of,
+                                                   alias=self.door_alias)
+            doorfit.fit_static(verts, sector_dicts, sides, out_lines, wall_of, alias=self.door_alias,
+                               skip_sectors=set(door_sectors), report=self.door_report)
         text = f'// {self.name} - Red Flags 2 production map. Authored with scripts/mapkit (cell grid {UNIT}).\n'
         text += 'namespace = "zdoom";\n\n'
         things = self.things + self.sound_zones()

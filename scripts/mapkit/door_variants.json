@@ -1,0 +1,180 @@
+{
+ "RD008D49": {
+  "source": "RFMDOORA",
+  "w": 64,
+  "h": 104,
+  "mirrored": false
+ },
+ "RD11D510": {
+  "source": "RFD_SGL",
+  "w": 48,
+  "h": 88,
+  "mirrored": false
+ },
+ "RD1405A1": {
+  "source": "RFDDBLA",
+  "w": 96,
+  "h": 112,
+  "mirrored": false
+ },
+ "RD1AD047": {
+  "source": "RFM_GRIL",
+  "w": 112,
+  "h": 168,
+  "mirrored": false
+ },
+ "RD1DDE15": {
+  "source": "RFM_GRIL",
+  "w": 160,
+  "h": 168,
+  "mirrored": false
+ },
+ "RD245ADD": {
+  "source": "RF2_RIDO",
+  "w": 48,
+  "h": 104,
+  "mirrored": false
+ },
+ "RD2979B6": {
+  "source": "RFEXIT",
+  "w": 64,
+  "h": 128,
+  "mirrored": false,
+  "wall": "RFPOM",
+  "total": 192
+ },
+ "RD35F910": {
+  "source": "RFD_OAKS",
+  "w": 48,
+  "h": 96,
+  "mirrored": false
+ },
+ "RD3E5137": {
+  "source": "RFMGRILA",
+  "w": 64,
+  "h": 160,
+  "mirrored": false
+ },
+ "RD4BA84C": {
+  "source": "RFDSGLA",
+  "w": 64,
+  "h": 112,
+  "mirrored": false
+ },
+ "RD5A8D44": {
+  "source": "RFD_OAKS",
+  "w": 64,
+  "h": 128,
+  "mirrored": true
+ },
+ "RD6C9264": {
+  "source": "RF6_JOUR",
+  "w": 96,
+  "h": 96,
+  "mirrored": false
+ },
+ "RD6D4C44": {
+  "source": "RFMDOORA",
+  "w": 64,
+  "h": 104,
+  "mirrored": true
+ },
+ "RD6E9F46": {
+  "source": "RFD_OAKS",
+  "w": 48,
+  "h": 96,
+  "mirrored": true
+ },
+ "RD7B3D82": {
+  "source": "RFD_SGL",
+  "w": 64,
+  "h": 112,
+  "mirrored": true
+ },
+ "RD8040AF": {
+  "source": "RFDOORB",
+  "w": 192,
+  "h": 192,
+  "mirrored": false
+ },
+ "RD8C77A1": {
+  "source": "RFMGRILA",
+  "w": 64,
+  "h": 128,
+  "mirrored": false
+ },
+ "RD8EB290": {
+  "source": "RFDSGLA",
+  "w": 48,
+  "h": 104,
+  "mirrored": true
+ },
+ "RD94CC3A": {
+  "source": "RFMGRILA",
+  "w": 96,
+  "h": 160,
+  "mirrored": false
+ },
+ "RD970EBF": {
+  "source": "RFDSGLA",
+  "w": 64,
+  "h": 112,
+  "mirrored": true
+ },
+ "RD9AD7A7": {
+  "source": "RFD_SGL",
+  "w": 48,
+  "h": 104,
+  "mirrored": false
+ },
+ "RDAACB69": {
+  "source": "RF4_PSST",
+  "w": 64,
+  "h": 96,
+  "mirrored": true
+ },
+ "RDC57BBB": {
+  "source": "RFD_SGL",
+  "w": 64,
+  "h": 88,
+  "mirrored": false
+ },
+ "RDD0EC2F": {
+  "source": "RFDDBLA",
+  "w": 96,
+  "h": 128,
+  "mirrored": false
+ },
+ "RDDA2D66": {
+  "source": "RFD_SGL",
+  "w": 64,
+  "h": 112,
+  "mirrored": false
+ },
+ "RDDC12FF": {
+  "source": "RFDSGLA",
+  "w": 48,
+  "h": 104,
+  "mirrored": false
+ },
+ "RDE771F3": {
+  "source": "RFD_DBL",
+  "w": 128,
+  "h": 112,
+  "mirrored": false
+ },
+ "RDFB80DC": {
+  "source": "RFM_GRIL",
+  "w": 16,
+  "h": 168,
+  "mirrored": false
+ },
+ "RDFB96D5": {
+  "source": "RFD_SGL",
+  "w": 64,
+  "h": 128,
+  "mirrored": false,
+  "wall": "RF4_HANG",
+  "total": 512
+ }
+}
