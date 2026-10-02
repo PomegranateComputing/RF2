@@ -1,0 +1,226 @@
+{
+ "schema": 1,
+ "batch_id": "V01_VIKTOR_V01_A_RENOMMER",
+ "status": "A_REMPLIR_PAR_ASTRA",
+ "base_commit": "61d9b43100bf071022f705e4bf10d82a3d660392",
+ "base_build": "RF2_PORTES_20261002_1018",
+ "note": "Manifeste de base au schéma de scripts/import_astra_lot.py. Garder seulement les fichiers livrés ; pour chacun, 'file' = chemin du fichier livré dans le lot, 'sha256' = son empreinte, 'target_relpath' et 'base_sha256' tels quels. Un fichier neuf (sans destination existante) : 'base_sha256' absent, destination à convenir avec Opus.",
+ "files": [
+  {
+   "file": "runtime/sprites/rf02_figures/R2F8A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F8A1.png",
+   "base_sha256": "60b7023957bd00299b62901d4731e92397dca4743cb32ae25145847cdd0c82d5",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F8A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F8A2.png",
+   "base_sha256": "7c345e6dad72ebd5ca9ce4211ed32b8b3aa200621fb98449e5fe99f6bf5a0922",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F8A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F8A3.png",
+   "base_sha256": "71c0d57ea33b084496360edb1b89e4f1a2474418b2645faa8faedd8d64f0f778",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F8A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F8A4.png",
+   "base_sha256": "75f8b16a4306a97398f6fd34868a3bf6eb63ebb88b063d5369f431d0aec666b0",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F8A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F8A5.png",
+   "base_sha256": "c86b4a55e98d4fa170d1c7c45a218df3691c9f933f32dbe2a79e2ca51f146d8c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F8A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F8A6.png",
+   "base_sha256": "d62df97787a7fcf2f47617ec3257b3ffb0bb73e2f4c0bab7ea443255891b72a4",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F8A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F8A7.png",
+   "base_sha256": "6f27f50174e3b4874126baff72aacfe40d01b4a8ac22783d93236eb408081fbe",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F8A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F8A8.png",
+   "base_sha256": "7c121207f212f304ab4834df2c41c1f6892d7677e0c517bd937c2ffde1412e86",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V2A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V2A1.png",
+   "base_sha256": "168f95df2dcfa82549530410b71fc39d345877c9080d9f754fc70340bac65dd3",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V2A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V2A2.png",
+   "base_sha256": "33d05f91255ba3c0702887f22abd0b67ddfe0e95ba1902a016029008b843ab3e",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V2A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V2A3.png",
+   "base_sha256": "ae6e806791278205a98e015fff2e58de57f9bd22460ea7500d7e8d76a200ff08",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V2A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V2A4.png",
+   "base_sha256": "7e272bbc3620085f4f487952338070b36244ebd6408e63af6f59b1d597623658",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V2A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V2A5.png",
+   "base_sha256": "e434b496dd24bb28c925ebb255b78607a13a675b80825167e4dba516715fe2fa",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V2A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V2A6.png",
+   "base_sha256": "42ca6345fb4cb8348309422e47dd24b6f24a0cee8aada50393326fbfa2520477",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V2A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V2A7.png",
+   "base_sha256": "cc3ec822760596d10f31e53fd7a3ffc7d63f6625e4b1826fb318757f14733386",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V2A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V2A8.png",
+   "base_sha256": "2e409c4fc7e7691da6a6579525d3bf40573e54958f6a15db31c715fd378b4c84",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V3A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V3A1.png",
+   "base_sha256": "57d0baaea1423415cf323a119117b54bc210187afa29957b3ec78738b6972db6",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V3A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V3A2.png",
+   "base_sha256": "d4e9e3792a416c1bce38570cfbf2cc673e6b69c0eeb0955eaedbd7257bb910f9",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V3A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V3A3.png",
+   "base_sha256": "b18a7f671b4c7cd383f76013c0a78ce486f5e547ac1116f8fb0463929bb9048f",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V3A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V3A4.png",
+   "base_sha256": "b84fa4d54f0dc13419aef84557a2eb0d3e2bcfb43799cf6d4250c6d3cc0c5532",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V3A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V3A5.png",
+   "base_sha256": "a15fb34854ad8c780c50b75175d236a142cee2a45efdda006904f5bc2b73ee7b",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V3A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V3A6.png",
+   "base_sha256": "637826fe5e92126527eea1249acdf40cc6ab4e1cc49201e2256851bc0e5537ba",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V3A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V3A7.png",
+   "base_sha256": "3471f89418e2635e6422a09ed24dada838a8ce0982c00021005d81bc94434d45",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4V3A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4V3A8.png",
+   "base_sha256": "b1e23f3b52bfb40d1330e03410ef2659edcb3cf736e91eb1173ff66284fed1d6",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  }
+ ]
+}

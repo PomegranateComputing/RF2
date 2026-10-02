@@ -1,0 +1,55 @@
+{
+ "schema": 1,
+ "batch_id": "T01_PLANCHES_V01_A_RENOMMER",
+ "status": "A_REMPLIR_PAR_ASTRA",
+ "base_commit": "61d9b43100bf071022f705e4bf10d82a3d660392",
+ "base_build": "RF2_PORTES_20261002_1018",
+ "note": "Manifeste de base au schéma de scripts/import_astra_lot.py. Garder seulement les fichiers livrés ; pour chacun, 'file' = chemin du fichier livré dans le lot, 'sha256' = son empreinte, 'target_relpath' et 'base_sha256' tels quels. Un fichier neuf (sans destination existante) : 'base_sha256' absent, destination à convenir avec Opus.",
+ "files": [
+  {
+   "file": "runtime/graphics/comics/RF01_RF02.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "graphics/comics/RF01_RF02.png",
+   "base_sha256": "1c9626b7ce2b79eab91fe55d59c587adbb1bc5cb6c7a8c940f658b6ebc06eeba",
+   "pixels": "1920x1080",
+   "grab": "",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/graphics/comics/RF02_RF04.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "graphics/comics/RF02_RF04.png",
+   "base_sha256": "db21efdff151edb3dafe903bc45873a025e464da32e6f9ec53d3a6a776852033",
+   "pixels": "1920x1080",
+   "grab": "",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/graphics/comics/RF04_RF05.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "graphics/comics/RF04_RF05.png",
+   "base_sha256": "8ebc789386cdf83c0689e854dbbfd42b79f80a314adae29e0a10b0ece8c5465b",
+   "pixels": "1920x1080",
+   "grab": "",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/graphics/comics/RF05_RF06.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "graphics/comics/RF05_RF06.png",
+   "base_sha256": "62503977115dda47071a446a0710a48ef9907d2b1688aa80a63cc6f59c0fd10e",
+   "pixels": "1920x1080",
+   "grab": "",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/graphics/comics/RF06_RF07.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "graphics/comics/RF06_RF07.png",
+   "base_sha256": "2ca07745401e7bace2d9564f85b8701c21e23a4cd22ca15e4e6f9d617a5fc75d",
+   "pixels": "1920x1080",
+   "grab": "",
+   "monde_u": ""
+  }
+ ]
+}

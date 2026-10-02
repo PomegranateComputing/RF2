@@ -1,0 +1,14 @@
+target_relpath,pixels,mode,grab,monde_u,px_par_u,nom_moteur,acteur,origine,octets,sha256
+patches/rf07/RF7_BETO.png,256x256,RGB,,64x64,4,RF7_BETO (Texture),,Opus ou référence antérieure (aucun import enregistré),99304,44968548a7f7c25d951fd6caf9b668bd4df0a60197848cac8af2b31446471753
+patches/rf07/RF7_FACA.png,512x512,RGB,,128x128,4,RF7_FACA (Texture),,Opus ou référence antérieure (aucun import enregistré),198514,1db510aab832cbb5de8d2fbceff3e062f92dce9de255ade31d77026f80f53343
+patches/rf07/RF7_GRAF.png,512x512,RGB,,128x128,4,RF7_GRAF (Texture),,Opus ou référence antérieure (aucun import enregistré),452365,884480b919bc3a7f6c3228c8cec16bb7ba0930952f9e119970d760aa05519fdc
+patches/rf07/RF7_MER.png,256x256,RGB,,64x64,4,RF7_MER (Flat),,Opus ou référence antérieure (aucun import enregistré),90163,046a464afb514eacfa4f736db9117d76d6627625b238dab3408364343899d652
+patches/rf07/RF7_MOQU.png,256x256,RGB,,64x64,4,RF7_MOQU (Flat),,Opus ou référence antérieure (aucun import enregistré),83021,60316ee4ea20d4b5a7aad2a22a8a17db67cabf49d921811a4132f372246bbdcb
+patches/rf07/RF7_NOFU.png,512x128,RGBA,,128x32,4,RF7_NOFU (Texture),,Opus ou référence antérieure (aucun import enregistré),15936,434d856c4baa7d12061f3465607e3899b2111e5d9456ac6768be5031df3c113b
+patches/rf07/RF7_TERR.png,256x256,RGB,,64x64,4,RF7_TERR (Flat),,Opus ou référence antérieure (aucun import enregistré),100353,f560b69ba11401140611d9c2f39f1ca72c31371b33531edb77f9b5fde0c2e27a
+patches/rf07/RF7_VERR.png,256x256,RGB,,64x64,4,RF7_VERR (Flat),,Opus ou référence antérieure (aucun import enregistré),100507,a84c8eaa1f09c896d1685ac026f9e61f280d63f080fa86edc36813ff35f0a42f
+sprites/rf07/R7EVA0.png,64x128,RGBA,"32,128",30.1x60.2 (Scale 0.47),2.128,R7EVA0,RFElvis,Opus ou référence antérieure (aucun import enregistré),597,0e6bac3d01faf32799d95612d411e1949f07d654e0be9d3a0008550601d96e0b
+sprites/rf07/R7EVB0.png,64x128,RGBA,"32,128",30.1x60.2 (Scale 0.47),2.128,R7EVB0,RFElvis,Opus ou référence antérieure (aucun import enregistré),572,2abb63928b6768afe29d07447e989003d2c1662864d595adb54955baa142d10e
+sprites/rf07/R7EVC0.png,64x128,RGBA,"32,128",30.1x60.2 (Scale 0.47),2.128,R7EVC0,RFElvis,Opus ou référence antérieure (aucun import enregistré),595,d6a8b5b7d11cfd9577f3b4591197d359f2c246e7dee72d4032fe3d2d68f26413
+sprites/rf07/R7SBA0.png,128x112,RGBA,"64,112",64.0x56.0 (Scale 0.5),2,R7SBA0,RFJermaBed,Opus ou référence antérieure (aucun import enregistré),515,32a48848cd82cde11182cf482b72a58f739ceec3b52f24cb6131ec401c82913d
+sprites/rf07/R7SBB0.png,128x112,RGBA,"64,112",64.0x56.0 (Scale 0.5),2,R7SBB0,RFJermaBed,Opus ou référence antérieure (aucun import enregistré),514,3097d8203048e1c593e07fa1c255c5457bb993acf4c53be6a225242091a94b0c

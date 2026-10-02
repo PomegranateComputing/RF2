@@ -1,0 +1,964 @@
+{
+ "schema": 1,
+ "batch_id": "E01_ORDY_V01_A_RENOMMER",
+ "status": "A_REMPLIR_PAR_ASTRA",
+ "base_commit": "61d9b43100bf071022f705e4bf10d82a3d660392",
+ "base_build": "RF2_PORTES_20261002_1018",
+ "note": "Manifeste de base au schéma de scripts/import_astra_lot.py. Garder seulement les fichiers livrés ; pour chacun, 'file' = chemin du fichier livré dans le lot, 'sha256' = son empreinte, 'target_relpath' et 'base_sha256' tels quels. Un fichier neuf (sans destination existante) : 'base_sha256' absent, destination à convenir avec Opus.",
+ "files": [
+  {
+   "file": "runtime/sprites/enemies/ORDYA1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYA1.png",
+   "base_sha256": "f20b558525a84f2d1d210525230f002b707558a038463fcf20b7dce3d46c12d5",
+   "pixels": "180x301",
+   "grab": "90,299",
+   "monde_u": "32.4x54.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYA2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYA2.png",
+   "base_sha256": "444a549219f09272d5019d964bc188a63ffd5e64d2cc546d7baec4d8dfaf9f8e",
+   "pixels": "160x301",
+   "grab": "111,299",
+   "monde_u": "28.8x54.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYA3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYA3.png",
+   "base_sha256": "a9fdd4aceee229069aa3c801771c8c686e17e6ae2342620bac11c504c61c95ae",
+   "pixels": "141x301",
+   "grab": "86,299",
+   "monde_u": "25.4x54.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYA4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYA4.png",
+   "base_sha256": "7b7f4d47b79d2efd7192e1038265ea9bc68a4768f921bdb6919df654ab9a89d8",
+   "pixels": "178x302",
+   "grab": "115,300",
+   "monde_u": "32.0x54.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYA5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYA5.png",
+   "base_sha256": "17db346e6833fc0f5d29e5ee6cca427ed380f5957a95e5a525217226176b41e4",
+   "pixels": "180x301",
+   "grab": "90,298",
+   "monde_u": "32.4x54.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYA6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYA6.png",
+   "base_sha256": "681937baf9a0366a9433973aa038e84af0ae0ad23cf088a0d5f916b48f9c16de",
+   "pixels": "160x301",
+   "grab": "49,299",
+   "monde_u": "28.8x54.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYA7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYA7.png",
+   "base_sha256": "ff4248553afb68724dd5b93357277cddcd0037af498f4087120da61a33a6152e",
+   "pixels": "141x302",
+   "grab": "54,300",
+   "monde_u": "25.4x54.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYA8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYA8.png",
+   "base_sha256": "60130ce77778f2a976f71a5e4ccc8e42f2ed350b0cb8eb48ec16882e900af79b",
+   "pixels": "178x300",
+   "grab": "63,298",
+   "monde_u": "32.0x54.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYB1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYB1.png",
+   "base_sha256": "9bea4f4c8bc367b12a303efac7a6bbe2fca8c4d719d296d0759e032cf0ab9871",
+   "pixels": "164x295",
+   "grab": "85,293",
+   "monde_u": "29.5x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYB2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYB2.png",
+   "base_sha256": "c50395299606cb04e9f499f9f287c0abef9646b51f32f6014ce581c61ed4d7d0",
+   "pixels": "190x295",
+   "grab": "126,293",
+   "monde_u": "34.2x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYB3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYB3.png",
+   "base_sha256": "dd7d9b51cae9da5810c54d183ff3be52e3ae411e27ee7a678d47e0908fcb8ee8",
+   "pixels": "164x295",
+   "grab": "104,293",
+   "monde_u": "29.5x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYB4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYB4.png",
+   "base_sha256": "603805d9d689f981e31ab5c28429fa726e436d533e63853ad5f6333e49179805",
+   "pixels": "137x295",
+   "grab": "78,293",
+   "monde_u": "24.7x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYB5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYB5.png",
+   "base_sha256": "7faf9d1d7b41336d716d8e7991f36b5f23164c81afa45f0f80a8c0a155a5c373",
+   "pixels": "164x296",
+   "grab": "79,294",
+   "monde_u": "29.5x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYB6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYB6.png",
+   "base_sha256": "0d1fb77afea56472330d301fb945a83ca1d272f20dfe9d4628804f07dbd18cfd",
+   "pixels": "190x295",
+   "grab": "63,293",
+   "monde_u": "34.2x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYB7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYB7.png",
+   "base_sha256": "a2bf3b89d9463ed181f97df2262e33757005f7f8a68e6d95d17d4391fd021d59",
+   "pixels": "164x296",
+   "grab": "60,294",
+   "monde_u": "29.5x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYB8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYB8.png",
+   "base_sha256": "03f13bc57597bc5c7e810461ba669f3ad86ad69c892e813ed2c17405db7b0473",
+   "pixels": "137x296",
+   "grab": "58,294",
+   "monde_u": "24.7x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYC1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYC1.png",
+   "base_sha256": "8eb80913f357dae9e510fcb2cd51abfaeb0da9115796a839f1ce5b8502b6edc7",
+   "pixels": "160x295",
+   "grab": "74,293",
+   "monde_u": "28.8x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYC2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYC2.png",
+   "base_sha256": "10848bbecc3fe282dd3c43ab951133d7c348a30f29cbf0c04359527b816f8f89",
+   "pixels": "147x295",
+   "grab": "92,293",
+   "monde_u": "26.5x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYC3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYC3.png",
+   "base_sha256": "abe494c79253aeed18c58091164161109cce5ee319022fe2a812ac8c659dbfd0",
+   "pixels": "112x295",
+   "grab": "74,293",
+   "monde_u": "20.2x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYC4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYC4.png",
+   "base_sha256": "f9f30d6578f0c77ce232851f42615b7fbe211a027ca7aa9fea901aafd4b5539c",
+   "pixels": "145x296",
+   "grab": "99,294",
+   "monde_u": "26.1x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYC5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYC5.png",
+   "base_sha256": "7212ffc62b3403b4384f19973da8293e160386ac4ea6b4c4ae1502ab7a4a92af",
+   "pixels": "160x295",
+   "grab": "86,293",
+   "monde_u": "28.8x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYC6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYC6.png",
+   "base_sha256": "0077089f3d3f860163ba71ca4dc6c273006ccdbc2ec65071d45374077a668e5e",
+   "pixels": "147x295",
+   "grab": "55,293",
+   "monde_u": "26.5x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYC7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYC7.png",
+   "base_sha256": "b00553e26aee4800f978b29110f816c81ac4a19ec89485cabfe815e837977401",
+   "pixels": "112x295",
+   "grab": "38,293",
+   "monde_u": "20.2x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYC8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYC8.png",
+   "base_sha256": "4307f1f694864795ae826e302a76263fbfea6986e8e27a0c461bcf547ff424b3",
+   "pixels": "145x295",
+   "grab": "46,293",
+   "monde_u": "26.1x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYD1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYD1.png",
+   "base_sha256": "da1b4277ed789651b922fa8a52e9a361c931b4a32a9964d22e20f3effd8d2225",
+   "pixels": "164x295",
+   "grab": "79,293",
+   "monde_u": "29.5x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYD2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYD2.png",
+   "base_sha256": "273abeebe91fc856da1ccc67ddda5e4627fcded36caf5eee93814b5f499f17ca",
+   "pixels": "137x295",
+   "grab": "78,293",
+   "monde_u": "24.7x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYD3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYD3.png",
+   "base_sha256": "f17a98db7127e54dc1b5d8346d3abe526ece99a6378ae974295463c9f9fa92f9",
+   "pixels": "164x296",
+   "grab": "104,294",
+   "monde_u": "29.5x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYD4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYD4.png",
+   "base_sha256": "2dca5f5dd79e5ff7a8f404e6afa0caf0eb9c01a8e70c5792f632b87085bdb148",
+   "pixels": "190x296",
+   "grab": "126,294",
+   "monde_u": "34.2x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYD5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYD5.png",
+   "base_sha256": "fa8e2efb669c072b3b4c59b2be210230860d60e74bf93c4e53237648f8362f8a",
+   "pixels": "164x295",
+   "grab": "85,293",
+   "monde_u": "29.5x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYD6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYD6.png",
+   "base_sha256": "b3c3b03b0a81574ec97bdef47a5926c96de5ef44be060ed942a41cf09508edc4",
+   "pixels": "137x296",
+   "grab": "58,294",
+   "monde_u": "24.7x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYD7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYD7.png",
+   "base_sha256": "d4913624e382848ef3d103f0f482064d39a2b8939f93ee764b1263639e0f2939",
+   "pixels": "164x296",
+   "grab": "60,294",
+   "monde_u": "29.5x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYD8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYD8.png",
+   "base_sha256": "8a8fa82ab8ffc1356337998f5c3982af780d2004643a2d7e8ca2e6e1e0d937ed",
+   "pixels": "190x295",
+   "grab": "63,293",
+   "monde_u": "34.2x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYE1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYE1.png",
+   "base_sha256": "4c11b2583292276fc1692bcd0c490c4b5bf347eca71fdb4d858bd6f12eb91768",
+   "pixels": "161x295",
+   "grab": "83,293",
+   "monde_u": "29.0x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYE2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYE2.png",
+   "base_sha256": "e66fbed67e499df3da8473f89e413ed81d2c2561e9cb5205fac25c636a59f38a",
+   "pixels": "151x295",
+   "grab": "97,293",
+   "monde_u": "27.2x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYE3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYE3.png",
+   "base_sha256": "4b9d8c7ce2c969f76489fb8b0a15f683d5f8234cf65167ccddc95a635ac7ef1a",
+   "pixels": "126x295",
+   "grab": "71,293",
+   "monde_u": "22.7x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYE4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYE4.png",
+   "base_sha256": "6e98b766efb66d946d27cdae50633d4be573ae2508f9c321032c75e64011d352",
+   "pixels": "147x296",
+   "grab": "94,294",
+   "monde_u": "26.5x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYE5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYE5.png",
+   "base_sha256": "72138f625ef194a5124c6d5d1c3f6fe8c4fbfb6070f93cb53f1ac8a9140ff0c6",
+   "pixels": "161x295",
+   "grab": "78,293",
+   "monde_u": "29.0x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYE6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYE6.png",
+   "base_sha256": "e765ba60a541d0096e5b9a1effd949bbd6633253622e5ed817952cad87a72c06",
+   "pixels": "151x295",
+   "grab": "53,293",
+   "monde_u": "27.2x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYE7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYE7.png",
+   "base_sha256": "77c69fbb57fd53c8b515e2fb96e34b42fb80e9bf9bb66f96ebf271b0560d0ac7",
+   "pixels": "126x295",
+   "grab": "55,293",
+   "monde_u": "22.7x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYE8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYE8.png",
+   "base_sha256": "844803a63a44e3ad3b9a202834237867582d9320da09dcd99af4389847830a5d",
+   "pixels": "147x295",
+   "grab": "53,293",
+   "monde_u": "26.5x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYF1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYF1.png",
+   "base_sha256": "3513a1cce78c4978cd3e5af35dd951dd250e49e13df0cbd7f9cb43997e402f14",
+   "pixels": "132x294",
+   "grab": "80,292",
+   "monde_u": "23.8x52.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYF2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYF2.png",
+   "base_sha256": "7dce0670431dce6314c1a7dbf8a61dc31aaa809204249fd353b5e9c325088372",
+   "pixels": "164x295",
+   "grab": "104,293",
+   "monde_u": "29.5x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYF3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYF3.png",
+   "base_sha256": "0ec8d668c946c555457dedac27b9f54911a50d65947131ac90d51bfbfd3199db",
+   "pixels": "233x294",
+   "grab": "140,292",
+   "monde_u": "41.9x52.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYF4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYF4.png",
+   "base_sha256": "0d7fd76c29476b17b871f50aa0a0f534d1ad03fb9a99d99337cc3c0da048be82",
+   "pixels": "195x295",
+   "grab": "105,293",
+   "monde_u": "35.1x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYF5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYF5.png",
+   "base_sha256": "d049ad27398bc90ba6e99ed606b3a411b67bc05f311d2e0a48af27cdd0d423d4",
+   "pixels": "132x296",
+   "grab": "51,294",
+   "monde_u": "23.8x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYF6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYF6.png",
+   "base_sha256": "bd0f4f4009f82b538a352a34e2e7425e0f1e0c167afddd157018b622499109f7",
+   "pixels": "164x295",
+   "grab": "59,293",
+   "monde_u": "29.5x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYF7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYF7.png",
+   "base_sha256": "061eec551de18ed08f6d318e2ec007594754a15205c4c888b3cf6160fae8e471",
+   "pixels": "233x294",
+   "grab": "93,292",
+   "monde_u": "41.9x52.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYF8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYF8.png",
+   "base_sha256": "6be090b8ac73b59cb52ab3811c78f92b63cc56cb77999fac3448c463a58b8df3",
+   "pixels": "195x294",
+   "grab": "89,292",
+   "monde_u": "35.1x52.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYG1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYG1.png",
+   "base_sha256": "3f092c484b5c3ec12dbe91badffa694e6c6c8cab47b4b8f17ed00b066c002c2c",
+   "pixels": "193x278",
+   "grab": "85,276",
+   "monde_u": "34.7x50.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYG2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYG2.png",
+   "base_sha256": "f21dd288cd9dc0735e48ad0a8acfcdd59685dec3ff51fe7cd352d169f7508b12",
+   "pixels": "168x279",
+   "grab": "68,277",
+   "monde_u": "30.2x50.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYG3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYG3.png",
+   "base_sha256": "b21efc980f9836f0cf89acb944ad81f2760447e5e5222819e1804862fb4ced8b",
+   "pixels": "275x278",
+   "grab": "158,276",
+   "monde_u": "49.5x50.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYG4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYG4.png",
+   "base_sha256": "328e9741d6910f7dce966103a49cc1c22fd9118acfc66b4d9754c9dbd072ec69",
+   "pixels": "307x280",
+   "grab": "170,278",
+   "monde_u": "55.3x50.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYG5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYG5.png",
+   "base_sha256": "37cc149d4dc2b2342bebff90662e71607cd3ddf8d63e324aded07b9351347969",
+   "pixels": "193x279",
+   "grab": "108,277",
+   "monde_u": "34.7x50.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYG6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYG6.png",
+   "base_sha256": "1a97b6054d3cbf15719964766c26efd6349334c128f8a5253504e9f71fba39c6",
+   "pixels": "168x279",
+   "grab": "99,277",
+   "monde_u": "30.2x50.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYG7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYG7.png",
+   "base_sha256": "1082f8cd7cbccd9850b90fbc8c038e1c7acfcb17de274b86dc27a873e3889b76",
+   "pixels": "275x280",
+   "grab": "117,278",
+   "monde_u": "49.5x50.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYG8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYG8.png",
+   "base_sha256": "4ffdbc89baa03b4ff33fcacd691ebb018f6ee515bf4810ea7a02038be93f29ed",
+   "pixels": "307x279",
+   "grab": "137,277",
+   "monde_u": "55.3x50.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYH1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYH1.png",
+   "base_sha256": "99601e9f6cdb95f8c7eb1b573cb1aa12259dc42da1c438723bdf05aed712f16e",
+   "pixels": "172x297",
+   "grab": "57,295",
+   "monde_u": "31.0x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYH2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYH2.png",
+   "base_sha256": "b6302d44ef3f95a1c24c00c83092d3334ba7b97f3d3525b661bf9ae0b37447cf",
+   "pixels": "201x296",
+   "grab": "131,294",
+   "monde_u": "36.2x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYH3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYH3.png",
+   "base_sha256": "62942f9d1fac63750360c3f19cf28b0a8fc9a00d6f5c276ef4527b95e529f47b",
+   "pixels": "241x297",
+   "grab": "154,295",
+   "monde_u": "43.4x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYH4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYH4.png",
+   "base_sha256": "24e4171faebebeab4417633469484f7c9e1e272c6cd93efecb337119f5a0d37c",
+   "pixels": "208x298",
+   "grab": "113,296",
+   "monde_u": "37.4x53.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYH5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYH5.png",
+   "base_sha256": "7dc1585d5bcc1361b06abe192e6794be30ac4d34221b9cfbd89829e0272bc1d8",
+   "pixels": "172x296",
+   "grab": "115,294",
+   "monde_u": "31.0x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYH6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYH6.png",
+   "base_sha256": "2f720e0fb3adf884332c9f4f0700295c368d29fb866bd3b3f457a8906a5087d6",
+   "pixels": "201x296",
+   "grab": "70,294",
+   "monde_u": "36.2x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYH7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYH7.png",
+   "base_sha256": "9e301e162c4bab62971e0e260b672cc1105503343012a6896bde5881994cabf6",
+   "pixels": "241x297",
+   "grab": "86,295",
+   "monde_u": "43.4x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYH8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYH8.png",
+   "base_sha256": "868c0e8654f3b0d5111aabe69d49de81f95095f092fd002f5f463e694535c1e7",
+   "pixels": "208x296",
+   "grab": "95,294",
+   "monde_u": "37.4x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYI1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYI1.png",
+   "base_sha256": "a944f150b8a60652058e69c9b206c5ae55f0a315cb9da4e5bab9f5722dc64467",
+   "pixels": "249x293",
+   "grab": "151,291",
+   "monde_u": "44.8x52.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYI2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYI2.png",
+   "base_sha256": "c52fb610640d1032cbea278daef8285e9d24dbba0ced8d4ab39d216c272d4cf1",
+   "pixels": "216x292",
+   "grab": "143,290",
+   "monde_u": "38.9x52.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYI3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYI3.png",
+   "base_sha256": "1188d10e28fef82008807265a719376fde8ff7e32ee11cb2632ed36f7bb7a240",
+   "pixels": "212x292",
+   "grab": "128,290",
+   "monde_u": "38.2x52.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYI4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYI4.png",
+   "base_sha256": "8a3f16ec724a4402bff82a0b2490baad2c501bb5a89c72df6b645c195ead0254",
+   "pixels": "251x291",
+   "grab": "154,289",
+   "monde_u": "45.2x52.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYI5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYI5.png",
+   "base_sha256": "82fbe683fa19b32f9edbf5ebf463215a74a99354c987eeed0618c00e3e68b891",
+   "pixels": "249x292",
+   "grab": "98,290",
+   "monde_u": "44.8x52.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYI6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYI6.png",
+   "base_sha256": "352a55e1865927e3fe5dc9776712b4d4a41207e0a23f252413c371639201f338",
+   "pixels": "216x291",
+   "grab": "73,289",
+   "monde_u": "38.9x52.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYI7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYI7.png",
+   "base_sha256": "05c2c13e7d762686f138ff02db193cb06ef8aa8cae807d8314fb12f0521880f2",
+   "pixels": "212x292",
+   "grab": "84,290",
+   "monde_u": "38.2x52.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYI8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYI8.png",
+   "base_sha256": "257ec21a21de120752c53cdc4f41d0691175961fb59e8b91f26b1b247348f8e5",
+   "pixels": "251x292",
+   "grab": "97,290",
+   "monde_u": "45.2x52.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYJ1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYJ1.png",
+   "base_sha256": "ca7c507da75d7ba22135c249d0226babb899e0705f839e66605300e28ba74c5d",
+   "pixels": "200x247",
+   "grab": "96,244",
+   "monde_u": "36.0x44.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYJ2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYJ2.png",
+   "base_sha256": "a27c2259535df5454ed100350e442a41ebba0c67323e4a989291351534da7e1d",
+   "pixels": "164x249",
+   "grab": "87,247",
+   "monde_u": "29.5x44.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYJ3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYJ3.png",
+   "base_sha256": "89fd3f802e208a9a12d22b1824a59178b05a37230f77febeb3874f694a22564c",
+   "pixels": "188x248",
+   "grab": "130,246",
+   "monde_u": "33.8x44.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYJ4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYJ4.png",
+   "base_sha256": "f0940f6314df88958583716c64f4fb98cf5398146e098f1fcffc156025361f7f",
+   "pixels": "182x249",
+   "grab": "110,247",
+   "monde_u": "32.8x44.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYJ5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYJ5.png",
+   "base_sha256": "07e5996ae1be8dc5def6123b01ddf6c0a240bd2ad6184dd3a1ccd2446cf1772a",
+   "pixels": "200x250",
+   "grab": "103,248",
+   "monde_u": "36.0x45.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYJ6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYJ6.png",
+   "base_sha256": "882a22ea54a5e88250262ab84dc1e585d6e74fa3f8b1df70e6222166ec88602f",
+   "pixels": "164x249",
+   "grab": "77,247",
+   "monde_u": "29.5x44.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYJ7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYJ7.png",
+   "base_sha256": "e21a5d1d116c549c0918bc40747e72830c344d2283c2668f56356c40e705b1f2",
+   "pixels": "188x249",
+   "grab": "57,247",
+   "monde_u": "33.8x44.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYJ8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYJ8.png",
+   "base_sha256": "05b91c67621b5a22f457934629816082f9d0e832388ad5bcb83396bbb5e94b54",
+   "pixels": "182x248",
+   "grab": "72,246",
+   "monde_u": "32.8x44.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYK1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYK1.png",
+   "base_sha256": "b423400cb59c40baeb6802d960820308823aff8bfe96da9179cb48ff6d988e72",
+   "pixels": "229x229",
+   "grab": "132,227",
+   "monde_u": "41.2x41.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYK2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYK2.png",
+   "base_sha256": "664c0846acd91aa93985798ee20387e9084bfe3a2981c999429753845572959b",
+   "pixels": "242x229",
+   "grab": "149,226",
+   "monde_u": "43.6x41.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYK3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYK3.png",
+   "base_sha256": "d9ac1a55508e67d1bf6c04697ed93d36b4d1ad3762a9c2c643400d1db5e4effc",
+   "pixels": "256x230",
+   "grab": "144,228",
+   "monde_u": "46.1x41.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYK4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYK4.png",
+   "base_sha256": "aad07954e64a2b8748f82fad26c62d9999fa4c45bc06e79752164e657429c08b",
+   "pixels": "228x229",
+   "grab": "143,227",
+   "monde_u": "41.0x41.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYK5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYK5.png",
+   "base_sha256": "93280eaae069aadf888d9da82be0a8f5d14f5676eed122f615b8c880b55b6ce2",
+   "pixels": "229x229",
+   "grab": "97,227",
+   "monde_u": "41.2x41.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYK6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYK6.png",
+   "base_sha256": "ad4b9819dffca3d2ae34cc247bbee394eaa59c0a4ce5dd62758ad70bec5c2cf4",
+   "pixels": "242x230",
+   "grab": "92,228",
+   "monde_u": "43.6x41.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYK7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYK7.png",
+   "base_sha256": "2b6648535e4ab80e8e8a9429fe5f1834b7bd152c6d62ace435cccbae4d047713",
+   "pixels": "256x228",
+   "grab": "112,226",
+   "monde_u": "46.1x41.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYK8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYK8.png",
+   "base_sha256": "4fc0ee8374fd3a7da67bed5b46ed99332eeda7acddefa5eb23e2ec117d5db90e",
+   "pixels": "228x230",
+   "grab": "84,228",
+   "monde_u": "41.0x41.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYL1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYL1.png",
+   "base_sha256": "c35a0228a8da1478c4874b82fb04cf8e8a817a71b3a90c71a5ab8b0253c019eb",
+   "pixels": "235x137",
+   "grab": "127,135",
+   "monde_u": "42.3x24.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYL2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYL2.png",
+   "base_sha256": "39048e012df342dffa821274530a31046b31b2280cc4797e4bea6dde6daac3a4",
+   "pixels": "298x136",
+   "grab": "181,134",
+   "monde_u": "53.6x24.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYL3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYL3.png",
+   "base_sha256": "2f4a730d804716d66309bc60c32eef29981f30d485e73742625abd5a726de148",
+   "pixels": "356x137",
+   "grab": "201,135",
+   "monde_u": "64.1x24.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYL4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYL4.png",
+   "base_sha256": "b6789aaf3127317e5df72e065ed06dbce86893ac48bee8d11b5eb23b6bce12f4",
+   "pixels": "259x135",
+   "grab": "144,132",
+   "monde_u": "46.6x24.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYL5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYL5.png",
+   "base_sha256": "fecd8f568614e88734ce866fd43238535b3bcb207da15b35bbe2ca7190be003b",
+   "pixels": "235x135",
+   "grab": "108,133",
+   "monde_u": "42.3x24.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYL6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYL6.png",
+   "base_sha256": "2c485648d8a82a48e3044b64eeb89d41a60a3e09b902a88f4b5e0569ef00756c",
+   "pixels": "298x135",
+   "grab": "116,132",
+   "monde_u": "53.6x24.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYL7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYL7.png",
+   "base_sha256": "3ac0aa9e6b76136b0393bbeb261a6aff0a5dab40010fdc15658ad41778833916",
+   "pixels": "356x136",
+   "grab": "155,134",
+   "monde_u": "64.1x24.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYL8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYL8.png",
+   "base_sha256": "c0702eab055d2a725d38d18b784214aba99ba7df8e2213c6b20de6af0554e253",
+   "pixels": "259x134",
+   "grab": "115,131",
+   "monde_u": "46.6x24.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYM1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYM1.png",
+   "base_sha256": "cb09ea90e7f02f349fc5bdc6cb9831a54fcd5b239076d18bace5c4c8ad6e694f",
+   "pixels": "235x68",
+   "grab": "127,66",
+   "monde_u": "42.3x12.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYM2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYM2.png",
+   "base_sha256": "a45c380d7dd25929870880608a9c6cc02dcba8823185373cbe176f805f59cb34",
+   "pixels": "306x70",
+   "grab": "177,68",
+   "monde_u": "55.1x12.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYM3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYM3.png",
+   "base_sha256": "024ddbb03e2c4665e40c718f2350e51dcfa835b73bfd456a21ed98f30a9a391d",
+   "pixels": "361x69",
+   "grab": "188,67",
+   "monde_u": "65.0x12.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYM4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYM4.png",
+   "base_sha256": "d5106ad972b283b9d9893dcf44d43f82ec66a67a9cec3338ef952005e84300fd",
+   "pixels": "291x69",
+   "grab": "164,67",
+   "monde_u": "52.4x12.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYM5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYM5.png",
+   "base_sha256": "a3455387eac499c230358af2d975bce9ce459e686586711ee2d530472c8b3128",
+   "pixels": "235x69",
+   "grab": "107,67",
+   "monde_u": "42.3x12.4 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYM6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYM6.png",
+   "base_sha256": "11c82da7cc5a32b175cb302a9d65bae5d64ccb06174a5befc2feb527852bf3f1",
+   "pixels": "306x70",
+   "grab": "129,68",
+   "monde_u": "55.1x12.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYM7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYM7.png",
+   "base_sha256": "8cdaa798aa9ad57c0581b41dfe926080ecac6c2a5585cfa8c354431fa4f7d747",
+   "pixels": "361x70",
+   "grab": "173,68",
+   "monde_u": "65.0x12.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/ORDYM8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/ORDYM8.png",
+   "base_sha256": "4de84371214102b9d1468588d53aa25dbd0f79512ba3914ccc5c222fffedb9ca",
+   "pixels": "291x70",
+   "grab": "127,68",
+   "monde_u": "52.4x12.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/models/rf2_art_01/orderly.obj",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "models/rf2_art_01/orderly.obj",
+   "base_sha256": "baffe4d865505d97d1065318e15e95691821c5fade7b2959f6790574507c3aa9",
+   "pixels": "",
+   "grab": "",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/models/rf2_art_01/orderly_skin.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "models/rf2_art_01/orderly_skin.png",
+   "base_sha256": "5c7c3687a2e9a111e471088082da4511cb307a2ff921c8e9f98905af3a237d00",
+   "pixels": "1536x1280",
+   "grab": "",
+   "monde_u": ""
+  }
+ ]
+}

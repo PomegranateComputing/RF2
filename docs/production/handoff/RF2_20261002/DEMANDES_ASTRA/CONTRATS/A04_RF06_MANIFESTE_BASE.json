@@ -1,0 +1,145 @@
+{
+ "schema": 1,
+ "batch_id": "A04_RF06_V01_A_RENOMMER",
+ "status": "A_REMPLIR_PAR_ASTRA",
+ "base_commit": "61d9b43100bf071022f705e4bf10d82a3d660392",
+ "base_build": "RF2_PORTES_20261002_1018",
+ "note": "Manifeste de base au schéma de scripts/import_astra_lot.py. Garder seulement les fichiers livrés ; pour chacun, 'file' = chemin du fichier livré dans le lot, 'sha256' = son empreinte, 'target_relpath' et 'base_sha256' tels quels. Un fichier neuf (sans destination existante) : 'base_sha256' absent, destination à convenir avec Opus.",
+ "files": [
+  {
+   "file": "runtime/patches/rf06/RF6_BETN.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_BETN.png",
+   "base_sha256": "938b038d3ccd6969a5ffc18522e18b74cb3dacc0da966123bf1c1fe544e4d1fc",
+   "pixels": "512x384",
+   "grab": "",
+   "monde_u": "128x96"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_BETS.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_BETS.png",
+   "base_sha256": "e6adeb2d55360d492e0d9122d7a31d5a657237036cbe8b173c9d2090de05ef8b",
+   "pixels": "512x384",
+   "grab": "",
+   "monde_u": "128x96"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_ER1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_ER1.png",
+   "base_sha256": "711c67e73207bc2906d49e37208528e07a5408f976f26372703b3a0152cf4793",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_ER2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_ER2.png",
+   "base_sha256": "78a5b0142c00b25e58bda70f0d3e40c4b36ea57933de895e8487a23f2a4da6a5",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_ER3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_ER3.png",
+   "base_sha256": "b97b4949550b5188533a5e4483fb3a2a41f0696c1683334be2239e6ec4a45784",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_ER4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_ER4.png",
+   "base_sha256": "f8a90ae0dfc832df5fdc97a3505d07162dce5af3897225d9feec531e8eba4366",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_ER5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_ER5.png",
+   "base_sha256": "d33db94928e02fd061cdac40ec9f2d59040ff8c3ff608ed0649e90b1bde6f03c",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_JOUR.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_JOUR.png",
+   "base_sha256": "eac9fd91e1dd66ded0011af651b60a7ee8ca65032cbb862d5654cbb703aedb00",
+   "pixels": "256x384",
+   "grab": "",
+   "monde_u": "64x96"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_N017.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_N017.png",
+   "base_sha256": "8128906982f9458cfc1371f2a7258d43a698f2077ce915c738de2d9b5ebb9fb7",
+   "pixels": "192x96",
+   "grab": "",
+   "monde_u": "48x24"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_N117.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_N117.png",
+   "base_sha256": "f41fe0603ffa9be1dccd9fc6b5cf10670f6008693b6cda882aa7b26048a984e0",
+   "pixels": "192x96",
+   "grab": "",
+   "monde_u": "48x24"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_N404.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_N404.png",
+   "base_sha256": "fdad99e27828d158a9cffaafe126a7bad7b4308a22578e71301f17cf739f175d",
+   "pixels": "192x96",
+   "grab": "",
+   "monde_u": "48x24"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_PEA2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_PEA2.png",
+   "base_sha256": "89548452930883796f4bbd304e3db73e63d424e11ac9128fd3d7ab2e69d56ccc",
+   "pixels": "512x384",
+   "grab": "",
+   "monde_u": "128x96"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_PEAU.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_PEAU.png",
+   "base_sha256": "b7ae025a7bb64c3d95ad468c67859a25d9fad82f4460bcc79792522ce5876ad1",
+   "pixels": "512x384",
+   "grab": "",
+   "monde_u": "128x96"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_PLAF.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_PLAF.png",
+   "base_sha256": "08e723801cfab2bec9e02dc9d569659af34751e105ea6797f3897df537015c1e",
+   "pixels": "256x256",
+   "grab": "",
+   "monde_u": "64x64"
+  },
+  {
+   "file": "runtime/patches/rf06/RF6_SOL.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf06/RF6_SOL.png",
+   "base_sha256": "bc456423d4e19bd40f90c5d14fd65329c8d27ce66fe5d7dc9afd798b307b5000",
+   "pixels": "256x256",
+   "grab": "",
+   "monde_u": "64x64"
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+target_relpath,pixels,mode,grab,monde_u,px_par_u,nom_moteur,acteur,origine,octets,sha256
+patches/rf06/RF6_BETN.png,512x384,RGB,,128x96,4,RF6_BETN (Texture),,RF05_RF06_MATERIALS_01 (importé 2026-10-01 15:47),401253,938b038d3ccd6969a5ffc18522e18b74cb3dacc0da966123bf1c1fe544e4d1fc
+patches/rf06/RF6_BETS.png,512x384,RGB,,128x96,4,RF6_BETS (Texture),,RF05_RF06_MATERIALS_01 (importé 2026-10-01 15:47),396965,e6adeb2d55360d492e0d9122d7a31d5a657237036cbe8b173c9d2090de05ef8b
+patches/rf06/RF6_ER1.png,256x96,RGBA,,64x24,4,RF6_ER1 (Texture),,Opus ou référence antérieure (aucun import enregistré),11324,711c67e73207bc2906d49e37208528e07a5408f976f26372703b3a0152cf4793
+patches/rf06/RF6_ER2.png,256x96,RGBA,,64x24,4,RF6_ER2 (Texture),,Opus ou référence antérieure (aucun import enregistré),12722,78a5b0142c00b25e58bda70f0d3e40c4b36ea57933de895e8487a23f2a4da6a5
+patches/rf06/RF6_ER3.png,256x96,RGBA,,64x24,4,RF6_ER3 (Texture),,Opus ou référence antérieure (aucun import enregistré),9445,b97b4949550b5188533a5e4483fb3a2a41f0696c1683334be2239e6ec4a45784
+patches/rf06/RF6_ER4.png,256x96,RGBA,,64x24,4,RF6_ER4 (Texture),,Opus ou référence antérieure (aucun import enregistré),10546,f8a90ae0dfc832df5fdc97a3505d07162dce5af3897225d9feec531e8eba4366
+patches/rf06/RF6_ER5.png,256x96,RGBA,,64x24,4,RF6_ER5 (Texture),,Opus ou référence antérieure (aucun import enregistré),14149,d33db94928e02fd061cdac40ec9f2d59040ff8c3ff608ed0649e90b1bde6f03c
+patches/rf06/RF6_JOUR.png,256x384,RGB,,64x96,4,RF6_JOUR (Texture),,Opus ou référence antérieure (aucun import enregistré),34894,eac9fd91e1dd66ded0011af651b60a7ee8ca65032cbb862d5654cbb703aedb00
+patches/rf06/RF6_N017.png,192x96,RGBA,,48x24,4,RF6_N017 (Texture),,Opus ou référence antérieure (aucun import enregistré),5194,8128906982f9458cfc1371f2a7258d43a698f2077ce915c738de2d9b5ebb9fb7
+patches/rf06/RF6_N117.png,192x96,RGBA,,48x24,4,RF6_N117 (Texture),,Opus ou référence antérieure (aucun import enregistré),4723,f41fe0603ffa9be1dccd9fc6b5cf10670f6008693b6cda882aa7b26048a984e0
+patches/rf06/RF6_N404.png,192x96,RGBA,,48x24,4,RF6_N404 (Texture),,Opus ou référence antérieure (aucun import enregistré),5670,fdad99e27828d158a9cffaafe126a7bad7b4308a22578e71301f17cf739f175d
+patches/rf06/RF6_PEA2.png,512x384,RGB,,128x96,4,RF6_PEA2 (Texture),,RF05_RF06_MATERIALS_01 (importé 2026-10-01 15:47),466679,89548452930883796f4bbd304e3db73e63d424e11ac9128fd3d7ab2e69d56ccc
+patches/rf06/RF6_PEAU.png,512x384,RGB,,128x96,4,RF6_PEAU (Texture),,RF05_RF06_MATERIALS_01 (importé 2026-10-01 15:47),440927,b7ae025a7bb64c3d95ad468c67859a25d9fad82f4460bcc79792522ce5876ad1
+patches/rf06/RF6_PLAF.png,256x256,RGB,,64x64,4,RF6_PLAF (Flat),,RF06_FLATS_01 (importé 2026-10-02 07:14),109499,08e723801cfab2bec9e02dc9d569659af34751e105ea6797f3897df537015c1e
+patches/rf06/RF6_SOL.png,256x256,RGB,,64x64,4,RF6_SOL (Flat),,RF06_FLATS_01 (importé 2026-10-02 07:14),123791,bc456423d4e19bd40f90c5d14fd65329c8d27ce66fe5d7dc9afd798b307b5000

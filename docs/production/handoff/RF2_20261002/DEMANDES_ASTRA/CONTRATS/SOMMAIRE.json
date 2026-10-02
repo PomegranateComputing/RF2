@@ -1,0 +1,118 @@
+{
+ "base_commit": "61d9b43100bf071022f705e4bf10d82a3d660392",
+ "lots": {
+  "E01_ORDY": {
+   "titre": "Infirmier RFOrderly : 104 images, corps final par modèle",
+   "fichiers": 106,
+   "origines": [
+    "ORDY_E_V04",
+    "ORDY_V03"
+   ]
+  },
+  "E02_BRCD": {
+   "titre": "Brancardier RFBrancardier : 120 images, corps final par modèle",
+   "fichiers": 122,
+   "origines": [
+    "BRCD_V02",
+    "Opus ou référence antérieure"
+   ]
+  },
+  "E03_PREG": {
+   "titre": "Porte-registre RFPorteRegistre : 96 images, liasse PRGS, corps final par modèle",
+   "fichiers": 100,
+   "origines": [
+    "Opus ou référence antérieure",
+    "PREG_V02"
+   ]
+  },
+  "V01_VIKTOR": {
+   "titre": "Reflets de Viktor : vitrine de RF02 (R2F8), miroirs de la salle de danse (R4V2 blouse grise, R4V3 chemise et badge)",
+   "fichiers": 24,
+   "origines": [
+    "R2F8_V02",
+    "R4V2_R4V3_V01"
+   ]
+  },
+  "F01_FIGURES": {
+   "titre": "Figures humaines : civils de RF02 (R2F1-R2F7, R2B1-R2B4), gardien de la guérite (R4G1)",
+   "fichiers": 130,
+   "origines": [
+    "Opus ou référence antérieure"
+   ]
+  },
+  "A02_RF05": {
+   "titre": "Sous-station RF05 : surfaces, machines et leurs états",
+   "fichiers": 22,
+   "origines": [
+    "Opus ou référence antérieure",
+    "RF05_DIALS_V02",
+    "RF05_MACHINES_01",
+    "RF05_RF06_MATERIALS_01"
+   ]
+  },
+  "A03_LUNA": {
+   "titre": "Luna Park RF04/RF05 : surfaces, objets, ciel",
+   "fichiers": 53,
+   "origines": [
+    "BROOKLYN_ARCH_V02",
+    "LOT_CORRECTIONS_01",
+    "LUNA_PILOTE_01",
+    "LUNA_PILOTE_02",
+    "Opus ou référence antérieure",
+    "RF04_SHOE_V02",
+    "RF4_FACADES_V02"
+   ]
+  },
+  "A04_RF06": {
+   "titre": "Couloir RF06 : murs, sols, numéros, ERREUR Ø, le jour",
+   "fichiers": 15,
+   "origines": [
+    "Opus ou référence antérieure",
+    "RF05_RF06_MATERIALS_01",
+    "RF06_FLATS_01"
+   ]
+  },
+  "R01_RF02": {
+   "titre": "RF02 : objets et surfaces (hors figures)",
+   "fichiers": 79,
+   "origines": [
+    "Opus ou référence antérieure",
+    "RF02_PHARMACIE_01"
+   ]
+  },
+  "R02_RF01": {
+   "titre": "RF01 : décals d'usure",
+   "fichiers": 4,
+   "origines": [
+    "RF01_OXBLOOD_DECALS_V03",
+    "RFDSTN1_V05"
+   ]
+  },
+  "J01_J02_JERMA": {
+   "titre": "Jerma RF07 : tout est provisoire (Opus)",
+   "fichiers": 13,
+   "origines": [
+    "Opus ou référence antérieure"
+   ]
+  },
+  "T01_PLANCHES": {
+   "titre": "Planches de transition : cinq pages en place",
+   "fichiers": 5,
+   "origines": [
+    "COMIC_RF01_RF02_01",
+    "COMIC_RF02_RF04_01",
+    "COMIC_RF04_RF05_01",
+    "COMIC_RF05_RF06_01",
+    "COMIC_RF06_RF07_01"
+   ]
+  },
+  "REF_VIKTOR_HUD": {
+   "titre": "référence à ne pas remplacer",
+   "fichiers": 6
+  },
+  "REF_VIKTOR_BRAS_ARMES": {
+   "titre": "référence à ne pas remplacer",
+   "fichiers": 34
+  }
+ }
+}

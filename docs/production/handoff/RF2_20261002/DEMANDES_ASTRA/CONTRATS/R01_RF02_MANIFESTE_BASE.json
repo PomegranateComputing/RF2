@@ -1,0 +1,721 @@
+{
+ "schema": 1,
+ "batch_id": "R01_RF02_V01_A_RENOMMER",
+ "status": "A_REMPLIR_PAR_ASTRA",
+ "base_commit": "61d9b43100bf071022f705e4bf10d82a3d660392",
+ "base_build": "RF2_PORTES_20261002_1018",
+ "note": "Manifeste de base au schéma de scripts/import_astra_lot.py. Garder seulement les fichiers livrés ; pour chacun, 'file' = chemin du fichier livré dans le lot, 'sha256' = son empreinte, 'target_relpath' et 'base_sha256' tels quels. Un fichier neuf (sans destination existante) : 'base_sha256' absent, destination à convenir avec Opus.",
+ "files": [
+  {
+   "file": "runtime/patches/rf02/RF2_AFMO.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_AFMO.png",
+   "base_sha256": "e6817c7ec6358b531fbf10b4cd87fdfdcb87d0a473e61bbd01c0d7086ea537cd",
+   "pixels": "192x256",
+   "grab": "",
+   "monde_u": "48x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_AFST.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_AFST.png",
+   "base_sha256": "5cbaf855cbf66565a9fabefa1a760195b4d659c6ac85523054df96bf343f16a2",
+   "pixels": "192x256",
+   "grab": "",
+   "monde_u": "48x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_AMBU.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_AMBU.png",
+   "base_sha256": "129f1f4ebb8381544df4b0f882b5e90a6398e02d622617b0bd38a638a99b82d7",
+   "pixels": "512x384",
+   "grab": "",
+   "monde_u": "128x96"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_AMIG.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_AMIG.png",
+   "base_sha256": "ffede80f6657e273c24f5471a0b56f247ebe0a79166c618fcb4d8670088e7a70",
+   "pixels": "1774x887",
+   "grab": "",
+   "monde_u": "128x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_ASPH.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_ASPH.png",
+   "base_sha256": "38b23c86c8875bd3b87b71022ec34ef8e65134bce93314fbbcd3c93501dc3728",
+   "pixels": "512x512",
+   "grab": "",
+   "monde_u": "128x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_ASPW.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_ASPW.png",
+   "base_sha256": "32d6c47161422a370df062424fcb17c68194dee785a8e6bde10a0bac461f7013",
+   "pixels": "512x512",
+   "grab": "",
+   "monde_u": "128x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_BACH.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_BACH.png",
+   "base_sha256": "23f630f1a20c54b8a640eb0048f33a6a5f5b1d28d0186f1fd622d0777628aa53",
+   "pixels": "256x256",
+   "grab": "",
+   "monde_u": "64x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_BACS.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_BACS.png",
+   "base_sha256": "8714294716537e288594e1f51bf5287fe758b762d2fb5a536438594d3b2ada10",
+   "pixels": "256x256",
+   "grab": "",
+   "monde_u": "64x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_BNCH.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_BNCH.png",
+   "base_sha256": "14f2cd2e2d8c679010cf7dc14b1e6ce57e5b256fc25ae55418c8c7f6c403c937",
+   "pixels": "256x128",
+   "grab": "",
+   "monde_u": "64x32"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_BUSV.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_BUSV.png",
+   "base_sha256": "bc7796bad37a216e4baaefd5b9939e9fceb29cd5a3af402d3cfa4c69f62ac5c8",
+   "pixels": "512x384",
+   "grab": "",
+   "monde_u": "128x96"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_COCH.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_COCH.png",
+   "base_sha256": "233620b7a27d0d05b31bb182af3a7e587f2b0442d98a2a1f23c95ab60e081edc",
+   "pixels": "512x768",
+   "grab": "",
+   "monde_u": "128x192"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_COCP.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_COCP.png",
+   "base_sha256": "0cb7724a6d532221f2e2af1cfb3001e49d586f5eacaa122055711900d64a6f7e",
+   "pixels": "512x64",
+   "grab": "",
+   "monde_u": "128x16"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_EAU1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_EAU1.png",
+   "base_sha256": "8cdd16694e0bff277088aae06a80fcfd15f6c6c9a39a17d051c07ea2c6799ab3",
+   "pixels": "512x512",
+   "grab": "",
+   "monde_u": "128x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_ERPH.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_ERPH.png",
+   "base_sha256": "a8d5d24a99f1f669b45f389f6c0b1ac0514a0556581e53a6ee775282fe32c478",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_FAC1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_FAC1.png",
+   "base_sha256": "72b45d790b797f56af20da8846d907a8bf4e0fcca612c6ab49a48bf318014040",
+   "pixels": "948x1659",
+   "grab": "",
+   "monde_u": "79.9325x448"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_FAC2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_FAC2.png",
+   "base_sha256": "6943eebe10923dfd92cc041857f52b3c5ff6940bb2efefa3e873fb03c99dde4d",
+   "pixels": "948x1659",
+   "grab": "",
+   "monde_u": "320x448"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_FAC3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_FAC3.png",
+   "base_sha256": "59788c7cbc830f55cba8e065f074deb8235fc46702cbb7eba720d32504d79d78",
+   "pixels": "948x1660",
+   "grab": "",
+   "monde_u": "176.068x448"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_FACU.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_FACU.png",
+   "base_sha256": "4d40e8f867fba25753de9d162af76fa05651463836b0fc31d3e7d268398bc354",
+   "pixels": "948x1659",
+   "grab": "",
+   "monde_u": "256x448"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_FCAF.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_FCAF.png",
+   "base_sha256": "1d0b6ccb7f02b6d92449b938274d707647ac942e68c7c548a3ed4f87abf7b053",
+   "pixels": "256x64",
+   "grab": "",
+   "monde_u": "64x16"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_FEPI.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_FEPI.png",
+   "base_sha256": "7e8d383baba9d30ac620c8f681877fc8d4ee13960d078bc1604ef9f0ce73e69d",
+   "pixels": "448x64",
+   "grab": "",
+   "monde_u": "112x16"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_FLIB.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_FLIB.png",
+   "base_sha256": "a2e572ebde069381f5505fe4500172d0e8ac7a9c1122b002b57f026f381b930c",
+   "pixels": "448x64",
+   "grab": "",
+   "monde_u": "112x16"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_FPHA.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_FPHA.png",
+   "base_sha256": "b3e5535fc480515f84294fac4e90e0dd601d8bd95eee270bea972a009702a2de",
+   "pixels": "512x64",
+   "grab": "",
+   "monde_u": "128x16"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_FTSF.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_FTSF.png",
+   "base_sha256": "63321df46ad9bc9f26c615ca77612d3ac4be501ced4eef8e3dcc8049e5bbec4a",
+   "pixels": "512x64",
+   "grab": "",
+   "monde_u": "128x16"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_LIVR.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_LIVR.png",
+   "base_sha256": "f4e6c1c6be54825fe2f56741fba1920d982f865c4e00348fed9b9dc36767d3fc",
+   "pixels": "1024x512",
+   "grab": "",
+   "monde_u": "64x32"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_LUNA.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_LUNA.png",
+   "base_sha256": "0b192f59e652043eb1eb12b9a2bf6f0ea6eb8052307ae1a3f44faae89bf230ca",
+   "pixels": "1024x256",
+   "grab": "",
+   "monde_u": "256x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_LUNF.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_LUNF.png",
+   "base_sha256": "6fbdd6575051f4626c4fbe818f339b4d7d39de081d17b9ac33feeb9f9c8f1f70",
+   "pixels": "384x128",
+   "grab": "",
+   "monde_u": "96x32"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_MORD.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_MORD.png",
+   "base_sha256": "b31fb4ab750021ee127be3b5aa18d9b3ff833cb796b93956dc7c5f3e4d547616",
+   "pixels": "256x512",
+   "grab": "",
+   "monde_u": "64x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_MORJ.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_MORJ.png",
+   "base_sha256": "214cf384e05002c359d8ab1987774bf1eb81b146727a309f77777b646e8e37fb",
+   "pixels": "256x512",
+   "grab": "",
+   "monde_u": "64x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_MORR.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_MORR.png",
+   "base_sha256": "1062bd2166bf6b93593d54e4c9a11bb6e8aa0cb16972a2a4ccf41ad3b2e6b38a",
+   "pixels": "256x512",
+   "grab": "",
+   "monde_u": "64x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_PALI.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_PALI.png",
+   "base_sha256": "48f05b8b405fbee890c34f87e4ed128641713e03a4e58b5711be7eeb3bbc59b9",
+   "pixels": "512x512",
+   "grab": "",
+   "monde_u": "128x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_PARA.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_PARA.png",
+   "base_sha256": "9d1ada48eaee09166438d4bd35d2977efee4a9a4861f737e3485fe04d5f3472d",
+   "pixels": "512x256",
+   "grab": "",
+   "monde_u": "128x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_PHVI.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_PHVI.png",
+   "base_sha256": "8fc3eecb7a124c67205210a5f0561dbbfff5b7e58865172f55bfbff9026beb44",
+   "pixels": "512x320",
+   "grab": "",
+   "monde_u": "64x40"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_PL01.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_PL01.png",
+   "base_sha256": "dbed102e63763097274cdc878b57c02c0f38d865cea95cb6e25870c7f5b6b9f4",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_PL02.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_PL02.png",
+   "base_sha256": "cb8da7e16eaa2d25e399a29f67f32baa9f667ccc0dde53a7731dff30d9cccdbf",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_PL03.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_PL03.png",
+   "base_sha256": "b5564e3e9c479c0f500a8d7d6d1e51ead1a1803870bf6537d04b99271e616e05",
+   "pixels": "320x96",
+   "grab": "",
+   "monde_u": "80x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_PL04.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_PL04.png",
+   "base_sha256": "13cd41fb0d4d57b568024ef1029fab984a7b68acabf4b3f872d27f8131d8b69c",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_PL05.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_PL05.png",
+   "base_sha256": "a625c6a118455e0ec036e09c563fadb3b6822a46588d443aa96170d3b13b288e",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_PL06.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_PL06.png",
+   "base_sha256": "029d1dc1d4fe9c233f2fc31c40765b04f8f6cb8bd38843fc426a1dfa57735ed6",
+   "pixels": "320x96",
+   "grab": "",
+   "monde_u": "80x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_PL07.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_PL07.png",
+   "base_sha256": "327de9360b8de89ba21b3fdf74d361e1855d1a087c58955343ba0d7336307e22",
+   "pixels": "320x96",
+   "grab": "",
+   "monde_u": "80x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_QUAI.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_QUAI.png",
+   "base_sha256": "d0bba6f9765ae8281e81ed36b733ae809e24698cb8a605e14d6dc6c2f3c705c7",
+   "pixels": "512x512",
+   "grab": "",
+   "monde_u": "128x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_RAIL.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_RAIL.png",
+   "base_sha256": "b4d38b5a3c26a9567fed71f0d2da42b99725f5e83f2eba1dcf587087796a3c45",
+   "pixels": "512x512",
+   "grab": "",
+   "monde_u": "128x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_RAMB.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_RAMB.png",
+   "base_sha256": "f780a6cb01faa78fa42374ca35e4cc45c9a2f8049bf62049b9cd27b60bbd54f6",
+   "pixels": "256x160",
+   "grab": "",
+   "monde_u": "64x40"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_RIDO.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_RIDO.png",
+   "base_sha256": "100bc5d748b66ea8507e0f7088722807fa64536c162ff884fda467f04143170b",
+   "pixels": "512x512",
+   "grab": "",
+   "monde_u": "128x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_SABL.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_SABL.png",
+   "base_sha256": "1cf0da6c575dfdd4e312f89a0a3aae9cb4d516694dfafadb5a29363721badd96",
+   "pixels": "256x192",
+   "grab": "",
+   "monde_u": "64x48"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_SABT.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_SABT.png",
+   "base_sha256": "4d5ce8c6d69845e54377f9cbb06ccce447c82b9044aedca2d94040ede7cdc039",
+   "pixels": "256x256",
+   "grab": "",
+   "monde_u": "64x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_SANT.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_SANT.png",
+   "base_sha256": "7f3dc9bc3296b0e5be8cdeddaef07ea07ea3bb6399960b1108c61afbd441ccf4",
+   "pixels": "512x768",
+   "grab": "",
+   "monde_u": "256x384"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_SETT.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_SETT.png",
+   "base_sha256": "7cce60f4ae9e3341508bf73012e65cf0bcffa89b238ef583b7766cbf37fc7609",
+   "pixels": "512x512",
+   "grab": "",
+   "monde_u": "128x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_SGAT.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_SGAT.png",
+   "base_sha256": "50fff993e7c0f1473825dd605beabb6c828aa4fdfaf79fe0db60fc0248d68bbc",
+   "pixels": "512x768",
+   "grab": "",
+   "monde_u": "128x192"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_SHOP.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_SHOP.png",
+   "base_sha256": "0eca2032a04f8540582493099cdba2f5505fc1f49d8af42c4fa8b199b25825ff",
+   "pixels": "512x512",
+   "grab": "",
+   "monde_u": "128x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_STCA.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_STCA.png",
+   "base_sha256": "9477eb5948b6c1505b335a29be8e9b7503a0a5b8d7953439fa94261602c7bf21",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_STEA.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_STEA.png",
+   "base_sha256": "db412056341a286b361e23511b7e267dd13acf9844b3be3226f1aa589cd51ec1",
+   "pixels": "256x96",
+   "grab": "",
+   "monde_u": "64x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_STPS.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_STPS.png",
+   "base_sha256": "65f5ba444c5b8b9f6164d6c4021057b34e4b1f6fe60761781007dce9b907e496",
+   "pixels": "384x96",
+   "grab": "",
+   "monde_u": "96x24"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_TABL.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_TABL.png",
+   "base_sha256": "3a2b377f8cfa747fcf88821483c290b7becbd1a4e483d1a0d3697eb4071b9dab",
+   "pixels": "512x256",
+   "grab": "",
+   "monde_u": "128x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_TAXI.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_TAXI.png",
+   "base_sha256": "0e1f745699ea06b7d2ca6ca8931c0bb191f50988af60f117c61388f8476ec7a3",
+   "pixels": "384x384",
+   "grab": "",
+   "monde_u": "96x96"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_TFLR.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_TFLR.png",
+   "base_sha256": "5fc4066b9c299dcc3c905e4587b800463f5ed805bfa93654f5d81ebccf684449",
+   "pixels": "256x256",
+   "grab": "",
+   "monde_u": "64x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_TRAM.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_TRAM.png",
+   "base_sha256": "4b11b99a922598fc12fcfba943eeb81dd6ebc385bda614021ba3aed67ac301e0",
+   "pixels": "512x512",
+   "grab": "",
+   "monde_u": "128x128"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_TRML.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_TRML.png",
+   "base_sha256": "cb28869b943f1669892f5c7445f0ab20fa094149a690d736ecd1d4139add73fc",
+   "pixels": "512x192",
+   "grab": "",
+   "monde_u": "128x48"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_TRMU.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_TRMU.png",
+   "base_sha256": "c4820281ff89d2a765001397eee8dabb8a7e9114c97aceddd5f1da8fa2b9d544",
+   "pixels": "512x128",
+   "grab": "",
+   "monde_u": "128x32"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_TROF.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_TROF.png",
+   "base_sha256": "bdd34df4a03b48b2b2a60573b9378db91073b34b5a0b6b19d47fbcf303e86a74",
+   "pixels": "256x256",
+   "grab": "",
+   "monde_u": "64x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_TSFS.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_TSFS.png",
+   "base_sha256": "befe801697f546817feba4a820f0759e3cbeb564df80abfcbd7ccfe2079ecfb2",
+   "pixels": "1774x887",
+   "grab": "",
+   "monde_u": "128x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_TYRE.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_TYRE.png",
+   "base_sha256": "f34b8eb897996539706ad9b35050fde199f2f6ed6bdeecf8d696cb8980df19f3",
+   "pixels": "256x128",
+   "grab": "",
+   "monde_u": "64x32"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_VALI.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_VALI.png",
+   "base_sha256": "3f4fb2fe7c9825fbf41252123970430b4af5bc97a707bb4bb22f85a3b16f2eef",
+   "pixels": "256x128",
+   "grab": "",
+   "monde_u": "64x32"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_VIN1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_VIN1.png",
+   "base_sha256": "0451c811c04cf7fee146915fe17df7c1a087bac4abf2714ac838a9b1d4166d01",
+   "pixels": "256x256",
+   "grab": "",
+   "monde_u": "64x64"
+  },
+  {
+   "file": "runtime/patches/rf02/RF2_ZINC.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "patches/rf02/RF2_ZINC.png",
+   "base_sha256": "5cac58176bfc9946542bcc68b04904702116b29fa49821e3fc8bdad0668ab7b4",
+   "pixels": "256x256",
+   "grab": "",
+   "monde_u": "64x64"
+  },
+  {
+   "file": "runtime/sprites/rf02/RFBGA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFBGA0.png",
+   "base_sha256": "1ecc42dc537840cb683a3de277ddad2412b195ea39b62f41b2c9990441a0380b",
+   "pixels": "192x224",
+   "grab": "96,220",
+   "monde_u": "24.0x28.0 (Scale 0.125)"
+  },
+  {
+   "file": "runtime/sprites/rf02/RFBKA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFBKA0.png",
+   "base_sha256": "951058aa41352c8c0b8759048df41d8ceb3e0983365140450e6f1b3f7c0daf67",
+   "pixels": "192x192",
+   "grab": "96,188",
+   "monde_u": "26.4x26.4 (Scale 0.1375)"
+  },
+  {
+   "file": "runtime/sprites/rf02/RFMCA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFMCA0.png",
+   "base_sha256": "c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7",
+   "pixels": "4x4",
+   "grab": "2,3",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/sprites/rf02/RFMCB0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFMCB0.png",
+   "base_sha256": "c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7",
+   "pixels": "4x4",
+   "grab": "2,3",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/sprites/rf02/RFMCC0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFMCC0.png",
+   "base_sha256": "c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7",
+   "pixels": "4x4",
+   "grab": "2,3",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/sprites/rf02/RFMTA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFMTA0.png",
+   "base_sha256": "e45c2115f2561b76664333957c0e2cb2887e46a3da9d60aed41a98d4fc982818",
+   "pixels": "112x56",
+   "grab": "56,28",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/sprites/rf02/RFPHA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFPHA0.png",
+   "base_sha256": "eba67df0e05463a89c54346425ef42ea834486b9c63e75abb20778a2a4fc1d0b",
+   "pixels": "192x160",
+   "grab": "96,156",
+   "monde_u": "26.4x22.0 (Scale 0.1375)"
+  },
+  {
+   "file": "runtime/sprites/rf02/RFPRA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFPRA0.png",
+   "base_sha256": "c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7",
+   "pixels": "4x4",
+   "grab": "2,3",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/sprites/rf02/RFRDA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFRDA0.png",
+   "base_sha256": "676a47ff85eaca38f25651ea7f6686f95066bec9c316cbca8ac76628e2266796",
+   "pixels": "256x192",
+   "grab": "128,188",
+   "monde_u": "32.0x24.0 (Scale 0.125)"
+  },
+  {
+   "file": "runtime/sprites/rf02/RFRDB0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFRDB0.png",
+   "base_sha256": "c75ad9bcd9b63b11f17d4d48468fba4a229e683d50c24b66d014a17d12b1b78f",
+   "pixels": "256x192",
+   "grab": "128,188",
+   "monde_u": "32.0x24.0 (Scale 0.125)"
+  },
+  {
+   "file": "runtime/sprites/rf02/RFRLA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFRLA0.png",
+   "base_sha256": "c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7",
+   "pixels": "4x4",
+   "grab": "2,3",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/sprites/rf02/RFSHA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFSHA0.png",
+   "base_sha256": "d4d24842cd381e4f68cdff1742361079b43222544622a03a801bcee6b2a21ed3",
+   "pixels": "96x48",
+   "grab": "48,47",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/sprites/rf02/RFTKA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFTKA0.png",
+   "base_sha256": "6cd062a9f6db2bf0e985e7a095a547516b11215b760f7076a9c40cef83ea7192",
+   "pixels": "64x40",
+   "grab": "32,39",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/sprites/rf02/RFTKB0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFTKB0.png",
+   "base_sha256": "30f63a9d362e9e6350540878ab7a7359d47eae897c70149ad484d63209bdedaf",
+   "pixels": "72x48",
+   "grab": "36,47",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/sprites/rf02/RFTMA0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02/RFTMA0.png",
+   "base_sha256": "c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7",
+   "pixels": "4x4",
+   "grab": "2,3",
+   "monde_u": ""
+  }
+ ]
+}

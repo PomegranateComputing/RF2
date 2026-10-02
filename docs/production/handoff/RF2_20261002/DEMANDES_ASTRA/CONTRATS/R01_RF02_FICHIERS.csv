@@ -1,0 +1,80 @@
+target_relpath,pixels,mode,grab,monde_u,px_par_u,nom_moteur,acteur,origine,octets,sha256
+patches/rf02/RF2_AFMO.png,192x256,RGBA,,48x64,4,RF2_AFMO (Texture),,Opus ou référence antérieure (aucun import enregistré),73509,e6817c7ec6358b531fbf10b4cd87fdfdcb87d0a473e61bbd01c0d7086ea537cd
+patches/rf02/RF2_AFST.png,192x256,RGBA,,48x64,4,RF2_AFST (Texture),,Opus ou référence antérieure (aucun import enregistré),65171,5cbaf855cbf66565a9fabefa1a760195b4d659c6ac85523054df96bf343f16a2
+patches/rf02/RF2_AMBU.png,512x384,RGB,,128x96,4,RF2_AMBU (Texture),,Opus ou référence antérieure (aucun import enregistré),130669,129f1f4ebb8381544df4b0f882b5e90a6398e02d622617b0bd38a638a99b82d7
+patches/rf02/RF2_AMIG.png,1774x887,RGB,,128x64,13.8594,RF2_AMIG (Texture),,Opus ou référence antérieure (aucun import enregistré),2238845,ffede80f6657e273c24f5471a0b56f247ebe0a79166c618fcb4d8670088e7a70
+patches/rf02/RF2_ASPH.png,512x512,RGB,,128x128,4,RF2_ASPH (Flat),,Opus ou référence antérieure (aucun import enregistré),431335,38b23c86c8875bd3b87b71022ec34ef8e65134bce93314fbbcd3c93501dc3728
+patches/rf02/RF2_ASPW.png,512x512,RGB,,128x128,4,RF2_ASPW (Flat),,Opus ou référence antérieure (aucun import enregistré),399533,32d6c47161422a370df062424fcb17c68194dee785a8e6bde10a0bac461f7013
+patches/rf02/RF2_BACH.png,256x256,RGB,,64x64,4,RF2_BACH (Flat),,Opus ou référence antérieure (aucun import enregistré),106505,23f630f1a20c54b8a640eb0048f33a6a5f5b1d28d0186f1fd622d0777628aa53
+patches/rf02/RF2_BACS.png,256x256,RGB,,64x64,4,RF2_BACS (Texture),,Opus ou référence antérieure (aucun import enregistré),107480,8714294716537e288594e1f51bf5287fe758b762d2fb5a536438594d3b2ada10
+patches/rf02/RF2_BNCH.png,256x128,RGB,,64x32,4,RF2_BNCH (Texture),,Opus ou référence antérieure (aucun import enregistré),48548,14f2cd2e2d8c679010cf7dc14b1e6ce57e5b256fc25ae55418c8c7f6c403c937
+patches/rf02/RF2_BUSV.png,512x384,RGB,,128x96,4,RF2_BUSV (Texture),,Opus ou référence antérieure (aucun import enregistré),95790,bc7796bad37a216e4baaefd5b9939e9fceb29cd5a3af402d3cfa4c69f62ac5c8
+patches/rf02/RF2_COCH.png,512x768,RGB,,128x192,4,RF2_COCH (Texture),,Opus ou référence antérieure (aucun import enregistré),515745,233620b7a27d0d05b31bb182af3a7e587f2b0442d98a2a1f23c95ab60e081edc
+patches/rf02/RF2_COCP.png,512x64,RGB,,128x16,4,RF2_COCP (Texture),,Opus ou référence antérieure (aucun import enregistré),49062,0cb7724a6d532221f2e2af1cfb3001e49d586f5eacaa122055711900d64a6f7e
+patches/rf02/RF2_EAU1.png,512x512,RGB,,128x128,4,RF2_EAU1 (Flat),,Opus ou référence antérieure (aucun import enregistré),321327,8cdd16694e0bff277088aae06a80fcfd15f6c6c9a39a17d051c07ea2c6799ab3
+patches/rf02/RF2_ERPH.png,256x96,RGBA,,64x24,4,RF2_ERPH (Texture),,Opus ou référence antérieure (aucun import enregistré),13133,a8d5d24a99f1f669b45f389f6c0b1ac0514a0556581e53a6ee775282fe32c478
+patches/rf02/RF2_FAC1.png,948x1659,RGB,,79.9325x448,3.70312,RD098715 (Texture),,Opus ou référence antérieure (aucun import enregistré),2710943,72b45d790b797f56af20da8846d907a8bf4e0fcca612c6ab49a48bf318014040
+patches/rf02/RF2_FAC2.png,948x1659,RGB,,320x448,3.70312,RD438BBA (Texture),,Opus ou référence antérieure (aucun import enregistré),2766327,6943eebe10923dfd92cc041857f52b3c5ff6940bb2efefa3e873fb03c99dde4d
+patches/rf02/RF2_FAC3.png,948x1660,RGB,,176.068x448,3.70312,RD281656 (Texture),,Opus ou référence antérieure (aucun import enregistré),2507176,59788c7cbc830f55cba8e065f074deb8235fc46702cbb7eba720d32504d79d78
+patches/rf02/RF2_FACU.png,948x1659,RGB,,256x448,3.70312,RF2_FACU (Texture),,Opus ou référence antérieure (aucun import enregistré),2872564,4d40e8f867fba25753de9d162af76fa05651463836b0fc31d3e7d268398bc354
+patches/rf02/RF2_FCAF.png,256x64,RGB,,64x16,4,RF2_FCAF (Texture),,Opus ou référence antérieure (aucun import enregistré),14498,1d0b6ccb7f02b6d92449b938274d707647ac942e68c7c548a3ed4f87abf7b053
+patches/rf02/RF2_FEPI.png,448x64,RGB,,112x16,4,RF2_FEPI (Texture),,Opus ou référence antérieure (aucun import enregistré),28136,7e8d383baba9d30ac620c8f681877fc8d4ee13960d078bc1604ef9f0ce73e69d
+patches/rf02/RF2_FLIB.png,448x64,RGB,,112x16,4,RF2_FLIB (Texture),,Opus ou référence antérieure (aucun import enregistré),25624,a2e572ebde069381f5505fe4500172d0e8ac7a9c1122b002b57f026f381b930c
+patches/rf02/RF2_FPHA.png,512x64,RGB,,128x16,4,RF2_FPHA (Texture),,Opus ou référence antérieure (aucun import enregistré),29570,b3e5535fc480515f84294fac4e90e0dd601d8bd95eee270bea972a009702a2de
+patches/rf02/RF2_FTSF.png,512x64,RGB,,128x16,4,RF2_FTSF (Texture),,Opus ou référence antérieure (aucun import enregistré),24380,63321df46ad9bc9f26c615ca77612d3ac4be501ced4eef8e3dcc8049e5bbec4a
+patches/rf02/RF2_LIVR.png,1024x512,RGB,,64x32,16,RF2_LIVR (Texture),,Opus ou référence antérieure (aucun import enregistré),23178,f4e6c1c6be54825fe2f56741fba1920d982f865c4e00348fed9b9dc36767d3fc
+patches/rf02/RF2_LUNA.png,1024x256,RGBA,,256x64,4,RF2_LUNA (Texture),,Opus ou référence antérieure (aucun import enregistré),30605,0b192f59e652043eb1eb12b9a2bf6f0ea6eb8052307ae1a3f44faae89bf230ca
+patches/rf02/RF2_LUNF.png,384x128,RGB,,96x32,4,RF2_LUNF (Texture),,Opus ou référence antérieure (aucun import enregistré),51935,6fbdd6575051f4626c4fbe818f339b4d7d39de081d17b9ac33feeb9f9c8f1f70
+patches/rf02/RF2_MORD.png,256x512,RGB,,64x128,4,RF2_MORD (Texture),,Opus ou référence antérieure (aucun import enregistré),151162,b31fb4ab750021ee127be3b5aa18d9b3ff833cb796b93956dc7c5f3e4d547616
+patches/rf02/RF2_MORJ.png,256x512,RGB,,64x128,4,RF2_MORJ (Texture),,Opus ou référence antérieure (aucun import enregistré),147468,214cf384e05002c359d8ab1987774bf1eb81b146727a309f77777b646e8e37fb
+patches/rf02/RF2_MORR.png,256x512,RGB,,64x128,4,RF2_MORR (Texture),,Opus ou référence antérieure (aucun import enregistré),147471,1062bd2166bf6b93593d54e4c9a11bb6e8aa0cb16972a2a4ccf41ad3b2e6b38a
+patches/rf02/RF2_PALI.png,512x512,RGB,,128x128,4,RF2_PALI (Texture),,Opus ou référence antérieure (aucun import enregistré),319483,48f05b8b405fbee890c34f87e4ed128641713e03a4e58b5711be7eeb3bbc59b9
+patches/rf02/RF2_PARA.png,512x256,RGB,,128x64,4,RF2_PARA (Texture),,Opus ou référence antérieure (aucun import enregistré),187785,9d1ada48eaee09166438d4bd35d2977efee4a9a4861f737e3485fe04d5f3472d
+patches/rf02/RF2_PHVI.png,512x320,RGBA,,64x40,8,RF2_PHVI (Texture),,RF02_PHARMACIE_01 (importé 2026-10-01 13:16),232164,8fc3eecb7a124c67205210a5f0561dbbfff5b7e58865172f55bfbff9026beb44
+patches/rf02/RF2_PL01.png,256x96,RGB,,64x24,4,RF2_PL01 (Texture),,Opus ou référence antérieure (aucun import enregistré),23375,dbed102e63763097274cdc878b57c02c0f38d865cea95cb6e25870c7f5b6b9f4
+patches/rf02/RF2_PL02.png,256x96,RGB,,64x24,4,RF2_PL02 (Texture),,Opus ou référence antérieure (aucun import enregistré),22951,cb8da7e16eaa2d25e399a29f67f32baa9f667ccc0dde53a7731dff30d9cccdbf
+patches/rf02/RF2_PL03.png,320x96,RGB,,80x24,4,RF2_PL03 (Texture),,Opus ou référence antérieure (aucun import enregistré),26685,b5564e3e9c479c0f500a8d7d6d1e51ead1a1803870bf6537d04b99271e616e05
+patches/rf02/RF2_PL04.png,256x96,RGB,,64x24,4,RF2_PL04 (Texture),,Opus ou référence antérieure (aucun import enregistré),22671,13cd41fb0d4d57b568024ef1029fab984a7b68acabf4b3f872d27f8131d8b69c
+patches/rf02/RF2_PL05.png,256x96,RGB,,64x24,4,RF2_PL05 (Texture),,Opus ou référence antérieure (aucun import enregistré),23019,a625c6a118455e0ec036e09c563fadb3b6822a46588d443aa96170d3b13b288e
+patches/rf02/RF2_PL06.png,320x96,RGB,,80x24,4,RF2_PL06 (Texture),,Opus ou référence antérieure (aucun import enregistré),26662,029d1dc1d4fe9c233f2fc31c40765b04f8f6cb8bd38843fc426a1dfa57735ed6
+patches/rf02/RF2_PL07.png,320x96,RGB,,80x24,4,RF2_PL07 (Texture),,Opus ou référence antérieure (aucun import enregistré),27916,327de9360b8de89ba21b3fdf74d361e1855d1a087c58955343ba0d7336307e22
+patches/rf02/RF2_QUAI.png,512x512,RGB,,128x128,4,RF2_QUAI (Texture),,Opus ou référence antérieure (aucun import enregistré),334839,d0bba6f9765ae8281e81ed36b733ae809e24698cb8a605e14d6dc6c2f3c705c7
+patches/rf02/RF2_RAIL.png,512x512,RGB,,128x128,4,RF2_RAIL (Flat),,Opus ou référence antérieure (aucun import enregistré),400584,b4d38b5a3c26a9567fed71f0d2da42b99725f5e83f2eba1dcf587087796a3c45
+patches/rf02/RF2_RAMB.png,256x160,RGBA,,64x40,4,RF2_RAMB (Texture),,Opus ou référence antérieure (aucun import enregistré),723,f780a6cb01faa78fa42374ca35e4cc45c9a2f8049bf62049b9cd27b60bbd54f6
+patches/rf02/RF2_RIDO.png,512x512,RGB,,128x128,4,RF2_RIDO (Texture),,Opus ou référence antérieure (aucun import enregistré),184497,100bc5d748b66ea8507e0f7088722807fa64536c162ff884fda467f04143170b
+patches/rf02/RF2_SABL.png,256x192,RGB,,64x48,4,RF2_SABL (Texture),,Opus ou référence antérieure (aucun import enregistré),89246,1cf0da6c575dfdd4e312f89a0a3aae9cb4d516694dfafadb5a29363721badd96
+patches/rf02/RF2_SABT.png,256x256,RGB,,64x64,4,RF2_SABT (Flat),,Opus ou référence antérieure (aucun import enregistré),72772,4d5ce8c6d69845e54377f9cbb06ccce447c82b9044aedca2d94040ede7cdc039
+patches/rf02/RF2_SANT.png,512x768,RGB,,256x384,2,RF2_SANT (Texture),,Opus ou référence antérieure (aucun import enregistré),516788,7f3dc9bc3296b0e5be8cdeddaef07ea07ea3bb6399960b1108c61afbd441ccf4
+patches/rf02/RF2_SETT.png,512x512,RGB,,128x128,4,RF2_SETT (Flat),,Opus ou référence antérieure (aucun import enregistré),367031,7cce60f4ae9e3341508bf73012e65cf0bcffa89b238ef583b7766cbf37fc7609
+patches/rf02/RF2_SGAT.png,512x768,RGB,,128x192,4,RF2_SGAT (Texture),,Opus ou référence antérieure (aucun import enregistré),506314,50fff993e7c0f1473825dd605beabb6c828aa4fdfaf79fe0db60fc0248d68bbc
+patches/rf02/RF2_SHOP.png,512x512,RGB,,128x128,4,RF2_SHOP (Texture),,Opus ou référence antérieure (aucun import enregistré),341798,0eca2032a04f8540582493099cdba2f5505fc1f49d8af42c4fa8b199b25825ff
+patches/rf02/RF2_STCA.png,256x96,RGBA,,64x24,4,RF2_STCA (Texture),,Opus ou référence antérieure (aucun import enregistré),5115,9477eb5948b6c1505b335a29be8e9b7503a0a5b8d7953439fa94261602c7bf21
+patches/rf02/RF2_STEA.png,256x96,RGBA,,64x24,4,RF2_STEA (Texture),,Opus ou référence antérieure (aucun import enregistré),4331,db412056341a286b361e23511b7e267dd13acf9844b3be3226f1aa589cd51ec1
+patches/rf02/RF2_STPS.png,384x96,RGBA,,96x24,4,RF2_STPS (Texture),,Opus ou référence antérieure (aucun import enregistré),10524,65f5ba444c5b8b9f6164d6c4021057b34e4b1f6fe60761781007dce9b907e496
+patches/rf02/RF2_TABL.png,512x256,RGB,,128x64,4,RF2_TABL (Texture),,Opus ou référence antérieure (aucun import enregistré),8989,3a2b377f8cfa747fcf88821483c290b7becbd1a4e483d1a0d3697eb4071b9dab
+patches/rf02/RF2_TAXI.png,384x384,RGB,,96x96,4,RF2_TAXI (Texture),,Opus ou référence antérieure (aucun import enregistré),50082,0e1f745699ea06b7d2ca6ca8931c0bb191f50988af60f117c61388f8476ec7a3
+patches/rf02/RF2_TFLR.png,256x256,RGB,,64x64,4,RF2_TFLR (Flat),,Opus ou référence antérieure (aucun import enregistré),91621,5fc4066b9c299dcc3c905e4587b800463f5ed805bfa93654f5d81ebccf684449
+patches/rf02/RF2_TRAM.png,512x512,RGB,,128x128,4,RF2_TRAM (Texture),,Opus ou référence antérieure (aucun import enregistré),111039,4b11b99a922598fc12fcfba943eeb81dd6ebc385bda614021ba3aed67ac301e0
+patches/rf02/RF2_TRML.png,512x192,RGB,,128x48,4,RF2_TRML (Texture),,Opus ou référence antérieure (aucun import enregistré),55729,cb28869b943f1669892f5c7445f0ab20fa094149a690d736ecd1d4139add73fc
+patches/rf02/RF2_TRMU.png,512x128,RGB,,128x32,4,RF2_TRMU (Texture),,Opus ou référence antérieure (aucun import enregistré),41453,c4820281ff89d2a765001397eee8dabb8a7e9114c97aceddd5f1da8fa2b9d544
+patches/rf02/RF2_TROF.png,256x256,RGB,,64x64,4,RF2_TROF (Texture),,Opus ou référence antérieure (aucun import enregistré),74353,bdd34df4a03b48b2b2a60573b9378db91073b34b5a0b6b19d47fbcf303e86a74
+patches/rf02/RF2_TSFS.png,1774x887,RGB,,128x64,13.8594,RF2_TSFS (Texture),,Opus ou référence antérieure (aucun import enregistré),2608086,befe801697f546817feba4a820f0759e3cbeb564df80abfcbd7ccfe2079ecfb2
+patches/rf02/RF2_TYRE.png,256x128,RGB,,64x32,4,RF2_TYRE (Texture),,Opus ou référence antérieure (aucun import enregistré),348,f34b8eb897996539706ad9b35050fde199f2f6ed6bdeecf8d696cb8980df19f3
+patches/rf02/RF2_VALI.png,256x128,RGB,,64x32,4,RF2_VALI (Texture),,Opus ou référence antérieure (aucun import enregistré),887,3f4fb2fe7c9825fbf41252123970430b4af5bc97a707bb4bb22f85a3b16f2eef
+patches/rf02/RF2_VIN1.png,256x256,RGB,,64x64,4,RF2_VIN1 (Flat),,Opus ou référence antérieure (aucun import enregistré),128946,0451c811c04cf7fee146915fe17df7c1a087bac4abf2714ac838a9b1d4166d01
+patches/rf02/RF2_ZINC.png,256x256,RGB,,64x64,4,RF2_ZINC (Flat),,Opus ou référence antérieure (aucun import enregistré),69632,5cac58176bfc9946542bcc68b04904702116b29fa49821e3fc8bdad0668ab7b4
+sprites/rf02/RFBGA0.png,192x224,RGBA,"96,220",24.0x28.0 (Scale 0.125),8,RFBGA0,RFSacoche,Opus ou référence antérieure (aucun import enregistré),31205,1ecc42dc537840cb683a3de277ddad2412b195ea39b62f41b2c9990441a0380b
+sprites/rf02/RFBKA0.png,192x192,RGBA,"96,188",26.4x26.4 (Scale 0.1375),7.273,RFBKA0,RFFormsBucket,Opus ou référence antérieure (aucun import enregistré),42439,951058aa41352c8c0b8759048df41d8ceb3e0983365140450e6f1b3f7c0daf67
+sprites/rf02/RFMCA0.png,4x4,RGBA,"2,3",,,RFMCA0,RFMorrisColumn,Opus ou référence antérieure (aucun import enregistré),89,c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7
+sprites/rf02/RFMCB0.png,4x4,RGBA,"2,3",,,RFMCB0,RFMorrisColumn,Opus ou référence antérieure (aucun import enregistré),89,c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7
+sprites/rf02/RFMCC0.png,4x4,RGBA,"2,3",,,RFMCC0,RFMorrisColumn,Opus ou référence antérieure (aucun import enregistré),89,c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7
+sprites/rf02/RFMTA0.png,112x56,RGBA,"56,28",,,RFMTA0,RFMattressProp,Opus ou référence antérieure (aucun import enregistré),9460,e45c2115f2561b76664333957c0e2cb2887e46a3da9d60aed41a98d4fc982818
+sprites/rf02/RFPHA0.png,192x160,RGBA,"96,156",26.4x22.0 (Scale 0.1375),7.273,RFPHA0,RFFieldPhone,Opus ou référence antérieure (aucun import enregistré),26763,eba67df0e05463a89c54346425ef42ea834486b9c63e75abb20778a2a4fc1d0b
+sprites/rf02/RFPRA0.png,4x4,RGBA,"2,3",,,RFPRA0,RFPram,Opus ou référence antérieure (aucun import enregistré),89,c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7
+sprites/rf02/RFRDA0.png,256x192,RGBA,"128,188",32.0x24.0 (Scale 0.125),8,RFRDA0,RFRadioSet,Opus ou référence antérieure (aucun import enregistré),70419,676a47ff85eaca38f25651ea7f6686f95066bec9c316cbca8ac76628e2266796
+sprites/rf02/RFRDB0.png,256x192,RGBA,"128,188",32.0x24.0 (Scale 0.125),8,RFRDB0,RFRadioSet,Opus ou référence antérieure (aucun import enregistré),69803,c75ad9bcd9b63b11f17d4d48468fba4a229e683d50c24b66d014a17d12b1b78f
+sprites/rf02/RFRLA0.png,4x4,RGBA,"2,3",,,RFRLA0,RFTrack,Opus ou référence antérieure (aucun import enregistré),89,c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7
+sprites/rf02/RFSHA0.png,96x48,RGBA,"48,47",,,RFSHA0,,Opus ou référence antérieure (aucun import enregistré),522,d4d24842cd381e4f68cdff1742361079b43222544622a03a801bcee6b2a21ed3
+sprites/rf02/RFTKA0.png,64x40,RGBA,"32,39",,,RFTKA0,,Opus ou référence antérieure (aucun import enregistré),772,6cd062a9f6db2bf0e985e7a095a547516b11215b760f7076a9c40cef83ea7192
+sprites/rf02/RFTKB0.png,72x48,RGBA,"36,47",,,RFTKB0,,Opus ou référence antérieure (aucun import enregistré),1234,30f63a9d362e9e6350540878ab7a7359d47eae897c70149ad484d63209bdedaf
+sprites/rf02/RFTMA0.png,4x4,RGBA,"2,3",,,RFTMA0,RFTram,Opus ou référence antérieure (aucun import enregistré),89,c36e89b8f8621f15211902d0afb7159f625499782e79b404b803b3c15c679cd7

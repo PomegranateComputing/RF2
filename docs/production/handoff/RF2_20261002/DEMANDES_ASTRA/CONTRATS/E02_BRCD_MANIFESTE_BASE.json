@@ -1,0 +1,1108 @@
+{
+ "schema": 1,
+ "batch_id": "E02_BRCD_V01_A_RENOMMER",
+ "status": "A_REMPLIR_PAR_ASTRA",
+ "base_commit": "61d9b43100bf071022f705e4bf10d82a3d660392",
+ "base_build": "RF2_PORTES_20261002_1018",
+ "note": "Manifeste de base au schéma de scripts/import_astra_lot.py. Garder seulement les fichiers livrés ; pour chacun, 'file' = chemin du fichier livré dans le lot, 'sha256' = son empreinte, 'target_relpath' et 'base_sha256' tels quels. Un fichier neuf (sans destination existante) : 'base_sha256' absent, destination à convenir avec Opus.",
+ "files": [
+  {
+   "file": "runtime/sprites/enemies/BRCDA1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDA1.png",
+   "base_sha256": "8bfed534b08b0ec4ebf5150203d5831e5c6ef64ae67c1eb4ce749c80842f70f2",
+   "pixels": "176x295",
+   "grab": "88,292",
+   "monde_u": "31.7x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDA2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDA2.png",
+   "base_sha256": "e53904e6ffff73917ea08a69a9639ba663c19e11b966626c7c354071f8bca53a",
+   "pixels": "400x295",
+   "grab": "180,292",
+   "monde_u": "72.0x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDA3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDA3.png",
+   "base_sha256": "e4dc224f164c9817c43008be38da07a19bec3acbbd4f4c746a542224af00d7c1",
+   "pixels": "484x294",
+   "grab": "188,291",
+   "monde_u": "87.1x52.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDA4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDA4.png",
+   "base_sha256": "685ba9c87db23c7682e99d976bd114cb0c154059a8ca059e1f765be28144b4f4",
+   "pixels": "424x294",
+   "grab": "180,291",
+   "monde_u": "76.3x52.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDA5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDA5.png",
+   "base_sha256": "0ac2bd036f4b0e10388456d35396df2058dbca8591c41596f40a9258b2d998a7",
+   "pixels": "176x294",
+   "grab": "88,291",
+   "monde_u": "31.7x52.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDA6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDA6.png",
+   "base_sha256": "70fa0fe521acda7ef7b520350c7e6b3736a67be7b1aea334e7e1b68ef51cc777",
+   "pixels": "400x293",
+   "grab": "220,291",
+   "monde_u": "72.0x52.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDA7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDA7.png",
+   "base_sha256": "224b13d7edf764a4f38805efda94226189591363ebce62815493d90ddcc618f2",
+   "pixels": "484x294",
+   "grab": "295,291",
+   "monde_u": "87.1x52.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDA8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDA8.png",
+   "base_sha256": "80a2c7e213d670ead38aff31d1f76e758df99191acbd17c037048861951685f5",
+   "pixels": "424x294",
+   "grab": "244,292",
+   "monde_u": "76.3x52.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDB1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDB1.png",
+   "base_sha256": "87381d627bbfc3cea87290823359c4dfa31ab539983d4cfd95519d22261e595e",
+   "pixels": "176x299",
+   "grab": "88,297",
+   "monde_u": "31.7x53.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDB2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDB2.png",
+   "base_sha256": "6f5da1b33067d834497f4a322116e82c3eaea8a4d7b6cf79651a6c0ebee59f08",
+   "pixels": "396x298",
+   "grab": "180,295",
+   "monde_u": "71.3x53.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDB3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDB3.png",
+   "base_sha256": "01601478b2fe7845fb0d30e3969f3971726fc45da1eff4151f868aea526695d6",
+   "pixels": "505x296",
+   "grab": "188,294",
+   "monde_u": "90.9x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDB4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDB4.png",
+   "base_sha256": "b0bd8f530a78982fd160bc5d63d42a96d7156ada2ce7983d97369778ee33eb11",
+   "pixels": "429x299",
+   "grab": "180,297",
+   "monde_u": "77.2x53.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDB5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDB5.png",
+   "base_sha256": "84cb1c72eb768866193fabdcca224bf7872e69016e638096d85e64b329b1c0fa",
+   "pixels": "176x297",
+   "grab": "88,295",
+   "monde_u": "31.7x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDB6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDB6.png",
+   "base_sha256": "aa654e3778db4fba69f5017aec298c60633ad5ee9c3b2824458abf52387e852a",
+   "pixels": "396x298",
+   "grab": "216,296",
+   "monde_u": "71.3x53.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDB7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDB7.png",
+   "base_sha256": "ec670097ddab15cc108205efdc76a11b0f440c3a418a00878919581c3f3a8682",
+   "pixels": "505x300",
+   "grab": "317,297",
+   "monde_u": "90.9x54.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDB8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDB8.png",
+   "base_sha256": "bd51ee1caabfb01d9ff2fb5ab9e946f6cd324ad1da284934383bcb664078e082",
+   "pixels": "429x300",
+   "grab": "248,297",
+   "monde_u": "77.2x54.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDC1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDC1.png",
+   "base_sha256": "6e3d3b63f78c04d21c3c8dd4553495f15e294afe37425aa43357febe988b9033",
+   "pixels": "176x297",
+   "grab": "88,295",
+   "monde_u": "31.7x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDC2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDC2.png",
+   "base_sha256": "83aa1e0dce4f638ffbf7f01b2d4722dca0564122585f510a2acb0bfce5edf3fa",
+   "pixels": "396x295",
+   "grab": "180,293",
+   "monde_u": "71.3x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDC3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDC3.png",
+   "base_sha256": "c4159b6b2a1f3a805749d199c5ab830cf710737782ad6837b3149ee410e0cc6f",
+   "pixels": "506x297",
+   "grab": "188,294",
+   "monde_u": "91.1x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDC4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDC4.png",
+   "base_sha256": "b6e71bf675934be75f37796284f433df7ac053ea2a0bd5f05ecf0c952800f27b",
+   "pixels": "428x295",
+   "grab": "180,292",
+   "monde_u": "77.0x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDC5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDC5.png",
+   "base_sha256": "1cda1712e6b9f1af26c0cd2699baebf39a2fb7935f56c68e69aaf7dac9c08bcb",
+   "pixels": "176x296",
+   "grab": "88,294",
+   "monde_u": "31.7x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDC6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDC6.png",
+   "base_sha256": "a8ba123c20310aa6c82963821a64f5c04fb1b869ec1f91c86d0b57a1f4d2ef41",
+   "pixels": "396x295",
+   "grab": "216,293",
+   "monde_u": "71.3x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDC7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDC7.png",
+   "base_sha256": "4e2bd09e9eecfb4d38cc683f82fde1bd54badcc0386c06c5534ff42043565619",
+   "pixels": "506x297",
+   "grab": "317,295",
+   "monde_u": "91.1x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDC8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDC8.png",
+   "base_sha256": "241ac8202193a4d4bc0f5b6f21d86671a10f24cc3c95d768c9e01113f86710f5",
+   "pixels": "428x295",
+   "grab": "248,292",
+   "monde_u": "77.0x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDD1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDD1.png",
+   "base_sha256": "3a43c49bc833e441bdd6d0d41e67944bc79cce8740ba25d06b3bdde519e86282",
+   "pixels": "176x299",
+   "grab": "88,296",
+   "monde_u": "31.7x53.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDD2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDD2.png",
+   "base_sha256": "5371d5ffb18598853e05f84a3298883562faf3b2b6e3dbba004a70d2b1332b2e",
+   "pixels": "429x299",
+   "grab": "180,297",
+   "monde_u": "77.2x53.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDD3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDD3.png",
+   "base_sha256": "597d8d125e27525d6f62500507ac864515b739ffc508d853caac32941cd5a6a9",
+   "pixels": "505x298",
+   "grab": "188,295",
+   "monde_u": "90.9x53.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDD4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDD4.png",
+   "base_sha256": "f91d0f598c8c02544b53837efa9c77f1fc2bd46595a09601b62ab97da56a401d",
+   "pixels": "396x298",
+   "grab": "180,295",
+   "monde_u": "71.3x53.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDD5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDD5.png",
+   "base_sha256": "b7e6c4f73fd5bf20e0ce5b9b79da23d472e11a69c6a2c6571720be4cedd44e97",
+   "pixels": "176x299",
+   "grab": "88,297",
+   "monde_u": "31.7x53.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDD6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDD6.png",
+   "base_sha256": "0d123c06cbf5b8859837f064c2ae97f9734e9f1951df18370365b53cf53acdd4",
+   "pixels": "429x300",
+   "grab": "248,297",
+   "monde_u": "77.2x54.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDD7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDD7.png",
+   "base_sha256": "92b01a7513a7996c08edc874ff8e17d066c9b1384e94e83b9f10bfa73ae43da0",
+   "pixels": "505x298",
+   "grab": "317,295",
+   "monde_u": "90.9x53.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDD8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDD8.png",
+   "base_sha256": "112a2ccf4e0d58f32d2bf29a822481fc0937be0a1dc2b92b791fedf457290302",
+   "pixels": "396x300",
+   "grab": "216,298",
+   "monde_u": "71.3x54.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDE1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDE1.png",
+   "base_sha256": "90977c369cf0aa01bbbb9abb314e760c18569f38c0855b5ff7a36a40b09bef3d",
+   "pixels": "176x297",
+   "grab": "88,295",
+   "monde_u": "31.7x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDE2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDE2.png",
+   "base_sha256": "365a5dad554718e2cf78437bb9e33e5b6790ed25d0ae3cbdb36d7e9e3955d9c1",
+   "pixels": "428x296",
+   "grab": "180,293",
+   "monde_u": "77.0x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDE3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDE3.png",
+   "base_sha256": "7f98605ea0084fd8ac097b12f29043e0d2eac52c06ed9a1ec3dcccfd86b9097a",
+   "pixels": "506x296",
+   "grab": "188,294",
+   "monde_u": "91.1x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDE4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDE4.png",
+   "base_sha256": "1bae824d6e83b90103bfc383bc6fecfd9da72a2c562630c7d2a350e7de5fe778",
+   "pixels": "396x295",
+   "grab": "180,293",
+   "monde_u": "71.3x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDE5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDE5.png",
+   "base_sha256": "b05fc50b4506b96a04eea2f4e0e04520bc9d237ad80e6c19d8f8ea014d1bd853",
+   "pixels": "176x296",
+   "grab": "88,294",
+   "monde_u": "31.7x53.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDE6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDE6.png",
+   "base_sha256": "2fc456ae41b9a1deb67fe9435fd4a490b66e88ef46f301d20eb3b21d2a9ffa2b",
+   "pixels": "428x295",
+   "grab": "248,292",
+   "monde_u": "77.0x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDE7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDE7.png",
+   "base_sha256": "5d18d06639daedb516e2b3a52dbf484d85f514164a66a61f16d1901d93076272",
+   "pixels": "506x295",
+   "grab": "317,292",
+   "monde_u": "91.1x53.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDE8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDE8.png",
+   "base_sha256": "4b85dd93382abeab636ce889b4d5e620a5255ec105d6afc510eb6ae2c572b530",
+   "pixels": "396x298",
+   "grab": "216,295",
+   "monde_u": "71.3x53.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDF1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDF1.png",
+   "base_sha256": "c82d0d900e316e909d45e3ada83a0468f8890c392736092c65e272c157ae07be",
+   "pixels": "180x297",
+   "grab": "90,294",
+   "monde_u": "32.4x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDF2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDF2.png",
+   "base_sha256": "1df999c20741862d33174207d8c4f246d32637f613759cb00a2fe4563307cb81",
+   "pixels": "413x297",
+   "grab": "180,295",
+   "monde_u": "74.3x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDF3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDF3.png",
+   "base_sha256": "b9af6bdc87642a22986610e0b2528d5ca9f096eeecc75685bac5e4a624e3cfd5",
+   "pixels": "535x298",
+   "grab": "188,296",
+   "monde_u": "96.3x53.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDF4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDF4.png",
+   "base_sha256": "d82dfe921c23ffa9830f6a2250873aed2b4185b3dbd919324d448a5b78b9288c",
+   "pixels": "468x299",
+   "grab": "180,296",
+   "monde_u": "84.2x53.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDF5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDF5.png",
+   "base_sha256": "6ff36b9e6f903c3a84ec612ee0c13ff80f24be3bc15e97579d6281429e551fbb",
+   "pixels": "180x297",
+   "grab": "90,295",
+   "monde_u": "32.4x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDF6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDF6.png",
+   "base_sha256": "5836da6338727c821fcfb73d6446cb0cae849c5e05fb94423b8d17f37cb3a865",
+   "pixels": "413x297",
+   "grab": "233,295",
+   "monde_u": "74.3x53.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDF7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDF7.png",
+   "base_sha256": "153867c4c84d344546bfc2412793cffca482ced2bad4e373a13ed0e46f78ad86",
+   "pixels": "535x298",
+   "grab": "347,296",
+   "monde_u": "96.3x53.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDF8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDF8.png",
+   "base_sha256": "49b1ccccee61a0a41d7228441182d653d2810aa65d45d0270ced6ef7b3e416ab",
+   "pixels": "468x298",
+   "grab": "288,295",
+   "monde_u": "84.2x53.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDG1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDG1.png",
+   "base_sha256": "aeae9ec23359a34bf12cf82cf318e30e2c03cc06d4beb507afb486f278e50d20",
+   "pixels": "178x278",
+   "grab": "89,275",
+   "monde_u": "32.0x50.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDG2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDG2.png",
+   "base_sha256": "00ed893b24f430253752d993d98e9ed9d962b6b383e6ae579432ab1e89f854d0",
+   "pixels": "420x277",
+   "grab": "180,275",
+   "monde_u": "75.6x49.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDG3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDG3.png",
+   "base_sha256": "557633f6699dc643bf497f99d9b2227465bbbb14150e9ab5af3be796cd1c72a7",
+   "pixels": "559x278",
+   "grab": "188,275",
+   "monde_u": "100.6x50.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDG4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDG4.png",
+   "base_sha256": "906a6d2e65aa06d1b181d13c44b589715852bae1e4ae12d78631cf49600095af",
+   "pixels": "478x278",
+   "grab": "180,275",
+   "monde_u": "86.0x50.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDG5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDG5.png",
+   "base_sha256": "377f9ef71c881340c9292922c67a16b91feaeb8d635e8c3c765fefe12ac0f143",
+   "pixels": "178x278",
+   "grab": "89,275",
+   "monde_u": "32.0x50.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDG6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDG6.png",
+   "base_sha256": "ea6a867b2f9a549daac4be04fabc1b64322687a2dc0726f210ac7581bc1e84b7",
+   "pixels": "420x278",
+   "grab": "240,276",
+   "monde_u": "75.6x50.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDG7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDG7.png",
+   "base_sha256": "2263921518a4199fc9d26c7225f0cd792ed53e2048061fabe9237bd001300659",
+   "pixels": "559x277",
+   "grab": "370,275",
+   "monde_u": "100.6x49.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDG8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDG8.png",
+   "base_sha256": "c2fde2bae0dd2f8f52402ee08d7ed8c766a43d04f6264847d848218dff8302bd",
+   "pixels": "478x276",
+   "grab": "298,273",
+   "monde_u": "86.0x49.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDH1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDH1.png",
+   "base_sha256": "33089e1ef83989a8a8c7f1f25d7c0ad693c7a9fff2ab2b319c7c340592603925",
+   "pixels": "176x307",
+   "grab": "88,304",
+   "monde_u": "31.7x55.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDH2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDH2.png",
+   "base_sha256": "67753271d6456b6bb7af87e575702b022ba63847cac2fe522bbb9385067a1425",
+   "pixels": "421x306",
+   "grab": "180,303",
+   "monde_u": "75.8x55.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDH3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDH3.png",
+   "base_sha256": "1f062a28da3c9a7f8973b635ee685f1bb00a4cd0f34e92602f9d0243d3772c16",
+   "pixels": "513x305",
+   "grab": "188,303",
+   "monde_u": "92.3x54.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDH4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDH4.png",
+   "base_sha256": "43174dd7302dfa656888509f4f7cadc54ff7f27fe207f8a578c37c0af258211c",
+   "pixels": "454x305",
+   "grab": "180,302",
+   "monde_u": "81.7x54.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDH5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDH5.png",
+   "base_sha256": "6a696f6c84bedb73833306744c7726fc0d8230c7e6e2338d35af1c09ff8457e8",
+   "pixels": "176x307",
+   "grab": "88,304",
+   "monde_u": "31.7x55.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDH6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDH6.png",
+   "base_sha256": "a81b1b3608b240316959618c6d195464eb7053b0e843535575492a3cacda7c88",
+   "pixels": "421x305",
+   "grab": "241,302",
+   "monde_u": "75.8x54.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDH7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDH7.png",
+   "base_sha256": "d532b5a05f86752dfcf0ad0f049513b7922879d0470888f28a86116e4e83a6aa",
+   "pixels": "513x306",
+   "grab": "324,304",
+   "monde_u": "92.3x55.1 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDH8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDH8.png",
+   "base_sha256": "d9ce15d7630f8a3212f79ffe3e6414c276a367d705bfbbd1ae18d902a0efe6b5",
+   "pixels": "454x304",
+   "grab": "274,301",
+   "monde_u": "81.7x54.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDI1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDI1.png",
+   "base_sha256": "43f06dceaa08e519a68a413c0170f7f833491338d0817e6d9543412962f1ca50",
+   "pixels": "177x315",
+   "grab": "89,312",
+   "monde_u": "31.9x56.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDI2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDI2.png",
+   "base_sha256": "d01bff1b643e424b6698cfef9bbb1db5f3b96937f05445eb543bdad0614888bc",
+   "pixels": "416x312",
+   "grab": "180,309",
+   "monde_u": "74.9x56.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDI3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDI3.png",
+   "base_sha256": "c9bc33f2d05f3eb501e4fce51e8714c61c8fbd75e0a264f051bf3d4a40ef4d05",
+   "pixels": "494x315",
+   "grab": "188,313",
+   "monde_u": "88.9x56.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDI4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDI4.png",
+   "base_sha256": "992d642d81eceae7d3113650d59135d7e32639fc9b38c58a3a69cf7f17ceccc8",
+   "pixels": "439x313",
+   "grab": "180,311",
+   "monde_u": "79.0x56.3 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDI5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDI5.png",
+   "base_sha256": "224aad698b2d8e926700f85ddce18f228d002b75a86343131e465a394ca75206",
+   "pixels": "177x315",
+   "grab": "88,312",
+   "monde_u": "31.9x56.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDI6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDI6.png",
+   "base_sha256": "d8303e7981891344a239ec30280ac3759ff73856221a23862e18226ca2c97e5c",
+   "pixels": "416x315",
+   "grab": "236,312",
+   "monde_u": "74.9x56.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDI7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDI7.png",
+   "base_sha256": "07fed7c6bb509988a73c7c95b0cc5bfe3ebc10434be7d0cc6df0e8c42842685f",
+   "pixels": "494x315",
+   "grab": "305,312",
+   "monde_u": "88.9x56.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDI8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDI8.png",
+   "base_sha256": "b7643a138d7ed33d5bf51fa3d07822dc99517c0f7f43be69d80f4a8aeecdbecb",
+   "pixels": "439x315",
+   "grab": "258,312",
+   "monde_u": "79.0x56.7 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDJ1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDJ1.png",
+   "base_sha256": "45224817b5bef46c3031f6fc05964da9658bbcca0f15011022e804f004c66800",
+   "pixels": "199x250",
+   "grab": "80,248",
+   "monde_u": "35.8x45.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDJ2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDJ2.png",
+   "base_sha256": "dac6bdf2cbb02e65a7fe14d18b3bd10fef4c0ad7df032582aa2743e39aa1db20",
+   "pixels": "400x249",
+   "grab": "180,247",
+   "monde_u": "72.0x44.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDJ3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDJ3.png",
+   "base_sha256": "a942b9720f085a8345729363d143fdcb32787e8e82b82e7a2adee5f8ae0b1c02",
+   "pixels": "482x248",
+   "grab": "188,246",
+   "monde_u": "86.8x44.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDJ4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDJ4.png",
+   "base_sha256": "68a0da9b28950aafab1b9bf872947157fbed0640f031cd59e13a9b6500de6e07",
+   "pixels": "422x248",
+   "grab": "180,246",
+   "monde_u": "76.0x44.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDJ5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDJ5.png",
+   "base_sha256": "1685e7852136738a530fe255f7a55d329b9ca18e88fa04fe20ccf2517afaf7fc",
+   "pixels": "199x249",
+   "grab": "119,247",
+   "monde_u": "35.8x44.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDJ6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDJ6.png",
+   "base_sha256": "9c925ddca669e66c236e1e5f6ec9a10b027f9e4f8949287aea3fedc26cc85be7",
+   "pixels": "400x248",
+   "grab": "220,245",
+   "monde_u": "72.0x44.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDJ7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDJ7.png",
+   "base_sha256": "04a760fd0ff5e66ad44ae80412b513cba041277ad207a2dedb7fc91d100742d0",
+   "pixels": "482x248",
+   "grab": "293,245",
+   "monde_u": "86.8x44.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDJ8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDJ8.png",
+   "base_sha256": "88b40de9eaa04764064064b7f1a7240be8da4245755f1cb1b2887094e8a624de",
+   "pixels": "422x247",
+   "grab": "242,244",
+   "monde_u": "76.0x44.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDK1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDK1.png",
+   "base_sha256": "7188f9cb8491aae320ae6534886f40d1bc5c4d3ee2ec2fbeae07dd7f0b315a70",
+   "pixels": "254x199",
+   "grab": "130,196",
+   "monde_u": "45.7x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDK2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDK2.png",
+   "base_sha256": "5862fa5457d5d328c369c9f39745bd41de221a921c180971c6cfb7c848b34064",
+   "pixels": "408x199",
+   "grab": "180,196",
+   "monde_u": "73.4x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDK3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDK3.png",
+   "base_sha256": "b0b13de01575928f4ebb73397390602eb94005a68bf1ed686060bc949da3dc2f",
+   "pixels": "479x199",
+   "grab": "188,196",
+   "monde_u": "86.2x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDK4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDK4.png",
+   "base_sha256": "50d3eb823611a68b9bbc32b4754dc06155dba5b6aa482b11b834c559c75aa051",
+   "pixels": "414x199",
+   "grab": "180,196",
+   "monde_u": "74.5x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDK5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDK5.png",
+   "base_sha256": "4631a5f5ecd4cb259e25746fda4b72ea5d51a80d7bf16b0c2e7df9ac6c48b9d9",
+   "pixels": "254x199",
+   "grab": "124,196",
+   "monde_u": "45.7x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDK6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDK6.png",
+   "base_sha256": "de3e31fe56b4bef2e42ee33b809d2607daa223e6c1a6e6053e5346fc014102f0",
+   "pixels": "408x199",
+   "grab": "228,196",
+   "monde_u": "73.4x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDK7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDK7.png",
+   "base_sha256": "ddbe718d3576f985660172f2c151c8a4f58361c548ec387036f235d64dca7aa5",
+   "pixels": "479x199",
+   "grab": "290,196",
+   "monde_u": "86.2x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDK8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDK8.png",
+   "base_sha256": "bec04c7f5143164e73ef0b8994bf5a2af5f044eb0dbe12fe58c4ae732892ef22",
+   "pixels": "414x199",
+   "grab": "234,196",
+   "monde_u": "74.5x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDL1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDL1.png",
+   "base_sha256": "4c5c4bd778c0d108cd9b4466c39761f8644dc9e29c488e160ab4bbce027a6ceb",
+   "pixels": "348x199",
+   "grab": "80,196",
+   "monde_u": "62.6x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDL2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDL2.png",
+   "base_sha256": "cea075465e192e3c98fb6061910b6a623ae340963a8a470bf251820cebca6f00",
+   "pixels": "473x199",
+   "grab": "180,196",
+   "monde_u": "85.1x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDL3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDL3.png",
+   "base_sha256": "8589ac986ccda8ed117b605056d6bbf8d29f77345573d2730e50f5f88ec81631",
+   "pixels": "446x199",
+   "grab": "188,196",
+   "monde_u": "80.3x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDL4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDL4.png",
+   "base_sha256": "dfe75b5c4925e42db0a260b5b14510a2af27ceb0b9145bdeeac73618c756d1ef",
+   "pixels": "379x199",
+   "grab": "185,196",
+   "monde_u": "68.2x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDL5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDL5.png",
+   "base_sha256": "07889e664bcfaabe4d588c03811a099347e27cd4cae56275ddea3a773a60bdcd",
+   "pixels": "348x199",
+   "grab": "268,196",
+   "monde_u": "62.6x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDL6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDL6.png",
+   "base_sha256": "e6258fad8eee039e84d3e40faff479f3ed08673bb349c7a1d5361d7fbe473277",
+   "pixels": "473x199",
+   "grab": "293,196",
+   "monde_u": "85.1x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDL7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDL7.png",
+   "base_sha256": "05642e7c3909058fd020845e0b105b29b4f8612e7faa190bbcdd81e41e28951e",
+   "pixels": "446x199",
+   "grab": "258,196",
+   "monde_u": "80.3x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDL8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDL8.png",
+   "base_sha256": "eda9e4ab5d274d2f37200f30b8125c3ad034413624d113d182bbebab9154746f",
+   "pixels": "379x199",
+   "grab": "193,196",
+   "monde_u": "68.2x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDM1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDM1.png",
+   "base_sha256": "07ccca08e7e01fed195b7964d073bfdcd900f0ea37b0a37e324a00086c7e5cc0",
+   "pixels": "347x199",
+   "grab": "80,196",
+   "monde_u": "62.5x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDM2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDM2.png",
+   "base_sha256": "e2886e06488b34856c93cb7d1ad366ba3fdc039c890d657d4ef826a8bbe51276",
+   "pixels": "485x199",
+   "grab": "180,196",
+   "monde_u": "87.3x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDM3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDM3.png",
+   "base_sha256": "104022863cde2cc360deb050d54cbbb23344aa9e2deefc89f97e41c5f302e540",
+   "pixels": "465x199",
+   "grab": "188,196",
+   "monde_u": "83.7x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDM4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDM4.png",
+   "base_sha256": "500782c2fb4a9eed6661b671e392876d7bc78bf9012cd4d8d3e71142a3dcfc01",
+   "pixels": "399x199",
+   "grab": "205,196",
+   "monde_u": "71.8x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDM5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDM5.png",
+   "base_sha256": "e079b63a13728828f125d38112f9b917608c789c0ba69941b9818079dc149c60",
+   "pixels": "347x199",
+   "grab": "267,196",
+   "monde_u": "62.5x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDM6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDM6.png",
+   "base_sha256": "72e572fc95db23145432dba73fef894c313fd53518154603e67636ae6ecd45db",
+   "pixels": "485x199",
+   "grab": "305,196",
+   "monde_u": "87.3x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDM7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDM7.png",
+   "base_sha256": "fcc89ea12871b8659d95ba5778940cff8ef510ade60edcc5f3b9bbfbbf60143b",
+   "pixels": "465x199",
+   "grab": "276,196",
+   "monde_u": "83.7x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDM8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDM8.png",
+   "base_sha256": "42b91d8cb9c1c0bcf82bbcaccf68c45727a85288ed79c8a5390a2e09cbc87ee9",
+   "pixels": "399x199",
+   "grab": "193,196",
+   "monde_u": "71.8x35.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDN1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDN1.png",
+   "base_sha256": "e9276487bc85356d118d6d147740e8f4e7c904929ac5b978bf7e644d692a8654",
+   "pixels": "178x275",
+   "grab": "89,272",
+   "monde_u": "32.0x49.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDN2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDN2.png",
+   "base_sha256": "904e85fff38488f82058ae670d6f0448c6bf137da111177a8a31a819db8c149c",
+   "pixels": "479x277",
+   "grab": "180,274",
+   "monde_u": "86.2x49.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDN3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDN3.png",
+   "base_sha256": "c60c721ed24f274c2da1c4299d6e8140e58e6d0b855f1c534700551aa97dddea",
+   "pixels": "559x279",
+   "grab": "188,276",
+   "monde_u": "100.6x50.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDN4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDN4.png",
+   "base_sha256": "1a544c2c254e0a0d9f33a96406a90440fd8c02e3c172882166d42dd78d452f29",
+   "pixels": "421x279",
+   "grab": "180,276",
+   "monde_u": "75.8x50.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDN5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDN5.png",
+   "base_sha256": "80eccaaa752e6d2df3a72ada6f4ea01eebbc821ebbcd6a940f56731048abce93",
+   "pixels": "178x275",
+   "grab": "89,272",
+   "monde_u": "32.0x49.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDN6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDN6.png",
+   "base_sha256": "a0366923c977d584c31083c40fd05d9da4dc6f9c5f8b5fe86c14f94b367009b1",
+   "pixels": "479x277",
+   "grab": "299,274",
+   "monde_u": "86.2x49.9 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDN7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDN7.png",
+   "base_sha256": "3631860aa6252bcba6df290f48e91fa791e67707df2d0349c22cb72a897abc4c",
+   "pixels": "559x278",
+   "grab": "370,276",
+   "monde_u": "100.6x50.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDN8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDN8.png",
+   "base_sha256": "48a4cdb8a2f248561663db8edbd00fc83cf58ee8d30663e9cab0c152d2a9c54e",
+   "pixels": "421x279",
+   "grab": "241,276",
+   "monde_u": "75.8x50.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDO1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDO1.png",
+   "base_sha256": "3b205e493349cb1f94d073b7c508d901141f7d234f75443e77142085ec431a80",
+   "pixels": "212x248",
+   "grab": "106,245",
+   "monde_u": "38.2x44.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDO2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDO2.png",
+   "base_sha256": "747673b28b2385aa7e7c93bb9bf8702b6919bcba01ecc42922a84914d94aaf22",
+   "pixels": "418x250",
+   "grab": "180,247",
+   "monde_u": "75.2x45.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDO3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDO3.png",
+   "base_sha256": "cbcfe7b435292fd5729d3aa8231643ca20e0769a9403b95dc57fe7f030c10d0c",
+   "pixels": "556x251",
+   "grab": "188,249",
+   "monde_u": "100.1x45.2 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDO4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDO4.png",
+   "base_sha256": "f4fb8eec05d883d0c924000f2e9c4824e3a8248f13f5d23873ef7ba2dd7ead67",
+   "pixels": "477x250",
+   "grab": "180,247",
+   "monde_u": "85.9x45.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDO5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDO5.png",
+   "base_sha256": "d740ac8f501c16d7a0a417a34cea6d64b0abed59d224dfa028d129e379103439",
+   "pixels": "212x247",
+   "grab": "106,244",
+   "monde_u": "38.2x44.5 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDO6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDO6.png",
+   "base_sha256": "5aed995cc0384f8d93680999f50e399992f9b3a04e28a4eeec32ff2782159f2d",
+   "pixels": "418x249",
+   "grab": "238,246",
+   "monde_u": "75.2x44.8 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDO7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDO7.png",
+   "base_sha256": "d13f4218d4b1afa0106f75fbd54aba995e39fa51b083c2891697f39389bff6ab",
+   "pixels": "556x250",
+   "grab": "367,248",
+   "monde_u": "100.1x45.0 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/enemies/BRCDO8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/enemies/BRCDO8.png",
+   "base_sha256": "91416f0c006844f760d3088cb81fd8757c23799359c69ad92cfec55fed8a5a4c",
+   "pixels": "477x248",
+   "grab": "296,246",
+   "monde_u": "85.9x44.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/models/rf2_art_01/brancardier.obj",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "models/rf2_art_01/brancardier.obj",
+   "base_sha256": "8c269d4a826d4d09cfa9844196018b665b9537db9f2161fb07dedc057bb57c2b",
+   "pixels": "",
+   "grab": "",
+   "monde_u": ""
+  },
+  {
+   "file": "runtime/models/rf2_art_01/brancardier_skin.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "models/rf2_art_01/brancardier_skin.png",
+   "base_sha256": "d6f315e5d159ab7eae6914f2138a50b4bda2b24cce8cd5e85de1f492204adb05",
+   "pixels": "1536x1280",
+   "grab": "",
+   "monde_u": ""
+  }
+ ]
+}

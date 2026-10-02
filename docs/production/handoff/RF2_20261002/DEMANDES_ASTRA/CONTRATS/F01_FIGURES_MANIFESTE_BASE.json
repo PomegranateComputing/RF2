@@ -1,0 +1,1180 @@
+{
+ "schema": 1,
+ "batch_id": "F01_FIGURES_V01_A_RENOMMER",
+ "status": "A_REMPLIR_PAR_ASTRA",
+ "base_commit": "61d9b43100bf071022f705e4bf10d82a3d660392",
+ "base_build": "RF2_PORTES_20261002_1018",
+ "note": "Manifeste de base au schéma de scripts/import_astra_lot.py. Garder seulement les fichiers livrés ; pour chacun, 'file' = chemin du fichier livré dans le lot, 'sha256' = son empreinte, 'target_relpath' et 'base_sha256' tels quels. Un fichier neuf (sans destination existante) : 'base_sha256' absent, destination à convenir avec Opus.",
+ "files": [
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1A1.png",
+   "base_sha256": "a7e0d65fb386ee39c53c3b3c73562044a807c0cda0282d35f8ae463e1cc9b6d8",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1A2.png",
+   "base_sha256": "2d818ff00dd69456f59ccd8b18a264d7ee370f0cfa80123f894b37b99b51d75c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1A3.png",
+   "base_sha256": "10cad9490c05c7ecd929c223b495cf31d6a20e74e07e393fe070e6f578bbc222",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1A4.png",
+   "base_sha256": "4eade6066d2d2b2c2e784ea6cd5ae898c245e98d19ded23b1bf88740b9638616",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1A5.png",
+   "base_sha256": "676ca431159c24ab64d372e60220e1a6e4e1ae0670f21d8b24a5daec88c13f56",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1A6.png",
+   "base_sha256": "1000bd9eeb41874934b869cf8db8015384ad4384a512edf8afe0337e5b619c09",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1A7.png",
+   "base_sha256": "6be527d2c4df0cdee15c8265a6855deb527b6528fb6311eb66c17d0fdc4be35d",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1A8.png",
+   "base_sha256": "5849be5f13b753c72edb737034745ca696c1d4af401ee1fe50592dbfb825b174",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1B1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1B1.png",
+   "base_sha256": "4270640c7db702e202affa14cc4f00c0ab896e71ea07c32635065f52caec7cdd",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1B2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1B2.png",
+   "base_sha256": "c6975e63c0c7d28ca1c95ecf9cb1758c27484a4526427c6ef0771629ea7ed14f",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1B3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1B3.png",
+   "base_sha256": "52bdd9e6a2986dc567082cecf8a54b1280aa8dbd8d3bd3b2d663360e2f94e6c7",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1B4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1B4.png",
+   "base_sha256": "63f509632ca45ef92da599d1d7a1c7ca7b3224aa52e2a2146722603441892b68",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1B5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1B5.png",
+   "base_sha256": "f1a99f674fcc0288414249b399c8b8a0d3f1d1217e4cd75509d9c715c0d528f9",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1B6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1B6.png",
+   "base_sha256": "64349f92a246f63fdace5a195db1742c70efc47541cd85ba512bd4a25d537045",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1B7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1B7.png",
+   "base_sha256": "6e561c06aaa6936407d9fb5bd626fb00a30a9adfc3a0bd51204afbca116f15ec",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1B8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1B8.png",
+   "base_sha256": "4bb362f0e99f8ef2bcab4e324dc3817b30aa872fb44e67bc07f224788fffbf63",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1C1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1C1.png",
+   "base_sha256": "360b92743f199e2bf2da7d9447716d52a158812068a6ebdc5ca437a01a393b75",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1C2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1C2.png",
+   "base_sha256": "6a6938dd96ca24d43a66693d189345ea8aa1e6eb4925c39bc5a4806c24055f51",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1C3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1C3.png",
+   "base_sha256": "388706904490c17d887db67f8e8687f91b81a46f4711ec6bde5085908b32e762",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1C4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1C4.png",
+   "base_sha256": "1feebb71488272c54415bde6fb252937e2b412cf111618aabb831721d4efa406",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1C5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1C5.png",
+   "base_sha256": "a2ba5a384086cefd07545d07c17aa4ed0799a4a9689d025b60db42333b63c0e0",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1C6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1C6.png",
+   "base_sha256": "cb364719c5802ea119c88062586e0262c8d011a258e59a1175d00c2f81e67499",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1C7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1C7.png",
+   "base_sha256": "5492c7bf0d2d465c06dce8e9611014fa4dea70a0c5aae11babe2d0a335ffe746",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F1C8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F1C8.png",
+   "base_sha256": "c60e949a36039189b2296c928f9582b267857926176bec0ab7ad7e46fd9efa93",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2A1.png",
+   "base_sha256": "28eed62abfb1076e4278527be75d6dbee4dfc1b039eee5e18f7d6d1336409534",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2A2.png",
+   "base_sha256": "f0e8ff8d5903dd3f3f0ba3ab8e9f975e66c7a7a9d5bab54b506503aa4a1b8791",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2A3.png",
+   "base_sha256": "f6f3388af0f0871702a0e50f5b3d355c0025922ccd27c2f706d2f828455b717b",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2A4.png",
+   "base_sha256": "16ed2f4e00cc870afc160ce51f4fa1a7f4c591bc75a620ef25a57812abc54441",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2A5.png",
+   "base_sha256": "88839ca53795ed8549b89bd58582e5d26dd13d2a84efa91b14a47d2e46f215b7",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2A6.png",
+   "base_sha256": "8fcf86f778a7c7b2fca6b3093904b4e011605e57b000d15fb37959679c0ad219",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2A7.png",
+   "base_sha256": "5d381e47e062a23f50ea97b6f90464a391c65ba5d87665952b4a5b43e757fb79",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2A8.png",
+   "base_sha256": "0db171c276ef6d32ef7650e9a65510ddbb16b08f711911fc6db6d8b5e21caa0c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2B1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2B1.png",
+   "base_sha256": "9b72802921767e2226b7305d241c3c5b91481c999151e8c237cde9955f3abd61",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2B2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2B2.png",
+   "base_sha256": "555b24b64fb828ed197449cc333f674a04d2ab7550d89ef1fd23e460defa73af",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2B3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2B3.png",
+   "base_sha256": "08b49317318e2a9b0377a51992a7fbea7b9f6fb06ca4bf3a7dafae198a962958",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2B4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2B4.png",
+   "base_sha256": "ab654e3d26befe805a9f2c3c02db8d583a591022e5372c25fd8bd656174f15b1",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2B5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2B5.png",
+   "base_sha256": "626b4b56a7bd9bd2722fcb412be44546890fb4f633b54582e296b15a98bdb890",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2B6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2B6.png",
+   "base_sha256": "53605b6b278ca7fb5ded128e44c313b1eec91765dc8eeba40f7d033f45d337fc",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2B7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2B7.png",
+   "base_sha256": "88bed5e05b86a9f890e2fff3cfbcc3619dc30baaf9fa937791332ba5caba583b",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2B8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2B8.png",
+   "base_sha256": "bb14a07063c67c45cf52409658a5625649b0b07bce18fa2e61fab386a11078d3",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2C1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2C1.png",
+   "base_sha256": "8ada849d52e01f04f5c329ea66705e39f31b02dea7d8d6bbadc179fd52079d05",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2C2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2C2.png",
+   "base_sha256": "f50720b7a451bfb5a427488f3a299d148e9547e46f0094f8ef8b53d600a7c061",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2C3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2C3.png",
+   "base_sha256": "eef42f464641b975697f5531eacf4e70020f005a6c5ecb66be87de7cdff93eda",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2C4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2C4.png",
+   "base_sha256": "6d095e3c5d8f5574b4a747157d5e29f0c3cba6d9f5661083a2c85b64a772cdf7",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2C5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2C5.png",
+   "base_sha256": "2ce93c7112a9956ac4eaf556c9f12a5db60b760117203c981a56d2068f8007af",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2C6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2C6.png",
+   "base_sha256": "abb0fa868d65ee4825431ffa71c5937840df2991a67e471a7a4d6d0fd39ca281",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2C7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2C7.png",
+   "base_sha256": "d1e51eec9557e7f1cea7cb3cd8f3219525ee91ac9f885107ad669fbc05aaa91d",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2C8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2C8.png",
+   "base_sha256": "d70536b7af0f35898b3f3d3cf19275e9a8c09dfb8ead9a841adcc872229ebbd7",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2D1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2D1.png",
+   "base_sha256": "37af92dbc4d2a6a29a17f99ec8dab18032ad930d4ad7645b07772f1de4846871",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2D2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2D2.png",
+   "base_sha256": "c8a2262db0833b6fa0f1f37820f5d52f4f523341a42ae8cd141a1d0bcfa66ef2",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2D3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2D3.png",
+   "base_sha256": "62430c6829d3b70240f980b1f9ba75d99be497a1621969e917a4f44b6d213919",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2D4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2D4.png",
+   "base_sha256": "184c070724db26c024f1715ebbede620606cdb43530addaa19dae11c84e0e035",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2D5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2D5.png",
+   "base_sha256": "f11c9aa971fe8d72b2d8a860afc323320abd866d9d46dd94eda813b45db753aa",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2D6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2D6.png",
+   "base_sha256": "deac957be88eed20e17744244562dc17c5a3484fb8059f0c83c1b19b423650a0",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2D7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2D7.png",
+   "base_sha256": "6c43aadbc9cf5f151bdad43f19f96fd4166fa91d06961a831299e98841997b62",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F2D8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F2D8.png",
+   "base_sha256": "d737e3b5d136f1f1c4e1abc2c9040d4b1e7f60708095236cfe237526c92d136e",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4A1.png",
+   "base_sha256": "bd779e7b6fee8c0b8b7999e5a346aedbc54ec387168ccb1016af5bd097e49c05",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4A2.png",
+   "base_sha256": "b476504f7b4dfcf3ddeb5223212ae1df217e161e20db4eb17490145673380050",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4A3.png",
+   "base_sha256": "2f6d76366865399262806a5e8c27ab9a35da049d5990bc09887c16e7cf704557",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4A4.png",
+   "base_sha256": "7603e8b08c657a1697b01cb83ed55572ff0e94d63c47a632b893c6a089d29b9c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4A5.png",
+   "base_sha256": "25fea3151b5212b1f006ff7099427dfd3dea4f0a03dd2e5013e546c88cb6b224",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4A6.png",
+   "base_sha256": "38e1e9b52f03ff01cb5f382b3472b8bb2491906189d509b844ac02975fe4297b",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4A7.png",
+   "base_sha256": "5426b758d6e15550dc3a7d65cb1a292d42a7606e4587762d0a8730197186998a",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4A8.png",
+   "base_sha256": "55036808cb13a12d1812d60b3aefb5d429e2131b1555e3727b27bb0b24be62f3",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4B1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4B1.png",
+   "base_sha256": "4fd91bc1fad3518b4b7dc3aca0f56c0acebd04179e0bd5251239238886eca35f",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4B2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4B2.png",
+   "base_sha256": "d2bb020b033fa8c0c16dcab7545456d9b64fddd6ca812e0f487345e33cbf541a",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4B3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4B3.png",
+   "base_sha256": "9237b8d4457ebd7b41d9ee12fed65b5cbec8611a4d83473f3952a76289adaa29",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4B4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4B4.png",
+   "base_sha256": "a4baf7ed77bd097545fe5391319b838304eb6c4ec975a15dd35488f4ea0b162c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4B5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4B5.png",
+   "base_sha256": "cd52e422bb04ea2a4565618d2fa3258d308d996b575432d73142fcf9db57e778",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4B6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4B6.png",
+   "base_sha256": "b853ecdf0088d6930f435e89708747959afa711a03e97f325988235643a9519c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4B7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4B7.png",
+   "base_sha256": "91579ffdb6839dc4ffb6812082cd70ef7c49930aec6654f2d7a43638292bf557",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F4B8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F4B8.png",
+   "base_sha256": "61f129b3779a8509d9ef488eded2510c964706ae183fded90f42550f3382485d",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F5A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F5A1.png",
+   "base_sha256": "60e56e284e337b4ac6ebbe69db2a6a39891468548634349567ebbd95a6d4c8d8",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F5A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F5A2.png",
+   "base_sha256": "a9992129b6feb10d1a89d10da07b676f787da107c73105f311a96181e7db4952",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F5A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F5A3.png",
+   "base_sha256": "6f901daa49c43059297502358717f851c388614fb38bae34f6bdf1a34e5bdf7c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F5A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F5A4.png",
+   "base_sha256": "7c3d2229f8cb565147124e1538a794fd91b14d0814a3eb975751988bd8742e60",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F5A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F5A5.png",
+   "base_sha256": "20bfcfab3b287c1b62d8868e4bcf53b0543d0fa087319b04a0315c27e24d7683",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F5A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F5A6.png",
+   "base_sha256": "94cfe7956b3ed55050ca44d16d94ca8e78af41e609b062ed39acd1076ba717f2",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F5A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F5A7.png",
+   "base_sha256": "708f2d89008b6ec5a596648811e0eea5dca16af4beaf74a720f4e0c885198d12",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F5A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F5A8.png",
+   "base_sha256": "3cbe120442f7f63a1ca54c7e10d14b0ffb8441b112c205bb51c3b11ca613fa9c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F6A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F6A1.png",
+   "base_sha256": "947986f6d80ad539f6c4f2e4b51b34d8477119b01151e376d26f7ee5aacf4c53",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F6A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F6A2.png",
+   "base_sha256": "3bb12fe2924166a273650b75dff6009271719fbeb7ac52ea4b507527d4f68bd8",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F6A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F6A3.png",
+   "base_sha256": "933f209e734d5c4b07b8447860026b825b000e9111fe15ead823844071f4bc18",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F6A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F6A4.png",
+   "base_sha256": "145388a7e77ebc3b0a18e488442817e325a546233ae5e55c374d3441aca06b82",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F6A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F6A5.png",
+   "base_sha256": "1c56f5b4e2e2e65d18344c70de8317827fd3a32fc8f1f14b6f0f82ff4ee8ac67",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F6A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F6A6.png",
+   "base_sha256": "1cbb8da02268175439a22c8e9e1db1d2a0b4ba52bd983f6e11d89ace70be88e9",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F6A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F6A7.png",
+   "base_sha256": "b7f56c4378933dd4d7c4c7c566d1f9d01874c5981ec34ccbf9ec183314449db5",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F6A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F6A8.png",
+   "base_sha256": "70dc23cca1fbfed7169defd37723f1b0b8d99189ebaff6efb6f5d7de79fd7010",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F7A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F7A1.png",
+   "base_sha256": "3529b7bb90776895701a4aa95cd13c4d9fffd3912af76259c5e93a900b0651f6",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F7A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F7A2.png",
+   "base_sha256": "66b3dc673c4c38bb380f0c338b95607366b7c759d8104f36cec908616f6aadd2",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F7A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F7A3.png",
+   "base_sha256": "4ca619c96072c022a88f4e7735478bc51966b6de871c820f4ee33fb2c5f33954",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F7A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F7A4.png",
+   "base_sha256": "db38ad998ee90bbbf64eebaeb126e16cbb630f32de25faa530f2a0eb759f0fbc",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F7A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F7A5.png",
+   "base_sha256": "520a1a0bd38a8bbcac5281fca63a3713dd0ea2a09df1ff3605138c92b3a0c391",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F7A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F7A6.png",
+   "base_sha256": "9d2487ef9afcf369481b1c7d020c79c83956d6bbe41c91762ab2cfb8b251d745",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F7A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F7A7.png",
+   "base_sha256": "952f0e06023eaf0ff340fa84759c51276a1e3b5942c568d4028d2e338a239627",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2F7A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2F7A8.png",
+   "base_sha256": "8b6631c896305aac2c6bc63cea599a334321cfcb8b4b5ba37921483eae889666",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B1A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B1A1.png",
+   "base_sha256": "cdbbdcdfb87dfd0778ecc852d75ead3d32fde9fa3cc81984639fab2038ed12df",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B1A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B1A2.png",
+   "base_sha256": "609a692cf5aa23ac7bd3fa1a831512d40e2d9e8eaf1f8d7e562b034091813614",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B1A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B1A3.png",
+   "base_sha256": "f818aa42b72ff899ebca9de1dfdb2160ef5e0db2ba90c259894b24f5e691ba3b",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B1A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B1A4.png",
+   "base_sha256": "4115c324231e2126584b724145ac153192d765424805391e22159ad2d56d40eb",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B1A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B1A5.png",
+   "base_sha256": "db415987bb42b323a8518a466bc9b785b13afd364dc5fa4f939aec78a5623be4",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B1A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B1A6.png",
+   "base_sha256": "53aee7c0238200ac38b4d65ca2b94d7b27785395a6e53343e021d2474520b936",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B1A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B1A7.png",
+   "base_sha256": "6122c2c9f589efcb84cbdfe11ebeef6e3daa50bdbdf8dc956a4088e2d21f51c1",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B1A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B1A8.png",
+   "base_sha256": "6629660b99167f03f43d496534eeac24f508aac805d37786d672c0ad857519a1",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B2A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B2A1.png",
+   "base_sha256": "50c65a2336c2bad546eedb1eb6727053eb74cabd7c5a9342c6ce049f49688cc8",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B2A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B2A2.png",
+   "base_sha256": "2c5e5de5a755fc54b490878c29400a6beb2f3f209221fbb5086c990b96bc215c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B2A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B2A3.png",
+   "base_sha256": "db5ff4de69f2a983e021ea6d5a2d988825cc6c3167deec7f700fc53155ad6fed",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B2A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B2A4.png",
+   "base_sha256": "dc7317ab452e9d01c03dd5aa8be99c71665a0cc63ffa64337c1f3d421342e356",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B2A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B2A5.png",
+   "base_sha256": "3d1d449a020d6b96991aae58637f698df8802b0e8ef1d5f5a76991e56051e757",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B2A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B2A6.png",
+   "base_sha256": "411d1a93945d502f9558195320b4b950dd1aaac9902161b836d76d4e1f8f7363",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B2A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B2A7.png",
+   "base_sha256": "9d763be68ca146bf305a2e55b94927d631a597bc4bc09ad8fd192afbd2e45bcf",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B2A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B2A8.png",
+   "base_sha256": "2fdcf931ffa84ff3b700786ece0486a8a31324f1b39f25300445bf866bb4240d",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B3A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B3A1.png",
+   "base_sha256": "9d473bfdb006244b7737b2650e11a650f9bae9aaecadea9256761d197422d19d",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B3A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B3A2.png",
+   "base_sha256": "68e6926609d6757f1f13464f006ced541aae9cd688c79dc42308e81216a599e4",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B3A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B3A3.png",
+   "base_sha256": "fa0b79700785d8770fa6d6aebce5d46631950ea7dfe29ce6990b5a223a0fedaf",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B3A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B3A4.png",
+   "base_sha256": "30bfa798759cd5bba437abccb7b35a4bf4479373f6cf8452917451be4aea616a",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B3A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B3A5.png",
+   "base_sha256": "a3c50c591261edf82f5cde564f52eee14139f673481754313f52785f580fb5ed",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B3A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B3A6.png",
+   "base_sha256": "800fe7952e9d8d29717f8ef8f3e4947de9d2e316f82462b4dd52070f645de1ff",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B3A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B3A7.png",
+   "base_sha256": "4d2aa09db29a1273b8bfbfeee8fa700c7a342ea0a8ecf4d6be7c5824b1d90d06",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B3A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B3A8.png",
+   "base_sha256": "7b330e8fa03239c848ab18fdc859b1264cd60b3c8a125ff5dd8d54bc0e59b3cb",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B4A1.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B4A1.png",
+   "base_sha256": "5242fae4aaef1502a59f9e24f966ab6d8f41dc0ce44d552d9795be55ffc90e2c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B4A2.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B4A2.png",
+   "base_sha256": "b6c0d0bd3f01f5f6c37ef219f308f5987584dbe4e1bf5648b22785d62ce33687",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B4A3.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B4A3.png",
+   "base_sha256": "2008d0047b372f178f853188d984d5d744bee5866b0f5e34a4a8f0670dd0266c",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B4A4.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B4A4.png",
+   "base_sha256": "c419fcc8e0fa93df0a0e28b8e17274c248beb51a92cd03238f2f5509ae4d93e7",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B4A5.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B4A5.png",
+   "base_sha256": "74667df9e33070519c4a3633ea20641407a4107673bc3dac9b398f1d18583dbf",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B4A6.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B4A6.png",
+   "base_sha256": "44959addb210c3ddb62c857232c013c5776d511b1326eb89307b7ff5a13f80d5",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B4A7.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B4A7.png",
+   "base_sha256": "da5380308ab9a0161709ca61c9b740f74ec80f1584d9f77afb8d8371df3b49bc",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf02_figures/R2B4A8.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf02_figures/R2B4A8.png",
+   "base_sha256": "086de39a4af41ac215dcc86f56cb7a2639df9070f7da7847223e2c70976689ca",
+   "pixels": "512x448",
+   "grab": "256,424",
+   "monde_u": "92.2x80.6 (Scale 0.18)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4G1A0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4G1A0.png",
+   "base_sha256": "9c5ea23500d9388cffa97b45fee50c88d9dcba9b747799e35507659f34ea0048",
+   "pixels": "96x112",
+   "grab": "48,112",
+   "monde_u": "48.0x56.0 (Scale 0.5)"
+  },
+  {
+   "file": "runtime/sprites/rf04/R4G1B0.png",
+   "sha256": "A_CALCULER_APRES_EXPORT",
+   "target_relpath": "sprites/rf04/R4G1B0.png",
+   "base_sha256": "912269a20355734ad5f3c9b3d16e057070fb9b05e3e266c86271344d5b137a91",
+   "pixels": "96x112",
+   "grab": "48,112",
+   "monde_u": "48.0x56.0 (Scale 0.5)"
+  }
+ ]
+}
