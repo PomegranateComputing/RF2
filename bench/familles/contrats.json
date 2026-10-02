@@ -1,0 +1,35 @@
+{
+  "_lisez": "Cadences des familles en jeu, mesurees sur le banc (bench/familles/test_family_bench.py). Une pose = lettre et tics. 'attaque' et 'mort' sont des expressions regulieres : la charge du brancardier dure selon la distance, et le moteur retire de 0 a 3 tics a la premiere pose d'une mort. 'pas' = longueur d'un pas de marche (u), 'cadence' = un pas tous les n tics. De nouvelles images ne doivent rien changer a ces lignes ; un changement voulu de cadence se decide avec le proprietaire et se reporte ici.",
+  "RFOrderly": {
+    "marche_poses": "B4,C4,D4,E4",
+    "obstacles": "passe",
+    "attaque": "F10,G4,H14",
+    "coup": 10,
+    "douleur": "I7",
+    "mort": "J[3-6],K7,L8",
+    "corps": "ORDYM",
+    "pas": 9.0,
+    "cadence": 4.0
+  },
+  "RFBrancardier": {
+    "marche_poses": "B5,C5,D5,E5",
+    "obstacles": "trop_large devant porte de 64",
+    "attaque": "F24,G[13](,N2,G2)*(,N2)?(,O8)?,H28",
+    "douleur": "I8",
+    "mort": "J[4-7],K8,L10",
+    "corps": "BRCDM",
+    "pas": 5.0,
+    "cadence": 5.0
+  },
+  "RFPorteRegistre": {
+    "marche_poses": "B5,C5,D5,E5",
+    "obstacles": "passe",
+    "attaque": "F26,G2,N12",
+    "tir": 26,
+    "douleur": "H5",
+    "mort": "I[4-7],J7",
+    "corps": "PREGK",
+    "pas": 4.0,
+    "cadence": 5.0
+  }
+}

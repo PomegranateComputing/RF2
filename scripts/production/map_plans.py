@@ -184,6 +184,18 @@ def main():
             out / 'RF04_coupe_D_salle.png', zmin=-64, zmax=560)
     section(rf05.m, 'y', 1568, 2200, 3100, 'RF05 coupe E : ruelle, escalier, palier, sous-station, ligne x = 1568', out / 'RF05_coupe_E_escalier_sous_station.png')
     section(rf05.m, 'x', 2848, 700, 2050, 'RF05 coupe F : galeries, sous-station, atelier, ligne y = 2848', out / 'RF05_coupe_F_sous_sol.png')
+    # the volumes added on 02/10 (RF05: the feeders' gallery and its bay, the culvert; RF06: the valve chamber, the side loop)
+    section(rf05.m, 'x', 3080, 1280, 2040, 'RF05 coupe G : transformateurs, escalier, galerie des departs (+96), ligne y = 3080',
+            out / 'RF05_coupe_G_galerie_des_departs.png', scale=1.25)
+    section(rf05.m, 'x', 2960, 1480, 1920, 'RF05 coupe H : la nef, la baie de la galerie sur la roue, ligne y = 2960', out / 'RF05_coupe_H_baie.png', scale=2.0)
+    section(rf05.m, 'y', 1976, 2740, 3120, "RF05 coupe I : l'atelier et l'escalier qui y redescend, ligne x = 1976", out / 'RF05_coupe_I_atelier.png', scale=2.2)
+    section(rf05.m, 'y', 1264, 2780, 3250, 'RF05 coupe J : le caniveau entre les deux galeries, ligne x = 1264', out / 'RF05_coupe_J_caniveau.png', scale=2.0)
+    section(rf06.m, 'x', 1528, -16, 320, 'RF06 coupe K : la descente, la passerelle haute et la fosse des vannes, ligne y = 1528',
+            out / 'RF06_coupe_K_chambre_des_vannes.png', zmin=-260, zmax=110, scale=2.5)
+    section(rf06.m, 'y', 168, 1420, 1880, 'RF06 coupe L : passerelle haute, marches, passerelle basse, ligne x = 168',
+            out / 'RF06_coupe_L_passerelles.png', zmin=-260, zmax=110, scale=2.0)
+    section(rf06.m, 'y', 192, 1060, 1300, "RF06 coupe M : la boucle d'inspection de la salle des peaux, ligne x = 192",
+            out / 'RF06_coupe_M_boucle.png', zmin=-140, zmax=110, scale=3.0)
     print('plans et coupes ->', out)
 
 

@@ -1,0 +1,16 @@
+// RF2 bench of the enemy families (outside the campaign): loaded over a frozen game build by
+// bench/familles/build_family_bench.py.
+gameinfo
+{
+    AddEventHandlers = "RFFamilyBench"
+}
+
+map FAM01 "Banc - Les familles"
+{
+    levelnum = 91
+    next = "FAM01"
+    music = "RFAMB01"
+    cluster = 91
+    nointermission
+    lightmode = 8
+}

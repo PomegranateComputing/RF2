@@ -1,0 +1,2 @@
+// The class put on the bench when the map starts (any actor class of the base build or of a module loaded with it).
+server string rf_banc_classe = "RFOrderly";
