@@ -4,6 +4,21 @@ Document d'état de la production de campagne ouverte le 27 septembre 2026. Il r
 23, 25 et 26 septembre lorsqu'elles demandaient de refaire un élément désormais accepté. Mis à jour à chaque jalon ;
 ce n'est pas un journal.
 
+## Consigne de préservation du 02 octobre 2026
+
+La demande directe du propriétaire prime les prescriptions des packs : examiner l'existant avant toute reprise,
+classer **conserver / améliorer localement / remplacer**, partir des versions les plus réussies et conserver les
+originaux. Toute refonte doit apporter un gain visible dans le moteur sans perdre les qualités acquises : cohérence,
+proportions, animation, ambiance, lisibilité et fonctionnement. RF01 accepté et les armes appréciées restent les
+références ; leurs retouches doivent répondre à un défaut précis, notamment sonore. Luna Park, RF05 et RF06 gardent
+leur mandat de reprise profonde, en réemployant leurs meilleurs éléments.
+
+Audit et consigne pour Astra et Opus : [Préservation et reprise des éléments existants](handoff/PRESERVATION_20261002/PRESERVATION.md).
+Base examinée : `61d9b431`, runtime identique à `RF2_PORTES_20261002_1018` ; cumul courant encore sur 1605.
+ORDY E V04, BRCD V02 et PREG V02 sont déjà importés : les anciens prompts décrivant leur absence ou la correction
+E V03 à faire ne justifient pas de repartir d'une version antérieure. Les nouveaux lots restent soumis au verdict
+du propriétaire. Sauvegarde locale vérifiée avant cette mise à jour, référencée dans l'audit.
+
 ## 1. Verdict du propriétaire (27 septembre 2026)
 
 Retour explicite du propriétaire, transmis par le pack `RF2_PRODUCTION_20260927` :

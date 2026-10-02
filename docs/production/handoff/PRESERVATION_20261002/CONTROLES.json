@@ -1,0 +1,173 @@
+{
+  "created_utc": "2026-10-02T16:17:46.692490+00:00",
+  "user_date": "2026-10-02",
+  "head": "61d9b43100bf071022f705e4bf10d82a3d660392",
+  "branch": "prod/rf2-campaign",
+  "git_status_before": "",
+  "archive": "build/preservation/RF2_PRESERVATION_20261002_61d9b431/ORIGINAUX.zip",
+  "archive_sha256": "6e5b2297e951607a552f40f8ec753476c8f591ed753417bd3d26bfa7d0e4073d",
+  "archive_verified": true,
+  "runtime_file_count": 1865,
+  "builds": [
+    {
+      "role": "accepted_RF01",
+      "path": "dist/review/RF2_ART_REVIEW_20260926_1451/RF2_ART_REVIEW.pk3",
+      "sha256": "04bdd0ae918761370c7620318f6e2add8bd1e1ac0acf88d55741c8be1883544f",
+      "expected_sha256": "04bdd0ae918761370c7620318f6e2add8bd1e1ac0acf88d55741c8be1883544f",
+      "hash_matches_record": true,
+      "weapon_visuals": {
+        "graphics/weapons/fal/": {
+          "files": 21,
+          "changed": [],
+          "missing": []
+        },
+        "graphics/weapons/browning/": {
+          "files": 8,
+          "changed": [],
+          "missing": []
+        },
+        "graphics/weapons/crowbar/": {
+          "files": 5,
+          "changed": [],
+          "missing": [
+            "graphics/weapons/crowbar/RF2_CROWBAR_FOLLOW.png",
+            "graphics/weapons/crowbar/RF2_CROWBAR_READY.png",
+            "graphics/weapons/crowbar/RF2_CROWBAR_RECOVERY.png",
+            "graphics/weapons/crowbar/RF2_CROWBAR_STRIKE.png",
+            "graphics/weapons/crowbar/RF2_CROWBAR_WINDUP.png"
+          ]
+        }
+      },
+      "source_files_changed_count": 381,
+      "source_files_missing_from_build_count": 725
+    },
+    {
+      "role": "owner_played_20260930",
+      "path": "dist/candidates/RF2_CUMUL_20260930_1821/RF2_CUMUL.pk3",
+      "sha256": "6c85e747bbae437f9b9ccd05e9602ea1d310cd8451b870271cff6ec3dc89ec31",
+      "expected_sha256": "6c85e747bbae437f9b9ccd05e9602ea1d310cd8451b870271cff6ec3dc89ec31",
+      "hash_matches_record": true,
+      "weapon_visuals": {
+        "graphics/weapons/fal/": {
+          "files": 21,
+          "changed": [],
+          "missing": []
+        },
+        "graphics/weapons/browning/": {
+          "files": 8,
+          "changed": [],
+          "missing": []
+        },
+        "graphics/weapons/crowbar/": {
+          "files": 5,
+          "changed": [],
+          "missing": []
+        }
+      },
+      "source_files_changed_count": 318,
+      "source_files_missing_from_build_count": 104
+    },
+    {
+      "role": "current_cumul_launcher",
+      "path": "dist/candidates/RF2_CUMUL_20261001_1605/RF2_CUMUL.pk3",
+      "sha256": "0efa372613c3b84579f61dd53bad6a70f5f2eb15a4991d7c3dc9b0c4caf696db",
+      "expected_sha256": "0efa372613c3b84579f61dd53bad6a70f5f2eb15a4991d7c3dc9b0c4caf696db",
+      "hash_matches_record": true,
+      "weapon_visuals": {
+        "graphics/weapons/fal/": {
+          "files": 21,
+          "changed": [],
+          "missing": []
+        },
+        "graphics/weapons/browning/": {
+          "files": 8,
+          "changed": [],
+          "missing": []
+        },
+        "graphics/weapons/crowbar/": {
+          "files": 5,
+          "changed": [],
+          "missing": []
+        }
+      },
+      "source_files_changed_count": 246,
+      "source_files_missing_from_build_count": 55
+    },
+    {
+      "role": "current_door_review",
+      "path": "dist/candidates/RF2_PORTES_20261002_1018/RF2_PORTES.pk3",
+      "sha256": "469418f215a662bb8e04e45b0d852c6376c2457e89b534b54877397e1cb21cb5",
+      "expected_sha256": "469418f215a662bb8e04e45b0d852c6376c2457e89b534b54877397e1cb21cb5",
+      "hash_matches_record": true,
+      "weapon_visuals": {
+        "graphics/weapons/fal/": {
+          "files": 21,
+          "changed": [],
+          "missing": []
+        },
+        "graphics/weapons/browning/": {
+          "files": 8,
+          "changed": [],
+          "missing": []
+        },
+        "graphics/weapons/crowbar/": {
+          "files": 5,
+          "changed": [],
+          "missing": []
+        }
+      },
+      "source_files_changed_count": 0,
+      "source_files_missing_from_build_count": 0
+    }
+  ],
+  "imports": [
+    {
+      "lot": "ORDY_E_V04",
+      "report": "docs/production/handoff/RF2_20261001/IMPORT_ORDY_E_V04.json",
+      "source": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/ORDY_E_V04",
+      "files": 8,
+      "drift": []
+    },
+    {
+      "lot": "BRCD_V02",
+      "report": "docs/production/handoff/RF2_20261001/IMPORT_BRCD_V02.json",
+      "source": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/BRCD_V02",
+      "files": 120,
+      "drift": []
+    },
+    {
+      "lot": "PREG_V02",
+      "report": "docs/production/handoff/RF2_20261001/IMPORT_PREG_V02.json",
+      "source": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/PREG_V02",
+      "files": 97,
+      "drift": []
+    },
+    {
+      "lot": "RF04_SHOE_V02",
+      "report": "docs/production/handoff/RF2_20261001/IMPORT_RF04_SHOE_V02.json",
+      "source": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/RF04_SHOE_V02",
+      "files": 1,
+      "drift": []
+    },
+    {
+      "lot": "RF05_DIALS_V02",
+      "report": "docs/production/handoff/RF2_20261001/IMPORT_RF05_DIALS_V02.json",
+      "source": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/RF05_DIALS_V02",
+      "files": 2,
+      "drift": []
+    },
+    {
+      "lot": "RF06_FLATS_01",
+      "report": "docs/production/handoff/RF2_20261001/IMPORT_RF06_FLATS_01.json",
+      "source": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261001/RF06_FLATS_01",
+      "files": 2,
+      "drift": []
+    }
+  ],
+  "limitations": [
+    "No new engine run or listening performed by this audit.",
+    "Art acceptance remains the owner verdict; preservation decisions are recommendations.",
+    "Art and incoming masters stay at their existing paths; only runtime, tools, tests, agent instructions, documentation, launchers and the two context documents are archived."
+  ],
+  "full_manifest": "build/preservation/RF2_PRESERVATION_20261002_61d9b431/BASE_MANIFEST.json"
+}

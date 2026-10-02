@@ -3,6 +3,11 @@
 Active production state (27/09/2026 onward): `docs/production/ETAT_PRODUCTION.md` - owner verdict, accepted
 reference, roles, coverage matrix, resume point. This file keeps the gate summary.
 
+Owner preservation instruction (02/10/2026): inspect and classify existing work before each revision; reuse the best
+versions, preserve originals, and compare gains and regressions in the engine. Accepted RF01 and appreciated weapons
+remain the references; Luna Park, RF05 and RF06 still need substantial improvement. Current audit and rollback snapshot:
+`docs/production/handoff/PRESERVATION_20261002/PRESERVATION.md`. ORDY E V04, BRCD V02 and PREG V02 are already imported.
+
 ## Engine
 
 UZDoom 5.0.1 / Freedoom 0.13.0 dev IWAD.
