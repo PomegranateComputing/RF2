@@ -66,6 +66,22 @@ class RFLunaRail : RFLunaInteract { Default { Radius 16; Height 8; RFInteract.Pr
 class RFLunaTurnstile : RFLunaInteract { Default { Radius 12; Height 40; } }         // the turnstile with a counter
 class RFLunaMirror : RFLunaInteract { Default { Radius 16; Height 56; RFInteract.Prompt 1; } } // the mirror of the badge
 
+// A puddle lying on the floor (the basin's black water under the shoe, oil and seepage under RF05's machines): a
+// flat image with an irregular edge. args: image (1-3), width and depth in units.
+class RFPuddle : Actor
+{
+    Default { Radius 8; Height 1; +FLATSPRITE; +NOINTERACTION; +NOBLOCKMAP; +NOGRAVITY; }
+    override void PostBeginPlay()
+    {
+        Super.PostBeginPlay();
+        SetZ(floorz + 0.2);
+        frame = clamp(args[0], 1, 3) - 1;
+        // the images are 96 x 96 units at scale 0.25 (384 px)
+        Scale = ((args[1] > 0 ? args[1] : 96) / 384.0, (args[2] > 0 ? args[2] : 96) / 384.0);
+    }
+    States { Spawn: R4PD A -1; Stop; }
+}
+
 class RFLunaShoe : RFLunaInteract           // the child's shoe in a black puddle (l. 523-525): flat, in the puddle
 {
     Default { Radius 10; Height 8; Scale 0.45; +FLATSPRITE; RFInteract.Prompt 1; }

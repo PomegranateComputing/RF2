@@ -662,6 +662,35 @@ def draw_guard():
         save_sprite(img, f'R4G1{state}0')
 
 
+def draw_puddles():
+    """Three puddles seen from above (flat sprites, 384 px = 96 u): still black water, the grey sky lying on it in
+    a few broad streaks, inside an irregular edge with a darker wet rim. Smooth: a puddle has no grain (02/10, first
+    version: the floor flat's noise made it read as a rug)."""
+    from PIL import ImageFilter
+    S = 384
+    yy, xx = np.mgrid[0:S, 0:S] / (S - 1.0)
+
+    def smooth(a, radius):                                           # the noise without its fine octaves
+        lo, hi = float(a.min()), float(a.max())
+        im = Image.fromarray(((a - lo) / (hi - lo) * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(radius))
+        return np.asarray(im).astype(float) / 255 * (hi - lo) + lo
+
+    for k, name in enumerate(('R4PDA0', 'R4PDB0', 'R4PDC0')):
+        sheen = np.clip((smooth(fbm(S, S, 567 + 3 * k, 0.7), 14) - 0.44) * 3.4, 0, 1)[..., None]
+        water = solid(S, S, (13, 14, 16)) + sheen * np.array([0.24, 0.255, 0.29])
+        ang = np.arctan2(yy - 0.5, xx - 0.5)
+        r = np.hypot(xx - 0.5, yy - 0.5) * 2
+        lobes = 0.70 + 0.11 * np.sin(3 * ang + k) + 0.07 * np.sin(5 * ang + 2.1 * k) + 0.04 * np.sin(8 * ang + 0.7 * k)
+        edge = lobes + 0.5 * (smooth(fbm(S, S, 590 + k, 0.5), 9) - 0.5)
+        inside = edge - r
+        alpha = np.clip(inside * 40, 0, 1)
+        rim = np.clip(1 - np.abs(inside - 0.03) * 30, 0, 1)[..., None]            # the wet margin, darker
+        water = water * (1 - 0.35 * rim)
+        rgba = np.dstack([np.clip(water, 0, 1) * 255, alpha[..., None] * 238]).astype(np.uint8)
+        img = Image.fromarray(rgba, 'RGBA').filter(ImageFilter.GaussianBlur(1.2))
+        save_sprite(img, name, yoff_extra=-S // 2)
+
+
 def draw_shoe():
     """A child's shoe: white leather, side buckle, sole almost new (l. 525). The actor is a FLATSPRITE lying in the
     puddle: the shoe lies on its side, so seen from above it shows its profile; drawn at 4x and reduced (01/10: the
@@ -1000,6 +1029,7 @@ def main():
     # sprites
     draw_guard()
     draw_shoe()
+    draw_puddles()
     draw_jukebox()
     draw_substation_key()
     # RF05: the substation and the park lit again

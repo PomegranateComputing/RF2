@@ -28,6 +28,10 @@ import facades  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = Path(__file__).with_name('door_variants.json')
+# Variant images delivered by an art lot ({name: {lot, sha256}}): never redrawn, never pruned (the generators must
+# not redo imported images). Written by the import of the lot; a variant whose opening changes gets a new name and
+# is drawn again by the generator until its own image is delivered.
+DELIVERED = Path(__file__).with_name('door_delivered.json')
 PATCHES = ROOT / 'src' / 'patches' / 'doors'
 
 # name: (source file under src/, world width, world height, pixels per unit, kind, mirror the opposite face)
@@ -276,6 +280,7 @@ def names_in_maps():
 
 def main():
     reg = load_registry()
+    delivered = json.loads(DELIVERED.read_text(encoding='utf-8')) if DELIVERED.exists() else {}
     if '--keep-unused' not in sys.argv:
         used = names_in_maps()
         dropped = sorted(set(reg) - used)
@@ -304,7 +309,18 @@ def main():
             continue
         if kind == 'luna':
             img, ppu, how = facades.luna_image(spec)
-            img.save(PATCHES / f'{name}.png', optimize=True)
+            if name in delivered:
+                f = PATCHES / f'{name}.png'
+                if not f.exists():
+                    sys.exit(f'doors: {name}.png, delivered by {delivered[name]["lot"]}, is missing from src/patches/doors')
+                with Image.open(f) as kept:
+                    if kept.size != img.size:
+                        sys.exit(f'doors: {name}.png delivered at {kept.size}, the opening needs {img.size}')
+                if hashlib.sha256(f.read_bytes()).hexdigest() != delivered[name]['sha256']:
+                    print(f'doors: WARNING {name}.png differs from the delivered file ({delivered[name]["lot"]}); left as it is')
+                how = f'image livree ({delivered[name]["lot"]}), non redessinee'
+            else:
+                img.save(PATCHES / f'{name}.png', optimize=True)
             wanted.add(f'{name}.png')
             lines.append(f'Texture {name}, {img.size[0]}, {img.size[1]}\n{{\n    XScale {ppu!r}\n    YScale {ppu!r}\n'
                          f'    Patch "patches/doors/{name}.png", 0, 0\n}}')
@@ -322,8 +338,11 @@ def main():
                      f'    Patch "patches/doors/{base_name}.png", 0, 0{flip}\n}}')
         report[name] = dict(spec, how=how + (' ; face opposee en miroir' if spec['mirrored'] else ''))
     for old in PATCHES.glob('*.png'):
-        if old.name not in wanted:
+        if old.name not in wanted and old.stem not in delivered:
             old.unlink()
+    idle = sorted(n for n in delivered if f'{n}.png' not in wanted)
+    if idle:
+        print(f'doors: delivered images no map uses any more (kept): {idle}')
     (ROOT / 'src' / 'TEXTURES.doors').write_bytes(('\n'.join(lines) + '\n').encode('utf-8'))
     (ROOT / 'build').mkdir(exist_ok=True)
     (ROOT / 'build' / 'door_variants_report.json').write_text(json.dumps(report, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')

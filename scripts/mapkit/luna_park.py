@@ -33,7 +33,7 @@ FORE = replace(PARK, ftex='RFF_GRAV', wall='RF4_HANG', light=156)
 GRAVEL = replace(PARK, ftex='RFF_GRAV')
 BASIN = replace(PARK, floor=-96, ftex='RF4_BASF', wall='RF4_BASS', lower='RF4_BASS', light=150, env=(30, 1))
 ROCKS = replace(BASIN, ftex='RF4_ROCF', wall='RF4_ROCH', lower='RF4_ROCH')
-PUDDLE = replace(BASIN, ftex='RF4_FLAQ')
+T_PUDDLE = 30680            # RFPuddle: args (image 1-3, width, depth in units)
 LANE = replace(PARK, ftex='RF4_DALH', wall='RF4_HANG', light=144)
 CORR = Cell(floor=0, ceil=104, ftex='RFF_WOOD', ctex='RFP_CEID', light=92, wall='RF4_CABL', color=0xEADCC4, env=ENV_CORR)
 ATELIER = Cell(floor=0, ceil=120, ftex='RFF_WOOD', ctex='RFP_CEID', light=88, wall='RF4_ATEL', color=0xEAD8C0, env=ENV_ROOM)
@@ -230,9 +230,9 @@ def build_park(m, sign):
         m.box(bx0, by1 - 112 + 32 * k, 896, by1 - 80 + 32 * k, ROCKS, floor=z)
     m.box(bx0, by1 - 16, 896, by1, ROCKS, floor=-8)
     m.box(896, by1 - 48, 1024, by1, ROCKS, floor=-56)                               # the cascade's foot, under the chute
-    for (x0, y0, x1, y1) in ((944, 1280, 1008, 1296), (960, 1264, 992, 1312), (928, 1264, 960, 1280),
-                             (992, 1296, 1024, 1312)):                              # the black puddle of the shoe
-        m.box(x0, y0, x1, y1, PUDDLE)
+    # the black puddle of the shoe: a flat image lying on the basin's floor (02/10: as floor cells its edge was a
+    # staircase of 16-unit squares)
+    m.thing(976, 1288, T_PUDDLE, angle=20, args=(1, 100, 60))
     a['shoe'] = (976, 1288)
     for (y0, y1) in ((704, 736), (1056, 1088)):                                     # two footbridges at the esplanade's level
         m.slab(bx0, y0, bx1, y1, -6, 0, 'RF4_BASC', top='RFF_WOOD', bottom='RF4_BASC')
@@ -255,6 +255,12 @@ def build_park(m, sign):
     m.slab(tx0 + 48, ty0 + 32, tx1 - 48, ty1 - 32, 396, 428, 'RF4_MARQ', top='RF4_MARF', bottom='RF4_MARF')
     sign(cx0, cy1 - 16, cx1, cy1 - 16, 'RF4_NIAG', 328, off=0)                       # LES CHUTES DU NIAGARA over the
     # chute's top (128 x 32), facing south down the basin
+    # Timber frames and a cable tray on them in the service corridor behind BROOKLYN (proposal of the preservation
+    # pilot, review session, 02/10): 80 u clear in width, 88 in height; the scene and door anchors stay where they were.
+    for y0 in (336, 464, 592):
+        m.slab(1600, y0, 1616, y0 + 16, 0, 96, 'RF4_POTE', top='RF4_POTE', bottom='RF4_POTE')
+        m.slab(1600, y0, 1696, y0 + 16, 88, 96, 'RF4_BOIS', top='RF4_BOIS', bottom='RF4_BOIS')
+    m.slab(1680, 320, 1696, 704, 72, 80, 'RF4_CABL', top='RF4_CABL', bottom='RF4_CABL')
     # ---- the roller coaster on its trestles, west: two rows of posts, the track over them, the lattice between
     for x in TRESTLE_XS:
         for y in range(TRESTLE_Y0, TRESTLE_Y1 + 1, 96):

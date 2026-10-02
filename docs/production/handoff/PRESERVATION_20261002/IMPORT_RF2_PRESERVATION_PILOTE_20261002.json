@@ -1,0 +1,96 @@
+{
+  "batch": "RF2_PRESERVATION_PILOTE_20261002",
+  "lot": "C:/PROJECTS/RF2_UZDOOM_CODEX_ART_20261002_PRESERVATION",
+  "manifest_sha256": "4250c4f189d9731cdd322e154509665640fa95ded0a05903b5a8b16e0dcbff39",
+  "status": "OWNER_REVIEW_REQUIRED",
+  "imported": "2026-10-02 13:36",
+  "by": "Opus (integration)",
+  "head_before": "f43d3fce04ada9802a8a330be574f5d0119f87db",
+  "base_drift_reason": null,
+  "counts": {
+    "remplace_base_conforme": 8
+  },
+  "files": [
+    {
+      "target": "src/patches/doors/RD16008B.png",
+      "delivered": "runtime/patches/doors/RD16008B.png",
+      "sha256": "c331c0614e13be21f162bda27b999787f86d33cd8e45b0e0f493396e01106d65",
+      "before": "db825d52de0a9c241602dc42928e94fd4041de534c12a6a7bfe691ab38c68195",
+      "base_sha256": "db825d52de0a9c241602dc42928e94fd4041de534c12a6a7bfe691ab38c68195",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/doors/RD2905D8.png",
+      "delivered": "runtime/patches/doors/RD2905D8.png",
+      "sha256": "5b94e7f9e242056ccc41642d958778d125148de8b7927d730f272529daea75b4",
+      "before": "57701fc1dbf3496ef0ee887295aa869992f73572a939b6d7d83ffa70e64b1dd0",
+      "base_sha256": "57701fc1dbf3496ef0ee887295aa869992f73572a939b6d7d83ffa70e64b1dd0",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/doors/RD7D3A00.png",
+      "delivered": "runtime/patches/doors/RD7D3A00.png",
+      "sha256": "0bf48289e66e2ebacadb8e8b0a0da8ac3b7b167c8d9dcf7a14c13c3fcc445651",
+      "before": "3a94330cfdec2ba4643702c38897a6726e38a9ee207e7dae4362cda54e5a69f2",
+      "base_sha256": "3a94330cfdec2ba4643702c38897a6726e38a9ee207e7dae4362cda54e5a69f2",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/doors/RDCA1A4B.png",
+      "delivered": "runtime/patches/doors/RDCA1A4B.png",
+      "sha256": "dbc10ff525d398b1c4c9a84db66c141ab99d4b719339975e05a7fd310153bb76",
+      "before": "8c8ee7d993c81e22d405baabd0590c7cc0be72d623aed8fa49a8a1d149faf278",
+      "base_sha256": "8c8ee7d993c81e22d405baabd0590c7cc0be72d623aed8fa49a8a1d149faf278",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/doors/RDD6E850.png",
+      "delivered": "runtime/patches/doors/RDD6E850.png",
+      "sha256": "4247c40bf9590bd98336dcce240aa452e9ef131e21e4d4d6b51f143bd3791c99",
+      "before": "52897d238dc9d6f18fc18f5a0f032b61269b1d60bdfcc34e1560b8e17aa0ad64",
+      "base_sha256": "52897d238dc9d6f18fc18f5a0f032b61269b1d60bdfcc34e1560b8e17aa0ad64",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/doors/RDE3BB50.png",
+      "delivered": "runtime/patches/doors/RDE3BB50.png",
+      "sha256": "d7c298e5380df788057e079a2d51805f665aed2d6ac85ad7cd5de871104027bc",
+      "before": "00b4b92a621eb96a825a4c8397417342ab3c645b281468c49a034649cf80f54a",
+      "base_sha256": "00b4b92a621eb96a825a4c8397417342ab3c645b281468c49a034649cf80f54a",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/doors/RDF19AD8.png",
+      "delivered": "runtime/patches/doors/RDF19AD8.png",
+      "sha256": "8d28c23a9c4c4da6d75b360d6f7fc2a98f4f42093dbd8642155f31b8c30186b3",
+      "before": "272d59b6f3fdfb79c570e7758c9edd61ce7f11d020caaa2739f0728640d49c64",
+      "base_sha256": "272d59b6f3fdfb79c570e7758c9edd61ce7f11d020caaa2739f0728640d49c64",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    },
+    {
+      "target": "src/patches/doors/RDF1F8B2.png",
+      "delivered": "runtime/patches/doors/RDF1F8B2.png",
+      "sha256": "dbc10ff525d398b1c4c9a84db66c141ab99d4b719339975e05a7fd310153bb76",
+      "before": "c5ef66b63ea0d2c8e9b4a45cc5d0c6573878eee1ae3847af4183c0635f9171c8",
+      "base_sha256": "c5ef66b63ea0d2c8e9b4a45cc5d0c6573878eee1ae3847af4183c0635f9171c8",
+      "state": "remplace_base_conforme",
+      "kind": "Texture",
+      "id": null
+    }
+  ],
+  "note": "Import into the production tree only: engine review, listening and owner verdict are separate."
+}

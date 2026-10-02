@@ -144,8 +144,9 @@ def litter(points):
 
 
 def puddle(x0, y0, x1, y1, base):
-    """A black puddle on the floor (oil, seepage): the floor's flat changed, same height."""
-    m.box(x0, y0, x1, y1, base, ftex='RF4_FLAQ', light=base.light - 6)
+    """A black puddle on the floor (oil, seepage): a flat image lying on it, a little wider than its old cells."""
+    k = len([t for t in m.things if t['type'] == lp.T_PUDDLE])
+    m.thing((x0 + x1) / 2, (y0 + y1) / 2, lp.T_PUDDLE, angle=(37 * k) % 360, args=(2 + k % 2, int((x1 - x0) * 1.3), int((y1 - y0) * 1.3)))
 
 
 # ============================================================================ THE PARK, LIT AGAIN (shared with RF04)
@@ -224,6 +225,44 @@ m.box(1296, 2784, 1312, 2848, SUB, ceil=UG + 88)
 m.box(1536, 3008, 1600, 3040, SUB, ceil=UG + 104)
 m.label(1320, 2700, 'B SOUS-STATION')
 
+# The vault (proposal of the preservation pilot, review session, 02/10, taken as delivered): a barrel vault of sloping
+# ceiling planes in the vault's brick, one strip per 16 u, each meeting its neighbours; three shallow ribs of the same
+# curve. The cells that carry a sign or a walk line keep a flat ceiling (a decor line stays in one sector).
+_vault_fixed_cells = set()
+for _line in m.decor:
+    _length = math.hypot(_line['x1'] - _line['x0'], _line['y1'] - _line['y0'])
+    for _sample in range(max(1, int(_length / 2)) + 1):
+        _t = _sample / max(1, int(_length / 2))
+        _vault_fixed_cells.add((math.floor((_line['x0'] + (_line['x1'] - _line['x0']) * _t) / 16),
+                               math.floor((_line['y0'] + (_line['y1'] - _line['y0']) * _t) / 16)))
+
+
+def _vault_z(x):
+    dx = (x - 1568) / 256
+    return UG + 144 + 48 * max(0, 1 - dx * dx) ** 0.5
+
+
+for _x in range(1312, 1824, 16):
+    _z0, _z1 = _vault_z(_x), _vault_z(_x + 16)
+    _slope = (_z1 - _z0) / 16
+    for _y in range(2688, 3008, 16):
+        _cell = m.cell_at(_x + 8, _y + 8)
+        if _cell is None:
+            continue
+        if (_x // 16, _y // 16) in _vault_fixed_cells or _x in (1312, 1808) or _y in (2688, 2992):
+            m.cells[(_x // 16, _y // 16)] = replace(_cell, ctex='RF5_VOUT')
+            continue
+        _rib = 8 if _y in (2784, 2880, 2960) else 0
+        _z = _z0 - _slope * _x - _rib
+        _extra = tuple((k, v) for k, v in _cell.extra if not k.startswith('ceilingplane_')) + (
+            ('ceilingplane_a', -_slope), ('ceilingplane_b', 0.0), ('ceilingplane_c', 1.0), ('ceilingplane_d', -_z))
+        m.cells[(_x // 16, _y // 16)] = replace(_cell, ceil=round((_z0 + _z1) / 2 - _rib), ctex='RF5_VOUT', extra=_extra)
+# A services spine on the east aisle, above eye height, on brackets (same proposal); stopped short of the bay of the
+# feeders' gallery (y 2928), which looks over it.
+for rib_y in (2784, 2880):
+    m.slab(1760, rib_y, 1808, rib_y + 16, UG + 96, UG + 104, 'RFMETAL', top='RFMETAL', bottom='RFMETAL')
+m.slab(1776, 2704, 1808, 2912, UG + 104, UG + 112, 'RF4_CABL', top='RF4_CABL', bottom='RF4_CABL')
+
 # ============================================================================ C. THE ANNEXES
 # the workshop: a chest of drawers (rags, an oil can, a flat spanner of 17), shelves, a vice
 m.box(1840, 2752, 2000, 2912, SHOP)
@@ -275,6 +314,41 @@ for (x, y) in ((1440, 3104), (1600, 3244)):
 m.thing(1500, 3164, T_AMB, args=(AMB_ROOM, 55))
 m.thing(1640, 3064, T_9MM)
 m.thing(1340, 3184, T_DRESS)
+
+# ---------------------------------------------------------------------------- the two maintenance loops (02/10)
+# A declared adaptation (the novel gives the vault, the workshop and the galleries, not their plan): two short ways
+# round, each with its own trade, so that the machine is seen from behind and from above, and the bench is a way back.
+# Loop 1, the feeders' gallery (electrical): from the transformers a steep wooden stair climbs to a gallery at +96
+# where the cables leave for the attractions; a bay in the vault's east wall looks down on the wheel, face on, and on
+# the motor behind it; a second stair comes down into the workshop, by the vice, and back to the bench.
+HIGH = replace(GAL, floor=UG + 96, ceil=UG + 176, light=50, wall='RF4_CABL', lower='RF4_ATEL')
+m.box(1696, 3056, 1712, 3104, TRANS, ceil=UG + 96)                       # the doorway in the transformers' east wall
+for k in range(8):
+    m.box(1712 + 16 * k, 3056, 1728 + 16 * k, 3104, HIGH, floor=UG + 12 * (k + 1), ftex='RFF_WOOD', light=42 + k)
+m.box(1840, 3056, 2000, 3104, HIGH)                                      # the gallery
+m.box(1840, 2928, 1904, 3056, HIGH)                                      # its arm to the bay
+m.box(1824, 2928, 1840, 2992, HIGH, ceil=UG + 160, wall='RF5_VOUT', ctex='RF5_VOUT', lower='')   # the bay through the vault's wall
+m.decor_line(1825, 2928, 1825, 2992, 'RF2_RAMB', UG + 96, blocking=True, yscale=4)
+for k in range(8):
+    m.box(1952, 3040 - 16 * k, 2000, 3056 - 16 * k, HIGH, floor=UG + 84 - 12 * k, ftex='RFF_WOOD', light=50 + k)
+m.box(1952, 2912, 2000, 2928, SHOP, ceil=UG + 96)                        # the doorway in the workshop's north wall
+m.slab(1840, 3088, 2000, 3104, UG + 158, UG + 164, 'RF4_CABL', top='RF4_CABL', bottom='RF4_CABL')   # the feeders
+m.slab(1888, 2928, 1904, 3056, UG + 158, UG + 164, 'RF4_CABL', top='RF4_CABL', bottom='RF4_CABL')
+lamp(1872, 2976, 64, 255, 214, 150, 100)                                 # a bulb at the bay
+m.thing(1920, 3080, T_FLICKER, args=(230, 214, 170, 100, 70), z=64)
+# Loop 2, the culvert of the pump main (hydraulic): from the west gallery by the air shaft to the north gallery at
+# the transformers' door; low, three steps down into standing water, the main to the basin hung along its east wall.
+CULV = replace(GAL, ceil=UG + 64, light=44, wall='RF5_VOUT', color=0xC8D8D8)
+m.box(1232, 2848, 1296, 3168, CULV)
+for k in range(3):
+    m.box(1232, 2864 + 16 * k, 1296, 2880 + 16 * k, CULV, floor=UG - 8 * (k + 1))
+    m.box(1232, 3136 - 16 * k, 1296, 3152 - 16 * k, CULV, floor=UG - 8 * (k + 1))
+m.box(1232, 2912, 1296, 3104, CULV, floor=UG - 24, ftex='RF4_FLAQ', light=38)
+m.slab(1280, 2912, 1296, 3104, UG + 48, UG + 60, 'RF4_BASC', top='RF4_BASC', bottom='RF4_BASC')
+m.thing(1256, 3008, T_FLICKER, args=(200, 214, 190, 90, 60), z=70)
+m.thing(1272, 2990, T_AMB, args=(AMB_DRIP, 50))
+m.label(1850, 3112, 'GALERIE DES DEPARTS (+96)')
+m.label(1040, 3000, 'CANIVEAU')
 # E1: after her, the staff come along the galleries; E2 at their bend; E3 when the fuse is taken
 spot(1000, 2816, ORD, GALLERY_WAVE, 0)
 spot(880, 2816, ORD, GALLERY_WAVE, 0)
@@ -282,6 +356,7 @@ spot(768, 2954, ORD, GALLERY_WAVE, 270, skill='hard')
 spot(1100, 3200, ORD, GALLERY2_WAVE, 180)
 spot(1200, 3200, POR, GALLERY2_WAVE, 180)
 wake(736, 2920, 800, 2920, GALLERY2_WAVE)
+wake(1232, 2856, 1296, 2856, GALLERY2_WAVE)                              # or by the culvert: the same staff, met there
 spot(900, 3200, ORD, FUSE_WAVE, 0)
 spot(840, 3200, ORD, FUSE_WAVE, 0)
 spot(768, 3104, POR, FUSE_WAVE, 270, skill='normal+')
@@ -365,11 +440,19 @@ route = [
     (768, 2944, 0, 0, 0, 0),
     (768, 3184, 0, 60, 0, 0),                # E2 at the bend (through the black water)
     (768, 3200, 1, 60, 0, 180),              # the toolbox: canvas, copper staples
-    (1300, 3200, 0, 0, 0, 0),
+    (1264, 3200, 0, 0, 0, 0),
+    (1264, 2888, 0, 0, 0, 270),              # loop 2: down the culvert, through the water, and back
+    (1264, 3200, 0, 0, 0, 90),
     (1500, 3120, 0, 0, 0, 0),
     (1640, 3168, 1, 60, 0, 0),               # the spare fuse, 22.12.2022 (E3)
-    (1570, 3104, 0, 120, 0, 0),
-    (1568, 3024, 0, 0, 0, 0),
+    (1640, 3080, 0, 120, 0, 0),
+    (1856, 3080, 0, 0, 0, 0),                # loop 1: up the stair to the feeders' gallery
+    (1872, 2968, 0, 40, 0, 180),             # the bay over the wheel and the motor
+    (1872, 3080, 0, 0, 0, 0),
+    (1976, 3080, 0, 0, 0, 270),
+    (1976, 2896, 0, 0, 0, 270),              # down into the workshop
+    (1920, 2832, 0, 0, 0, 180),
+    (1780, 2816, 0, 0, 0, 180),              # back by the bench
     (1552, 2896, 1, 220, 0, 270),            # the bearing cleaned
     (1552, 2896, 1, 40, 0, 270),             # the belt reinforced
     (1340, 2880, 1, 440, 0, 180),            # the fuse JERMA

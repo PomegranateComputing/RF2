@@ -21,6 +21,13 @@ Side explorations (declared adaptation, no text added): door 404 ajar on an empt
 mattress, the number crossed out on the inside too); at the junction, a passage toward "the other wing" that ends at a
 railing over a stairwell going down into the dark.
 
+Spatial complexity (owner's order of 02/10, still without combat; declared adaptations, nothing explained): a service
+recess with a collector on the park's side; a side loop off the hall of skins down to an inspection gallery (review
+session's pilot); a second threshold under another coating; the valve chamber, a short technical way round the descent
+with a walkway over a pit (high and low); the white pipe followed as a thread and a scale, crossed under at both
+turns; ribs on the wall the beam sweeps; and a slot in the last stretch that looks into the stairwell of "the other
+wing", 1 200 u away (a pair of visual line portals).
+
 Usage: python scripts/mapkit/rf06.py   (writes src/maps/RF06.wad, build/RF06_plan.png, build/RF06_TEXTMAP.txt)
 """
 import math
@@ -99,7 +106,7 @@ for k in range(8):
     i = piece(0, 64 + k * PIECE, W, 64 + (k + 1) * PIECE, floor, wall='RF6_PEAU' if k in (3, 6) else 'RF6_BETN')
     pipes(W - 16, 64 + k * PIECE, W, 64 + (k + 1) * PIECE, floor + 72)
     room_doors.append((0, 64 + k * PIECE + 32, 'W', floor))
-    if k != 4:
+    if k not in (1, 4):                                                # 1: the service recess, 4: room 404
         room_doors.append((W, 64 + k * PIECE + 64, 'E', floor))
 order = ['117', '404', '017', '117', '017', '404', '404', '117', '017', '117', '404', '017', '117', '017', '404']
 for n, (xw, y, side, f) in enumerate(room_doors):                      # doors shut, their numbers crossed out
@@ -109,6 +116,12 @@ for n, (xw, y, side, f) in enumerate(room_doors):                      # doors s
     else:
         m.face(xw - 16, y, xw, y + 48, 'E', texture='RFD_SGL')
         sign(xw, y + 48, xw, y, f'RF6_N{order[n % len(order)]}', f + 52)
+# 02/10, a first widening, on the park's side of things: the recess of a collector where the white pipe has a
+# branch (the pipe is the corridor's thread: it is found again in the valve chamber, at both turns, at the day)
+f1 = pieces[1][4]
+m.box(W, 208, W + 96, 304, COR, floor=f1, ceil=f1 + 120, light=38, extra=(('user_piece', 2),))
+m.raise_block(W + 64, 224, W + 96, 288, 72, 'RFF_CONC', 'RF5_MOTR')                                # the collector
+pipes(W, 240, W + 96, 256, f1 + 72)                                                              # its branch
 across(0, 584, W, 584, C_RUMBLE)                                       # the train becomes a hotel's air
 m.thing(48, 900, T_AMB, args=(10, 70))                                 # the ventilation of a hotel (kind 10)
 
@@ -117,7 +130,8 @@ y404 = 64 + 4 * PIECE
 m.box(W, y404 + 32, W + 16, y404 + 80, COR, floor=pieces[4][4], ceil=pieces[4][4] + 80, light=34)   # the doorway
 m.box(W + 16, y404 - 16, W + 160, y404 + 128, ROOM, floor=pieces[4][4], ceil=pieces[4][4] + 104, light=44)
 m.raise_block(W + 80, y404 + 48, W + 144, y404 + 112, 16, 'RFF_WOOD', 'RF4_ATEL')                 # the iron bedstead
-sign(W, y404 + 80, W, y404 + 32, 'RF6_N404', pieces[4][4] + 62)                                   # 404, crossed out, by its door
+sign(W, y404 + 124, W, y404 + 84, 'RF6_N404', pieces[4][4] + 46)       # 404, crossed out, on the wall by its doorway (02/10: it
+                                                                        # hung across the opening, half under the lintel)
 m.thing(W + 88, y404 + 56, T_FLICKER, args=(150, 140, 120, 136, 104), z=88, angle=24)            # the bulb over the bed
 
 # ---------------------------------------------------------------- 3. the hall of skins (graffiti under lifting paint)
@@ -132,18 +146,81 @@ for (x0, y0, x1, y1) in ((-48, hall_y0 + 32, -48, hall_y0 + 80), (-48, hall_y0 +
     m.face(-48, y0, -32, y1, 'W', texture='RF6_PEA2')                  # the skins lifted off a second layer
 across(-48, hall_y0 + 40, W + 48, hall_y0 + 40, C_PAINT)
 
+# A side service loop off the hall of skins (proposal of the preservation pilot, review session, 02/10, taken as
+# delivered; a declared adaptation, no inscription and no scene added): steps of 16 down to a transverse inspection
+# gallery and back up; both ends join the hall, the entry stays 64 u wide at the north end.
+annex_floor = pieces[hall][4]
+m.carve(128, hall_y0 + 80, 144, hall_y1)
+for k in range(4):
+    y0 = hall_y0 + 16 + k * 32
+    m.box(144, y0, 240, y0 + 32, COR, floor=annex_floor - 16 * k, ceil=annex_floor + 88 - 16 * k, wall='RF6_BETS', light=38,
+          extra=(('user_piece', hall + 1),))
+m.box(144, hall_y0 + 144, 336, hall_y0 + 192, COR, floor=annex_floor - 48, ceil=annex_floor + 56, wall='RF6_BETS', light=40,
+      extra=(('user_piece', hall + 1),))
+for k in range(4):
+    y0 = hall_y0 + 112 - k * 32
+    m.box(240, y0, 336, y0 + 32, COR, floor=annex_floor - 16 * (3 - k), ceil=annex_floor + 88 - 16 * (3 - k), wall='RF6_PEA2',
+          light=36, extra=(('user_piece', hall + 1),))
+m.box(144, hall_y0 - 16, 336, hall_y0 + 16, COR, floor=annex_floor, ceil=annex_floor + 88, wall='RF6_PEA2', light=42,
+      extra=(('user_piece', hall + 1),))
+m.slab(240, hall_y0 + 64, 256, hall_y0 + 128, annex_floor - 48, annex_floor + 24, 'RF6_BETN', top='RF6_BETN', bottom='RF6_BETN')
+m.thing(192, hall_y0 + 112, T_FLICKER, args=(140, 132, 110, 100, 80), z=72)
+m.thing(288, hall_y0 + 32, T_FLICKER, args=(150, 140, 120, 96, 90), z=72)
+
 # ---------------------------------------------------------------- 4. the descent (the slope steepens, warmer)
 y = hall_y1
 for k in range(7):
     floor -= 16
     piece(0, y, W, y + PIECE, floor, wall='RF6_PEA2' if k in (2, 5) else 'RF6_BETN', light=44 + 2 * k)
-    pipes(0, y, 16, y + PIECE, floor + 72)
+    if k not in (2, 3):                                               # there the pipe is in the valve chamber
+        pipes(W - 16, y, W, y + PIECE, floor + 72)
     y += PIECE
 descent_end = y
+# ERREUR O (l. 715-717, after the skins and before the voices): said once two have been passed and the third shows
+# ahead on the east wall. 02/10: the line was lost when the corridor was recomposed, the text was never shown.
+across(0, hall_y1 + 2 * PIECE + 104, W, hall_y1 + 2 * PIECE + 104, C_ERREUR)
+# 02/10, a second threshold: the walls come in and the lintel down, under another thickness of coating
+fd = [pieces[9 + k][4] for k in range(7)]                              # the descent's floors
+m.carve(0, hall_y1, 16, hall_y1 + 32)
+m.carve(W - 16, hall_y1, W, hall_y1 + 32)
+m.modify(16, hall_y1, W - 16, hall_y1 + 32, ceil=fd[0] + 76, wall='RF6_PEA2')
+# 02/10, the valve chamber (declared adaptation: a short technical way round, sequence 2): the pipe leaves the
+# corridor through the wall; a doorway follows it to a walkway over a pit where it comes down a riser to a
+# collector, goes up another and back to the corridor; steps down along the pit, out lower. High and low: the
+# pit is 144 u under the first walkway, the ceiling stays where it was.
+ch_y0, ch_y1 = hall_y1 + 160, hall_y1 + 576                            # 1440..1856
+ch_ceil = fd[1] + 136
+CH = replace(COR, wall='RF6_BETS', light=34, ceil=ch_ceil)
+m.box(W, ch_y0 + 16, W + 32, ch_y0 + 64, COR, floor=fd[1], ceil=fd[1] + 80, light=36, extra=(('user_piece', 11),))
+m.box(W + 32, ch_y0, W + 112, ch_y0 + 176, CH, floor=fd[1], extra=(('user_piece', 11),))        # the high walkway
+for j in range(6):                                                    # six steps down, walled from the pit
+    m.box(W + 32, ch_y0 + 176 + 16 * j, W + 96, ch_y0 + 192 + 16 * j, CH, floor=fd[1] - 8 * (j + 1),
+          extra=(('user_piece', 12 if j < 3 else 13),))
+m.box(W + 32, ch_y0 + 272, W + 112, ch_y1, CH, floor=fd[4], extra=(('user_piece', 14),))        # the low walkway
+m.box(W, ch_y1 - 48, W + 32, ch_y1, COR, floor=fd[4], ceil=fd[4] + 80, light=36, extra=(('user_piece', 14),))
+PIT = replace(CH, floor=fd[4] - 96, light=26)
+m.box(W + 112, ch_y0 + 16, W + 208, ch_y1 - 16, PIT)                                            # the pit
+for (r0, r1, rz) in ((16, 80, fd[1]), (80, 96, fd[1]), (96, 176, fd[1]),              # the railings, in lengths: the
+                     (272, 352, fd[4]), (352, 368, fd[4]), (368, 400, fd[4])):         # pipes overhead cut the sectors
+    m.decor_line(W + 110, ch_y0 + r0, W + 110, ch_y0 + r1, 'RF2_RAMB', rz, blocking=True, yscale=4)
+for ry in (ch_y0 + 80, ch_y0 + 352):                                   # the two risers, floor to ceiling
+    m.carve(W + 160, ry, W + 176, ry + 16)
+    m.modify(W + 144, ry - 16, W + 192, ry + 32, wall='RFP_PLN')
+m.raise_block(W + 144, ch_y0 + 160, W + 192, ch_y0 + 272, 120, 'RFF_CONC', 'RF5_MOTR', PIT)      # the collector
+pipes(W + 32, ch_y0 + 80, W + 160, ch_y0 + 96, fd[1] + 72)             # in from the corridor (through the wall)
+pipes(W + 32, ch_y0 + 352, W + 160, ch_y0 + 368, fd[4] + 72)           # and back to it, lower
+m.slab(W + 160, ch_y0 + 96, W + 176, ch_y0 + 160, fd[4] - 16, fd[4] - 4, 'RFP_PLN', top='RFP_PLN', bottom='RFP_PLN')
+m.slab(W + 160, ch_y0 + 272, W + 176, ch_y0 + 352, fd[4] - 16, fd[4] - 4, 'RFP_PLN', top='RFP_PLN', bottom='RFP_PLN')
+m.thing(W + 72, ch_y0 + 88, T_LAMP, args=(140, 132, 110, 170), z=110, tid=C_PIECE + 10, dormant=True)
+m.thing(W + 72, ch_y0 + 344, T_LAMP, args=(140, 132, 110, 170), z=120, tid=C_PIECE + 13, dormant=True)
+m.thing(W + 160, ch_y0 + 210, T_FLICKER, args=(150, 140, 120, 180, 60), z=200)                   # a bulb over the pit
+m.thing(W + 160, ch_y0 + 220, T_AMB, args=(10, 45))
+m.trigger(W + 34, ch_y0 + 216, W + 94, ch_y0 + 216, 130, (SIGNAL_TID,), fields={'user_scene': C_ERREUR})   # on the steps
 
 # ---------------------------------------------------------------- 5. the junction of the voices
 j_y0, j_y1 = descent_end, descent_end + W
 jun = piece(0, j_y0, W, j_y1, floor, light=52)
+pipes(W - 16, j_y0, W, j_y1 - 16, floor + 72)                          # the pipe turns with the corridor: one passes under it
 across(0, j_y0 - 40, W, j_y0 - 40, C_VOICES)
 # side exploration B: the passage toward "the other wing", a railing over a stairwell going down into the dark
 m.box(-384, j_y0 + 16, 0, j_y1 - 16, COR, floor=floor, ceil=floor + 88, light=34, wall='RF6_BETN')
@@ -165,12 +242,31 @@ for k in range(5):                                                    # first tu
     x += PIECE
 east_end = x
 turn2 = piece(east_end, y, east_end + W, y + W, floor, light=52)        # the second turn
+for rx in (W + 112, W + 240, W + 368, W + 528):                        # ribs on the south wall: the beam sweeps a relief
+    m.carve(rx, y, rx + 16, y + 16)
+pipes(east_end, y + W - 16, east_end + W, y + W, floor + 72)           # the pipe round the second turn
+pipes(east_end + W - 16, y, east_end + W, y + W - 16, floor + 72)
 yy = y
 for k in range(4):                                                    # south again, toward the day
     floor -= 8
     piece(east_end, yy - PIECE, east_end + W, yy, floor, light=56 + 8 * k)
+    pipes(east_end + W - 16, yy - PIECE, east_end + W, yy, floor + 72)  # and down to the day, the scale of the walk
     yy -= PIECE
 end_floor = floor
+# 02/10, the impossible relation made visible (declared adaptation; nothing is explained): a slot in the east wall
+# of the last stretch looks into the stairwell of "the other wing", which lies 1 200 u to the west, beyond the
+# junction; and a slot in the well's south wall looks into this stretch. A pair of visual line portals
+# (Line_SetPortal, type 0): static map data, nothing to restore on load. Both slots are at the same height: this
+# engine draws a line portal only without a height shift (floor- or ceiling-anchored ones stay black, tried 02/10).
+sy = j_y0 - PIECE - 80                                                 # in the second piece toward the day
+fs = m.cell_at(east_end + 8, sy + 8).floor
+m.window(east_end + W, sy, east_end + W + 16, sy + 32, COR, fs + 36, fs + 68, tex='', wall='RF6_BETN', lower='RF6_BETN', light=30)
+m.face(east_end + W, sy, east_end + W + 16, sy + 32, 'E', special=156, args=(902, 0, 0, 0), fields={'id': 901})
+m.face(east_end + W, sy, east_end + W + 16, sy + 32, 'W', fields={'dontpegbottom': True})
+m.window(-480, j_y0 - 112, -448, j_y0 - 96, COR, fs + 36, fs + 68, tex='', wall='RF6_BETN', lower='RF6_BETN', light=30)
+m.face(-480, j_y0 - 112, -448, j_y0 - 96, 'S', special=156, args=(901, 0, 0, 0), fields={'id': 902})
+m.face(-480, j_y0 - 112, -448, j_y0 - 96, 'N', fields={'dontpegbottom': True})
+m.thing(-464, j_y0 + 48, T_LAMP, args=(150, 140, 120, 230), z=fs + 60 - (pieces[16][4] - 448))    # a bulb hung in the well
 m.box(east_end, yy - 32, east_end + W, yy, COR, floor=end_floor, ceil=end_floor + 96, light=200, wall='RF6_BETS')
 m.face(east_end, yy - 32, east_end + W, yy - 16, 'S', texture='RF6_JOUR')
 m.trigger(east_end + 2, yy - 8, east_end + W - 2, yy - 8, 130, (SIGNAL_TID,), fields={'user_outro': 1})
@@ -179,9 +275,9 @@ m.exit_cells = {(x0 // UNIT, (yy - 24) // UNIT) for x0 in range(east_end, east_e
 m.thing(east_end - 192, j_y0 + W - 4, T_LAMP, args=(240, 236, 220, 72), z=48, tid=BEAM_TID, dormant=True)
 
 # ERREUR O every twenty or thirty metres, never the same (l. 715-717): five along the way, 640-960 u apart
-for (k, x0, y0, x1, y1) in ((1, W, 64 + 2 * PIECE + 96, W, 64 + 2 * PIECE + 32),                   # rooms: east wall
+for (k, x0, y0, x1, y1) in ((1, W, 64 + 2 * PIECE + 64, W, 64 + 2 * PIECE),                        # rooms: east wall, by a door
                             (2, -48, hall_y0 + 104, -48, hall_y0 + 168),                         # the hall: west wall
-                            (3, W, hall_y1 + 4 * PIECE + 96, W, hall_y1 + 4 * PIECE + 32),       # the descent
+                            (3, W, hall_y1 + 5 * PIECE + 96, W, hall_y1 + 5 * PIECE + 32),       # the descent
                             (5, W + 3 * PIECE + 96, j_y0, W + 3 * PIECE + 32, j_y0),             # first turn: south wall
                             (4, east_end, yy + 2 * PIECE + 32, east_end, yy + 2 * PIECE + 96)):  # toward the day: west wall
     side = 1 if y1 > y0 else -1 if x0 == x1 else 0                    # the face is on the right of x0,y0 -> x1,y1
@@ -195,8 +291,16 @@ for i, (x0, y0, x1, y1, f) in enumerate(pieces):
 m.label(4, 70, 'RF06 COULOIR')
 
 route = [(48, 100, 0, 0, 1, 90),
+         (48, 256, 0, 0, 0, 90), (W + 40, 256, 0, 30, 0, 0), (48, 256, 0, 0, 0, 180),                     # the service recess
          (48, y404 + 56, 0, 0, 0, 0), (W + 60, y404 + 56, 0, 60, 0, 0), (48, y404 + 56, 0, 0, 0, 0),   # room 404
          (48, hall_y0 + 96, 0, 120, 0, 0),                                                           # the skins
+         (112, hall_y0 + 24, 0, 0, 0, 0), (192, hall_y0 + 24, 0, 0, 0, 0),                                   # the side loop
+         (192, hall_y0 + 160, 0, 0, 0, 90), (288, hall_y0 + 160, 0, 0, 0, 0),
+         (288, hall_y0 + 24, 0, 0, 0, 270), (288, hall_y0 + 8, 0, 0, 0, 270),
+         (192, hall_y0 + 8, 0, 0, 0, 180), (112, hall_y0 + 24, 0, 0, 0, 180),
+         (48, hall_y0 + 96, 0, 0, 0, 270),
+         (48, ch_y0 + 40, 0, 0, 0, 90), (W + 72, ch_y0 + 40, 0, 0, 0, 0), (W + 72, ch_y0 + 150, 0, 60, 0, 0),   # the valve chamber
+         (W + 64, ch_y1 - 24, 0, 0, 0, 90), (48, ch_y1 - 24, 0, 0, 0, 180),
          (48, j_y0 + 48, 0, 0, 0, 0),
          (-360, j_y0 + 48, 0, 120, 0, 180), (48, j_y0 + 48, 0, 0, 0, 0),                             # the other wing
          (east_end + 48, j_y0 + 48, 0, 0, 0, 0),
