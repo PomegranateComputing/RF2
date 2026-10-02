@@ -1055,6 +1055,21 @@ class RFDevHandler : StaticEventHandler
             Vector2 d = mid - p.Pos.XY;
             double len = d.Length();
             if (len > 90 || len < 1 || (d.X * fwd.X + d.Y * fwd.Y) < len * 0.6) continue;
+            // The door is the sector the line moves (its tag): since the door pass of 02/10 a use line may bound the
+            // door's fixed frame strip, which is always open.
+            if (l.args[0] != 0)
+            {
+                let si = Level.CreateSectorTagIterator(l.args[0]);
+                int s;
+                double h = 1e9;
+                bool any = false;
+                while ((s = si.Next()) >= 0)
+                {
+                    any = true;
+                    h = min(h, Level.Sectors[s].CenterCeiling() - Level.Sectors[s].CenterFloor());
+                }
+                if (any) return h >= 60;
+            }
             double hf = l.frontsector.CenterCeiling() - l.frontsector.CenterFloor();
             double hb = l.backsector.CenterCeiling() - l.backsector.CenterFloor();
             return min(hf, hb) >= 60;
